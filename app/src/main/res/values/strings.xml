@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">calmscient</string>
+    <string name="welcome_message">Welcome to my app!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_new_account">Create an new account</string>
+    <string name="or">or</string>
+    <string name="happy_to_see_you">We are happy to see you</string>
+    <string name="home">Home</string>
+    <string name="discovery">Discovery</string>
+    <string name="exercises">Exercises</string>
+    <string name="rewards">Rewards</string>
+    <string name="my_medical_records">My Medical Records</string>
+    <string name="weekly_summary">Weekly Summary</string>
+    <string name="favorites">Favorites</string>
+    <string name="need_to_talk">Need to talk with someone?</string>
+    <string name="good_morning">Good Morning!</string>
+    <string name="good_afternoon">Good Afternoon!</string>
+    <string name="good_evening">Good Evening!</string>
+    <string name="mood_right_now">How is your mood right now?</string>
+    <string name="bad">BAD</string>
+    <string name="be_better">COULD BE BETTER</string>
+    <string name="fair">FAIR</string>
+    <string name="good">GOOD</string>
+    <string name="excellent">EXCELLENT</string>
+    <string name="spend_time">Who dd you spend time with?</string>
+    <string name="family">FAMILY</string>
+    <string name="friends">FRIENDS</string>
+    <string name="workmates">WORKMATES</string>
+    <string name="others">OTHERS</string>
+    <string name="alone">ALONE</string>
+    <string name="take_medic_evening">Did you take your medicines this evening?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="daily_journal">Daily Journal</string>
+    <string name="save">Save</string>
+    <string name="skip">SKIP</string>
+    <string name="medications">Medications</string>
+    <string name="upcoming_medical_appointments">Upcoming Medical Appointments</string>
+    <string name="screenings">Screenings</string>
+    <!--network errors-->
+    <string name="network_connection_error">Internet connection lost, please retry again</string>
+    <string name="network_default_error">Something wrong happened, please retry again</string>
+    <string name="network_internal_error">Our systems got an error, please retry again</string>
+    <string name="network_server_not_available">Our services are under maintenance, please retry after some time
+    </string>
+    <string name="network_invalidation_error">Username or password is incorrect,Please retry again</string>
+    <string name="server_connection_error">Not able to connect, please retry again</string>
+    <string name="network_login_again">Please log in again</string>
+    <string name="settings">SETTINGS</string>
+    <string name="strAlertMessage_Something">Something is not right here try again later</string>
+
+
+
+</resources>

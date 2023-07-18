@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calmscient</string>
+    <string name="welcome_message">¡Bienvenido a mi aplicación!</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Acceso</string>
+    <string name="forgot_password">Has olvidado tu contraseña</string>
+    <string name="create_new_account">Crear una nueva cuenta</string>
+    <string name="or">o</string>
+    <string name="happy_to_see_you">estamos felices de verte</string>
+    <string name="home">Hogar</string>
+    <string name="discovery">descubrimiento</string>
+    <string name="exercises">ejercicios</string>
+    <string name="rewards">Recompensas</string>
+    <string name="my_medical_records">Mis registros médicos</string>
+    <string name="weekly_summary">Resumen semanal</string>
+    <string name="favorites">Favoritos</string>
+    <string name="need_to_talk">¿Necesitas hablar con alguien?</string>
+    <string name="good_morning">Buen día!</string>
+    <string name="good_afternoon">Buenas tardes!</string>
+    <string name="good_evening">Good Evening!</string>
+    <string name="mood_right_now">¿Cómo está tu estado de ánimo en este momento?</string>
+    <string name="bad">MALO</string>
+    <string name="be_better">PODRÍA SER MEJOR</string>
+    <string name="fair">JUSTO</string>
+    <string name="good">Bueno</string>
+    <string name="excellent">EXCELENTE</string>
+    <string name="spend_time">¿Con quién pasas el tiempo?</string>
+    <string name="family">FAMILIA</string>
+    <string name="friends">AMIGOS</string>
+    <string name="workmates">COMPAÑEROS DE TRABAJO</string>
+    <string name="others">OTROS</string>
+    <string name="alone">SOLO</string>
+    <string name="take_medic_evening">¿Tomó sus medicamentos esta noche?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="daily_journal">Diario</string>
+    <string name="save">Ahorrar</string>
+    <string name="skip">SALTAR</string>
+    <string name="medications">medicamentos</string>
+    <string name="upcoming_medical_appointments">Próximas Citas Médicas</string>
+    <string name="screenings">Proyecciones</string>
+
+    <!--network errors-->
+    <string name="network_connection_error">Se perdió la conexión a Internet, vuelva a intentarlo</string>
+    <string name="network_default_error">Ocurrió algo incorrecto, inténtalo de nuevo</string>
+    <string name="network_internal_error">Nuestros sistemas recibieron un error, inténtalo de nuevo</string>
+    <string name="network_server_not_available">Nuestros servicios están en mantenimiento, vuelva a intentarlo después de un tiempo
+    </string>
+    <string name="network_invalidation_error">El nombre de usuario o la contraseña son incorrectos, vuelva a intentarlo</string>
+    <string name="server_connection_error">No se puede conectar, inténtalo de nuevo</string>
+    <string name="network_login_again">Inicie sesión de nuevo</string>
+    <string name="settings">AJUSTES</string>
+    <string name="strAlertMessage_Something">Algo no está bien aquí inténtalo de nuevo más tarde</string>
+
+</resources>
