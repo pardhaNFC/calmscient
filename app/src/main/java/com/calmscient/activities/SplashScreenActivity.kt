@@ -15,17 +15,21 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import com.calmscient.base.BaseActivity
+import com.calmscient.databinding.LayoutSplashScreenBinding
 import com.calmscient.viewmodels.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-class SplashScreenActivity :BaseActivity<SplashViewModel>(){
+@AndroidEntryPoint
+class SplashScreenActivity : BaseActivity<SplashViewModel>() {
     override val viewModel: SplashViewModel by viewModels()
+    lateinit var binding: LayoutSplashScreenBinding
     override fun setupView(savedInstanceState: Bundle?) {
 
     }
 
     override fun provideLayoutId(): View {
-        TODO("Not yet implemented")
+        binding = LayoutSplashScreenBinding.inflate(layoutInflater)
+        return binding.root
     }
 
 

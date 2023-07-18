@@ -20,10 +20,11 @@ import com.google.gson.JsonSyntaxException
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException
 import java.io.IOException
 import java.net.ConnectException
+import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class NetworkHelper constructor(private val context:Context){
+class NetworkHelper @Inject constructor(private val context:Context){
     companion object {
         private const val TAG = "NetworkHelper"
     }

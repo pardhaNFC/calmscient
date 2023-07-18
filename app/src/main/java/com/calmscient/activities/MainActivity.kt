@@ -6,9 +6,10 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import com.calmscient.R
 import com.calmscient.utils.LocaleHelper
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.Calendar
 import java.util.Date
-
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     lateinit var btn: Button
     lateinit var tv_welcome: TextView

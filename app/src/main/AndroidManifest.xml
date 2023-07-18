@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".AppController"
         android:allowBackup="false"
         android:configChanges="locale"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -20,13 +21,14 @@
             android:name=".activities.SplashScreenActivity"
             android:configChanges="locale"
             android:exported="true"
-            android:theme="@style/Theme.Calmscient">
+            android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.MainActivity" />
+        <activity android:name=".base.BaseActivity" />
     </application>
 
 </manifest>
