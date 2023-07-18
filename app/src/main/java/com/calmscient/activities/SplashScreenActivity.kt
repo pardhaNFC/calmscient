@@ -18,7 +18,6 @@ import com.calmscient.base.BaseActivity
 import com.calmscient.viewmodels.SplashViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class SplashScreenActivity :BaseActivity<SplashViewModel>(){
     override val viewModel: SplashViewModel by viewModels()
     override fun setupView(savedInstanceState: Bundle?) {
