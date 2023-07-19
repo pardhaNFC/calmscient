@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,44 +11,53 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_50sdp"
             android:src="@drawable/splash_screen_back" />
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_150sdp"
-            android:src="@drawable/clamscient_txt_splash" />
+            android:layout_marginTop="@dimen/_120sdp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_230sdp"
-            android:gravity="center"
-            android:text="The Science of Calm"
-            android:textColor="#6E6BB3"
-            android:textSize="@dimen/_18sdp" />
+            <ImageView
+                android:id="@+id/img_calm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clamscient_txt_splash" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_240sdp"
-            android:src="@drawable/clamscient_splash_middle" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_calm"
+                android:gravity="center"
+                android:text="The Science of Calm"
+                android:textColor="#6E6BB3"
+                android:textSize="@dimen/_18sdp" />
+        </RelativeLayout>
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_410sdp"
-            android:src="@drawable/clamscient_splash_bottom" />
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/clamscient_splash_middle" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/clamscient_splash_bottom" />
+            </RelativeLayout>
+
+        </LinearLayout>
     </RelativeLayout>
-    <!--<RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="center"
-            android:src="@drawable/clamscient_txt_splash" />
-    </RelativeLayout>-->
 
 </LinearLayout>

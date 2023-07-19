@@ -11,8 +11,12 @@
 
 package com.calmscient.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
+import android.view.WindowManager
 import androidx.activity.viewModels
 import com.calmscient.base.BaseActivity
 import com.calmscient.databinding.LayoutSplashScreenBinding
@@ -24,6 +28,21 @@ class SplashScreenActivity : BaseActivity<SplashViewModel>() {
     override val viewModel: SplashViewModel by viewModels()
     lateinit var binding: LayoutSplashScreenBinding
     override fun setupView(savedInstanceState: Bundle?) {
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
+        // we used the postDelayed(Runnable, time) method
+        // to send a message with a delayed time.
+        //Normal Handler is deprecated , so we have to change the code little bit
+
+        // Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 5000) // 3000 is the delayed time in milliseconds.
 
     }
 
