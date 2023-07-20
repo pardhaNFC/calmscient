@@ -1,0 +1,36 @@
+<!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="52"
+    android:viewportHeight="52">
+  <path
+      android:pathData="M26,52C40.32,52 52,40.32 52,26C52,11.679 40.32,0 26,0C11.679,0 0,11.679 0,26C0,40.32 11.679,52 26,52Z"
+      android:fillColor="#F28A91"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M17.443,22.896C19.306,22.896 20.826,21.376 20.826,19.514C20.826,17.651 19.306,16.131 17.443,16.131C15.581,16.131 14.061,17.651 14.061,19.514C14.061,21.376 15.581,22.896 17.443,22.896Z"
+      android:fillColor="#ffffff"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M34.557,22.896C36.419,22.896 37.939,21.376 37.939,19.514C37.939,17.651 36.419,16.131 34.557,16.131C32.694,16.131 31.174,17.651 31.174,19.514C31.174,21.376 32.694,22.896 34.557,22.896Z"
+      android:fillColor="#ffffff"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M36.708,37.648C33.02,29.388 19.91,29.498 15.99,37.648"
+      android:strokeLineJoin="round"
+      android:strokeWidth="3.6"
+      android:fillColor="#00000000"
+      android:strokeColor="#ffffff"
+      android:strokeLineCap="round"/>
+</vector>
