@@ -19,7 +19,8 @@
         tools:targetApi="33">
         <activity
             android:name=".activities.UserMoodActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
         <activity
             android:name=".activities.SplashScreenActivity"
             android:configChanges="locale"

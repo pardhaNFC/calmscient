@@ -1,290 +1,897 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".activities.UserMoodActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_day"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp"
-                android:text="@string/mood_right_now"
-                android:textColor="@color/black"
-                android:textSize="22sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="5">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_bad"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:gravity="center"
-                        android:text="@string/bad"
-                        android:textColor="@color/grey_light"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_better"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:gravity="center"
-                        android:text="@string/be_better"
-                        android:textColor="@color/grey_light"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/icon_fair"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:gravity="center"
-                        android:text="@string/fair"
-                        android:textColor="@color/grey_light"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/icon_good"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:gravity="center"
-                        android:text="@string/good"
-                        android:textColor="@color/grey_light"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:src="@drawable/icon_excellent"
-                        tools:ignore="MissingConstraints" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
-                        android:gravity="center"
-                        android:text="@string/excellent"
-                        android:textColor="@color/grey_light"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16sdp">
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <TextView
+            android:id="@+id/id_wishes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:text="@string/good_morning"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+        <!--afternoon mood-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_afternoon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
 
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp"
-                android:text="@string/hours_night"
-                android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/id_after_mood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/mood_right_now"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_6sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_eve_bad"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_bad" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/bad"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_eve_better"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_better" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/be_better"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_eve_fair"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_fair" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/fair"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_eve_good"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_good" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/good"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_eve_excellent"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_excellent" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/excellent"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <!--evening day-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_eve_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_even_mood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/day_today"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_nig_bad"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_bad"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/bad"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_nig_better"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_better"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/be_better"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_nig_fair"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_fair"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/fair"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_nig_good"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_good"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/good"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_nig_excellent"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_excellent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/excellent"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <!--morning_mood-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_morni_mood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_morn_mood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/mood_right_now"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/id_day_today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/day_today"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_mBad"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_bad" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/bad"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_mBetter"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/icon_better"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/be_better"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_mFair"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_fair"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/fair"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_mGood"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_good"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/good"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/img_mExcellent"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_excellent"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/excellent"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <!--spend_time-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/spend_time_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/spend_time"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:id="@+id/eve_spend_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_family"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/family"/>
+
+                        <TextView
+                            android:id="@+id/tv_family"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/family"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_friends"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/friends" />
+
+                        <TextView
+                            android:id="@+id/tv_friends"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/friends"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_workmates"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/workmates" />
+
+                        <TextView
+                            android:id="@+id/tv_workmates"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/workmates"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/others"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/tv_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/others"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/others"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/tv_others"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/others"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/img_alone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/alone"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/tv_alone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="@string/alone"
+                            android:textColor="@color/grey_light"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <!--morning_sleep-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/morn_hours_sleep_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/hours_night"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
+                    <!--<LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">-->
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/less"
                         tools:ignore="MissingConstraints" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_4"
                         tools:ignore="MissingConstraints" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_5"
                         tools:ignore="MissingConstraints" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_6" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
+                        android:clickable="true"
                         android:src="@drawable/sleep_7" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_8" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_9" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_10" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_4sdp"
+                        android:layout_margin="@dimen/_2sdp"
                         android:src="@drawable/sleep_more" />
                 </LinearLayout>
 
-            </LinearLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16sdp">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+                <!--</LinearLayout>-->
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <!--morning_meds-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/id_morn_meds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="12dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="12dp"
-                android:text="@string/take_medic_morning"
-                android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/take_medic_morning"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:ignore="UseSwitchCompatOrMaterialXml">
+
+                    <Switch
+                        android:id="@+id/idSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:checked="true"
+                        android:textOff="OFF"
+                        android:textOn="ON" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--daily_journel-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_daily_journel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                tools:ignore="UseSwitchCompatOrMaterialXml">
+                android:orientation="vertical">
 
-                <Switch
-                    android:id="@+id/idSwitch"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:textOff="OFF"
-                    android:textOn="ON"
-                    android:layout_margin="10dp" />
-            </LinearLayout>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.cardview.widget.CardView>
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/daily_journal"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
 
-</LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:background="@drawable/edittext_grey_background"
+                    android:padding="60dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--button-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_border"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:cardCornerRadius="8dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_skip"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="#F4F3FF"
+                android:gravity="center"
+                android:text="@string/skip"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                app:cardCornerRadius="8dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

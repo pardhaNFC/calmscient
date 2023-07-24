@@ -11,10 +11,14 @@
 
 package com.calmscient.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import com.calmscient.base.BaseActivity
+import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
+import java.util.Calendar
+import java.util.Date
+
 
 class LoginActivity :  ComponentActivity() {
 lateinit var binding: LayoutLoginBinding
@@ -23,5 +27,13 @@ lateinit var binding: LayoutLoginBinding
         binding = LayoutLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        binding.btnLogin.setOnClickListener{
+            navigateToDayScreen()
+        }
     }
+
+    private fun navigateToDayScreen() {
+        startActivity(Intent(this, UserMoodActivity::class.java))
+    }
+
 }
