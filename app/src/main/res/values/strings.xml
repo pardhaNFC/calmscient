@@ -54,6 +54,8 @@
     <string name="network_login_again">Please log in again</string>
     <string name="settings">SETTINGS</string>
     <string name="strAlertMessage_Something">Something is not right here try again later</string>
+    <string name="title_activity_home_fragment">Something is not right here try again later</string>
+
 
 
 </resources>

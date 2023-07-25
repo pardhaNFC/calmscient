@@ -56,5 +56,6 @@
     <string name="network_login_again">Inicie sesión de nuevo</string>
     <string name="settings">AJUSTES</string>
     <string name="strAlertMessage_Something">Algo no está bien aquí inténtalo de nuevo más tarde</string>
+    <string name="title_activity_home_fragment">Algo no está bien aquí inténtalo de nuevo más tarde</string>
 
 </resources>

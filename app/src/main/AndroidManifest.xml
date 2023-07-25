@@ -20,7 +20,7 @@
         <activity
             android:name=".activities.UserMoodActivity"
             android:exported="false"
-            android:theme="@style/Theme.NoActionBar"/>
+            android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.SplashScreenActivity"
             android:configChanges="locale"
@@ -28,15 +28,27 @@
             android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activities.MainActivity" />
         <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.WeeklySummary"
+            android:exported="false"
+            android:label="WeeklySummary Activity"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
             android:name=".activities.LoginActivity"
             android:theme="@style/Theme.NoActionBar" />
         <activity android:name=".base.BaseActivity" />
+        <activity
+            android:name=".activities.MedicationsActivity"
+            android:exported="false"
+            android:label="MedicationsActivity"
+            android:theme="@style/Theme.NoActionBar" />
     </application>
-
 </manifest>

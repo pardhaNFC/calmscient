@@ -1,5 +1,6 @@
 package com.calmscient.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +31,17 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         binding.imgMBetter.setOnClickListener(this);
         binding.imgMGood.setOnClickListener(this);
         binding.imgMFair.setOnClickListener(this);
-        binding.imgMExcellent.setOnClickListener(this);
+        binding.imgMExcellent.setOnClickListener(this)
+        //morning sleep
+        binding.sleepLess.setOnClickListener(this)
+        binding.sleep4.setOnClickListener(this)
+        binding.sleep5.setOnClickListener(this)
+        binding.sleep6.setOnClickListener(this)
+        binding.sleep7.setOnClickListener(this)
+        binding.sleep8.setOnClickListener(this)
+        binding.sleep9.setOnClickListener(this)
+        binding.sleep10.setOnClickListener(this)
+        binding.sleepMore.setOnClickListener(this)
         //afternoon clicks
         binding.imgEveBad.setOnClickListener(this);
         binding.imgEveBetter.setOnClickListener(this);
@@ -48,6 +59,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         binding.imgWorkmates.setOnClickListener(this)
         binding.imgOthers.setOnClickListener(this)
         binding.imgAlone.setOnClickListener(this)
+        //button click
+        binding.btnSave.setOnClickListener(this)
+        binding.btnSkip.setOnClickListener(this)
+
 
     }
 
@@ -194,6 +209,108 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgEveBad.setElevation(0.0F)
                 binding.imgEveFair.setElevation(0.0F)
             }
+            //morning sleep
+            R.id.sleep_less->{
+                binding.sleepLess.setImageResource(R.drawable.less_icon)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+
+            }
+            R.id.sleep_4->{
+                binding.sleep4.setImageResource(R.drawable.selected_4)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+
+            }
+            R.id.sleep_5->{
+                binding.sleep5.setImageResource(R.drawable.selected_5)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+            }
+            R.id.sleep_6->{
+                binding.sleep6.setImageResource(R.drawable.selected_6)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+            }
+            R.id.sleep_7->{
+                binding.sleep7.setImageResource(R.drawable.selected_7)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+            }
+            R.id.sleep_8->{
+                binding.sleep8.setImageResource(R.drawable.selected_8)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+            }
+            R.id.sleep_9->{
+                binding.sleep9.setImageResource(R.drawable.selected_9)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+            }
+            R.id.sleep_10->{
+                binding.sleep10.setImageResource(R.drawable.selected_10)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleepMore.setImageResource(R.drawable.sleep_more)
+            }
+            R.id.sleep_more->{
+                binding.sleepMore.setImageResource(R.drawable.more_selected)
+                binding.sleepLess.setImageResource(R.drawable.less)
+                binding.sleep4.setImageResource(R.drawable.sleep_4)
+                binding.sleep5.setImageResource(R.drawable.sleep_5)
+                binding.sleep6.setImageResource(R.drawable.sleep_6)
+                binding.sleep7.setImageResource(R.drawable.sleep_7)
+                binding.sleep8.setImageResource(R.drawable.sleep_8)
+                binding.sleep9.setImageResource(R.drawable.sleep_9)
+                binding.sleep10.setImageResource(R.drawable.sleep_10)
+            }
             //evening images
             R.id.img_nig_bad -> {
                 //binding.imgMBad.setImageResource(R.drawable.icon_excellent)
@@ -282,6 +399,13 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgFamily.setImageResource(R.drawable.family)
                 binding.imgFriends.setImageResource(R.drawable.friends)
                 binding.imgOthers.setImageResource(R.drawable.others)
+            }
+
+            R.id.btn_save->{
+                startActivity(Intent(this, DashboardActivity::class.java))
+            }
+            R.id.btn_skip->{
+                startActivity(Intent(this, DashboardActivity::class.java))
             }
         }
     }
