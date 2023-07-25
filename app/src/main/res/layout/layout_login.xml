@@ -42,6 +42,7 @@
                     android:id="@+id/userName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:inputType="textPersonName" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -237,9 +238,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
             android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
             android:src="@drawable/clamscient_splash_bottom" />
 
     </RelativeLayout>

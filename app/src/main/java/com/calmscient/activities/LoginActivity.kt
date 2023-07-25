@@ -13,11 +13,11 @@ package com.calmscient.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View.OnFocusChangeListener
+import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
-import java.util.Calendar
-import java.util.Date
 
 
 class LoginActivity :  ComponentActivity() {
@@ -27,9 +27,27 @@ lateinit var binding: LayoutLoginBinding
         binding = LayoutLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
         binding.btnLogin.setOnClickListener{
             navigateToDayScreen()
         }
+        binding.userName.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
+            if (hasFocus) {
+                binding.userName.hint = "xxxxxxxxxxxx@gmail.com"
+            } else {
+                binding.userName.setHint(R.string.username)
+            }
+        })
+        binding.editPassword.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
+            if (hasFocus) {
+                binding.editPassword.hint = "**********"
+            } else {
+                binding.editPassword.setHint(R.string.password)
+            }
+        })
     }
 
     private fun navigateToDayScreen() {
