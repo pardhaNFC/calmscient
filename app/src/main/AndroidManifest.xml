@@ -50,5 +50,10 @@
             android:exported="false"
             android:label="MedicationsActivity"
             android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.CalendarViewActivity"
+            android:exported="false"
+            android:label="CalendarActivity"
+            android:theme="@style/Theme.NoActionBar" />
     </application>
 </manifest>

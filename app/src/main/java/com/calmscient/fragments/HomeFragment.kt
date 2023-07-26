@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.CalendarViewActivity
 import com.calmscient.activities.MedicationsActivity
 import com.calmscient.adapters.VideoAdapter
 import com.calmscient.activities.WeeklySummary
@@ -66,7 +67,7 @@ class HomeFragment : Fragment(){
         // Set up the click listener for myMedicalRecordsLayout
         myMedicalRecordsLayout.setOnClickListener {
             // Call the method to start MedicationsActivity here
-            openMedicationsActivity()
+            loadFragment(Example7Fragment())
         }
 
         val weeklySummaryLayout = rootView.findViewById<View>(R.id.weeklySummaryLayout)
@@ -78,10 +79,11 @@ class HomeFragment : Fragment(){
         }
         return rootView
     }
-    private fun openMedicationsActivity()
-    {
-        // Start the MedicationsActivity here
-        val intent = Intent(activity, MedicationsActivity::class.java)
+    private fun loadFragment(fragment: Fragment){
+        /*val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment,fragment)
+        transaction.commit()*/
+        val intent = Intent(activity, CalendarViewActivity::class.java)
         startActivity(intent)
     }
     private fun openWeeklySummaryActivity()
