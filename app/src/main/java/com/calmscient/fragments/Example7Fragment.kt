@@ -12,11 +12,14 @@
 package com.calmscient.fragments
 
 import android.annotation.SuppressLint
-import android.os.Build
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Spannable
+import android.text.style.StyleSpan
 import android.view.View
-import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import androidx.core.text.toSpanned
 import androidx.core.view.isVisible
 import com.calmscient.R
 import com.calmscient.databinding.Example7CalendarDayBinding
@@ -37,6 +40,7 @@ import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
 import java.util.Locale
 
+
 //class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, HasBackButton {
 class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, HasBackButton {
     override val titleRes: Int = R.string.app_name
@@ -49,7 +53,6 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
 
     @SuppressLint("NewApi")
     private val dateFormatter = DateTimeFormatter.ofPattern("dd")
-
 
     private lateinit var binding: Example7FragmentBinding
 
@@ -78,9 +81,9 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
                 bind.exSevenDayText.text = day.date.dayOfWeek.displayText()
 
                 val colorRes = if (day.date == selectedDate) {
-                    R.color.example_7_yellow
+                    R.color.white
                 } else {
-                    R.color.example_7_white
+                    R.color.black
                 }
                 bind.exSevenDateText.setTextColor(view.context.getColorCompat(colorRes))
                 bind.exSevenSelectedView.isVisible = day.date == selectedDate
@@ -93,17 +96,24 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
         }
 
         binding.exSevenCalendar.weekScrollListener = { weekDays ->
+            val text = binding.exSevenToolbar.title
             binding.exSevenToolbar.title = getWeekPageTitle(weekDays)
+            binding.exSevenToolbar.setTitleTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.black
+                )
+            )
         }
-
         val currentMonth = YearMonth.now()
         binding.exSevenCalendar.setup(
-            currentMonth.minusMonths(5).atStartOfMonth(),
-            currentMonth.plusMonths(5).atEndOfMonth(),
+            currentMonth.minusMonths(24).atStartOfMonth(),
+            currentMonth.plusMonths(24).atEndOfMonth(),
             firstDayOfWeekFromLocale(),
         )
         binding.exSevenCalendar.scrollToDate(LocalDate.now())
     }
+
     fun getWeekPageTitle(week: Week): String {
         val firstDate = week.days.first().date
         val lastDate = week.days.last().date
@@ -111,9 +121,11 @@ class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, 
             firstDate.yearMonth == lastDate.yearMonth -> {
                 firstDate.yearMonth.displayText()
             }
+
             firstDate.year == lastDate.year -> {
                 "${firstDate.month.displayText(short = false)} - ${lastDate.yearMonth.displayText()}"
             }
+
             else -> {
                 "${firstDate.yearMonth.displayText()} - ${lastDate.yearMonth.displayText()}"
             }

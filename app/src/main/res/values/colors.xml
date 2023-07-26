@@ -9,11 +9,13 @@
     <color name="grey_light">#939598</color>
     <color name="white">#FFFFFFFF</color>
     <color name="example_7_white">#D9FFFFFF</color>
-    <color name="example_7_yellow">#FFEB3B</color>
+    <color name="example_7_button">#6E6BB3</color>
+    <color name="example_7_calendar">#E8E7F4</color>
 
     <color name="colorPrimary">#272D6B</color>
     <color name="colorPrimaryDark">#002763</color>
     <color name="colorAccent">#272D6B</color>
     <color name="grey">#555252</color>
     <color name="textColor">#002763</color>
+    <color name="viewbackgroundcolor">#E8E7F4</color>
 </resources>

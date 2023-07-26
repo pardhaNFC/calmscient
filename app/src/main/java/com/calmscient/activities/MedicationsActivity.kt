@@ -19,7 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.databinding.ActivityMedicationsBinding
-class MedicationsActivity: AppCompatActivity() {
+
+class MedicationsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMedicationsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +32,6 @@ class MedicationsActivity: AppCompatActivity() {
             // Call the loadFragment function with HomeFragment instance
             loadFragment(HomeFragment())
         }
-
         setupMonthDaysRecyclerView()
     }
 
@@ -44,7 +44,8 @@ class MedicationsActivity: AppCompatActivity() {
     private fun setupMonthDaysRecyclerView() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         //recyclerView.adapter = MonthDaysAdapter()
     }
 }

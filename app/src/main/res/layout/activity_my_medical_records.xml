@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MedicationsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="31.87dp"
+            android:layout_height="31.87dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginBottom="20dp"
+            android:text=" My Medical Records"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/ic_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="290dp"
+            android:clickable="true"
+            android:src="@drawable/ic_profile" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="-20dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="125dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/medicationsimage_image" />
+
+        <RelativeLayout
+            android:id="@+id/medications_layout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="100dp"
+            android:clickable="true"
+            android:background="@drawable/transparent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="-18dp"
+                android:text="Medications"
+                android:textColor="#F5F5F5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="-19dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next_white"
+                android:textColor="#F5F5F5" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="-12dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/medicalappointments_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/transparent">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="-19dp"
+                android:text="Upcoming Medical Appointments"
+                android:textColor="#F5F5F5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="-19dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next_white"
+                android:textColor="#F5F5F5" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginStart="-12dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/screenings_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="105dp"
+            android:background="@drawable/transparent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Screenings"
+                android:textColor="#F5F5F5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/nextimage1"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="-19dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next_white"
+                android:textColor="#F5F5F5" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
