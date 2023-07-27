@@ -8,12 +8,13 @@
     android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
-    tools:context=".fragments.Example7Fragment">
+    tools:context=".fragments.CalendarFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/example_7_calendar"
+        android:visibility="gone"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
@@ -32,5 +33,10 @@
             tools:ignore="MissingClass" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="sdjfhsdkjfh"/>
 
 </LinearLayout>

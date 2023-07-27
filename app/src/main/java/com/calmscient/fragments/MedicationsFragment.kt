@@ -20,6 +20,7 @@ class MedicationsFragment : Fragment() {
         binding = ActivityMyMedicalRecordsBinding.inflate(inflater, container, false)
         binding.medicationsLayout.setOnClickListener {
             Toast.makeText(requireActivity(), "message", Toast.LENGTH_LONG).show()
+           loadFragment(CalendarFragment())
         }
         return binding.root
     }

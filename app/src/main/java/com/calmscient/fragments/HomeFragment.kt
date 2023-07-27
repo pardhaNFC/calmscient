@@ -27,12 +27,13 @@ import com.calmscient.activities.SettingsActivity
 import com.calmscient.adapters.VideoAdapter
 import com.calmscient.activities.WeeklySummary
 import com.calmscient.Interface.CellClickListener
+import com.calmscient.activities.CalendarViewActivity
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class HomeFragment : Fragment(), CellClickListener {
+class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var videoAdapter: VideoAdapter
     private lateinit var profileImage: ImageView
@@ -68,7 +69,9 @@ class HomeFragment : Fragment(), CellClickListener {
             startActivity(intent)
         }
         myMedicalRecordsLayout.setOnClickListener {
-            loadFragment(MedicationsFragment())
+            //loadFragment(MedicationsFragment())
+            val intent = Intent(activity, CalendarViewActivity::class.java)
+            startActivity(intent)
         }
         val weeklySummaryLayout = rootView.findViewById<View>(R.id.weeklySummaryLayout)
 
@@ -79,11 +82,11 @@ class HomeFragment : Fragment(), CellClickListener {
     }
 
     private fun loadFragment(fragment: Fragment) {
-       /* fragmentManager?.beginTransaction()?.apply {
-            replace(R.id.flFragment, fragment)
-                .addToBackStack(null)
-                .commit()
-        }*/
+        /* fragmentManager?.beginTransaction()?.apply {
+             replace(R.id.flFragment, fragment)
+                 .addToBackStack(null)
+                 .commit()
+         }*/
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.commit()
@@ -96,14 +99,5 @@ class HomeFragment : Fragment(), CellClickListener {
 
     companion object {
         fun newInstance() = HomeFragment()
-    }
-
-    override fun onCellClickListener(position: Int) {
-        /*if (position == 0) {
-            requireActivity().let {
-                val intent = Intent(activity, Example7Fragment::class.java)
-                startActivity(intent)
-            }
-        }*/
     }
 }
