@@ -3,8 +3,17 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" >
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
         <item name="colorPrimaryVariant">@color/example_7_calendar</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomMenuTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/custom_text_color</item>
+        <!-- Add more attributes as needed -->
+    </style>
+
+    <style name="MenuTextStyle" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>

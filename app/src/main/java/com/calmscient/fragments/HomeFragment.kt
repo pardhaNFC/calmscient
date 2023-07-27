@@ -69,9 +69,9 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
         myMedicalRecordsLayout.setOnClickListener {
-            //loadFragment(MedicationsFragment())
-            val intent = Intent(activity, CalendarViewActivity::class.java)
-            startActivity(intent)
+            loadFragment(MedicationsFragment())
+            /*val intent = Intent(activity, CalendarViewActivity::class.java)
+            startActivity(intent)*/
         }
         val weeklySummaryLayout = rootView.findViewById<View>(R.id.weeklySummaryLayout)
 

@@ -18,4 +18,8 @@
     <color name="grey">#555252</color>
     <color name="textColor">#002763</color>
     <color name="viewbackgroundcolor">#E8E7F4</color>
+    <color name="purple_100">#6E6BB3</color>
+    <color name="bottom_nav_selected">#F48383</color>
+    <color name="custom_text_color">#ffffff</color>
+
 </resources>

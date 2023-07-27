@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,33 +10,71 @@
     android:orientation="vertical"
     tools:context=".fragments.CalendarFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/example_7_calendar"
-        android:visibility="gone"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/exSevenToolbar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:background="@color/example_7_calendar"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-        <com.kizitonwose.calendar.view.WeekCalendarView
-            android:id="@+id/exSevenCalendar"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/exSevenToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <com.kizitonwose.calendar.view.WeekCalendarView
+                android:id="@+id/exSevenCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cv_daySize="seventhWidth"
+                app:cv_dayViewResource="@layout/example_7_calendar_day"
+                app:cv_orientation="horizontal"
+                tools:ignore="MissingClass" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cv_daySize="seventhWidth"
-            app:cv_dayViewResource="@layout/example_7_calendar_day"
-            app:cv_orientation="horizontal"
-            tools:ignore="MissingClass" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <androidx.recyclerview.widget.RecyclerView
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="sdjfhsdkjfh"/>
+                android:id="@+id/recyclerViewMedications"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".fragments.MedicationsFragment">
 
-</LinearLayout>
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <!-- Your AppCompactButton -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_100"
+                android:text="Save"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Floating plus icon -->
+    <ImageView
+        android:id="@+id/plusIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/floating_plus_symbol" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

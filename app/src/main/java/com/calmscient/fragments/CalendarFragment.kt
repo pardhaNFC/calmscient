@@ -12,11 +12,16 @@
 package com.calmscient.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.calmscient.R
+import com.calmscient.adapters.MedicationsCardAdapter
+import com.calmscient.databinding.ActivityMyMedicalRecordsBinding
 import com.calmscient.databinding.Example7CalendarDayBinding
 import com.calmscient.databinding.Example7FragmentBinding
 import com.calmscient.utils.getColorCompat
@@ -35,13 +40,25 @@ import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
 import java.util.Locale
 
+// Define the CardViewItem data class
+data class CardViewItem(val title: String, val description: String, val imageResId: Int)
 class CalendarFragment : Fragment() {
     private lateinit var binding: Example7FragmentBinding
     private var selectedDate = LocalDate.now()
     private val dateFormatter = DateTimeFormatter.ofPattern("dd")
+    private lateinit var cardViewAdapter: MedicationsCardAdapter
+    private val cardViewItems = mutableListOf<CardViewItem>()
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = Example7FragmentBinding.inflate(inflater, container, false)
+
+        return binding.root
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = Example7FragmentBinding.bind(view)
 
         class DayViewContainer(view: View) : ViewContainer(view) {
             val bind = Example7CalendarDayBinding.bind(view)
@@ -72,12 +89,10 @@ class CalendarFragment : Fragment() {
                 bind.exSevenSelectedView.isVisible = day.date == selectedDate
             }
         }
-
         binding.exSevenCalendar.dayBinder = object : WeekDayBinder<DayViewContainer> {
             override fun create(view: View) = DayViewContainer(view)
             override fun bind(container: DayViewContainer, data: WeekDay) = container.bind(data)
         }
-
         binding.exSevenCalendar.weekScrollListener = { weekDays ->
             val text = binding.exSevenToolbar.title
             binding.exSevenToolbar.title = getWeekPageTitle(weekDays)
@@ -95,8 +110,24 @@ class CalendarFragment : Fragment() {
             firstDayOfWeekFromLocale(),
         )
         binding.exSevenCalendar.scrollToDate(LocalDate.now())
+        binding.recyclerViewMedications.layoutManager = LinearLayoutManager(requireContext())
+        cardViewAdapter = MedicationsCardAdapter(cardViewItems)
+        binding.recyclerViewMedications.adapter = cardViewAdapter
+
+        // Call this function when the date is selected
+        displayCardViewsForSelectedDate()
     }
 
+    private fun displayCardViewsForSelectedDate() {
+        // Clear previous items and add new CardView items for the selected date
+        cardViewItems.clear()
+        // Add your logic to populate cardViewItems based on the selected date
+        // For example:
+        cardViewItems.add(CardViewItem("Card 1", "Description for Card 1", R.drawable.ic_next))
+        cardViewItems.add(CardViewItem("Card 2", "Description for Card 2", R.drawable.ic_next))
+        cardViewItems.add(CardViewItem("Card 3", "Description for Card 3", R.drawable.ic_next))
+        cardViewAdapter.notifyDataSetChanged()
+    }
     fun getWeekPageTitle(week: Week): String {
         val firstDate = week.days.first().date
         val lastDate = week.days.last().date

@@ -13,6 +13,7 @@ package com.calmscient.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
@@ -22,11 +23,15 @@ import com.calmscient.fragments.RewardsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
-class DashboardActivity:AppCompatActivity() {
-    lateinit var bottomNav : BottomNavigationView
+class DashboardActivity : AppCompatActivity() {
+    lateinit var bottomNav: BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
         loadFragment(HomeFragment())
         bottomNav = findViewById(R.id.bottomNavigationView) as BottomNavigationView
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
@@ -38,16 +43,19 @@ class DashboardActivity:AppCompatActivity() {
                     it.setIcon(R.drawable.home)
                     true
                 }
+
                 R.id.discovery -> {
                     loadFragment(DiscoveryFragment())
                     it.setIcon(R.drawable.discovery)
                     true
                 }
+
                 R.id.exercises -> {
                     loadFragment(ExerciseFragment())
                     it.setIcon(R.drawable.exercises)
                     true
                 }
+
                 R.id.rewards -> {
                     loadFragment(RewardsFragment())
                     it.setIcon(R.drawable.rewards)
@@ -61,9 +69,10 @@ class DashboardActivity:AppCompatActivity() {
             }
         }
     }
-    private fun loadFragment(fragment: Fragment){
+
+    private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.flFragment,fragment)
+        transaction.replace(R.id.flFragment, fragment)
         transaction.commit()
     }
 }

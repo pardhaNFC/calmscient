@@ -41,7 +41,6 @@ import java.time.format.TextStyle
 import java.util.Locale
 
 
-//class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, HasBackButton {
 class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, HasBackButton {
     override val titleRes: Int = R.string.app_name
 
