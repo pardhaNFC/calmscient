@@ -15,9 +15,9 @@
             android:id="@+id/id_wishes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:paddingHorizontal="16dp"
             android:paddingVertical="12dp"
             android:text="@string/good_morning"
             android:textColor="@color/black"
@@ -819,14 +819,14 @@
                     android:gravity="center"
                     tools:ignore="UseSwitchCompatOrMaterialXml">
 
-                   <!-- <Switch
-                        android:id="@+id/idSwitch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:checked="true"
-                        android:textOff="OFF"
-                        android:textOn="ON" />-->
+                    <!-- <Switch
+                         android:id="@+id/idSwitch"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_margin="10dp"
+                         android:checked="true"
+                         android:textOff="OFF"
+                         android:textOn="ON" />-->
                     <com.github.angads25.toggle.widget.LabeledSwitch
                         android:id="@+id/id_switch"
                         android:layout_width="wrap_content"
@@ -863,13 +863,18 @@
                     android:textSize="22sp" />
 
                 <EditText
+                    android:id="@+id/et_daily_journel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_12sdp"
                     android:layout_marginRight="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_12sdp"
-                    android:background="@drawable/edittext_grey_background"
-                    android:padding="60dp" />
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:gravity="top"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/edittext_grey_background"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -890,7 +895,7 @@
                 android:gravity="center"
                 android:text="@string/save"
                 android:textColor="@color/white"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_skip"

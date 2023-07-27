@@ -103,6 +103,8 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             binding.spendTimeCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
             binding.cardDailyJournel.visibility = View.VISIBLE
+            binding.idSwitch.labelOn = "YES"
+            binding.idSwitch.labelOff = "NO"
         }
     }
 
