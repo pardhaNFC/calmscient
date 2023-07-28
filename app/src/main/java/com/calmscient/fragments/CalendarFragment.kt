@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.calmscient.Interface.CellClickListener
 import com.calmscient.R
 import com.calmscient.adapters.MedicationsCardAdapter
 import com.calmscient.databinding.ActivityMyMedicalRecordsBinding
@@ -49,7 +50,7 @@ data class CardViewItem(
     val sunImageResource: Int?,
     val moonImageResource :Int?
 )
-class CalendarFragment : Fragment() {
+class CalendarFragment : Fragment(), CellClickListener {
     private lateinit var binding: Example7FragmentBinding
     private var selectedDate = LocalDate.now()
     private val dateFormatter = DateTimeFormatter.ofPattern("dd")
@@ -175,5 +176,9 @@ class CalendarFragment : Fragment() {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.commit()
+    }
+
+    override fun onCellClickListener(position: Int) {
+
     }
 }

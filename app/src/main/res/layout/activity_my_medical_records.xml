@@ -70,9 +70,9 @@
         <RelativeLayout
             android:id="@+id/medications_layout"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="3dp"
             android:background="@drawable/transparent">
 
@@ -119,9 +119,9 @@
         <RelativeLayout
             android:id="@+id/transparent2"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="3dp"
             android:background="@drawable/transparent">
 
@@ -167,9 +167,9 @@
         <RelativeLayout
             android:id="@+id/transparent3"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="3dp"
             android:background="@drawable/transparent">
 

@@ -1,267 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
     tools:context=".fragments.MedicationDetail">
-
-    <RelativeLayout
-        android:id="@+id/Settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
-
-        <ImageView
-            android:id="@+id/back_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:src="@drawable/ic_back" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginBottom="20dp"
-            android:text="Medication Details"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:background="#F5F5F5"
-        android:layout_marginBottom="10dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="30dp"
-            android:src="@drawable/ic_meedical_detail" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="30dp"
-            android:text="Lisinopril"
-            android:textColor="#000000"
-            android:layout_centerHorizontal="true"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/medicationsCard"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:clickable="true"
-        app:cardCornerRadius="20dp"
-        android:layout_marginBottom="20dp">
-    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:layout_marginBottom="5dp">
-        <TextView
-            android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/Settings"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Schedule Time &amp; Alaram"
-            android:textSize="20dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginStart="20dp"
-            android:textColor="#424242"
-            android:textStyle="bold"/>
-        <ImageView
-            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="20dp"
+                android:text="Medication Details"
+                android:textColor="#000000"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginBottom="10dp"
+            android:background="#F5F5F5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_medical_detail" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="30dp"
+                android:text="Lisinopril"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="220dp"
+                android:text="Dr. Samuel parker"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/medicationsCard"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            android:allowClickWhenDisabled="true"
+            android:clickable="true"
+            app:cardCornerRadius="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/dosadetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Dosage"
+                        android:textColor="#424242"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dosadetext"
+                        android:layout_marginStart="20dp"
+                        android:text="50MG"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/directiontext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Direction"
+                        android:textColor="#424242"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/directiontext"
+                        android:text="2 tablets per day"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-           android:layout_marginStart="100dp"
-            android:src="@drawable/ic_calenderimage_medication_detail"/>
-    </LinearLayout>
-    <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="1dp"
+                android:text="Schedule Time &amp; Alaram"
+                android:textColor="#424242"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:src="@drawable/ic_calendarimage_medication_detail" />
+        </LinearLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginStart="20dp"
-              android:text="Morning"
-              android:textSize="16dp"
-              android:textColor="#110000"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Morning"
+                android:textColor="#110000"
+                android:textSize="16dp" />
         </RelativeLayout>
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:layout_marginBottom="10dp">
-    <androidx.cardview.widget.CardView
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="20dp"
-        app:cardBackgroundColor="#F5F5F5"
-        app:cardCornerRadius="10dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_alarm"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="@string/time"
-            android:layout_marginTop="60dp"
-            android:layout_marginStart="10dp"
-            android:textSize="16dp"
-            android:textColor="#424242"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="10dp"
-            android:text="8:00 AM"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="#424242"/>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:layout_width="180dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="20dp"
-        app:cardBackgroundColor="#F5F5F5"
-        app:cardCornerRadius="10dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_alarm"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="10dp"/>
-        <com.github.angads25.toggle.widget.LabeledSwitch
-            android:id="@+id/id_switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_margin="16dp"
-            android:textSize="14sp"
-            app:on="false" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="@string/alarm"
-            android:layout_marginTop="60dp"
-            android:layout_marginStart="10dp"
-            android:textSize="16dp"
-            android:textColor="#424242"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="22dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="10dp"
-            android:text="8:00 AM"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:textColor="#424242"/>
-    </androidx.cardview.widget.CardView>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
+
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:text="Evening"
-            android:textSize="16dp"
-            android:textColor="#110000"/>
-    </RelativeLayout>
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2">
-        <androidx.cardview.widget.CardView
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="20dp"
-            app:cardBackgroundColor="#F5F5F5"
-            app:cardCornerRadius="10dp">
-            <ImageView
-                android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/clock_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/time"
+                    android:textColor="#424242"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="80dp"
+                    android:text="8:00 AM"
+                    android:textColor="#424242"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_alarm" />
+
+                <com.github.angads25.toggle.widget.LabeledSwitch
+                    android:id="@+id/id_switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="16dp"
+                    android:textSize="14sp"
+                    app:on="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/alarm"
+                    android:textColor="#424242"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="80dp"
+                    android:text="8:00 AM"
+                    android:textColor="#424242"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_alarm"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/time"
-                android:layout_marginTop="60dp"
-                android:layout_marginStart="10dp"
-                android:textSize="16dp"
-                android:textColor="#424242"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="22dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginStart="10dp"
-                android:text="8:00 AM"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#424242"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="180dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="20dp"
-            app:cardBackgroundColor="#F5F5F5"
-            app:cardCornerRadius="10dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_alarm"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="10dp"/>
-            <com.github.angads25.toggle.widget.LabeledSwitch
-                android:id="@+id/id_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_margin="16dp"
-                android:textSize="14sp"
-                app:on="false" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="@string/alarm"
-                android:layout_marginTop="60dp"
-                android:layout_marginStart="10dp"
-                android:textSize="16dp"
-                android:textColor="#424242"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="22dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginStart="10dp"
-                android:text="8:00 AM"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#424242"/>
-        </androidx.cardview.widget.CardView>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-</LinearLayout>
+                android:layout_marginStart="20dp"
+                android:text="Evening"
+                android:textColor="#110000"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/clock_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/time"
+                    android:textColor="#424242"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="80dp"
+                    android:text="8:00 AM"
+                    android:textColor="#424242"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="20dp"
+                app:cardBackgroundColor="#F5F5F5"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_alarm" />
+
+                <com.github.angads25.toggle.widget.LabeledSwitch
+                    android:id="@+id/id_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="16dp"
+                    android:textSize="14sp"
+                    app:on="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/alarm"
+                    android:textColor="#424242"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="80dp"
+                    android:text="8:00 AM"
+                    android:textColor="#424242"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+</ScrollView>

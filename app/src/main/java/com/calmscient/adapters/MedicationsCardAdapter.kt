@@ -11,19 +11,37 @@
 
 package com.calmscient.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.calmscient.Interface.CellClickListener
 import com.calmscient.R
 import com.calmscient.fragments.CardViewItem
+import com.calmscient.fragments.MedicationDetail
+import com.calmscient.fragments.MedicationsFragment
 
-class MedicationsCardAdapter(private val items: List<CardViewItem>) : RecyclerView.Adapter<MedicationsCardAdapter.CardViewHolder>() {
+class MedicationsCardAdapter(private val items: List<CardViewItem>) :
+    RecyclerView.Adapter<MedicationsCardAdapter.CardViewHolder>() {
+    lateinit var mListener: CellClickListener
+    /*interface onItemClickListener {
+        fun onItemClick(postion: Int)
+    }
+
+    fun setOnItemClickListener(listener: CellClickListener) {
+        mListener = listener
+    }*/
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.medications_item_card_view, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.medications_item_card_view, parent, false)
         return CardViewHolder(view)
     }
 
@@ -35,13 +53,26 @@ class MedicationsCardAdapter(private val items: List<CardViewItem>) : RecyclerVi
         holder.timeEveningTextView.text = item.timeEvening
         item.sunImageResource?.let { holder.imageViewSun.setImageResource(it) }
         item.moonImageResource?.let { holder.imageViewMoon.setImageResource(it) }
+        holder.cardViewLayout.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                val activity = v!!.context as AppCompatActivity
+                val fragment = MedicationDetail()
+                activity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
+            }
+        })
     }
 
+    /*private fun loadFragment(fragment: Fragment) {
+        val transaction = context.supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        transaction.commit()
+    }*/
     override fun getItemCount(): Int = items.size
 
-    inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-    {
+    inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
+        val cardViewLayout: CardView = itemView.findViewById(R.id.item_card_view)
         val dosageTextView: TextView = itemView.findViewById(R.id.dosageTextView)
         val timeMorningTextView: TextView = itemView.findViewById(R.id.timeMorningTextView)
         val timeEveningTextView: TextView = itemView.findViewById(R.id.timeEveningTextView)
@@ -49,4 +80,5 @@ class MedicationsCardAdapter(private val items: List<CardViewItem>) : RecyclerVi
         val imageViewMoon: ImageView = itemView.findViewById(R.id.imageViewMoon)
 
     }
+
 }
