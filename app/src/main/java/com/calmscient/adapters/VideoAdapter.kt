@@ -15,21 +15,29 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.VideoView
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-class VideoAdapter (private val videoResourceIds: List<Int>) : RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
 
+data class VideoItem(
+    val videoResourceId: Int,
+    val thumbnailResourceId: Int
+)
+
+class VideoAdapter (private val videoItems: List<VideoItem>) : RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
     inner class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val videoView: VideoView = itemView.findViewById(R.id.videoView)
+        val videoThumbnailImageView: ImageView = itemView.findViewById(R.id.videoThumbnailImageView)
 
         init {
-            // Set OnClickListener to VideoView
             videoView.setOnClickListener {
                 if (videoView.isPlaying) {
                     videoView.pause()
+                    videoThumbnailImageView.visibility = View.VISIBLE
                 } else {
                     videoView.start()
+                    videoThumbnailImageView.visibility = View.GONE
                 }
             }
         }
@@ -41,11 +49,19 @@ class VideoAdapter (private val videoResourceIds: List<Int>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
-        val videoPath = "android.resource://${holder.videoView.context.packageName}/${videoResourceIds[position]}"
+        val videoItem = videoItems[position]
+
+        val videoPath = "android.resource://${holder.videoView.context.packageName}/${videoItem.videoResourceId}"
         holder.videoView.setVideoURI(Uri.parse(videoPath))
+
+        // Set the thumbnail for the video
+        holder.videoThumbnailImageView.setImageResource(videoItem.thumbnailResourceId)
+
     }
 
+
+
     override fun getItemCount(): Int {
-        return videoResourceIds.size
+        return videoItems.size
     }
 }

@@ -58,4 +58,17 @@
     <string name="strAlertMessage_Something">Algo no está bien aquí inténtalo de nuevo más tarde</string>
     <string name="title_activity_home_fragment">Algo no está bien aquí inténtalo de nuevo más tarde</string>
 
+    <string name="provider">Proveedora</string>
+    <string name="dosage">Dosis</string>
+    <string name="direction">Dirección</string>
+
+    <string name="add_medications">Agregar medicamentos</string>
+    <string name="alarm">Alarma</string>
+    <string name="schedule_time_and_alarm">Tiempo programado &amp; Alarma</string>
+    <string name="with_meal">Con la comida</string>
+    <string name="time">Tiempo</string>
+    <string name="morning">Mañana</string>
+    <string name="evening">Noche</string>
+    <string name="cancel">Cancelar</string>
+
 </resources>

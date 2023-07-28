@@ -56,6 +56,18 @@
     <string name="strAlertMessage_Something">Something is not right here try again later</string>
     <string name="title_activity_home_fragment">Something is not right here try again later</string>
 
+    <string name="provider">Provider</string>
+    <string name="dosage">Dosage</string>
+    <string name="direction">Direction</string>
+
+    <string name="add_medications">Add Medications</string>
+    <string name="alarm">Alarm</string>
+    <string name="time">Time</string>
+    <string name="schedule_time_and_alarm">Schedule Time &amp; Alarm</string>
+    <string name="with_meal">With Meal</string>
+    <string name="morning">Morning</string>
+    <string name="evening">Evening</string>
+    <string name="cancel">Cancel</string>
 
 
 </resources>

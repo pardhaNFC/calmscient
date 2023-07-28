@@ -28,6 +28,7 @@ import com.calmscient.adapters.VideoAdapter
 import com.calmscient.activities.WeeklySummary
 import com.calmscient.Interface.CellClickListener
 import com.calmscient.activities.CalendarViewActivity
+import com.calmscient.adapters.VideoItem
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -43,23 +44,34 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
-        val videoResourceIds = listOf(
-            R.raw.video1,
-            R.raw.video2,
-            R.raw.video2,
-            R.raw.video1,
-            R.raw.video3,
-            R.raw.video1,
-            R.raw.video3,
-            R.raw.video2,
-            R.raw.video1,
-            R.raw.video3
+        val videoItems = listOf(
+            VideoItem(R.raw.video1, R.drawable.thumbnail1),
+            VideoItem(R.raw.video2, R.drawable.thumbnail2),
+            VideoItem(R.raw.video3, R.drawable.thumbnail1),
+
+            VideoItem(R.raw.video1, R.drawable.thumbnail1),
+            VideoItem(R.raw.video2, R.drawable.thumbnail2),
+            VideoItem(R.raw.video3, R.drawable.thumbnail1),
+
+            VideoItem(R.raw.video1, R.drawable.thumbnail2),
+            VideoItem(R.raw.video2, R.drawable.thumbnail1),
+            VideoItem(R.raw.video3, R.drawable.thumbnail2),
+
+            VideoItem(R.raw.video1, R.drawable.thumbnail1),
+            VideoItem(R.raw.video2, R.drawable.thumbnail2),
+            VideoItem(R.raw.video3, R.drawable.thumbnail1),
+            // Add more VideoItem objects as needed
+        )
+        val thumbnailResourceIds = listOf(
+            R.drawable.thumbnail1,
+            R.drawable.thumbnail2,
+            // Add more thumbnail resource IDs as needed
         )
 
         recyclerView = rootView.findViewById(R.id.recyclerViewVideos)
         recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        videoAdapter = VideoAdapter(videoResourceIds)
+        videoAdapter = VideoAdapter(videoItems)
         recyclerView.adapter = videoAdapter
         // Find the myMedicalRecordsLayout
         val myMedicalRecordsLayout = rootView.findViewById<View>(R.id.myMedicalRecordsLayout)

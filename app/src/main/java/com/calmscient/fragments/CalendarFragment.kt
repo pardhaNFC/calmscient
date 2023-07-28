@@ -41,7 +41,14 @@ import java.time.format.TextStyle
 import java.util.Locale
 
 // Define the CardViewItem data class
-data class CardViewItem(val title: String, val description: String, val imageResId: Int)
+data class CardViewItem(
+    val title: String,
+    val dosage: String,
+    val timeMorning: String?,
+    val timeEvening: String?,
+    val sunImageResource: Int?,
+    val moonImageResource :Int?
+)
 class CalendarFragment : Fragment() {
     private lateinit var binding: Example7FragmentBinding
     private var selectedDate = LocalDate.now()
@@ -54,7 +61,9 @@ class CalendarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = Example7FragmentBinding.inflate(inflater, container, false)
-
+        binding.plusIcon.setOnClickListener {
+            loadFragment(AddMedicationsFragment())
+        }
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -119,13 +128,14 @@ class CalendarFragment : Fragment() {
     }
 
     private fun displayCardViewsForSelectedDate() {
-        // Clear previous items and add new CardView items for the selected date
         cardViewItems.clear()
-        // Add your logic to populate cardViewItems based on the selected date
-        // For example:
-        cardViewItems.add(CardViewItem("Card 1", "Description for Card 1", R.drawable.ic_next))
-        cardViewItems.add(CardViewItem("Card 2", "Description for Card 2", R.drawable.ic_next))
-        cardViewItems.add(CardViewItem("Card 3", "Description for Card 3", R.drawable.ic_next))
+        cardViewItems.addAll(
+            listOf(
+                CardViewItem("Paracetamol", "2 Tablets", "8:00 AM", "7:00 PM", R.drawable.sunset,R.drawable.moon),
+                CardViewItem("Anti-biotic", "1 Tablet", "9:30 AM", null, R.drawable.sunset,null),
+                CardViewItem("Vitamin", "2 Tablets", "9:00 AM", "7:30 PM", R.drawable.sunset,R.drawable.moon)
+            )
+        )
         cardViewAdapter.notifyDataSetChanged()
     }
     fun getWeekPageTitle(week: Week): String {
@@ -159,5 +169,11 @@ class CalendarFragment : Fragment() {
         return getDisplayName(TextStyle.SHORT, Locale.ENGLISH).let { value ->
             if (uppercase) value.uppercase(Locale.ENGLISH) else value
         }
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        transaction.commit()
     }
 }

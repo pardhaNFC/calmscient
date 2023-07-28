@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  -->
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="20sp">
+    android:layout_margin="10sp">
 
+    <!-- VideoView to play the video -->
     <VideoView
         android:id="@+id/videoView"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_marginTop="7sp"
+        android:layout_marginLeft="3sp"
+        android:layout_marginRight="-4sp"
+        android:layout_width="160dp"
+        android:layout_height="110dp"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true" />
 
+    <!-- ImageView to display the video thumbnail -->
+    <ImageView
+        android:id="@+id/videoThumbnailImageView"
+        android:layout_margin="-5sp"
+        android:layout_width="160dp"
+        android:layout_height="110dp"
+        android:visibility="visible" />
 
 </FrameLayout>

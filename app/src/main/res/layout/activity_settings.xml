@@ -85,10 +85,10 @@
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/profilesettings1" />
+                android:src="@drawable/ic_profile_settings" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -121,7 +121,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/theme_icon" />
+                android:src="@drawable/ic_theme_mode" />
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
@@ -171,7 +171,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/languages_icon" />
+                android:src="@drawable/ic_language" />
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
@@ -203,7 +203,7 @@
                     android:layout_height="25dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginStart="7dp"
-                    android:src="@drawable/flagenglish_icon" />
+                    android:src="@drawable/ic_flag_english" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -229,7 +229,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:layout_marginStart="7dp"
-                    android:src="@drawable/spanishflag_icon"/>
+                    android:src="@drawable/ic_flag_spanish"/>
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
@@ -292,7 +292,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/notifications_icon" />
+                android:src="@drawable/ic_notifications" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -311,7 +311,41 @@
             android:layout_height="2dp"
             android:background="@color/viewbackgroundcolor"
             />
+        <RelativeLayout
+            android:id="@+id/lincensekey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:minHeight="48dp">
 
+            <ImageView
+                android:id="@+id/Lincenseimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_license" />
+
+            <TextView
+                android:id="@+id/lincensetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="7dp"
+                android:text="License Key"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@color/viewbackgroundcolor"
+            />
         <RelativeLayout
             android:id="@+id/HelpSupport"
             android:layout_width="match_parent"
@@ -328,7 +362,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/helpsupport_icon" />
+                android:src="@drawable/ic_helpsupport" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -364,7 +398,7 @@
                 android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/logout" />
+                android:src="@drawable/ic_logout" />
 
             <TextView
                 android:id="@+id/textView7"
