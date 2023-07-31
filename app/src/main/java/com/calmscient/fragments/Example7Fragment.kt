@@ -12,14 +12,10 @@
 package com.calmscient.fragments
 
 import android.annotation.SuppressLint
-import android.graphics.Typeface
 import android.os.Bundle
-import android.text.Spannable
-import android.text.style.StyleSpan
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
-import androidx.core.text.toSpanned
 import androidx.core.view.isVisible
 import com.calmscient.R
 import com.calmscient.databinding.Example7CalendarDayBinding
@@ -41,7 +37,7 @@ import java.time.format.TextStyle
 import java.util.Locale
 
 
-class Example7Fragment : BaseFragment(R.layout.example_7_fragment), HasToolbar, HasBackButton {
+class Example7Fragment : BaseFragment(R.layout.calendar_fragment_layout), HasToolbar, HasBackButton {
     override val titleRes: Int = R.string.app_name
 
     override val toolbar: Toolbar

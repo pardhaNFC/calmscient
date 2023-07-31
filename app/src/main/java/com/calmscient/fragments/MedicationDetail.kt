@@ -19,7 +19,6 @@ import androidx.fragment.app.Fragment
 import com.calmscient.R
 
 class MedicationDetail: Fragment() {
-    // TODO: Rename and change types of parameters
     private lateinit var binding: MedicationDetail
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
