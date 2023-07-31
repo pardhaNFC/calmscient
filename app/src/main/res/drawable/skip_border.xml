@@ -9,5 +9,4 @@
         android:right="34dp"
         android:top="7dp" />
     <solid android:color="#F4F3FF" />
-
 </shape>

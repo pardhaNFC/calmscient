@@ -47,8 +47,9 @@ data class CardViewItem(
     val timeMorning: String?,
     val timeEvening: String?,
     val sunImageResource: Int?,
-    val moonImageResource :Int?
+    val moonImageResource: Int?
 )
+
 class CalendarFragment : Fragment(), CellClickListener {
     private lateinit var binding: CalendarFragmentLayoutBinding
     private var selectedDate = LocalDate.now()
@@ -66,6 +67,7 @@ class CalendarFragment : Fragment(), CellClickListener {
         }
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -88,14 +90,20 @@ class CalendarFragment : Fragment(), CellClickListener {
                 this.day = day
                 bind.exSevenDateText.text = dateFormatter.format(day.date)
                 bind.exSevenDayText.text = day.date.dayOfWeek.displayText()
-
                 val colorRes = if (day.date == selectedDate) {
                     R.color.white
                 } else {
                     R.color.black
                 }
                 bind.exSevenDateText.setTextColor(view.context.getColorCompat(colorRes))
-                bind.exSevenSelectedView.isVisible = day.date == selectedDate
+                bind.exSevenDayText.setTextColor(view.context.getColorCompat(colorRes))
+                val colorResLayout = if (day.date == selectedDate) {
+                    R.drawable.calendar_custom_border
+                } else {
+                    R.color.example_7_calendar
+                }
+                bind.layoutDate.setBackgroundResource(colorResLayout)
+                //bind.exSevenSelectedView.isVisible = day.date == selectedDate
             }
         }
         binding.exSevenCalendar.dayBinder = object : WeekDayBinder<DayViewContainer> {
@@ -131,13 +139,28 @@ class CalendarFragment : Fragment(), CellClickListener {
         cardViewItems.clear()
         cardViewItems.addAll(
             listOf(
-                CardViewItem("Paracetamol", "2 Tablets", "8:00 AM", "7:00 PM", R.drawable.sunset,R.drawable.moon),
-                CardViewItem("Anti-biotic", "1 Tablet", "9:30 AM", null, R.drawable.sunset,null),
-                CardViewItem("Vitamin", "2 Tablets", "9:00 AM", "7:30 PM", R.drawable.sunset,R.drawable.moon)
+                CardViewItem(
+                    "Paracetamol",
+                    "2 Tablets",
+                    "8:00 AM",
+                    "7:00 PM",
+                    R.drawable.sunset,
+                    R.drawable.moon
+                ),
+                CardViewItem("Anti-biotic", "1 Tablet", "9:30 AM", null, R.drawable.sunset, null),
+                CardViewItem(
+                    "Vitamin",
+                    "2 Tablets",
+                    "9:00 AM",
+                    "7:30 PM",
+                    R.drawable.sunset,
+                    R.drawable.moon
+                )
             )
         )
         cardViewAdapter.notifyDataSetChanged()
     }
+
     fun getWeekPageTitle(week: Week): String {
         val firstDate = week.days.first().date
         val lastDate = week.days.last().date

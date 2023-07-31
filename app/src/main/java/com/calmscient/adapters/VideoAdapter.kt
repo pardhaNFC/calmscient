@@ -25,7 +25,8 @@ data class VideoItem(
     val thumbnailResourceId: Int
 )
 
-class VideoAdapter (private val videoItems: List<VideoItem>) : RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
+class VideoAdapter(private val videoItems: List<VideoItem>) :
+    RecyclerView.Adapter<VideoAdapter.VideoViewHolder>() {
     inner class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val videoView: VideoView = itemView.findViewById(R.id.videoView)
         val videoThumbnailImageView: ImageView = itemView.findViewById(R.id.videoThumbnailImageView)
@@ -44,21 +45,22 @@ class VideoAdapter (private val videoItems: List<VideoItem>) : RecyclerView.Adap
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.video_item, parent, false)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.video_item, parent, false)
         return VideoViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
         val videoItem = videoItems[position]
 
-        val videoPath = "android.resource://${holder.videoView.context.packageName}/${videoItem.videoResourceId}"
+        val videoPath =
+            "android.resource://${holder.videoView.context.packageName}/${videoItem.videoResourceId}"
         holder.videoView.setVideoURI(Uri.parse(videoPath))
 
         // Set the thumbnail for the video
         holder.videoThumbnailImageView.setImageResource(videoItem.thumbnailResourceId)
 
     }
-
 
 
     override fun getItemCount(): Int {
