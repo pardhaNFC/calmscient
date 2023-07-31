@@ -22,9 +22,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.calmscient.Interface.CellClickListener
 import com.calmscient.R
 import com.calmscient.adapters.MedicationsCardAdapter
-import com.calmscient.databinding.ActivityMyMedicalRecordsBinding
-import com.calmscient.databinding.Example7CalendarDayBinding
-import com.calmscient.databinding.Example7FragmentBinding
+import com.calmscient.databinding.CalendarDayLayoutBinding
+import com.calmscient.databinding.CalendarFragmentLayoutBinding
 import com.calmscient.utils.getColorCompat
 import com.kizitonwose.calendar.core.Week
 import com.kizitonwose.calendar.core.WeekDay
@@ -51,7 +50,7 @@ data class CardViewItem(
     val moonImageResource :Int?
 )
 class CalendarFragment : Fragment(), CellClickListener {
-    private lateinit var binding: Example7FragmentBinding
+    private lateinit var binding: CalendarFragmentLayoutBinding
     private var selectedDate = LocalDate.now()
     private val dateFormatter = DateTimeFormatter.ofPattern("dd")
     private lateinit var cardViewAdapter: MedicationsCardAdapter
@@ -61,7 +60,7 @@ class CalendarFragment : Fragment(), CellClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = Example7FragmentBinding.inflate(inflater, container, false)
+        binding = CalendarFragmentLayoutBinding.inflate(inflater, container, false)
         binding.plusIcon.setOnClickListener {
             loadFragment(AddMedicationsFragment())
         }
@@ -71,7 +70,7 @@ class CalendarFragment : Fragment(), CellClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         class DayViewContainer(view: View) : ViewContainer(view) {
-            val bind = Example7CalendarDayBinding.bind(view)
+            val bind = CalendarDayLayoutBinding.bind(view)
             lateinit var day: WeekDay
 
             init {

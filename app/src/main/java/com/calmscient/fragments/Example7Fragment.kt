@@ -18,8 +18,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.calmscient.R
-import com.calmscient.databinding.Example7CalendarDayBinding
-import com.calmscient.databinding.Example7FragmentBinding
+import com.calmscient.databinding.CalendarDayLayoutBinding
+import com.calmscient.databinding.CalendarFragmentLayoutBinding
 import com.calmscient.utils.getColorCompat
 import com.kizitonwose.calendar.core.Week
 import com.kizitonwose.calendar.core.WeekDay
@@ -49,14 +49,14 @@ class Example7Fragment : BaseFragment(R.layout.calendar_fragment_layout), HasToo
     @SuppressLint("NewApi")
     private val dateFormatter = DateTimeFormatter.ofPattern("dd")
 
-    private lateinit var binding: Example7FragmentBinding
+    private lateinit var binding: CalendarFragmentLayoutBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = Example7FragmentBinding.bind(view)
+        binding = CalendarFragmentLayoutBinding.bind(view)
 
         class DayViewContainer(view: View) : ViewContainer(view) {
-            val bind = Example7CalendarDayBinding.bind(view)
+            val bind = CalendarDayLayoutBinding.bind(view)
             lateinit var day: WeekDay
 
             init {
