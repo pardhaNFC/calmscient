@@ -16,6 +16,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_120sdp">
 
             <ImageView
@@ -43,18 +44,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/clamscient_splash_middle" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:adjustViewBounds="true"
-            android:src="@drawable/clamscient_splash_bottom" />
+            android:src="@drawable/splash_image" />
     </RelativeLayout>
 
     <!--</RelativeLayout>-->

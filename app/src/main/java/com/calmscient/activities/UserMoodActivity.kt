@@ -96,9 +96,9 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             binding.mornHoursSleepCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
             //binding.cardDailyJournel.visibility = View.VISIBLE
-        } else if (greeting == getString(R.string.good_afternoon)) {
+        } else if (greeting == getString(R.string.good_morning)) {
             binding.cardAfternoon.visibility = View.VISIBLE
-        } else if (greeting == getString(R.string.good_evening)) {
+        } else if (greeting == getString(R.string.good_afternoon)) {
             binding.cardEveDay.visibility = View.VISIBLE
             binding.spendTimeCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
@@ -218,7 +218,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             }
             //morning sleep
             R.id.sleep_less->{
-                binding.sleepLess.setImageResource(R.drawable.less_icon)
+                binding.sleepLess.setImageResource(R.drawable.selected_less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
                 binding.sleep5.setImageResource(R.drawable.sleep_5)
                 binding.sleep6.setImageResource(R.drawable.sleep_6)

@@ -26,6 +26,7 @@
                 android:id="@+id/img_calm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_40sdp"
                 android:src="@drawable/clamscient_txt_splash" />
 
@@ -35,7 +36,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                app:boxStrokeColor="@color/example_7_button"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:hint="@string/username"
+                app:boxBackgroundColor="#ffffff"
+                app:hintTextColor="@color/black"
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -56,7 +62,11 @@
                 android:paddingTop="16dp"
                 app:boxBackgroundColor="#ffffff"
                 app:hintTextColor="@color/black"
+                app:passwordToggleDrawable="@drawable/password_show"
                 app:passwordToggleEnabled="true"
+                app:boxStrokeColor="@color/example_7_button"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 app:passwordToggleTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -75,6 +85,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:background="@drawable/button_border"
                 android:gravity="center"
                 android:text="@string/login"
@@ -104,6 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
                     android:text="@string/forgot_password"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_16sdp"
@@ -123,29 +135,27 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/create_new_account"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_16sdp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-
+                android:layout_marginHorizontal="@dimen/_15sdp"
                 android:gravity="center">
 
-                <TextView
+                <ImageView
                     android:id="@+id/or"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/or"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_16sdp" />
+                    android:background="@drawable/or"/>
 
-            </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -212,6 +222,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icons_facebook"
+                android:layout_marginStart="@dimen/_20sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/icon1"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -221,6 +232,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icons_apple"
+                android:layout_marginStart="@dimen/_20sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/icon2"

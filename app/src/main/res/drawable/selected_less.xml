@@ -1,8 +1,19 @@
+<!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="44dp"
-    android:height="40dp"
-    android:viewportWidth="44"
-    android:viewportHeight="40">
+    android:width="150dp"
+    android:height="148dp"
+    android:viewportWidth="50"
+    android:viewportHeight="48">
   <path
       android:pathData="M24,0L26,0A20,20 0,0 1,46 20L46,20A20,20 0,0 1,26 40L24,40A20,20 0,0 1,4 20L4,20A20,20 0,0 1,24 0z"
       android:fillColor="#6E6BB3"/>
