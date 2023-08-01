@@ -15,8 +15,8 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_gravity="right"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="right">
 
             <ImageView
                 android:id="@+id/img_profile1"
@@ -70,7 +70,14 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="8dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false">
 
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -82,29 +89,27 @@
                 android:weightSum="3">
 
                 <ImageView
-                    android:layout_width="40sp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5sp"
                     android:layout_weight="1"
-                    android:src="@drawable/mymedicalrecords"
-                    android:textAlignment="center" />
+                    android:src="@drawable/mymedicalrecords" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="27sp"
-                    android:layout_marginBottom="20sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:text="My Medical Records"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="24dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="20sp"
                     android:layout_height="25sp"
-                    android:layout_marginTop="35sp"
+                    android:layout_marginTop="30sp"
                     android:layout_weight="1"
                     android:src="@drawable/ic_next"
                     android:textAlignment="center" />
@@ -115,45 +120,48 @@
 
         <!-- Card View for Weekly Summery-->
         <androidx.cardview.widget.CardView
-
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="8dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/weeklySummaryLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-
                 android:weightSum="3">
 
                 <ImageView
-                    android:layout_width="30sp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5sp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:src="@drawable/weekly_summary"
-                    android:textAlignment="center">
+                    android:src="@drawable/weekly_summary">
 
                 </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="27sp"
-                    android:layout_marginBottom="20sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:text="Weekly Summary"
-                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="24dp"
+                    android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="20sp"
                     android:layout_height="25sp"
-                    android:layout_marginTop="35sp"
+                    android:layout_marginTop="30sp"
                     android:layout_weight="1"
                     android:src="@drawable/ic_next"
                     android:textAlignment="center" />
@@ -171,7 +179,7 @@
             android:text="Favorites"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
@@ -199,18 +207,18 @@
         </FrameLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/needToTalkWithSomeOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="34dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="34dp"
+            android:layout_marginBottom="34dp"
             android:background="@drawable/button_border"
             android:text="@string/need_to_talk"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="13sp">
-
-        </androidx.appcompat.widget.AppCompatButton>
-
+            android:textSize="16sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

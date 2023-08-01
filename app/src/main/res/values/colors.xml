@@ -21,5 +21,6 @@
     <color name="purple_100">#6E6BB3</color>
     <color name="bottom_nav_selected">#F48383</color>
     <color name="custom_text_color">#ffffff</color>
+    <color name="hospital_name">#575757</color>
 
 </resources>

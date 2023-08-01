@@ -154,60 +154,18 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/or"/>
-
             </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fields_forgot"
             android:layout_marginTop="@dimen/_10sdp"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <!--<LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_google"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
-                    android:drawableStart="@drawable/icons_google_48" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_facebook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
-                    android:drawableStart="@drawable/icons_facebook" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="1">
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_apple"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/button_circle"
-                    android:drawableStart="@drawable/icons_apple" />
-            </LinearLayout>-->
             <ImageView
                 android:id="@+id/icon1"
                 android:layout_width="wrap_content"

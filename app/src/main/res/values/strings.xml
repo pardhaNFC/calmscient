@@ -68,6 +68,35 @@
     <string name="morning">Morning</string>
     <string name="evening">Evening</string>
     <string name="cancel">Cancel</string>
-
+    <!--Emergency Resource Page strings-->
+    <string name="emergency_resource">Emergency Resource</string>
+    <string name="doctor_name">Dr. Samuel Parker</string>
+    <string name="hospital_name">Central Park Hospital</string>
+    <string name="doctor_phone_number"><u><a href="tel:(804)0938172"><font color="#6E6BB3">(804)0938172</font></a></u></string>
+    <string name="suicide_heading">988 Suicide &amp; Crisis Lifeline</string>
+    <string name="suicide_text">Call or text 988 or chat 988lifeline.org. The 988 Suicide &amp; Crisis Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week.</string>
+    <string name="disaster_heading">Disaster Distress Helpline</string>
+    <string name="disaster_text">
+        The national Disaster Distress Helpline is available for anyone experiencing emotional distress related to natural or human-caused disasters.
+        Call or text <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> to be connected to a trained, caring counselor, 24/7/365.
+</string>
+    <string name="crisis_heading">Crisis Text Line</string>
+    <string name="crisis_text">Text MHA to<a href="sms:678678"><font color="#6E6BB3"> 741741</font></a> and you\'ll be connected to a trained Crisis Counselor. Crisis Text Line provides free, text-based support 24/7.</string>
+    <string name="trevor_heading">The Trevor Project</string>
+    <string name="trevor_text">
+        Call <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> or
+        text START to <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.
+        A national 24-hour, toll free confidential suicide hotline for LGBTQ youth.
+</string>
+    <string name="trans_helpline_heading">Trans Lifeline</string>
+    <string name="trans_helpline_text">
+     Dial <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> for US and
+     <u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> for Canada.
+     Trans Lifeline\'s Hotline is a peer support service run by trans people, for trans and questioning callers.
+</string>
+    <string name="disaster_number">1-800-985-5990</string>
+    <string name="crisis_number">741741</string>
+    <string name="trevor_number">1-866-488-7386</string>
+    <string name="trans_number">877-565-8860</string>
 
 </resources>

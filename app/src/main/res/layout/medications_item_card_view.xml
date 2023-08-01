@@ -8,8 +8,15 @@
         android:id="@+id/item_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_2sdp"
         app:cardCornerRadius="@dimen/_8sdp"
+        android:divider="@android:color/transparent"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false"
         android:clickable="true">
 
         <LinearLayout

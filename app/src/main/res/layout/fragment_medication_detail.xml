@@ -39,7 +39,8 @@
                 android:layout_marginBottom="20dp"
                 android:text="Medication Details"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -49,6 +50,7 @@
             android:background="#F5F5F5">
 
             <ImageView
+                android:id="@+id/tablets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
@@ -57,22 +59,22 @@
 
             <TextView
                 android:id="@+id/text1"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="220dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/tablets"
                 android:text="Lisinopril"
                 android:textColor="#000000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="220dp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_toRightOf="@+id/tablets"
                 android:text="Dr. Samuel parker"
                 android:textColor="#000000"
                 android:textSize="16dp" />
@@ -103,7 +105,7 @@
                         android:id="@+id/dosadetext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
                         android:layout_marginTop="20dp"
                         android:text="Dosage"
                         android:textColor="#424242"
@@ -113,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/dosadetext"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
                         android:text="50MG"
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -165,7 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_30sdp"
-                android:src="@drawable/ic_calendarimage_medication_detail" />
+                android:src="@drawable/calander_icon_addmedictions" />
         </LinearLayout>
 
         <RelativeLayout
@@ -184,14 +186,15 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
             android:layout_marginBottom="10dp"
             android:weightSum="2">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="145dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 app:cardBackgroundColor="#F5F5F5"
                 app:cardCornerRadius="10dp">
 
@@ -204,7 +207,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="60dp"
                     android:text="@string/time"
@@ -213,7 +216,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="80dp"
                     android:text="8:00 AM"
@@ -223,9 +226,10 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="145dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 app:cardBackgroundColor="#F5F5F5"
                 app:cardCornerRadius="10dp">
 
@@ -237,17 +241,18 @@
                     android:src="@drawable/ic_alarm" />
 
                 <com.github.angads25.toggle.widget.LabeledSwitch
-                    android:id="@+id/id_switch1"
+                    android:id="@+id/id_switch2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_margin="16dp"
+                    android:layout_margin="13dp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
                     android:textSize="14sp"
                     app:on="false" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="60dp"
                     android:text="@string/alarm"
@@ -256,10 +261,10 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="80dp"
-                    android:text="8:00 AM"
+                    android:text="7:50 AM"
                     android:textColor="#424242"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -279,17 +284,19 @@
                 android:textSize="16dp" />
         </RelativeLayout>
 
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_50sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginBottom="10dp"
             android:weightSum="2">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="145dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 app:cardBackgroundColor="#F5F5F5"
                 app:cardCornerRadius="10dp">
 
@@ -302,7 +309,7 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="60dp"
                     android:text="@string/time"
@@ -311,19 +318,19 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="80dp"
-                    android:text="8:00 AM"
+                    android:text="7:00 PM"
                     android:textColor="#424242"
                     android:textSize="18dp"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
+                android:layout_width="145dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 app:cardBackgroundColor="#F5F5F5"
                 app:cardCornerRadius="10dp">
 
@@ -335,17 +342,17 @@
                     android:src="@drawable/ic_alarm" />
 
                 <com.github.angads25.toggle.widget.LabeledSwitch
-                    android:id="@+id/id_switch"
+                    android:id="@+id/id_switch1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:layout_margin="16dp"
+                    android:layout_margin="13dp"
                     android:textSize="14sp"
                     app:on="false" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="60dp"
                     android:text="@string/alarm"
@@ -354,10 +361,10 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
                     android:layout_marginTop="80dp"
-                    android:text="8:00 AM"
+                    android:text="6:50 PM"
                     android:textColor="#424242"
                     android:textSize="18dp"
                     android:textStyle="bold" />

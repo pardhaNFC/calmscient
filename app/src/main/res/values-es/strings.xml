@@ -70,5 +70,36 @@
     <string name="morning">Mañana</string>
     <string name="evening">Noche</string>
     <string name="cancel">Cancelar</string>
+    <!--Emergency Resource Page strings-->
+    <string name="emergency_resource">Recurso de emergencia</string>
+    <string name="doctor_name">Dr. Samuel Parker</string>
+    <string name="hospital_name">Hospital del parque central</string>
+    <string name="doctor_phone_number"><u><a href="tel:(804)0938172"><font color="#6E6BB3">(804)0938172</font></a></u></string>
+    <string name="suicide_heading">988 Suicidio y Crisis Lifeline</string>
+    <string name="suicide_text">Llame o envíe un mensaje de texto al 988 o chatee en 988lifeline.org. 988 Suicide &amp; Crisis Lifeline es una red nacional de centros locales de crisis que brinda apoyo emocional gratuito y confidencial a personas en crisis suicida o angustia emocional las 24 horas del día, los 7 días de la semana.</string>
+    <string name="disaster_heading">Línea de ayuda para casos de desastre</string>
+    <string name="disaster_text">
+        La Línea Nacional de Ayuda para Desastres está disponible para cualquier persona que experimente angustia emocional relacionada con desastres naturales o causados por humanos.
+        Llame o envíe un mensaje de texto al <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> para conectarse con un consejero capacitado y atento, las 24 horas del día, los 7 días de la semana, los 365 días del año.
+</string>
+    <string name="crisis_heading">Línea de texto de crisis</string>
+    <string name="crisis_text">Envíe un mensaje de texto con MHA al 741741 y lo conectarán con un consejero de crisis capacitado. Crisis Text Line brinda soporte gratuito basado en texto las 24 horas del día, los 7 días de la semana.</string>
+    <string name="trevor_heading">El Proyecto Trevor</string>
+    <string name="trevor_text">
+        Llama al <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> o
+        envía START al <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.
+        Una línea nacional de ayuda confidencial, gratuita y disponible las 24 horas para jóvenes LGBTQ en riesgo de suicidio.
+</string>
+    <string name="trans_helpline_heading">Línea de vida trans</string>
+    <string name="trans_helpline_text">
+        Marque <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> para EE. UU. y
+        <u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> para Canadá.
+        La línea directa de Trans Lifeline es un servicio de apoyo entre pares administrado por personas trans, para personas trans y personas que preguntan.
+</string>
+    <string name="disaster_number">1-800-985-5990</string>
+    <string name="crisis_number">741741</string>
+    <string name="trevor_number">1-866-488-7386</string>
+    <string name="trans_number">877-565-8860</string>
+
 
 </resources>

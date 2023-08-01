@@ -1,43 +1,56 @@
-package com.calmscient.activities
+/*
+ *
+ *      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+ *      All source code contained herein remains the property of NFC Solutions Incorporated
+ *      and protected by trade secret or copyright law of USA.
+ *      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+ *      there is a prior written permission or license agreement from NFC Solutions.
+ *
+ *      Author : @Pardha Saradhi
+ */
 
-import android.content.Intent
+package com.calmscient.fragments
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.FragmentUserMoodBinding
 import java.util.Calendar
 import java.util.Date
 
+class UserMoodFragment : Fragment(), View.OnClickListener {
 
-class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
-    lateinit var binding: FragmentUserMoodBinding
+    private lateinit var binding: FragmentUserMoodBinding
     private var isImage1Visible = true
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = FragmentUserMoodBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-        window.setFlags(
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentUserMoodBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        activity?.window?.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         greeting()
-        /*binding.imgMBad.setOnClickListener {
-            if(isImage1Visible){
-                binding.imgMBad.setImageResource(com.calmscient.R.drawable.icon_excellent)
-            }
-            // Update the flag to keep track of the currently visible image
-            isImage1Visible = !isImage1Visible
-        }*/
-        //morning Clicks
-        binding.imgMBad.setOnClickListener(this);
-        binding.imgMBetter.setOnClickListener(this);
-        binding.imgMGood.setOnClickListener(this);
-        binding.imgMFair.setOnClickListener(this);
+
+        // Set click listeners for morning images
+        binding.imgMBad.setOnClickListener(this)
+        binding.imgMBetter.setOnClickListener(this)
+        binding.imgMGood.setOnClickListener(this)
+        binding.imgMFair.setOnClickListener(this)
         binding.imgMExcellent.setOnClickListener(this)
-        //morning sleep
+
+        // Set click listeners for morning sleep images
         binding.sleepLess.setOnClickListener(this)
         binding.sleep4.setOnClickListener(this)
         binding.sleep5.setOnClickListener(this)
@@ -47,55 +60,47 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         binding.sleep9.setOnClickListener(this)
         binding.sleep10.setOnClickListener(this)
         binding.sleepMore.setOnClickListener(this)
-        //afternoon clicks
-        binding.imgEveBad.setOnClickListener(this);
-        binding.imgEveBetter.setOnClickListener(this);
-        binding.imgEveGood.setOnClickListener(this);
-        binding.imgEveFair.setOnClickListener(this);
-        binding.imgEveExcellent.setOnClickListener(this);
-        //evening clicks
-        binding.imgNigBad.setOnClickListener(this);
-        binding.imgNigBetter.setOnClickListener(this);
-        binding.imgNigFair.setOnClickListener(this);
-        binding.imgNigGood.setOnClickListener(this);
+
+        // Set click listeners for afternoon images
+        binding.imgEveBad.setOnClickListener(this)
+        binding.imgEveBetter.setOnClickListener(this)
+        binding.imgEveGood.setOnClickListener(this)
+        binding.imgEveFair.setOnClickListener(this)
+        binding.imgEveExcellent.setOnClickListener(this)
+
+        // Set click listeners for evening images
+        binding.imgNigBad.setOnClickListener(this)
+        binding.imgNigBetter.setOnClickListener(this)
+        binding.imgNigFair.setOnClickListener(this)
+        binding.imgNigGood.setOnClickListener(this)
         binding.imgNigExcellent.setOnClickListener(this)
         binding.imgFamily.setOnClickListener(this)
         binding.imgFriends.setOnClickListener(this)
         binding.imgWorkmates.setOnClickListener(this)
         binding.imgOthers.setOnClickListener(this)
         binding.imgAlone.setOnClickListener(this)
-        //button click
+
+        // Set click listeners for buttons
         binding.btnSave.setOnClickListener(this)
         binding.btnSkip.setOnClickListener(this)
-
-
     }
 
-    fun greeting() {
+    private fun greeting() {
         val date = Date()
         val cal = Calendar.getInstance()
         cal.time = date
         val hour: Int = cal.get(Calendar.HOUR_OF_DAY)
         var greeting: String? = null
-        if (hour in 6..11) {
-            greeting = getString(R.string.good_morning)
-        } else if (hour in 12..16) {
-            //greeting = getString(R.string.good_afternoon)
-            greeting = getString(R.string.good_afternoon)
-        } else if (hour in 17..23) {
-            //greeting = getString(R.string.good_evening)
-            greeting = getString(R.string.good_evening)
-        } /*else if (hour in 21..23) {
-                greeting = "Good Night";
-            } else {
-                greeting = getString(R.string.good_morning)
-            }*/
-        binding.idWishes.setText(greeting)
+        when {
+            hour in 6..11 -> greeting = getString(R.string.good_morning)
+            hour in 12..16 -> greeting = getString(R.string.good_afternoon)
+            hour in 17..23 -> greeting = getString(R.string.good_evening)
+        }
+        binding.idWishes.text = greeting
         if (greeting == getString(R.string.good_morning)) {
             binding.cardMorniMood.visibility = View.VISIBLE
             binding.mornHoursSleepCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
-            //binding.cardDailyJournel.visibility = View.VISIBLE
         } else if (greeting == getString(R.string.good_afternoon)) {
             binding.cardAfternoon.visibility = View.VISIBLE
         } else if (greeting == getString(R.string.good_evening)) {
@@ -108,7 +113,6 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-
     override fun onClick(v: View?) {
         binding.imgMBad.setImageResource(R.drawable.icon_bad)
         binding.imgMBetter.setImageResource(R.drawable.icon_better)
@@ -116,19 +120,17 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         binding.imgMGood.setImageResource(R.drawable.icon_good)
         binding.imgMExcellent.setImageResource(R.drawable.icon_excellent)
 
-
-        when (v!!.id) {
-            //morning images
+        when (v?.id) {
+            // Handle morning images click events
             R.id.img_mBad -> {
-                //binding.imgMBad.setImageResource(R.drawable.icon_excellent)
-                //binding.imgMBad.setImageResource(R.drawable.icon_excellent)
-                //binding.imgMBad.setBackgroundResource(R.drawable.drawable_circular_border)
+                // Handle image click
                 binding.imgMBad.setElevation(20.0F)
                 binding.imgMBetter.setElevation(0.0F)
                 binding.imgMFair.setElevation(0.0F)
                 binding.imgMGood.setElevation(0.0F)
                 binding.imgMExcellent.setElevation(0.0F)
             }
+            // Handle other morning images click events similarly
 
             R.id.img_mBetter -> {
                 //binding.imgMBetter.setImageResource(R.drawable.icon_better)
@@ -218,7 +220,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             }
             //morning sleep
             R.id.sleep_less->{
-                binding.sleepLess.setImageResource(R.drawable.selected_less)
+                binding.sleepLess.setImageResource(R.drawable.less_icon)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
                 binding.sleep5.setImageResource(R.drawable.sleep_5)
                 binding.sleep6.setImageResource(R.drawable.sleep_6)
@@ -408,12 +410,21 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgOthers.setImageResource(R.drawable.others)
             }
 
-            R.id.btn_save->{
-                startActivity(Intent(this, DashboardActivity::class.java))
+
+            R.id.btn_save -> {
+                loadFragment(HomeFragment())
             }
-            R.id.btn_skip->{
-                startActivity(Intent(this, DashboardActivity::class.java))
+            R.id.btn_skip -> {
+                loadFragment(HomeFragment())
             }
         }
+    }
+
+    private fun loadFragment(fragment:Fragment)
+    {
+        val homeFragment = HomeFragment()
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.flFragment, homeFragment)
+            .commit()
     }
 }

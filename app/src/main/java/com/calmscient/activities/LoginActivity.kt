@@ -16,11 +16,14 @@ import android.os.Bundle
 import android.view.View.OnFocusChangeListener
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
+import com.calmscient.fragments.UserMoodFragment
 
 
-class LoginActivity :  ComponentActivity() {
+class LoginActivity :  AppCompatActivity() {
 lateinit var binding: LayoutLoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,11 +50,12 @@ lateinit var binding: LayoutLoginBinding
             } else {
                 binding.editPassword.setHint(R.string.password)
             }
+
         })
     }
 
     private fun navigateToDayScreen() {
-        startActivity(Intent(this, UserMoodActivity::class.java))
+        startActivity(Intent(this, DashboardActivity::class.java))
     }
 
 }

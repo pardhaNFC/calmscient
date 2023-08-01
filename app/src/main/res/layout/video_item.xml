@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10sp">
@@ -6,20 +7,17 @@
     <!-- VideoView to play the video -->
     <VideoView
         android:id="@+id/videoView"
-        android:layout_marginTop="7sp"
-        android:layout_marginLeft="3sp"
-        android:layout_marginRight="-4sp"
         android:layout_width="160dp"
         android:layout_height="110dp"
+        android:layout_marginLeft="3sp"
+        android:layout_marginTop="7sp"
         android:clickable="true"
         android:focusable="true" />
 
     <!-- ImageView to display the video thumbnail -->
     <ImageView
         android:id="@+id/videoThumbnailImageView"
-        android:layout_margin="-5sp"
         android:layout_width="160dp"
         android:layout_height="110dp"
         android:visibility="visible" />
-
 </FrameLayout>

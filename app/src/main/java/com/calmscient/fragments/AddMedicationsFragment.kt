@@ -19,22 +19,20 @@ import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.FragmentAddMedicationsBinding
 
-class AddMedicationsFragment:Fragment() {
+class AddMedicationsFragment : Fragment() {
 
-    private lateinit var binding : FragmentAddMedicationsBinding
+    private lateinit var binding: FragmentAddMedicationsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = FragmentAddMedicationsBinding.inflate(inflater, container, false)
-
         //going back to Medications Fragment
-        var backToMedications = binding.addMedicationsDetailsBackIcon
-        backToMedications.setOnClickListener()
+        binding.addMedicationsDetailsBackIcon.setOnClickListener()
         {
-            loadFragment(MedicationsFragment())
+            //loadFragment(MedicationsFragment())
+            loadFragment(CalendarFragment())
         }
 
         //For with meal
@@ -48,14 +46,10 @@ class AddMedicationsFragment:Fragment() {
         //For Evening Alarm
         binding.alarmToggleButtonEvening.labelOn = "Yes"
         binding.alarmToggleButtonEvening.labelOff = "No"
-
-
-
         return binding.root
     }
 
-    private fun loadFragment(fragment:Fragment)
-    {
+    private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.commit()

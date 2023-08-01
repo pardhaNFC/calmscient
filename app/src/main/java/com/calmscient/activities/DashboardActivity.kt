@@ -20,6 +20,7 @@ import com.calmscient.fragments.DiscoveryFragment
 import com.calmscient.fragments.ExerciseFragment
 import com.calmscient.fragments.HomeFragment
 import com.calmscient.fragments.RewardsFragment
+import com.calmscient.fragments.UserMoodFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
@@ -32,7 +33,7 @@ class DashboardActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        loadFragment(HomeFragment())
+        loadFragment(UserMoodFragment())
         bottomNav = findViewById(R.id.bottomNavigationView) as BottomNavigationView
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         bottomNav.itemIconTintList = null
@@ -61,8 +62,6 @@ class DashboardActivity : AppCompatActivity() {
                     it.setIcon(R.drawable.rewards)
                     true
                 }
-
-
                 else -> {
                     false
                 }

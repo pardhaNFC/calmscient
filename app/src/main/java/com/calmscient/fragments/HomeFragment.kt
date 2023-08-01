@@ -85,8 +85,12 @@ class HomeFragment : Fragment() {
             /*val intent = Intent(activity, CalendarViewActivity::class.java)
             startActivity(intent)*/
         }
+        val needToTalkWithSomeOneButton = rootView.findViewById<View>(R.id.needToTalkWithSomeOne)
+        needToTalkWithSomeOneButton.setOnClickListener()
+        {
+            loadFragment(EmergencyResourceFragment())
+        }
         val weeklySummaryLayout = rootView.findViewById<View>(R.id.weeklySummaryLayout)
-
         weeklySummaryLayout.setOnClickListener {
             openWeeklySummaryActivity()
         }
