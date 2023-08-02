@@ -30,7 +30,7 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <ImageButton
-                    android:id="@+id/button_settings"
+                    android:id="@+id/backIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -88,6 +88,7 @@
 
             <!-- Your AppCompactButton -->
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saveButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"

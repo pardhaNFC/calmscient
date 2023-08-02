@@ -17,14 +17,28 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.calmscient.R
+import com.calmscient.databinding.FragmentMedicationDetailBinding
 
 class MedicationDetail: Fragment() {
-    private lateinit var binding: MedicationDetail
+    private lateinit var binding: FragmentMedicationDetailBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_medication_detail, container, false)
+        binding = FragmentMedicationDetailBinding.inflate(inflater, container, false)
+
+        binding.backIcon.setOnClickListener{
+            loadFragment(CalendarFragment())
+        }
+        return binding.root;
+        // return inflater.inflate(R.layout.fragment_medication_detail, container, false)
+    }
+
+    private fun loadFragment(fragment: Fragment)
+    {
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        //transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

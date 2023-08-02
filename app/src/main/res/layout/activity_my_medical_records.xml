@@ -148,7 +148,7 @@
             android:src="@drawable/medicalappointments_image" />
 
         <RelativeLayout
-            android:id="@+id/transparent2"
+            android:id="@+id/upcomingAppointmentsLayout"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginStart="3dp"
@@ -196,7 +196,7 @@
             android:src="@drawable/screenings_image" />
 
         <RelativeLayout
-            android:id="@+id/transparent3"
+            android:id="@+id/screeningsLayout"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginHorizontal="3dp"

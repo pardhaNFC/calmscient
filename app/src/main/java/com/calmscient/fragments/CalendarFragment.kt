@@ -62,6 +62,13 @@ class CalendarFragment : Fragment(), CellClickListener {
         savedInstanceState: Bundle?
     ): View? {
         binding = CalendarFragmentLayoutBinding.inflate(inflater, container, false)
+        binding.backIcon.setOnClickListener {
+            loadFragment(MedicationsFragment())
+        }
+
+        binding.saveButton.setOnClickListener{
+            loadFragment(MedicationsFragment())
+        }
         binding.plusIcon.setOnClickListener {
             loadFragment(AddMedicationsFragment())
         }

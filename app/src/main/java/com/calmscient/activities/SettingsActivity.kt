@@ -14,6 +14,7 @@ package com.calmscient.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.calmscient.R
 import com.calmscient.databinding.ActivitySettingsBinding
@@ -27,6 +28,10 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
         val englishParentLayout = findViewById<View>(R.id.English)
         val spanishParentLayout = findViewById<View>(R.id.Spanish)
         val aslParentLayout = findViewById<View>(R.id.ASL)
@@ -37,7 +42,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         aslParentLayout.setOnClickListener(this)
 
         binding.backIcon.setOnClickListener {
-            startActivity(Intent(this,DashboardActivity::class.java))
+            finish()
         }
     }
 

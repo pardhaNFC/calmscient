@@ -14,6 +14,7 @@ package com.calmscient.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
@@ -46,22 +47,26 @@ class DashboardActivity : AppCompatActivity() {
                 }
 
                 R.id.discovery -> {
-                    loadFragment(DiscoveryFragment())
+                    //loadFragment(DiscoveryFragment())
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
                     it.setIcon(R.drawable.discovery)
                     true
                 }
 
                 R.id.exercises -> {
-                    loadFragment(ExerciseFragment())
+                    // loadFragment(ExerciseFragment())
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
                     it.setIcon(R.drawable.exercises)
                     true
                 }
 
                 R.id.rewards -> {
-                    loadFragment(RewardsFragment())
+                    //loadFragment(RewardsFragment())
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
                     it.setIcon(R.drawable.rewards)
                     true
                 }
+
                 else -> {
                     false
                 }
