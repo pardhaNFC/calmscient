@@ -856,7 +856,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
                             android:textSize="14sp"
-                            app:on="false" />
+                            app:on="true" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
