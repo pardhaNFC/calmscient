@@ -57,7 +57,7 @@ lateinit var binding: LayoutLoginBinding
     }
 
     private fun navigateToDayScreen() {
-        startActivity(Intent(this, DashboardActivity::class.java))
+        startActivity(Intent(this, UserMoodActivity::class.java))
     }
 
 }

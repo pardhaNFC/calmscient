@@ -8,10 +8,10 @@
     <string name="create_new_account">Create an new account</string>
     <string name="or">or</string>
     <string name="happy_to_see_you">We are happy to see you</string>
-    <string name="home">Home</string>
-    <string name="discovery">Discovery</string>
-    <string name="exercises">Exercises</string>
-    <string name="rewards">Rewards</string>
+    <string name="home">HOME</string>
+    <string name="discovery">DISCOVERY</string>
+    <string name="exercises">EXERCISES</string>
+    <string name="rewards">REWARDS</string>
     <string name="my_medical_records">My Medical Records</string>
     <string name="weekly_summary">Weekly Summary</string>
     <string name="favorites">Favorites</string>

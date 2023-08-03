@@ -5,8 +5,11 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.FragmentUserMoodBinding
+import com.calmscient.fragments.HomeFragment
 import java.util.Calendar
 import java.util.Date
 
@@ -116,19 +119,22 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         binding.imgMGood.setImageResource(R.drawable.icon_good)
         binding.imgMExcellent.setImageResource(R.drawable.icon_excellent)
 
-
-        when (v!!.id) {
-            //morning images
+        when (v?.id) {
+            // Handle morning images click events
             R.id.img_mBad -> {
-                //binding.imgMBad.setImageResource(R.drawable.icon_excellent)
-                //binding.imgMBad.setImageResource(R.drawable.icon_excellent)
-                //binding.imgMBad.setBackgroundResource(R.drawable.drawable_circular_border)
-                binding.imgMBad.setElevation(20.0F)
+                // Handle image click
+                binding.imgMBad.elevation = 20.0F
                 binding.imgMBetter.setElevation(0.0F)
                 binding.imgMFair.setElevation(0.0F)
                 binding.imgMGood.setElevation(0.0F)
                 binding.imgMExcellent.setElevation(0.0F)
+                binding.tvBad.setTextColor(ContextCompat.getColor(this,R.color.bad_selected))
+                binding.tvBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
+            // Handle other morning images click events similarly
 
             R.id.img_mBetter -> {
                 //binding.imgMBetter.setImageResource(R.drawable.icon_better)
@@ -137,6 +143,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgMFair.setElevation(0.0F)
                 binding.imgMGood.setElevation(0.0F)
                 binding.imgMExcellent.setElevation(0.0F)
+                binding.tvBetter.setTextColor(ContextCompat.getColor(this,R.color.better_selected))
+                binding.tvBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_mFair -> {
@@ -146,6 +157,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgMBad.setElevation(0.0F)
                 binding.imgMGood.setElevation(0.0F)
                 binding.imgMExcellent.setElevation(0.0F)
+                binding.tvFair.setTextColor(ContextCompat.getColor(this,R.color.fair_selected))
+                binding.tvBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_mGood -> {
@@ -155,7 +171,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgMBad.setElevation(0.0F)
                 binding.imgMFair.setElevation(0.0F)
                 binding.imgMExcellent.setElevation(0.0F)
-
+                binding.tvGood.setTextColor(ContextCompat.getColor(this,R.color.good_selected))
+                binding.tvBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_mExcellent -> {
@@ -165,6 +185,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgMBetter.setElevation(0.0F)
                 binding.imgMBad.setElevation(0.0F)
                 binding.imgMFair.setElevation(0.0F)
+                binding.tvXcellent.setTextColor(ContextCompat.getColor(this,R.color.excellent_selected))
+                binding.tvBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             //afternoon click
@@ -177,6 +202,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgEveFair.setElevation(0.0F)
                 binding.imgEveExcellent.setElevation(0.0F)
                 binding.imgEveGood.setElevation(0.0F)
+                binding.tvAfterBad.setTextColor(ContextCompat.getColor(this,R.color.bad_selected))
+                binding.tvAfterBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_eve_better -> {
@@ -186,7 +216,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgEveExcellent.setElevation(0.0F)
                 binding.imgEveGood.setElevation(0.0F)
                 binding.imgEveBad.setElevation(0.0F)
-
+                binding.tvAfterBetter.setTextColor(ContextCompat.getColor(this,R.color.better_selected))
+                binding.tvAfterBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_eve_fair -> {
@@ -196,6 +230,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgEveGood.setElevation(0.0F)
                 binding.imgEveBetter.setElevation(0.0F)
                 binding.imgEveBad.setElevation(0.0F)
+                binding.tvAfterFair.setTextColor(ContextCompat.getColor(this,R.color.fair_selected))
+                binding.tvAfterBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_eve_good -> {
@@ -205,7 +244,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgEveBetter.setElevation(0.0F)
                 binding.imgEveBad.setElevation(0.0F)
                 binding.imgEveFair.setElevation(0.0F)
-
+                binding.tvAfterGood.setTextColor(ContextCompat.getColor(this,R.color.good_selected))
+                binding.tvAfterBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_eve_excellent -> {
@@ -215,10 +258,15 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgEveBetter.setElevation(0.0F)
                 binding.imgEveBad.setElevation(0.0F)
                 binding.imgEveFair.setElevation(0.0F)
+                binding.tvAfterXcellent.setTextColor(ContextCompat.getColor(this,R.color.excellent_selected))
+                binding.tvAfterGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvAfterFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
             //morning sleep
-            R.id.sleep_less->{
-                binding.sleepLess.setImageResource(R.drawable.selected_less)
+            R.id.sleep_less -> {
+                binding.sleepLess.setImageResource(R.drawable.less_icon)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
                 binding.sleep5.setImageResource(R.drawable.sleep_5)
                 binding.sleep6.setImageResource(R.drawable.sleep_6)
@@ -227,9 +275,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "Less than 4 Hours"
 
             }
-            R.id.sleep_4->{
+
+            R.id.sleep_4 -> {
                 binding.sleep4.setImageResource(R.drawable.selected_4)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep5.setImageResource(R.drawable.sleep_5)
@@ -239,9 +289,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "4 Hours"
 
             }
-            R.id.sleep_5->{
+
+            R.id.sleep_5 -> {
                 binding.sleep5.setImageResource(R.drawable.selected_5)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -251,8 +303,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "5 Hours"
             }
-            R.id.sleep_6->{
+
+            R.id.sleep_6 -> {
                 binding.sleep6.setImageResource(R.drawable.selected_6)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -262,8 +316,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "6 Hours"
             }
-            R.id.sleep_7->{
+
+            R.id.sleep_7 -> {
                 binding.sleep7.setImageResource(R.drawable.selected_7)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -273,8 +329,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "7 Hours"
             }
-            R.id.sleep_8->{
+
+            R.id.sleep_8 -> {
                 binding.sleep8.setImageResource(R.drawable.selected_8)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -284,8 +342,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "8 Hours"
             }
-            R.id.sleep_9->{
+
+            R.id.sleep_9 -> {
                 binding.sleep9.setImageResource(R.drawable.selected_9)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -295,8 +355,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep8.setImageResource(R.drawable.sleep_8)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "9 Hours"
             }
-            R.id.sleep_10->{
+
+            R.id.sleep_10 -> {
                 binding.sleep10.setImageResource(R.drawable.selected_10)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -306,8 +368,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep8.setImageResource(R.drawable.sleep_8)
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleepMore.setImageResource(R.drawable.sleep_more)
+                binding.tvHrsSlept.text = "10 Hours"
             }
-            R.id.sleep_more->{
+
+            R.id.sleep_more -> {
                 binding.sleepMore.setImageResource(R.drawable.more_selected)
                 binding.sleepLess.setImageResource(R.drawable.less)
                 binding.sleep4.setImageResource(R.drawable.sleep_4)
@@ -317,6 +381,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.sleep8.setImageResource(R.drawable.sleep_8)
                 binding.sleep9.setImageResource(R.drawable.sleep_9)
                 binding.sleep10.setImageResource(R.drawable.sleep_10)
+                binding.tvHrsSlept.text = "More than 10 Hours"
             }
             //evening images
             R.id.img_nig_bad -> {
@@ -328,16 +393,25 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgNigFair.setElevation(0.0F)
                 binding.imgNigGood.setElevation(0.0F)
                 binding.imgNigExcellent.setElevation(0.0F)
+                binding.tvEveBad.setTextColor(ContextCompat.getColor(this,R.color.bad_selected))
+                binding.tvEveBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_nig_better -> {
-                //binding.imgMBetter.setImageResource(R.drawable.icon_better)
+                //binding.imgMBetter.setImageResource(R.drawable.ic_better_selected)
                 binding.imgNigBetter.setElevation(20.0F)
                 binding.imgNigFair.setElevation(0.0F)
                 binding.imgNigGood.setElevation(0.0F)
                 binding.imgNigExcellent.setElevation(0.0F)
                 binding.imgNigBad.setElevation(0.0F)
-
+                binding.tvEveBetter.setTextColor(ContextCompat.getColor(this,R.color.better_selected))
+                binding.tvEveBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_nig_fair -> {
@@ -347,6 +421,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgNigExcellent.setElevation(0.0F)
                 binding.imgNigBad.setElevation(0.0F)
                 binding.imgNigBetter.setElevation(0.0F)
+                binding.tvEveFair.setTextColor(ContextCompat.getColor(this,R.color.fair_selected))
+                binding.tvEveBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_nig_good -> {
@@ -356,7 +435,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgNigBad.setElevation(0.0F)
                 binding.imgNigBetter.setElevation(0.0F)
                 binding.imgNigFair.setElevation(0.0F)
-
+                binding.tvEveGood.setTextColor(ContextCompat.getColor(this,R.color.good_selected))
+                binding.tvEveBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveXcellent.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_nig_excellent -> {
@@ -366,6 +449,11 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgNigBetter.setElevation(0.0F)
                 binding.imgNigFair.setElevation(0.0F)
                 binding.imgNigGood.setElevation(0.0F)
+                binding.tvEveXcellent.setTextColor(ContextCompat.getColor(this,R.color.excellent_selected))
+                binding.tvEveBad.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveBetter.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveFair.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
+                binding.tvEveGood.setTextColor(ContextCompat.getColor(this,R.color.grey_light))
             }
 
             R.id.img_family -> {
@@ -391,7 +479,6 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgOthers.setImageResource(R.drawable.others)
                 binding.imgAlone.setImageResource(R.drawable.alone)
             }
-
             R.id.img_others -> {
                 binding.imgOthers.setImageResource(R.drawable.others_selected)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates)
@@ -399,7 +486,6 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgFriends.setImageResource(R.drawable.friends)
                 binding.imgAlone.setImageResource(R.drawable.alone)
             }
-
             R.id.img_alone -> {
                 binding.imgAlone.setImageResource(R.drawable.alone_selected)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates)
@@ -407,13 +493,20 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgFriends.setImageResource(R.drawable.friends)
                 binding.imgOthers.setImageResource(R.drawable.others)
             }
-
-            R.id.btn_save->{
+            R.id.btn_save -> {
+                //loadFragment(HomeFragment())
                 startActivity(Intent(this, DashboardActivity::class.java))
             }
-            R.id.btn_skip->{
+            R.id.btn_skip -> {
+                //loadFragment(HomeFragment())
                 startActivity(Intent(this, DashboardActivity::class.java))
             }
         }
+    }
+    private fun loadFragment(fragment: Fragment) {
+        val homeFragment = HomeFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.flFragment, homeFragment)
+            .commit()
     }
 }

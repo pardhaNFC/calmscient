@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".activities.SettingsActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
         android:orientation="vertical"
         tools:context=".Settings">
+
         <RelativeLayout
             android:id="@+id/Settings"
             android:layout_width="match_parent"
@@ -39,17 +41,18 @@
                 android:layout_marginBottom="20dp"
                 android:text=" Settings"
                 android:textColor="#000000"
-                android:textSize="25sp"
-                />
+                android:textSize="25sp" />
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/ProfileImage"
             android:layout_width="140dp"
             android:layout_height="140dp"
+            android:layout_centerInParent="true"
             android:layout_marginStart="120dp"
             android:layout_marginEnd="75dp"
-            android:layout_marginBottom="20dp"
-            android:layout_centerInParent="true">
+            android:layout_marginBottom="20dp">
+
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:layout_width="250dp"
                 android:layout_height="250dp"
@@ -65,11 +68,11 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/uploadimage_icon" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
 
         <RelativeLayout
             android:id="@+id/Profile"
@@ -101,37 +104,41 @@
                 android:textColor="#000000"
                 android:textSize="18sp" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
+
         <RelativeLayout
             android:id="@+id/Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:clickable="true">
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_theme_mode" />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
+                android:layout_marginTop="7dp"
                 android:text="Theme"
                 android:textColor="#000000"
                 android:textSize="18sp" />
+
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="100dp"
@@ -141,21 +148,23 @@
                 android:text="Dark Mode"
                 android:textColor="#6E6BB3"
                 android:textSize="14sp" />
+
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/id_switch"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
-                android:layout_marginTop="30dp"
                 android:layout_marginStart="130dp"
+                android:layout_marginTop="30dp"
                 android:textSize="14sp"
                 app:colorBorder="@color/colorPrimary"
                 app:on="false" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
+
         <RelativeLayout
             android:id="@+id/Languages"
             android:layout_width="match_parent"
@@ -164,49 +173,53 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:clickable="true">
+
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_language" />
+
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="45dp"
+                android:layout_marginTop="7dp"
                 android:text="Languages"
                 android:textColor="#000000"
                 android:textSize="18sp" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:weightSum="2"
             android:layout_marginStart="45dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:weightSum="2">
+
             <RelativeLayout
                 android:id="@+id/English"
                 android:layout_width="130dp"
                 android:layout_height="35dp"
-                android:weightSum="1"
                 android:background="@drawable/rectangle_layout"
-                android:clickable="true">
+                android:clickable="true"
+                android:weightSum="1">
 
                 <ImageView
                     android:id="@+id/imageView8"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:layout_marginTop="4dp"
                     android:layout_marginStart="7dp"
+                    android:layout_marginTop="4dp"
                     android:src="@drawable/ic_flag_english" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/tv_english"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -215,33 +228,36 @@
                     android:textColor="#000000"
                     android:textSize="14sp" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/Spanish"
                 android:layout_width="130dp"
                 android:layout_height="35dp"
                 android:layout_marginStart="150dp"
-                android:weightSum="1"
                 android:background="@drawable/rectangle_layout"
-                android:clickable="true">
+                android:clickable="true"
+                android:weightSum="1">
+
                 <ImageView
                     android:id="@+id/imageView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
                     android:layout_marginStart="7dp"
-                    android:src="@drawable/ic_flag_spanish"/>
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_flag_spanish" />
+
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/tv_spanish"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:layout_marginTop="7dp"
-
                     android:layout_marginStart="50dp"
+                    android:layout_marginTop="7dp"
                     android:text="Spanish"
                     android:textColor="#000000"
                     android:textSize="14sp" />
             </RelativeLayout>
         </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/ASL"
             android:layout_width="130dp"
@@ -255,27 +271,26 @@
                 android:id="@+id/imageView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
                 android:layout_marginStart="7dp"
-                android:src="@drawable/asl_icon"/>
+                android:layout_marginTop="1dp"
+                android:src="@drawable/asl_icon" />
+
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/tv_asl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
                 android:text="ASL"
                 android:textColor="#000000"
                 android:textSize="14dp" />
         </RelativeLayout>
 
 
-
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
 
         <RelativeLayout
             android:id="@+id/Notifications"
@@ -285,12 +300,13 @@
             android:layout_marginEnd="10dp"
             android:clickable="true"
             android:minHeight="48dp">
+
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_notifications" />
 
@@ -300,17 +316,18 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="10dp"
                 android:text="Notifications"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
+
         <RelativeLayout
             android:id="@+id/lincensekey"
             android:layout_width="match_parent"
@@ -325,8 +342,8 @@
                 android:id="@+id/Lincenseimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_license" />
 
@@ -341,11 +358,12 @@
                 android:textColor="#000000"
                 android:textSize="18sp" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
+
         <RelativeLayout
             android:id="@+id/HelpSupport"
             android:layout_width="match_parent"
@@ -359,8 +377,8 @@
                 android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_helpsupport" />
 
@@ -376,11 +394,11 @@
                 android:textSize="18sp" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
 
         <RelativeLayout
             android:id="@+id/logout"
@@ -395,8 +413,8 @@
                 android:id="@+id/imageView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_logout" />
 
@@ -412,10 +430,10 @@
                 android:textSize="18sp" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="@color/viewbackgroundcolor"
-            />
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
     </LinearLayout>
 </LinearLayout>

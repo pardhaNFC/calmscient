@@ -15,7 +15,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.calmscient.R
 import com.calmscient.databinding.ActivitySettingsBinding
 
@@ -62,6 +64,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
             R.id.English -> {
                 // Code to handle click on English layout
                 updateBackground(currentClickedLayoutId, v.id)
+
                 // Additional code for handling English layout click event if needed
             }
             R.id.Spanish -> {
@@ -80,7 +83,10 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun updateBackground(previousId: Int, currentId: Int) {
         val previousLayout = findViewById<View>(previousId)
+        val previousTextView = previousLayout.findViewById<TextView>(R.id.tv_english)
+
         previousLayout.setBackgroundResource(R.drawable.rectangle_normal)
+        previousTextView.setTextColor(ContextCompat.getColor(this,R.color.black))
 
         val currentLayout = findViewById<View>(currentId)
         currentLayout.setBackgroundResource(R.drawable.rectangle_clicked)

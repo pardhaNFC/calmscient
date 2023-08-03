@@ -149,7 +149,7 @@ class UserMoodFragment : Fragment(), View.OnClickListener {
 
             R.id.img_mBetter -> {
                 //binding.imgMBetter.setImageResource(R.drawable.icon_better)
-                binding.imgMBetter.setElevation(20.0F)
+                binding.imgMBetter.setElevation(120.0F)
                 binding.imgMBad.setElevation(0.0F)
                 binding.imgMFair.setElevation(0.0F)
                 binding.imgMGood.setElevation(0.0F)

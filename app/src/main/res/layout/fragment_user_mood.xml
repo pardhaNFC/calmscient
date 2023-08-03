@@ -16,12 +16,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/montserratsemibold"
             android:gravity="center"
             android:paddingVertical="12dp"
             android:text="@string/good_morning"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_25sdp" />
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_30sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +52,7 @@
                         android:id="@+id/id_after_mood"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/mood_right_now"
@@ -82,11 +82,11 @@
                                 android:id="@+id/tv_after_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -106,11 +106,11 @@
                                 android:id="@+id/tv_after_better"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/be_better"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -130,11 +130,11 @@
                                 android:id="@+id/tv_after_fair"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -154,11 +154,11 @@
                                 android:id="@+id/tv_after_good"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -178,11 +178,11 @@
                                 android:id="@+id/tv_after_xcellent"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -213,7 +213,7 @@
                         android:id="@+id/id_even_mood"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/day_today"
@@ -244,11 +244,11 @@
                                 android:id="@+id/tv_eve_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -269,11 +269,11 @@
                                 android:id="@+id/tv_eve_better"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/be_better"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -295,11 +295,11 @@
                                 android:id="@+id/tv_eve_fair"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -321,11 +321,11 @@
                                 android:id="@+id/tv_eve_good"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -347,11 +347,11 @@
                                 android:id="@+id/tv_eve_xcellent"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -376,7 +376,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:text="@string/mood_right_now"
                         android:textColor="@color/black"
@@ -386,7 +386,7 @@
                         android:id="@+id/id_day_today"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/day_today"
@@ -418,11 +418,11 @@
                                 android:id="@+id/tv_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -443,11 +443,12 @@
                                 android:id="@+id/tv_better"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/be_better"
+                                android:textStyle="bold"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -469,11 +470,11 @@
                                 android:id="@+id/tv_fair"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -495,11 +496,11 @@
                                 android:id="@+id/tv_good"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -521,11 +522,11 @@
                                 android:id="@+id/tv_xcellent"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -555,7 +556,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/spend_time"
@@ -587,11 +588,11 @@
                                 android:id="@+id/tv_family"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/family"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -612,11 +613,11 @@
                                 android:id="@+id/tv_friends"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/friends"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -637,11 +638,11 @@
                                 android:id="@+id/tv_workmates"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/workmates"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -664,11 +665,11 @@
                                 android:id="@+id/tv_others"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/others"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -691,12 +692,11 @@
                                 android:id="@+id/tv_alone"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif-medium"
+                                android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/alone"
                                 android:textColor="@color/grey_light"
-                                android:textSize="@dimen/_10sdp"
-                                android:textStyle="bold" />
+                                android:textSize="@dimen/_8sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -725,7 +725,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/hours_night"
@@ -850,7 +850,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/take_medic_morning"
@@ -905,7 +905,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-medium"
+                        android:fontFamily="@font/montserratbold"
                         android:paddingHorizontal="16dp"
                         android:paddingVertical="12dp"
                         android:text="@string/daily_journal"

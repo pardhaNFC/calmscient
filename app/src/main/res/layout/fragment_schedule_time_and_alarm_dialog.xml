@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:background="@drawable/dialog_border"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    tools:context=".fragments.ScheduleTimeAndAlarmDialogFragment">
+
+    <LinearLayout
+        android:id="@+id/scheduleTimeAndAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserratsemibold"
+                android:gravity="center"
+                android:text="@string/schedule_time_and_alarm"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratmedium"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:background="@drawable/time_picker_border"
+            android:orientation="vertical"
+            android:weightSum="2"
+            app:cardCornerRadius="10sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/time_picker_border"
+                android:drawableLeft="@drawable/dialog_clock"
+                android:drawablePadding="10dp"
+                android:padding="10sp"
+                android:text="@string/time"
+                android:textSize="16sp" />
+
+
+            <TimePicker
+                android:id="@+id/timeTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/time_picker_border"
+                android:calendarViewShown="false"
+                android:timePickerMode="spinner" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:background="@drawable/time_picker_border"
+            android:orientation="vertical"
+            android:weightSum="2"
+            app:cardCornerRadius="10sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/time_picker_border"
+                android:drawableLeft="@drawable/dialog_alarm"
+                android:drawablePadding="10dp"
+                android:padding="10sp"
+                android:text="@string/alarm"
+                android:textSize="16sp" />
+
+            <TimePicker
+                android:id="@+id/alarmTimePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/time_picker_border"
+                android:calendarViewShown="false"
+                android:timePickerMode="spinner" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/skip_border"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_100"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+

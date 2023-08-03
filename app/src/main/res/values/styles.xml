@@ -16,4 +16,7 @@
     <style name="MenuTextStyle" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    <style name="CustomDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_border</item>
+    </style>
 </resources>

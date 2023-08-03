@@ -34,7 +34,7 @@ class DashboardActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        loadFragment(UserMoodFragment())
+        loadFragment(HomeFragment())
         bottomNav = findViewById(R.id.bottomNavigationView) as BottomNavigationView
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         bottomNav.itemIconTintList = null
