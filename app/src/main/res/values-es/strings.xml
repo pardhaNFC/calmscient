@@ -17,9 +17,9 @@
     <string name="weekly_summary">Resumen semanal</string>
     <string name="favorites">Favoritos</string>
     <string name="need_to_talk">¿Necesitas hablar con alguien?</string>
-    <string name="good_morning">Buen día!</string>
-    <string name="good_afternoon">Buenas tardes!</string>
-    <string name="good_evening">Good Evening!</string>
+    <string name="good_morning"><b>Buen día!</b></string>
+    <string name="good_afternoon"><b>Buenas tardes!</b></string>
+    <string name="good_evening"><b>Good Evening!</b></string>
     <string name="mood_right_now">¿Cómo está tu estado de ánimo en este momento?</string>
     <string name="take_medic_morning">¿Tomó sus medicamentos esta mañana?</string>
     <string name="hours_night">¿Cuántas horas dormiste anoche?</string>
@@ -85,16 +85,10 @@
     <string name="crisis_heading">Línea de texto de crisis</string>
     <string name="crisis_text">Envíe un mensaje de texto con MHA al 741741 y lo conectarán con un consejero de crisis capacitado. Crisis Text Line brinda soporte gratuito basado en texto las 24 horas del día, los 7 días de la semana.</string>
     <string name="trevor_heading">El Proyecto Trevor</string>
-    <string name="trevor_text">
-        Llama al <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> o
-        envía START al <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.
-        Una línea nacional de ayuda confidencial, gratuita y disponible las 24 horas para jóvenes LGBTQ en riesgo de suicidio.
+    <string name="trevor_text">Llama al <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> oenvía START al <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.Una línea nacional de ayuda confidencial, gratuita y disponible las 24 horas para jóvenes LGBTQ en riesgo de suicidio.
 </string>
     <string name="trans_helpline_heading">Línea de vida trans</string>
-    <string name="trans_helpline_text">
-        Marque <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> para EE. UU. y
-        <u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> para Canadá.
-        La línea directa de Trans Lifeline es un servicio de apoyo entre pares administrado por personas trans, para personas trans y personas que preguntan.
+    <string name="trans_helpline_text">Marque <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> para EE. UU. y<u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> para Canadá.La línea directa de Trans Lifeline es un servicio de apoyo entre pares administrado por personas trans, para personas trans y personas que preguntan.
 </string>
     <string name="disaster_number">1-800-985-5990</string>
     <string name="crisis_number">741741</string>

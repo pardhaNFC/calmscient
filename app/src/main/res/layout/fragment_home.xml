@@ -75,7 +75,7 @@
             android:clipToPadding="false"
             android:divider="@android:color/transparent"
             android:dividerHeight="0.0px"
-            android:elevation="8dp"
+            app:cardCornerRadius="@dimen/_8sdp"
             app:cardElevation="10dp"
             app:cardPreventCornerOverlap="false">
 
@@ -128,7 +128,7 @@
             android:divider="@android:color/transparent"
             android:dividerHeight="0.0px"
             android:elevation="8dp"
-            app:cardElevation="10dp"
+            app:cardCornerRadius="@dimen/_8sdp"
             app:cardPreventCornerOverlap="false">
 
             <androidx.appcompat.widget.LinearLayoutCompat

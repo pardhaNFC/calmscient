@@ -18,6 +18,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -92,7 +93,8 @@ class HomeFragment : Fragment() {
         }
         val weeklySummaryLayout = rootView.findViewById<View>(R.id.weeklySummaryLayout)
         weeklySummaryLayout.setOnClickListener {
-            openWeeklySummaryActivity()
+            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_LONG).show()
+            //openWeeklySummaryActivity()
         }
         return rootView
     }

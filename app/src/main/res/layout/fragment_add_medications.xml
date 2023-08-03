@@ -11,34 +11,43 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:weightSum="2">
-
             <ImageView
+                android:id="@+id/addMedicationsDetailsBackIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_back" />
+            <!--<ImageView
                 android:id="@+id/addMedicationsDetailsBackIcon"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="5sp"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:src="@drawable/ic_back" />
+                android:src="@drawable/ic_back" />-->
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="-5sp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:text="@string/add_medications"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
@@ -58,7 +67,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
-                android:hint="@string/username"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:boxStrokeColor="@color/example_7_button"
+                android:hint="Name"
                 android:weightSum="1">
 
 
@@ -75,7 +87,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:hint="@string/provider"
+                app:boxStrokeColor="@color/example_7_button"
                 android:weightSum="1">
 
 
@@ -92,7 +107,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:hint="@string/dosage"
+                app:boxStrokeColor="@color/example_7_button"
                 android:weightSum="1">
 
 
@@ -109,10 +127,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10sp"
+                app:boxStrokeWidth="2dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
                 android:hint="@string/direction"
+                app:boxStrokeColor="@color/example_7_button"
                 android:weightSum="1">
-
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/direction"
                     android:layout_width="match_parent"

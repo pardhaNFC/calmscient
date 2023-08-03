@@ -21,12 +21,11 @@
             android:paddingVertical="12dp"
             android:text="@string/good_morning"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="@dimen/_25sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:orientation="vertical">
             <!--afternoon mood-->
             <androidx.cardview.widget.CardView
@@ -34,15 +33,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:elevation="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp"
+                app:cardPreventCornerOverlap="false">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -59,11 +57,11 @@
                         android:paddingVertical="12dp"
                         android:text="@string/mood_right_now"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal"
                         android:weightSum="5">
 
@@ -81,13 +79,14 @@
                                 android:src="@drawable/icon_bad" />
 
                             <TextView
+                                android:id="@+id/tv_after_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -104,13 +103,14 @@
                                 android:src="@drawable/icon_better" />
 
                             <TextView
+                                android:id="@+id/tv_after_better"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/be_better"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -127,13 +127,14 @@
                                 android:src="@drawable/icon_fair" />
 
                             <TextView
+                                android:id="@+id/tv_after_fair"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -150,13 +151,14 @@
                                 android:src="@drawable/icon_good" />
 
                             <TextView
+                                android:id="@+id/tv_after_good"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -173,13 +175,14 @@
                                 android:src="@drawable/icon_excellent" />
 
                             <TextView
+                                android:id="@+id/tv_after_xcellent"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -190,15 +193,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:elevation="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
+                android:elevation="8dp"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp"
+                app:cardPreventCornerOverlap="false">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -215,7 +218,7 @@
                         android:paddingVertical="12dp"
                         android:text="@string/day_today"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -238,13 +241,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_eve_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -262,13 +266,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_eve_better"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/be_better"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -287,13 +292,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_eve_fair"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -312,13 +318,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_eve_good"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -337,13 +344,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_eve_xcellent"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -354,15 +362,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:elevation="8dp"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -373,12 +375,12 @@
                         android:id="@+id/id_morn_mood"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="sans-serif-medium"
                         android:paddingHorizontal="16dp"
-                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="@string/mood_right_now"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <TextView
                         android:id="@+id/id_day_today"
@@ -413,13 +415,14 @@
                                 android:src="@drawable/icon_bad" />
 
                             <TextView
+                                android:id="@+id/tv_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -437,13 +440,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_better"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/be_better"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -462,13 +466,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_fair"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -487,13 +492,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_good"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -512,13 +518,14 @@
                                 tools:ignore="MissingConstraints" />
 
                             <TextView
+                                android:id="@+id/tv_xcellent"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="sans-serif-medium"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -530,15 +537,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_marginTop="@dimen/_16sdp"
-                android:elevation="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                app:cardPreventCornerOverlap="false">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -554,7 +560,7 @@
                         android:paddingVertical="12dp"
                         android:text="@string/spend_time"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <LinearLayout
                         android:id="@+id/eve_spend_time"
@@ -574,6 +580,7 @@
                                 android:id="@+id/img_family"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/family" />
 
                             <TextView
@@ -584,7 +591,7 @@
                                 android:gravity="center"
                                 android:text="@string/family"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -598,6 +605,7 @@
                                 android:id="@+id/img_friends"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/friends" />
 
                             <TextView
@@ -608,7 +616,7 @@
                                 android:gravity="center"
                                 android:text="@string/friends"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -622,6 +630,7 @@
                                 android:id="@+id/img_workmates"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/workmates" />
 
                             <TextView
@@ -632,7 +641,7 @@
                                 android:gravity="center"
                                 android:text="@string/workmates"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -647,6 +656,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/others"
                                 tools:ignore="MissingConstraints" />
 
@@ -658,7 +668,7 @@
                                 android:gravity="center"
                                 android:text="@string/others"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -673,6 +683,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/alone"
                                 tools:ignore="MissingConstraints" />
 
@@ -684,7 +695,8 @@
                                 android:gravity="center"
                                 android:text="@string/alone"
                                 android:textColor="@color/grey_light"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -695,15 +707,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:elevation="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp"
+                app:cardPreventCornerOverlap="false">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -719,7 +730,7 @@
                         android:paddingVertical="12dp"
                         android:text="@string/hours_night"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -800,6 +811,17 @@
                             android:src="@drawable/sleep_more" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
+                    <TextView
+                        android:id="@+id/tv_hrs_slept"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
                     <!--</LinearLayout>-->
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.cardview.widget.CardView>
@@ -810,15 +832,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_marginTop="@dimen/_16sdp"
-                android:elevation="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -834,7 +855,7 @@
                         android:paddingVertical="12dp"
                         android:text="@string/take_medic_morning"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -867,15 +888,14 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:layout_marginTop="@dimen/_16sdp"
-                android:elevation="8dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
                 android:divider="@android:color/transparent"
                 android:dividerHeight="0.0px"
-                android:clipToPadding="false"
-                android:clipChildren="false"
-                app:cardElevation="10dp"
-                app:cardPreventCornerOverlap="false"
                 android:visibility="gone"
-                app:cardCornerRadius="8dp">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="20dp"
+                app:cardPreventCornerOverlap="false">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -890,7 +910,7 @@
                         android:paddingVertical="12dp"
                         android:text="@string/daily_journal"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="@dimen/_15sdp" />
 
                     <EditText
                         android:id="@+id/et_daily_journel"
@@ -902,7 +922,7 @@
                         android:background="@drawable/edittext_grey_background"
                         android:gravity="top"
                         android:inputType="textMultiLine"
-                        android:lines="6"
+                        android:lines="8"
                         android:overScrollMode="always"
                         android:textCursorDrawable="@null" />
                 </LinearLayout>
@@ -931,7 +951,7 @@
                 android:id="@+id/btn_skip"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/skip_border"
                 android:gravity="center"

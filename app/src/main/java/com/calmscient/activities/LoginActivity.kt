@@ -40,14 +40,16 @@ lateinit var binding: LayoutLoginBinding
         binding.userName.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 binding.userName.hint = "xxxxxxxxxxxx@gmail.com"
-            } else {
+            }
+            if(!hasFocus){
                 binding.userName.setHint(R.string.username)
             }
         })
         binding.editPassword.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 binding.editPassword.hint = "**********"
-            } else {
+            }
+            if(!hasFocus){
                 binding.editPassword.setHint(R.string.password)
             }
 

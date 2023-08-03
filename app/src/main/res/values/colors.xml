@@ -20,6 +20,11 @@
     <color name="viewbackgroundcolor">#E8E7F4</color>
     <color name="purple_100">#6E6BB3</color>
     <color name="bottom_nav_selected">#F48383</color>
+    <color name="bad_selected">#F48383</color>
+    <color name="better_selected">#F28A91</color>
+    <color name="fair_selected">#F8BEBD</color>
+    <color name="good_selected">#A19EBD</color>
+    <color name="excellent_selected">#6E6BB3</color>
     <color name="custom_text_color">#ffffff</color>
     <color name="hospital_name">#575757</color>
 

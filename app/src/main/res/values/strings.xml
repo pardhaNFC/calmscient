@@ -16,28 +16,28 @@
     <string name="weekly_summary">Weekly Summary</string>
     <string name="favorites">Favorites</string>
     <string name="need_to_talk">Need to talk with someone?</string>
-    <string name="good_morning">Good Morning!</string>
-    <string name="good_afternoon">Good Afternoon!</string>
-    <string name="good_evening">Good Evening!</string>
-    <string name="mood_right_now">How is your mood right now?</string>
-    <string name="day_today">How was your day?</string>
-    <string name="bad">BAD</string>
-    <string name="be_better">COULD BE BETTER</string>
-    <string name="fair">FAIR</string>
-    <string name="good">GOOD</string>
-    <string name="excellent">EXCELLENT</string>
-    <string name="spend_time">Who did you spend time with?</string>
-    <string name="family">FAMILY</string>
-    <string name="friends">FRIENDS</string>
-    <string name="workmates">WORKMATES</string>
-    <string name="others">OTHERS</string>
-    <string name="alone">ALONE</string>
-    <string name="take_medic_evening">Did you take your medicines this evening?</string>
-    <string name="take_medic_morning">Did you take your medicines this morning?</string>
-    <string name="hours_night">How many hours did you sleep last night?</string>
+    <string name="good_morning"><b>Good Morning!</b></string>
+    <string name="good_afternoon"><b>Good Afternoon!</b></string>
+    <string name="good_evening"><b>Good Evening!</b></string>
+    <string name="mood_right_now"><b>How is your mood right now?</b></string>
+    <string name="day_today"><b>How was your day?</b></string>
+    <string name="bad"><b>BAD</b></string>
+    <string name="be_better"><b>COULD BE BETTER</b></string>
+    <string name="fair"><b>FAIR</b></string>
+    <string name="good"><b>GOOD</b></string>
+    <string name="excellent"><b>EXCELLENT</b></string>
+    <string name="spend_time"><b>Who did you spend time with?</b></string>
+    <string name="family"><b>FAMILY</b></string>
+    <string name="friends"><b>FRIENDS</b></string>
+    <string name="workmates"><b>WORKMATES</b></string>
+    <string name="others"><b>OTHERS</b></string>
+    <string name="alone"><b>ALONE</b></string>
+    <string name="take_medic_evening"><b>Did you take your meds this evening?</b></string>
+    <string name="take_medic_morning"><b>Did you take your meds this morning?</b></string>
+    <string name="hours_night"><b>How many hours did you sleep last night?</b></string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="daily_journal">Daily Journal</string>
+    <string name="daily_journal"><b>Daily Journal</b></string>
     <string name="save">Save</string>
     <string name="skip">SKIP</string>
     <string name="medications">Medications</string>
@@ -76,23 +76,16 @@
     <string name="suicide_heading">988 Suicide &amp; Crisis Lifeline</string>
     <string name="suicide_text">Call or text 988 or chat 988lifeline.org. The 988 Suicide &amp; Crisis Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week.</string>
     <string name="disaster_heading">Disaster Distress Helpline</string>
-    <string name="disaster_text">
-        The national Disaster Distress Helpline is available for anyone experiencing emotional distress related to natural or human-caused disasters.
-        Call or text <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> to be connected to a trained, caring counselor, 24/7/365.
+    <string name="disaster_text">The national Disaster Distress Helpline is available for anyone experiencing emotional distress related to natural or human-caused disasters.Call or text <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> to be connected to a trained, caring counselor, 24/7/365.
 </string>
     <string name="crisis_heading">Crisis Text Line</string>
     <string name="crisis_text">Text MHA to<a href="sms:678678"><font color="#6E6BB3"> 741741</font></a> and you\'ll be connected to a trained Crisis Counselor. Crisis Text Line provides free, text-based support 24/7.</string>
     <string name="trevor_heading">The Trevor Project</string>
     <string name="trevor_text">
-        Call <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> or
-        text START to <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.
-        A national 24-hour, toll free confidential suicide hotline for LGBTQ youth.
+        Call <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> or text START to <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.A national 24-hour, toll free confidential suicide hotline for LGBTQ youth.
 </string>
     <string name="trans_helpline_heading">Trans Lifeline</string>
-    <string name="trans_helpline_text">
-     Dial <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> for US and
-     <u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> for Canada.
-     Trans Lifeline\'s Hotline is a peer support service run by trans people, for trans and questioning callers.
+    <string name="trans_helpline_text">Dial <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> for US and <u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> for Canada.Trans Lifeline\'s Hotline is a peer support service run by trans people, for trans and questioning callers.
 </string>
     <string name="disaster_number">1-800-985-5990</string>
     <string name="crisis_number">741741</string>

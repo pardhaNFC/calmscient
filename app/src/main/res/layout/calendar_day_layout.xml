@@ -31,6 +31,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
                     android:textColor="@color/colorPrimaryDark"
+                    android:textAllCaps="true"
                     android:textSize="12sp"
                     tools:text="Mon" />
 
