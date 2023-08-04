@@ -30,39 +30,43 @@ class DashboardActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        loadFragment(HomeFragment())
         bottomNav = findViewById(R.id.bottomNavigationView) as BottomNavigationView
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         bottomNav.itemIconTintList = null
+        // Set the HomeFragment icon to the new icon as default
+        bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.home_selected)
+        loadFragment(HomeFragment())
         bottomNav.setOnItemSelectedListener {
+            bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.homenew)
+            bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.discoverynew)
+            bottomNav.menu.findItem(R.id.exercises).setIcon(R.drawable.exercisesnew)
+            bottomNav.menu.findItem(R.id.rewards).setIcon(R.drawable.rewardsnew)
             when (it.itemId) {
                 R.id.home -> {
-                    it.setIcon(R.drawable.homen)
-
+                    it.setIcon(R.drawable.home_selected)
                     loadFragment(HomeFragment())
                     true
                 }
 
                 R.id.discovery -> {
                     //loadFragment(DiscoveryFragment())
-                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
-                    it.setIcon(R.drawable.discoveryn)
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    it.setIcon(R.drawable.dis_selected)
 
                     true
                 }
 
                 R.id.exercises -> {
                     // loadFragment(ExerciseFragment())
-                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
-                    it.setIcon(R.drawable.exercises)
-
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    it.setIcon(R.drawable.exercises_selected)
                     true
                 }
 
                 R.id.rewards -> {
                     //loadFragment(RewardsFragment())
-                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
-                    it.setIcon(R.drawable.rewards)
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    it.setIcon(R.drawable.rewards_selected)
 
                     true
                 }
