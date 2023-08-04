@@ -86,7 +86,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
         val previousTextView = previousLayout.findViewById<TextView>(R.id.tv_english)
 
         previousLayout.setBackgroundResource(R.drawable.rectangle_normal)
-        previousTextView.setTextColor(ContextCompat.getColor(this,R.color.black))
+        //previousTextView.setTextColor(ContextCompat.getColor(this,R.color.black))
 
         val currentLayout = findViewById<View>(currentId)
         currentLayout.setBackgroundResource(R.drawable.rectangle_clicked)

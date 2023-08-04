@@ -67,7 +67,6 @@ class DashboardActivity : AppCompatActivity() {
                     //loadFragment(RewardsFragment())
                     Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
                     it.setIcon(R.drawable.rewards_selected)
-
                     true
                 }
 
