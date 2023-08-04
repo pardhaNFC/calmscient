@@ -17,11 +17,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.calmscient.R
-import com.calmscient.fragments.DiscoveryFragment
-import com.calmscient.fragments.ExerciseFragment
 import com.calmscient.fragments.HomeFragment
-import com.calmscient.fragments.RewardsFragment
-import com.calmscient.fragments.UserMoodFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
@@ -41,15 +37,17 @@ class DashboardActivity : AppCompatActivity() {
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
+                    it.setIcon(R.drawable.homen)
+
                     loadFragment(HomeFragment())
-                    it.setIcon(R.drawable.home)
                     true
                 }
 
                 R.id.discovery -> {
                     //loadFragment(DiscoveryFragment())
                     Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
-                    it.setIcon(R.drawable.discovery)
+                    it.setIcon(R.drawable.discoveryn)
+
                     true
                 }
 
@@ -57,6 +55,7 @@ class DashboardActivity : AppCompatActivity() {
                     // loadFragment(ExerciseFragment())
                     Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
                     it.setIcon(R.drawable.exercises)
+
                     true
                 }
 
@@ -64,6 +63,7 @@ class DashboardActivity : AppCompatActivity() {
                     //loadFragment(RewardsFragment())
                     Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_LONG).show()
                     it.setIcon(R.drawable.rewards)
+
                     true
                 }
 

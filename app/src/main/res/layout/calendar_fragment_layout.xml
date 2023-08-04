@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -24,10 +24,39 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
+                <RelativeLayout
+                    android:id="@+id/Settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp">
 
+                    <ImageView
+                        android:id="@+id/backIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/tv_medications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="70dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/medications"
+                        android:textColor="#000000"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
                 <!--<ImageView
                     android:id="@+id/backIcon"
                     android:layout_width="wrap_content"
@@ -36,7 +65,7 @@
                     android:background="?attr/actionBarItemBackground"
                     android:clickable="true"
                     app:srcCompat="@drawable/ic_back" />-->
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/backIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -44,7 +73,7 @@
                     android:clickable="true"
                     android:src="@drawable/ic_back" />
 
-                <!--<TextView
+                &lt;!&ndash;<TextView
                     android:id="@+id/toolbar_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -52,7 +81,7 @@
                     android:text="@string/medications"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_22sdp"
-                    android:textStyle="bold" />-->
+                    android:textStyle="bold" />&ndash;&gt;
                 <TextView
                     android:id="@+id/toolbar_title"
                     android:layout_width="match_parent"
@@ -61,7 +90,7 @@
                     android:gravity="center"
                     android:text="@string/medications"
                     android:textColor="#424242"
-                    android:textSize="25sp" />
+                    android:textSize="25sp" />-->
             </androidx.appcompat.widget.Toolbar>
 
             <androidx.appcompat.widget.Toolbar
@@ -69,12 +98,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:navigationIcon="@drawable/ic_calendar"
+                android:layout_marginHorizontal="@dimen/_5sdp"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
 
                 <ImageView
                     android:id="@+id/toolbar_cal_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
                     android:background="@drawable/ic_down_arrow" />
             </androidx.appcompat.widget.Toolbar>
 

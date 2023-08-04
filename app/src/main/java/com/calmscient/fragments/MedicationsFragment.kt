@@ -9,17 +9,17 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.activities.SettingsActivity
-import com.calmscient.databinding.ActivityMyMedicalRecordsBinding
+import com.calmscient.databinding.FragmentMyMedicalRecordsBinding
 
 class MedicationsFragment : Fragment() {
-    private lateinit var binding: ActivityMyMedicalRecordsBinding
+    private lateinit var binding: FragmentMyMedicalRecordsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = ActivityMyMedicalRecordsBinding.inflate(inflater, container, false)
+        binding = FragmentMyMedicalRecordsBinding.inflate(inflater, container, false)
         binding.medicationsLayout.setOnClickListener {
             //Toast.makeText(requireActivity(), "message", Toast.LENGTH_LONG).show()
             loadFragment(CalendarFragment())
