@@ -195,7 +195,7 @@
                 android:textSize="18sp" />
         </RelativeLayout>
 
-        <RelativeLayout
+        <!--<RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="35dp"
             android:layout_marginStart="45dp"
@@ -284,8 +284,108 @@
                 android:text="ASL"
                 android:textColor="#000000"
                 android:textSize="14dp" />
-        </RelativeLayout>
+        </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="3">
 
+            <RelativeLayout
+                android:id="@+id/English"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_layout"
+                android:clickable="true"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_flag_english" />
+
+                <TextView
+                    android:id="@+id/tv_english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="English"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Spanish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/English"
+                android:background="@drawable/rectangle_layout"
+                android:clickable="true"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_flag_spanish" />
+
+                <TextView
+                    android:id="@+id/tv_spanish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Spanish"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ASL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/Spanish"
+                android:background="@drawable/rectangle_layout"
+                android:clickable="true"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/asl_icon" />
+
+                <TextView
+                    android:id="@+id/tv_asl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="ASL"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </RelativeLayout>
 
         <View
             android:layout_width="wrap_content"

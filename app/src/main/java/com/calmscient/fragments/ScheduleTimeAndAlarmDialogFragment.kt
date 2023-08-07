@@ -24,13 +24,18 @@ import androidx.fragment.app.DialogFragment
 import com.calmscient.R
 import com.calmscient.databinding.FragmentScheduleTimeAndAlarmDialogBinding
 
-class ScheduleTimeAndAlarmDialogFragment : DialogFragment()
-{
+class ScheduleTimeAndAlarmDialogFragment : DialogFragment() {
+
+    interface TimeAndAlarmSaveClickListener {
+        fun onSaveClicked(time: String, alarm: String)
+    }
 
     private lateinit var binding: FragmentScheduleTimeAndAlarmDialogBinding
+    private var timeAndAlarmSaveClickListener: TimeAndAlarmSaveClickListener? = null
+
     @SuppressLint("MissingInflatedId")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val builder = AlertDialog.Builder(requireContext(),R.style.CustomDialog)
+        val builder = AlertDialog.Builder(requireContext(), R.style.CustomDialog)
         val inflater = requireActivity().layoutInflater
         val view = inflater.inflate(R.layout.fragment_schedule_time_and_alarm_dialog, null)
 
@@ -51,23 +56,34 @@ class ScheduleTimeAndAlarmDialogFragment : DialogFragment()
          }*/
         val timePicker = view.findViewById<TimePicker>(R.id.alarmTimePicker)
         timePicker.setIs24HourView(false)
-
         val (hours, minutes) = getTimeFromTimePicker(timePicker)
-
         // Set the size of the dialog
         val dialog = builder.create()
         val layoutParams = dialog.window?.attributes
         layoutParams?.width = ViewGroup.LayoutParams.MATCH_PARENT
         layoutParams?.height = ViewGroup.LayoutParams.MATCH_PARENT
         dialog.window?.attributes = layoutParams
+        val saveButton = view.findViewById<AppCompatButton>(R.id.btnSave)
+        saveButton.setOnClickListener {
+            // Save the selected time here
+            val timePicker = view.findViewById<TimePicker>(R.id.timeTimePicker)
+            val (timeHours, timeMinutes) = getTimeFromTimePicker(timePicker)
+            val selectedTime = String.format("%02d:%02d", timeHours, timeMinutes)
 
-        var cancelButton = view.findViewById<AppCompatButton>(R.id.btnCancel)
-        cancelButton.setOnClickListener{
+            val alarmPicker = view.findViewById<TimePicker>(R.id.alarmTimePicker)
+            val (alarmHours, alarmMinutes) = getTimeFromTimePicker(alarmPicker)
+            val selectedAlarmTime = String.format("%02d:%02d", alarmHours, alarmMinutes)
+            // Pass the selected time to the listener
+            timeAndAlarmSaveClickListener?.onSaveClicked(selectedTime, selectedAlarmTime)
             dismiss()
         }
-
+        var cancelButton = view.findViewById<AppCompatButton>(R.id.btnCancel)
+        cancelButton.setOnClickListener {
+            dismiss()
+        }
         return builder.create()
     }
+
     private fun getTimeFromTimePicker(timePicker: TimePicker): Pair<Int, Int> {
         val hours = timePicker.hour
         val minutes = timePicker.minute
@@ -78,11 +94,20 @@ class ScheduleTimeAndAlarmDialogFragment : DialogFragment()
         const val TAG = "ScheduleTimeAndAlarmDialogFragment"
         const val ARG_TIME_TYPE = "time_type"
 
-        fun newInstance(timeType: String): ScheduleTimeAndAlarmDialogFragment {
+        /*fun newInstance(timeType: String): ScheduleTimeAndAlarmDialogFragment {
             val fragment = ScheduleTimeAndAlarmDialogFragment()
             val args = Bundle()
             args.putString(ARG_TIME_TYPE, timeType)
             fragment.arguments = args
+            return fragment
+        }*/
+
+        fun newInstance(timeType: String, listener: TimeAndAlarmSaveClickListener): ScheduleTimeAndAlarmDialogFragment {
+            val fragment = ScheduleTimeAndAlarmDialogFragment()
+            val args = Bundle()
+            args.putString(ARG_TIME_TYPE, timeType)
+            fragment.arguments = args
+            fragment.timeAndAlarmSaveClickListener = listener
             return fragment
         }
     }

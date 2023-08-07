@@ -228,6 +228,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/morningTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -274,6 +275,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/morningAlarm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -348,6 +350,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/eveningTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -392,6 +395,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/eveningAlarm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_8sdp"

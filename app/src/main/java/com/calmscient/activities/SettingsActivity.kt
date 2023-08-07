@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.calmscient.R
 import com.calmscient.databinding.ActivitySettingsBinding
+import com.calmscient.utils.getColorCompat
 
 class SettingsActivity : AppCompatActivity(), View.OnClickListener {
     private var currentClickedLayoutId: Int = R.id.English // Initialize with the ID of English layout
@@ -54,6 +55,9 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
             // Set the background of the English layout to the clicked state
             val englishLayout = findViewById<View>(R.id.English)
             englishLayout.setBackgroundResource(R.drawable.rectangle_clicked)
+            binding.tvEnglish.setTextColor(this.getColorCompat(R.color.white))
+            binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
+            binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
             isFirstTime = false
         }
     }
@@ -64,20 +68,24 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
             R.id.English -> {
                 // Code to handle click on English layout
                 updateBackground(currentClickedLayoutId, v.id)
-
-                // Additional code for handling English layout click event if needed
+                binding.tvEnglish.setTextColor(this.getColorCompat(R.color.white))
+                binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
+                binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
             }
             R.id.Spanish -> {
                 // Code to handle click on Spanish layout
                 updateBackground(currentClickedLayoutId, v.id)
-                // Additional code for handling Spanish layout click event if needed
+                binding.tvSpanish.setTextColor(this.getColorCompat(R.color.white))
+                binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
+                binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
             }
             R.id.ASL -> {
                 // Code to handle click on ASL layout
                 updateBackground(currentClickedLayoutId, v.id)
-                // Additional code for handling ASL layout click event if needed
+                binding.tvAsl.setTextColor(this.getColorCompat(R.color.white))
+                binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
+                binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
             }
-            // Add more cases for other views if needed
         }
     }
 
