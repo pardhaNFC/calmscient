@@ -5,7 +5,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/homeFragment"
         android:layout_width="match_parent"
@@ -32,8 +31,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_marginTop="0sp">
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="18sp">
 
             <TextView
                 android:id="@+id/hello"
@@ -59,7 +58,7 @@
             android:id="@+id/greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
             android:text="@string/happy_to_see_you"
             android:textColor="#FF000000"
             android:textSize="15sp"
@@ -69,7 +68,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_margin="10dp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:divider="@android:color/transparent"
@@ -121,13 +121,14 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_margin="10dp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:divider="@android:color/transparent"
             android:dividerHeight="0.0px"
-            app:cardElevation="10dp"
             app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="10dp"
             app:cardPreventCornerOverlap="false">
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -167,14 +168,11 @@
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20sp"
-            android:layout_marginTop="22sp"
-            android:layout_marginBottom="20sp"
-            android:layout_weight="1"
-            android:text="Favorites"
-            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/favorites"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -182,23 +180,19 @@
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-20sp"
+            android:layout_height="match_parent"
             tools:context=".HomeFragment">
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5sdp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewVideos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal"
-                    android:padding="16dp" />
+                    android:orientation="horizontal" />
 
             </RelativeLayout>
         </FrameLayout>
@@ -207,9 +201,8 @@
             android:id="@+id/needToTalkWithSomeOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="34dp"
-            android:layout_marginBottom="34dp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_55sdp"
             android:background="@drawable/button_border"
             android:text="@string/need_to_talk"
             android:textAlignment="center"
@@ -218,7 +211,6 @@
             android:textSize="16sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

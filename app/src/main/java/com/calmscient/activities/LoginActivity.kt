@@ -11,10 +11,13 @@
 
 package com.calmscient.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import android.view.View.OnFocusChangeListener
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -23,8 +26,9 @@ import com.calmscient.databinding.LayoutLoginBinding
 import com.calmscient.fragments.UserMoodFragment
 
 
-class LoginActivity :  AppCompatActivity() {
-lateinit var binding: LayoutLoginBinding
+class LoginActivity : AppCompatActivity() {
+    lateinit var binding: LayoutLoginBinding
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LayoutLoginBinding.inflate(layoutInflater)
@@ -34,14 +38,14 @@ lateinit var binding: LayoutLoginBinding
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        binding.btnLogin.setOnClickListener{
+        binding.btnLogin.setOnClickListener {
             navigateToDayScreen()
         }
         binding.userName.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 binding.userName.hint = "xxxxxxxxxxxx@gmail.com"
             }
-            if(!hasFocus){
+            if (!hasFocus) {
                 binding.userName.setHint(R.string.username)
             }
         })
@@ -49,15 +53,25 @@ lateinit var binding: LayoutLoginBinding
             if (hasFocus) {
                 binding.editPassword.hint = "**********"
             }
-            if(!hasFocus){
+            if (!hasFocus) {
                 binding.editPassword.setHint(R.string.password)
             }
-
         })
+        binding.parentLayout.setOnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                // Hide the soft keyboard
+                val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.hideSoftInputFromWindow(v.windowToken, 0)
+
+                // Clear focus from the TextInputEditText
+                binding.userNameTextInputLayout.clearFocus()
+                binding.TinPassword.clearFocus()
+            }
+            false
+        }
     }
 
     private fun navigateToDayScreen() {
         startActivity(Intent(this, UserMoodActivity::class.java))
     }
-
 }
