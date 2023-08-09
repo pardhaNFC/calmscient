@@ -457,6 +457,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.img_family -> {
+                binding.imgFamily.setElevation(20.0F)
                 binding.imgFamily.setImageResource(R.drawable.family_selected)
                 binding.imgFriends.setImageResource(R.drawable.friends)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates)
@@ -465,6 +466,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.img_friends -> {
+                binding.imgFriends.setElevation(20.0F)
                 binding.imgFriends.setImageResource(R.drawable.friends_selected)
                 binding.imgFamily.setImageResource(R.drawable.family)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates)
@@ -473,6 +475,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.img_workmates -> {
+                binding.imgWorkmates.setElevation(20.0F)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates_selected)
                 binding.imgFamily.setImageResource(R.drawable.family)
                 binding.imgFriends.setImageResource(R.drawable.friends)
@@ -480,6 +483,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgAlone.setImageResource(R.drawable.alone)
             }
             R.id.img_others -> {
+                binding.imgOthers.setElevation(20.0F)
                 binding.imgOthers.setImageResource(R.drawable.others_selected)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates)
                 binding.imgFamily.setImageResource(R.drawable.family)
@@ -487,6 +491,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
                 binding.imgAlone.setImageResource(R.drawable.alone)
             }
             R.id.img_alone -> {
+                binding.imgAlone.setElevation(20.0F)
                 binding.imgAlone.setImageResource(R.drawable.alone_selected)
                 binding.imgWorkmates.setImageResource(R.drawable.workmates)
                 binding.imgFamily.setImageResource(R.drawable.family)

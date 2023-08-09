@@ -11,22 +11,18 @@
 
 package com.calmscient.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.Interface.CellClickListener
 import com.calmscient.R
 import com.calmscient.fragments.CardViewItem
-import com.calmscient.fragments.MedicationDetail
-import com.calmscient.fragments.MedicationsFragment
+import com.calmscient.fragments.MedicationDetailFragment
 
 class MedicationsCardAdapter(private val items: List<CardViewItem>) :
     RecyclerView.Adapter<MedicationsCardAdapter.CardViewHolder>() {
@@ -56,7 +52,7 @@ class MedicationsCardAdapter(private val items: List<CardViewItem>) :
         holder.cardViewLayout.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 val activity = v!!.context as AppCompatActivity
-                val fragment = MedicationDetail()
+                val fragment = MedicationDetailFragment()
                 activity.supportFragmentManager.beginTransaction()
                     .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
             }

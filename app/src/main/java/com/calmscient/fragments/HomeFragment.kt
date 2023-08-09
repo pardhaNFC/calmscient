@@ -27,8 +27,6 @@ import com.calmscient.R
 import com.calmscient.activities.SettingsActivity
 import com.calmscient.adapters.VideoAdapter
 import com.calmscient.activities.WeeklySummary
-import com.calmscient.Interface.CellClickListener
-import com.calmscient.activities.CalendarViewActivity
 import com.calmscient.adapters.VideoItem
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -82,7 +80,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
         myMedicalRecordsLayout.setOnClickListener {
-            loadFragment(MedicationsFragment())
+            loadFragment(MedicalRecordsFragment())
             /*val intent = Intent(activity, CalendarViewActivity::class.java)
             startActivity(intent)*/
         }

@@ -17,6 +17,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.calmscient.R
+import com.calmscient.fragments.DiscoveryFragment
 import com.calmscient.fragments.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
@@ -49,10 +50,8 @@ class DashboardActivity : AppCompatActivity() {
                 }
 
                 R.id.discovery -> {
-                    //loadFragment(DiscoveryFragment())
-                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    loadFragment(DiscoveryFragment())
                     it.setIcon(R.drawable.dis_selected)
-
                     true
                 }
 

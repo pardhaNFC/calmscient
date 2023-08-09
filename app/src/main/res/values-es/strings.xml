@@ -10,9 +10,12 @@
     <string name="or">o</string>
     <string name="happy_to_see_you">estamos felices de verte</string>
     <string name="home">Hogar</string>
-    <string name="discovery">descubrimiento</string>
-    <string name="exercises">ejercicios</string>
-    <string name="rewards">Recompensas</string>
+    <string name="discovery">DESCUBRIMIENTO</string>
+    <string name="discovery_lower">Descubrimiento</string>
+    <string name="exercises">EJERCICIOS</string>
+    <string name="exercises_lower">Ejercicios</string>
+    <string name="rewards">RECOMPENSAS</string>
+    <string name="rewards_lower">Recompensas</string>
     <string name="my_medical_records">Mis registros médicos</string>
     <string name="weekly_summary">Resumen semanal</string>
     <string name="favorites">Favoritos</string>
@@ -95,6 +98,10 @@
     <string name="trevor_number">1-866-488-7386</string>
     <string name="trans_number">877-565-8860</string>
     <string name="medication_Details">Detalles de los medicamentos</string>
+    <!--discovery-->
+    <string name="anxiety">Manejo de la ansiedad</string>
+    <string name="stress">Cambiar tu respuesta al estrés</string>
+    <string name="control">Tomando el control</string>
 
 
 </resources>

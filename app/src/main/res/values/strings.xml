@@ -10,8 +10,11 @@
     <string name="happy_to_see_you">We are happy to see you</string>
     <string name="home">HOME</string>
     <string name="discovery">DISCOVERY</string>
+    <string name="discovery_lower">Discovery</string>
     <string name="exercises">EXERCISES</string>
+    <string name="exercises_lower">Exercises</string>
     <string name="rewards">REWARDS</string>
+    <string name="rewards_lower">Rewards</string>
     <string name="my_medical_records">My Medical Records</string>
     <string name="weekly_summary">Weekly Summary</string>
     <string name="favorites">Favorites</string>
@@ -69,6 +72,10 @@
     <string name="morning">Morning</string>
     <string name="evening">Evening</string>
     <string name="cancel">Cancel</string>
+    <!--discovery-->
+    <string name="anxiety">Managing anxiety</string>
+    <string name="stress">Changing your response to stress</string>
+    <string name="control">Taking control</string>
     <!--Emergency Resource Page strings-->
     <string name="emergency_resource">Emergency Resource</string>
     <string name="doctor_name">Dr. Samuel Parker</string>

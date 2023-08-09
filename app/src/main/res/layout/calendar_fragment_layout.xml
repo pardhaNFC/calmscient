@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,7 +129,7 @@
                 android:id="@+id/recyclerViewMedications"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context=".fragments.MedicationsFragment" />
+                tools:context=".fragments.MedicalRecordsFragment" />
 
             <!-- Your AppCompactButton -->
             <androidx.appcompat.widget.AppCompatButton

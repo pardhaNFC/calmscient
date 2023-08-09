@@ -1,26 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  -->
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.DiscoveryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Discovery Fragment"
-        android:textColor="#F48383"/>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/discovery_lower"
+            android:textColor="#424242"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ic_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/textView10"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_profile" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/viewbackgroundcolor" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/medicationsCard"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="135dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_anxiety" />
+
+        <RelativeLayout
+            android:id="@+id/medications_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="right"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/transparent">
+
+            <TextView
+                android:id="@+id/tv_anxiety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:text="@string/anxiety"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/nexticon"
+                android:layout_width="10dp"
+                android:layout_height="13dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_toRightOf="@+id/tv_anxiety"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next_white"
+                android:textColor="#F5F5F5" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/upcomingsMedicalAppointments_Card"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_stress" />
+
+        <RelativeLayout
+            android:id="@+id/upcomingAppointmentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="right"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/transparent">
+
+            <TextView
+                android:id="@+id/tv_stress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:text="@string/stress"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/nexticon1"
+                android:layout_width="10dp"
+                android:layout_height="13dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_toRightOf="@+id/tv_stress"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next_white"
+                android:textColor="#F5F5F5" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginStart="-12dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginBottom="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_control" />
+
+        <RelativeLayout
+            android:id="@+id/screeningsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="right"
+            android:layout_marginHorizontal="3dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/transparent">
+
+            <TextView
+                android:id="@+id/tv_chang_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_centerInParent="true"
+                android:text="@string/control"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/nexticon2"
+                android:layout_width="10dp"
+                android:layout_height="13dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_toRightOf="@id/tv_chang_control"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_next_white"
+                android:textColor="#F5F5F5" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -151,7 +151,6 @@
                 android:hint="@string/direction"
                 android:weightSum="1">
 
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/direction"
                     android:layout_width="match_parent"

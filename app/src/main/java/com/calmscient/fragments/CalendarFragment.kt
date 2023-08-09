@@ -11,12 +11,14 @@
 
 package com.calmscient.fragments
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.calmscient.Interface.CellClickListener
@@ -32,13 +34,17 @@ import com.kizitonwose.calendar.core.firstDayOfWeekFromLocale
 import com.kizitonwose.calendar.core.yearMonth
 import com.kizitonwose.calendar.view.ViewContainer
 import com.kizitonwose.calendar.view.WeekDayBinder
+import java.text.SimpleDateFormat
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.Month
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
+import java.util.Calendar
+import java.util.GregorianCalendar
 import java.util.Locale
+
 
 // Define the CardViewItem data class
 data class CardViewItem(
@@ -63,11 +69,11 @@ class CalendarFragment : Fragment(), CellClickListener {
     ): View? {
         binding = CalendarFragmentLayoutBinding.inflate(inflater, container, false)
         binding.backIcon.setOnClickListener {
-            loadFragment(MedicationsFragment())
+            loadFragment(MedicalRecordsFragment())
         }
 
-        binding.saveButton.setOnClickListener{
-            loadFragment(MedicationsFragment())
+        binding.saveButton.setOnClickListener {
+            loadFragment(MedicalRecordsFragment())
         }
         binding.plusIcon.setOnClickListener {
             loadFragment(AddMedicationsFragment())
@@ -87,6 +93,9 @@ class CalendarFragment : Fragment(), CellClickListener {
                     if (selectedDate != day.date) {
                         val oldDate = selectedDate
                         selectedDate = day.date
+                        /*Toast.makeText(requireActivity(), "date:" + selectedDate, Toast.LENGTH_LONG)
+                            .show()*/
+                        incrementDateByOne()
                         binding.exSevenCalendar.notifyDateChanged(day.date)
                         oldDate?.let { binding.exSevenCalendar.notifyDateChanged(it) }
                     }
@@ -127,6 +136,7 @@ class CalendarFragment : Fragment(), CellClickListener {
                 )
             )
         }
+
         val currentMonth = YearMonth.now()
         binding.exSevenCalendar.setup(
             currentMonth.minusMonths(24).atStartOfMonth(),
@@ -166,6 +176,21 @@ class CalendarFragment : Fragment(), CellClickListener {
             )
         )
         cardViewAdapter.notifyDataSetChanged()
+    }
+
+    fun incrementDateByOne() {
+       /* val c = Calendar.getInstance()
+        c.time = date
+        c.add(Calendar.DATE, 1)
+        return c.time*/
+
+        val sdf = SimpleDateFormat("MM/dd/yyyy")
+        for (i in 0..6) {
+            val calendar: Calendar = GregorianCalendar()
+            calendar.add(Calendar.DATE, i)
+            val day: String = sdf.format(calendar.time)
+            Log.i(TAG, day)
+        }
     }
 
     fun getWeekPageTitle(week: Week): String {
