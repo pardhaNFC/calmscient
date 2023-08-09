@@ -245,6 +245,7 @@
                                 android:id="@+id/tv_eve_bad"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
                                 android:text="@string/bad"
@@ -273,6 +274,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:text="@string/be_better"
                                 android:textColor="@color/grey_light"
                                 android:textSize="@dimen/_8sdp" />
@@ -300,6 +302,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
                                 android:textSize="@dimen/_8sdp" />
@@ -327,6 +330,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
                                 android:textSize="@dimen/_8sdp" />
@@ -354,6 +358,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
                                 android:textSize="@dimen/_8sdp" />
@@ -963,7 +968,6 @@
                 android:id="@+id/btn_skip"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/skip_border"
                 android:gravity="center"

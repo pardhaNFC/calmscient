@@ -356,6 +356,7 @@
 
             <RelativeLayout
                 android:id="@+id/ASL"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_5sdp"
@@ -416,7 +417,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:text="Notifications"
                 android:textColor="#000000"
                 android:textSize="18sp" />
@@ -453,7 +454,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:text="License Key"
                 android:textColor="#000000"
                 android:textSize="18sp" />
@@ -488,7 +489,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:text="Help &amp; Support "
                 android:textColor="#000000"
                 android:textSize="18sp" />
@@ -524,7 +525,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:text="Logout"
                 android:textColor="#000000"
                 android:textSize="18sp" />

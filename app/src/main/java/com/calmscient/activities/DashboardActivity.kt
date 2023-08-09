@@ -50,7 +50,8 @@ class DashboardActivity : AppCompatActivity() {
                 }
 
                 R.id.discovery -> {
-                    loadFragment(DiscoveryFragment())
+                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                    //loadFragment(DiscoveryFragment())
                     it.setIcon(R.drawable.dis_selected)
                     true
                 }

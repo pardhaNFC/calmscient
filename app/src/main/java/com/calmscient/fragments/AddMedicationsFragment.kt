@@ -34,10 +34,11 @@ import java.util.Calendar
 import java.util.Date
 
 
-class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.TimeAndAlarmSaveClickListener {
+class AddMedicationsFragment : Fragment(),
+    ScheduleTimeAndAlarmDialogFragment.TimeAndAlarmSaveClickListener {
 
     private lateinit var binding: FragmentAddMedicationsBinding
-    private  var isKeyboardVisible = false
+    private var isKeyboardVisible = false
     private var isMorningAlarmOn = false
     private var isEveningAlarmOn = false
     private var morningTime: String = ""
@@ -78,6 +79,9 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
         binding.eveningCalendar.setOnClickListener {
             showEveningTimeAndAlarmDialog()
         }
+        binding.btnAddCancel.setOnClickListener {
+            loadFragment(CalendarFragment())
+        }
 
         return binding.root
     }
@@ -85,7 +89,8 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bottomNavView = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val bottomNavView =
+            requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
         view.viewTreeObserver.addOnGlobalLayoutListener {
             val rect = Rect()
@@ -147,12 +152,13 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
 
     private fun showMorningTimeAndAlarmDialog() {
         selectedSchedule = "Morning"
-        val morningDialog = ScheduleTimeAndAlarmDialogFragment.newInstance("Morning",this)
+        val morningDialog = ScheduleTimeAndAlarmDialogFragment.newInstance("Morning", this)
         morningDialog.show(childFragmentManager, ScheduleTimeAndAlarmDialogFragment.TAG)
     }
+
     private fun showEveningTimeAndAlarmDialog() {
         selectedSchedule = "Evening"
-        val eveningDialog = ScheduleTimeAndAlarmDialogFragment.newInstance("Evening",this)
+        val eveningDialog = ScheduleTimeAndAlarmDialogFragment.newInstance("Evening", this)
         eveningDialog.show(childFragmentManager, ScheduleTimeAndAlarmDialogFragment.TAG)
     }
 
@@ -176,18 +182,21 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
         binding.direction.clearFocus()
 
         // Hide the keyboard
-        val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm =
+            requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(binding.parentLayout.windowToken, 0)
 
         // Show the bottom navigation menu
         bottomNavView.visibility = View.VISIBLE
     }
+
     private fun scheduleAlarm(time: String, scheduleType: String) {
         val alarmManager = context?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val intent = Intent(context, AlarmReceiver::class.java)
         intent.putExtra("SCHEDULE_TYPE", scheduleType)
 
-        val requestCode = if (scheduleType == "Morning") 0 else 1 // Use different request codes for Morning and Evening
+        val requestCode =
+            if (scheduleType == "Morning") 0 else 1 // Use different request codes for Morning and Evening
 
         val pendingIntent = PendingIntent.getBroadcast(
             context,
@@ -222,7 +231,8 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
         val intent = Intent(context, AlarmReceiver::class.java)
         intent.putExtra("SCHEDULE_TYPE", scheduleType)
 
-        val requestCode = if (scheduleType == "Morning") 0 else 1 // Use the same request codes as used in scheduling
+        val requestCode =
+            if (scheduleType == "Morning") 0 else 1 // Use the same request codes as used in scheduling
 
         val pendingIntent = PendingIntent.getBroadcast(
             context,
@@ -269,6 +279,7 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
                         cancelAlarm("Morning")
                     }
                 }
+
                 "Evening" -> {
                     eveningTime = time
                     eveningAlarm = alarm
@@ -300,6 +311,7 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
                         cancelAlarm("Morning")
                     }
                 }
+
                 "Evening" -> {
                     eveningTime = time
                     eveningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
@@ -315,6 +327,7 @@ class AddMedicationsFragment : Fragment(),ScheduleTimeAndAlarmDialogFragment.Tim
             }
         }
     }
+
     private fun getCurrentTime(): Date {
         return Calendar.getInstance().time
     }

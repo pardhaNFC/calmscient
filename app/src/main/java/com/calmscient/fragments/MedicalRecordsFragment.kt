@@ -25,7 +25,8 @@ class MedicalRecordsFragment : Fragment() {
             loadFragment(CalendarFragment())
         }
         binding.upcomingsMedicalAppointmentsCard.setOnClickListener {
-            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_LONG).show()
+            //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_LONG).show()
+            loadFragment(NextAppointmentsFragment())
         }
         binding.screeningsLayout.setOnClickListener {
             //loadFragment(ResultsFragment())
