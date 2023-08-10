@@ -45,16 +45,16 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
         item.nextOrKeyImageResource?.let { holder.screeningsimageNext.setImageResource(it) }
         // item.keyImageResource?.let { holder.imageViewMoon.setImageResource(it) }
         holder.cardViewLayout.setOnClickListener { v ->
-            /*val activity = v!!.context as AppCompatActivity
+            val activity = v!!.context as AppCompatActivity
             val fragment = QuestionFragment()
             activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.flFragment, fragment).addToBackStack(null).commit()*/
+                .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
         }
         holder.imageHistory.setOnClickListener { v ->
-            /*val activity = v!!.context as AppCompatActivity
+            val activity = v!!.context as AppCompatActivity
             val fragment = ResultsFragment()
             activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.flFragment, fragment).addToBackStack(null).commit()*/
+                .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
         }
     }
 

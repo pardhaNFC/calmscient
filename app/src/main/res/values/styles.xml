@@ -22,4 +22,13 @@
     <style name="BottomNavStyle" parent="Widget.Design.BottomNavigationView">
         <item name="itemIconSize">@dimen/_34sdp</item>
     </style>
+    <style name="OuterButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/grey_background</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="InnerButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/custom_background</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
 </resources>

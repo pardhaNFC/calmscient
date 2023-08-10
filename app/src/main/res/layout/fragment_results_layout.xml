@@ -50,16 +50,16 @@
                 android:id="@+id/tablets"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_40sdp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="@dimen/_40sdp"
                 android:src="@drawable/ic_clock_results" />
 
             <TextView
                 android:id="@+id/results_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
                 android:layout_centerVertical="true"
+                android:layout_marginHorizontal="20dp"
                 android:layout_toRightOf="@+id/tablets"
                 android:text="06/08/2023"
                 android:textColor="#000000"
@@ -114,7 +114,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_height="@dimen/_170sdp"
         android:layout_marginHorizontal="@dimen/_14sdp"
         android:layout_marginTop="@dimen/_26sdp"
         android:clipChildren="false"
@@ -124,16 +124,17 @@
         app:cardCornerRadius="@dimen/_8sdp"
         app:cardElevation="10dp"
         app:cardPreventCornerOverlap="false">
+
         <ImageView
             android:id="@+id/tourch_results"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_gravity="end"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginEnd="@dimen/_18sdp"
             android:src="@drawable/ic_tourch_results" />
-        <LinearLayout
+        <!--<LinearLayout
             android:id="@+id/customButton2"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_70sdp"
@@ -161,6 +162,84 @@
                 android:text="06"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/_30sdp" />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                style="@style/OuterButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    style="@style/InnerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_80sdp"
+                    android:paddingEnd="@dimen/_50sdp">
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:text="Score marked"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_score_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_toEndOf="@id/tv_score"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:text="06"
+                        android:textColor="@color/grey_light"
+                        android:textSize="@dimen/_25sdp" />
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_toEndOf="@+id/tv_score"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:text="06"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_15sdp" />-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_total10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_toLeftOf="@id/tv_total"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="10"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/_25sdp" />
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="Total Score"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
