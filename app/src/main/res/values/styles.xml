@@ -31,4 +31,7 @@
         <item name="android:background">@drawable/custom_background</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
+    <style name="ProgressBarStyle">
+        <item name="colorAccent">@color/example_7_button</item>
+    </style>
 </resources>

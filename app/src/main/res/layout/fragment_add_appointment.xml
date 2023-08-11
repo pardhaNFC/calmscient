@@ -246,7 +246,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="13 PM"
+                android:text="01 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -259,7 +259,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="14 PM"
+                android:text="02 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -273,7 +273,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="15 PM"
+                android:text="03 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -287,7 +287,7 @@
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
 
-                android:text="16 PM"
+                android:text="04 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -301,7 +301,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="17 PM"
+                android:text="05 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
         </LinearLayout>
@@ -337,7 +337,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="18 PM"
+                android:text="06 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -351,7 +351,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="19 PM"
+                android:text="07 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -364,7 +364,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="20 PM"
+                android:text="08 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
 
@@ -378,7 +378,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:padding="@dimen/_5sdp"
-                android:text="21 PM"
+                android:text="09 PM"
                 android:textColor="@color/addappointmenttimimg_textcolor"
                 android:textSize="@dimen/_10sdp" />
         </LinearLayout>

@@ -241,6 +241,21 @@
                     android:textSize="@dimen/_12sdp" />
             </RelativeLayout>
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbar_result"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:theme="@style/ProgressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:progressDrawable="@drawable/curved_progress_bar"
+            android:indeterminate="false"
+            android:scaleY="2"
+            android:max="60"
+            android:progress="1"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.AppCompatButton

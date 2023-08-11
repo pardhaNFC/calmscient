@@ -121,7 +121,7 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <ScrollView
             android:id="@+id/mainlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                 android:clickable="true"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:context=".fragments.NextAppointmentsFragment" />
-        </LinearLayout>
+        </ScrollView>
     </LinearLayout>
     <!-- Floating plus icon -->
 

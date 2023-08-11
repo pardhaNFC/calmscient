@@ -111,4 +111,5 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
     implementation 'com.github.angads25:toggle:1.1.0'
     implementation 'com.kizitonwose.calendar:view:2.0.0'
+    implementation 'com.akexorcist:round-corner-progress-bar:2.1.2'
 }
