@@ -27,14 +27,12 @@ class QuestionAdapter (private val questions: List<Question>) :
             .inflate(R.layout.questions_item_card_view, parent, false)
         return QuestionViewHolder(itemView)
     }
-
     inner class QuestionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val questionTextView: TextView = itemView.findViewById(R.id.questionTextView)
         val optionsRecyclerView: RecyclerView = itemView.findViewById(R.id.optionsRecyclerView)
 
         init {
             optionsRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
-
         }
         fun bindOptions(options: List<String>, selectedOptionIndex: Int) {
             val optionsAdapter = OptionsAdapter(options, selectedOptionIndex) { clickedPosition ->
@@ -44,9 +42,6 @@ class QuestionAdapter (private val questions: List<Question>) :
             optionsRecyclerView.adapter = optionsAdapter
         }
     }
-
-
-
     override fun onBindViewHolder(holder: QuestionViewHolder, position: Int) {
         val item = questions[position]
         holder.questionTextView.text = item.questionText
@@ -54,12 +49,8 @@ class QuestionAdapter (private val questions: List<Question>) :
 
         holder.bindOptions(item.options, item.selectedOption)
     }
-
-
     override fun getItemCount(): Int {
         return questions.size
     }
-
-
 
 }

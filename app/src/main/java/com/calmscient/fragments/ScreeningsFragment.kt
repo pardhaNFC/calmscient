@@ -28,7 +28,6 @@ data class ScreeningsCardItem(
     val title: String,
     val historyImageResource: Int?,
     val nextOrKeyImageResource: Int?,
-
     )
 class ScreeningsFragment : Fragment(), CellClickListener {
     private lateinit var cardViewAdapter: ScreeningsCardAdapter
@@ -37,7 +36,6 @@ class ScreeningsFragment : Fragment(), CellClickListener {
     private lateinit var binding: FragmentScreeningsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(

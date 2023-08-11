@@ -60,19 +60,6 @@ class QuestionFragment :Fragment() {
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
 
-        /* binding.nextQuestion.setOnClickListener {
-             if (currentQuestionIndex < questions.size - 1) {
-                 currentQuestionIndex++
-                 binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
-             }
-         }
-
-         binding.previousQuestion.setOnClickListener {
-             if (currentQuestionIndex > 0) {
-                 currentQuestionIndex--
-                 binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
-             }
-         }*/
         setupNavigation()
 
         binding.backIcon.setOnClickListener{
@@ -136,7 +123,12 @@ class QuestionFragment :Fragment() {
         if (index in 0 until questions.size) {
             currentQuestionIndex = index
             binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
+        }else{
+            if(currentQuestionIndex == questions.size-1){
+                loadFragment(ResultsFragment())
+            }
         }
+
     }
 
     private fun loadFragment(fragment: Fragment)

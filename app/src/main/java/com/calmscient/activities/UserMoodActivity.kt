@@ -2,6 +2,7 @@ package com.calmscient.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -79,8 +80,10 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
         val cal = Calendar.getInstance()
         cal.time = date
         val hour: Int = cal.get(Calendar.HOUR_OF_DAY)
+        val ampm: Int = cal.get(Calendar.AM_PM)
+        Log.d("ampm",""+ampm)
         var greeting: String? = null
-        if (hour in 6..11) {
+        if (hour in 5..11) {
             greeting = getString(R.string.good_morning)
         } else if (hour in 12..16) {
             //greeting = getString(R.string.good_afternoon)
@@ -98,6 +101,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             binding.cardMorniMood.visibility = View.VISIBLE
             binding.mornHoursSleepCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
+            binding.tvMeds.text = getString(R.string.take_medic_morning)
             //binding.cardDailyJournel.visibility = View.VISIBLE
         } else if (greeting == getString(R.string.good_afternoon)) {
             binding.cardAfternoon.visibility = View.VISIBLE
@@ -106,6 +110,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             binding.spendTimeCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
             binding.cardDailyJournel.visibility = View.VISIBLE
+            binding.tvMeds.text = getString(R.string.take_medic_evening)
             binding.idSwitch.labelOn = "YES"
             binding.idSwitch.labelOff = "NO"
         }

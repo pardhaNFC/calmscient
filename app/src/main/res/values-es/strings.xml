@@ -103,5 +103,7 @@
     <string name="stress">Cambiar tu respuesta al estrés</string>
     <string name="control">Tomando el control</string>
     <string name="next_appointments">Próximas citas</string>
+    <string name="your_history">Historia</string>
+    <string name="your_results">Tus resultados</string>
 
 </resources>

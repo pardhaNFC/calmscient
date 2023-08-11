@@ -22,6 +22,10 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.fragments.ADUITQuestionFragment
+import com.calmscient.fragments.DASTQuestionFragment
+import com.calmscient.fragments.GADQuestionFragment
+import com.calmscient.fragments.HistoryFragment
 import com.calmscient.fragments.QuestionFragment
 import com.calmscient.fragments.ResultsFragment
 import com.calmscient.fragments.ScreeningsCardItem
@@ -42,7 +46,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
         val item = items[position]
         holder.titleTextView.text = item.title
         item.historyImageResource?.let { holder.imageHistory.setImageResource(it) }
-        item.nextOrKeyImageResource?.let { holder.screeningsimageNext.setImageResource(it) }
+        item.nextOrKeyImageResource?.let { holder.screeningsImageNext.setImageResource(it) }
         // item.keyImageResource?.let { holder.imageViewMoon.setImageResource(it) }
         holder.cardViewLayout.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
@@ -52,9 +56,47 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
         }
         holder.imageHistory.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
-            val fragment = ResultsFragment()
+            //val fragment = ResultsFragment()
+            val fragment = HistoryFragment()
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
+        }
+        holder.screeningsImageNext.setOnClickListener {
+            val activity = holder.itemView.context as AppCompatActivity
+            when (position) {
+                0 -> {
+                    val fragment = QuestionFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
+                }
+                1 -> {
+                    val fragment = GADQuestionFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
+                }
+                2 -> {
+                    val fragment = ADUITQuestionFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
+                }
+                3 -> {
+                    val fragment = DASTQuestionFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
+                }
+                // Add more cases for other card positions if needed
+                else -> {
+                    // Handle click for other cards
+                }
+            }
         }
     }
 
@@ -64,7 +106,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
         val titleTextView: TextView = itemView.findViewById(R.id.titleText)
         val cardViewLayout: CardView = itemView.findViewById(R.id.screenings_item_card_view)
         val imageHistory: ImageView = itemView.findViewById(R.id.history_icon)
-        val screeningsimageNext: ImageView = itemView.findViewById(R.id.screenings_next_icon)
+        val screeningsImageNext: ImageView = itemView.findViewById(R.id.screenings_next_icon)
 
 
     }

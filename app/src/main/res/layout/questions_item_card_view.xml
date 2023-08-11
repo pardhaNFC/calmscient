@@ -1,16 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  -->
-
-
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/questions_item_card_view"
     android:layout_width="match_parent"
@@ -31,7 +19,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/optionsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_230sdp" />
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

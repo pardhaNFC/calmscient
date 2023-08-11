@@ -19,22 +19,26 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.calmscient.databinding.FragmentResultsLayoutBinding
+import com.calmscient.databinding.LayoutResultsBinding
 
 
 class ResultsFragment : Fragment() {
-    lateinit var binding: FragmentResultsLayoutBinding
+    lateinit var binding: LayoutResultsBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentResultsLayoutBinding.inflate(inflater, container, false)
+        binding = LayoutResultsBinding.inflate(inflater, container, false)
         binding.resultsBackIcon.setOnClickListener {
-            loadFragment(MedicalRecordsFragment())
+            loadFragment(ScreeningsFragment())
         }
         binding.needToTalkWithSomeOneResults.setOnClickListener {
             loadFragment(EmergencyResourceFragment())
+        }
+        binding.torchResults.setOnClickListener {
+            val dialogFragment = ResultsinfoPopupFragment()
+            dialogFragment.show(requireActivity().supportFragmentManager, "ResultsInfoDialog")
         }
         resultPercent()
         return binding.root
@@ -49,22 +53,7 @@ class ResultsFragment : Fragment() {
     private fun resultPercent() {
         binding.progressbarResult.setMax(100);
         binding.progressbarResult.setProgress(60);
-        /* //val percent_rises:Double = risesValue as Double
-         val percentFormatter: NumberFormat
-         val percentRises: String
-         val percentRises_value: String
 
-         percentFormatter = NumberFormat.getPercentInstance()
-         *//*percentRises = percentFormatter.format(percent_rises)
-        percentRises_value = (percent_rises * 100).toString()*//*
-        //tv_rises_percent.text = "+"+percentRises_value+"%"
-        //val temp = percentRises.removeSuffix("%").toInt()
-
-        *//* progressRises.max = 10
-         val currentProgress = 6
-         ObjectAnimator.ofInt(progressRises,"start",currentProgress)
-             .setDuration(2000).start()*//*
-        //binding.progressbarResult.setProgress(temp)*/
         val progressBar: ProgressBar
         val textView: TextView
         var progressStatus = 0
@@ -73,13 +62,10 @@ class ResultsFragment : Fragment() {
         Thread {
             while (progressStatus < 60) {
                 progressStatus += 1
-                // Update the progress bar and display the
-                //current value in the text view
                 handler.post(Runnable {
                     binding.progressbarResult.progress = progressStatus
                 })
                 try {
-                    // Sleep for 200 milliseconds.
                     Thread.sleep(25)
                 } catch (e: InterruptedException) {
                     e.printStackTrace()

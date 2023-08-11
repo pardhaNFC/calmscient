@@ -22,14 +22,11 @@ class OptionsAdapter(
     private val selectedOptionIndex: Int,
     private val optionClickListener: (Int) -> Unit
 ) : RecyclerView.Adapter<OptionsAdapter.OptionsViewHolder>() {
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OptionsViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.option_item_card_view, parent, false)
         return OptionsViewHolder(itemView)
     }
-
     inner class OptionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val optionTextView: TextView = itemView.findViewById(R.id.option)
 
@@ -40,12 +37,9 @@ class OptionsAdapter(
             }
         }
     }
-
-
     override fun onBindViewHolder(holder: OptionsViewHolder, position: Int) {
         val option = options[position]
         holder.optionTextView.text = option
-
         if (position == selectedOptionIndex) {
             // Change the color of the selected card and text
             holder.itemView.setBackgroundResource(R.drawable.card_selected_background)
@@ -66,8 +60,6 @@ class OptionsAdapter(
             )
         }
     }
-
-
     override fun getItemCount(): Int {
         return options.size
     }
