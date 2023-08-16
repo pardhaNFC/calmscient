@@ -48,12 +48,12 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
         item.historyImageResource?.let { holder.imageHistory.setImageResource(it) }
         item.nextOrKeyImageResource?.let { holder.screeningsImageNext.setImageResource(it) }
         // item.keyImageResource?.let { holder.imageViewMoon.setImageResource(it) }
-        holder.cardViewLayout.setOnClickListener { v ->
+        /*holder.cardViewLayout.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
             val fragment = QuestionFragment()
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
-        }
+        }*/
         holder.imageHistory.setOnClickListener { v ->
             val activity = v!!.context as AppCompatActivity
             //val fragment = ResultsFragment()
@@ -61,7 +61,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
         }
-        holder.screeningsImageNext.setOnClickListener {
+        holder.cardViewLayout.setOnClickListener {
             val activity = holder.itemView.context as AppCompatActivity
             when (position) {
                 0 -> {
@@ -71,6 +71,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
                         .addToBackStack(null)
                         .commit()
                 }
+
                 1 -> {
                     val fragment = GADQuestionFragment()
                     activity.supportFragmentManager.beginTransaction()
@@ -78,6 +79,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
                         .addToBackStack(null)
                         .commit()
                 }
+
                 2 -> {
                     val fragment = ADUITQuestionFragment()
                     activity.supportFragmentManager.beginTransaction()
@@ -85,6 +87,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
                         .addToBackStack(null)
                         .commit()
                 }
+
                 3 -> {
                     val fragment = DASTQuestionFragment()
                     activity.supportFragmentManager.beginTransaction()

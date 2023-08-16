@@ -41,7 +41,7 @@
                 android:layout_marginBottom="20dp"
                 android:text=" Settings"
                 android:textColor="#000000"
-                android:textSize="25sp" />
+                android:textSize="@dimen/_20sdp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -50,6 +50,7 @@
             android:layout_height="140dp"
             android:layout_centerInParent="true"
             android:layout_marginStart="120dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="75dp"
             android:layout_marginBottom="20dp">
 
@@ -79,17 +80,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:minHeight="48dp">
+            android:minHeight="40dp">
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="8dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profile_settings" />
 
@@ -99,10 +99,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="8dp"
                 android:text="Profile"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
         <View
@@ -124,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="8dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_theme_mode" />
 
@@ -134,10 +134,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="8dp"
                 android:text="Theme"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -147,13 +147,13 @@
                 android:layout_marginTop="33dp"
                 android:text="Dark Mode"
                 android:textColor="#6E6BB3"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/id_switch"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
-                android:layout_marginStart="130dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="30dp"
                 android:textSize="14sp"
                 app:colorBorder="@color/colorPrimary"
@@ -189,10 +189,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="8dp"
                 android:text="Languages"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
         <!--<RelativeLayout
@@ -400,7 +400,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:minHeight="48dp">
+            android:minHeight="40dp">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -417,10 +417,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:text="Notifications"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
 
@@ -434,17 +434,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:minHeight="48dp">
+            android:minHeight="40dp">
 
             <ImageView
                 android:id="@+id/Lincenseimage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="9dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_license" />
 
@@ -454,10 +453,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:text="License Key"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
         <View
@@ -472,7 +471,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:minHeight="48dp">
+            android:minHeight="40dp">
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -489,10 +488,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:text="Help &amp; Support "
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
 
@@ -508,7 +507,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:clickable="true"
-            android:minHeight="48dp">
+            android:minHeight="40dp">
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -525,10 +524,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_7sdp"
                 android:text="Logout"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
 
@@ -536,5 +535,6 @@
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:background="@color/viewbackgroundcolor" />
+        
     </LinearLayout>
 </LinearLayout>

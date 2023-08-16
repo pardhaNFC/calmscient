@@ -102,9 +102,13 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             binding.mornHoursSleepCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
             binding.tvMeds.text = getString(R.string.take_medic_morning)
+            binding.idSwitch.labelOn = "YES"
+            binding.idSwitch.labelOff = "NO"
+            binding.layoutButton.visibility = View.VISIBLE
             //binding.cardDailyJournel.visibility = View.VISIBLE
         } else if (greeting == getString(R.string.good_afternoon)) {
             binding.cardAfternoon.visibility = View.VISIBLE
+            binding.layoutButton.visibility = View.VISIBLE
         } else if (greeting == getString(R.string.good_evening)) {
             binding.cardEveDay.visibility = View.VISIBLE
             binding.spendTimeCard.visibility = View.VISIBLE
@@ -113,6 +117,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
             binding.tvMeds.text = getString(R.string.take_medic_evening)
             binding.idSwitch.labelOn = "YES"
             binding.idSwitch.labelOff = "NO"
+            binding.layoutButton.visibility = View.VISIBLE
         }
     }
 

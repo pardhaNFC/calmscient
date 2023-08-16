@@ -25,12 +25,14 @@ import com.calmscient.databinding.FragmentQuestionBinding
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 data class Question(
     val questionText: String,
     val options: List<String>,
     var selectedOption: Int = -1
 )
-class QuestionFragment :Fragment() {
+
+class QuestionFragment : Fragment() {
     private lateinit var questionAdapter: QuestionAdapter
     private lateinit var binding: FragmentQuestionBinding
     private val questions: List<Question> = generateDummyQuestions()
@@ -62,7 +64,7 @@ class QuestionFragment :Fragment() {
 
         setupNavigation()
 
-        binding.backIcon.setOnClickListener{
+        binding.backIcon.setOnClickListener {
             loadFragment(ScreeningsFragment())
         }
     }
@@ -90,9 +92,9 @@ class QuestionFragment :Fragment() {
                 listOf("Not at all", "Several days", "More than half the days", "Nearly every day")
             questionsList.add(Question(questionText, options))
         }
-
         return questionsList
     }
+
     private fun setupNavigation() {
         binding.nextQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex + 1)
@@ -118,21 +120,18 @@ class QuestionFragment :Fragment() {
         })
     }
 
-
     private fun navigateToQuestion(index: Int) {
         if (index in 0 until questions.size) {
             currentQuestionIndex = index
             binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
-        }else{
-            if(currentQuestionIndex == questions.size-1){
+        } else {
+            if (currentQuestionIndex == questions.size - 1) {
                 loadFragment(ResultsFragment())
             }
         }
-
     }
 
-    private fun loadFragment(fragment: Fragment)
-    {
+    private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.commit()

@@ -67,7 +67,7 @@ class ScreeningsFragment : Fragment(), CellClickListener {
             listOf(
                 ScreeningsCardItem("PHQ-9", R.drawable.ic_history, R.drawable.ic_next),
                 ScreeningsCardItem("GAD-7", null, R.drawable.ic_next),
-                ScreeningsCardItem("AUDIT", R.drawable.ic_history, R.drawable.ic_next),
+                ScreeningsCardItem("AUDIT", null, R.drawable.ic_next),
                 ScreeningsCardItem("DAST-10", null, R.drawable.ic_next),
                 ScreeningsCardItem("SBIRT", null, R.drawable.ic_key)
 

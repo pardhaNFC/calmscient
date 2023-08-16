@@ -16,13 +16,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_120sdp">
+            android:layout_marginTop="@dimen/_140sdp">
 
             <ImageView
                 android:id="@+id/img_calm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_60sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
                 android:src="@drawable/clamscient_txt_splash" />
 
             <TextView
@@ -30,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_calm"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="The Science of Calm"
                 android:textColor="#6E6BB3"
                 android:textSize="@dimen/_18sdp" />

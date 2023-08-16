@@ -26,19 +26,47 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.calmscient.R
+import com.calmscient.activities.LearnMoreWebviewActivity
+import com.calmscient.activities.SettingsActivity
+import com.calmscient.databinding.FragmentEmergencyResourceBinding
 
 class EmergencyResourceFragment : Fragment() {
+    lateinit var binding:FragmentEmergencyResourceBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_emergency_resource, container, false)
+        //val view = inflater.inflate(R.layout.fragment_emergency_resource, container, false)
+        binding = FragmentEmergencyResourceBinding.inflate(inflater,container,false)
 
-        // Find the customized back button view by its ID
-        val backToHome = view.findViewById<View>(R.id.backToHomeFragment)
-        backToHome.setOnClickListener {
+        //val backToHome = view.findViewById<View>(R.id.backToHomeFragment)
+        binding.backToHomeFragment.setOnClickListener {
             loadFragment(HomeFragment())
         }
-
-        return view
+        binding.learnmoreSuicide.setOnClickListener {
+            val intent = Intent(activity, LearnMoreWebviewActivity::class.java)
+            intent.putExtra("988_url", "https://988lifeline.org/")
+            startActivity(intent)
+        }
+        binding.learnmoreDistress.setOnClickListener {
+            val intent = Intent(activity, LearnMoreWebviewActivity::class.java)
+            intent.putExtra("988_url", "https://www.samhsa.gov/find-help/disaster-distress-helpline")
+            startActivity(intent)
+        }
+        binding.learnmoreCrisis.setOnClickListener {
+            val intent = Intent(activity, LearnMoreWebviewActivity::class.java)
+            intent.putExtra("988_url", "https://www.crisistextline.org/")
+            startActivity(intent)
+        }
+        binding.learnmoreTrevor.setOnClickListener {
+            val intent = Intent(activity, LearnMoreWebviewActivity::class.java)
+            intent.putExtra("988_url", "https://www.thetrevorproject.org/")
+            startActivity(intent)
+        }
+        binding.learnmoreTransLifeline.setOnClickListener {
+            val intent = Intent(activity, LearnMoreWebviewActivity::class.java)
+            intent.putExtra("988_url", "https://translifeline.org/hotline/")
+            startActivity(intent)
+        }
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,11 +79,11 @@ class EmergencyResourceFragment : Fragment() {
         val transLifeline = view.findViewById<TextView>(R.id.trans_lifeline_helpLineNumber)
 
         // Apply the click behavior for each TextView
-        makePhoneNumberClickable(hospitalNumber)
-        makePhoneNumberClickable(disasterDistressHelpline)
-        makePhoneNumberClickable(crisisTextLine)
-        makePhoneNumberClickable(trevorProject)
-        makePhoneNumberClickable(transLifeline)
+        makePhoneNumberClickable(binding.phoneNumberHospital)
+        makePhoneNumberClickable(binding.disasterDistress)
+        makePhoneNumberClickable(binding.crisisText)
+        makePhoneNumberClickable(binding.trevorProjectHelplineNumber)
+        makePhoneNumberClickable(binding.transLifelineHelpLineNumber)
     }
 
     private fun makePhoneNumberClickable(textView: TextView) {

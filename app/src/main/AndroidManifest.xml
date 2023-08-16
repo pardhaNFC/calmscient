@@ -80,6 +80,11 @@
             android:label="SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.LearnMoreWebviewActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
         <receiver
             android:name=".receivers.AlarmReceiver"
             android:enabled="true"

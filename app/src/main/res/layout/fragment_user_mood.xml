@@ -74,8 +74,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_eve_bad"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:src="@drawable/icon_bad" />
 
                             <TextView
@@ -98,8 +98,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_eve_better"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:src="@drawable/icon_better" />
 
                             <TextView
@@ -122,8 +122,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_eve_fair"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:src="@drawable/icon_fair" />
 
                             <TextView
@@ -146,8 +146,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_eve_good"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:src="@drawable/icon_good" />
 
                             <TextView
@@ -170,8 +170,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_eve_excellent"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:src="@drawable/icon_excellent" />
 
                             <TextView
@@ -235,8 +235,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_nig_bad"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_bad"
                                 tools:ignore="MissingConstraints" />
@@ -262,8 +262,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_nig_better"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_better"
                                 tools:ignore="MissingConstraints" />
@@ -289,8 +289,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_nig_fair"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_fair"
@@ -317,8 +317,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_nig_good"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_good"
@@ -345,8 +345,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_nig_excellent"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_excellent"
@@ -421,8 +421,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_mBad"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_bad" />
 
@@ -432,6 +432,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:text="@string/bad"
                                 android:textColor="@color/grey_light"
                                 android:textSize="@dimen/_8sdp" />
@@ -446,8 +447,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_mBetter"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_better"
                                 tools:ignore="MissingConstraints" />
@@ -457,6 +458,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:gravity="center"
                                 android:text="@string/be_better"
                                 android:textStyle="bold"
@@ -473,8 +475,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_mFair"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:src="@drawable/icon_fair"
                                 android:layout_marginTop="@dimen/_2sdp"
@@ -486,6 +488,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:text="@string/fair"
                                 android:textColor="@color/grey_light"
                                 android:textSize="@dimen/_8sdp" />
@@ -500,8 +503,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_mGood"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_good"
@@ -512,6 +515,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:gravity="center"
                                 android:text="@string/good"
                                 android:textColor="@color/grey_light"
@@ -527,8 +531,8 @@
 
                             <com.mikhaellopez.circularimageview.CircularImageView
                                 android:id="@+id/img_mExcellent"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_excellent"
@@ -539,6 +543,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserratbold"
+                                android:layout_marginTop="@dimen/_3sdp"
                                 android:gravity="center"
                                 android:text="@string/excellent"
                                 android:textColor="@color/grey_light"
@@ -595,8 +600,8 @@
 
                             <ImageView
                                 android:id="@+id/img_family"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/family" />
 
@@ -620,8 +625,8 @@
 
                             <ImageView
                                 android:id="@+id/img_friends"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/friends" />
 
@@ -645,8 +650,8 @@
 
                             <ImageView
                                 android:id="@+id/img_workmates"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/workmates" />
 
@@ -670,8 +675,8 @@
 
                             <ImageView
                                 android:id="@+id/img_others"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/others"
@@ -697,8 +702,8 @@
 
                             <ImageView
                                 android:id="@+id/img_alone"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
                                 android:layout_weight="1"
                                 android:elevation="@dimen/_10sdp"
                                 android:src="@drawable/alone"
@@ -956,9 +961,11 @@
         </LinearLayout>
         <!--button-->
         <LinearLayout
+            android:id="@+id/layout_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="12dp"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton

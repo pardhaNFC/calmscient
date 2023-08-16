@@ -14,9 +14,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="horizontal"
             android:padding="10sp"
-            android:layout_marginTop="@dimen/_10sdp"
             android:weightSum="2">
 
             <ImageView
@@ -134,19 +134,19 @@
                 android:textSize="@dimen/_12sdp" />
 
             <RelativeLayout
-                android:id="@+id/learnmore_suicide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right">
 
                 <androidx.cardview.widget.CardView
+
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     app:cardBackgroundColor="#F4F3FF"
                     app:cardCornerRadius="@dimen/_10sdp">
 
                     <TextView
-
+                        android:id="@+id/learnmore_suicide"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
@@ -207,7 +207,7 @@
                     app:cardCornerRadius="@dimen/_10sdp">
 
                     <TextView
-
+                        android:id="@+id/learnmore_distress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
@@ -285,7 +285,7 @@
                     app:cardCornerRadius="@dimen/_10sdp">
 
                     <TextView
-
+                        android:id="@+id/learnmore_crisis"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
@@ -362,6 +362,7 @@
                     app:cardCornerRadius="@dimen/_10sdp">
 
                     <TextView
+                        android:id="@+id/learnmore_trevor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
@@ -438,6 +439,7 @@
                     app:cardCornerRadius="@dimen/_10sdp">
 
                     <TextView
+                        android:id="@+id/learnmore_trans_lifeline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
