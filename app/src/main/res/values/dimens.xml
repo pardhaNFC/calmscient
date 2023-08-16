@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <dimen name="bottom_navigation_icon_size" tools:override="true">52dp</dimen>
-    <dimen name="design_bottom_navigation_height" tools:override="true">72dp</dimen>
+    <dimen name="bottom_navigation_icon_size" tools:override="true">32dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">42dp</dimen>
 
     <dimen name="dots_height">30dp</dimen>
     <dimen name="dots_margin_bottom">20dp</dimen>

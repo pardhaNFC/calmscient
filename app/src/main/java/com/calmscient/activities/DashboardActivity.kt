@@ -35,16 +35,16 @@ class DashboardActivity : AppCompatActivity() {
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         bottomNav.itemIconTintList = null
         // Set the HomeFragment icon to the new icon as default
-        bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.home_selected)
+        bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.ic_home_selected)
         loadFragment(HomeFragment())
         bottomNav.setOnItemSelectedListener {
-            bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.homenew)
-            bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.discoverynew)
-            bottomNav.menu.findItem(R.id.exercises).setIcon(R.drawable.exercisesnew)
-            bottomNav.menu.findItem(R.id.rewards).setIcon(R.drawable.rewardsnew)
+            bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.ic_home)
+            bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.ic_discovery)
+            bottomNav.menu.findItem(R.id.exercises).setIcon(R.drawable.ic_exercises)
+            bottomNav.menu.findItem(R.id.rewards).setIcon(R.drawable.ic_rewards)
             when (it.itemId) {
                 R.id.home -> {
-                    it.setIcon(R.drawable.home_selected)
+                    it.setIcon(R.drawable.ic_home_selected)
                     loadFragment(HomeFragment())
                     true
                 }
@@ -52,21 +52,21 @@ class DashboardActivity : AppCompatActivity() {
                 R.id.discovery -> {
                     //Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
                     loadFragment(DiscoveryFragment())
-                    it.setIcon(R.drawable.dis_selected)
+                    it.setIcon(R.drawable.ic_discovery_selected)
                     true
                 }
 
                 R.id.exercises -> {
                     // loadFragment(ExerciseFragment())
                     Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
-                    it.setIcon(R.drawable.exercises_selected)
+                    it.setIcon(R.drawable.ic_exercises_selected)
                     true
                 }
 
                 R.id.rewards -> {
                     //loadFragment(RewardsFragment())
                     Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
-                    it.setIcon(R.drawable.rewards_selected)
+                    it.setIcon(R.drawable.ic_rewards_selected)
                     true
                 }
 

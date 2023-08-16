@@ -20,7 +20,7 @@
         <item name="android:windowBackground">@drawable/dialog_border</item>
     </style>
     <style name="BottomNavStyle" parent="Widget.Design.BottomNavigationView">
-        <item name="itemIconSize">@dimen/_34sdp</item>
+        <item name="itemIconSize">@dimen/_24sdp</item>
     </style>
     <style name="OuterButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/grey_background</item>

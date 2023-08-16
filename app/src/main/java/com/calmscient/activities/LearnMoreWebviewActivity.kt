@@ -107,6 +107,7 @@ class LearnMoreWebviewActivity : AppCompatActivity() {
         // ProgressBar will disappear once page is loaded
         override fun onPageFinished(view: WebView, url: String) {
             super.onPageFinished(view, url)
+            webView_learn!!.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
         }
     }

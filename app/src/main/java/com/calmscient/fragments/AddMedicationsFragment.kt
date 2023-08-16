@@ -202,7 +202,7 @@ class AddMedicationsFragment : Fragment(),
             context,
             requestCode,
             intent,
-            PendingIntent.FLAG_UPDATE_CURRENT // Use FLAG_UPDATE_CURRENT to update existing PendingIntent
+            PendingIntent.FLAG_IMMUTABLE // Use FLAG_UPDATE_CURRENT to update existing PendingIntent
         )
 
         val timeParts = time.split(":")
@@ -315,10 +315,12 @@ class AddMedicationsFragment : Fragment(),
                 "Evening" -> {
                     eveningTime = time
                     eveningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
+                    isEveningAlarmOn = true
                     binding.eveningTime.text = eveningTime
                     binding.eveningAlarm.text = eveningAlarm
                     if (isEveningAlarmOn) {
                         scheduleAlarm(eveningAlarm, "Evening")
+                        isEveningAlarmOn = false
                     } else {
                         cancelAlarm("Evening")
                     }

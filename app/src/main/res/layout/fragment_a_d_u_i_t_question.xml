@@ -75,12 +75,6 @@
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
 
-            <!--  <androidx.viewpager2.widget.ViewPager2
-                  android:id="@+id/questionViewPager"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:layout_weight="1" />-->
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/questionsRecyclerView"
                 android:layout_width="match_parent"

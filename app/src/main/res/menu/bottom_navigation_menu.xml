@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/homenew"
+        android:icon="@drawable/ic_home"
         app:itemIconSize="@dimen/bottom_navigation_icon_size"
         android:title="@string/home" />
     <item
         android:id="@+id/discovery"
-        android:icon="@drawable/discoverynew"
+        android:icon="@drawable/ic_discovery"
         android:title="@string/discovery" />
     <item
         android:id="@+id/exercises"
-        android:icon="@drawable/exercisesnew"
+        android:icon="@drawable/ic_exercises"
         android:title="@string/exercises" />
     <item
         android:id="@+id/rewards"
-        android:icon="@drawable/rewardsnew"
+        android:icon="@drawable/ic_rewards"
         android:title="@string/rewards" />
 </menu>
 

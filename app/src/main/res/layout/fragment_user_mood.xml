@@ -62,6 +62,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
                         android:orientation="horizontal"
                         android:weightSum="5">
 
@@ -76,6 +77,7 @@
                                 android:id="@+id/img_eve_bad"
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_bad" />
 
                             <TextView
@@ -100,6 +102,7 @@
                                 android:id="@+id/img_eve_better"
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_better" />
 
                             <TextView
@@ -124,6 +127,7 @@
                                 android:id="@+id/img_eve_fair"
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_fair" />
 
                             <TextView
@@ -148,6 +152,7 @@
                                 android:id="@+id/img_eve_good"
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_good" />
 
                             <TextView
@@ -172,6 +177,7 @@
                                 android:id="@+id/img_eve_excellent"
                                 android:layout_width="45dp"
                                 android:layout_height="45dp"
+                                android:layout_marginTop="@dimen/_2sdp"
                                 android:src="@drawable/icon_excellent" />
 
                             <TextView
