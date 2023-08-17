@@ -16,9 +16,15 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
+import android.content.Context.VIBRATOR_SERVICE
 import android.content.Intent
+import android.media.RingtoneManager
 import android.os.Build
+import android.os.Handler
+import android.os.Vibrator
+import android.os.VibratorManager
 import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat.getSystemService
 import com.calmscient.R
 import com.calmscient.fragments.AddMedicationsFragment
 
@@ -27,6 +33,26 @@ class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         val scheduleType = intent?.getStringExtra("SCHEDULE_TYPE")
         showDefaultNotification(context, scheduleType)
+
+        /*val vibrator = context!!.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibrator.vibrate(4000)*/
+
+        val vib = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager =
+                context!!.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            vibratorManager.defaultVibrator
+        } else {
+            @Suppress("DEPRECATION")
+            context!!.getSystemService(VIBRATOR_SERVICE) as Vibrator
+        }
+
+        /*var alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+        if(alarmUri == null){
+            alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        }
+        val ringtone = RingtoneManager.getRingtone(context,alarmUri)
+        ringtone.play()*/
+
     }
 
     private fun showDefaultNotification(context: Context?, scheduleType: String?) {
@@ -40,7 +66,7 @@ class AlarmReceiver : BroadcastReceiver() {
             context,
             0,
             notificationIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_IMMUTABLE
         )
 
         // Build the notification

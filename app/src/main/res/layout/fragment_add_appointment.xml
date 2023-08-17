@@ -40,7 +40,7 @@
                 android:paddingLeft="@dimen/_20sdp"
                 android:text="Add Appointment"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
         </RelativeLayout>
 

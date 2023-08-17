@@ -40,7 +40,7 @@
                 android:layout_marginBottom="20dp"
                 android:text="@string/screenings"
                 android:textColor="#000000"
-                android:textSize="25sp"
+                android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>

@@ -44,7 +44,7 @@
     <string name="save">Save</string>
     <string name="skip">Skip</string>
     <string name="medications">Medications</string>
-    <string name="medication_Details">Medications Details </string>
+    <string name="medication_Details">Medications Details</string>
     <string name="upcoming_medical_appointments">Upcoming Medical Appointments</string>
     <string name="screenings">Screenings</string>
     <!--network errors-->

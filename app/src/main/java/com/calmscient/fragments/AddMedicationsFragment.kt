@@ -303,6 +303,7 @@ class AddMedicationsFragment : Fragment(),
                 "Morning" -> {
                     morningTime = time
                     morningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
+                    isMorningAlarmOn = true
                     binding.morningTime.text = morningTime
                     binding.morningAlarm.text = morningAlarm
                     if (isMorningAlarmOn) {

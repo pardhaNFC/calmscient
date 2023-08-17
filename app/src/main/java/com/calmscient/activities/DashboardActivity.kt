@@ -16,9 +16,13 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
+import com.calmscient.fragments.ExerciseFragment
 import com.calmscient.fragments.HomeFragment
+import com.calmscient.fragments.RewardsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
@@ -37,6 +41,16 @@ class DashboardActivity : AppCompatActivity() {
         // Set the HomeFragment icon to the new icon as default
         bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.ic_home_selected)
         loadFragment(HomeFragment())
+        //Navigation graph
+        /*val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.flFragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setupWithNavController(navController)*/
+
+
+
         bottomNav.setOnItemSelectedListener {
             bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.ic_home)
             bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.ic_discovery)
@@ -69,7 +83,6 @@ class DashboardActivity : AppCompatActivity() {
                     it.setIcon(R.drawable.ic_rewards_selected)
                     true
                 }
-
                 else -> {
                     false
                 }

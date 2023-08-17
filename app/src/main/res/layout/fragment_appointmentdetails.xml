@@ -60,8 +60,9 @@
              android:layout_height="wrap_content"
              android:layout_marginHorizontal="20dp"
              android:layout_marginTop="@dimen/_18sdp"
+             android:layout_centerInParent="true"
              android:layout_toRightOf="@+id/doctorlogo"
-             android:text="Lisinopril"
+             android:text="Dr. Hannan Johnson"
              android:textColor="#000000"
              android:textSize="20dp"
              android:textStyle="bold" />
@@ -72,7 +73,8 @@
              android:layout_below="@+id/text1"
              android:layout_marginHorizontal="@dimen/_16sdp"
              android:layout_toRightOf="@+id/doctorlogo"
-             android:text="Dr. Samuel parker"
+             android:visibility="gone"
+             android:text="Dr. Hannan Johnson"
              android:textColor="#000000"
              android:textSize="@dimen/_14sdp" />
      </RelativeLayout>
@@ -92,7 +94,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_marginTop="@dimen/_15sdp"
-             android:text="08/16/2023"
+             android:text="08/17/2023"
              android:textStyle="bold"
              android:textColor="@color/black"
              android:textSize="@dimen/_16sdp"/>

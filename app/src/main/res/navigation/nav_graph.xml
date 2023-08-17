@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.calmscient.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/discoveryFragment"
+        android:name="com.calmscient.fragments.DiscoveryFragment"
+        android:label="DISCOVERY"
+        tools:layout="@layout/fragment_discovery" />
+    <fragment
+        android:id="@+id/exerciseFragment"
+        android:name="com.calmscient.fragments.ExerciseFragment"
+        android:label="EXERCISES"
+        tools:layout="@layout/fragment_exercise" />
+    <fragment
+        android:id="@+id/rewardsFragment"
+        android:name="com.calmscient.fragments.RewardsFragment"
+        android:label="REWARDS"
+        tools:layout="@layout/fragment_rewards" />
+
+    <!-- actions for navigation between fragments -->
+    <action
+        android:id="@+id/action_home"
+        app:destination="@id/homeFragment" />
+
+    <action
+        android:id="@+id/action_discovery"
+        app:destination="@id/discoveryFragment" />
+    <action
+        android:id="@+id/action_exercises"
+        app:destination="@id/exerciseFragment" />
+
+    <action
+        android:id="@+id/action_rewards"
+        app:destination="@id/rewardsFragment" />
+</navigation>

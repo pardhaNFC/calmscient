@@ -55,7 +55,7 @@
                         android:paddingLeft="@dimen/_20sdp"
                         android:text="@string/next_appointments"
                         android:textColor="#000000"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/_18sdp"
                         android:textStyle="bold" />
                 </RelativeLayout>
                 <!--<ImageView

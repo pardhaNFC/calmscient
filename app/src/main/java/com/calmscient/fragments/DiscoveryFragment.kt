@@ -16,6 +16,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.calmscient.R
 import com.calmscient.databinding.FragmentDiscoveryBinding
 
@@ -24,10 +26,9 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class DiscoveryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var binding : FragmentDiscoveryBinding
+    private lateinit var binding: FragmentDiscoveryBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         /*arguments?.let {
@@ -42,6 +43,10 @@ class DiscoveryFragment : Fragment() {
     ): View? {
         binding = FragmentDiscoveryBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {
