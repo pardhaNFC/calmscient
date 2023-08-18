@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_30sdp"
     tools:context=".fragments.AddMedicationsFragment">
 
     <LinearLayout
@@ -43,34 +44,7 @@
                 android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
         </RelativeLayout>
-        <!--<LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="2">
 
-            <ImageView
-                android:id="@+id/addMedicationsDetailsBackIcon"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="5sp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:src="@drawable/ic_back" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="-5sp"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="@string/add_medications"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>-->
 
         <View
             android:layout_width="match_parent"
@@ -99,6 +73,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userName"
                     android:layout_width="match_parent"
+                    android:fontFamily="@font/sfprotextregular"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -622,12 +597,12 @@
 
         </LinearLayout>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20sp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
             android:orientation="horizontal"
-
             android:weightSum="2">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -651,7 +626,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_button_background_save"
+                android:background="@drawable/button_border"
                 android:gravity="center"
                 android:text="Save"
                 android:textAllCaps="false"
@@ -661,7 +636,7 @@
 
             </androidx.appcompat.widget.AppCompatButton>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
 
     </LinearLayout>
 
