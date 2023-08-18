@@ -35,22 +35,24 @@
             android:layout_marginTop="18sp">
 
             <TextView
-                android:id="@+id/hello"
+                android:id="@+id/tv_hello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprotextregular"
                 android:text="Hello"
+                android:textColor="#424242"
                 android:textSize="@dimen/_20sdp" />
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_toRightOf="@id/hello"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sfprotextbold"
+                android:layout_toEndOf="@id/tv_hello"
                 android:text="Kevin"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_20sdp" />
 
         </RelativeLayout>
 
@@ -60,9 +62,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_14sdp"
             android:text="@string/happy_to_see_you"
-            android:textColor="#FF000000"
-            android:textSize="@dimen/_12sdp"
-            android:textStyle="normal" />
+            android:fontFamily="@font/sfprotextregular"
+            android:textColor="#363636"
+            android:textSize="@dimen/_12sdp" />
 
         <!-- Card View for My Medical records-->
         <androidx.cardview.widget.CardView
@@ -100,17 +102,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:fontFamily="@font/sfprodisplaysemibold"
                     android:text="My Medical Records"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <ImageView
                     android:layout_width="20sp"
                     android:layout_height="25sp"
                     android:layout_marginTop="30sp"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_next"
+                    android:src="@drawable/ic_next_new"
                     android:textAlignment="center" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -151,17 +153,17 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:fontFamily="@font/sfprodisplaysemibold"
                     android:text="Weekly Summary"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <ImageView
                     android:layout_width="20sp"
                     android:layout_height="25sp"
                     android:layout_marginTop="30sp"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_next"
+                    android:src="@drawable/ic_next_new"
                     android:textAlignment="center" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
@@ -171,7 +173,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/_14sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/sfprodisplaysemibold"
             android:text="@string/favorites"
             android:textColor="@color/black"
             android:textSize="20sp"

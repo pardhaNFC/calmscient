@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/montserratregular"
+                android:fontFamily="@font/sfprotextregular"
                 android:justificationMode="inter_word"
                 android:text="@string/suicide_text"
                 android:textSize="@dimen/_12sdp" />
@@ -152,7 +152,8 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_learn"
+                        android:drawableRight="@drawable/ic_next_new"
+                        android:drawablePadding="@dimen/_5sdp"
                         android:maxLines="1"
                         android:text="Learn more "
                         android:textColor="@color/purple_100" />
@@ -189,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/montserratregular"
+                android:fontFamily="@font/sfprotextregular"
                 android:justificationMode="inter_word"
                 android:text="@string/disaster_text"
                 android:textSize="@dimen/_12sdp" />
@@ -213,7 +214,8 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_learn"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
                         android:text="Learn more "
                         android:textColor="@color/purple_100" />
@@ -267,7 +269,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/montserratregular"
+                android:fontFamily="@font/sfprotextregular"
                 android:justificationMode="inter_word"
                 android:text="@string/crisis_text"
                 android:textSize="@dimen/_12sdp" />
@@ -291,7 +293,8 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_learn"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
                         android:text="Learn more "
                         android:textColor="@color/purple_100" />
@@ -344,7 +347,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/montserratregular"
+                android:fontFamily="@font/sfprotextregular"
                 android:justificationMode="inter_word"
                 android:text="@string/trevor_text"
                 android:textSize="@dimen/_12sdp" />
@@ -368,7 +371,7 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_learn"
+                        android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
                         android:text="Learn more "
                         android:textColor="@color/purple_100" />
@@ -421,7 +424,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/montserratregular"
+                android:fontFamily="@font/sfprotextregular"
                 android:justificationMode="inter_word"
                 android:text="@string/trans_helpline_text"
                 android:textSize="@dimen/_12sdp" />
@@ -445,7 +448,7 @@
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_learn"
+                        android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
                         android:text="Learn more "
                         android:textColor="@color/purple_100" />

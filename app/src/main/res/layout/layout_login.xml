@@ -115,8 +115,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/forgot_password"
+                    android:fontFamily="@font/sfprotextmedium"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
             </LinearLayout>
 
@@ -130,9 +131,10 @@
                     android:id="@+id/new_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfprotextmedium"
                     android:text="@string/create_new_account"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
             </LinearLayout>
 

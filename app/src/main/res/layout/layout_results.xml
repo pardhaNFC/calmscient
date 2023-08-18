@@ -93,7 +93,7 @@
                 android:layout_marginTop="@dimen/_29sdp"
                 android:layout_marginStart="@dimen/_13sdp"
                 android:text="Remind me"
-                android:fontFamily="@font/montserratmedium"
+                android:fontFamily="@font/sfprotextmedium"
                 android:textColor="@color/grey_light"
                 android:textSize="@dimen/_12sdp" />
 
@@ -196,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:layout_marginStart="@dimen/_18sdp"
-                        android:fontFamily="@font/montserratsemibold"
+                        android:fontFamily="@font/sfprodisplaysemibold"
                         android:text="Score marked"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/_12sdp" />
@@ -208,7 +208,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_toEndOf="@id/tv_score"
-                        android:fontFamily="@font/montserratsemibold"
+                        android:fontFamily="@font/sfprodisplaysemibold"
                         android:text="06"
                         android:textColor="@color/grey_light"
                         android:textSize="@dimen/_25sdp" />
@@ -231,7 +231,7 @@
                     android:layout_centerInParent="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toLeftOf="@id/tv_total"
-                    android:fontFamily="@font/montserratsemibold"
+                    android:fontFamily="@font/sfprodisplaysemibold"
                     android:text="10"
                     android:textColor="@color/grey_light"
                     android:textSize="@dimen/_25sdp" />
@@ -243,7 +243,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerInParent="true"
                     android:layout_marginEnd="@dimen/_8sdp"
-                    android:fontFamily="@font/montserratsemibold"
+                    android:fontFamily="@font/sfprodisplaysemibold"
                     android:text="Total Score"
                     android:textColor="@color/grey_light"
                     android:textSize="@dimen/_12sdp" />

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000">
+
+    <!-- Back Icon -->
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_back_white"
+        android:background="@android:color/transparent"
+        android:contentDescription="Back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/white"/>
+
+    <!-- Orientation Icon -->
+    <ImageButton
+        android:id="@+id/orientationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/orientation_icon"
+        android:contentDescription="orientation_button_description"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp" />
+
+    <VideoView
+        android:id="@+id/playerVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints" />
+
+   <!-- <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:played_color="@color/purple_100"
+        app:scrubber_color="@android:color/white"
+        app:unplayed_color="@android:color/darker_gray" />-->
+
+
+    <MediaController
+        android:id="@+id/mediaController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="#80000000"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+</RelativeLayout>

@@ -87,6 +87,16 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.PlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.GlossaryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
         <receiver
             android:name=".receivers.AlarmReceiver"
             android:enabled="true"

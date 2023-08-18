@@ -102,6 +102,7 @@
     <string name="next_appointments">Next appointmnets</string>
     <string name="your_history">History</string>
     <string name="your_results">Your Results</string>
+    <string name="glossary">Glossary</string>
     <string name="torch_national"><u>US National Institute of Health American Psychological Association Stanford University</u></string>
     <string name="torch_phq">PHQ9 Copyright \u00a9 Pfizer Inc. All rights reserved.Reproduced with permission. PRIME-MD \u00AE is a trademark of Pfizer Inc.</string>
 </resources>

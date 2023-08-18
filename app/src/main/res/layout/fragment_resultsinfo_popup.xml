@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/montserratsemibold"
+            android:fontFamily="@font/sfprodisplaysemibold"
             android:gravity="center"
             android:text="More Info"
             android:textAlignment="center"

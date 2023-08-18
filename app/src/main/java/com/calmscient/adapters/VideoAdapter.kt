@@ -11,6 +11,7 @@
 
 package com.calmscient.adapters
 
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ import android.widget.ImageView
 import android.widget.VideoView
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.PlayerActivity
 
 data class VideoItem(
     val videoResourceId: Int,
@@ -32,7 +34,7 @@ class VideoAdapter(private val videoItems: List<VideoItem>) :
         val videoThumbnailImageView: ImageView = itemView.findViewById(R.id.videoThumbnailImageView)
 
         init {
-            videoView.setOnClickListener {
+            /*videoView.setOnClickListener {
                 if (videoView.isPlaying) {
                     videoView.pause()
                     videoThumbnailImageView.visibility = View.VISIBLE
@@ -40,6 +42,15 @@ class VideoAdapter(private val videoItems: List<VideoItem>) :
                     videoView.start()
                     videoThumbnailImageView.visibility = View.GONE
                 }
+            }*/
+            videoView.setOnClickListener {
+                val context = itemView.context
+                val playerIntent = Intent(context, PlayerActivity::class.java)
+                playerIntent.putExtra(
+                    "videoResourceId",
+                    videoItems[adapterPosition].videoResourceId
+                )
+                context.startActivity(playerIntent)
             }
         }
     }

@@ -11,6 +11,7 @@
 
 package com.calmscient.fragments
 
+import android.content.Intent
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,6 +20,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.calmscient.R
+import com.calmscient.activities.GlossaryActivity
+import com.calmscient.activities.SettingsActivity
 import com.calmscient.databinding.FragmentDiscoveryBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -42,6 +45,13 @@ class DiscoveryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDiscoveryBinding.inflate(inflater, container, false)
+        binding.icProfile.setOnClickListener {
+            val intent = Intent(requireContext(), SettingsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.manageAnxietyCard.setOnClickListener {
+            startActivity(Intent(requireActivity(),GlossaryActivity::class.java))
+        }
         return binding.root
     }
 

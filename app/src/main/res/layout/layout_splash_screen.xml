@@ -62,7 +62,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:fontFamily="@font/montserratbold"
+            android:fontFamily="@font/sfprotextbold"
             android:textSize="@dimen/_15sdp"
             android:gravity="center_horizontal"
             android:text="V 1.1" />
