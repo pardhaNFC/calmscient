@@ -17,6 +17,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.calmscient.R
@@ -50,7 +51,8 @@ class DiscoveryFragment : Fragment() {
             startActivity(intent)
         }
         binding.manageAnxietyCard.setOnClickListener {
-            startActivity(Intent(requireActivity(),GlossaryActivity::class.java))
+            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            //startActivity(Intent(requireActivity(),GlossaryActivity::class.java))
         }
         return binding.root
     }
