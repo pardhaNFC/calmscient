@@ -1,0 +1,26 @@
+<!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="34dp"
+    android:height="80dp"
+    android:viewportWidth="34"
+    android:viewportHeight="80">
+  <path
+      android:pathData="M18.948,72.806V46.315C18.948,45.757 18.726,45.221 18.331,44.827C17.936,44.432 17.401,44.21 16.843,44.21C16.284,44.21 15.749,44.432 15.354,44.827C14.959,45.221 14.737,45.757 14.737,46.315V72.806C12.043,76.22 8.37,78.729 4.211,79.999H29.474C25.315,78.729 21.642,76.22 18.948,72.806Z"
+      android:fillColor="#E8EDF1"/>
+  <path
+      android:pathData="M33.684,29.474C33.684,42.105 23.158,48.421 16.842,48.421C10.526,48.421 0,42.105 0,29.474C0,16.842 6.316,0 6.316,0H27.368C27.368,0 33.684,16.842 33.684,29.474Z"
+      android:fillColor="#E8EDF1"/>
+  <path
+      android:pathData="M33.684,29.474C33.684,42.106 23.158,48.421 16.842,48.421C10.526,48.421 0,42.106 0,29.474C0.044,26.15 0.373,22.836 0.982,19.569L6.782,17.911C7.956,17.576 9.188,17.499 10.394,17.688C11.6,17.876 12.751,18.324 13.766,19.001L19.092,22.553C20.327,23.376 21.758,23.859 23.24,23.951C24.721,24.044 26.201,23.743 27.529,23.079L32.847,20.42C33.369,23.411 33.649,26.438 33.684,29.474Z"
+      android:fillColor="#931237"/>
+</vector>

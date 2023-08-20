@@ -21,6 +21,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.calmscient.R
+import com.calmscient.activities.BeginManageAnxietyActivity
 import com.calmscient.activities.GlossaryActivity
 import com.calmscient.activities.SettingsActivity
 import com.calmscient.databinding.FragmentDiscoveryBinding
@@ -51,8 +52,12 @@ class DiscoveryFragment : Fragment() {
             startActivity(intent)
         }
         binding.manageAnxietyCard.setOnClickListener {
-            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
-            //startActivity(Intent(requireActivity(),GlossaryActivity::class.java))
+            //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireActivity(),GlossaryActivity::class.java))
+        }
+        binding.cardTakingControl.setOnClickListener {
+            //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            loadFragment(TakingControlFragment())
         }
         return binding.root
     }
@@ -60,7 +65,13 @@ class DiscoveryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
-
+    private fun loadFragment(fragment:Fragment)
+    {
+        // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        transaction.commit()
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
