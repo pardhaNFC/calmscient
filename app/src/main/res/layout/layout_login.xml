@@ -76,6 +76,31 @@
                     android:text="" />
 
             </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp">
+
+                <CheckBox
+                    android:id="@+id/termsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/terms" />
+
+                <TextView
+                    android:id="@+id/termsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/termsCheckBox"
+                    android:text="Accept terms and conditions"
+                    android:visibility="visible"
+                    android:textColor="@android:color/darker_gray"
+                    android:clickable="true" />
+
+            </RelativeLayout>
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_login"

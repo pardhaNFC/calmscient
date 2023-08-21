@@ -76,6 +76,7 @@
     <string name="anxiety">Managing anxiety</string>
     <string name="stress">Changing your response to stress</string>
     <string name="control">Taking control</string>
+    <string name="terms">Accept <b><u>Terms and Conditions</u></b></string>
     <!--Emergency Resource Page strings-->
     <string name="emergency_resource">Emergency Resource</string>
     <string name="doctor_name">Dr. Samuel Parker</string>

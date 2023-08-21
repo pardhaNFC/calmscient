@@ -13,8 +13,10 @@ package com.calmscient.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MotionEvent
+import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -57,6 +59,24 @@ class LoginActivity : AppCompatActivity() {
                 binding.editPassword.setHint(R.string.password)
             }
         })
+        binding.termsCheckBox.setOnClickListener {
+            // Open a web page with the terms and conditions when clicked
+            /*val termsUrl = "https://"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(termsUrl))
+            startActivity(intent)*/
+        }
+        binding.termsCheckBox.setOnCheckedChangeListener { _, isChecked ->
+            // Enable/disable further actions based on checkbox state
+            if (isChecked) {
+                //navigateToDayScreen()
+                // Checkbox is checked, perform actions here
+                binding.termsTextView.visibility = View.GONE
+            } else {
+                binding.termsTextView.visibility = View.VISIBLE
+                // Checkbox is unchecked, handle this case if needed
+            }
+        }
+
         binding.parentLayout.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_DOWN) {
                 // Hide the soft keyboard
