@@ -12,6 +12,7 @@
 package com.calmscient.activities
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -149,6 +150,9 @@ class GlossaryActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        binding.backIcon.setOnClickListener {
+            startActivity(Intent(this,ManageAnxietyActivity::class.java))
+        }
         /*lv.setOnGroupExpandListener(OnGroupExpandListener { groupPosition ->
             if (lastExpandedPosition !== -1
                 && groupPosition != lastExpandedPosition

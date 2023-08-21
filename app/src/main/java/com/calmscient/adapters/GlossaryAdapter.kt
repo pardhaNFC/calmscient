@@ -16,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.data.remote.Task
@@ -49,6 +50,7 @@ class GlossaryAdapter(private val allTasks: MutableList<Task>) :
         RecyclerView.ViewHolder(itemView) {
         private var isExpanded = false
         val alphabetTextView: TextView = itemView.findViewById(R.id.tv_alphabet)
+        val titleCardView: ConstraintLayout = itemView.findViewById(R.id.taskTitleLayout)
         val titleTextView: TextView = itemView.findViewById(R.id.tv_title)
         val descriptionTextView: TextView = itemView.findViewById(R.id.tv_Description)
         val dropDownImage: ImageView = itemView.findViewById(R.id.dropdownButton)
@@ -56,7 +58,7 @@ class GlossaryAdapter(private val allTasks: MutableList<Task>) :
             alphabetTextView.text = task.alphabet
             titleTextView.text = task.taskName
             descriptionTextView.text = task.taskDescription
-            dropDownImage.setOnClickListener {
+            titleCardView.setOnClickListener {
                 if (isExpanded) collapse() else expand()
             }
             //All tasks should be collapsed by default

@@ -75,6 +75,18 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
+            android:name=".activities.ManageAnxietyActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.AnxietyPlayerActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
             android:name=".activities.CalendarViewActivity"
             android:configChanges="orientation"
             android:exported="false"

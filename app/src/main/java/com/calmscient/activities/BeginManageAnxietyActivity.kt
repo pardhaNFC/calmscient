@@ -11,6 +11,7 @@
 
 package com.calmscient.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,9 @@ class BeginManageAnxietyActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        binding.beginButton.setOnClickListener {
+            startActivity(Intent(this,ManageAnxietyActivity::class.java))
+        }
         binding.backIcon.setOnClickListener {
             finish()
         }

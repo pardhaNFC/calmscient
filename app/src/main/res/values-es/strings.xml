@@ -106,4 +106,8 @@
     <string name="your_history">Historia</string>
     <string name="your_results">Tus resultados</string>
     <string name="summary_takingcontrol">Resumen</string>
+    <!--Anxiety-->
+    <string name="manage_anxiety">Manejar la ansiedad</string>
+    <string name="introduction">Introducción</string>
+    <string name="glossary">Glosario</string>
 </resources>
