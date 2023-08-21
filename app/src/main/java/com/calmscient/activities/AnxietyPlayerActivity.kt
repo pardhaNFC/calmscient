@@ -46,8 +46,11 @@ class AnxietyPlayerActivity: AppCompatActivity(),
         videoView = findViewById(R.id.playerVideoView)
 
         // Retrieve the content Uri from the intent extras
-        val contentUri = intent.getParcelableExtra<Uri>("contentUri")
-        videoView.setVideoURI(contentUri)
+        /*val contentUri = intent.getParcelableExtra<Uri>("contentUri")
+        videoView.setVideoURI(contentUri)*/
+
+        val videoUrl = intent.getStringExtra("mediaResourceId")
+        videoView.setVideoURI(Uri.parse(videoUrl))
 
         // Initialize media controller
         mediaController = MediaController(this)

@@ -151,7 +151,7 @@ class GlossaryActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         binding.backIcon.setOnClickListener {
-            startActivity(Intent(this,ManageAnxietyActivity::class.java))
+            onBackPressed()
         }
         /*lv.setOnGroupExpandListener(OnGroupExpandListener { groupPosition ->
             if (lastExpandedPosition !== -1
@@ -163,6 +163,9 @@ class GlossaryActivity : AppCompatActivity() {
         })*/
     }
 
+    override fun onBackPressed() {
+        finish()
+    }
     override fun onStart() {
         binding.glossaryRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.glossaryRecyclerView.adapter = glossaryAdapter

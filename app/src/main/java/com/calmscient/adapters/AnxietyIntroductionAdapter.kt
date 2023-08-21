@@ -60,7 +60,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
             itemView.setOnClickListener {
                 val context = itemView.context
                 when {
-                    cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
+                    /*cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
                         if (cardItem.audioResourceId != null) {
                             val intent = Intent(context, AnxietyPlayerActivity::class.java)
                             intent.putExtra("contentUri", Uri.parse("android.resource://${context.packageName}/${cardItem.audioResourceId}"))
@@ -70,8 +70,17 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                         {
                             Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
                         }
+                    }*/
+                    cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
+                        if (cardItem.audioResourceId != null) {
+                            val intent = Intent(context, AnxietyPlayerActivity::class.java)
+                            intent.putExtra("mediaResourceId", cardItem.audioResourceId)
+                            context.startActivity(intent)
+                        } else {
+                            Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
+                        }
                     }
-                    cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
+                    /*cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
                         if (cardItem.videoResourceId != null) {
                             val intent = Intent(context, AnxietyPlayerActivity::class.java)
                             intent.putExtra("contentUri", Uri.parse("android.resource://${context.packageName}/${cardItem.videoResourceId}"))
@@ -80,6 +89,15 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                         }
                         else
                         {
+                            Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
+                        }
+                    }*/
+                    cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
+                        if (cardItem.videoResourceId != null) {
+                            val intent = Intent(context, AnxietyPlayerActivity::class.java)
+                            intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                            context.startActivity(intent)
+                        } else {
                             Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
                         }
                     }

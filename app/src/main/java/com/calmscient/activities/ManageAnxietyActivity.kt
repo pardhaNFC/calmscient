@@ -90,10 +90,20 @@ class ManageAnxietyActivity : AppCompatActivity() {
             startActivity(Intent(this, GlossaryActivity::class.java))
         }
         binding.backIcon.setOnClickListener {
-            startActivity(Intent(this, BeginManageAnxietyActivity::class.java))
+            onBackPressed()
         }
     }
-
+    override fun onBackPressed() {
+        // Navigate back to DiscoveryFragment (if available) or finish the activity
+        val fragment = supportFragmentManager.findFragmentByTag(DiscoveryFragment::class.java.simpleName)
+        if (fragment != null && fragment.isVisible) {
+            // DiscoveryFragment is present, pop back to it
+            supportFragmentManager.popBackStack()
+        } else {
+            // DiscoveryFragment is not present, finish the activity
+            super.onBackPressed()
+        }
+    }
     private fun loadFragment(fragment: Fragment) {
         // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()
         val transaction = this.supportFragmentManager.beginTransaction()
@@ -136,7 +146,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = R.raw.video3,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
             contentIcons = listOf(R.drawable.video),
             description = "Neuropsychology of anxiety",
             isCompleted = false
@@ -144,7 +154,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
 
         val card2 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = R.raw.audio2,
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = null,
@@ -198,7 +208,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
 
         val card3 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = R.raw.audio1,
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+3+Moral+deficiency+or+anxiety+with+music+English.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = null,
@@ -222,7 +232,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = R.raw.video3,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
             contentIcons = listOf(R.drawable.video),
             description = "Implement body calming skills",
             isCompleted = false
@@ -244,7 +254,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
     private fun cardItemsLesson5(): List<CardItemDataClass> {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = R.raw.audio2,
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+5-1+Anxiety+and+worry+with+music+English.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = "Anxiety and worry",
@@ -267,7 +277,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
     private fun cardItemsLesson6(): List<CardItemDataClass> {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = R.raw.audio1,
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-1+Calming+your+anxious+mind+with+music+English.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = "Calming your anxious mind",
@@ -285,7 +295,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
 
         val card3 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = R.raw.audio2,
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-3+North+wind+and+sun+with+music+English.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = "Making connection",

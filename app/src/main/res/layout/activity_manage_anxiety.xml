@@ -62,12 +62,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Introduction"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -85,12 +85,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Lesson 1"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -109,12 +109,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Lesson 2"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -132,12 +132,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Lesson 3"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -155,12 +155,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Lesson 4"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -178,12 +178,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Lesson 5"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -201,13 +201,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
-                android:text="Lesson 5"
+                android:fontFamily="@font/sfprotextsemibold"
+                android:text="Lesson 6"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
@@ -225,12 +225,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/montserratsemibold"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="Additional Resource"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"

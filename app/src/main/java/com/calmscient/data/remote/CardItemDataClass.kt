@@ -14,8 +14,8 @@ package com.calmscient.data.remote
 import androidx.annotation.DrawableRes
 
 data class CardItemDataClass(val availableContentTypes: List<ItemType>,
-                             val audioResourceId: Int?, // Nullable Int for audio resource ID
-                             val videoResourceId: Int?,
+                             val audioResourceId: String?, // Nullable Int for audio resource ID
+                             val videoResourceId: String?,
                              @DrawableRes val contentIcons: List<Int>,
                              val description: String?,
                              val isCompleted: Boolean
