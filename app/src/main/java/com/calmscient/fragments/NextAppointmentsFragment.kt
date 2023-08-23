@@ -157,14 +157,11 @@ class NextAppointmentsFragment : Fragment() {
         cardViewItems.clear()
         cardViewItems.addAll(
             listOf(
-                CardViewItems("08/22/2023",
+                CardViewItems("08/23/2023",
                     R.drawable.ic_doctor_logo,
                     "Dr. Hannah Johnson",
                     "SCD Hospital",
                     R.drawable.ic_next,
-                    "08/23/2023",
-                    R.drawable.ic_appointments,
-                    "No Appointments",
                     "08/24/2023",
                     R.drawable.ic_appointments,
                     "No Appointments",
@@ -172,6 +169,9 @@ class NextAppointmentsFragment : Fragment() {
                     R.drawable.ic_appointments,
                     "No Appointments",
                     "08/26/2023",
+                    R.drawable.ic_appointments,
+                    "No Appointments",
+                    "08/27/2023",
                     R.drawable.ic_appointments,
                     "No Appointments")
             )

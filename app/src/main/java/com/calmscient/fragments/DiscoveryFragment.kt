@@ -62,8 +62,8 @@ class DiscoveryFragment : Fragment() {
         }
 
         binding.cardTakingControl.setOnClickListener {
-            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
-            //loadFragment(TakingControlFragment())
+            //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            loadFragment(TakingControlFragment())
         }
         return binding.root
     }

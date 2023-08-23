@@ -1,0 +1,23 @@
+<!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="46dp"
+    android:height="46dp"
+    android:viewportWidth="46"
+    android:viewportHeight="46">
+  <path
+      android:pathData="M23,8L23,8A15,15 0,0 1,38 23L38,23A15,15 0,0 1,23 38L23,38A15,15 0,0 1,8 23L8,23A15,15 0,0 1,23 8z"
+      android:fillColor="#6E6BB3"/>
+  <path
+      android:pathData="M29.727,18.27L26.843,28H25.037L22.993,20.636L20.823,28L19.031,28.014L16.273,18.27H17.967L19.983,26.194L22.167,18.27H23.959L25.989,26.152L28.019,18.27H29.727Z"
+      android:fillColor="#ffffff"/>
+</vector>

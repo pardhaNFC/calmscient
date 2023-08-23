@@ -66,6 +66,8 @@
 
     <string name="add_medications">Add Medications</string>
     <string name="alarm">Alarm</string>
+    <string name="repeat">Repeat</string>
+    <string name="everyday">Every Day</string>
     <string name="time">Time</string>
     <string name="schedule_time_and_alarm">Schedule Time &amp; Alarm</string>
     <string name="with_meal">With Meal</string>
@@ -119,4 +121,9 @@
         \nThe various classes of drugs may include cannabis , solvents , tranquilizers, barbiturates, cocaine, stimulants, hallucinogens or narcotics . The questions do not include alcoholic beverages.\nPlease answer every question. If you have difficulty with a statement, then choose the response that is mostly right.</string>
 
     <string name="afternoon">Afternoon</string>
+    <string name="add_time_alarm">Add Time &amp; Alarm</string>
+    <string name="page_1.1">DID YOU KNOW?</string>
+    <string name="page_2.1">What is anxiety?</string>
+    <string name="page_7.1"><font color="#6E6BB3">If a person could simply “remember” past experiences,</font></string>
+
 </resources>

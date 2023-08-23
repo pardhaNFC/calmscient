@@ -93,7 +93,10 @@ class AddMedicationsFragment : Fragment(),
         binding.btnAddCancel.setOnClickListener {
             loadFragment(CalendarFragment())
         }
-
+        binding.morningAlarmCard.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+        }
         return binding.root
     }
 

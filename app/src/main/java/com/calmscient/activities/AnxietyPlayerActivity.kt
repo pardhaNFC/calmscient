@@ -59,7 +59,6 @@ class AnxietyPlayerActivity: AppCompatActivity(),
 
         // Initialize GestureDetector
         gestureDetector = GestureDetectorCompat(this, this)
-
         // Start video playback
         videoView.start()
         initializeBinding()

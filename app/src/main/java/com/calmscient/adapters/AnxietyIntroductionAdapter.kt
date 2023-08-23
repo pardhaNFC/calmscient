@@ -10,6 +10,7 @@
  */
 
 package com.calmscient.adapters
+
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
@@ -18,17 +19,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.AnxietyPlayerActivity
+import com.calmscient.activities.AnxietyQuestionsActivity
 import com.calmscient.data.remote.ItemType
 import com.calmscient.data.remote.CardItemDataClass
 
 class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback<CardItemDataClass>) :
     ListAdapter<CardItemDataClass, AnxietyIntroductionAdapter.ViewHolder>(diffCallback) {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -46,6 +48,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
         private val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         private val descriptionTextView: TextView = itemView.findViewById(R.id.titleTextView)
         private val tickImageView: ImageView = itemView.findViewById(R.id.tickImageView)
+        private val introCardView: CardView = itemView.findViewById(R.id.anxietyCard)
 
         fun bind(cardItem: CardItemDataClass) {
             contentIcon.setImageResource(cardItem.contentIcons[0])
@@ -56,7 +59,11 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
             } else {
                 tickImageView.visibility = View.GONE
             }
-
+            introCardView.setOnClickListener {
+                val context = itemView.context
+                val intent = Intent(context, AnxietyQuestionsActivity::class.java)
+                context.startActivity(intent)
+            }
             itemView.setOnClickListener {
                 val context = itemView.context
                 when {
@@ -101,16 +108,19 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
                         }
                     }
+
                     cardItem.availableContentTypes.contains(ItemType.LESSON) -> {
                         Toast.makeText(context, "No Lesson Available", Toast.LENGTH_SHORT).show()
                         /*val intent = Intent(context, LessonActivity::class.java)
                         context.startActivity(intent)*/
                     }
+
                     cardItem.availableContentTypes.contains(ItemType.QUIZ) -> {
                         Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
                         /*val intent = Intent(context, QuizActivity::class.java)
                         context.startActivity(intent)*/
                     }
+
                     else -> {
                         // Handle other content types here
                     }
@@ -125,7 +135,10 @@ class CardItemDiffCallback : DiffUtil.ItemCallback<CardItemDataClass>() {
         return oldItem === newItem
     }
 
-    override fun areContentsTheSame(oldItem: CardItemDataClass, newItem: CardItemDataClass): Boolean {
+    override fun areContentsTheSame(
+        oldItem: CardItemDataClass,
+        newItem: CardItemDataClass
+    ): Boolean {
         return oldItem == newItem
     }
 }

@@ -116,5 +116,13 @@
     <string name="gad">Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado alguno de los siguientes problemas?</string>
     <string name="audit">¿Disfruta de una bebida de vez en cuando? Muchos de nosotros lo hacemos, a menudo cuando socializamos con amigos y familiares. Echemos un vistazo a sus patrones de consumo de alcohol y cómo pueden afectar su salud. El cuestionario AUDIT está diseñado para ayudar en la autoevaluación del consumo de alcohol e identificar cualquier implicación para la salud y el bienestar de la persona, ahora y en el futuro.</string>
     <string name="dast">El uso de "drogas" se refiere a (1) el uso de medicamentos recetados o de venta libre que exceden las instrucciones y (2) cualquier uso no médico de drogas.\nLas diversas clases de drogas pueden incluir cannabis (marihuana, hachís) , disolventes (p. ej., diluyente de pintura), tranquilizantes (p. ej., Valium), barbitúricos, cocaína, estimulantes (p. ej., speed), alucinógenos (p. ej., LSD) o narcóticos (p. ej., heroína). Las preguntas no incluyen bebidas alcohólicas.\n\nResponda todas las preguntas. Si tiene dificultad con una declaración, elija la respuesta que sea mayormente correcta.</string>
+    <string name="torch_national"><u>Instituto Nacional de Salud de EE. UU. Asociación Estadounidense de Psicología Universidad de Stanford</u></string>
+    <string name="torch_phq">PHQ9 Copyright \u00a9 Pfizer Inc. Todos los derechos reservados. Reproducido con permiso. PRIME-MD \u00AE es una marca comercial de Pfizer Inc.</string>
+    <string name="repeat">Repetir</string>
+    <string name="everyday">Cada día</string>
     <string name="afternoon">Tarde</string>
+    <string name="add_time_alarm">Agregar hora y hora Alarma</string>
+    <string name="page_1.1">¿SABÍAS?</string>
+    <string name="page_2.1">¿Qué es la ansiedad?</string>
+    <string name="page_7.1"><font color="#6E6BB3">Si una persona pudiera simplemente “recordar” experiencias pasadas,</font></string>
 </resources>

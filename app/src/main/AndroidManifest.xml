@@ -49,6 +49,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/CustomTheme" />
         <activity
+            android:name=".activities.AnxietyQuestionsActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:label="Anxiety Introduction"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
             android:name=".activities.WeeklySummary"
             android:configChanges="orientation"
             android:exported="false"

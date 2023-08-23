@@ -8,7 +8,7 @@
     app:cardCornerRadius="10dp">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/medicationsCard"
+        android:id="@+id/anxietyCard"
         android:layout_width="160dp"
         android:layout_height="110dp"
         app:cardCornerRadius="10dp"
