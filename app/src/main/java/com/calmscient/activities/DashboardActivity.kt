@@ -93,6 +93,7 @@ class DashboardActivity : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 }

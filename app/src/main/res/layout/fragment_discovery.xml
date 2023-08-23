@@ -57,7 +57,7 @@
             android:id="@+id/img_anxity"
             android:layout_width="wrap_content"
             android:layout_height="135dp"
-            android:src="@drawable/ic_anxity_min"
+            android:src="@drawable/ic_anxiety_new"
             android:scaleType="centerCrop" />
 
         <RelativeLayout
@@ -75,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="@string/anxiety"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />
@@ -124,7 +125,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="@string/stress"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />
@@ -173,8 +175,9 @@
                 android:id="@+id/tv_chang_control"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_15sdp"
                 android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/sfprotextsemibold"
                 android:text="@string/control"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />

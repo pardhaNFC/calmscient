@@ -16,6 +16,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
@@ -29,7 +30,12 @@ class GADQuestionFragment  : Fragment() {
     private lateinit var binding: FragmentGadQuestionsBinding
     private val questions: List<Question> = generateDummyQuestions()
     private var currentQuestionIndex = 0
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(ScreeningsFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -47,9 +53,10 @@ class GADQuestionFragment  : Fragment() {
 
         // Update your UI with the selected title
         if (!selectedTitle.isNullOrEmpty()) {
-            binding.titleTextView.text = selectedTitle
+            binding.tvGadtitle.text = selectedTitle
         }
-        questionAdapter = QuestionAdapter(questions)
+        val titleG = "GAD-7"
+        questionAdapter = QuestionAdapter(requireContext(),questions,titleG)
         binding.questionsRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
@@ -138,6 +145,7 @@ class GADQuestionFragment  : Fragment() {
     {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 

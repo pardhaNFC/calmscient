@@ -55,9 +55,15 @@ class DiscoveryFragment : Fragment() {
             //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
             startActivity(Intent(requireActivity(),BeginManageAnxietyActivity::class.java))
         }
+        binding.upcomingsMedicalAppointmentsCard.setOnClickListener {
+            /*val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)*/
+            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+        }
+
         binding.cardTakingControl.setOnClickListener {
-            //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
-            loadFragment(TakingControlFragment())
+            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            //loadFragment(TakingControlFragment())
         }
         return binding.root
     }
@@ -70,6 +76,7 @@ class DiscoveryFragment : Fragment() {
         // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
     companion object {

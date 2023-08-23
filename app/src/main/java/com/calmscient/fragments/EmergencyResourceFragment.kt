@@ -23,6 +23,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.calmscient.R
@@ -32,7 +33,12 @@ import com.calmscient.databinding.FragmentEmergencyResourceBinding
 
 class EmergencyResourceFragment : Fragment() {
     lateinit var binding:FragmentEmergencyResourceBinding
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(HomeFragment())
+        }
+    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //val view = inflater.inflate(R.layout.fragment_emergency_resource, container, false)
         binding = FragmentEmergencyResourceBinding.inflate(inflater,container,false)
@@ -124,6 +130,7 @@ class EmergencyResourceFragment : Fragment() {
         // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 }

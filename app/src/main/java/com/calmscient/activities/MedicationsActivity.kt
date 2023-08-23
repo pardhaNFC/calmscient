@@ -38,6 +38,7 @@ class MedicationsActivity : AppCompatActivity() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.homeFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 

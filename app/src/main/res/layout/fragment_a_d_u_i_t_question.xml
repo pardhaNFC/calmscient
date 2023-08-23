@@ -71,6 +71,7 @@
                 android:fontFamily="@font/sfprodisplaysemibold"
                 android:justificationMode="inter_word"
                 android:padding="@dimen/_10sdp"
+                android:visibility="gone"
                 android:text="Do you enjoy a drink now and then?\n\nMany of us do, often when socializing with friends and family. Let's take a look at your drinking patterns and how they may affect your health.\n\nThe AUDIT questionnaire is designed to help in the self-assessment of alcohol consumption and to identify any implications for the person's health and wellbeing, now and in the future."
                 android:textColor="@color/purple_100"
                 android:textSize="@dimen/_12sdp"
@@ -80,7 +81,6 @@
                 android:id="@+id/questionsRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="-30dp"
                 android:padding="@dimen/_12sdp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

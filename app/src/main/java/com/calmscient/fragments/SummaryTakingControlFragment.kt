@@ -18,6 +18,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.calmscient.R
@@ -39,6 +40,12 @@ class SummaryTakingControlFragment : Fragment() {
     private lateinit var monthText: TextView
     lateinit var takingControlSummaryCardAdapter: TakingControlSummaryCardAdapter
     private val SummaryDataClasss = mutableListOf<SummaryDataClasss>()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(TakingControlFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

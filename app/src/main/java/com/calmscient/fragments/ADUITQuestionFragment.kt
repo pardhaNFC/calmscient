@@ -17,6 +17,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -31,7 +32,12 @@ class ADUITQuestionFragment : Fragment() {
     private val questions: List<Question> = generateDummyQuestions()
     private var currentQuestionIndex = 0
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(ScreeningsFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -52,8 +58,8 @@ class ADUITQuestionFragment : Fragment() {
         if (!selectedTitle.isNullOrEmpty()) {
             binding.titleTextView.text = selectedTitle
         }
-
-        questionAdapter = QuestionAdapter(questions)
+        val titleA = "AUDIT"
+        questionAdapter = QuestionAdapter(requireContext(),questions,titleA)
         binding.questionsRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
@@ -156,6 +162,7 @@ class ADUITQuestionFragment : Fragment() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 }

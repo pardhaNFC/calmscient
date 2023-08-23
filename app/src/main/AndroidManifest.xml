@@ -47,7 +47,7 @@
             android:configChanges="orientation"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.NoActionBar" />
+            android:theme="@style/CustomTheme" />
         <activity
             android:name=".activities.WeeklySummary"
             android:configChanges="orientation"

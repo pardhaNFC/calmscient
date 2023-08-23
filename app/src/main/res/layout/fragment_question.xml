@@ -58,7 +58,8 @@
             android:layout_height="2dp"
             android:background="@color/viewbackgroundcolor" />
 
-        <TextView
+        <!--<TextView
+            android:id="@+id/desc_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_10sdp"
@@ -67,14 +68,13 @@
             android:text="Over the last 2 weeks, how often have you been bothered by any of the following problems?"
             android:textColor="@color/purple_100"
             android:textSize="@dimen/_15sdp"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/questionsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-30dp"
             android:padding="@dimen/_12sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 

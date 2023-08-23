@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import com.calmscient.R
 import com.calmscient.databinding.FragmentTakingControlBinding
@@ -22,6 +23,12 @@ class TakingControlFragment : Fragment() {
 
     private lateinit var binding: FragmentTakingControlBinding
     private var alcoholLayoutVisible = true
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(DiscoveryFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

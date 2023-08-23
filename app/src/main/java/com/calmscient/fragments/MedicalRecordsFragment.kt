@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.activities.SettingsActivity
@@ -13,7 +14,12 @@ import com.calmscient.databinding.FragmentMyMedicalRecordsBinding
 
 class MedicalRecordsFragment : Fragment() {
     private lateinit var binding: FragmentMyMedicalRecordsBinding
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(HomeFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -50,6 +56,7 @@ class MedicalRecordsFragment : Fragment() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 }

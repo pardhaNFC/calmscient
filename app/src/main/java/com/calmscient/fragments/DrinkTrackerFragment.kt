@@ -18,6 +18,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.addCallback
 import com.calmscient.R
 import com.calmscient.databinding.FragmentDrinkTrackerBinding
 import com.calmscient.databinding.LayoutSummaryTakingControlBinding
@@ -29,7 +30,12 @@ class DrinkTrackerFragment : Fragment() {
     private  lateinit var binding: FragmentDrinkTrackerBinding
     private lateinit var calenderView: ImageView
     private lateinit var monthText: TextView
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(TakingControlFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

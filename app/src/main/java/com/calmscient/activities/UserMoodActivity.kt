@@ -521,7 +521,7 @@ class UserMoodActivity : AppCompatActivity(), View.OnClickListener {
     private fun loadFragment(fragment: Fragment) {
         val homeFragment = HomeFragment()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.flFragment, homeFragment)
+            .replace(R.id.flFragment, homeFragment).addToBackStack(null)
             .commit()
     }
 }

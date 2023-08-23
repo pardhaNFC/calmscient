@@ -14,20 +14,27 @@ package com.calmscient.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.compose.ui.text.font.Typeface
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.text.buildSpannedString
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-
 import com.calmscient.activities.SettingsActivity
-import com.calmscient.adapters.VideoAdapter
 import com.calmscient.activities.WeeklySummary
+import com.calmscient.adapters.VideoAdapter
 import com.calmscient.adapters.VideoItem
+
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -35,6 +42,7 @@ private const val ARG_PARAM2 = "param2"
 
 class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
+    private lateinit var tvProfileName: TextView
     private lateinit var videoAdapter: VideoAdapter
     private lateinit var profileImage: ImageView
 
@@ -43,6 +51,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+
         val videoItems = listOf(
             VideoItem(R.raw.video1, R.drawable.thumbnail1),
             VideoItem(R.raw.video2, R.drawable.thumbnail2),
@@ -68,6 +77,15 @@ class HomeFragment : Fragment() {
         )
 
         recyclerView = rootView.findViewById(R.id.recyclerViewVideos)
+        tvProfileName = rootView.findViewById(R.id.tv_hello)
+
+        /*val text = "Hello Kevin"
+        val ss = SpannableString(text)
+        val boldSpan = ResourcesCompat.getFont(requireContext(),R.font.lexendbold)
+        ss.setSpan(boldSpan, 7, 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        tvProfileName.setText(ss)*/
+
+
         recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         videoAdapter = VideoAdapter(videoItems)
@@ -105,6 +123,7 @@ class HomeFragment : Fragment() {
          }*/
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 

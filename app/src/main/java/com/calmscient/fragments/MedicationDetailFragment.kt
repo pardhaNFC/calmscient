@@ -19,6 +19,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.FragmentMedicationDetailBinding
@@ -38,6 +39,12 @@ class MedicationDetailFragment : Fragment(),
     private var eveningTime: String = ""
     private var eveningAlarm: String = ""
     private var selectedSchedule: String = ""
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(CalendarFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -77,7 +84,7 @@ class MedicationDetailFragment : Fragment(),
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
-        //transaction.addToBackStack(null)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 

@@ -1,4 +1,6 @@
 package com.calmscient.adapters
+
+import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.fragments.Question
-class QuestionAdapter (private val questions: List<Question>) :
+
+class QuestionAdapter(private val context: Context, private val questions: List<Question>, val title: String) :
     RecyclerView.Adapter<QuestionAdapter.QuestionViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuestionViewHolder {
@@ -16,28 +19,52 @@ class QuestionAdapter (private val questions: List<Question>) :
             .inflate(R.layout.questions_item_card_view, parent, false)
         return QuestionViewHolder(itemView)
     }
+
     inner class QuestionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val questionTextView: TextView = itemView.findViewById(R.id.questionTextView)
         val optionsRecyclerView: RecyclerView = itemView.findViewById(R.id.optionsRecyclerView)
+        val descTextView: TextView = itemView.findViewById(R.id.desc_text_view)
 
         init {
             optionsRecyclerView.layoutManager = LinearLayoutManager(itemView.context)
         }
+
         fun bindOptions(options: List<String>, selectedOptionIndex: Int) {
             val optionsAdapter = OptionsAdapter(options, selectedOptionIndex) { clickedPosition ->
                 questions[adapterPosition].selectedOption = clickedPosition
                 notifyDataSetChanged()
             }
             optionsRecyclerView.adapter = optionsAdapter
+            //descTextView.visibility = if (isFirstItem) View.VISIBLE else View.GONE
         }
     }
+
     override fun onBindViewHolder(holder: QuestionViewHolder, position: Int) {
         val item = questions[position]
         holder.questionTextView.text = item.questionText
+        if (position == 0) {
+            if (title == "PHQ-9") {
+                holder.descTextView.visibility = View.VISIBLE
+                holder.descTextView.text = context.getString(R.string.phq)
+            } else if(title == "GAD-7") {
+                holder.descTextView.visibility = View.VISIBLE
+                holder.descTextView.text = context.getString(R.string.gad)
+            }else if(title == "AUDIT") {
+                holder.descTextView.visibility = View.VISIBLE
+                holder.descTextView.text = context.getString(R.string.audit)
+            }else if(title == "DAST-10") {
+                holder.descTextView.visibility = View.VISIBLE
+                holder.descTextView.text = context.getString(R.string.dast)
+            }
+        }else{
+            holder.descTextView.visibility = View.GONE
+        }
+
         Log.d("AdapterDebug", "Options size: ${item.options.size}")
 
         holder.bindOptions(item.options, item.selectedOption)
     }
+
     override fun getItemCount(): Int {
         return questions.size
     }

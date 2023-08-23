@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_bottom_graph"
-    app:startDestination="@id/homeFragment">
-    <fragment
+    app:startDestination="@id/screeningsFragment">
+    <!--<fragment
         android:id="@+id/homeFragment"
         android:name="com.calmscient.fragments.HomeFragment"
         android:label="Home"
@@ -25,7 +25,7 @@
         android:label="REWARDS"
         tools:layout="@layout/fragment_rewards" />
 
-    <!-- actions for navigation between fragments -->
+    &lt;!&ndash; actions for navigation between fragments &ndash;&gt;
     <action
         android:id="@+id/action_home"
         app:destination="@id/homeFragment" />
@@ -39,5 +39,62 @@
 
     <action
         android:id="@+id/action_rewards"
-        app:destination="@id/rewardsFragment" />
+        app:destination="@id/rewardsFragment" />-->
+    <fragment
+        android:id="@+id/screeningsFragment"
+        android:name="com.calmscient.fragments.ScreeningsFragment"
+        android:label="fragment_screenings"
+        tools:layout="@layout/fragment_screenings" >
+        <action
+            android:id="@+id/action_screeningsFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_screeningsFragment_to_GADQuestionFragment"
+            app:destination="@id/GADQuestionFragment" />
+        <action
+            android:id="@+id/action_screeningsFragment_to_ADUITQuestionFragment"
+            app:destination="@id/ADUITQuestionFragment" />
+        <action
+            android:id="@+id/action_screeningsFragment_to_DASTQuestionFragment"
+            app:destination="@id/DASTQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.calmscient.fragments.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" >
+        <action
+            android:id="@+id/action_questionFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GADQuestionFragment"
+        android:name="com.calmscient.fragments.GADQuestionFragment"
+        android:label="fragment_gad_questions"
+        tools:layout="@layout/fragment_gad_questions" >
+        <action
+            android:id="@+id/action_GADQuestionFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ADUITQuestionFragment"
+        android:name="com.calmscient.fragments.ADUITQuestionFragment"
+        android:label="fragment_a_d_u_i_t_question"
+        tools:layout="@layout/fragment_a_d_u_i_t_question" >
+        <action
+            android:id="@+id/action_ADUITQuestionFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DASTQuestionFragment"
+        android:name="com.calmscient.fragments.DASTQuestionFragment"
+        android:label="DASTQuestionFragment" >
+        <action
+            android:id="@+id/action_DASTQuestionFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.calmscient.fragments.ResultsFragment"
+        android:label="ResultsFragment" />
 </navigation>

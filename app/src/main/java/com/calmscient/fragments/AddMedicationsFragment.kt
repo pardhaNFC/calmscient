@@ -24,6 +24,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.FragmentAddMedicationsBinding
@@ -47,6 +48,12 @@ class AddMedicationsFragment : Fragment(),
     private var eveningAlarm: String = ""
     private var selectedSchedule: String = ""
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            loadFragment(CalendarFragment())
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -71,14 +78,18 @@ class AddMedicationsFragment : Fragment(),
         //For Evening Alarm
         binding.alarmToggleButtonEvening.labelOn = "Yes"
         binding.alarmToggleButtonEvening.labelOff = "No"
+        //afternoon alarm
+        binding.alarmToggleButtonAfternoon.labelOn = "Yes"
+        binding.alarmToggleButtonAfternoon.labelOff = "No"
 
-        binding.morningCalendar.setOnClickListener {
+
+        /*binding.morningCalendar.setOnClickListener {
             showMorningTimeAndAlarmDialog()
         }
 
         binding.eveningCalendar.setOnClickListener {
             showEveningTimeAndAlarmDialog()
-        }
+        }*/
         binding.btnAddCancel.setOnClickListener {
             loadFragment(CalendarFragment())
         }
@@ -165,6 +176,7 @@ class AddMedicationsFragment : Fragment(),
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 
@@ -271,8 +283,8 @@ class AddMedicationsFragment : Fragment(),
                 "Morning" -> {
                     morningTime = time
                     morningAlarm = alarm
-                    binding.morningTime.text = morningTime
-                    binding.morningAlarm.text = morningAlarm
+                    binding.morningTextView.text = morningTime
+                    binding.morningAlarmTimeView.text = morningAlarm
                     if (isMorningAlarmOn) {
                         scheduleAlarm(morningAlarm, "Morning")
                     } else {
@@ -283,8 +295,8 @@ class AddMedicationsFragment : Fragment(),
                 "Evening" -> {
                     eveningTime = time
                     eveningAlarm = alarm
-                    binding.eveningTime.text = eveningTime
-                    binding.eveningAlarm.text = eveningAlarm
+                    binding.eveningTimeView.text = eveningTime
+                    binding.eveningAlarmTextView.text = eveningAlarm
                     if (isEveningAlarmOn) {
                         scheduleAlarm(eveningAlarm, "Evening")
                     } else {
@@ -304,8 +316,8 @@ class AddMedicationsFragment : Fragment(),
                     morningTime = time
                     morningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
                     isMorningAlarmOn = true
-                    binding.morningTime.text = morningTime
-                    binding.morningAlarm.text = morningAlarm
+                    binding.morningTimeView.text = morningTime
+                    binding.morningAlarmTimeView.text = morningAlarm
                     if (isMorningAlarmOn) {
                         scheduleAlarm(morningAlarm, "Morning")
                     } else {
@@ -317,8 +329,8 @@ class AddMedicationsFragment : Fragment(),
                     eveningTime = time
                     eveningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
                     isEveningAlarmOn = true
-                    binding.eveningTime.text = eveningTime
-                    binding.eveningAlarm.text = eveningAlarm
+                    binding.eveningAlarmTimeView.text = eveningTime
+                    binding.eveningAlarmTimeView.text = eveningAlarm
                     if (isEveningAlarmOn) {
                         scheduleAlarm(eveningAlarm, "Evening")
                         isEveningAlarmOn = false

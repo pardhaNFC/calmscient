@@ -15,6 +15,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -61,6 +62,12 @@ class NextAppointmentsFragment : Fragment() {
     private val dateFormatter = DateTimeFormatter.ofPattern("dd")
     private lateinit var cardViewAdapter: NextAppointmentsAdapter
     private val cardViewItems = mutableListOf<CardViewItems>()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        requireActivity().onBackPressedDispatcher.addCallback(this){
+            loadFragment(MedicalRecordsFragment())
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -150,21 +157,21 @@ class NextAppointmentsFragment : Fragment() {
         cardViewItems.clear()
         cardViewItems.addAll(
             listOf(
-                CardViewItems("08/18/2023",
+                CardViewItems("08/22/2023",
                     R.drawable.ic_doctor_logo,
                     "Dr. Hannah Johnson",
                     "SCD Hospital",
                     R.drawable.ic_next,
-                    "08/19/2023",
+                    "08/23/2023",
                     R.drawable.ic_appointments,
                     "No Appointments",
-                    "08/20/2023",
+                    "08/24/2023",
                     R.drawable.ic_appointments,
                     "No Appointments",
-                    "08/21/2023",
+                    "08/25/2023",
                     R.drawable.ic_appointments,
                     "No Appointments",
-                    "08/22/2023",
+                    "08/26/2023",
                     R.drawable.ic_appointments,
                     "No Appointments")
             )

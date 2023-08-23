@@ -94,13 +94,10 @@ class ManageAnxietyActivity : AppCompatActivity() {
         }
     }
     override fun onBackPressed() {
-        // Navigate back to DiscoveryFragment (if available) or finish the activity
         val fragment = supportFragmentManager.findFragmentByTag(DiscoveryFragment::class.java.simpleName)
         if (fragment != null && fragment.isVisible) {
-            // DiscoveryFragment is present, pop back to it
             supportFragmentManager.popBackStack()
         } else {
-            // DiscoveryFragment is not present, finish the activity
             super.onBackPressed()
         }
     }
@@ -108,6 +105,7 @@ class ManageAnxietyActivity : AppCompatActivity() {
         // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()
         val transaction = this.supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 

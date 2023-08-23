@@ -110,4 +110,13 @@
     <!--Anxiety-->
     <string name="manage_anxiety">Manage anxiety</string>
     <string name="introduction">Introduction</string>
+
+    <!--Screenings-->
+    <string name="phq">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
+    <string name="gad">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
+    <string name="audit">Do you enjoy a drink now and then\nMany of us do, often when socializing with friends and family. Lets take a look at your drinking patterns and how they may affect your health.\nThe AUDIT questionnaire is designed to help in the self-assessment of alcohol consumption and to identify any implications for the persons health and well being, now and in the future.</string>
+    <string name="dast">Drug use refers to the use of prescribed or over‐the‐counter drugs in excess of the directions, and any non medical use of drugs.
+        \nThe various classes of drugs may include cannabis , solvents , tranquilizers, barbiturates, cocaine, stimulants, hallucinogens or narcotics . The questions do not include alcoholic beverages.\nPlease answer every question. If you have difficulty with a statement, then choose the response that is mostly right.</string>
+
+    <string name="afternoon">Afternoon</string>
 </resources>
