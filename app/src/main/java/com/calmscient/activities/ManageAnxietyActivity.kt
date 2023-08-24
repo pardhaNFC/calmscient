@@ -116,7 +116,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.intro1),
             description = "What is anxiety?",
-            isCompleted = true
+            isCompleted = true,
+            heading = null,
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -125,7 +127,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.intro2),
             description = "Get yourself out of “fast pace cycle”",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
         val card3 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.LESSON),
@@ -133,7 +137,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.intro3),
             description = "Let’s make a plan",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for section 1
@@ -147,7 +153,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
             contentIcons = listOf(R.drawable.video),
             description = "Neuropsychology of anxiety",
-            isCompleted = false
+            isCompleted = false,
+            heading = "The Neuropsychology of Anxiety",
+            summary = getString(R.string.lesson1_video_summary)
         )
 
         val card2 = CardItemDataClass(
@@ -156,7 +164,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = null,
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
         // Add more CardItemDataClass instances as needed for Lesson1
         return listOf(card1, card2)
@@ -169,7 +179,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson2_layer1),
             description = "Recognize a cycle of anxiety",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -178,7 +190,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.quiz),
             description = "Quiz",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson 2
@@ -192,7 +206,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson3_layer1),
             description = "Where can anxiety hide?",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -201,7 +217,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.quiz),
             description = "Quiz",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card3 = CardItemDataClass(
@@ -210,7 +228,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = null,
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card4 = CardItemDataClass(
@@ -219,7 +239,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.quiz),
             description = "Quiz",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson3
@@ -233,7 +255,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
             contentIcons = listOf(R.drawable.video),
             description = "Implement body calming skills",
-            isCompleted = false
+            isCompleted = false,
+            heading = "Implement body calming skills",
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -242,7 +266,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson4_layer1),
             description = "Calming the body",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson4
@@ -256,7 +282,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = "Anxiety and worry",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -265,7 +293,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson5_layer1),
             description = "Learn to postpone your worry",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson5
@@ -279,7 +309,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = "Calming your anxious mind",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -288,7 +320,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson6_layer1),
             description = "Biased thinking",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card3 = CardItemDataClass(
@@ -297,7 +331,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.audio),
             description = "Making connection",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card4 = CardItemDataClass(
@@ -306,7 +342,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson6_layer2),
             description = "Restructure biased thinking",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson6
@@ -320,7 +358,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.ar1),
             description = "Anxiety and Exercise",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card2 = CardItemDataClass(
@@ -329,7 +369,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.ar2),
             description = "Anxiety and Sleep",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card3 = CardItemDataClass(
@@ -338,7 +380,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.ar3),
             description = "Anxiety and Alcohol/Substances",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         val card4 = CardItemDataClass(
@@ -347,7 +391,9 @@ class ManageAnxietyActivity : AppCompatActivity() {
             videoResourceId = null,
             contentIcons = listOf(R.drawable.ar4),
             description = "Managing stress to reduce anxiety",
-            isCompleted = false
+            isCompleted = false,
+            heading = null,
+            summary = null
         )
 
         // Add more CardItemDataClass instances as needed for Additional Resource

@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/sfprodisplaysemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:gravity="center"
                 android:text="@string/schedule_time_and_alarm"
                 android:textAlignment="center"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginHorizontal="@dimen/_7sdp"
-            android:fontFamily="@font/sfprotextmedium"
+            android:fontFamily="@font/lexendmedium"
             android:textSize="@dimen/_14sdp" />
 
 

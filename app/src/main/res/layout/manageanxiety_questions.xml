@@ -7,161 +7,185 @@
     android:orientation="vertical"
     tools:context=".activities.AnxietyQuestionsActivity"
     tools:ignore="MissingDefaultResource">
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      tools:ignore="MissingClass">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
-
-        <ImageView
-            android:id="@+id/back_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:src="@drawable/ic_manageanxietyicon" />
-
-        <TextView
-            android:id="@+id/textView10"
+        android:orientation="vertical"
+        tools:ignore="MissingClass">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="Manage Anxiety"
-            android:textColor="#424242"
-            android:textSize="@dimen/_18sdp"
-            android:textStyle="bold" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp">
 
-        <ImageView
-            android:id="@+id/ic_profile"
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_manageanxietyicon" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="Manage Anxiety"
+                android:textColor="#424242"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ic_glossary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/textView10"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_filesiconanxiety" />
+        </RelativeLayout>
+
+        <View
             android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/viewbackgroundcolor" />
+        <!--  -->
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/textView10"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:src="@drawable/ic_filesiconanxiety" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/viewbackgroundcolor" />
-    <!-- Step Indicator -->
-    <LinearLayout
-        android:id="@+id/stepIndicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:gravity="center_horizontal"
-        android:layout_centerHorizontal="true">
-
-        <!-- Step 1 Indicator -->
-        <ImageView
-            android:id="@+id/step1Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content" />
-
-        <!-- Step 2 Indicator -->
-        <ImageView
-            android:id="@+id/step2Indicator"
-            android:layout_width="@dimen/_15sdp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/step10Indicator"
+            app:layout_constraintStart_toStartOf="@+id/step1Indicator"
+            app:layout_constraintTop_toTopOf="parent"
+            android:progress="11"
+            android:progressTint="@color/pink"/>
+        <LinearLayout
+            android:id="@+id/stepIndicator"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp" />
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginTop="-23dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true">
 
-        <!-- Step 3 Indicator -->
-        <ImageView
-            android:id="@+id/step3Indicator"
-            android:layout_width="@dimen/_15sdp"
+            <!-- Step 1 Indicator -->
+            <ImageView
+                android:id="@+id/step1Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_activetickmark"/>
+
+            <!-- Step 2 Indicator -->
+            <ImageView
+                android:id="@+id/step2Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+            <!-- Step 3 Indicator -->
+            <ImageView
+                android:id="@+id/step3Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+            <!-- Step 4 Indicator -->
+            <ImageView
+                android:id="@+id/step4Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+            <!-- Step 5 Indicator -->
+            <ImageView
+                android:id="@+id/step5Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+            <!-- Step 6 Indicator -->
+            <ImageView
+                android:id="@+id/step6Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+            <!-- Step 7 Indicator -->
+            <ImageView
+                android:id="@+id/step7Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+            <!-- Step 8 Indicator -->
+            <ImageView
+                android:id="@+id/step8Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+            <!-- Step 9 Indicator -->
+            <ImageView
+                android:id="@+id/step9Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+            <!-- Step 10 Indicator -->
+            <ImageView
+                android:id="@+id/step10Indicator"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark"/>
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:orientation="vertical"
+            android:id="@+id/optionsRecyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="560dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
-        <!-- Step 4 Indicator -->
-        <ImageView
-            android:id="@+id/step4Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
 
-        <!-- Step 5 Indicator -->
-        <ImageView
-            android:id="@+id/step5Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
+            <ImageView
+                android:id="@+id/previousQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:clickable="true"
+                android:paddingRight="@dimen/_190sdp"
+                android:src="@drawable/ic_question_back" />
 
-        <!-- Step 6 Indicator -->
-        <ImageView
-            android:id="@+id/step6Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
-        <!-- Step 7 Indicator -->
-        <ImageView
-            android:id="@+id/step7Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
-
-        <!-- Step 8 Indicator -->
-        <ImageView
-            android:id="@+id/step8Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
-
-        <!-- Step 9 Indicator -->
-        <ImageView
-            android:id="@+id/step9Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
-
-        <!-- Step 10 Indicator -->
-        <ImageView
-            android:id="@+id/step10Indicator"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_10sdp" />
-
-
-    </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:orientation="vertical"
-        android:id="@+id/optionsRecyclerView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/previousQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:clickable="true"
-            android:paddingRight="@dimen/_190sdp"
-            android:src="@drawable/ic_question_back" />
-
-        <ImageView
-            android:id="@+id/nextQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:src="@drawable/ic_next_question" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/nextQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/ic_next_question" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
-
-

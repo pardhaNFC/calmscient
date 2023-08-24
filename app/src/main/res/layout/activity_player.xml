@@ -1,67 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#000000">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="2">
 
-    <!-- Back Icon -->
-    <ImageButton
-        android:id="@+id/backBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_back_white"
-        android:background="@android:color/transparent"
-        android:contentDescription="Back"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="8dp"
-        android:backgroundTint="@color/white"/>
-
-    <!-- Orientation Icon -->
-    <ImageButton
-        android:id="@+id/orientationBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/orientation_icon"
-        android:contentDescription="orientation_button_description"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="8dp" />
-
-    <VideoView
-        android:id="@+id/playerVideoView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        tools:ignore="MissingConstraints" />
-
-   <!-- <com.google.android.exoplayer2.ui.DefaultTimeBar
-        android:id="@id/exo_progress"
+    <!-- VideoView and Icons Container -->
+    <RelativeLayout
+        android:id="@+id/videoFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:played_color="@color/purple_100"
-        app:scrubber_color="@android:color/white"
-        app:unplayed_color="@android:color/darker_gray" />-->
+        android:layout_weight="1">
 
+        <!-- ExoPlayerView -->
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_centerInParent="true"
+            app:resize_mode="fill"
+            app:use_controller="true" />
 
-    <MediaController
-        android:id="@+id/mediaController"
+        <!-- Back Icon -->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <!-- Favorites Icon -->
+        <ImageButton
+            android:id="@+id/favoritesIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Favorites"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_favorites_icon" />
+
+        <!-- Play/Pause Icon -->
+        <!--<ImageButton
+            android:id="@+id/playPauseIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="Play/Pause"
+            android:src="@drawable/ic_play_icon" />
+-->
+        <!-- Orientation Icon -->
+        <ImageButton
+            android:id="@+id/orientationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Orientation"
+            android:src="@drawable/ic_orientation_icon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center"
-        android:layout_centerHorizontal="true"
-        android:background="#80000000"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
-</RelativeLayout>
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/headingTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendsemibold"
+            android:padding="16dp"
+            android:textColor="#424242"
+            android:textSize="@dimen/_14sdp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/summaryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:fontFamily="@font/lexendregular"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

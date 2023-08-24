@@ -26,11 +26,11 @@
         <!--<item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
     </style>
     <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="fontFamily">@font/sfprotextbold</item>
+        <!--<item name="fontFamily">@font/sfprotextbold</item>
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprodisplaysemibold</item>
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprotextregular</item>
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprotextmedium</item>
-        <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprotextbold</item>
+        <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprotextbold</item>-->
         <!--<item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
     </style>
     <style name="CustomTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">

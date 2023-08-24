@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.AnxietyPlayerActivity
 import com.calmscient.activities.AnxietyQuestionsActivity
+import com.calmscient.activities.PlayerActivity
 import com.calmscient.data.remote.ItemType
 import com.calmscient.data.remote.CardItemDataClass
 
@@ -59,11 +60,11 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
             } else {
                 tickImageView.visibility = View.GONE
             }
-            introCardView.setOnClickListener {
+            /*introCardView.setOnClickListener {
                 val context = itemView.context
                 val intent = Intent(context, AnxietyQuestionsActivity::class.java)
                 context.startActivity(intent)
-            }
+            }*/
             itemView.setOnClickListener {
                 val context = itemView.context
                 when {
@@ -80,8 +81,10 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     }*/
                     cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
                         if (cardItem.audioResourceId != null) {
-                            val intent = Intent(context, AnxietyPlayerActivity::class.java)
+                            val intent = Intent(context, PlayerActivity::class.java)
                             intent.putExtra("mediaResourceId", cardItem.audioResourceId)
+                            intent.putExtra("heading", cardItem.heading)
+                            intent.putExtra("summary", cardItem.summary)
                             context.startActivity(intent)
                         } else {
                             Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
@@ -101,8 +104,10 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     }*/
                     cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
                         if (cardItem.videoResourceId != null) {
-                            val intent = Intent(context, AnxietyPlayerActivity::class.java)
+                            val intent = Intent(context, PlayerActivity::class.java)
                             intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                            intent.putExtra("heading", cardItem.heading)
+                            intent.putExtra("summary", cardItem.summary)
                             context.startActivity(intent)
                         } else {
                             Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
@@ -110,9 +115,9 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     }
 
                     cardItem.availableContentTypes.contains(ItemType.LESSON) -> {
-                        Toast.makeText(context, "No Lesson Available", Toast.LENGTH_SHORT).show()
-                        /*val intent = Intent(context, LessonActivity::class.java)
-                        context.startActivity(intent)*/
+                        //Toast.makeText(context, "No Lesson Available", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(context, AnxietyQuestionsActivity::class.java)
+                        context.startActivity(intent)
                     }
 
                     cardItem.availableContentTypes.contains(ItemType.QUIZ) -> {

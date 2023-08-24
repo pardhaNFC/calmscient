@@ -43,7 +43,7 @@ class AnxietyPlayerActivity: AppCompatActivity(),
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        videoView = findViewById(R.id.playerVideoView)
+        videoView = findViewById(R.id.playerView)
 
         // Retrieve the content Uri from the intent extras
         /*val contentUri = intent.getParcelableExtra<Uri>("contentUri")

@@ -48,7 +48,7 @@
                 android:layout_alignRight="@+id/textView10"
                 android:layout_centerVertical="true"
                 android:clickable="true"
-                android:src="@drawable/ic_gossary" />
+                android:src="@drawable/ic_filesiconanxiety" />
         </RelativeLayout>
 
         <View
@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Introduction"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -90,7 +90,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 1"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -114,7 +114,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 2"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -137,7 +137,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 3"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -160,7 +160,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 4"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -183,7 +183,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 5"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -206,7 +206,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 6"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"
@@ -230,7 +230,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="Additional Resource"
                 android:textColor="#424242"
                 android:textSize="@dimen/_18sdp"

@@ -74,7 +74,7 @@
                     android:id="@+id/userName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprotextregular"
+                    android:fontFamily="@font/lexendmedium"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -601,7 +601,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/sfprodisplaysemibold"
+            android:fontFamily="@font/lexendsemibold"
             android:text="@string/schedule_time_and_alarm"
             android:textColor="#424242"
             android:textSize="@dimen/_16sdp" />
@@ -642,7 +642,7 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_3sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="@string/morning"
                             android:textSize="@dimen/_12sdp" />
 
@@ -662,7 +662,7 @@
                             android:id="@+id/morningTimeView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sfprodisplaysemibold"
+                            android:fontFamily="@font/lexendsemibold"
                             android:text="08:00"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_26sdp" />
@@ -672,7 +672,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_4sdp"
                             android:layout_marginBottom="@dimen/_2sdp"
-                            android:fontFamily="@font/sfprotextregular"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="AM"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_14sdp" />
@@ -707,7 +707,7 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_3sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="@string/alarm"
                             android:textSize="@dimen/_12sdp" />
 
@@ -733,7 +733,7 @@
                             android:id="@+id/morningAlarmTimeView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sfprodisplaysemibold"
+                            android:fontFamily="@font/lexendsemibold"
                             android:text="07:50"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_26sdp" />
@@ -743,7 +743,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_4sdp"
                             android:layout_marginBottom="@dimen/_2sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="AM"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_14sdp" />
@@ -792,7 +792,7 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_3sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="@string/afternoon"
                             android:textSize="@dimen/_12sdp" />
 
@@ -812,7 +812,7 @@
                             android:id="@+id/afternoonTimeView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sfprodisplaysemibold"
+                            android:fontFamily="@font/lexendsemibold"
                             android:text="01:00"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_26sdp" />
@@ -822,7 +822,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_4sdp"
                             android:layout_marginBottom="@dimen/_2sdp"
-                            android:fontFamily="@font/sfprotextregular"
+                            android:fontFamily="@font/lexendregular"
                             android:text="PM"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_14sdp" />
@@ -857,7 +857,7 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_3sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="@string/alarm"
                             android:textSize="@dimen/_12sdp" />
 
@@ -883,7 +883,7 @@
                             android:id="@+id/afternoonAlarmTimeView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sfprodisplaysemibold"
+                            android:fontFamily="@font/lexendsemibold"
                             android:text="12:50"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_26sdp" />
@@ -893,7 +893,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_4sdp"
                             android:layout_marginBottom="@dimen/_2sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="PM"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_14sdp" />
@@ -942,7 +942,7 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_3sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="@string/evening"
                             android:textSize="@dimen/_12sdp" />
 
@@ -962,7 +962,7 @@
                             android:id="@+id/eveningTimeView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sfprodisplaysemibold"
+                            android:fontFamily="@font/lexendsemibold"
                             android:text="08:00"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_26sdp" />
@@ -972,13 +972,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_4sdp"
                             android:layout_marginBottom="@dimen/_2sdp"
-                            android:fontFamily="@font/sfprotextregular"
+                            android:fontFamily="@font/lexendregular"
                             android:text="PM"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_14sdp" />
                     </LinearLayout>
-
-
                 </LinearLayout>
 
                 <ImageView
@@ -1007,7 +1005,7 @@
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_3sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="@string/alarm"
                             android:textSize="@dimen/_12sdp" />
 
@@ -1033,7 +1031,7 @@
                             android:id="@+id/eveningAlarmTimeView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sfprodisplaysemibold"
+                            android:fontFamily="@font/lexendsemibold"
                             android:text="07:50"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_26sdp" />
@@ -1043,7 +1041,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_4sdp"
                             android:layout_marginBottom="@dimen/_2sdp"
-                            android:fontFamily="@font/sfprotextmedium"
+                            android:fontFamily="@font/lexendmedium"
                             android:text="PM"
                             android:textColor="@color/purple_100"
                             android:textSize="@dimen/_14sdp" />

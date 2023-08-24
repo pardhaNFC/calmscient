@@ -114,8 +114,9 @@
                 android:id="@+id/Medications_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/lexendsemibold"
                 android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/_20sdp"
                 android:text="@string/medications"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />
@@ -167,6 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:fontFamily="@font/lexendsemibold"
                 android:layout_marginEnd="@dimen/_15sdp"
                 android:text="@string/upcoming_medical_appointments"
                 android:textColor="#FFFFFF"
@@ -217,11 +219,12 @@
                 android:id="@+id/Screenings_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_15sdp"
                 android:layout_centerInParent="true"
+                android:fontFamily="@font/lexendsemibold"
+                android:layout_marginEnd="@dimen/_15sdp"
                 android:text="@string/screenings"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/_12sdp"/>
+                android:textSize="@dimen/_12sdp" />
 
             <ImageView
                 android:id="@+id/nexticon2"

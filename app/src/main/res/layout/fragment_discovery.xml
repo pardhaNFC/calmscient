@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="@string/anxiety"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="@string/stress"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />
@@ -177,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_20sdp"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:text="@string/control"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_12sdp" />

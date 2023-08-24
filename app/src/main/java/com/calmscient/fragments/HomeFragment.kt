@@ -32,8 +32,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.SettingsActivity
 import com.calmscient.activities.WeeklySummary
+import com.calmscient.adapters.AnxietyIntroductionAdapter
+import com.calmscient.adapters.CardItemDiffCallback
 import com.calmscient.adapters.VideoAdapter
 import com.calmscient.adapters.VideoItem
+import com.calmscient.data.remote.CardItemDataClass
+import com.calmscient.data.remote.ItemType
 
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,7 +47,8 @@ private const val ARG_PARAM2 = "param2"
 class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var tvProfileName: TextView
-    private lateinit var videoAdapter: VideoAdapter
+    private lateinit var introductionAdapter: AnxietyIntroductionAdapter
+
     private lateinit var profileImage: ImageView
 
     override fun onCreateView(
@@ -52,31 +57,32 @@ class HomeFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val videoItems = listOf(
-            VideoItem(R.raw.video1, R.drawable.thumbnail1),
-            VideoItem(R.raw.video2, R.drawable.thumbnail2),
-            VideoItem(R.raw.video3, R.drawable.thumbnail1),
+        /*   val videoItems = listOf(
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4", R.drawable.thumbnail1),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav", R.drawable.thumbnail2),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4", R.drawable.thumbnail1),
 
-            VideoItem(R.raw.video1, R.drawable.thumbnail1),
-            VideoItem(R.raw.video2, R.drawable.thumbnail2),
-            VideoItem(R.raw.video3, R.drawable.thumbnail1),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-3+North+wind+and+sun+with+music+English.wav", R.drawable.thumbnail1),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+5-1+Anxiety+and+worry+with+music+English.wav", R.drawable.thumbnail2),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4", R.drawable.thumbnail1),
 
-            VideoItem(R.raw.video1, R.drawable.thumbnail2),
-            VideoItem(R.raw.video2, R.drawable.thumbnail1),
-            VideoItem(R.raw.video3, R.drawable.thumbnail2),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-3+North+wind+and+sun+with+music+English.wav",R.drawable.thumbnail1),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav", R.drawable.thumbnail2),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4", R.drawable.thumbnail1),
 
-            VideoItem(R.raw.video1, R.drawable.thumbnail1),
-            VideoItem(R.raw.video2, R.drawable.thumbnail2),
-            VideoItem(R.raw.video3, R.drawable.thumbnail1),
-            // Add more VideoItem objects as needed
-        )
-        val thumbnailResourceIds = listOf(
-            R.drawable.thumbnail1,
-            R.drawable.thumbnail2,
-            // Add more thumbnail resource IDs as needed
-        )
 
-        recyclerView = rootView.findViewById(R.id.recyclerViewVideos)
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-3+North+wind+and+sun+with+music+English.wav",R.drawable.thumbnail1),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav", R.drawable.thumbnail2),
+               VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4", R.drawable.thumbnail1),
+               // Add more VideoItem objects as needed
+           )
+           val thumbnailResourceIds = listOf(
+               R.drawable.thumbnail1,
+               R.drawable.thumbnail2,
+               // Add more thumbnail resource IDs as needed
+           )*/
+
+
         tvProfileName = rootView.findViewById(R.id.tv_hello)
 
         /*val text = "Hello Kevin"
@@ -86,10 +92,26 @@ class HomeFragment : Fragment() {
         tvProfileName.setText(ss)*/
 
 
+
+        // Initialize the introductionAdapter here
+        introductionAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+
+        // Initialize the recyclerView before using it
+        recyclerView = rootView.findViewById(R.id.recyclerViewVideos)
         recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        videoAdapter = VideoAdapter(videoItems)
-        recyclerView.adapter = videoAdapter
+        recyclerView.adapter = introductionAdapter
+
+
+        // Data for Additional Resource
+        val additionalResourceItems = cardItemsFavorites()
+        val additionalResourceRecyclerView: RecyclerView = rootView.findViewById(R.id.recyclerViewVideos)
+        val additionalResourceAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+        setupRecyclerView(
+            additionalResourceRecyclerView, additionalResourceItems, additionalResourceAdapter
+        )
+
+
         // Find the myMedicalRecordsLayout
         val myMedicalRecordsLayout = rootView.findViewById<View>(R.id.myMedicalRecordsLayout)
         profileImage = rootView.findViewById(R.id.img_profile1)
@@ -132,7 +154,78 @@ class HomeFragment : Fragment() {
         startActivity(intent)
     }
 
+    private fun cardItemsFavorites(): List<CardItemDataClass> {
+        val card1 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
+            contentIcons = listOf(R.drawable.video),
+            description = "Neuropsychology of anxiety",
+            isCompleted = false,
+            heading = "The Neuropsychology of Anxiety",
+            summary = getString(R.string.lesson1_video_summary)
+        )
+
+        val card2 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
+            contentIcons = listOf(R.drawable.video),
+            description = "Implement body calming skills",
+            isCompleted = false,
+            heading = "Implement body calming skills",
+            summary = null
+        )
+
+        val card3 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
+            contentIcons = listOf(R.drawable.video),
+            description = "Neuropsychology of anxiety",
+            isCompleted = false,
+            heading = "The Neuropsychology of Anxiety",
+            summary = getString(R.string.lesson1_video_summary)
+        )
+
+        val card4 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
+            contentIcons = listOf(R.drawable.video),
+            description = "Implement body calming skills",
+            isCompleted = false,
+            heading = "Implement body calming skills",
+            summary = null
+        )
+
+        val card5 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
+            contentIcons = listOf(R.drawable.video),
+            description = "Neuropsychology of anxiety",
+            isCompleted = false,
+            heading = "The Neuropsychology of Anxiety",
+            summary = getString(R.string.lesson1_video_summary)
+        )
+
+        // Add more CardItemDataClass instances as needed for lesson3
+        return listOf(card1, card2, card3, card4, card5)
+    }
     companion object {
         fun newInstance() = HomeFragment()
     }
+
+    private fun setupRecyclerView(
+        recyclerView: RecyclerView,
+        cardItems: List<CardItemDataClass>,
+        adapter: AnxietyIntroductionAdapter
+    ) {
+        recyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.adapter = adapter
+        adapter.submitList(cardItems)
+    }
+
 }

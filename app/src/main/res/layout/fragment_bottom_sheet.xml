@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_gravity="center"
-                android:fontFamily="@font/sfprotextsemibold"
+                android:fontFamily="@font/lexendsemibold"
                 android:gravity="center"
                 android:text="@string/add_time_alarm"
                 android:textColor="@color/black_head"
