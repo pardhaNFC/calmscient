@@ -97,6 +97,14 @@ class AddMedicationsFragment : Fragment(),
             val bottomSheetFragment = BottomSheetFragment()
             bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
         }
+        binding.afternoonAlarmCard.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+        }
+        binding.eveningAlarmCard.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+        }
         return binding.root
     }
 

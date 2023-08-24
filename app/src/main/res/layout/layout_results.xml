@@ -64,7 +64,7 @@
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_toRightOf="@+id/tablets"
-                android:text="06/08/2023"
+                android:text="08/24/2023"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
