@@ -118,7 +118,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "What is anxiety?",
             isCompleted = true,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card2 = CardItemDataClass(
@@ -129,7 +130,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Get yourself out of “fast pace cycle”",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
         val card3 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.LESSON),
@@ -139,7 +141,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Let’s make a plan",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for section 1
@@ -155,7 +158,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Neuropsychology of anxiety",
             isCompleted = false,
             heading = "The Neuropsychology of Anxiety",
-            summary = getString(R.string.lesson1_video_summary)
+            summary = getString(R.string.lesson1_video_summary),
+            dialogText = getString(R.string.lesson1_video1_description),
         )
 
         val card2 = CardItemDataClass(
@@ -166,7 +170,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = null,
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
         // Add more CardItemDataClass instances as needed for Lesson1
         return listOf(card1, card2)
@@ -181,7 +186,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Recognize a cycle of anxiety",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card2 = CardItemDataClass(
@@ -192,7 +198,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Quiz",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson 2
@@ -208,7 +215,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Where can anxiety hide?",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card2 = CardItemDataClass(
@@ -219,7 +227,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Quiz",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card3 = CardItemDataClass(
@@ -230,7 +239,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = null,
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card4 = CardItemDataClass(
@@ -241,7 +251,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Quiz",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson3
@@ -257,7 +268,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Implement body calming skills",
             isCompleted = false,
             heading = "Implement body calming skills",
-            summary = null
+            summary = null,
+            dialogText = getString(R.string.lesson4_video1_description)
         )
 
         val card2 = CardItemDataClass(
@@ -268,7 +280,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Calming the body",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson4
@@ -284,7 +297,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Anxiety and worry",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card2 = CardItemDataClass(
@@ -295,7 +309,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Learn to postpone your worry",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson5
@@ -311,7 +326,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Calming your anxious mind",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card2 = CardItemDataClass(
@@ -322,7 +338,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Biased thinking",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card3 = CardItemDataClass(
@@ -333,7 +350,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Making connection",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card4 = CardItemDataClass(
@@ -344,7 +362,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Restructure biased thinking",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson6
@@ -360,7 +379,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Anxiety and Exercise",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card2 = CardItemDataClass(
@@ -371,7 +391,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Anxiety and Sleep",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card3 = CardItemDataClass(
@@ -382,7 +403,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Anxiety and Alcohol/Substances",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         val card4 = CardItemDataClass(
@@ -393,7 +415,8 @@ class ManageAnxietyActivity : AppCompatActivity() {
             description = "Managing stress to reduce anxiety",
             isCompleted = false,
             heading = null,
-            summary = null
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for Additional Resource

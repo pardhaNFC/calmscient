@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendlight"
                 android:textColor="@color/black_head"
-                android:text="Hello"
+                android:text="@string/hello"
                 android:textSize="@dimen/_26sdp" />
 
             <TextView
@@ -105,7 +105,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/lexendmedium"
-                    android:text="My Medical Records"
+                    android:text="@string/my_medical_records"
                     android:textColor="@color/black_head"
                     android:textSize="@dimen/_14sdp" />
 
@@ -156,7 +156,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:fontFamily="@font/lexendmedium"
-                    android:text="Weekly Summary"
+                    android:text="@string/weekly_summary"
                     android:textColor="@color/black_head"
                     android:textSize="@dimen/_14sdp" />
 

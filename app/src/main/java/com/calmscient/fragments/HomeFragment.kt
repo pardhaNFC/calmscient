@@ -163,7 +163,8 @@ class HomeFragment : Fragment() {
             description = "Neuropsychology of anxiety",
             isCompleted = false,
             heading = "The Neuropsychology of Anxiety",
-            summary = getString(R.string.lesson1_video_summary)
+            summary = getString(R.string.lesson1_video_summary),
+            dialogText = getString(R.string.lesson1_video1_description)
         )
 
         val card2 = CardItemDataClass(
@@ -174,7 +175,8 @@ class HomeFragment : Fragment() {
             description = "Implement body calming skills",
             isCompleted = false,
             heading = "Implement body calming skills",
-            summary = null
+            summary = null,
+            dialogText = getString(R.string.lesson4_video1_description)
         )
 
         val card3 = CardItemDataClass(
@@ -185,7 +187,8 @@ class HomeFragment : Fragment() {
             description = "Neuropsychology of anxiety",
             isCompleted = false,
             heading = "The Neuropsychology of Anxiety",
-            summary = getString(R.string.lesson1_video_summary)
+            summary = getString(R.string.lesson1_video_summary),
+            dialogText = getString(R.string.lesson1_video1_description)
         )
 
         val card4 = CardItemDataClass(
@@ -196,7 +199,8 @@ class HomeFragment : Fragment() {
             description = "Implement body calming skills",
             isCompleted = false,
             heading = "Implement body calming skills",
-            summary = null
+            summary = null,
+            dialogText = getString(R.string.lesson4_video1_description)
         )
 
         val card5 = CardItemDataClass(
@@ -207,7 +211,8 @@ class HomeFragment : Fragment() {
             description = "Neuropsychology of anxiety",
             isCompleted = false,
             heading = "The Neuropsychology of Anxiety",
-            summary = getString(R.string.lesson1_video_summary)
+            summary = getString(R.string.lesson1_video_summary),
+            dialogText = getString(R.string.lesson1_video1_description)
         )
 
         // Add more CardItemDataClass instances as needed for lesson3

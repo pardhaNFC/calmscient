@@ -9,6 +9,7 @@ data class CardItemDataClass(val availableContentTypes: List<ItemType>,
                              val description: String?,
                              val heading: String?,
                              var summary: String?,
+                             var dialogText: String?,
                              val isCompleted: Boolean
 )
 

@@ -39,7 +39,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="70dp"
                 android:layout_marginBottom="20dp"
-                android:text=" Settings"
+                android:text="@string/settings"
                 android:textColor="#000000"
                 android:textSize="@dimen/_18sdp" />
         </RelativeLayout>
@@ -100,7 +100,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
@@ -135,7 +135,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
-                android:text="Theme"
+                android:text="@string/theme"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
 
@@ -145,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="33dp"
-                android:text="Dark Mode"
+                android:text="@string/dark_mode"
                 android:textColor="#6E6BB3"
                 android:textSize="12sp" />
 
@@ -190,7 +190,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
-                android:text="Languages"
+                android:text="@string/language"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
@@ -317,7 +317,7 @@
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:text="English"
+                    android:text="@string/english"
                     android:textColor="#000000"
                     android:textSize="10sp" />
             </RelativeLayout>
@@ -349,7 +349,7 @@
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:text="Spanish"
+                    android:text="@string/spanish"
                     android:textColor="#000000"
                     android:textSize="10sp" />
             </RelativeLayout>
@@ -418,7 +418,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
-                android:text="Notifications"
+                android:text="@string/notifications"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
 
@@ -454,7 +454,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_6sdp"
-                android:text="License Key"
+                android:text="@string/license_key"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
@@ -489,7 +489,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
-                android:text="Help &amp; Support "
+                android:text="@string/help_support"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
 
@@ -525,7 +525,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
-                android:text="Logout"
+                android:text="@string/logout"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
 

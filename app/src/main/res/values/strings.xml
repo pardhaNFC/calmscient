@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">calmscient</string>
+    <string name="splash_science">The Science of Calm</string>
     <string name="welcome_message">Welcome to my app!</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -8,6 +9,7 @@
     <string name="create_new_account">Create an new account</string>
     <string name="or">or</string>
     <string name="happy_to_see_you">We are happy to see you</string>
+    <string name="hello">Hello</string>
     <string name="home">HOME</string>
     <string name="discovery">DISCOVERY</string>
     <string name="discovery_lower">Discovery</string>
@@ -56,13 +58,29 @@
     <string name="network_invalidation_error">Username or password is incorrect,Please retry again</string>
     <string name="server_connection_error">Not able to connect, please retry again</string>
     <string name="network_login_again">Please log in again</string>
-    <string name="settings">SETTINGS</string>
     <string name="strAlertMessage_Something">Something is not right here try again later</string>
     <string name="title_activity_home_fragment">Something is not right here try again later</string>
+
+    <string name="no_appointments">No Appointments</string>
+    <string name="hospital_name1" translatable="false">SCD Hospital</string>
+    <string name="doctor_name1"><b>Dr. Hannah Johnso</b></string>
 
     <string name="provider">Provider</string>
     <string name="dosage">Dosage</string>
     <string name="direction">Direction</string>
+    <!--settings-->
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="theme">Theme</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="asl">ASL</string>
+    <string name="notifications">Notifications</string>
+    <string name="license_key">License Key</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="logout">Logout</string>
 
     <string name="add_medications">Add Medications</string>
     <string name="alarm">Alarm</string>
@@ -103,6 +121,10 @@
     <string name="trevor_number">1-866-488-7386</string>
     <string name="trans_number">877-565-8860</string>
     <string name="next_appointments">Next appointments</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="contact">Date &amp; Time</string>
+    <string name="address">Date &amp; Time</string>
+    <string name="appointments_details">Appointment Details</string>
     <string name="your_history">History</string>
     <string name="your_results">Your Results</string>
     <string name="summary_takingcontrol">Summary</string>
@@ -111,6 +133,7 @@
     <string name="torch_phq">PHQ9 Copyright \u00a9 Pfizer Inc. All rights reserved.Reproduced with permission. PRIME-MD \u00AE is a trademark of Pfizer Inc.</string>
     <!--Anxiety-->
     <string name="manage_anxiety">Manage anxiety</string>
+    <string name="managing_anxiety">Managing anxiety</string>
     <string name="introduction">Introduction</string>
 
     <!--Screenings-->
@@ -134,5 +157,24 @@
         &#8226; Unknown risks, changes, or results\n
         &#8226; Lack of skill or support\n
         Our nervous system is not broken! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.
+</string>
+
+    <string name="lesson1_video1_description" >
+    Our brain is like a computer. It has a basic operating system that helps us deal with the normal, day-to-day tasks and complexities of life. But when it detects a threat that can interrupt or damage normal operation, an alarm activates that immediately alerts us to the danger.\n\n
+    You can imagine why this “Threat Alert” in our nervous system always takes priority. It’s so that we can get back to normal operations as quickly as possible. When this threat system is triggered, stress responses such as Fight/Flight/Freeze are activated. Stress hormones, such as adrenaline and cortisol, flood our system in order to meet the demands of the danger. Intense emotions, such as anxiety, fear and feeling overwhelmed, can overtake our mind.\n\n
+    Understandably, general brain functions slow down or may be put “on hold” until the danger is taken care of. This is why we might feel that our thinking capacity diminishes when we are experiencing anxiety. Our “Threat Alert” system is an important part of our brain function, but when it is constantly engaged, enjoying life or having a full sense of self becomes difficult and may even feel out of reach.\n\n
+    What are some things that can activate our “Threat Alert” system? They can be:\n
+    …the thought that we might encounter situations or people that threatened us in the past.\n
+    …unknown risks, unknown changes or unknown results when making a decision.\n
+    …facing a challenging situation that we don’t think we have enough skills or support to overcome.\n\n
+    Remember: anxiety is a normal brain response to stress. Our nervous system is not broken and there is nothing wrong with us when we feel anxious! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.\n
+</string>
+    <string name="lesson4_video1_description" >
+                A calm mind can only start with a calm body. Why is that?\n\n
+        Remember: anxiety is our body’s response to danger, whether real or imagined. So if we can control our body, we can suppress our mind from responding with overwhelming worry and rumination.\n\n
+        The very beginning of anxiety starts with “body sensations”. As soon as we perceive them, we will learn to “press pause”, so to speak. Our goal is to lower our stress hormones and this will result in stabilizing our nervous system.\n
+        Some of the best techniques include exercises for mindful breathing, progressive muscle relaxation, body movement and resource installation.\n\n
+        These exercises will calm your stress response and give you the space to handle anxious thoughts and build healthy behaviors. This will result in physical and emotional betterment.\n\n
+        Why don’t you practice some of these exercises for ten minutes every morning or right before bedtime? The key is consistency so that your body learns what it feels like to have a calm nervous system.\n\n
 </string>
 </resources>

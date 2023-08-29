@@ -86,7 +86,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Date and Time"
+             android:text="@string/date_time"
              android:textStyle="bold"
              android:textSize="@dimen/_14sdp"
              android:textColor="@color/grey_light"/>
@@ -112,7 +112,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Contact"
+             android:text="@string/contact"
              android:textColor="@color/grey_light"
              android:textStyle="bold"
              android:textSize="@dimen/_14sdp"/>
@@ -139,7 +139,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Address"
+             android:text="@string/address"
              android:textStyle="bold"
              android:textSize="@dimen/_14sdp"
              android:textColor="@color/grey_light"/>
@@ -163,7 +163,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Appointment Detail"
+             android:text="@string/appointments_details"
              android:textStyle="bold"
              android:textSize="@dimen/_14sdp"
              android:textColor="@color/grey_light"/>

@@ -41,21 +41,11 @@ import java.util.Locale
 data class CardViewItems(
     val dateview1: String,
     val doctor_logo: Int?,
-    val DoctorNameTextView: String?,
-    val HosptailNameTextView: String?,
-    val img_arrow1: Int?,
-    var dateview2: String?,
-    val appointments_logo1: Int?,
-    val AppointmentsNameTextView1: String?,
-    val dateview3: String?,
-    val appointments_logo2: Int?,
-    val AppointmentsNameTextView2: String?,
-    val dateview4: String?,
-    val appointments_logo3: Int?,
-    val AppointmentsNameTextView3: String?,
-    val dateview5: String?,
-    val appointments_logo4: Int?,
-    val AppointmentsNameTextView4: String?)
+    var DoctorNameTextView: String?,
+    var noAppointmentsTextView: String?,
+    var HosptailNameTextView: String?,
+    val img_arrow1: Int?
+)
 class NextAppointmentsFragment : Fragment() {
     private lateinit var binding: FragmentNextappointmentsBinding
     private var selectedDate = LocalDate.now()
@@ -155,29 +145,58 @@ class NextAppointmentsFragment : Fragment() {
     }
     private fun displayCardViewsForSelectedDate() {
         cardViewItems.clear()
-        cardViewItems.addAll(
-            listOf(
-                CardViewItems("08/24/2023",
-                    R.drawable.ic_doctor_logo,
-                    "Dr. Hannah Johnson",
-                    "SCD Hospital",
-                    R.drawable.ic_next,
-                    "08/25/2023",
-                    R.drawable.ic_appointments,
-                    "No Appointments",
-                    "08/26/2023",
-                    R.drawable.ic_appointments,
-                    "No Appointments",
-                    "08/27/2023",
-                    R.drawable.ic_appointments,
-                    "No Appointments",
-                    "08/28/2023",
-                    R.drawable.ic_appointments,
-                    "No Appointments")
+
+        // Get the selected date
+        val selectedDate = selectedDate
+
+        // Format the selected date as "MM/dd/yyyy" and set it as the first dateview1
+        val dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy")
+        val dateStr = selectedDate.format(dateFormatter)
+        val doctorName = "Dr. Hannah Johnson"
+        val hospitalName = "SCD Hospital"
+        cardViewItems.add(
+            CardViewItems(
+                dateStr,
+                R.drawable.ic_doctor_logo,
+                "Dr. Hannah Johnson",
+                null,
+                "SCD Hospital",
+                R.drawable.ic_next
             )
         )
+
+        // Calculate and set the next 6 days' dates as dateview1
+        for (i in 1..6) {
+            val nextDate = selectedDate.plusDays(i.toLong())
+            val nextDateStr = nextDate.format(dateFormatter)
+            cardViewItems.add(
+                CardViewItems(
+                    nextDateStr,
+                    R.drawable.ic_appointments,
+                    null,
+                    "No Appointments",
+                    null,
+                    null
+                )
+            )
+        }
+
+        // Set visibility to GONE for DoctorNameTextView and HosptailNameTextView and noAppointmentsTextView
+        cardViewItems.forEach { item ->
+            if (item.DoctorNameTextView.isNullOrEmpty()) {
+                item.DoctorNameTextView = null
+            }
+            if (item.HosptailNameTextView.isNullOrEmpty()) {
+                item.HosptailNameTextView = null
+            }
+            if (item.noAppointmentsTextView.isNullOrEmpty()) {
+
+                item.noAppointmentsTextView = null
+            }
+        }
         cardViewAdapter.notifyDataSetChanged()
     }
+
     fun getWeekPageTitle(week: Week): String {
         val firstDate = week.days.first().date
         val lastDate = week.days.last().date

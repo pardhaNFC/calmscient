@@ -11,6 +11,7 @@
 
 package com.calmscient.activities
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
@@ -23,11 +24,15 @@ import com.calmscient.fragments.DiscoveryFragment
 import com.calmscient.fragments.ExerciseFragment
 import com.calmscient.fragments.HomeFragment
 import com.calmscient.fragments.RewardsFragment
+import com.calmscient.utils.ContextUtils
+import com.calmscient.utils.common.SavePreferences
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import java.util.Locale
 
 class DashboardActivity : AppCompatActivity() {
     lateinit var bottomNav: BottomNavigationView
+    lateinit var savePrefData: SavePreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
@@ -35,6 +40,7 @@ class DashboardActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        savePrefData = SavePreferences(this)
         bottomNav = findViewById(R.id.bottomNavigationView) as BottomNavigationView
         bottomNav.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
         bottomNav.itemIconTintList = null
@@ -53,9 +59,9 @@ class DashboardActivity : AppCompatActivity() {
 
         bottomNav.setOnItemSelectedListener {
             bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.ic_home)
-            bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.ic_discovery)
-            bottomNav.menu.findItem(R.id.exercises).setIcon(R.drawable.ic_exercises)
-            bottomNav.menu.findItem(R.id.rewards).setIcon(R.drawable.ic_rewards)
+            bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.ic_discovery_un)
+            bottomNav.menu.findItem(R.id.exercises).setIcon(R.drawable.ic_exercises_un)
+            bottomNav.menu.findItem(R.id.rewards).setIcon(R.drawable.ic_rewards_un)
             when (it.itemId) {
                 R.id.home -> {
                     it.setIcon(R.drawable.ic_home_selected)
@@ -90,6 +96,11 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
 
+   /* override fun attachBaseContext(newBase: Context?) {
+            val localeToSwitch = Locale("es")
+            val localeUpdatedContext = newBase?.let { ContextUtils.updateLocale(it, localeToSwitch) }
+        super.attachBaseContext(newBase)
+    }*/
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)

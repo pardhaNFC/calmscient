@@ -14,11 +14,12 @@
 
         <!-- ExoPlayerView -->
         <com.google.android.exoplayer2.ui.PlayerView
-            android:id="@+id/playerView"
+            android:id="@+id/playerViewLayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_300sdp"
             android:layout_centerInParent="true"
-            app:resize_mode="fill"
+            app:resize_mode="fit"
+            app:show_buffering="always"
             app:use_controller="true" />
 
         <!-- Back Icon -->
@@ -63,18 +64,16 @@
         <!-- Orientation Icon -->
         <ImageButton
             android:id="@+id/orientationBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginRight="@dimen/_10sdp"
             android:background="@android:color/transparent"
             android:contentDescription="Orientation"
+            android:padding="@dimen/_10sdp"
             android:src="@drawable/ic_orientation_icon"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
     </RelativeLayout>
 
@@ -84,25 +83,49 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/headingTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lexendsemibold"
-            android:padding="16dp"
-            android:textColor="#424242"
-            android:textSize="@dimen/_14sdp" />
+        <!-- <TextView
+             android:id="@+id/headingTextView"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/custom_fonts"
+             android:padding="16dp"
+             android:textColor="#424242"
+             android:textSize="@dimen/_14sdp" />-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/headingTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexendsemibold"
+                android:padding="16dp"
+                android:textColor="#424242"
+                android:textSize="@dimen/_14sdp" />
+
+            <ImageView
+                android:id="@+id/informationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/headingTextView"
+                android:layout_margin="@dimen/_5sdp"
+                android:clickable="true"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_information" />
+        </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/summaryTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
-                android:fontFamily="@font/lexendregular"
                 android:layout_marginHorizontal="@dimen/_10sdp"
+                android:fontFamily="@font/lexendregular"
+                android:justificationMode="inter_word"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_12sdp" />
         </ScrollView>

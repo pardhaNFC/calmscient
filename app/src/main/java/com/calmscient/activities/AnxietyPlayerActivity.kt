@@ -10,6 +10,7 @@
  */
 
 package com.calmscient.activities
+import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.net.Uri
@@ -29,6 +30,8 @@ import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GestureDetectorCompat
 import com.calmscient.R
+import com.google.android.exoplayer2.ui.PlayerView
+
 class AnxietyPlayerActivity: AppCompatActivity(),
     GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
 
@@ -36,6 +39,7 @@ class AnxietyPlayerActivity: AppCompatActivity(),
     private lateinit var mediaController: MediaController
     private lateinit var gestureDetector: GestureDetectorCompat
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
@@ -43,7 +47,7 @@ class AnxietyPlayerActivity: AppCompatActivity(),
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        videoView = findViewById(R.id.playerView)
+        videoView = findViewById(R.id.playerViewLayout)
 
         // Retrieve the content Uri from the intent extras
         /*val contentUri = intent.getParcelableExtra<Uri>("contentUri")
@@ -82,6 +86,7 @@ class AnxietyPlayerActivity: AppCompatActivity(),
     }
 
     override fun onBackPressed() {
+        videoView.stopPlayback()
         if (supportFragmentManager.backStackEntryCount > 0) {
             supportFragmentManager.popBackStack()
         } else {
@@ -132,7 +137,6 @@ class AnxietyPlayerActivity: AppCompatActivity(),
 
         val duration = videoView.duration
         val finalPosition = newPosition.coerceIn(0, duration)
-
         videoView.seekTo(finalPosition)
 
         // Show overlay message

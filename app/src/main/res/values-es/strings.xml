@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Calmscient</string>
+    <string name="splash_science">La ciencia de la calma</string>
     <string name="welcome_message">¡Bienvenido a mi aplicación!</string>
     <string name="username">Nombre de usuario</string>
     <string name="password">Contraseña</string>
@@ -9,6 +10,7 @@
     <string name="create_new_account">Crear una nueva cuenta</string>
     <string name="or">o</string>
     <string name="happy_to_see_you">estamos felices de verte</string>
+    <string name="hello">Hola</string>
     <string name="home">Hogar</string>
     <string name="discovery">DESCUBRIMIENTO</string>
     <string name="discovery_lower">Descubrimiento</string>
@@ -20,34 +22,46 @@
     <string name="weekly_summary">Resumen semanal</string>
     <string name="favorites">Favoritos</string>
     <string name="need_to_talk">¿Necesitas hablar con alguien?</string>
-    <string name="good_morning"><b>Buen día!</b></string>
-    <string name="good_afternoon"><b>Buenas tardes!</b></string>
-    <string name="good_evening"><b>Good Evening!</b></string>
+    <string name="good_morning"><b>¡Buenos Días!</b></string>
+    <string name="good_afternoon"><b>Buenas Tardes!</b></string>
+    <string name="good_evening"><b>¡Buenas Noches!</b></string>
     <string name="mood_right_now">¿Cómo está tu estado de ánimo en este momento?</string>
-    <string name="take_medic_morning">¿Tomó sus medicamentos esta mañana?</string>
+    <string name="take_medic_morning">¿Tomaste tus medicamentos esta maňaňa?</string>
     <string name="hours_night">¿Cuántas horas dormiste anoche?</string>
-    <string name="day_today">¿Cómo estuvo su día?</string>
-    <string name="bad">MALO</string>
+    <string name="day_today">¿Cómo te ha ido?</string>
+    <string name="bad">MAL</string>
     <string name="be_better">PODRÍA SER MEJOR</string>
     <string name="fair">JUSTO</string>
     <string name="good">Bueno</string>
     <string name="excellent">EXCELENTE</string>
-    <string name="spend_time">¿Con quién pasas el tiempo?</string>
+    <string name="spend_time">Con quién pasate tiempo?</string>
     <string name="family">FAMILIA</string>
     <string name="friends">AMIGOS</string>
     <string name="workmates">COMPAÑEROS DE TRABAJO</string>
     <string name="others">OTROS</string>
     <string name="alone">SOLO</string>
-    <string name="take_medic_evening">¿Tomó sus medicamentos esta noche?</string>
+    <string name="take_medic_evening">¿Tomaste tus medicamentos esta noche?</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="daily_journal">Diario</string>
-    <string name="save">Ahorrar</string>
-    <string name="skip">SALTAR</string>
+    <string name="save">GUARDAR</string>
+    <string name="skip">PASAR</string>
     <string name="medications">medicamentos</string>
     <string name="upcoming_medical_appointments">Próximas Citas Médicas</string>
     <string name="screenings">Proyecciones</string>
-
+    <!--settings-->
+    <string name="settings">Configuración</string>
+    <string name="profile">Perfil</string>
+    <string name="theme">Aspecto</string>
+    <string name="dark_mode">Oscuro</string>
+    <string name="language">Idioma</string>
+    <string name="english">Ingles</string>
+    <string name="spanish">Espanol</string>
+    <string name="asl">Hanbla de Seňa</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="license_key">Licencia</string>
+    <string name="help_support">Ayuda &amp; Apoyo</string>
+    <string name="logout">cerrar sesión</string>
     <!--network errors-->
     <string name="network_connection_error">Se perdió la conexión a Internet, vuelva a intentarlo</string>
     <string name="network_default_error">Ocurrió algo incorrecto, inténtalo de nuevo</string>
@@ -57,7 +71,7 @@
     <string name="network_invalidation_error">El nombre de usuario o la contraseña son incorrectos, vuelva a intentarlo</string>
     <string name="server_connection_error">No se puede conectar, inténtalo de nuevo</string>
     <string name="network_login_again">Inicie sesión de nuevo</string>
-    <string name="settings">AJUSTES</string>
+
     <string name="strAlertMessage_Something">Algo no está bien aquí inténtalo de nuevo más tarde</string>
     <string name="title_activity_home_fragment">Algo no está bien aquí inténtalo de nuevo más tarde</string>
 
@@ -67,9 +81,9 @@
 
     <string name="add_medications">Agregar medicamentos</string>
     <string name="alarm">Alarma</string>
-    <string name="schedule_time_and_alarm">Tiempo programado &amp; Alarma</string>
-    <string name="with_meal">Con la comida</string>
-    <string name="time">Tiempo</string>
+    <string name="schedule_time_and_alarm">Configurar La Hora y Alarma</string>
+    <string name="with_meal">Con alimentos</string>
+    <string name="time">Hora</string>
     <string name="morning">Mañana</string>
     <string name="evening">Noche</string>
     <string name="cancel">Cancelar</string>
@@ -90,6 +104,8 @@
     <string name="trevor_heading">El Proyecto Trevor</string>
     <string name="trevor_text">Llama al <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> oenvía START al <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.Una línea nacional de ayuda confidencial, gratuita y disponible las 24 horas para jóvenes LGBTQ en riesgo de suicidio.
 </string>
+    <string name="doctor_name1"><b>Dra. Hannah Johnson</b></string>
+    <string name="no_appointments">Sin citas</string>
     <string name="trans_helpline_heading">Línea de vida trans</string>
     <string name="trans_helpline_text">Marque <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> para EE. UU. y<u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> para Canadá.La línea directa de Trans Lifeline es un servicio de apoyo entre pares administrado por personas trans, para personas trans y personas que preguntan.
 </string>
@@ -103,11 +119,16 @@
     <string name="stress">Cambiar tu respuesta al estrés</string>
     <string name="control">Tomando el control</string>
     <string name="next_appointments">Próximas citas</string>
+    <string name="date_time">Fecha y Hora</string>
+    <string name="contact">Contacto</string>
+    <string name="address">Dirección</string>
+    <string name="appointments_details">Detalles de la Cita</string>
     <string name="your_history">Historia</string>
     <string name="your_results">Tus resultados</string>
     <string name="summary_takingcontrol">Resumen</string>
     <!--Anxiety-->
     <string name="manage_anxiety">Manejar la ansiedad</string>
+    <string name="managing_anxiety">Manejar la ansiedad</string>
     <string name="introduction">Introducción</string>
     <string name="glossary">Glosario</string>
     <string name="terms">Aceptar <b><u>terminos y condiciones</u></b></string>
@@ -125,4 +146,23 @@
     <string name="page_1.1">¿SABÍAS?</string>
     <string name="page_2.1">¿Qué es la ansiedad?</string>
     <string name="page_7.1"><font color="#6E6BB3">Si una persona pudiera simplemente “recordar” experiencias pasadas,</font></string>
+
+    <string name="lesson1_video1_description">
+   Nuestro cerebro es como una computadora. Tiene un sistema operativo básico que nos ayuda a afrontar las tareas normales del día a día y las complejidades de la vida. Pero cuando detecta una amenaza que puede interrumpir o dañar el funcionamiento normal, se activa una alarma que inmediatamente nos alerta del peligro.\n\n
+    Puedes imaginar por qué esta “Alerta de Amenaza” en nuestro sistema nervioso siempre tiene prioridad. Es para que podamos volver a las operaciones normales lo más rápido posible. Cuando se activa este sistema de amenazas, se activan respuestas de estrés como Luchar/Huir/Congelar. Las hormonas del estrés, como la adrenalina y el cortisol, inundan nuestro sistema para afrontar las exigencias del peligro. Emociones intensas, como ansiedad, miedo y sentirse abrumado, pueden apoderarse de nuestra mente.\n\n
+    Es comprensible que las funciones cerebrales generales se ralenticen o queden “en espera” hasta que se solucione el peligro. Por eso podemos sentir que nuestra capacidad de pensamiento disminuye cuando experimentamos ansiedad. Nuestro sistema de "Alerta de Amenaza" es una parte importante de nuestra función cerebral, pero cuando está constantemente activo, disfrutar de la vida o tener un sentido pleno de uno mismo se vuelve difícil e incluso puede parecer fuera de nuestro alcance.\n\n
+    ¿Cuáles son algunas de las cosas que pueden activar nuestro sistema de “Alerta de Amenazas”? Pueden ser:\n
+    …la idea de que podríamos encontrarnos con situaciones o personas que nos amenazaron en el pasado.\n
+    …riesgos desconocidos, cambios desconocidos o resultados desconocidos a la hora de tomar una decisión.\n
+    …enfrentarnos a una situación desafiante que creemos que no tenemos suficientes habilidades o apoyo para superar.\n\n
+    Recuerde: la ansiedad es una respuesta cerebral normal al estrés. ¡Nuestro sistema nervioso no está roto y no nos pasa nada cuando nos sentimos ansiosos! Aprender a controlarlo es una habilidad importante y poderosa que podemos dominar para mantener las situaciones estresantes en su lugar.\n
+</string>
+    <string name="lesson4_video1_description">
+               Una mente tranquila sólo puede comenzar con un cuerpo tranquilo. ¿Por qué es eso?\n\n
+        Recuerde: la ansiedad es la respuesta de nuestro cuerpo al peligro, ya sea real o imaginario. Entonces, si podemos controlar nuestro cuerpo, podemos evitar que nuestra mente responda con una preocupación y cavilación abrumadoras.\n\n
+        El comienzo mismo de la ansiedad comienza con las "sensaciones corporales". En cuanto los percibamos, aprenderemos a “pulsar pausa”, por así decirlo. Nuestro objetivo es reducir nuestras hormonas del estrés y esto dará como resultado la estabilización de nuestro sistema nervioso.\n
+        Algunas de las mejores técnicas incluyen ejercicios de respiración consciente, relajación muscular progresiva, movimiento corporal e instalación de recursos.\n\n
+        Estos ejercicios calmarán su respuesta al estrés y le brindarán el espacio para manejar los pensamientos ansiosos y desarrollar comportamientos saludables. Esto resultará en una mejora física y emocional.\n\n
+        ¿Por qué no practicas algunos de estos ejercicios durante diez minutos cada mañana o justo antes de acostarte? La clave es la constancia para que tu cuerpo aprenda lo que se siente al tener un sistema nervioso tranquilo.\n\n
+</string>
 </resources>

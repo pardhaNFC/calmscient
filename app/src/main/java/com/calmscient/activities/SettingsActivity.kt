@@ -20,17 +20,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.calmscient.R
 import com.calmscient.databinding.ActivitySettingsBinding
+import com.calmscient.utils.common.SavePreferences
 import com.calmscient.utils.getColorCompat
 
 class SettingsActivity : AppCompatActivity(), View.OnClickListener {
     private var currentClickedLayoutId: Int = R.id.English // Initialize with the ID of English layout
     private var isFirstTime = true // Flag to determine if it's the first time onResume is called
     lateinit var  binding : ActivitySettingsBinding
+    lateinit var savePrefData: SavePreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        savePrefData = SavePreferences(this)
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
@@ -71,6 +74,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
                 binding.tvEnglish.setTextColor(this.getColorCompat(R.color.white))
                 binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
                 binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
+                savePrefData.setEngLanguageState(true)
             }
             R.id.Spanish -> {
                 // Code to handle click on Spanish layout
@@ -78,6 +82,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
                 binding.tvSpanish.setTextColor(this.getColorCompat(R.color.white))
                 binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
                 binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
+                savePrefData.setSpanLanguageState(true)
             }
             R.id.ASL -> {
                 // Code to handle click on ASL layout
@@ -85,6 +90,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
                 binding.tvAsl.setTextColor(this.getColorCompat(R.color.white))
                 binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
                 binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
+                savePrefData.setAslLanguageState(true)
             }
         }
     }

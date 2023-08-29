@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/videoFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ExoPlayerView -->
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:resize_mode="fill"
+            app:use_controller="true" />
+
+        <!-- Back Icon -->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <!-- Favorites Icon -->
+        <ImageButton
+            android:id="@+id/favoritesIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Favorites"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_favorites_icon" />
+
+        <!-- Play/Pause Icon -->
+        <!--<ImageButton
+            android:id="@+id/playPauseIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="Play/Pause"
+            android:src="@drawable/ic_play_icon" />
+-->
+        <!-- Orientation Icon -->
+        <ImageButton
+            android:id="@+id/orientationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+           android:layout_alignParentBottom="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Orientation"
+            android:src="@drawable/ic_orientation_icon"
+            android:visibility="visible"
+            android:padding="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+</LinearLayout>

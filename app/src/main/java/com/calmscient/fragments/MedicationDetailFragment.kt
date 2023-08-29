@@ -50,21 +50,24 @@ class MedicationDetailFragment : Fragment(),
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMedicationDetailBinding.inflate(inflater, container, false)
-        binding.idSwitch1.labelOn = "Yes"
-        binding.idSwitch1.labelOff = "No"
-        binding.idSwitch2.labelOn = "Yes"
-        binding.idSwitch2.labelOff = "No"
+        binding.alarmToggleButtonMorning.labelOn = "Yes"
+        binding.alarmToggleButtonMorning.labelOff = "No"
+        binding.alarmToggleButtonAfternoon.labelOn = "Yes"
+        binding.alarmToggleButtonAfternoon.labelOff = "No"
+
+        binding.alarmToggleButtonEvening.labelOn = "Yes"
+        binding.alarmToggleButtonEvening.labelOff = "No"
         binding.backIcon.setOnClickListener {
             loadFragment(CalendarFragment())
         }
 
-        binding.morningCalendar.setOnClickListener {
+       /* binding.morningCalendar.setOnClickListener {
             showMorningTimeAndAlarmDialog()
         }
 
         binding.eveningCalendar.setOnClickListener {
             showEveningTimeAndAlarmDialog()
-        }
+        }*/
         return binding.root;
         // return inflater.inflate(R.layout.fragment_medication_detail, container, false)
     }
@@ -98,8 +101,8 @@ class MedicationDetailFragment : Fragment(),
                 "Morning" -> {
                     morningTime = time
                     morningAlarm = alarm
-                    binding.morningTime.text = morningTime
-                    binding.morningAlarm.text = morningAlarm
+                    binding.morningTimeView.text = morningTime
+                    binding.morningAlarmTimeView.text = morningAlarm
                     if (isMorningAlarmOn) {
                         scheduleAlarm(morningAlarm, "Morning")
                     } else {
@@ -110,8 +113,8 @@ class MedicationDetailFragment : Fragment(),
                 "Evening" -> {
                     eveningTime = time
                     eveningAlarm = alarm
-                    binding.eveningTime.text = eveningTime
-                    binding.eveningAlarm.text = eveningAlarm
+                    binding.eveningTimeView.text = eveningTime
+                    binding.eveningAlarmTimeView.text = eveningAlarm
                     if (isEveningAlarmOn) {
                         scheduleAlarm(eveningAlarm, "Evening")
                     } else {
@@ -130,8 +133,8 @@ class MedicationDetailFragment : Fragment(),
                 "Morning" -> {
                     morningTime = time
                     morningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
-                    binding.morningTime.text = morningTime
-                    binding.morningAlarm.text = morningAlarm
+                    binding.morningTimeView.text = morningTime
+                    binding.morningAlarmTimeView.text = morningAlarm
                     if (isMorningAlarmOn) {
                         scheduleAlarm(morningAlarm, "Morning")
                     } else {
@@ -142,8 +145,8 @@ class MedicationDetailFragment : Fragment(),
                 "Evening" -> {
                     eveningTime = time
                     eveningAlarm = SimpleDateFormat("HH:mm").format(calendar.time)
-                    binding.eveningTime.text = eveningTime
-                    binding.eveningAlarm.text = eveningAlarm
+                    binding.eveningTimeView.text = eveningTime
+                    binding.eveningAlarmTimeView.text = eveningAlarm
                     if (isEveningAlarmOn) {
                         scheduleAlarm(eveningAlarm, "Evening")
                     } else {

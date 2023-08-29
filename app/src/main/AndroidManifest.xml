@@ -116,6 +116,7 @@
             android:name=".activities.PlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.GlossaryActivity"

@@ -12,6 +12,7 @@
 package com.calmscient.activities
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -26,6 +27,8 @@ import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
 import com.calmscient.fragments.UserMoodFragment
+import com.calmscient.utils.ContextUtils
+import java.util.Locale
 
 
 class LoginActivity : AppCompatActivity() {
@@ -90,7 +93,11 @@ class LoginActivity : AppCompatActivity() {
             false
         }
     }
-
+    /*override fun attachBaseContext(newBase: Context?) {
+        val localeToSwitch = Locale("es")
+        val localeUpdatedContext = newBase?.let { ContextUtils.updateLocale(it, localeToSwitch) }
+        super.attachBaseContext(newBase)
+    }*/
     private fun navigateToDayScreen() {
         startActivity(Intent(this, UserMoodActivity::class.java))
     }

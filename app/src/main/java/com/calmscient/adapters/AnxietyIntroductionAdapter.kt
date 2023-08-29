@@ -85,6 +85,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             intent.putExtra("mediaResourceId", cardItem.audioResourceId)
                             intent.putExtra("heading", cardItem.heading)
                             intent.putExtra("summary", cardItem.summary)
+                            intent.putExtra("dialogText", cardItem.dialogText)
                             context.startActivity(intent)
                         } else {
                             Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
@@ -108,6 +109,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                             intent.putExtra("heading", cardItem.heading)
                             intent.putExtra("summary", cardItem.summary)
+                            intent.putExtra("dialogText", cardItem.dialogText)
                             context.startActivity(intent)
                         } else {
                             Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
