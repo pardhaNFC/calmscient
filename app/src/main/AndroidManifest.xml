@@ -44,72 +44,72 @@
         <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.DashboardActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.AnxietyQuestionsActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:label="Anxiety Introduction"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.WeeklySummary"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:label="WeeklySummary Activity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.LoginActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity android:name=".base.BaseActivity" />
         <activity
             android:name=".activities.MedicationsActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:label="Medications"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.BeginManageAnxietyActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.ManageAnxietyActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.AnxietyPlayerActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.CalendarViewActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:label="CalendarActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.SettingsActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:exported="false"
             android:label="SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.LearnMoreWebviewActivity"
-            android:configChanges="orientation"
+            android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
@@ -120,7 +120,7 @@
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.GlossaryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:configChanges="keyboardHidden|locale|orientation|screenSize"
             android:exported="false"
             android:theme="@style/Theme.NoActionBar" />
         <receiver

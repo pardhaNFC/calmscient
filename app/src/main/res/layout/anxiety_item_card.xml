@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_9sdp"
+    android:layout_marginTop="@dimen/_10sdp"
     android:orientation="vertical"
     app:cardCornerRadius="10dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/anxietyCard"
-        android:layout_width="160dp"
-        android:layout_height="110dp"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_90sdp"
         app:cardCornerRadius="10dp"
         app:cardElevation="@dimen/_10sdp">
 
@@ -31,8 +32,8 @@
                 android:id="@+id/tickImageView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_95sdp"
-                android:padding="8dp"
+                android:layout_marginLeft="@dimen/_80sdp"
+                android:padding="@dimen/_10sdp"
                 android:src="@drawable/ic_anixity_tick" />
 
             <TextView

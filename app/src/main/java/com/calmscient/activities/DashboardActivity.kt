@@ -89,6 +89,7 @@ class DashboardActivity : AppCompatActivity() {
                     it.setIcon(R.drawable.ic_rewards_selected)
                     true
                 }
+
                 else -> {
                     false
                 }
@@ -96,11 +97,11 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
 
-   /* override fun attachBaseContext(newBase: Context?) {
-            val localeToSwitch = Locale("es")
-            val localeUpdatedContext = newBase?.let { ContextUtils.updateLocale(it, localeToSwitch) }
-        super.attachBaseContext(newBase)
-    }*/
+    /* override fun attachBaseContext(newBase: Context?) {
+             val localeToSwitch = Locale("es")
+             val localeUpdatedContext = newBase?.let { ContextUtils.updateLocale(it, localeToSwitch) }
+         super.attachBaseContext(newBase)
+     }*/
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)

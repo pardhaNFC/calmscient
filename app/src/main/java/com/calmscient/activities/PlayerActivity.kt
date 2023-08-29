@@ -125,11 +125,26 @@ class PlayerActivity : AppCompatActivity(){
             // Initialize your landscape layout-specific control setup here
             initializeBinding()
             initializeVideoControl()
-
-
         }
+    }
+    override fun onPause() {
+        super.onPause()
+        playerView.player!!.playWhenReady = false;
 
+    }
 
+    override fun onStop() {
+        super.onStop()
+        playerView.player!!.release()
+    }
+    override fun onResume() {
+        super.onResume()
+        playerView.player!!.playWhenReady = true
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        playerView.player!!.playbackState
     }
     private fun initializeBinding() {
         findViewById<ImageButton>(R.id.orientationBtn).setOnClickListener {

@@ -12,16 +12,20 @@
 package com.calmscient.activities
 
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.calmscient.R
 import com.calmscient.databinding.ActivitySettingsBinding
 import com.calmscient.utils.common.SavePreferences
 import com.calmscient.utils.getColorCompat
+import java.util.Locale
+
 
 class SettingsActivity : AppCompatActivity(), View.OnClickListener {
     private var currentClickedLayoutId: Int = R.id.English // Initialize with the ID of English layout
@@ -64,6 +68,17 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
             isFirstTime = false
         }
     }
+    fun setLocale(lang: String?) {
+        val myLocale = lang?.let { Locale(it) }
+        val res: Resources = resources
+        val dm: DisplayMetrics = res.getDisplayMetrics()
+        val conf: Configuration = res.getConfiguration()
+        conf.locale = myLocale
+        res.updateConfiguration(conf, dm)
+        val refresh = Intent(this, SettingsActivity::class.java)
+        finish()
+        startActivity(refresh)
+    }
 
     override fun onClick(v: View?) {
         // Handle click events here
@@ -75,6 +90,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
                 binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
                 binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
                 savePrefData.setEngLanguageState(true)
+                setLocale("en")
             }
             R.id.Spanish -> {
                 // Code to handle click on Spanish layout
@@ -83,6 +99,7 @@ class SettingsActivity : AppCompatActivity(), View.OnClickListener {
                 binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
                 binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
                 savePrefData.setSpanLanguageState(true)
+                setLocale("es")
             }
             R.id.ASL -> {
                 // Code to handle click on ASL layout

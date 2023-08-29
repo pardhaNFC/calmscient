@@ -20,6 +20,7 @@
             android:layout_centerInParent="true"
             app:resize_mode="fit"
             app:show_buffering="always"
+            app:buffered_color="@color/example_7_button"
             app:use_controller="true" />
 
         <!-- Back Icon -->
