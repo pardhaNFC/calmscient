@@ -22,7 +22,7 @@ import com.calmscient.data.remote.Task
 import com.calmscient.databinding.LayoutGlossaryBinding
 
 
-class GlossaryActivity : AppCompatActivity() {
+class GlossaryActivity : AppCompat() {
     lateinit var binding: LayoutGlossaryBinding
     private val glossaryAdapter = GlossaryAdapter(mutableListOf())
     private val tasks = listOf(

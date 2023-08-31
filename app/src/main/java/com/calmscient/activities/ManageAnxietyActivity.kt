@@ -27,7 +27,7 @@ import com.calmscient.data.remote.ItemType
 import com.calmscient.databinding.ActivityManageAnxietyBinding
 import com.calmscient.fragments.DiscoveryFragment
 
-class ManageAnxietyActivity : AppCompatActivity() {
+class ManageAnxietyActivity : AppCompat() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityManageAnxietyBinding.inflate(layoutInflater)

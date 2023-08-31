@@ -38,6 +38,7 @@
                 android:layout_gravity="top|center_horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="70dp"
+                android:fontFamily="@font/lexendregular"
                 android:layout_marginBottom="20dp"
                 android:text="@string/settings"
                 android:textColor="#000000"
@@ -100,6 +101,7 @@
                 android:layout_gravity="top|center_vertical"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/profile"
                 android:textColor="#000000"
                 android:textSize="@dimen/_13sdp" />
@@ -133,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/theme"
@@ -145,6 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="33dp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/dark_mode"
                 android:textColor="#6E6BB3"
                 android:textSize="12sp" />
@@ -188,6 +192,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/language"
@@ -321,7 +326,24 @@
                     android:textColor="#000000"
                     android:textSize="10sp" />
             </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:background="@drawable/white_circle"
+                android:layout_gravity="center">
 
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/progressBar_AV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:indicatorColor="@color/colorPrimaryDark"
+                    app:indicatorName="BallClipRotatePulseIndicator" />
+            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/Spanish"
                 android:layout_width="wrap_content"
@@ -416,6 +438,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="@string/notifications"
@@ -452,6 +475,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:text="@string/license_key"
@@ -487,6 +511,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="@string/help_support"
@@ -523,6 +548,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="@string/logout"
@@ -535,6 +561,7 @@
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:background="@color/viewbackgroundcolor" />
-        
+
     </LinearLayout>
+
 </LinearLayout>

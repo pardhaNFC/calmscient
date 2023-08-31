@@ -45,4 +45,13 @@ class SavePreferences(context:Context) {
         val state:Boolean = sharedPreferences.getBoolean("asl",false)
         return (state)
     }
+    fun setLanguageMode(languageMode: String?) {
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+        editor.putString("lang", languageMode!!)
+        editor.apply()
+    }
+    fun getLanguageMode():String? {
+        val langM:String? = sharedPreferences.getString("lang","")
+        return (langM)
+    }
 }

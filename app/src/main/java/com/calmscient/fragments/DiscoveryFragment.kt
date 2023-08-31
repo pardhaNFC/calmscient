@@ -14,6 +14,7 @@ package com.calmscient.fragments
 import android.content.Intent
 import androidx.fragment.app.Fragment
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -79,6 +80,7 @@ class DiscoveryFragment : Fragment() {
         transaction.addToBackStack(null)
         transaction.commit()
     }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

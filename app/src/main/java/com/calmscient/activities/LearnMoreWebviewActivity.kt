@@ -39,7 +39,7 @@ import com.calmscient.R
 import java.io.File
 import java.io.IOException
 
-class LearnMoreWebviewActivity : AppCompatActivity() {
+class LearnMoreWebviewActivity : AppCompat() {
     private var toolbar: Toolbar? = null
     private var webView_learn: WebView? = null
     private var icBack: ImageView? = null

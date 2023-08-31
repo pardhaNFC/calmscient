@@ -11,26 +11,18 @@
 
 package com.calmscient.activities
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
-import com.calmscient.fragments.ExerciseFragment
 import com.calmscient.fragments.HomeFragment
-import com.calmscient.fragments.RewardsFragment
-import com.calmscient.utils.ContextUtils
 import com.calmscient.utils.common.SavePreferences
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
-import java.util.Locale
 
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : AppCompat() {
     lateinit var bottomNav: BottomNavigationView
     lateinit var savePrefData: SavePreferences
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -17,7 +17,7 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.calmscient.databinding.LayoutBeginanxietyBinding
 
-class BeginManageAnxietyActivity : AppCompatActivity() {
+class BeginManageAnxietyActivity : AppCompat() {
     lateinit var binding: LayoutBeginanxietyBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -43,9 +43,4 @@ class MainActivity : ComponentActivity() {
         tv_welcome.setText(greeting)
     }
 
-    fun setLanguage(languageCode: String) {
-        LocaleHelper.setLocale(this, languageCode)
-        tv_welcome.setText(R.string.welcome_message)
-    }
-
 }
