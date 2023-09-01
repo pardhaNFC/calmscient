@@ -27,7 +27,7 @@ import com.calmscient.databinding.ActivityMakeAplanBinding
 import com.calmscient.databinding.ManageanxietyQuestionsBinding
 import com.calmscient.fragments.DiscoveryFragment
 
-class MakeAPlanActivity : AppCompat() {
+class MakeAPlanActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMakeAplanBinding
 
     private lateinit var anxietyadapter: AnxietyQuestionsAdapter
@@ -117,9 +117,12 @@ class MakeAPlanActivity : AppCompat() {
                 null,
                 getString(R.string.make_plan_card1_text1),
                 null,
-                R.drawable.ic_anxietyquestion_image,
+                null,
+                null,
+                R.drawable.plan1,
+                null,
                 getString(R.string.make_plan_card1_text2),
-                null
+                null,
             )
         );
         anxietyText.add(
@@ -127,79 +130,103 @@ class MakeAPlanActivity : AppCompat() {
                 null,
                 null,
                 null,
-                R.drawable.ic_anxietyquestion_image,
+                null,
+                null,
+                R.drawable.plan2,
+                null,
+                getString(R.string.make_plan_card2_text1),
                 getString(R.string.make_plan_card2_text2),
-                null
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
+                null,
                 getString(R.string.make_plan_card3_text1),
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
                 getString(R.string.make_plan_card3_text2),
-                null
+                null,
+                R.drawable.plan3,
+                null,
+                getString(R.string.make_plan_card3_text3),
+                null,
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
+                null,
                 getString(R.string.make_plan_card4_text1),
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
                 getString(R.string.make_plan_card4_text2),
-                null
+                null,
+                R.drawable.plan4,
+                null,
+                getString(R.string.make_plan_card4_text3),
+                null,
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
+                null,
                 getString(R.string.make_plan_card5_text1),
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
                 getString(R.string.make_plan_card5_text2),
-                null
+                null,
+                R.drawable.plan5,
+                null,
+                getString(R.string.make_plan_card5_text3),
+                null,
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
+                null,
                 getString(R.string.make_plan_card6_text1),
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
                 getString(R.string.make_plan_card6_text2),
-                null
+                null,
+                R.drawable.plan6,
+                null,
+                getString(R.string.make_plan_card6_text3),
+                null,
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
+                null,
                 getString(R.string.make_plan_card7_text1),
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
                 getString(R.string.make_plan_card7_text2),
-                null
+                null,
+                R.drawable.plan7,
+                null,
+                getString(R.string.make_plan_card7_text3),
+                null,
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
+                null,
                 getString(R.string.make_plan_card8_text1),
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
                 getString(R.string.make_plan_card8_text2),
-                null
+                null,
+                R.drawable.plan8,
+                null,
+                getString(R.string.make_plan_card8_text3),
+                null,
             )
         );
         anxietyText.add(
             AnxietyTextDataClass(
-                getString(R.string.make_plan_card9_text1),
-                getString(R.string.make_plan_card9_text2),
                 null,
-                R.drawable.ic_anxietyquestion_image,
+                null,
+                getString(R.string.make_plan_card9_text1),
+                getString(R.string.make_plan_card9_text2) ,
+                null,
+                R.drawable.plan9,
+                null,
                 getString(R.string.make_plan_card9_text3),
-                null
+                null,
             )
         );
 

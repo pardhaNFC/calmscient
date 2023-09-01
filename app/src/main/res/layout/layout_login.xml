@@ -88,6 +88,8 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="@color/colorPrimaryDark"
                     android:checked="true"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/lexendlight"
                     android:text="@string/terms" />
 
                 <TextView
@@ -117,7 +119,7 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium" />
         </LinearLayout>
 
         <LinearLayout
@@ -141,10 +143,10 @@
                     android:id="@+id/forgot_pass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lexendmedium"
+                    android:fontFamily="@font/lexendlight"
                     android:text="@string/forgot_password"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_13sdp" />
 
             </LinearLayout>
 
@@ -158,10 +160,10 @@
                     android:id="@+id/new_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/lexendmedium"
+                    android:fontFamily="@font/lexendlight"
                     android:text="@string/create_new_account"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12sdp" />
+                    android:textSize="@dimen/_13sdp" />
 
             </LinearLayout>
 

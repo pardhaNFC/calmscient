@@ -35,10 +35,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:fontFamily="@font/lexendregular"
                 android:gravity="center"
                 android:text="@string/managing_anxiety"
                 android:textColor="#424242"
-                android:textSize="25sp"
+                android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -67,10 +68,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lexendsemibold"
+                android:fontFamily="@font/lexendregular"
                 android:text="Introduction"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -85,15 +86,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lexendsemibold"
+                android:fontFamily="@font/lexendregular"
                 android:text="Lesson 1"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -109,6 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_3sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
@@ -117,7 +120,7 @@
                 android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 2"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -132,6 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_3sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
@@ -140,7 +144,7 @@
                 android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 3"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -155,6 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_3sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
@@ -163,7 +168,7 @@
                 android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 4"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -178,6 +183,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_3sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
@@ -186,7 +192,7 @@
                 android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 5"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -201,6 +207,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_3sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
@@ -209,7 +216,7 @@
                 android:fontFamily="@font/lexendsemibold"
                 android:text="Lesson 6"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -225,6 +232,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/_3sdp"
             android:padding="@dimen/_4sdp">
 
             <TextView
@@ -233,7 +241,7 @@
                 android:fontFamily="@font/lexendsemibold"
                 android:text="Additional Resource"
                 android:textColor="#424242"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_16sdp"
                 android:layout_marginLeft="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView

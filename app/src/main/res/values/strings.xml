@@ -96,7 +96,7 @@
     <string name="anxiety">Managing anxiety</string>
     <string name="stress">Changing your response to stress</string>
     <string name="control">Taking control</string>
-    <string name="terms">Accept <b><u>Terms and Conditions</u></b></string>
+    <string name="terms">Accept <u>Terms and Conditions</u></string>
     <!--Emergency Resource Page strings-->
     <string name="emergency_resource">Emergency Resource</string>
     <string name="doctor_name">Dr. Samuel Parker</string>
@@ -219,6 +219,47 @@
     <string name="bodymovementexercise_text">There are many movement routines that invite you to reconnect with your body. Pilates, yoga and other similar stretching exercises incorporate mindful awareness of movements and postures. Additionally, coordinating body movement and breath further potentiates your ability to shift your state.</string>
     <!--deepBreathingExercise-->
     <string name="deepbreathingexercise_text">Find a comfortable and quiet place to sit or lie down. You can also practice deep breathing while standing, but ensure you have proper balance and support. </string>
+    <!--Anxiety cards introduction 1 -->
+    <string name="anxiety_card1_text1">DID YOU KNOW?</string>
+    <string name="anxiety_card1_text2">An estimated <font color="#6E6BB3">31.1% of U.S. adults</font> experience any anxiety disorder at some time in their lives.</string>
+    <string name="anxiety_card1_text3">You’re not alone!</string>
+
+    <string name="anxiety_card2_text1">What is anxiety?</string>
+    <string name="anxiety_card2_text2">Simply put, Anxiety is a helpful survival mechanism</string>
+    <string name="anxiety_card2_text3">Imagine an early human trying to survive out in the woods. As in most forms of life, several built-in survival mechanisms are passed along from one generation to the next through DNA, and are an important part of the survival of a species.</string>
+
+    <string name="anxiety_card3_text1">Some of the responses to this survival mechanism are:</string>
+    <string name="anxiety_card3_text2">FIGHT</string>
+    <string name="anxiety_card3_text3">Face the threat head on!</string>
+
+    <string name="anxiety_card4_text1">FIGHT</string>
+    <string name="anxiety_card4_text2">Look for a way out!</string>
+
+    <string name="anxiety_card5_text1">FREEZE</string>
+    <string name="anxiety_card5_text2">Can’t move!</string>
+
+
+
+    <string name="anxiety_card6_text1">But now imagine this person coming face-to-face with a hungry bear. Fight, Flight, or Freeze may not be enough to survive this encounter! A bear is much stronger, faster, and smarter for either of those responses.</string>
+    <string name="anxiety_card6_text2">This is where the “Worry” survival mechanism comes into play.</string>
+
+    <string name="anxiety_card7_text1">If a person could simply “remember” past experiences,  “Worry” could help them take measures to avoid or back away from dangers before they became life threatening.</string>
+    <string name="anxiety_card7_text2">In this example, if the person spotted a hungry bear from a distance, they would remember the potential danger and take another route, or possibly remember and avoid the places where bears were actively hunting for food. In both cases, “Worry” would help them survive successfully.</string>
+    <string name="anxiety_card7_text3">So, worrying is a helpful skill!</string>
+
+    <string name="anxiety_card8_text1">But how does too much “Worry” affect us?</string>
+    <string name="anxiety_card8_text2">We often called this excess of worry “Anxiety”.</string>
+
+    <string name="anxiety_card9_text1">In our modern world, there are many bear-like situations we face every day. It’s easy to become conditioned to constantly trigger our “Worry” response in order to avoid the need to “Fight, Flight or Freeze”.\n\nBut overprotecting ourselves with anxiety often comes at the expense of our happiness. </string>
+    <string name="anxiety_card9_text2">Excessive use of worry, rumination, or fear of being at the wrong place at the wrong time limits our ability to enjoy life.</string>
+
+    <string name="anxiety_card10_text1">Remember: worry and anxiety are not your enemies! </string>
+    <string name="anxiety_card10_text2">The key to more peace of mind lies in enhancing your understanding of both and then learning the skills to use them in the right moments and for the right amounts of time.</string>
+
+
+
+
+
     <!--Anxiety cards introduction 2 -->
     <string name="fast_pase_card1_text1">We are all stressed out…</string>
     <string name="fast_pase_card1_text2">Most of us work too much, schedule too much, and hear about too many negative events in the world. Sometimes, you can’t avoid any of it.</string>
@@ -237,32 +278,45 @@
     <string name="make_plan_card1_text1">Making a plan to tackle anxiety is like mapping a route to a destination.</string>
     <string name="make_plan_card1_text2">Seeing the whole journey at a glance can help you visualize your trip and be confident in how you will get there. Once the route is set, you know you’ll arrive if you follow all the indicated turns and directions. There will be fewer surprises and you will feel more in control.</string>
 
-    <string name="make_plan_card2_text2">When faced with a situation that causes you anxiety, imagine that the “destination” is the other side of that stressful situation.\n\nHere is how navigating that stressful situation might look like:</string>
+    <string name="make_plan_card2_text1">When faced with a situation that causes you anxiety, imagine that the “destination” is the other side of that stressful situation.</string>
+    <string name="make_plan_card2_text2">Here is how navigating that stressful situation might look like:</string>
 
-    <string name="make_plan_card3_text1">STEP 1: \nBE AWARE OF WHAT’S AROUND YOU</string>
-    <string name="make_plan_card3_text2">Take note of how your anxiety is impacting your emotions, choices and decisions. Change your thinking from: “Something must be wrong with me” to: “I just need to protect myself from my environment which is filled with anxiety-inducing things”.</string>
+    <string name="make_plan_card3_text1">STEP 1</string>
+    <string name="make_plan_card3_text2">BE AWARE OF WHAT’S AROUND YOU</string>
+    <string name="make_plan_card3_text3">Take note of how your anxiety is impacting your emotions, choices and decisions. \n\nChange your thinking from: “Something must be wrong with me” to: “I just need to protect myself from my environment which is filled with anxiety-inducing things”.</string>
 
-    <string name="make_plan_card4_text1">STEP 2: \nSPOT YOUR ANXIETY TRIGGERS</string>
-    <string name="make_plan_card4_text2">Take note of which specific situations, thoughts or feelings trigger your anxiety and even write them down somewhere. Where possible, this will help you take action to avoid anxiety-inducing situations and learn to manage the ones you have no control over.</string>
+    <string name="make_plan_card4_text1">STEP 2</string>
+    <string name="make_plan_card4_text2">SPOT YOUR ANXIETY TRIGGERS</string>
+    <string name="make_plan_card4_text3">Take note of which specific situations, thoughts or feelings trigger your anxiety and even write them down somewhere. Where possible, this will help you take action to avoid anxiety-inducing situations and learn to manage the ones you have no control over.</string>
 
-    <string name="make_plan_card5_text1">STEP 3:\nREMEMBER THAT YOU ARE NOT AN ANXIOUS PERSON</string>
-    <string name="make_plan_card5_text2">Learn to identify the three components of anxiety: Physiological (Body), Cognitive (Mind) and Behavioral (Actions). This will help to follow action plans that calm your mind, body and actions.
-</string>
 
-    <string name="make_plan_card6_text1">STEP 4: \nIMPLEMENT BODY CALMING SKILLS</string>
-    <string name="make_plan_card6_text2">You can learn to force your body to calm down. Once your body is calm, your mind will follow. Skills such as relaxation, progressive muscle relaxation, mindful breathing and walking will become second nature.
-</string>
+    <string name="make_plan_card5_text1">STEP 3</string>
+    <string name="make_plan_card5_text2">REMEMBER THAT YOU ARE NOT AN ANXIOUS PERSON</string>
+    <string name="make_plan_card5_text3">Learn to identify the three components of anxiety: Physiological (Body), Cognitive (Mind) and Behavioral (Actions). This will help to follow action plans that calm your mind, body and actions. </string>
 
-    <string name="make_plan_card7_text1">STEP 5: \nSET A MENTAL BOUNDARY BETWEEN YOU AND YOUR WORRIES</string>
-    <string name="make_plan_card7_text2">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.
-</string>
 
-    <string name="make_plan_card8_text1">STEP 6: \nIMPLEMENT MIND CALMING SKILLS</string>
-    <string name="make_plan_card8_text2">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our</string>
+    <string name="make_plan_card6_text1">STEP 4</string>
+    <string name="make_plan_card6_text2">IMPLEMENT BODY CALMING SKILLS</string>
+    <string name="make_plan_card6_text3">You can learn to force your body to calm down. Once your body is calm, your mind will follow. Skills such as relaxation, progressive muscle relaxation, mindful breathing and walking will become second nature.</string>
+
+
+    <string name="make_plan_card7_text1">STEP 5</string>
+    <string name="make_plan_card7_text2">SET A MENTAL BOUNDARY BETWEEN YOU AND YOUR WORRIES</string>
+    <string name="make_plan_card7_text3">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.</string>
+
+
+
+    <string name="make_plan_card8_text1">STEP 6</string>
+    <string name="make_plan_card8_text2">IMPLEMENT MIND CALMING SKILLS</string>
+    <string name="make_plan_card8_text3">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our</string>
+
+
 
     <string name="make_plan_card9_text1">YOU’VE ARRIVED!</string>
     <string name="make_plan_card9_text2">Congratulations! You’ve gotten to the other side of your stressful situation.</string>
     <string name="make_plan_card9_text3">If you map this same route every time, you’ll be able to navigate any stressful situation that comes your way.
 \n\n What do you think of this action plan? Don’t worry if you aren’t sure of how to “drive” this path yet. This is why we are learning the skills one step at a time.
  </string>
+
+
 </resources>

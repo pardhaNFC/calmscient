@@ -26,7 +26,8 @@ import com.calmscient.adapters.AnxietyQuestionsAdapter
 import com.calmscient.databinding.FastPaceActivityBinding
 import com.calmscient.fragments.DiscoveryFragment
 import com.kofigyan.stateprogressbar.StateProgressBar
-class FastPaceActivity : AppCompatActivity(){
+
+class FastPaceActivity: AppCompatActivity(){
     private lateinit var binding: FastPaceActivityBinding
     private lateinit var anxietyadapter: AnxietyQuestionsAdapter
     private val anxietyText = mutableListOf<AnxietyTextDataClass>()
@@ -104,34 +105,42 @@ class FastPaceActivity : AppCompatActivity(){
 
         anxietyText.add(
             AnxietyTextDataClass(
+                null,
                 getString(R.string.fast_pase_card1_text1),
                 null,
-                R.drawable.ic_bulb_anxiety,
+                null,
+                null,
                 R.drawable.ic_anxietyquestion_image,
                 getString(R.string.fast_pase_card1_text2),
-                getString(R.string.fast_pase_card1_text3)
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                getString(R.string.fast_pase_card2_text1),
-                getString(R.string.fast_pase_card2_text2),
-                null,
-                R.drawable.ic_anxietyquestion_image,
-                getString(R.string.fast_pase_card2_text3),
+                getString(R.string.fast_pase_card1_text3),
                 null
             )
-
+        );
+        anxietyText.add(
+            AnxietyTextDataClass(
+                null,
+                getString(R.string.fast_pase_card1_text1),
+                null,
+                null,
+                null,
+                R.drawable.ic_anxietyquestion_image,
+                getString(R.string.fast_pase_card1_text2),
+                getString(R.string.fast_pase_card1_text3),
+                null
+            )
         );
 
         anxietyText.add(
             AnxietyTextDataClass(
-                getString(R.string.fast_pase_card3_text1),
                 null,
-                R.drawable.ic_bulb_anxiety,
+                getString(R.string.fast_pase_card1_text1),
+                null,
+                null,
+                null,
                 R.drawable.ic_anxietyquestion_image,
-                getString(R.string.fast_pase_card3_text2),
-                getString(R.string.fast_pase_card3_text3)
+                getString(R.string.fast_pase_card1_text2),
+                getString(R.string.fast_pase_card1_text3),
+                null
             )
         );
 

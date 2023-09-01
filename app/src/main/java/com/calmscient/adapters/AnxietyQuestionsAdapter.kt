@@ -10,6 +10,8 @@
  */
 
 package com.calmscient.adapters
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +31,18 @@ class AnxietyQuestionsAdapter (private val items: List<AnxietyTextDataClass>) :
 
     override fun getItemCount(): Int = items.size
 
+    /*override fun onBindViewHolder(holder: AnxietyQuestionViewHolder, position: Int) {
+        val item = items[position]
+
+        holder.text1.text = item.text1
+        holder.text2.text = item.text2
+        item.anxietybulb?.let { holder.anxietybulb.setImageResource(it) }
+        item.imageanxiety?.let { holder.imageanxiety.setImageResource(it) }
+        holder.text3.text = item.text3
+        holder.text4.text = item.text4
+    }*/
+
+    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: AnxietyQuestionViewHolder, position: Int) {
         val item = items[position]
 
@@ -44,6 +58,7 @@ class AnxietyQuestionsAdapter (private val items: List<AnxietyTextDataClass>) :
         if (item.text2.isNullOrBlank()) {
             holder.text2.visibility = View.GONE
         } else {
+
             holder.text2.text = item.text2
             holder.text2.visibility = View.VISIBLE
         }
@@ -67,6 +82,41 @@ class AnxietyQuestionsAdapter (private val items: List<AnxietyTextDataClass>) :
             holder.text4.text = item.text4
             holder.text4.visibility = View.VISIBLE
         }
+        // Check and set text5
+        if (item.text5.isNullOrBlank()) {
+            holder.text5.visibility = View.GONE
+        } else {
+            holder.text5.text = item.text5
+            holder.text5.visibility = View.VISIBLE
+        }
+
+        // Check and set text6
+        if (item.text6.isNullOrBlank()) {
+            holder.text6.visibility = View.GONE
+        } else {
+            holder.text6.text = item.text6
+            holder.text6.visibility = View.VISIBLE
+        }
+
+        // Check and set text7
+        if (item.text7.isNullOrBlank()) {
+            holder.text7.visibility = View.GONE
+        } else {
+            if(item.text7 =="Here is how navigating that stressful situation might look like:")
+            {
+                holder.text7.setTextColor(R.color.black)
+                holder.text7.text = item.text7
+
+            }
+            else
+            {
+                holder.text7.text = item.text7
+
+            }
+            holder.text7.visibility = View.VISIBLE
+        }
+
+
     }
 
     inner class AnxietyQuestionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -76,5 +126,8 @@ class AnxietyQuestionsAdapter (private val items: List<AnxietyTextDataClass>) :
         val imageanxiety: ImageView = itemView.findViewById(R.id.imageanxiety)
         val text3: TextView = itemView.findViewById(R.id.text3)
         val text4: TextView = itemView.findViewById(R.id.text4)
+        val text5: TextView = itemView.findViewById(R.id.text5)
+        val text6: TextView = itemView.findViewById(R.id.text6)
+        val text7: TextView = itemView.findViewById(R.id.text7)
     }
 }
