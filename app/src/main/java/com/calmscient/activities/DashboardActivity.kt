@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
+import com.calmscient.fragments.ExerciseFragment
 import com.calmscient.fragments.HomeFragment
 import com.calmscient.utils.common.SavePreferences
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -69,8 +70,8 @@ class DashboardActivity : AppCompat() {
                 }
 
                 R.id.exercises -> {
-                    // loadFragment(ExerciseFragment())
-                    Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                     loadFragment(ExerciseFragment())
+                    //Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
                     it.setIcon(R.drawable.ic_exercises_selected)
                     true
                 }

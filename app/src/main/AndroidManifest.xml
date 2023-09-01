@@ -123,6 +123,55 @@
             android:configChanges="keyboardHidden|locale|orientation|screenSize"
             android:exported="false"
             android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.ButterflyHugExercisesActivity"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.HandOverYourHeartActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.MakeAPlanActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.FastPaceActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.MindfulnessExercisesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
+        <activity
+            android:name=".activities.DancingExercisesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
+        <activity
+            android:name=".activities.RunningExerciseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
+        <activity
+            android:name=".activities.BodyMovementExerciseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
+        <activity
+            android:name=".activities.DeepBreathingExerciseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar"/>
         <receiver
             android:name=".receivers.AlarmReceiver"
             android:enabled="true"

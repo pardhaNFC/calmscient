@@ -32,12 +32,41 @@ class AnxietyQuestionsAdapter (private val items: List<AnxietyTextDataClass>) :
     override fun onBindViewHolder(holder: AnxietyQuestionViewHolder, position: Int) {
         val item = items[position]
 
-        holder.text1.text = item.text1
-        holder.text2.text = item.text2
+        // Check and set text1
+        if (item.text1.isNullOrBlank()) {
+            holder.text1.visibility = View.GONE
+        } else {
+            holder.text1.text = item.text1
+            holder.text1.visibility = View.VISIBLE
+        }
+
+        // Check and set text2
+        if (item.text2.isNullOrBlank()) {
+            holder.text2.visibility = View.GONE
+        } else {
+            holder.text2.text = item.text2
+            holder.text2.visibility = View.VISIBLE
+        }
+
+        // Set anxietybulb and imageanxiety unconditionally
         item.anxietybulb?.let { holder.anxietybulb.setImageResource(it) }
         item.imageanxiety?.let { holder.imageanxiety.setImageResource(it) }
-        holder.text3.text = item.text3
-        holder.text4.text = item.text4
+
+        // Check and set text3
+        if (item.text3.isNullOrBlank()) {
+            holder.text3.visibility = View.GONE
+        } else {
+            holder.text3.text = item.text3
+            holder.text3.visibility = View.VISIBLE
+        }
+
+        // Check and set text4
+        if (item.text4.isNullOrBlank()) {
+            holder.text4.visibility = View.GONE
+        } else {
+            holder.text4.text = item.text4
+            holder.text4.visibility = View.VISIBLE
+        }
     }
 
     inner class AnxietyQuestionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

@@ -13,6 +13,7 @@ package com.calmscient.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -21,24 +22,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.adapters.AnxietyQuestionsAdapter
-import com.calmscient.databinding.ManageanxietyQuestionsBinding
+import com.calmscient.adapters.MindfulnessScreensAdapter
+import com.calmscient.data.remote.MindfulnessExercisesTextDataClass
+import com.calmscient.databinding.MindfulnesscreensBinding
 import com.calmscient.fragments.DiscoveryFragment
-
-data class AnxietyTextDataClass(
-    val text1: String?,
-    val text2: String?,
-    val anxietybulb: Int?,
-    val imageanxiety: Int?,
-    val text3: String?,
-    val text4: String?,
-    var selectedOption: Int = -1
-)
-
-class AnxietyQuestionsActivity : AppCompatActivity() {
-    private lateinit var binding: ManageanxietyQuestionsBinding
-    private lateinit var anxietyadapter: AnxietyQuestionsAdapter
-    private val anxietyText = mutableListOf<AnxietyTextDataClass>()
+class MindfulnessExercisesActivity : AppCompat() {
+    private lateinit var binding: MindfulnesscreensBinding
+    private lateinit var anxietyadapter: MindfulnessScreensAdapter
+    private val anxietyText = mutableListOf<MindfulnessExercisesTextDataClass>()
     private var currentQuestionIndex = 0
     private var previousQuestionIndex = -1
     private lateinit var stepIndicators: List<ImageView>
@@ -46,7 +37,7 @@ class AnxietyQuestionsActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ManageanxietyQuestionsBinding.inflate(layoutInflater)
+        binding = MindfulnesscreensBinding.inflate(layoutInflater)
         setContentView(binding.root)
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -54,9 +45,7 @@ class AnxietyQuestionsActivity : AppCompatActivity() {
         )
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.optionsRecyclerView1)
-        val title = intent.getStringExtra("description")
 
-        binding.tvTitle.text = title
         // Find your ProgressBar by its ID
         progressBar = findViewById<ProgressBar>(R.id.progressBar2)
 
@@ -73,15 +62,9 @@ class AnxietyQuestionsActivity : AppCompatActivity() {
             findViewById(R.id.step3Indicator),
             findViewById(R.id.step4Indicator),
             findViewById(R.id.step5Indicator),
-            findViewById(R.id.step6Indicator),
-            findViewById(R.id.step7Indicator),
-            findViewById(R.id.step8Indicator),
-            findViewById(R.id.step9Indicator),
-            findViewById(R.id.step10Indicator)
+            findViewById(R.id.step6Indicator)
         )
-        binding.icGlossary.setOnClickListener {
-            startActivity(Intent(this,GlossaryActivity::class.java))
-        }
+
         binding.menuIcon.setOnClickListener {
             onBackPressed()
         }
@@ -97,113 +80,67 @@ class AnxietyQuestionsActivity : AppCompatActivity() {
     private fun initializeAdapter() {
         binding.optionsRecyclerView1.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        anxietyadapter = AnxietyQuestionsAdapter(anxietyText)
+        anxietyadapter = MindfulnessScreensAdapter(anxietyText)
         binding.optionsRecyclerView1.adapter = anxietyadapter
     }
 
     private fun displayCardViews() {
         anxietyText.add(
-            AnxietyTextDataClass(
-                getString(R.string.page_1_1),
-                "An estimated 31.1% of U.S. adults experience any anxiety disorder at some time in their lives.",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                "The Calmscient discovery will only be as effective as you make it. So be determined to dedicate time to following along and completing.",
-                "You're not alone"
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                getString(R.string.page_2_1),
-                "Anxiety is a helpful survival mechanism",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                "Imagine an early human trying to survive out in the woods. As in most forms of life, several built-in survival mechanisms are passed along from one generation to the next through DNA, and are an important part of the survival of a species.",
-                null
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
+            MindfulnessExercisesTextDataClass(
                 null,
-                "Some of the responses to this survival mechanism are:",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                null,
-                "FIGHT\n Face the threat head on!"
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
+                "Have you ever caught your mind wandering or daydreaming while you are in the middle of a familiar or repetitive task? You could be walking, working or even driving your car, and your mind is miles away, perhaps fantasizing about going on vacation, thinking about your to-do list, or worrying about some upcoming event. \n In either case, you are not focusing on the current situation and not in touch with the ‘here and now’.\n This mode of operation is often referred to as automatic pilot.",
                 null,
                 null,
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                null,
-                "FLIGHT\n Look for a way out!"
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                null,
-                null,
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                null,
-                "FREEZE\nDon’t move!"
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                null,
-                "But now imagine this person coming face-to-face with a hungry bear. Fight, Flight, or Freeze may not be enough to survive this encounter! A bear is much stronger, faster, and smarter for either of those responses.",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                null,
-                "This is where the “Worry” survival\n mechanism comes into play."
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                getString(R.string.page_7_1),
-                " “Worry” could help them take measures to avoid or back away from dangers before they became life threatening.",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                "In this example, if the person spotted a hungry bear from a distance, they would remember the potential danger and take another route, or possibly remember and avoid the places where bears were actively hunting for food. In both cases, \n" + "“Worry” would help them survive successfully.",
-                "So, worrying is a helpful skill! "
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                "But how does too much “Worry” affect us?",
-                null,
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                null,
-                "We often called this excess of worry “Anxiety”."
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                "In our modern world, there are many bear-like situations we face every day.",
-                "It’s easy to become conditioned to constantly trigger our “Worry” response in order to avoid the need to “Fight, Flight or Freeze”. \n" +
-                        "But overprotecting ourselves with anxiety often comes at the expense of our happiness. ",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                "Excessive use of worry, rumination, or fear of being at the wrong place at the wrong time limits our ability to enjoy life.\n",
-                null
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                "Remember: worry and anxiety are not your enemies! ",
-                "The key to more peace of mind lies in enhancing your understanding of both and then learning the skills to use them in the right moments and for the right amounts of time.\n",
-                R.drawable.ic_bulb_anxiety,
-                R.drawable.ic_anxietyquestion_image,
-                null,
-                null
-            )
-        );
+                R.drawable.ic_anxietyquestion_image
 
+            )
+        );
+        anxietyText.add(
+            MindfulnessExercisesTextDataClass(
+                null,
+                "Mindfulness is the opposite of automatic pilot. It is about experiencing the world that is firmly in the ‘here and now’. This is referred to as the being mode. It liberates you from automatic and unhelpful thoughts and responses.",
+                null,
+                null,
+                R.drawable.ic_anxietyquestion_image
+            )
+        );
+        anxietyText.add(
+            MindfulnessExercisesTextDataClass(
+                getString(R.string.screen3_heading),
+                getString(R.string.screen3_belowheading),
+                null,
+                null,
+                R.drawable.ic_anxietyquestion_image
+
+            )
+        );
+        anxietyText.add(
+            MindfulnessExercisesTextDataClass(
+                null,
+                getString(R.string.screen4),
+                null,
+                null,
+                R.drawable.ic_anxietyquestion_image
+            )
+        );
+        anxietyText.add(
+            MindfulnessExercisesTextDataClass(
+                null,
+                getString(R.string.screen5),
+                null,
+                null,
+                R.drawable.ic_anxietyquestion_image
+            )
+        );
+        anxietyText.add(
+            MindfulnessExercisesTextDataClass(
+                null,
+                getString(R.string.screen6),
+                R.drawable.exercises_bellicon,
+                R.drawable.mindfullexercise_heart__image,
+                R.drawable.ic_anxietyquestion_image
+            )
+        );
         anxietyadapter.notifyDataSetChanged()
     }
 
@@ -270,4 +207,5 @@ class AnxietyQuestionsActivity : AppCompatActivity() {
             updateStepIndicators()
         }
     }
+
 }

@@ -99,6 +99,9 @@
         La Línea Nacional de Ayuda para Desastres está disponible para cualquier persona que experimente angustia emocional relacionada con desastres naturales o causados por humanos.
         Llame o envíe un mensaje de texto al <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> para conectarse con un consejero capacitado y atento, las 24 horas del día, los 7 días de la semana, los 365 días del año.
 </string>
+    <string name="lets_begin_btn">vamos a empezar</string>
+    <string name="lets_begin_are_ready">Estas listo</string>
+    <string name="lets_begin">El descubrimiento de Calmscient será tan efectivo como usted lo haga. \nAsí que esté decidido a dedicar tiempo a seguir y completar los ejercicios. Cada sección tiene contenido interesante e informativo diseñado para mantenerlo pensando activamente en sus desafíos específicos. Pero, al igual que hacer un viaje por carretera a un destino desconocido, ¡deberás comprometerte a seguir el mapa! Puede que suponga un poco más de trabajo del que estás acostumbrado, pero al final dará sus frutos.</string>
     <string name="crisis_heading">Línea de texto de crisis</string>
     <string name="crisis_text">Envíe un mensaje de texto con MHA al 741741 y lo conectarán con un consejero de crisis capacitado. Crisis Text Line brinda soporte gratuito basado en texto las 24 horas del día, los 7 días de la semana.</string>
     <string name="trevor_heading">El Proyecto Trevor</string>
@@ -165,4 +168,62 @@
         Estos ejercicios calmarán su respuesta al estrés y le brindarán el espacio para manejar los pensamientos ansiosos y desarrollar comportamientos saludables. Esto resultará en una mejora física y emocional.\n\n
         ¿Por qué no practicas algunos de estos ejercicios durante diez minutos cada mañana o justo antes de acostarte? La clave es la constancia para que tu cuerpo aprenda lo que se siente al tener un sistema nervioso tranquilo.\n\n
 </string>
+
+    <!--Exrercises-->
+    <string name="mindfulness_exercises">Atención plena – ¿Qué es?</string>
+    <string name= "butterflyhug_exercises">El tacto y el abrazo de mariposa</string>
+    <string name="handover_esxercises">Entrega tu oído</string>
+    <string name="mindfulwalking_exercises">Caminar conscientemente</string>
+    <string name="dance_exercises">Movimiento: Danza</string>
+    <string name="running_exercises">Movimiento: correr</string>
+    <string name="body_moment_exercies">Movimiento corporal consciente</string>
+    <string name="deepbreathing_exercises">Respiración profunda</string>
+    <string name="musclerelaxation_exercises">Relajación muscular progresiva</string>
+
+    <!--manage anxiety-->
+    <!--Anxiety cards introduction 2 -->
+    <string name="fast_pase_card1_text1">Todas estamos estresadas...</string>
+    <string name="fast_pase_card1_text2">La mayoría de nosotros trabajamos demasiado, programamos demasiado y escuchamos sobre demasiados eventos negativos en el mundo. A veces, no puedes evitar nada de esto.</string>
+    <string name="fast_pase_card1_text3">Esta es su primera tarea en su viaje hacia la tranquilidad:</string>
+
+    <string name="fast_pase_card2_text1">Estás buscando solo <b>15 minutos</b> al día para progresar metódicamente en los cursos de Calmscient...</string>
+    <string name="fast_pase_card2_text2">¿Cuándo es un buen momento para ti?</string>
+    <string name="fast_pase_card2_text3">¡Excelente! Ha tomado algunas medidas positivas y eso es más importante de lo que piensa.</string>
+
+    <string name="fast_pase_card3_text1">¿Qué debes hacer durante estos 15 minutos?</string>
+    <string name ="fast_pase_card3_text2">Durante este curso, se le brindarán muchas cosas positivas y productivas en las que pensar. <b>Durante cada sesión de 15 minutos, configura un temporizador en tu teléfono</b> para que puedas desconectarte responsablemente de otras cosas que hayas programado. En tu mente, cierra la puerta a todos los pensamientos ruidosos a los que estés acostumbrado y disfruta del tiempo que has dedicado a mejorar tu salud mental.</string>
+    <string name="fast_pase_card3_text3">Asegúrese de configurar un recordatorio para la hora y el lugar que especificó anteriormente. </string>
+
+    <!--Anxiety cards Introduction 3 -->
+    <string name="make_plan_card1_text1">Making a plan to tackle anxiety is like mapping a route to a destination.</string>
+    <string name="make_plan_card1_text2">Seeing the whole journey at a glance can help you visualize your trip and be confident in how you will get there. Once the route is set, you know you’ll arrive if you follow all the indicated turns and directions. There will be fewer surprises and you will feel more in control.</string>
+
+    <string name="make_plan_card2_text2">When faced with a situation that causes you anxiety, imagine that the “destination” is the other side of that stressful situation.\n\nHere is how navigating that stressful situation might look like:</string>
+
+    <string name="make_plan_card3_text1">STEP 1: \nBE AWARE OF WHAT’S AROUND YOU</string>
+    <string name="make_plan_card3_text2">Take note of how your anxiety is impacting your emotions, choices and decisions. Change your thinking from: “Something must be wrong with me” to: “I just need to protect myself from my environment which is filled with anxiety-inducing things”.</string>
+
+    <string name="make_plan_card4_text1">STEP 2: \nSPOT YOUR ANXIETY TRIGGERS</string>
+    <string name="make_plan_card4_text2">Take note of which specific situations, thoughts or feelings trigger your anxiety and even write them down somewhere. Where possible, this will help you take action to avoid anxiety-inducing situations and learn to manage the ones you have no control over.</string>
+
+    <string name="make_plan_card5_text1">STEP 3:\nREMEMBER THAT YOU ARE NOT AN ANXIOUS PERSON</string>
+    <string name="make_plan_card5_text2">Learn to identify the three components of anxiety: Physiological (Body), Cognitive (Mind) and Behavioral (Actions). This will help to follow action plans that calm your mind, body and actions.
+</string>
+
+    <string name="make_plan_card6_text1">STEP 4: \nIMPLEMENT BODY CALMING SKILLS</string>
+    <string name="make_plan_card6_text2">You can learn to force your body to calm down. Once your body is calm, your mind will follow. Skills such as relaxation, progressive muscle relaxation, mindful breathing and walking will become second nature.
+</string>
+
+    <string name="make_plan_card7_text1">STEP 5: \nSET A MENTAL BOUNDARY BETWEEN YOU AND YOUR WORRIES</string>
+    <string name="make_plan_card7_text2">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.
+</string>
+
+    <string name="make_plan_card8_text1">STEP 6: \nIMPLEMENT MIND CALMING SKILLS</string>
+    <string name="make_plan_card8_text2">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our</string>
+
+    <string name="make_plan_card9_text1">YOU’VE ARRIVED!\nCongratulations! You’ve gotten to the other side of your stressful situation.</string>
+    <string name="make_plan_card9_text2">Congratulations! You’ve gotten to the other side of your stressful situation.</string>
+    <string name="make_plan_card9_text3">If you map this same route every time, you’ll be able to navigate any stressful situation that comes your way.
+    \n\n What do you think of this action plan? Don’t worry if you aren’t sure of how to “drive” this path yet. This is why we are learning the skills one step at a time.
+    </string>
 </resources>

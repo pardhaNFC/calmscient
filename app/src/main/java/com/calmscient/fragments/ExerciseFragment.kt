@@ -11,28 +11,34 @@
 
 package com.calmscient.fragments
 
+
+import android.content.Intent
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.calmscient.R
+import com.calmscient.activities.BodyMovementExerciseActivity
+import com.calmscient.activities.ButterflyHugExercisesActivity
+import com.calmscient.activities.DancingExercisesActivity
+import com.calmscient.activities.DeepBreathingExerciseActivity
+import com.calmscient.activities.HandOverYourHeartActivity
+import com.calmscient.activities.MindfulnessExercisesActivity
+import com.calmscient.activities.RunningExerciseActivity
+import com.calmscient.databinding.FragmentExerciseBinding
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 class ExerciseFragment:Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var binding:FragmentExerciseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -40,26 +46,40 @@ class ExerciseFragment:Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_exercise, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ExerciseFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ExerciseFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        binding = FragmentExerciseBinding.inflate(inflater, container, false)
+        binding.mindfulnessExerciseCard.setOnClickListener {
+            // Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            val intent = Intent(activity, MindfulnessExercisesActivity::class.java)
+            startActivity(intent)
+        }
+        binding.handOverYourHeartCard.setOnClickListener {
+            val intent = Intent(activity, HandOverYourHeartActivity::class.java)
+            startActivity(intent)
+        }
+        binding.butterflyCard.setOnClickListener {
+            val intent = Intent(activity, ButterflyHugExercisesActivity::class.java)
+            startActivity(intent)
+        }
+        binding.dancingExercisesCard.setOnClickListener {
+            val  intent = Intent(activity, DancingExercisesActivity::class.java)
+            startActivity(intent)
+        }
+        binding.runningExerciseCard.setOnClickListener {
+            val intent = Intent(activity, RunningExerciseActivity::class.java)
+            startActivity(intent)
+        }
+        binding.bodyMovementExerciseCard.setOnClickListener {
+            val intent = Intent(activity, BodyMovementExerciseActivity::class.java)
+            startActivity(intent)
+        }
+        binding.deepBreathingCard.setOnClickListener {
+            val intent = Intent(activity, DeepBreathingExerciseActivity::class.java)
+            startActivity(intent)
+        }
+        binding.mindfulnessExerciseCard.setOnClickListener {
+            val intent = Intent(activity, MindfulnessExercisesActivity::class.java)
+            startActivity(intent)
+        }
+        return binding.root
     }
 }

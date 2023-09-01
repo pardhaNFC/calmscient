@@ -147,6 +147,8 @@
     <string name="add_time_alarm">Add Time &amp; Alarm</string>
     <string name="page_1.1">DID YOU KNOW?</string>
     <string name="page_2.1">What is anxiety?</string>
+    <string name="lets_begin_btn">Let\'s Begin!</string>
+    <string name="lets_begin_are_ready">Are you ready?</string>
     <string name="lets_begin">The Calmscient discovery will only be as effective as you make it. \nSo be determined to dedicate time to following along and completing the exercises. Each section has interesting and informative content that is designed to keep you actively thinking about your specific challenges. But, like taking a road trip to an unknown destination, you’ll need to be committed to following the map! It may be a little more work than you’re used to, but it will absolutely pay off in the end.</string>
     <string name="page_7.1"><font color="#6E6BB3">If a person could simply “remember” past experiences,</font></string>
     <!-- lesson 1-->
@@ -177,4 +179,90 @@
         These exercises will calm your stress response and give you the space to handle anxious thoughts and build healthy behaviors. This will result in physical and emotional betterment.\n\n
         Why don’t you practice some of these exercises for ten minutes every morning or right before bedtime? The key is consistency so that your body learns what it feels like to have a calm nervous system.\n\n
 </string>
+
+    <!--Exrercises-->
+
+    <string name="mindfulness_exercises">Mindfulness – What is it?</string>
+    <string name= "butterflyhug_exercises">Touch and the Butterfly Hug</string>
+    <string name="handover_esxercises">Hand Over Your Heart</string>
+    <string name="mindfulwalking_exercises">Mindful Walking</string>
+    <string name="dance_exercises">Movement: Dance</string>
+    <string name="running_exercises">Movement: Running</string>
+    <string name="body_moment_exercies">Mindful Body Movement</string>
+    <string name="deepbreathing_exercises">Deep breathing</string>
+    <string name="musclerelaxation_exercises">Progressive Muscle Relaxation</string>
+    <!--    Exercise_items-->
+    <string name="screen1">Have you ever caught your mind wandering or daydreaming while you are in the middle of a familiar or repetitive task? You could be walking, working or even driving your car, and your mind is miles away, perhaps fantasizing about going on vacation, thinking about your to-do list, or worrying about some upcoming event. In either case, you are not focusing on the current situation and not in touch with the ‘here and now’.  This mode of operation is often referred to as automatic pilot.</string>
+    <string name="screen2">Mindfulness is the opposite of automatic pilot. It is about experiencing the world that is firmly in the ‘here and now’. This is referred to as the being mode. It liberates you from automatic and unhelpful thoughts and responses.</string>
+    <string name="screen3_heading">How does mindfulness help with anxiety?</string>
+    <string name="screen3_belowheading">When we allow our brain to enter automatic pilot mode too often, it can be at risk of being conditioned to be overly preoccupied about the future, past experiences or our emotions in negative ways. If we have fallen into this old and unhelpful habit, we can unlearn it and replace it with skills that help us resist ‘buying into’ automatic worry and anxiety. </string>
+    <string name="screen4">Mindfulness reminds us that we don’t have to take immediate control of, remove or fix unpleasant experiences. Instead, we can identify and actively engage in something that will give us a sense of safety and connection.</string>
+    <string name="screen5">As a simple example: Instead of focusing on how many miles you walked in the morning, can you be mindfully aware of the birds singing, actively feel the fresh air, and sense the changing of the season? When you connect your senses to nature, animals, people and your own body, you capture the attention of your nervous system, which in turn soothes your anxiety. When you return home, you will be in a better frame of mind and more prepared to face your day.</string>
+    <string name="screen6">Which mindfulness exercises would you like to make part of your daily routine? Calmscient can remind you of some easy mindfulness routines that will help you stay in a healthy, being mode.</string>
+
+    <!--butterfly_hug Screens Exercises-->
+
+    <string name="butterflyScreen1_text1">Humans respond powerfully to touch. Gentle, affectionate touch helps calm the nervous system and can trigger the release of oxytocin, the attachment hormone. Interestingly, when it comes to releasing oxytocin, our bodies don’t differentiate between the touch of a loved one or our own touch as we hold ourselves.\n </string>
+    <string name="butterflyScreen1_text2">When you are feeling upset, ungrounded, agitated or irritable, try giving yourself a hug or a gentle stroke on the cheek and see how it impacts the way you feel.</string>
+    <string name="butterflyScreen2_text1">Interlock your thumbs to form a butterfly shape</string>
+    <string name="butterflyScreen2_text2">Place both hands over your chest, and alternate tapping your middle finger just below your collarbone</string>
+    <string name="butterflyScreen2_text3">Breathe slowly and deeply (abdominal breathing) while you mentally observe what is going through your mind and body—thoughts, images, sounds, odors, feelings, and physical sensation.</string>
+
+    <!--    Hand over your heart Exercise-->
+    <string name="handoveryourHeart_titletext">Hand Over Your Heart</string>
+    <string name="handoveryourHeart_text"></string>
+
+    <!--    Dancing Exercise-->
+    <string name="dancingexercise_titletext">Movement: Dance</string>
+    <string name="dancingexercises_text">Moving your body to music can be a fun and fast way to shift your state and reconnect with your body, rhythm and expression.</string>
+    <!--bodymovemet Exercise-->
+    <string name="bodymovementexercise_text">There are many movement routines that invite you to reconnect with your body. Pilates, yoga and other similar stretching exercises incorporate mindful awareness of movements and postures. Additionally, coordinating body movement and breath further potentiates your ability to shift your state.</string>
+    <!--deepBreathingExercise-->
+    <string name="deepbreathingexercise_text">Find a comfortable and quiet place to sit or lie down. You can also practice deep breathing while standing, but ensure you have proper balance and support. </string>
+    <!--Anxiety cards introduction 2 -->
+    <string name="fast_pase_card1_text1">We are all stressed out…</string>
+    <string name="fast_pase_card1_text2">Most of us work too much, schedule too much, and hear about too many negative events in the world. Sometimes, you can’t avoid any of it.</string>
+    <string name="fast_pase_card1_text3">Here’s your first task on your journey toward peace of mind:</string>
+
+    <string name="fast_pase_card2_text1">You’re looking for only <b>15 minutes</b> a day to methodically progress through the Calmscient courses…</string>
+    <string name="fast_pase_card2_text2">When is a good time for you?</string>
+    <string name="fast_pase_card2_text3">Great! You’ve taken some positive action, and that’s a bigger deal than you might think. </string>
+
+
+    <string name="fast_pase_card3_text1">What should you do during these 15 minutes?</string>
+    <string name="fast_pase_card3_text2">During this course, you’ll be given lots of positive and productive things to think about. <b>During each 15 minute session, set a timer on your phone</b> so you can responsibly disconnect from the other things you might have scheduled. In your mind, shut the door on all the noisy thoughts you may be used to and enjoy the time you’ve dedicated toward improving your mental health.</string>
+    <string name="fast_pase_card3_text3">Make sure to set a reminder for the time and place you specified above. </string>
+
+    <!--Anxiety cards Introduction 3 -->
+    <string name="make_plan_card1_text1">Making a plan to tackle anxiety is like mapping a route to a destination.</string>
+    <string name="make_plan_card1_text2">Seeing the whole journey at a glance can help you visualize your trip and be confident in how you will get there. Once the route is set, you know you’ll arrive if you follow all the indicated turns and directions. There will be fewer surprises and you will feel more in control.</string>
+
+    <string name="make_plan_card2_text2">When faced with a situation that causes you anxiety, imagine that the “destination” is the other side of that stressful situation.\n\nHere is how navigating that stressful situation might look like:</string>
+
+    <string name="make_plan_card3_text1">STEP 1: \nBE AWARE OF WHAT’S AROUND YOU</string>
+    <string name="make_plan_card3_text2">Take note of how your anxiety is impacting your emotions, choices and decisions. Change your thinking from: “Something must be wrong with me” to: “I just need to protect myself from my environment which is filled with anxiety-inducing things”.</string>
+
+    <string name="make_plan_card4_text1">STEP 2: \nSPOT YOUR ANXIETY TRIGGERS</string>
+    <string name="make_plan_card4_text2">Take note of which specific situations, thoughts or feelings trigger your anxiety and even write them down somewhere. Where possible, this will help you take action to avoid anxiety-inducing situations and learn to manage the ones you have no control over.</string>
+
+    <string name="make_plan_card5_text1">STEP 3:\nREMEMBER THAT YOU ARE NOT AN ANXIOUS PERSON</string>
+    <string name="make_plan_card5_text2">Learn to identify the three components of anxiety: Physiological (Body), Cognitive (Mind) and Behavioral (Actions). This will help to follow action plans that calm your mind, body and actions.
+</string>
+
+    <string name="make_plan_card6_text1">STEP 4: \nIMPLEMENT BODY CALMING SKILLS</string>
+    <string name="make_plan_card6_text2">You can learn to force your body to calm down. Once your body is calm, your mind will follow. Skills such as relaxation, progressive muscle relaxation, mindful breathing and walking will become second nature.
+</string>
+
+    <string name="make_plan_card7_text1">STEP 5: \nSET A MENTAL BOUNDARY BETWEEN YOU AND YOUR WORRIES</string>
+    <string name="make_plan_card7_text2">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.
+</string>
+
+    <string name="make_plan_card8_text1">STEP 6: \nIMPLEMENT MIND CALMING SKILLS</string>
+    <string name="make_plan_card8_text2">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our</string>
+
+    <string name="make_plan_card9_text1">YOU’VE ARRIVED!</string>
+    <string name="make_plan_card9_text2">Congratulations! You’ve gotten to the other side of your stressful situation.</string>
+    <string name="make_plan_card9_text3">If you map this same route every time, you’ll be able to navigate any stressful situation that comes your way.
+\n\n What do you think of this action plan? Don’t worry if you aren’t sure of how to “drive” this path yet. This is why we are learning the skills one step at a time.
+ </string>
 </resources>

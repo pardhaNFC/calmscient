@@ -121,4 +121,7 @@ dependencies {
     //for Exoplayer
     implementation "com.google.android.exoplayer:exoplayer:2.19.1"
 
+    //for progress bar
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+
 }
