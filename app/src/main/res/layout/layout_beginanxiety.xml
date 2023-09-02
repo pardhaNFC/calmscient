@@ -82,7 +82,7 @@
             android:layout_marginBottom="@dimen/_12sdp"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:fontFamily="@font/lexendmedium"
+            android:fontFamily="@font/lexendregular"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp"
             android:textStyle="bold" />

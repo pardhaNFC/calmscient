@@ -49,6 +49,7 @@
     <string name="medication_Details">Medications Details</string>
     <string name="upcoming_medical_appointments">Upcoming Medical Appointments</string>
     <string name="screenings">Screenings</string>
+    <string name="add_appointment">Add AppointmentAgregar cita</string>
     <!--network errors-->
     <string name="network_connection_error">Internet connection lost, please retry again</string>
     <string name="network_default_error">Something wrong happened, please retry again</string>
@@ -135,6 +136,20 @@
     <string name="manage_anxiety">Manage anxiety</string>
     <string name="managing_anxiety">Managing anxiety</string>
     <string name="introduction">Introduction</string>
+    <!--lesson1.2-->
+    <string name="title_toolbar_pace">Get yourself out of “fast pace cycle</string>
+    <string name="title_pace">We are all stressed out…</string>
+    <string name="desc_one_pace">Most of us work too much, schedule too much, and hear about too many negative events in the world. Sometimes, you can’t avoid any of it. </string>
+    <string name="desc_two_pace">Here’s your first task on your journey toward peace of mind:</string>
+    <string name="checkbox_pace">Choose a time and place to devote to this mental wellness discovery..</string>
+    <string name="title_third_pace">What should you do during these 15 minutes?</string>
+    <string name="desc_third_one_pace">During this course, you’ll be given lots of positive and productive things to think about. During each 15 minute session, set a timer on your phone so you can responsibly disconnect from the other things you might have scheduled. In your mind, shut the door on all the noisy thoughts you may be used to and enjoy the time you’ve dedicated toward improving your mental health. </string>
+    <string name="title_third_two_pace">Make sure to set a reminder for the time and place you specified above.</string>
+
+    <string name="set_reminder">Set reminder:</string>
+    <string name="set_timer">Set timer:</string>
+    <string name="other">Other?</string>
+    <string name="write_a_place">Write a place</string>
 
     <!--Screenings-->
     <string name="phq">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
@@ -153,7 +168,7 @@
     <string name="page_7.1"><font color="#6E6BB3">If a person could simply “remember” past experiences,</font></string>
     <!-- lesson 1-->
     <string name="lesson1_video_summary" translatable="false">
-        Anxiety is a normal brain response to stress. The Fight, Flight, and Freeze responses help us meet the demands of potential threats. Things that can cause anxiety are:<br/>
+        Anxiety is a normal brain response to stress. The Fight, Flight, and Freeze responses help us meet the demands of potential threats. Things that can cause anxiety are:<br />
         \n
         &#8226; Encountering past threats\n
         &#8226; Unknown risks, changes, or results\n
@@ -161,7 +176,7 @@
         Our nervous system is not broken! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.
 </string>
 
-    <string name="lesson1_video1_description" >
+    <string name="lesson1_video1_description">
     Our brain is like a computer. It has a basic operating system that helps us deal with the normal, day-to-day tasks and complexities of life. But when it detects a threat that can interrupt or damage normal operation, an alarm activates that immediately alerts us to the danger.\n\n
     You can imagine why this “Threat Alert” in our nervous system always takes priority. It’s so that we can get back to normal operations as quickly as possible. When this threat system is triggered, stress responses such as Fight/Flight/Freeze are activated. Stress hormones, such as adrenaline and cortisol, flood our system in order to meet the demands of the danger. Intense emotions, such as anxiety, fear and feeling overwhelmed, can overtake our mind.\n\n
     Understandably, general brain functions slow down or may be put “on hold” until the danger is taken care of. This is why we might feel that our thinking capacity diminishes when we are experiencing anxiety. Our “Threat Alert” system is an important part of our brain function, but when it is constantly engaged, enjoying life or having a full sense of self becomes difficult and may even feel out of reach.\n\n
@@ -171,7 +186,7 @@
     …facing a challenging situation that we don’t think we have enough skills or support to overcome.\n\n
     Remember: anxiety is a normal brain response to stress. Our nervous system is not broken and there is nothing wrong with us when we feel anxious! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.\n
 </string>
-    <string name="lesson4_video1_description" >
+    <string name="lesson4_video1_description">
                 A calm mind can only start with a calm body. Why is that?\n\n
         Remember: anxiety is our body’s response to danger, whether real or imagined. So if we can control our body, we can suppress our mind from responding with overwhelming worry and rumination.\n\n
         The very beginning of anxiety starts with “body sensations”. As soon as we perceive them, we will learn to “press pause”, so to speak. Our goal is to lower our stress hormones and this will result in stabilizing our nervous system.\n
@@ -183,7 +198,7 @@
     <!--Exrercises-->
 
     <string name="mindfulness_exercises">Mindfulness – What is it?</string>
-    <string name= "butterflyhug_exercises">Touch and the Butterfly Hug</string>
+    <string name="butterflyhug_exercises">Touch and the Butterfly Hug</string>
     <string name="handover_esxercises">Hand Over Your Heart</string>
     <string name="mindfulwalking_exercises">Mindful Walking</string>
     <string name="dance_exercises">Movement: Dance</string>
@@ -239,7 +254,6 @@
     <string name="anxiety_card5_text2">Can’t move!</string>
 
 
-
     <string name="anxiety_card6_text1">But now imagine this person coming face-to-face with a hungry bear. Fight, Flight, or Freeze may not be enough to survive this encounter! A bear is much stronger, faster, and smarter for either of those responses.</string>
     <string name="anxiety_card6_text2">This is where the “Worry” survival mechanism comes into play.</string>
 
@@ -255,9 +269,6 @@
 
     <string name="anxiety_card10_text1">Remember: worry and anxiety are not your enemies! </string>
     <string name="anxiety_card10_text2">The key to more peace of mind lies in enhancing your understanding of both and then learning the skills to use them in the right moments and for the right amounts of time.</string>
-
-
-
 
 
     <!--Anxiety cards introduction 2 -->
@@ -305,11 +316,9 @@
     <string name="make_plan_card7_text3">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.</string>
 
 
-
     <string name="make_plan_card8_text1">STEP 6</string>
     <string name="make_plan_card8_text2">IMPLEMENT MIND CALMING SKILLS</string>
     <string name="make_plan_card8_text3">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our</string>
-
 
 
     <string name="make_plan_card9_text1">YOU’VE ARRIVED!</string>

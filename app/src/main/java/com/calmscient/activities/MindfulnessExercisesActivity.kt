@@ -91,7 +91,7 @@ class MindfulnessExercisesActivity : AppCompat() {
                 "Have you ever caught your mind wandering or daydreaming while you are in the middle of a familiar or repetitive task? You could be walking, working or even driving your car, and your mind is miles away, perhaps fantasizing about going on vacation, thinking about your to-do list, or worrying about some upcoming event. \n In either case, you are not focusing on the current situation and not in touch with the ‘here and now’.\n This mode of operation is often referred to as automatic pilot.",
                 null,
                 null,
-                R.drawable.ic_anxietyquestion_image
+                R.drawable.ic_mind_1
 
             )
         );
@@ -101,7 +101,7 @@ class MindfulnessExercisesActivity : AppCompat() {
                 "Mindfulness is the opposite of automatic pilot. It is about experiencing the world that is firmly in the ‘here and now’. This is referred to as the being mode. It liberates you from automatic and unhelpful thoughts and responses.",
                 null,
                 null,
-                R.drawable.ic_anxietyquestion_image
+                R.drawable.ic_mind_2
             )
         );
         anxietyText.add(
@@ -110,7 +110,7 @@ class MindfulnessExercisesActivity : AppCompat() {
                 getString(R.string.screen3_belowheading),
                 null,
                 null,
-                R.drawable.ic_anxietyquestion_image
+                R.drawable.ic_mind_3
 
             )
         );
@@ -120,7 +120,7 @@ class MindfulnessExercisesActivity : AppCompat() {
                 getString(R.string.screen4),
                 null,
                 null,
-                R.drawable.ic_anxietyquestion_image
+                R.drawable.ic_mind_4
             )
         );
         anxietyText.add(
@@ -129,7 +129,7 @@ class MindfulnessExercisesActivity : AppCompat() {
                 getString(R.string.screen5),
                 null,
                 null,
-                R.drawable.ic_anxietyquestion_image
+                R.drawable.ic_mind_5
             )
         );
         anxietyText.add(
@@ -138,7 +138,7 @@ class MindfulnessExercisesActivity : AppCompat() {
                 getString(R.string.screen6),
                 R.drawable.exercises_bellicon,
                 R.drawable.mindfullexercise_heart__image,
-                R.drawable.ic_anxietyquestion_image
+                R.drawable.ic_mind_6
             )
         );
         anxietyadapter.notifyDataSetChanged()

@@ -39,7 +39,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
                 android:paddingLeft="@dimen/_20sdp"
-                android:text="Add Appointment"
+                android:text="@string/add_appointment"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />

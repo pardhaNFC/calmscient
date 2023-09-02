@@ -1,0 +1,40 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_border"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="@dimen/_5sdp">
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_close"
+        android:contentDescription="Close"
+        android:padding="@dimen/_10sdp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeButton"
+        android:layout_marginTop="10dp"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/dialogTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="@font/lexendregular"
+            android:textAppearance="@android:style/TextAppearance.Medium"/>
+    </ScrollView>
+</RelativeLayout>

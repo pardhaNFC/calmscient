@@ -126,6 +126,7 @@
     <string name="contact">Contacto</string>
     <string name="address">Dirección</string>
     <string name="appointments_details">Detalles de la Cita</string>
+    <string name="add_appointment">Agregar cita</string>
     <string name="your_history">Historia</string>
     <string name="your_results">Tus resultados</string>
     <string name="summary_takingcontrol">Resumen</string>

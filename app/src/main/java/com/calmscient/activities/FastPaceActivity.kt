@@ -11,11 +11,19 @@
 
 package com.calmscient.activities
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.view.WindowManager
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.toColor
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,18 +32,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.adapters.AnxietyQuestionsAdapter
 import com.calmscient.databinding.FastPaceActivityBinding
+import com.calmscient.fragments.BottomSheetFragment
 import com.calmscient.fragments.DiscoveryFragment
+import com.calmscient.fragments.ReminderBottomSheet
 import com.kofigyan.stateprogressbar.StateProgressBar
 
-class FastPaceActivity: AppCompatActivity(){
+class FastPaceActivity : AppCompatActivity(){
     private lateinit var binding: FastPaceActivityBinding
-    private lateinit var anxietyadapter: AnxietyQuestionsAdapter
-    private val anxietyText = mutableListOf<AnxietyTextDataClass>()
-    private var currentQuestionIndex = 0
-    private var previousQuestionIndex = -1
-    private lateinit var stepIndicators: List<ImageView>
+
+
     private val maxProgress = 99
-    private lateinit var progressBar: StateProgressBar
+    private lateinit var progressBar1: StateProgressBar
+    private lateinit var progressBar2: StateProgressBar
+    private lateinit var progressBar3: StateProgressBar
+    private var selectedOptionIndex = -1
+    private var isLayoutOneVisible = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,41 +57,111 @@ class FastPaceActivity: AppCompatActivity(){
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        val pagerSnapHelper = PagerSnapHelper()
-        pagerSnapHelper.attachToRecyclerView(binding.optionsRecyclerViewFastPace)
+        var layoutOne = binding.root.findViewById<View>(R.id.layout_one)
+        var layoutTwo = binding.root.findViewById<View>(R.id.layout_two)
+        var layoutThree = binding.root.findViewById<View>(R.id.layout_three)
+
+        val morningTextView = findViewById<TextView>(R.id.morning)
+        val lunchTimeTextView = findViewById<TextView>(R.id.lunchTime)
+        val eveningTextView = findViewById<TextView>(R.id.evening)
+
+
+        val bedroomTextView = findViewById<TextView>(R.id.my_bedroom)
+        val couchTextView = findViewById<TextView>(R.id.on_my_couch)
+        val carTextView = findViewById<TextView>(R.id.my_car)
+        val patioTextView = findViewById<TextView>(R.id.on_patio)
+
 
 
         val title = intent.getStringExtra("description")
         // Find your ProgressBar by its ID
-        progressBar = findViewById(R.id.your_state_progress_bar_id)
+        progressBar1 = findViewById(R.id.your_state_progress_bar_id_1)
+        progressBar2 = findViewById(R.id.your_state_progress_bar_id_2)
 
-        binding.tvTitle.text = title
+        //progressBar1 = findViewById(R.id.your_state_progress_bar_1)
 
+        binding.tvTitle1.text = title
+        // binding.tvTitle3.text = title
 
-        val maxIndicators = 3
-
-        // Create the stepIndicators list dynamically based on maxIndicators
-        stepIndicators = (1..maxIndicators).map { stepIndex ->
-            findViewById<ImageView>(resources.getIdentifier("step${stepIndex}Indicator", "id", packageName))
+        morningTextView.setOnClickListener {
+            selectOption(0, morningTextView)
         }
 
-        // Set the initial progress
-        progressBar.animationDuration = currentQuestionIndex * (maxProgress / (anxietyText.size - 1))
-
-        setupNavigation()
-        initializeAdapter()
-        if(title == "Get yourself out of “fast pace cycle”"){
-            displayFastPaceViews()
-            //Toast.makeText(this, "No Lesson - 2 Available", Toast.LENGTH_SHORT).show()
+        lunchTimeTextView.setOnClickListener {
+            selectOption(1, lunchTimeTextView)
         }
 
+        eveningTextView.setOnClickListener {
+            selectOption(2, eveningTextView)
+        }
 
+        bedroomTextView.setOnClickListener{
+            selectOption1(0,bedroomTextView)
 
-        binding.icGlossary.setOnClickListener {
+        }
+        couchTextView.setOnClickListener{
+            selectOption1(1,couchTextView)
+
+        }
+        carTextView.setOnClickListener{
+            selectOption1(2,carTextView)
+
+        }
+        patioTextView.setOnClickListener{
+            selectOption1(3,patioTextView)
+
+        }
+
+        binding.nextScreen1.setOnClickListener {
+            layoutOne.visibility = View.GONE
+            layoutThree.visibility = View.GONE
+            layoutTwo.visibility = View.VISIBLE
+        }
+
+        binding.nextScreen2.setOnClickListener {
+            layoutTwo.visibility = View.GONE
+            layoutThree.visibility = View.VISIBLE
+            layoutOne.visibility = View.GONE
+        }
+
+        binding.previousScreen2.setOnClickListener {
+            layoutTwo.visibility = View.GONE
+            layoutThree.visibility = View.GONE
+            layoutOne.visibility = View.VISIBLE
+        }
+
+        binding.previousScreen3.setOnClickListener {
+            layoutOne.visibility = View.GONE
+            layoutThree.visibility = View.GONE
+            layoutTwo.visibility = View.VISIBLE
+        }
+
+        binding.icGlossary1.setOnClickListener {
             startActivity(Intent(this,GlossaryActivity::class.java))
         }
-        binding.menuIcon.setOnClickListener {
+        binding.menuIcon1.setOnClickListener {
             onBackPressed()
+        }
+        binding.reminderToggleButton.setOnClickListener {
+            if(binding.reminderToggleButton.labelOn == "ON"){
+                //bottomSheetDialog.show()
+                // Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
+                val bottomSheetFragment = ReminderBottomSheet()
+                bottomSheetFragment.show(this.supportFragmentManager, bottomSheetFragment.tag)
+            }else{
+
+            }
+        }
+        /* binding.icGlossary3.setOnClickListener {
+             startActivity(Intent(this,GlossaryActivity::class.java))
+         }
+         binding.menuIcon3.setOnClickListener {
+             onBackPressed()
+         }*/
+
+
+        binding.submitButton.setOnClickListener{
+            showInformationDialog()
         }
     }
 
@@ -92,127 +173,91 @@ class FastPaceActivity: AppCompatActivity(){
             super.onBackPressed()
         }
     }
-    private fun initializeAdapter() {
-        binding.optionsRecyclerViewFastPace.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        anxietyadapter = AnxietyQuestionsAdapter(anxietyText)
-        binding.optionsRecyclerViewFastPace.adapter = anxietyadapter
+
+    @SuppressLint("MissingInflatedId")
+    private fun showInformationDialog() {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.anixity_dialog, null)
+        val infoTextView = dialogView.findViewById<TextView>(R.id.dialogTextView)
+        val closeButton = dialogView.findViewById<ImageButton>(R.id.closeButton)
+
+        // Retrieve the dialogText from intent extras
+        val dialogText = "Great! \nYou’ve taken some positive action, and that’s a bigger deal than you might think.\n"
+
+        // Set the content of the dialog using dialogText
+        infoTextView.text = dialogText
+
+        val dialogBuilder = AlertDialog.Builder(this, R.style.CustomDialog)
+            .setView(dialogView)
+
+        val dialog = dialogBuilder.create()
+        dialog.show()
+
+        // Handle the close button click
+        closeButton.setOnClickListener {
+            dialog.dismiss()
+        }
     }
 
+    private fun selectOption(index: Int, textView: TextView) {
+        if (index != selectedOptionIndex) {
+            // Unselect the previously selected TextView
+            selectedOptionIndex = index
+            clearSelection()
 
-
-    private fun displayFastPaceViews() {
-
-        anxietyText.add(
-            AnxietyTextDataClass(
-                null,
-                getString(R.string.fast_pase_card1_text1),
-                null,
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
-                getString(R.string.fast_pase_card1_text2),
-                getString(R.string.fast_pase_card1_text3),
-                null
-            )
-        );
-        anxietyText.add(
-            AnxietyTextDataClass(
-                null,
-                getString(R.string.fast_pase_card1_text1),
-                null,
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
-                getString(R.string.fast_pase_card1_text2),
-                getString(R.string.fast_pase_card1_text3),
-                null
-            )
-        );
-
-        anxietyText.add(
-            AnxietyTextDataClass(
-                null,
-                getString(R.string.fast_pase_card1_text1),
-                null,
-                null,
-                null,
-                R.drawable.ic_anxietyquestion_image,
-                getString(R.string.fast_pase_card1_text2),
-                getString(R.string.fast_pase_card1_text3),
-                null
-            )
-        );
-
-
-
-        anxietyadapter.notifyDataSetChanged()
+            // Select the clicked TextView
+            textView.setBackgroundResource(R.drawable.anxiety_selected)
+            textView.setTextColor(Color.parseColor("#FFFFFF"))
+        }
     }
 
-    private fun setupNavigation() {
-        binding.nextQuestion.setOnClickListener {
-            navigateToQuestion(currentQuestionIndex + 1, true)
-        }
-
-        binding.previousQuestion.setOnClickListener {
-            navigateToQuestion(currentQuestionIndex - 1, false)
-        }
-
-        binding.optionsRecyclerViewFastPace.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-
-                // Check if the user is scrolling horizontally
-                if (Math.abs(dx) > Math.abs(dy)) {
-                    val layoutManager = recyclerView.layoutManager as LinearLayoutManager
-                    val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-                    if (firstVisibleItemPosition != currentQuestionIndex) {
-                        previousQuestionIndex = currentQuestionIndex
-                        currentQuestionIndex = firstVisibleItemPosition
-
-                        // progressBar.stateDescriptionColor = getColor(R.color.pink)
-                        updateStepIndicators()
+    private fun clearSelection() {
+        val morningTextView = findViewById<TextView>(R.id.morning)
+        val lunchTimeTextView = findViewById<TextView>(R.id.lunchTime)
+        val eveningTextView = findViewById<TextView>(R.id.evening)
 
 
-                    }
-                }
 
+        val textViews = listOf(morningTextView, lunchTimeTextView, eveningTextView)
+
+
+
+        textViews.forEachIndexed { index, textView ->
+            if (index != selectedOptionIndex) {
+                textView.setBackgroundResource(R.drawable.anxiety_border)
+                textView.setTextColor(Color.parseColor("#424242"))
             }
-        })
-    }
-
-
-    private fun updateStepIndicators() {
-        if (currentQuestionIndex >= 0 && currentQuestionIndex < stepIndicators.size) {
-            // Update the current step indicator to active
-            progressBar.setCurrentStateNumber(StateProgressBar.StateNumber.values()[currentQuestionIndex])
-            // Update the state indicator colors
-            progressBar.stateNumberBackgroundColor = getColor(R.color.pink)
-            progressBar.stateNumberForegroundColor = getColor(R.color.white)
-            //progressBar.stateF = getColor(R.color.pink)
-            progressBar.stateDescriptionColor = getColor(R.color.pink)
-
-
         }
 
+
     }
 
-    private fun navigateToQuestion(index: Int, isNext: Boolean) {
-        if (index in 0 until anxietyText.size) {
-            if (isNext) {
-                previousQuestionIndex = currentQuestionIndex
-            } else {
-                // Update the current step indicator to inactive when going to the previous question
-                if (currentQuestionIndex >= 0 && currentQuestionIndex < stepIndicators.size) {
-                    //stepIndicators[currentQuestionIndex].setImageResource(R.drawable.ic_inactivetickmark)
-                    //  progressBar.stateDescriptionColor = getColor(R.color.pink)
-                }
+    private fun selectOption1(index: Int, textView: TextView) {
+        if (index != selectedOptionIndex) {
+            // Unselect the previously selected TextView
+            selectedOptionIndex = index
+            clearSelection1()
+
+            // Select the clicked TextView
+            textView.setBackgroundResource(R.drawable.anxiety_selected)
+            textView.setTextColor(Color.parseColor("#FFFFFF"))
+        }
+    }
+
+    private fun clearSelection1()
+    {
+        val bedroomTextView = findViewById<TextView>(R.id.my_bedroom)
+        val couchTextView = findViewById<TextView>(R.id.on_my_couch)
+        val carTextView = findViewById<TextView>(R.id.my_car)
+        val patioTextView = findViewById<TextView>(R.id.on_patio)
+
+
+        val textViews1 = listOf(bedroomTextView,couchTextView,carTextView,patioTextView)
+
+        textViews1.forEachIndexed { index, textView ->
+            if (index != selectedOptionIndex) {
+                textView.setBackgroundResource(R.drawable.anxiety_border)
+                textView.setTextColor(Color.parseColor("#424242"))
             }
-            currentQuestionIndex = index
-            binding.optionsRecyclerViewFastPace.smoothScrollToPosition(currentQuestionIndex)
-
-            updateStepIndicators()
-
         }
     }
 }

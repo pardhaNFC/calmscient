@@ -31,13 +31,36 @@ class MindfulnessScreensAdapter (private val items: List<MindfulnessExercisesTex
 
     override fun onBindViewHolder(holder: MindfullnessQuestionsViewHolder, position: Int) {
         val item = items[position]
+        var isFavorite = false
+        // Check and set text1
+        if (item.text1.isNullOrBlank()) {
+            holder.text1.visibility = View.GONE
+        } else {
+            holder.text1.text = item.text1
+            holder.text1.visibility = View.VISIBLE
+        }
 
-        holder.text1.text = item.text1
-        holder.text2.text = item.text2
+        // Check and set text2
+        if (item.text2.isNullOrBlank()) {
+            holder.text2.visibility = View.GONE
+        } else {
+
+            holder.text2.text = item.text2
+            holder.text2.visibility = View.VISIBLE
+        }
+        /*holder.text1.text = item.text1
+        holder.text2.text = item.text2*/
         item.exercisesBellIcon?.let { holder.exercisesBellIcon.setImageResource(it) }
         item.exercisesHeartImage?.let { holder.exercisesHeartImage.setImageResource(it) }
         item.imageAnxiety?.let { holder.imageAnxiety.setImageResource(it) }
-
+        /*holder.exercisesHeartImage.setOnClickListener {
+            isFavorite = !isFavorite
+            if (isFavorite) {
+                holder.exercisesHeartImage.setImageResource(R.drawable.ic_favorites_icon) // Set your desired color
+            } else {
+                holder.exercisesHeartImage.setImageResource(R.drawable.ic_favorites_red) // Reset color
+            }
+        }*/
     }
 
     inner class MindfullnessQuestionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

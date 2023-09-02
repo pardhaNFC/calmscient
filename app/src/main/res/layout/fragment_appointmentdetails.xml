@@ -34,7 +34,7 @@
              android:layout_marginTop="15dp"
              android:layout_marginBottom="20dp"
              android:paddingLeft="@dimen/_20sdp"
-             android:text="Appointment details"
+             android:text="@string/appointments_details"
              android:textColor="@color/black"
              android:textSize="24sp"
              android:textStyle="bold" />
@@ -94,7 +94,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_marginTop="@dimen/_15sdp"
-             android:text="08/24/2023"
+             android:text="09/02/2023"
              android:textStyle="bold"
              android:textColor="@color/black"
              android:textSize="@dimen/_16sdp"/>
