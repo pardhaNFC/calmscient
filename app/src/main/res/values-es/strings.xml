@@ -264,5 +264,7 @@
     <string name="make_plan_card9_text1">¡HAS LLEGADO!</string>
     <string name="make_plan_card9_text2">¡Felicidades! Has llegado al otro lado de tu situación estresante.</string>
     <string name="make_plan_card9_text3">Si sigues esta misma ruta cada vez, podrás navegar cualquier situación estresante que se te presente. ¿Qué opinas de este plan de acción? No te preocupes si no estás seguro de cómo "conducir" este camino aún. Es por eso que estamos aprendiendo las habilidades paso a paso.</string>
+    <string name="quiz_title">PRUEBA</string>
+    <string name="submit">Entregar</string>
 
 </resources>

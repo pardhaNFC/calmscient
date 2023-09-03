@@ -326,6 +326,24 @@
     <string name="make_plan_card9_text3">If you map this same route every time, you’ll be able to navigate any stressful situation that comes your way.
 \n\n What do you think of this action plan? Don’t worry if you aren’t sure of how to “drive” this path yet. This is why we are learning the skills one step at a time.
  </string>
-
+    <string name="quiz_title">QUIZ</string>
+    <string name="quiz_text1">It can be hard to clearly identify specific fears that trigger our anxiety cycles. In time, you’ll be able to quickly recognize and avoid them. To learn this skill, let’s walk through a series of questions together that will teach you to recognize, identify and understand your anxiety.</string>
+    <string name="quiz_text2">1. Recognize the stressful situation(s):</string>
+    <string name="quiz_text3">Over the last 30 days, have you been affected by the following problems?</string>
+    <string name="quiz_text_option1">Work related stress</string>
+    <string name="quiz_text_option2">Personal health stress</string>
+    <string name="quiz_text_option3">Family related stress</string>
+    <string name="quiz_text_option4">Social relations stress</string>
+    <string name="quiz_text_option5">Acute/chronic stress</string>
+    <string name="quiz_text2_1">2. Identify your response </string>
+    <string name="quiz_text_option2_1">Push Away/Avoidance (“I avoid stressful situations and people at any cost.”)</string>
+    <string name="quiz_text_option2_2">Push Through (“I try to ignore and push through stress.”)</string>
+    <string name="quiz_text_option2_3">Denial (“I either stay positive and push through or shutdown.”)</string>
+    <string name="quiz_ques_3">3. Understand the consequences of your response: </string>
+    <string name="quiz_ques_3_1">What happens to your anxiety as a result?</string>
+    <string name="quiz_text_option3_1">I end up giving up, rejecting, avoiding, and possibly losing important parts of my life, such as relationships, work, grades, time, and health.</string>
+    <string name="quiz_text_option3_2">I ignore stress, get overly productive, multitask, keep myself way too busy, get restless and seek quick relief from stress by unhelpful coping habits. Sometimes I get sick or injured.</string>
+    <string name="quiz_text_option3_3">I have a hard time acknowledging my own stress and anxiety. I also have a hard time following through with changes in order to manage stress, and end up in a vicious cycle of anxiety.</string>
+    <string name="submit">Submit</string>
 
 </resources>

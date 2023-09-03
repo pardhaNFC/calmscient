@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.AnxietyPlayerActivity
 import com.calmscient.activities.AnxietyQuestionsActivity
+import com.calmscient.activities.AnxietyQuizActivity
 import com.calmscient.activities.FastPaceActivity
 import com.calmscient.activities.MakeAPlanActivity
 import com.calmscient.activities.PlayerActivity
@@ -144,9 +145,9 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     }
 
                     cardItem.availableContentTypes.contains(ItemType.QUIZ) -> {
-                        Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
-                        /*val intent = Intent(context, QuizActivity::class.java)
-                        context.startActivity(intent)*/
+                       // Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(context, AnxietyQuizActivity::class.java)
+                        context.startActivity(intent)
                     }
 
                     else -> {
