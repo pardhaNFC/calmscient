@@ -74,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <com.kofigyan.stateprogressbar.StateProgressBar
                     android:id="@+id/your_state_progress_bar_id_1"
@@ -170,7 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <com.kofigyan.stateprogressbar.StateProgressBar
                     android:id="@+id/your_state_progress_bar_id_2"

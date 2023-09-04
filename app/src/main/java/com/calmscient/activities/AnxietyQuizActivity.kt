@@ -14,9 +14,10 @@ package com.calmscient.activities
 import android.os.Bundle
 import android.view.WindowManager
 import com.calmscient.databinding.LayoutAnxietyQuizBinding
+import com.calmscient.fragments.DiscoveryFragment
 
-class AnxietyQuizActivity :AppCompat() {
-    private lateinit var binding:LayoutAnxietyQuizBinding
+class AnxietyQuizActivity : AppCompat() {
+    private lateinit var binding: LayoutAnxietyQuizBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LayoutAnxietyQuizBinding.inflate(layoutInflater)
@@ -26,5 +27,18 @@ class AnxietyQuizActivity :AppCompat() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        binding.menuIcon.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    override fun onBackPressed() {
+        val fragment =
+            supportFragmentManager.findFragmentByTag(DiscoveryFragment::class.java.simpleName)
+        if (fragment != null && fragment.isVisible) {
+            supportFragmentManager.popBackStack()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

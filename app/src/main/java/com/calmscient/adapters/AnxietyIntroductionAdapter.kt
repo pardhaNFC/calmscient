@@ -30,6 +30,7 @@ import com.calmscient.activities.AnxietyQuizActivity
 import com.calmscient.activities.FastPaceActivity
 import com.calmscient.activities.MakeAPlanActivity
 import com.calmscient.activities.PlayerActivity
+import com.calmscient.activities.RecognizeActivity
 import com.calmscient.data.remote.ItemType
 import com.calmscient.data.remote.CardItemDataClass
 
@@ -124,28 +125,27 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                         /*val intent = Intent(context, AnxietyQuestionsActivity::class.java)
                         intent.putExtra("description", cardItem.description)
                         context.startActivity(intent)*/
-                        if(cardItem.description =="What is anxiety?")
-                        {
+                        if (cardItem.description == "What is anxiety?") {
                             val intent = Intent(context, AnxietyQuestionsActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
-                        }
-                        else if(cardItem.description =="Get yourself out of “fast pace cycle”")
-                        {
+                        } else if (cardItem.description == "Get yourself out of “fast pace cycle”") {
                             val intent = Intent(context, FastPaceActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
-                        }
-                        else if(cardItem.description =="Let’s make a plan")
-                        {
+                        } else if (cardItem.description == "Let’s make a plan") {
                             val intent = Intent(context, MakeAPlanActivity::class.java)
+                            intent.putExtra("description", cardItem.description)
+                            context.startActivity(intent)
+                        }else if (cardItem.description == "Recognize a cycle of anxiety") {
+                            val intent = Intent(context, RecognizeActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
                         }
                     }
 
                     cardItem.availableContentTypes.contains(ItemType.QUIZ) -> {
-                       // Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
+                        // Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
                         val intent = Intent(context, AnxietyQuizActivity::class.java)
                         context.startActivity(intent)
                     }

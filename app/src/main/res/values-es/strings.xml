@@ -266,5 +266,34 @@
     <string name="make_plan_card9_text3">Si sigues esta misma ruta cada vez, podrás navegar cualquier situación estresante que se te presente. ¿Qué opinas de este plan de acción? No te preocupes si no estás seguro de cómo "conducir" este camino aún. Es por eso que estamos aprendiendo las habilidades paso a paso.</string>
     <string name="quiz_title">PRUEBA</string>
     <string name="submit">Entregar</string>
+    <!--Recognize a cycle of anxiety-->
+    <string name="title_toolbar_recognize">Reconoce un ciclo de ansiedad</string>
+    <string name="recognize_card1_text1">Anteriormente, comparamos enfrentar situaciones estresantes con planificar una ruta hacia un destino. Cuando se toman los pasos correctos, hay un comienzo y hay un final para la ansiedad.</string>
+    <string name="recognize_card1_text2">QUEDANDO ATRAPADO EN EL CICLO</string>
+    <string name="recognize_card1_text3">Desafortunadamente, en lugar de abordar nuestro estrés de manera lineal, a menudo quedamos atrapados en un círculo vicioso: ¡un ciclo de ansiedad! ¿Cómo comienza este ciclo? Al preocuparnos en exceso por una amenaza potencial que aún no ha ocurrido.</string>
+    <string name="recognize_card2_text1">Además de preocuparnos por esta amenaza potencial, nuestro pensamiento sesgado puede hacernos suponer que este evento futuro tendrá un resultado negativo.</string>
+    <string name="recognize_card2_text2">Comenzamos a prestar más y más atención a posibles signos de que este resultado negativo es probable. Una vez que nos hemos convencido de esto, miramos internamente para ver si podremos hacer frente a estas posibles amenazas. Nuestros síntomas de ansiedad comienzan a manifestarse, confirmando nuestras sospechas de que no podremos hacer frente, lo que a su vez nos hace más ansiosos. ¡Ahora hemos entrado completamente en un ciclo de ansiedad!</string>
+    <string name="recognize_card3_text1">RECONOCE QUE TODOS SON DIFERENTES</string>
+    <string name="recognize_card3_text2">¡La verdad es que no todos se sienten estresados por las mismas cosas! Al reconocer tus miedos y respuestas personales, podrás evitar caer en el ciclo.</string>
+    <string name="recognize_card3_text3">Examinemos las respuestas de Nora, Austin y Melanie para profundizar en nuestra comprensión de este ciclo. Observa si puedes identificar dónde entran Nora, Austin y Melanie en este ciclo, y toma nota de cómo el punto de entrada de cada persona es único. Después de leer la respuesta de cada persona, haz clic en el botón para resaltar el miedo que los hace víctimas del ciclo de ansiedad.</string>
+    <!--Dialog text for Recognize -->
+    <string name="nora_ss">"Mi salud personal me causa ansiedad. Para reducir el riesgo de una emergencia de salud que no puedo permitirme, necesitaré trabajar a tiempo completo y eso requerirá que adquiera nuevas habilidades para cumplir con expectativas más altas".</string>
+    <string name="nora_rs">"Evito y escapo de situaciones estresantes. Por eso renuncié a mi trabajo. Debido a mi problema de salud, no creo tener suficiente fuerza para manejar la presión. También sigo pensando en cómo fracasé en mi primer trabajo".</string>
+    <string name="nora_c">Nora se preocupa tanto por su salud que pierde cada vez más confianza en poder enfrentar con éxito la situación.</string>
+    <string name="austin_ss">"Mi equilibrio entre trabajo y familia me causa estrés. Soy autónomo y mi familia cree que puedo hacer tiempo para ellos mientras trabajo. Estoy constantemente haciendo varias tareas, tratando de cumplir con las expectativas de todos".</string>
+    <string name="austin_rs">"Estoy constantemente tratando de presionarme para no fallar en todas mis tareas y responsabilidades. Escapo de esta presión bebiendo y viendo juegos por la noche".</string>
+    <string name="austin_c">Austin asume presiones adicionales, utilizando la ansiedad como un impulsor para esforzarse más. Su familia se queja de que está desconectado por las noches.</string>
+    <string name="melanie_ss">"Al principio, me costaba identificar qué me provoca ansiedad porque pensaba que siempre había logrado mantenerme a flote manteniéndome ocupada y positiva. Pero estoy constantemente sobrecargándome, en su mayoría para estar al día con los niños, amigos y eventos familiares. Mis amigos me dicen que me estoy esforzando demasiado, pero en realidad no puedo reconocer cuándo lo estoy haciendo".</string>
+    <string name="melanie_rs">"No soy consciente de ello. Estoy un poco en la negación porque no sé cómo se ve la vida normal. Suelo pensar que todo está bien".</string>
+    <string name="melanie_c">Melanie a menudo está confundida y duda de sus sentimientos. Siempre está preguntando a los demás si son felices y tiende a hacer las cosas en exceso.</string>
+    <string name="title_stressful_situation">SITUACIÓN ESTRESANTE</string>
+    <string name="title_consequences">CONSECUENCIAS</string>
+    <string name="title_response_to_stress">RESPUESTA AL ESTRÉS</string>
+    <string name="nora">NORA</string>
+    <string name="austin">AUSTIN</string>
+    <string name="fear">[ MOSTRAR EL MIEDO DE AUSTIN ]</string>
+    <string name="melanie">Melanie</string>
+    <string name="how_about_you">¿Y TÚ?</string>
+    <string name="melanie_desc">¿Puedes identificar los miedos específicos que podrían llevarte al ciclo vicioso de la ansiedad? En la próxima lección, responde algunas preguntas útiles que te guiarán para reconocer estos miedos y evitar este peligroso ciclo.</string>
 
 </resources>

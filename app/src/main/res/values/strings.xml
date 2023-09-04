@@ -346,4 +346,37 @@
     <string name="quiz_text_option3_3">I have a hard time acknowledging my own stress and anxiety. I also have a hard time following through with changes in order to manage stress, and end up in a vicious cycle of anxiety.</string>
     <string name="submit">Submit</string>
 
+    <!--Recognize a cycle of anxiety-->
+    <string name="title_toolbar_recognize">Recognize a cycle of anxiety</string>
+    <string name="recognize_card1_text1">Earlier, we compared facing stressful situations to planning a route to a destination. When the correct steps are taken, there is a beginning and there is an end to the anxiety.</string>
+    <string name="recognize_card1_text2">GETTING CAUGHT IN THE CYCLE</string>
+    <string name="recognize_card1_text3">Unfortunately, instead of approaching our stress in this linear way, we often get stuck in a vicious circle: a cycle of anxiety! How does this cycle start? By excessively worrying about a potential threat that hasn’t occurred yet.</string>
+    <string name="recognize_card2_text1">In addition to worrying about this potential threat, our biased thinking may make us assume that this future event will have a negative outcome. </string>
+    <string name="recognize_card2_text2">We start to pay more and more attention to possible signs that this negative outcome is likely. Once we have convinced ourselves of this, we look internally to see whether or not we’ll be able to cope with these potential threats. Our anxious symptoms begin to manifest themselves, confirming our suspicions that we won’t be able to cope, which in turn make us more anxious. We have now fully entered a cycle of anxiety!</string>
+    <string name="recognize_card3_text1">RECOGNIZE THAT EVERYONE IS DIFFERENT</string>
+    <string name="recognize_card3_text2">The truth is that not everyone feels stressed by the same things! By recognizing your personal fears and responses, you’ll be able to avoid falling into the cycle.</string>
+    <string name="recognize_card3_text3">Let’s examine the responses of Nora, Austin and Melanie to deepen our understanding of this cycle. See if you can identify where Nora, Austin and Melanie enter this cycle, and note how each person’s point of entry is unique. After reading each person’s response, click on the button to highlight the fear that makes them victims of the cycle of anxiety.</string>
+
+    <!--Dialog text for Recognize -->
+    <string name="nora_ss">My personal health causes me anxiety. In order for me to reduce the risk of a health emergency I can’t afford, I’ll need to work full time, and that will require me to pick up new skills in order to meet higher expectations.”</string>
+    <string name="nora_rs">“I avoid and escape from stressful situations. That’s why I quit my job. Because of my health problem, I don’t think I have enough strength to handle pressure. I also keep thinking about how I failed at my first job.”</string>
+    <string name="nora_c">Nora worries so much about her health that she loses more and more confidence about being able to cope successfully.</string>
+    <string name="austin_ss">“My work-family balance causes me stress. I’m self-employed and my family thinks I can make time for them while I’m working. I’m constantly multi-tasking, trying to meet everyone’s expectations.”</string>
+    <string name="austin_rs">“I’m constantly trying to push myself so I won’t fail in all my tasks and responsibilities. I escape from this pressure by drinking and watching games at night.”</string>
+    <string name="austin_c">Austin takes on additional pressures, using anxiety as a booster to push himself harder. His family complains that he’s checked out in the evenings.</string>
+
+    <string name="melanie_ss">“At first, I had a hard time identifying what makes me anxious because I thought I’ve always managed to keep my head above water by just staying busy and staying positive. But I’m constantly overscheduling myself, mostly to keep up with kids, friends, and family events. My friends tell me I’m pushing myself too hard, but I can’t actually recognize when I’m doing that.”</string>
+    <string name="melanie_rs">“I’m not aware of it. I’m a bit in denial because I don’t know what normal life looks like. I tend to think everything is fine.”</string>
+    <string name="melanie_c">Melanie is often confused and second guessing her feelings. She’s constantly asking others if they are happy and tends to do things in excess.</string>
+
+    <string name="title_stressful_situation">STRESSFUL SITUATION</string>
+    <string name="title_consequences">CONSEQUENCES</string>
+    <string name="title_response_to_stress">RESPONSE TO STRESS</string>
+    <string name="nora">NORA</string>
+    <string name="austin">AUSTIN</string>
+    <string name="fear">[ SHOW AUSTIN’S FEAR ]</string>
+    <string name="melanie">Melanie</string>
+    <string name="how_about_you">HOW ABOUT YOU?</string>
+    <string name="melanie_desc">Can you identify the specific fears that could cause you to enter the vicious cycle of anxiety? In the next lesson, answer a few helpful questions that will guide you toward recognizing these fears and avoiding this dangerous cycle.</string>
+
 </resources>

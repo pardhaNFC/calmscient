@@ -177,6 +177,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
             android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.RecognizeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.NoActionBar" />
         <receiver
             android:name=".receivers.AlarmReceiver"
             android:enabled="true"
