@@ -75,7 +75,7 @@ class AnxietyQuestionsActivity : AppCompat() {
 
         setupNavigation()
         initializeAdapter()
-        if(title == "What is anxiety?")
+        if(title == getString(R.string.page_2_1))
         {
             displayAnxietyViews()
         }

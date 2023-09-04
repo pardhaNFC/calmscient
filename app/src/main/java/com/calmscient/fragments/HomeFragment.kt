@@ -160,9 +160,9 @@ class HomeFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
             contentIcons = listOf(R.drawable.video),
-            description = "Neuropsychology of anxiety",
+            description = getString(R.string.neuropsychology),
             isCompleted = false,
-            heading = "The Neuropsychology of Anxiety",
+            heading = getString(R.string.the_neuropsychology),
             summary = getString(R.string.lesson1_video_summary),
             dialogText = getString(R.string.lesson1_video1_description)
         )
@@ -172,9 +172,9 @@ class HomeFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
             contentIcons = listOf(R.drawable.video),
-            description = "Implement body calming skills",
+            description = getString(R.string.make_plan_card6_text2),
             isCompleted = false,
-            heading = "Implement body calming skills",
+            heading = getString(R.string.make_plan_card6_text2),
             summary = null,
             dialogText = getString(R.string.lesson4_video1_description)
         )
@@ -184,9 +184,9 @@ class HomeFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
             contentIcons = listOf(R.drawable.video),
-            description = "Neuropsychology of anxiety",
+            description = getString(R.string.neuropsychology),
             isCompleted = false,
-            heading = "The Neuropsychology of Anxiety",
+            heading = getString(R.string.the_neuropsychology),
             summary = getString(R.string.lesson1_video_summary),
             dialogText = getString(R.string.lesson1_video1_description)
         )
@@ -196,9 +196,9 @@ class HomeFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
             contentIcons = listOf(R.drawable.video),
-            description = "Implement body calming skills",
+            description = getString(R.string.make_plan_card6_text2),
             isCompleted = false,
-            heading = "Implement body calming skills",
+            heading = getString(R.string.make_plan_card6_text2),
             summary = null,
             dialogText = getString(R.string.lesson4_video1_description)
         )
@@ -208,9 +208,9 @@ class HomeFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
             contentIcons = listOf(R.drawable.video),
-            description = "Neuropsychology of anxiety",
+            description = getString(R.string.neuropsychology),
             isCompleted = false,
-            heading = "The Neuropsychology of Anxiety",
+            heading = getString(R.string.the_neuropsychology),
             summary = getString(R.string.lesson1_video_summary),
             dialogText = getString(R.string.lesson1_video1_description)
         )

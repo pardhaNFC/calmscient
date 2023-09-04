@@ -125,19 +125,19 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                         /*val intent = Intent(context, AnxietyQuestionsActivity::class.java)
                         intent.putExtra("description", cardItem.description)
                         context.startActivity(intent)*/
-                        if (cardItem.description == "What is anxiety?") {
+                        if (cardItem.description == context.getString(R.string.page_2_1)) {
                             val intent = Intent(context, AnxietyQuestionsActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
-                        } else if (cardItem.description == "Get yourself out of “fast pace cycle”") {
+                        } else if (cardItem.description == context.getString(R.string.title_toolbar_pace)) {
                             val intent = Intent(context, FastPaceActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
-                        } else if (cardItem.description == "Let’s make a plan") {
+                        } else if (cardItem.description == context.getString(R.string.let_make_plan)) {
                             val intent = Intent(context, MakeAPlanActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
-                        }else if (cardItem.description == "Recognize a cycle of anxiety") {
+                        }else if (cardItem.description == context.getString(R.string.title_toolbar_recognize)) {
                             val intent = Intent(context, RecognizeActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
