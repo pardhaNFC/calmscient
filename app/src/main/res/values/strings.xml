@@ -49,7 +49,9 @@
     <string name="medication_Details">Medications Details</string>
     <string name="upcoming_medical_appointments">Upcoming Medical Appointments</string>
     <string name="screenings">Screenings</string>
-    <string name="add_appointment">Add AppointmentAgregar cita</string>
+    <string name="add_appointment">Add Appointment</string>
+    <string name="plz_confirm">Please confirm.</string>
+    <string name="exit_app">Are you want to exit the app?</string>
     <!--network errors-->
     <string name="network_connection_error">Internet connection lost, please retry again</string>
     <string name="network_default_error">Something wrong happened, please retry again</string>
@@ -323,7 +325,7 @@
 
 
     <string name="make_plan_card6_text1">STEP 4</string>
-    <string name="make_plan_card6_text2">IMPLEMENT BODY CALMING SKILLS</string>
+    <string name="make_plan_card6_text2">Implement body calming skills</string>
     <string name="make_plan_card6_text3">You can learn to force your body to calm down. Once your body is calm, your mind will follow. Skills such as relaxation, progressive muscle relaxation, mindful breathing and walking will become second nature.</string>
 
 
@@ -334,7 +336,7 @@
 
     <string name="make_plan_card8_text1">STEP 6</string>
     <string name="make_plan_card8_text2">IMPLEMENT MIND CALMING SKILLS</string>
-    <string name="make_plan_card8_text3">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our</string>
+    <string name="make_plan_card8_text3">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our mind.</string>
 
 
     <string name="make_plan_card9_text1">YOU’VE ARRIVED!</string>
@@ -392,9 +394,22 @@
     <string name="title_response_to_stress">RESPONSE TO STRESS</string>
     <string name="nora">NORA</string>
     <string name="austin">AUSTIN</string>
-    <string name="fear">[ SHOW AUSTIN’S FEAR ]</string>
+    <!--<string name="fear">[ SHOW AUSTIN’S FEAR ]</string>-->
     <string name="melanie">Melanie</string>
     <string name="how_about_you">HOW ABOUT YOU?</string>
     <string name="melanie_desc">Can you identify the specific fears that could cause you to enter the vicious cycle of anxiety? In the next lesson, answer a few helpful questions that will guide you toward recognizing these fears and avoiding this dangerous cycle.</string>
 
+
+    <!--Audio Player text and its dialog Text -->
+    <string name="meet_nora_austrin_melanie_description">Sometimes, seeing anxiety through others’ eyes can help us understand it better. Let’s meet three friends who view and respond to stress differently. Though their personalities and lifestyles are different, you will probably relate to one of them.</string>
+    <string name="nora_audio_text1">First, let’s meet Nora. Nora tends to push away and avoid stressful situations. See if you can identify this in the way she expresses herself:</string>
+    <string name="nora_audio_text2">“I studied business and marketing at university, but I couldn’t handle the pressure of meeting monthly goals at work. I got sick so I quit, and now I’m working at a coffee shop during the day and have a part time cleaning job at night. My health problems have put a lot of restrictions on my life choices and I can’t enjoy things I used to enjoy.  I often stay up late at night thinking about my problems and escape by watching TV. Something needs to change, but I\'m not sure where to begin. I\'m scared my health is not going to get better and this is just going to be my new life.”></string>
+    <string name="nora_audio_text3">Do you relate to some of Nora’s feelings and reactions?</string>
+    <string name="austin_audio_text1">Next, let’s meet Austin. Austin believes that pushing through stress is the way to go. Listen to how he feels about his work life:</string>
+    <string name="austin_audio_text2">“People tell me that I’m a hard-working and productive person, and it’s true… I can push myself pretty hard. I run my own business and I can multitask all day. I don’t ask others for help because it’s just easier and quicker if I do it all myself. I can’t really trust anyone else to get things done right.\n\n I subconsciously use anxiety to drive myself. I rely on facts, analysis, and information, I don’t think anyone views me as an anxious person.”</string>
+    <string name="austin_audio_text3">Do you respond to stressful situations like Austin does?</string>
+    <string name="melanie_audio_text1">Finally, let’s meet Melanie. She tends to force herself to stay positive, even though doing so can sometimes result in her being in denial about her circumstances:</string>
+    <string name="melanie_audio_text2">“I care about people so I’m good at helping others in need. I just constantly have a lot on my plate and I’m tired all the time. I try to be on top of my kid’s school and sports events, and enjoy doing special things for my anniversary and family holidays. I’m incredibly busy and often wonder when I get to live my life for myself.\n\n Sometimes I just go into my room and turn on the TV or scroll through social media to shut down because I’m simply exhausted. I love reading positive quotes because I think if I stay positive I can keep going.”</string>
+    <string name="melanie_audio_text3">Have you ever responded to stress like Melanie does?</string>
+    <string name="information">Information</string>
 </resources>

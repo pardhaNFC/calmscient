@@ -27,6 +27,7 @@ import com.calmscient.R
 import com.calmscient.activities.AnxietyPlayerActivity
 import com.calmscient.activities.AnxietyQuestionsActivity
 import com.calmscient.activities.AnxietyQuizActivity
+import com.calmscient.activities.AudioPlayerActivity
 import com.calmscient.activities.FastPaceActivity
 import com.calmscient.activities.MakeAPlanActivity
 import com.calmscient.activities.PlayerActivity
@@ -85,12 +86,17 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     }*/
                     cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
                         if (cardItem.audioResourceId != null) {
-                            val intent = Intent(context, PlayerActivity::class.java)
-                            intent.putExtra("mediaResourceId", cardItem.audioResourceId)
-                            intent.putExtra("heading", cardItem.heading)
-                            intent.putExtra("summary", cardItem.summary)
-                            intent.putExtra("dialogText", cardItem.dialogText)
-                            context.startActivity(intent)
+                            if (cardItem.description == context.getString(R.string.meet_nora_austin)) {
+                                val intent = Intent(context, AudioPlayerActivity::class.java)
+                                intent.putExtra("audioResourceId", cardItem.audioResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("description", cardItem.description)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            } else {
+                                Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                            }
                         } else {
                             Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
                         }
@@ -137,7 +143,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             val intent = Intent(context, MakeAPlanActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)
-                        }else if (cardItem.description == context.getString(R.string.title_toolbar_recognize)) {
+                        } else if (cardItem.description == context.getString(R.string.title_toolbar_recognize)) {
                             val intent = Intent(context, RecognizeActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)

@@ -11,7 +11,7 @@
     <string name="or">o</string>
     <string name="happy_to_see_you">estamos felices de verte</string>
     <string name="hello">Hola</string>
-    <string name="home">Hogar</string>
+    <string name="home">HOGAR</string>
     <string name="discovery">DESCUBRIMIENTO</string>
     <string name="discovery_lower">Descubrimiento</string>
     <string name="exercises">EJERCICIOS</string>
@@ -117,6 +117,8 @@
     <string name="trevor_number">1-866-488-7386</string>
     <string name="trans_number">877-565-8860</string>
     <string name="medication_Details">Detalles de los medicamentos</string>
+    <string name="plz_confirm">Por favor confirmar..</string>
+    <string name="exit_app">¿Quieres salir de la aplicación?</string>
     <!--discovery-->
     <string name="anxiety">Manejo de la ansiedad</string>
     <string name="stress">Cambiar tu respuesta al estrés</string>
@@ -282,7 +284,7 @@
     <string name="make_plan_card5_text3">Aprende a identificar los tres componentes de la ansiedad: Fisiológico (Cuerpo), Cognitivo (Mente) y Conductual (Acciones). Esto te ayudará a seguir planes de acción que calmen tu mente, cuerpo y acciones.</string>
 
     <string name="make_plan_card6_text1">PASO 4</string>
-    <string name="make_plan_card6_text2">IMPLEMENTA HABILIDADES PARA CALMAR EL CUERPO</string>
+    <string name="make_plan_card6_text2">Implementar habilidades para calmar el cuerpo</string>
     <string name="make_plan_card6_text3">Puedes aprender a forzar a tu cuerpo a calmarse. Una vez que tu cuerpo esté tranquilo, tu mente seguirá. Habilidades como la relajación, la relajación muscular progresiva, la respiración consciente y caminar con atención plena se convertirán en algo natural.</string>
 
     <string name="make_plan_card7_text1">PASO 5</string>
@@ -291,7 +293,7 @@
 
     <string name="make_plan_card8_text1">PASO 6</string>
     <string name="make_plan_card8_text2">IMPLEMENTA HABILIDADES PARA CALMAR LA MENTE</string>
-    <string name="make_plan_card8_text3">El pensamiento sesgado (Distorsión Cognitiva) afecta en gran medida nuestra tendencia a preocuparnos de manera irracional y causa ansiedad persistente. Esto sucede cuando, basados en experiencias pasadas, subestimamos o sobreestimamos los estresores de una situación particular sin analizarlos de manera realista. En cualquier caso, no nos permite ver la situación con claridad. Identificarnos en la Distorsión Cognitiva nos ayudará a modificar nuestro pensamiento de manera que calme nuestra</string>
+    <string name="make_plan_card8_text3">El pensamiento sesgado (Distorsión Cognitiva) afecta en gran medida nuestra tendencia a preocuparnos de manera irracional y causa ansiedad persistente. Esto sucede cuando, basados en experiencias pasadas, subestimamos o sobreestimamos los estresores de una situación particular sin analizarlos de manera realista. En cualquier caso, no nos permite ver la situación con claridad. Identificarnos en la Distorsión Cognitiva nos ayudará a modificar nuestro pensamiento de manera que calme nuestra mente.</string>
 
     <string name="make_plan_card9_text1">¡HAS LLEGADO!</string>
     <string name="make_plan_card9_text2">¡Felicidades! Has llegado al otro lado de tu situación estresante.</string>
@@ -340,7 +342,7 @@
     <string name="title_response_to_stress">RESPUESTA AL ESTRÉS</string>
     <string name="nora">NORA</string>
     <string name="austin">AUSTIN</string>
-    <string name="fear">[ MOSTRAR EL MIEDO DE AUSTIN ]</string>
+    <!--<string name="fear">[ MOSTRAR EL MIEDO DE AUSTIN ]</string>-->
     <string name="melanie">Melanie</string>
     <string name="how_about_you">¿Y TÚ?</string>
     <string name="melanie_desc">¿Puedes identificar los miedos específicos que podrían llevarte al ciclo vicioso de la ansiedad? En la próxima lección, responde algunas preguntas útiles que te guiarán para reconocer estos miedos y evitar este peligroso ciclo.</string>
@@ -372,5 +374,16 @@
     <string name="bodymovementexercise_text">Existen muchas rutinas de movimiento que te invitan a reconectar con tu cuerpo. Pilates, yoga y otros ejercicios de estiramiento similares incorporan una conciencia consciente de los movimientos y posturas. Además, coordinar el movimiento del cuerpo y la respiración potencia aún más su capacidad para cambiar su estado.</string>
     <!--deepBreathingExercise-->
     <string name="deepbreathingexercise_text">Busque un lugar cómodo y tranquilo para sentarse o tumbarse. También puedes practicar la respiración profunda mientras estás de pie, pero asegúrate de tener el equilibrio y el apoyo adecuados.</string>
-
+    <!--Audio Player text and its dialog Text -->
+    <string name="meet_nora_austrin_melanie_description">A veces, ver la ansiedad a través de los ojos de los demás puede ayudarnos a comprenderla mejor. Conozcamos a tres amigos que ven y responden al estrés de manera diferente. Aunque sus personalidades y estilos de vida son diferentes, probablemente te identificarás con alguno de ellos.</string>
+    <string name="nora_audio_text1">Primero, conozcamos a Nora. Nora tiende a alejarse y evitar situaciones estresantes. A ver si puedes identificar esto en la forma en que se expresa:</string>
+    <string name="nora_audio_text2">“Estudié negocios y marketing en la universidad, pero no podía soportar la presión de cumplir objetivos mensuales en el trabajo. Me enfermé, así que renuncié y ahora trabajo en una cafetería durante el día y tengo un trabajo de limpieza a tiempo parcial por la noche. Mis problemas de salud han impuesto muchas restricciones a mis elecciones de vida y no puedo disfrutar de las cosas que antes disfrutaba. A menudo me quedo despierto hasta tarde pensando en mis problemas y me escapo viendo la televisión. Algo necesita cambiar, pero no estoy seguro de por dónde empezar. Tengo miedo de que mi salud no mejore y esta sea simplemente mi nueva vida”.></string>
+    <string name="nora_audio_text3">¿Te identificas con algunos de los sentimientos y reacciones de Nora?</string>
+    <string name="austin_audio_text1">A continuación, conozcamos a Austin. Austin cree que superar el estrés es el camino a seguir. Escuche cómo se siente acerca de su vida laboral:</string>
+    <string name="austin_audio_text2">“La gente me dice que soy una persona trabajadora y productiva, y es verdad… puedo esforzarme bastante. Dirijo mi propio negocio y puedo realizar múltiples tareas todo el día. No pido ayuda a otros porque es más fácil y rápido si lo hago todo yo mismo. Realmente no puedo confiar en que nadie más haga las cosas bien.\n\n Subconscientemente uso la ansiedad para motivarme. Me baso en hechos, análisis e información, no creo que nadie me vea como una persona ansiosa”.</string>
+    <string name="austin_audio_text3">¿Responde usted a situaciones estresantes como lo hace Austin?</string>
+    <string name="melanie_audio_text1">Finalmente, conozcamos a Melanie. Tiende a esforzarse por mantener una actitud positiva, aunque hacerlo a veces puede resultar en que niegue sus circunstancias:</string>
+    <string name="melanie_audio_text2">“Me preocupo por las personas, así que soy bueno ayudando a quienes lo necesitan. Constantemente tengo mucho que hacer y estoy cansado todo el tiempo. Intento estar al tanto de los eventos deportivos y escolares de mis hijos, y disfruto haciendo cosas especiales para mi aniversario y las vacaciones familiares. Estoy increíblemente ocupada y a menudo me pregunto cuándo podré vivir mi vida por mí misma.\n\n A veces simplemente entro a mi habitación y enciendo el televisor o me desplazo por las redes sociales para cerrar la sesión porque simplemente estoy exhausto. Me encanta leer citas positivas porque creo que si mantengo una actitud positiva puedo seguir adelante”.</string>
+    <string name="melanie_audio_text3">¿Alguna vez has respondido al estrés como lo hace Melanie?</string>
+    <string name="information">Información</string>
 </resources>

@@ -4,7 +4,44 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:weightSum="2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
 
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_manageanxietyicon" />
+
+        <TextView
+            android:id="@+id/tv_title_player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/ic_glossary"
+            android:layout_toEndOf="@id/menu_icon"
+            android:ellipsize="end"
+            android:fontFamily="@font/lexendmedium"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="#424242"
+            android:textSize="@dimen/_18sdp" />
+
+        <ImageView
+            android:id="@+id/ic_glossary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_filesiconanxiety" />
+    </RelativeLayout>
     <!-- VideoView and Icons Container -->
     <RelativeLayout
         android:id="@+id/videoFrameLayout"
@@ -33,6 +70,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
+            android:visibility="gone"
             android:layout_marginBottom="@dimen/_10sdp"
             android:background="@android:color/transparent"
             android:contentDescription="Back"

@@ -11,9 +11,11 @@
 
 package com.calmscient.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
@@ -100,5 +102,24 @@ class DashboardActivity : AppCompat() {
         transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+    override fun onBackPressed() {
+        AlertDialog.Builder(this).apply {
+            setTitle(getString(R.string.plz_confirm))
+            setMessage(getString(R.string.exit_app))
+
+            setPositiveButton("Yes") { _, _ ->
+                // if user press yes, finishing the current activity
+                //super.onBackPressed()
+                val a = Intent(Intent.ACTION_MAIN)
+                a.addCategory(Intent.CATEGORY_HOME)
+                a.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(a)
+            }
+            setNegativeButton("No") { _, _ ->
+                // if user press no, then return the activity
+            }
+            setCancelable(true)
+        }.create().show()
     }
 }

@@ -122,6 +122,7 @@
             android:name=".activities.GlossaryActivity"
             android:configChanges="keyboardHidden|locale|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.ButterflyHugExercisesActivity"
@@ -151,36 +152,49 @@
             android:name=".activities.MindfulnessExercisesActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.DancingExercisesActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.RunningExerciseActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.BodyMovementExerciseActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.DeepBreathingExerciseActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.AnxietyQuizActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.RecognizeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.AudioPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <receiver
             android:name=".receivers.AlarmReceiver"

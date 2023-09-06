@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  -->
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,37 +16,37 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp">
+            android:padding="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/menu_icon"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
                 android:src="@drawable/ic_manageanxietyicon" />
 
             <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="match_parent"
+                android:id="@+id/tv_title_player"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_toEndOf="@+id/menu_icon"
+                android:layout_toStartOf="@id/ic_glossary"
+                android:layout_toEndOf="@id/menu_icon"
                 android:ellipsize="end"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="center"
                 android:maxLines="1"
-                android:text="@string/title_toolbar_recognize"
+                android:textAlignment="center"
                 android:textColor="#424242"
-                android:textSize="@dimen/_17sdp" />
+                android:textSize="@dimen/_18sdp" />
 
             <ImageView
                 android:id="@+id/ic_glossary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/tv_title"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
                 android:src="@drawable/ic_filesiconanxiety" />
@@ -315,7 +305,7 @@
                       </LinearLayout>
                   </LinearLayout>
 
-                  <TextView
+                  <!--<TextView
                       android:id="@+id/fearText"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent"
@@ -325,7 +315,7 @@
                       android:gravity="center"
                       android:text="[SHOW AUSTIN'S FEAR ]"
                       android:textColor="@color/red"
-                      android:textSize="@dimen/_13sdp" />
+                      android:textSize="@dimen/_13sdp" />-->
 
                   <TextView
                       android:id="@+id/howText"

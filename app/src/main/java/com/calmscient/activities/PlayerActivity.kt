@@ -12,6 +12,7 @@
 package com.calmscient.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.net.Uri
@@ -40,9 +41,7 @@ class PlayerActivity : AppCompatActivity(){
     private var isVideoPlaying = true
     private var isFavorite = false
     private val isPortrait = false
-
-
-
+    lateinit var title : TextView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +55,7 @@ class PlayerActivity : AppCompatActivity(){
         favoritesIcon = findViewById(R.id.favoritesIcon)
         heading = findViewById(R.id.headingTextView)
         summary = findViewById(R.id.summaryTextView)
+        title = findViewById(R.id.tv_title_player)
 
         if (savedInstanceState == null) {
             // Initialize ExoPlayer only if activity is initially created
@@ -81,6 +81,7 @@ class PlayerActivity : AppCompatActivity(){
 
             heading.text = headingText
             summary.text = summaryText
+            title.text = headingText
         }
 
 
@@ -103,6 +104,7 @@ class PlayerActivity : AppCompatActivity(){
             favoritesIcon = findViewById(R.id.favoritesIcon)
             heading = findViewById(R.id.headingTextView)
             summary = findViewById(R.id.summaryTextView)
+            title = findViewById(R.id.tv_title_player)
 
             val headingText = intent.getStringExtra("heading")
             val summaryText = intent.getStringExtra("summary")
@@ -111,6 +113,7 @@ class PlayerActivity : AppCompatActivity(){
 
             heading.text = headingText
             summary.text = summaryText
+            title.text = headingText
             // Initialize your binding and control setup after re-binding views
             initializeBinding()
             initializeVideoControl()
@@ -156,7 +159,16 @@ class PlayerActivity : AppCompatActivity(){
                 showInformationDialog()
             }
         }
+        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
+        {
+            findViewById<ImageView>(R.id.ic_glossary).setOnClickListener {
+                startActivity(Intent(this, GlossaryActivity::class.java))
+            }
 
+            findViewById<ImageView>(R.id.menu_icon).setOnClickListener {
+                onBackPressed()
+            }
+        }
 
         findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
             onBackPressed()

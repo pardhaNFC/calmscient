@@ -54,7 +54,7 @@ class MakeAPlanActivity : AppCompatActivity() {
 
         val title = intent.getStringExtra("description")
 
-        binding.tvTitle.text = title
+        binding.tvTitlePlayer.text = title
 
         // Find your ProgressBar by its ID
         progressBar = findViewById<ProgressBar>(R.id.progressBar2)

@@ -183,7 +183,7 @@ class ManageAnxietyActivity : AppCompat() {
             audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.lesson_2_1),
-            description = getString(R.string.title_toolbar_pace),
+            description = getString(R.string.title_toolbar_recognize),
             isCompleted = false,
             heading = null,
             summary = null,

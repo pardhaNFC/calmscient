@@ -97,7 +97,7 @@ class RecognizeActivity : AppCompat() {
 
         val dataForScreens4to6 = arrayOf(
             arrayOf(getString(R.string.nora), null, null, null),
-            arrayOf(getString(R.string.austin), getString(R.string.fear), null, null),
+            //arrayOf(getString(R.string.austin), getString(R.string.fear), null, null),
             arrayOf(getString(R.string.melanie), null, getString(R.string.how_about_you), getString(R.string.melanie_desc))
         )
 
@@ -218,7 +218,7 @@ class RecognizeActivity : AppCompat() {
         val text4View = binding.tvText4
         val imageView = binding.imageView
         val text5View = binding.screen2TvText1
-        val text7View = binding.fearText
+        //val text7View = binding.fearText
         val imageView2 = binding.screen2Image1
 
         val text8View = binding.howText
@@ -232,7 +232,7 @@ class RecognizeActivity : AppCompat() {
             if (dataIndex >= 0 && dataIndex < dataForScreens4to6.size) {
                 val newDataArray = dataForScreens4to6[dataIndex]
                 text5View.text = newDataArray[0]
-                text7View.text = newDataArray[1]
+                //text7View.text = newDataArray[1]
                 text8View.text = newDataArray[2]
                 text9View.text = newDataArray[3]
                 imageView2.setImageResource(image2[dataIndex])

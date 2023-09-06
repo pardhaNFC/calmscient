@@ -45,7 +45,10 @@ class FastPaceActivity : AppCompatActivity(){
     private lateinit var progressBar1: StateProgressBar
     private lateinit var progressBar2: StateProgressBar
     private lateinit var progressBar3: StateProgressBar
-    private var selectedOptionIndex = -1
+
+    private var selectedOptionIndexSection1 = -1
+    private var selectedOptionIndexSection2 = -1
+
     private var isLayoutOneVisible = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,19 +60,21 @@ class FastPaceActivity : AppCompatActivity(){
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        var layoutOne = binding.root.findViewById<View>(R.id.layout_one)
-        var layoutTwo = binding.root.findViewById<View>(R.id.layout_two)
-        var layoutThree = binding.root.findViewById<View>(R.id.layout_three)
-
-        val morningTextView = findViewById<TextView>(R.id.morning)
-        val lunchTimeTextView = findViewById<TextView>(R.id.lunchTime)
-        val eveningTextView = findViewById<TextView>(R.id.evening)
 
 
-        val bedroomTextView = findViewById<TextView>(R.id.my_bedroom)
-        val couchTextView = findViewById<TextView>(R.id.on_my_couch)
-        val carTextView = findViewById<TextView>(R.id.my_car)
-        val patioTextView = findViewById<TextView>(R.id.on_patio)
+        var layoutOne = binding.layoutOne
+        var layoutTwo = binding.layoutTwo
+        var layoutThree = binding.layoutThree
+
+
+        val morningTextView = binding.morning
+        val lunchTimeTextView = binding.lunchTime
+        val eveningTextView = binding.evening
+
+        val bedroomTextView = binding.myBedroom
+        val couchTextView = binding.onMyCouch
+        val carTextView = binding.myCar
+        val patioTextView = binding.onPatio
 
 
 
@@ -80,36 +85,35 @@ class FastPaceActivity : AppCompatActivity(){
 
         //progressBar1 = findViewById(R.id.your_state_progress_bar_1)
 
-        binding.tvTitle1.text = title
+        binding.tvTitlePlayer.text = title
         // binding.tvTitle3.text = title
 
         morningTextView.setOnClickListener {
-            selectOption(0, morningTextView)
+            selectOptionSection1(0, listOf(morningTextView, lunchTimeTextView, eveningTextView))
         }
 
         lunchTimeTextView.setOnClickListener {
-            selectOption(1, lunchTimeTextView)
+            selectOptionSection1(1, listOf(morningTextView, lunchTimeTextView, eveningTextView))
         }
 
         eveningTextView.setOnClickListener {
-            selectOption(2, eveningTextView)
+            selectOptionSection1(2, listOf(morningTextView, lunchTimeTextView, eveningTextView))
         }
 
-        bedroomTextView.setOnClickListener{
-            selectOption1(0,bedroomTextView)
-
+        bedroomTextView.setOnClickListener {
+            selectOptionSection2(0, listOf(bedroomTextView, couchTextView, carTextView, patioTextView))
         }
-        couchTextView.setOnClickListener{
-            selectOption1(1,couchTextView)
 
+        couchTextView.setOnClickListener {
+            selectOptionSection2(1, listOf(bedroomTextView, couchTextView, carTextView, patioTextView))
         }
-        carTextView.setOnClickListener{
-            selectOption1(2,carTextView)
 
+        carTextView.setOnClickListener {
+            selectOptionSection2(2, listOf(bedroomTextView, couchTextView, carTextView, patioTextView))
         }
-        patioTextView.setOnClickListener{
-            selectOption1(3,patioTextView)
 
+        patioTextView.setOnClickListener {
+            selectOptionSection2(3, listOf(bedroomTextView, couchTextView, carTextView, patioTextView))
         }
 
         binding.nextScreen1.setOnClickListener {
@@ -136,10 +140,10 @@ class FastPaceActivity : AppCompatActivity(){
             layoutTwo.visibility = View.VISIBLE
         }
 
-        binding.icGlossary1.setOnClickListener {
+        binding.icGlossary.setOnClickListener {
             startActivity(Intent(this,GlossaryActivity::class.java))
         }
-        binding.menuIcon1.setOnClickListener {
+        binding.menuIcon.setOnClickListener {
             onBackPressed()
         }
         binding.reminderToggleButton.setOnClickListener {
@@ -198,63 +202,42 @@ class FastPaceActivity : AppCompatActivity(){
         }
     }
 
-    private fun selectOption(index: Int, textView: TextView) {
-        if (index != selectedOptionIndex) {
-            // Unselect the previously selected TextView
-            selectedOptionIndex = index
-            clearSelection()
+    private fun selectOptionSection1(index: Int, textViews: List<TextView>) {
+        if (index != selectedOptionIndexSection1) {
+            // Unselect the previously selected TextView in section 1
+            selectedOptionIndexSection1 = index
+            clearSelectionSection1(textViews)
 
-            // Select the clicked TextView
-            textView.setBackgroundResource(R.drawable.anxiety_selected)
-            textView.setTextColor(Color.parseColor("#FFFFFF"))
+            // Select the clicked TextView in section 1
+            textViews[index].setBackgroundResource(R.drawable.anxiety_selected)
+            textViews[index].setTextColor(Color.parseColor("#FFFFFF"))
         }
     }
 
-    private fun clearSelection() {
-        val morningTextView = findViewById<TextView>(R.id.morning)
-        val lunchTimeTextView = findViewById<TextView>(R.id.lunchTime)
-        val eveningTextView = findViewById<TextView>(R.id.evening)
-
-
-
-        val textViews = listOf(morningTextView, lunchTimeTextView, eveningTextView)
-
-
-
-        textViews.forEachIndexed { index, textView ->
-            if (index != selectedOptionIndex) {
+    private fun clearSelectionSection1(textViews: List<TextView>) {
+        textViews.forEachIndexed { i, textView ->
+            if (i != selectedOptionIndexSection1) {
                 textView.setBackgroundResource(R.drawable.anxiety_border)
                 textView.setTextColor(Color.parseColor("#424242"))
             }
         }
-
-
     }
 
-    private fun selectOption1(index: Int, textView: TextView) {
-        if (index != selectedOptionIndex) {
-            // Unselect the previously selected TextView
-            selectedOptionIndex = index
-            clearSelection1()
+    private fun selectOptionSection2(index: Int, textViews: List<TextView>) {
+        if (index != selectedOptionIndexSection2) {
+            // Unselect the previously selected TextView in section 2
+            selectedOptionIndexSection2 = index
+            clearSelectionSection2(textViews)
 
-            // Select the clicked TextView
-            textView.setBackgroundResource(R.drawable.anxiety_selected)
-            textView.setTextColor(Color.parseColor("#FFFFFF"))
+            // Select the clicked TextView in section 2
+            textViews[index].setBackgroundResource(R.drawable.anxiety_selected)
+            textViews[index].setTextColor(Color.parseColor("#FFFFFF"))
         }
     }
 
-    private fun clearSelection1()
-    {
-        val bedroomTextView = findViewById<TextView>(R.id.my_bedroom)
-        val couchTextView = findViewById<TextView>(R.id.on_my_couch)
-        val carTextView = findViewById<TextView>(R.id.my_car)
-        val patioTextView = findViewById<TextView>(R.id.on_patio)
-
-
-        val textViews1 = listOf(bedroomTextView,couchTextView,carTextView,patioTextView)
-
-        textViews1.forEachIndexed { index, textView ->
-            if (index != selectedOptionIndex) {
+    private fun clearSelectionSection2(textViews: List<TextView>) {
+        textViews.forEachIndexed { i, textView ->
+            if (i != selectedOptionIndexSection2) {
                 textView.setBackgroundResource(R.drawable.anxiety_border)
                 textView.setTextColor(Color.parseColor("#424242"))
             }
