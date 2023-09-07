@@ -386,4 +386,34 @@
     <string name="melanie_audio_text2">“Me preocupo por las personas, así que soy bueno ayudando a quienes lo necesitan. Constantemente tengo mucho que hacer y estoy cansado todo el tiempo. Intento estar al tanto de los eventos deportivos y escolares de mis hijos, y disfruto haciendo cosas especiales para mi aniversario y las vacaciones familiares. Estoy increíblemente ocupada y a menudo me pregunto cuándo podré vivir mi vida por mí misma.\n\n A veces simplemente entro a mi habitación y enciendo el televisor o me desplazo por las redes sociales para cerrar la sesión porque simplemente estoy exhausto. Me encanta leer citas positivas porque creo que si mantengo una actitud positiva puedo seguir adelante”.</string>
     <string name="melanie_audio_text3">¿Alguna vez has respondido al estrés como lo hace Melanie?</string>
     <string name="information">Información</string>
+
+    <!--    Weekly Summary-->
+    <string name="summaryofmood">Resumen de estado de ánimo</string>
+    <string name="summaryofsleep"> Resumen del sueño</string>
+    <string name="summaryof_phq_9">Resumen del PHQ-9</string>
+    <string name="summaryof_gad">Resumen del TAG</string>
+    <string name="summaryof_audit">Resumen de AUDITORÍA</string>
+    <string name="summaryof_dast">Resumen de DAST</string>
+    <string name="summaryof_progressofwork">Progreso en el trabajo del curso.</string>
+    <string name="summaryof_journalentry">entrada de diario</string>
+    <string name="summarymood_by_date_range">Estado de ánimo por rango de fechas</string>
+    <string name="summarymood_daysateachmood">Días en cada estado de ánimo</string>
+    <string name="summarysleep_by_date_range">Dormir por rango de fechase</string>
+    <string name="Summaryprogresswork_total_cousrework">Trabajo total del curso completado</string>
+    <string name="summaryprogress_course">Curso</string>
+    <string name="summaryprogress_completed">% completado</string>
+    <string name="summaryprogress_braving_Anxiety">Desafiando la ansiedad</string>
+    <string name="summaryprogress_feeling_better">Sentirse mejor</string>
+    <string name="summaryprogress_taking_control">Tomando el controll</string>
+    <string name="summaryprogress_building_confidence">Construyendo confianza</string>
+    <string name="bravinganxiety_anxietyworks">Cómo funciona la ansiedad</string>
+    <string name="braving_sleep">Sueño y ansiedad</string>
+    <string name="braving_building">Soporte de construcción</string>
+    <string name="coming_soon">¡Muy pronto!</string>
+
+    <string name="paracetamol">Paracetamol</string>
+    <string name="anti_biotic">Anti-biotic</string>
+    <string name="vitamin">Vitamin</string>
+    <string name="two_tablets">2 Tablets</string>
+    <string name="one_tablet">1 Tablet</string>
 </resources>

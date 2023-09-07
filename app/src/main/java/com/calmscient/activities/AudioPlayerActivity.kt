@@ -162,7 +162,12 @@ class AudioPlayerActivity : AppCompat() {
             mediaPlayer.seekTo(newPosition)
         }
     }
-
+    override fun onPause() {
+        super.onPause()
+        if (mediaPlayer.isPlaying) {
+            mediaPlayer.pause()
+        }
+    }
     private fun showInformationDialog() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.audio_information_dialog, null)
         //  val infoTextView = dialogView.findViewById<TextView>(R.id.dialogTextView)

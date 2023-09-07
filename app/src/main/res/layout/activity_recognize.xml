@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -176,7 +175,7 @@
                       android:id="@+id/imageView"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:src="@drawable/ic_recognize_1"
+                      android:src="@drawable/ic_recognize"
                       android:layout_weight="1"
                       android:layout_gravity="center"/>
 
@@ -305,7 +304,7 @@
                       </LinearLayout>
                   </LinearLayout>
 
-                  <!--<TextView
+                  <TextView
                       android:id="@+id/fearText"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent"
@@ -313,9 +312,10 @@
                       android:layout_marginTop="@dimen/_20sdp"
                       android:fontFamily="@font/lexendlight"
                       android:gravity="center"
+                      android:visibility="gone"
                       android:text="[SHOW AUSTIN'S FEAR ]"
                       android:textColor="@color/red"
-                      android:textSize="@dimen/_13sdp" />-->
+                      android:textSize="@dimen/_13sdp" />
 
                   <TextView
                       android:id="@+id/howText"

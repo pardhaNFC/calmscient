@@ -131,8 +131,9 @@ class HomeFragment : Fragment() {
         }
         val weeklySummaryLayout = rootView.findViewById<View>(R.id.weeklySummaryLayout)
         weeklySummaryLayout.setOnClickListener {
-            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_LONG).show()
+            //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_LONG).show()
             //openWeeklySummaryActivity()
+            loadFragment(WeeklySummaryFragment())
         }
         return rootView
     }

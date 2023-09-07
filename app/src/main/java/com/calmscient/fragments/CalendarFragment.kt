@@ -164,17 +164,17 @@ class CalendarFragment : Fragment(), CellClickListener {
         cardViewItems.addAll(
             listOf(
                 CardViewItem(
-                    "Paracetamol",
-                    "2 Tablets",
+                    getString(R.string.paracetamol),
+                    getString(R.string.two_tablets),
                     "8:00 AM",
                     "7:00 PM",
                     R.drawable.sunset,
                     R.drawable.moon
                 ),
-                CardViewItem("Anti-biotic", "1 Tablet", "9:30 AM", null, R.drawable.sunset, null),
+                CardViewItem(getString(R.string.anti_biotic),  getString(R.string.one_tablet), "9:30 AM", null, R.drawable.sunset, null),
                 CardViewItem(
-                    "Vitamin",
-                    "2 Tablets",
+                    getString(R.string.vitamin),
+                    getString(R.string.two_tablets),
                     "9:00 AM",
                     "7:30 PM",
                     R.drawable.sunset,

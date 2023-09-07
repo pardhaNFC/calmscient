@@ -1,13 +1,13 @@
 /*
- *
- *      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
- *      All source code contained herein remains the property of NFC Solutions Incorporated
- *      and protected by trade secret or copyright law of USA.
- *      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
- *      there is a prior written permission or license agreement from NFC Solutions.
- *
- *      Author : @Pardha Saradhi
- */
+*
+*      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+*      All source code contained herein remains the property of NFC Solutions Incorporated
+*      and protected by trade secret or copyright law of USA.
+*      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+*      there is a prior written permission or license agreement from NFC Solutions.
+*
+*      Author : @Pardha Saradhi
+*/
 
 package com.calmscient.activities
 
@@ -58,7 +58,7 @@ class RecognizeActivity : AppCompat() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         val images = arrayOf(
-            R.drawable.ic_recognize_1,
+            R.drawable.ic_recognize,
             R.drawable.ic_recognize_2,
             R.drawable.ic_recognize_3,
         )
@@ -97,7 +97,7 @@ class RecognizeActivity : AppCompat() {
 
         val dataForScreens4to6 = arrayOf(
             arrayOf(getString(R.string.nora), null, null, null),
-            //arrayOf(getString(R.string.austin), getString(R.string.fear), null, null),
+            arrayOf(getString(R.string.austin), null, null, null),
             arrayOf(getString(R.string.melanie), null, getString(R.string.how_about_you), getString(R.string.melanie_desc))
         )
 
@@ -150,6 +150,10 @@ class RecognizeActivity : AppCompat() {
             )
         }
 
+        val description = intent.getStringExtra("description")
+
+        binding.tvTitlePlayer.text = description
+
 
 
         // Initialize UI with the first set of text and image
@@ -163,7 +167,8 @@ class RecognizeActivity : AppCompat() {
             super.onBackPressed()
         }
     }
-    /*private fun updateUI(textArrays: Array<Array<String?>>, images: Array<Int>, image2: Array<Int>,dataForScreens4to6: Array<Array<String?>>) {
+
+    private fun updateUI(textArrays: Array<Array<String?>>, images: Array<Int>, image2: Array<Int>, dataForScreens4to6: Array<Array<String?>>) {
         val text1View = binding.tvText1
         val text2View = binding.tvText2
         val text3View = binding.tvText3
@@ -175,7 +180,6 @@ class RecognizeActivity : AppCompat() {
 
         val text8View = binding.howText
         val text9View = binding.howTextDescription
-
 
         if (currentIndex == 3 || currentIndex == 4 || currentIndex == 5) {
             binding.firstThreeScreensUi.visibility = View.GONE
@@ -202,65 +206,12 @@ class RecognizeActivity : AppCompat() {
                 text4View.text = currentTextArray[3]
                 imageView.setImageResource(images[currentIndex])
             }
-        }
-
-
-        val progressBar = binding.recognizeProgressBar
-        progressBar.progress = (currentIndex + 1) * 20
-        updateTickIcons(currentIndex)
-    }
-*/
-
-    private fun updateUI(textArrays: Array<Array<String?>>, images: Array<Int>, image2: Array<Int>, dataForScreens4to6: Array<Array<String?>>) {
-        val text1View = binding.tvText1
-        val text2View = binding.tvText2
-        val text3View = binding.tvText3
-        val text4View = binding.tvText4
-        val imageView = binding.imageView
-        val text5View = binding.screen2TvText1
-        //val text7View = binding.fearText
-        val imageView2 = binding.screen2Image1
-
-        val text8View = binding.howText
-        val text9View = binding.howTextDescription
-
-        if (currentIndex == 3 || currentIndex == 4 || currentIndex == 5) {
-            binding.firstThreeScreensUi.visibility = View.GONE
-            binding.lastThreeScreensUi.visibility = View.VISIBLE
-
-            val dataIndex = currentIndex - 3
-            if (dataIndex >= 0 && dataIndex < dataForScreens4to6.size) {
-                val newDataArray = dataForScreens4to6[dataIndex]
-                text5View.text = newDataArray[0]
-                //text7View.text = newDataArray[1]
-                text8View.text = newDataArray[2]
-                text9View.text = newDataArray[3]
-                imageView2.setImageResource(image2[dataIndex])
-            }
-        } else {
-            binding.firstThreeScreensUi.visibility = View.VISIBLE
-            binding.lastThreeScreensUi.visibility = View.GONE
-
-            if (currentIndex >= 0 && currentIndex < textArrays.size) {
-                val currentTextArray = textArrays[currentIndex]
-                text1View.text = currentTextArray[0]
-                text2View.text = currentTextArray[1]
-                text3View.text = currentTextArray[2]
-                text4View.text = currentTextArray[3]
-                imageView.setImageResource(images[currentIndex])
-            }
-
             // Check and set visibility for each TextView
             setVisibilityIfBlank(text1View)
             setVisibilityIfBlank(text2View)
             setVisibilityIfBlank(text3View)
             setVisibilityIfBlank(text4View)
-            /*setVisibilityIfBlank(text5View)
-            setVisibilityIfBlank(text7View)
-            setVisibilityIfBlank(text8View)
-            setVisibilityIfBlank(text9View)*/
         }
-
         val progressBar = binding.recognizeProgressBar
         progressBar.progress = (currentIndex + 1) * 20
         updateTickIcons(currentIndex)

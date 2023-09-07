@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_40sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.WeeklySummaryFragment">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:id="@+id/backIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_medications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/lexendregular"
+                android:paddingLeft="@dimen/_20sdp"
+                android:text="@string/weekly_summary"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_20sdp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/viewbackgroundcolor" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:weightSum="2">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/moodCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofmood_image1"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+                    <TextView
+                        android:id="@+id/mindfulnesstext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryofmood"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summarySleepCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:cardElevation="@dimen/_10sdp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofsleep_image1"
+                    android:scaleType="centerCrop" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryofsleep"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:weightSum="2">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summaryPHQCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofphq9_image1"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_2sdp"
+                        android:text="@string/summaryof_phq_9"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summaryOfGADCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:cardElevation="@dimen/_10sdp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofgad_image1"
+                    android:scaleType="centerCrop" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryof_gad"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:weightSum="2">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summaryOfAuditCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofaudit_image1"
+                    android:scaleType="centerCrop" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryof_audit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summaryOfDASTCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:cardElevation="@dimen/_10sdp">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofdast_image1"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryof_dast"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:weightSum="2">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/summaryOfProgressWorkCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:cardElevation="@dimen/_10sdp">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofprogresswork_image1"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryof_progressofwork"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bodyMovementExerciseCard"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                app:cardCornerRadius="10dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:cardElevation="@dimen/_10sdp">
+
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/summaryofjournalentry_image1"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserratmedium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/summaryof_journalentry"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
