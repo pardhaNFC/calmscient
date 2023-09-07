@@ -67,11 +67,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendsemibold"
+                android:fontFamily="@font/lexendregular"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
 
             <TextView
@@ -79,11 +79,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendsemibold"
+                android:fontFamily="@font/lexendregular"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textColor="@color/purple_100"
-                android:textSize="16dp"
+                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -112,19 +112,18 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/lexendsemibold"
+                        android:fontFamily="@font/lexendmedium"
                         android:gravity="center"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="50sp"
+                    android:layout_marginStart="50sp"
                     android:orientation="horizontal"
                     android:weightSum="2">
 
@@ -140,12 +139,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/lexendsemibold"
+                        android:fontFamily="@font/lexendmedium"
                         android:gravity="center"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="14dp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

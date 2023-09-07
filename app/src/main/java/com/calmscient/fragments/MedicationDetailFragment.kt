@@ -68,6 +68,18 @@ class MedicationDetailFragment : Fragment(),
         binding.eveningCalendar.setOnClickListener {
             showEveningTimeAndAlarmDialog()
         }*/
+        binding.morningAlarmCard.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+        }
+        binding.afternoonAlarmCard.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+        }
+        binding.eveningAlarmCard.setOnClickListener {
+            val bottomSheetFragment = BottomSheetFragment()
+            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+        }
         return binding.root;
         // return inflater.inflate(R.layout.fragment_medication_detail, container, false)
     }

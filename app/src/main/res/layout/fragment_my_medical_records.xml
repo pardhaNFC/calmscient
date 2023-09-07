@@ -63,11 +63,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/lexendmedium"
             android:gravity="center"
             android:text="@string/my_medical_records"
-            android:textColor="#424242"
-            android:textSize="@dimen/_18sdp"
-            android:textStyle="bold" />
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_17sdp" />
 
         <ImageView
             android:id="@+id/ic_profile"
@@ -114,11 +114,11 @@
                 android:id="@+id/Medications_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lexendsemibold"
                 android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/medications"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp" />
 
             <ImageView
@@ -131,7 +131,7 @@
                 android:layout_toRightOf="@+id/Medications_text"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_next_white"
-                android:textColor="#F5F5F5" />
+                android:textColor="@color/grey_time" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -168,10 +168,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="@font/lexendsemibold"
                 android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/upcoming_medical_appointments"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp" />
 
             <ImageView
@@ -220,10 +220,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="@font/lexendsemibold"
                 android:layout_marginEnd="@dimen/_15sdp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/screenings"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp" />
 
             <ImageView

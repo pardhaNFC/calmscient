@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_toEndOf="@id/tv_hello"
-                android:fontFamily="@font/lexendbold"
+                android:fontFamily="@font/lexendsemibold"
                 android:visibility="visible"
                 android:text="Kevin"
                 android:textColor="@color/black_head"
@@ -104,10 +104,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
-                    android:fontFamily="@font/lexendmedium"
+                    android:fontFamily="@font/lexendregular"
                     android:text="@string/my_medical_records"
                     android:textColor="@color/black_head"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_15sdp" />
 
                 <ImageView
                     android:layout_width="20sp"
@@ -155,10 +155,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/lexendmedium"
+                    android:fontFamily="@font/lexendregular"
                     android:text="@string/weekly_summary"
                     android:textColor="@color/black_head"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_15sdp" />
 
                 <ImageView
                     android:layout_width="20sp"
@@ -176,11 +176,10 @@
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_18sdp"
-            android:fontFamily="@font/lexendsemibold"
+            android:fontFamily="@font/lexendregular"
             android:text="@string/favorites"
             android:textColor="@color/black"
-            android:textSize="@dimen/_16sdp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_16sdp" />
 
 
         <FrameLayout
@@ -209,12 +208,12 @@
             android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_55sdp"
             android:background="@drawable/button_border"
-            android:fontFamily="@font/lexendmedium"
+            android:fontFamily="@font/lexendregular"
             android:text="@string/need_to_talk"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="@dimen/_14sdp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
