@@ -107,7 +107,10 @@ class DashboardActivity : AppCompat() {
         val fragment = supportFragmentManager.findFragmentById(R.id.flFragment)
         if (fragment is HomeFragment) {
             fragment.onBackPressed()
-        } else {
+        } else if(fragment is ExerciseFragment){
+            fragment.onBackPressed()
+        }
+        else {
             super.onBackPressed()
         }
     }

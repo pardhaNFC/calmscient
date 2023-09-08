@@ -48,7 +48,6 @@ class MindfulWalkingExerciseFragment :Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = MindfulWalkingExercisesBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
