@@ -39,10 +39,10 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="70dp"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/add_medications"
-                android:textColor="#000000"
-                android:textSize="@dimen/_18sdp"
-                android:textStyle="bold" />
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_18sdp" />
         </RelativeLayout>
 
 
@@ -600,9 +600,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:fontFamily="@font/lexendsemibold"
+            android:fontFamily="@font/lexendregular"
             android:text="@string/schedule_time_and_alarm"
-            android:textColor="#424242"
+            android:textColor="@color/black_head"
             android:textSize="@dimen/_16sdp" />
 
        <!-- <androidx.cardview.widget.CardView

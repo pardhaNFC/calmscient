@@ -189,7 +189,7 @@
 
     <!--Exrercises-->
     <string name="mindfulness_exercises">Atención plena – ¿Qué es?</string>
-    <string name= "butterflyhug_exercises">El tacto y el abrazo de mariposa</string>
+    <string name="butterflyhug_exercises">El tacto y el abrazo de mariposa</string>
     <string name="handover_esxercises">Entrega tu oído</string>
     <string name="mindfulwalking_exercises">Caminar conscientemente</string>
     <string name="dance_exercises">Movimiento: Danza</string>
@@ -261,7 +261,7 @@
     <string name="fast_pase_card2_text3">¡Excelente! Ha tomado algunas medidas positivas y eso es más importante de lo que piensa.</string>
 
     <string name="fast_pase_card3_text1">¿Qué debes hacer durante estos 15 minutos?</string>
-    <string name ="fast_pase_card3_text2">Durante este curso, se le brindarán muchas cosas positivas y productivas en las que pensar. <b>Durante cada sesión de 15 minutos, configura un temporizador en tu teléfono</b> para que puedas desconectarte responsablemente de otras cosas que hayas programado. En tu mente, cierra la puerta a todos los pensamientos ruidosos a los que estés acostumbrado y disfruta del tiempo que has dedicado a mejorar tu salud mental.</string>
+    <string name="fast_pase_card3_text2">Durante este curso, se le brindarán muchas cosas positivas y productivas en las que pensar. <b>Durante cada sesión de 15 minutos, configura un temporizador en tu teléfono</b> para que puedas desconectarte responsablemente de otras cosas que hayas programado. En tu mente, cierra la puerta a todos los pensamientos ruidosos a los que estés acostumbrado y disfruta del tiempo que has dedicado a mejorar tu salud mental.</string>
     <string name="fast_pase_card3_text3">Asegúrese de configurar un recordatorio para la hora y el lugar que especificó anteriormente. </string>
 
     <!--Anxiety cards Introduction 3 -->
@@ -365,7 +365,19 @@
 
     <!--    Hand over your heart Exercise-->
     <string name="handoveryourHeart_titletext">Entrega tu corazón</string>
-    <string name="handoveryourHeart_text"></string>
+    <string name="handoveryourHeart_text">CÓMO HACERLO</string>
+    <string name="handoveryourHeart_text_desc">&#8226; Apoye la palma de la mano sobre el esternón, alrededor del área del corazón.\n
+    &#8226; Aplique una presión constante, suave pero firme.\n
+    &#8226; Para obtener un efecto adicional, puede colocar la otra mano sobre la frente o el abdomen.\n
+    &#8226; Experimente con las distintas ubicaciones y espere hasta que sienta un cambio. Es posible que necesites hasta 5 o 10 minutos de respiración profunda en esta posición para cambiar si estás muy activado.</string>
+    <string name="lesson1_video_summary">
+        La ansiedad es una respuesta normal del cerebro al estrés. Las respuestas de Lucha, Huida y Congelación nos ayudan a enfrentar las demandas de posibles amenazas. Las cosas que pueden causar ansiedad son:<br />
+        \n
+&#8226; Enfrentar amenazas pasadas\n
+&#8226; Riesgos desconocidos, cambios o resultados\n
+&#8226; Falta de habilidad o apoyo\n
+        ¡Nuestro sistema nervioso no está roto! Aprender a controlarlo es una habilidad importante y poderosa que podemos dominar para mantener las situaciones estresantes en su lugar.
+</string>
 
     <!--    Dancing Exercise-->
     <string name="dancingexercise_titletext">Movimiento: Danza</string>
@@ -416,4 +428,21 @@
     <string name="vitamin">Vitamin</string>
     <string name="two_tablets">2 Tablets</string>
     <string name="one_tablet">1 Tablet</string>
+    <string name="update_time_alarm">Actualizar hora y alarmaa</string>
+    <string name="phq_heading">PHQ-9</string>
+    <string name="gad_heading">GAD-7</string>
+    <string name="audit_heading">AUDITORÍA</string>
+    <string name="dast_heading">DAST-10</string>
+    <string name="sbirt_heading">SBIRT</string>
+    <string name="remind_me">Recuerdame</string>
+    <string name="weekly">Semanalmente</string>
+    <string name="score">Puntuación marcada</string>
+    <string name="total_score">Puntaje total</string>
+    <string name="more_info">Más información</string>
+    <string name="more_desc_1">Esta evaluación se basa en el Cuestionario de salud del paciente (PHQ), que es una versión autoadministrada del instrumento de diagnóstico PRIME-MD para trastornos mentales comunes.\n\nPHQ9 Copyright © Pfizer Inc. Todos los derechos reservados. Reproducido con permiso. PRIME-MD® es una marca comercial de Pfizer Inc.</string>
+    <string name="learn_more">Aprende más</string>
+    <string name="taking_control">Tomando el control</string>
+    <string name="summary">Resumen</string>
+    <string name="events_tracker">Rastreador de eventos</string>
+    <string name="choose_date">Elija fecha y hora</string>
 </resources>

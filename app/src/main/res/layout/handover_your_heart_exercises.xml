@@ -68,17 +68,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_10sdp"
-            android:text="@string/butterflyScreen1_text1"
-            android:fontFamily="@font/lexendlight"
-            android:textSize="@dimen/_14sdp"/>
+            android:text="@string/handoveryourHeart_text"
+            android:fontFamily="@font/lexendregular"
+            android:textSize="@dimen/_16sdp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_40sdp"
             android:layout_marginHorizontal="@dimen/_10sdp"
-            android:text="@string/butterflyScreen1_text2"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/handoveryourHeart_text_desc"
             android:fontFamily="@font/lexendlight"
-            android:textSize="@dimen/_14sdp"/>
+            android:textSize="@dimen/_13sdp"/>
     </LinearLayout>
     </LinearLayout>
 </LinearLayout>

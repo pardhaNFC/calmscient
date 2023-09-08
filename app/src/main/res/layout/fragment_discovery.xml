@@ -21,12 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/lexendregular"
+            android:fontFamily="@font/lexendsemibold"
             android:gravity="center"
             android:text="@string/discovery_lower"
-            android:textColor="#424242"
-            android:textSize="@dimen/_16sdp"
-            android:textStyle="bold" />
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_16sdp" />
 
         <ImageView
             android:id="@+id/ic_profile"

@@ -23,11 +23,10 @@
             android:layout_weight="1"
             android:fontFamily="@font/lexendsemibold"
             android:gravity="center"
-            android:text="More Info"
+            android:text="@string/more_info"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_18sdp"
-            android:textStyle="bold" />
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_16sdp" />
     </LinearLayout>
 <RelativeLayout
     android:layout_width="wrap_content"
@@ -37,9 +36,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/_12sdp"
+        android:fontFamily="@font/lexendlight"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="This assesment is based upon the Patient Health Questionnaire (PHQ), which is a selfr_administered version of PRIME_MD diagnostic instrument for common mental disorders."/>
+        android:text="@string/more_desc_1"/>
 
 </RelativeLayout>
     <RelativeLayout
@@ -52,6 +52,7 @@
             android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
             android:textColor="@color/black"
+            android:visibility="gone"
             android:text="@string/torch_phq"/>
 
     </RelativeLayout>
@@ -63,7 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/_12sdp"
-            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="@font/lexendmedium"
             android:textColor="@color/example_7_button"
             android:text="@string/torch_national"/>
 
@@ -71,6 +73,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
@@ -79,12 +82,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:background="@drawable/skip_border"
-            android:gravity="center"
+            android:fontFamily="@font/lexendregular"
             android:text="@string/cancel"
             android:textAllCaps="false"
             android:textColor="@color/purple_100"
-            android:textSize="18sp"
-            android:textStyle="bold">
+            android:textSize="18sp">
 
         </androidx.appcompat.widget.AppCompatButton>
 
@@ -94,12 +96,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10sp"
             android:background="@drawable/button_border"
+            android:fontFamily="@font/lexendregular"
             android:text="Ok"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold">
+            android:textSize="18sp">
 
         </androidx.appcompat.widget.AppCompatButton>
 

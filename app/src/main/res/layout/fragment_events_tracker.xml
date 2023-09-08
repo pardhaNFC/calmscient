@@ -32,11 +32,13 @@
             android:layout_gravity="top|center_horizontal"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
-            android:paddingLeft="@dimen/_20sdp"
-            android:text="Events Tracker"
+            android:fontFamily="@font/lexendmedium"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_20sdp"
+            android:text="@string/events_tracker"
             android:textColor="@color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_17sdp" />
     </RelativeLayout>
 
     <RelativeLayout

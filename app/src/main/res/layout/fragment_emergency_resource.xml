@@ -43,9 +43,9 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/emergency_resource"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_18sdp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_16sdp" />
 
 
         </LinearLayout>
@@ -80,15 +80,16 @@
                     android:layout_weight="1"
                     android:gravity="left"
                     android:text="@string/doctor_name"
+                    android:fontFamily="@font/lexendsemibold"
                     android:textAlignment="gravity"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/black_head"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/hospital_name"
+                    android:fontFamily="@font/lexendmedium"
                     android:textColor="@color/hospital_name"
                     android:textSize="14sp" />
 
@@ -98,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:focusable="true"
+                    android:fontFamily="@font/lexendsemibold"
                     android:focusableInTouchMode="true"
                     android:text="@string/doctor_phone_number"
                     android:textColor="@color/purple_100"
@@ -119,9 +121,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/suicide_heading"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_15sdp" />
 
             <TextView
                 android:id="@+id/suicideHelpLineNumber"
@@ -129,7 +131,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
                 android:justificationMode="inter_word"
                 android:text="@string/suicide_text"
                 android:textSize="@dimen/_12sdp" />
@@ -152,11 +155,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_5sdp"
                         android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/lexendregular"
                         android:clickable="true"
                         android:drawableRight="@drawable/ic_next_new"
                         android:drawablePadding="@dimen/_5sdp"
                         android:maxLines="1"
-                        android:text="Learn more "
+                        android:text="@string/learn_more"
                         android:textColor="@color/purple_100" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
@@ -181,9 +185,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/disaster_heading"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_15sdp"  />
 
             <TextView
                 android:id="@+id/disaster_distress"
@@ -191,7 +195,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
                 android:justificationMode="inter_word"
                 android:text="@string/disaster_text"
                 android:textSize="@dimen/_12sdp" />
@@ -218,7 +223,8 @@
                         android:drawablePadding="@dimen/_5sdp"
                         android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
-                        android:text="Learn more "
+                        android:fontFamily="@font/lexendregular"
+                        android:text="@string/learn_more"
                         android:textColor="@color/purple_100" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
@@ -260,9 +266,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/crisis_heading"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_15sdp"  />
 
             <TextView
                 android:id="@+id/crisis_text"
@@ -270,7 +276,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
                 android:justificationMode="inter_word"
                 android:text="@string/crisis_text"
                 android:textSize="@dimen/_12sdp" />
@@ -295,9 +302,10 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:clickable="true"
                         android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/lexendregular"
                         android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
-                        android:text="Learn more "
+                        android:text="@string/learn_more"
                         android:textColor="@color/purple_100" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
@@ -338,9 +346,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/trevor_heading"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_15sdp"  />
 
             <TextView
                 android:id="@+id/trevor_project_helplineNumber"
@@ -348,7 +356,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
                 android:justificationMode="inter_word"
                 android:text="@string/trevor_text"
                 android:textSize="@dimen/_12sdp" />
@@ -374,7 +383,8 @@
                         android:clickable="true"
                         android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
-                        android:text="Learn more "
+                        android:fontFamily="@font/lexendregular"
+                        android:text="@string/learn_more"
                         android:textColor="@color/purple_100" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
@@ -415,9 +425,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/trans_helpline_heading"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_15sdp"  />
 
             <TextView
                 android:id="@+id/trans_lifeline_helpLineNumber"
@@ -425,7 +435,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
                 android:justificationMode="inter_word"
                 android:text="@string/trans_helpline_text"
                 android:textSize="@dimen/_12sdp" />
@@ -451,7 +462,8 @@
                         android:clickable="true"
                         android:drawableRight="@drawable/ic_next_new"
                         android:maxLines="1"
-                        android:text="Learn more "
+                        android:fontFamily="@font/lexendregular"
+                        android:text="@string/learn_more"
                         android:textColor="@color/purple_100" />
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>

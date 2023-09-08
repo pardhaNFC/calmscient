@@ -23,9 +23,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/lexendregular"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_16sdp"/>
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView
@@ -58,9 +58,9 @@
                     android:layout_toRightOf="@+id/doctor_logo"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/lexendbold" />
+                    android:textColor="@color/hospital_name"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/lexendmedium" />
 
                 <TextView
                     android:id="@+id/noAppointmentsTextView"
@@ -71,7 +71,7 @@
                     android:layout_toRightOf="@+id/doctor_logo"
                     android:layout_gravity="center_vertical"
                     android:textColor="@color/black_head"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_14sdp"
                     android:fontFamily="@font/lexendmedium" />
                 <TextView
                     android:id="@+id/HosptailNameTextView"
@@ -81,12 +81,10 @@
                     android:layout_weight="1"
                     android:layout_marginTop="@dimen/_35sdp"
                     android:textColor="@color/hospital_name"
-                    android:textSize="14dp"
-
+                    android:textSize="@dimen/_14sdp"
                     android:fontFamily="@font/lexendmedium" />
 
             </RelativeLayout>
-
 
             <ImageView
                 android:id="@+id/img_arrow1"

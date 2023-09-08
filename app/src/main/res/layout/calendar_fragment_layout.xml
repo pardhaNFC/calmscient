@@ -47,13 +47,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:fontFamily="@font/lexendmedium"
                         android:layout_gravity="top|center_horizontal"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="70dp"
                         android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/lexendmedium"
                         android:text="@string/medications"
-                        android:textColor="#000000"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_17sdp" />
                 </RelativeLayout>
                 <!--<ImageView

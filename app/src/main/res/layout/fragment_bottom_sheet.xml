@@ -28,11 +28,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_gravity="center"
-                android:fontFamily="@font/lexendsemibold"
+                android:fontFamily="@font/lexendmedium"
                 android:gravity="center"
-                android:text="@string/add_time_alarm"
+                android:text="@string/update_time_alarm"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp" />
+                android:textSize="@dimen/_16sdp" />
 
             <ImageView
                 android:id="@+id/img_save"
@@ -48,7 +48,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/time" />
+            android:fontFamily="@font/lexendmedium"
+            android:textSize="@dimen/_12sdp"
+            android:text="@string/time"
+            android:textColor="@color/black_head" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -79,12 +82,15 @@
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:text="@string/alarm"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:orientation="horizontal">
 
                 <com.mikhaellopez.circularimageview.CircularImageView
@@ -147,7 +153,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/repeat"
-                android:textColor="@color/black_head" />
+                android:textColor="@color/black_head"
+                android:fontFamily="@font/lexendmedium"
+                android:textSize="@dimen/_12sdp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -155,6 +163,8 @@
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="@string/everyday"
+                android:fontFamily="@font/lexendmedium"
+                android:textSize="@dimen/_10sdp"
                 android:textColor="@color/example_7_button" />
 
             <LinearLayout

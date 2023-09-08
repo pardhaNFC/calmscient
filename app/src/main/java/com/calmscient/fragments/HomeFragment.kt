@@ -12,6 +12,7 @@
 package com.calmscient.fragments
 
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.text.SpannableString
@@ -23,6 +24,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.addCallback
+import androidx.appcompat.app.AlertDialog
 import androidx.compose.ui.text.font.Typeface
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.buildSpannedString
@@ -234,4 +237,23 @@ class HomeFragment : Fragment() {
         adapter.submitList(cardItems)
     }
 
+     fun onBackPressed() {
+        showExitConfirmationDialog()
+    }
+    private fun showExitConfirmationDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(getString(R.string.plz_confirm))
+        builder.setMessage(getString(R.string.exit_app))
+        builder.setPositiveButton(getString(R.string.yes)) { _, _ ->
+            // User clicked "Yes," so exit the app
+            requireActivity().finishAffinity() // This closes the entire app
+        }
+        builder.setNegativeButton(getString(R.string.no)) { _, _ ->
+            // User clicked "No," so dismiss the dialog and stay on the current page
+        }
+        builder.setOnCancelListener(DialogInterface.OnCancelListener {
+            // User canceled the dialog, do nothing
+        })
+        builder.show()
+    }
 }

@@ -34,9 +34,8 @@
             android:layout_weight="2"
             android:fontFamily="@font/lexendsemibold"
             android:gravity="left"
-            android:textColor="#424242"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="@color/black_head"
+            android:textSize="20sp" />
 
         <Space
             android:layout_width="0dp"

@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:textAllCaps="false"
-            android:fontFamily="@font/lexendregular"
-            android:textColor="@color/black"
+            android:fontFamily="@font/lexendlight"
+            android:textColor="@color/black_head"
             android:textSize="@dimen/_12sdp"
             android:layout_margin="@dimen/_8sdp"/>
 
@@ -46,6 +46,7 @@
             android:layout_marginStart="@dimen/_220sdp" />
         <ImageView
             android:id="@+id/imageAnxiety"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

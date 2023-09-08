@@ -104,22 +104,11 @@ class DashboardActivity : AppCompat() {
         transaction.commit()
     }
     override fun onBackPressed() {
-        AlertDialog.Builder(this).apply {
-            setTitle(getString(R.string.plz_confirm))
-            setMessage(getString(R.string.exit_app))
-
-            setPositiveButton("Yes") { _, _ ->
-                // if user press yes, finishing the current activity
-                //super.onBackPressed()
-                val a = Intent(Intent.ACTION_MAIN)
-                a.addCategory(Intent.CATEGORY_HOME)
-                a.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(a)
-            }
-            setNegativeButton("No") { _, _ ->
-                // if user press no, then return the activity
-            }
-            setCancelable(true)
-        }.create().show()
+        val fragment = supportFragmentManager.findFragmentById(R.id.flFragment)
+        if (fragment is HomeFragment) {
+            fragment.onBackPressed()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

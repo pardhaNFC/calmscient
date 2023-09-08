@@ -33,7 +33,7 @@
                 android:fontFamily="@font/lexendmedium"
                 android:gravity="center"
                 android:text="@string/quiz_title"
-                android:textColor="#424242"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_17sdp" />
 
         </RelativeLayout>
