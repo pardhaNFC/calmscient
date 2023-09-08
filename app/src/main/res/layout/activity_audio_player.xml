@@ -7,43 +7,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".activities.AudioPlayerActivity">
-
-
-    <!-- <RelativeLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="@dimen/_10sdp"
-         android:padding="@dimen/_10sdp">
-
-         <ImageView
-             android:id="@+id/menu_icon"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_centerVertical="true"
-             android:clickable="true"
-             android:src="@drawable/ic_manageanxietyicon" />
-
-         <TextView
-             android:id="@+id/tv_title"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_centerInParent="true"
-             android:fontFamily="@font/lexendregular"
-             android:gravity="center"
-             android:textAlignment="center"
-             android:textColor="#424242"
-             android:textSize="@dimen/_18sdp" />
-
-         <ImageView
-             android:id="@+id/ic_glossary"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_alignEnd="@+id/tv_title"
-             android:layout_centerVertical="true"
-             android:clickable="true"
-             android:src="@drawable/ic_filesiconanxiety" />
-     </RelativeLayout>-->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,25 +54,26 @@
         android:layout_marginBottom="10dp"
         android:background="@color/viewbackgroundcolor" />
 
+    <!-- Loading Indicator (ProgressBar) -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:show_buffering="always"
+        android:max="3"
+        android:progress="100"
+        android:visibility="gone"/>
 
     <ScrollView
+        android:id="@+id/audioScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_40sdp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <SeekBar
-                android:id="@+id/seekBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:thumb="@null"
-                android:visibility="gone" />
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="match_parent"
@@ -138,49 +102,65 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 />
 
-            <com.calmscient.activities.WaveformView
-                android:id="@+id/waveformView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_60sdp"
-                android:layout_marginStart="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_20sdp" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/waveformView"
-                android:orientation="horizontal"
-                android:weightSum="3">
-
-                <ImageView
-                    android:id="@+id/audio_backward"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_audio_backward" />
-
-                <ImageView
-                    android:id="@+id/playButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/waveformView"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_audio_play" />
-
-                <ImageView
-                    android:id="@+id/audio_forward"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_audio_forward" />
-            </LinearLayout>
         </LinearLayout>
+
+
+
     </ScrollView>
+
+
+    <com.calmscient.activities.WaveformView
+        android:id="@+id/waveformView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:visibility="gone"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/audioPlayerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="@dimen/_8sdp">
+
+
+
+        <ImageView
+            android:id="@+id/audio_backward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_audio_backward" />
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/waveformView"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_audio_play" />
+
+
+
+        <ImageView
+            android:id="@+id/audio_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/ic_audio_forward" />
+    </LinearLayout>
+
+
+
+
 </LinearLayout>

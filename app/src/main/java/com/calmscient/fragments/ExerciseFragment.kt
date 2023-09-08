@@ -53,33 +53,30 @@ class ExerciseFragment:Fragment() {
             startActivity(intent)
         }
         binding.handOverYourHeartCard.setOnClickListener {
-            val intent = Intent(activity, HandOverYourHeartActivity::class.java)
-            startActivity(intent)
+            loadFragment(HandOverYourHeartFragment())
         }
         binding.butterflyCard.setOnClickListener {
-            val intent = Intent(activity, ButterflyHugExercisesActivity::class.java)
-            startActivity(intent)
+            loadFragment(ButterflyHugExercisesFragment())
         }
         binding.dancingExercisesCard.setOnClickListener {
-            val  intent = Intent(activity, DancingExercisesActivity::class.java)
-            startActivity(intent)
+            loadFragment(DancingExercisesFragment())
         }
         binding.runningExerciseCard.setOnClickListener {
-            val intent = Intent(activity, RunningExerciseActivity::class.java)
-            startActivity(intent)
+            loadFragment(RunningExerciseFragment())
         }
         binding.bodyMovementExerciseCard.setOnClickListener {
-            val intent = Intent(activity, BodyMovementExerciseActivity::class.java)
-            startActivity(intent)
+            loadFragment(BodyMovementExerciseFragment())
         }
         binding.deepBreathingCard.setOnClickListener {
-            val intent = Intent(activity, DeepBreathingExerciseActivity::class.java)
-            startActivity(intent)
-        }
-        binding.mindfulnessExerciseCard.setOnClickListener {
-            val intent = Intent(activity, MindfulnessExercisesActivity::class.java)
-            startActivity(intent)
+            loadFragment(DeepBreathingExerciseFragment())
         }
         return binding.root
+    }
+
+    private fun loadFragment(fragment: Fragment) {
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

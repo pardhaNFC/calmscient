@@ -209,14 +209,14 @@ class PlayerActivity : AppCompatActivity(){
     private fun showInformationDialog() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.information_dialog, null)
         val infoTextView = dialogView.findViewById<TextView>(R.id.dialogInfoTextView)
-        val closeButton = dialogView.findViewById<ImageButton>(R.id.closeDialogButton)
-
+        val closeButton = dialogView.findViewById<ImageView>(R.id.closeDialogButton)
+        val titleTextView = dialogView.findViewById<TextView>(R.id.titleVideoDialog)
         // Retrieve the dialogText from intent extras
         val dialogText = intent.getStringExtra("dialogText")
 
         // Set the content of the dialog using dialogText
         infoTextView.text = dialogText
-
+        titleTextView.text = getString(R.string.information)
         val dialogBuilder = AlertDialog.Builder(this, R.style.CustomDialog)
             .setView(dialogView)
 
