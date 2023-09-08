@@ -463,5 +463,10 @@
     <string name="events_tracker">Events Tracker</string>
     <string name="choose_date">Choose Date and Time</string>
 
+    <!--    Mindful walking exercise>-->
+    <string name="mindfulwalking_exercises_text1">What are the benefits of mindful walking?</string>
+    <string name="mindfulwalking_exercises_text2">1.Stress Reduction: Engaging in mindful walking can be an effective way to reduce stress and promote relaxation. By directing your attention to the physical sensations of walking, you create a mental break from everyday stressors. This practice activates the relaxation response in your body, leading to a calmer state of mind.\n
+    2.Emotional Regulation: Engaging in mindful walking can help regulate your emotions. By observing your thoughts and emotions as they arise during the practice, you develop a non-judgmental and accepting attitude towards them. This can enhance emotional resilience and provide you with a greater sense of control over your reactions to challenging situations.</string>
+
 
 </resources>

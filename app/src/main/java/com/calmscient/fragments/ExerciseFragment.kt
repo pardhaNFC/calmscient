@@ -70,6 +70,12 @@ class ExerciseFragment:Fragment() {
         binding.deepBreathingCard.setOnClickListener {
             loadFragment(DeepBreathingExerciseFragment())
         }
+        binding.walkingCard.setOnClickListener {
+            loadFragment(MindfulWalkingExerciseFragment())
+        }
+        binding.muscleRelaxationCard.setOnClickListener {
+            loadFragment(MuscleRelaxationExerciseFragment())
+        }
         return binding.root
     }
 

@@ -445,4 +445,9 @@
     <string name="summary">Resumen</string>
     <string name="events_tracker">Rastreador de eventos</string>
     <string name="choose_date">Elija fecha y hora</string>
+
+    <!--    Mindful walking exercise>-->
+    <string name="mindfulwalking_exercises_text1">What are the benefits of mindful walking?</string>¿Cuáles son los beneficios de caminar conscientemente?
+    <string name="mindfulwalking_exercises_text2">1.Reducción del estrés: Caminar conscientemente puede ser una forma eficaz de reducir el estrés y promover la relajación. Al dirigir su atención a las sensaciones físicas de caminar, crea un descanso mental de los factores estresantes cotidianos. Esta práctica activa la respuesta de relajación en tu cuerpo, lo que lleva a un estado mental más tranquilo.\n
+    2.Regulación emocional: Caminar conscientemente puede ayudar a regular sus emociones. Al observar tus pensamientos y emociones a medida que surgen durante la práctica, desarrollas una actitud sin prejuicios y de aceptación hacia ellos. Esto puede mejorar la resiliencia emocional y brindarle una mayor sensación de control sobre sus reacciones ante situaciones desafiantes.</string>
 </resources>

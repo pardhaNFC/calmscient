@@ -13,7 +13,7 @@
 
         <!-- Title TextView -->
         <TextView
-            android:id="@+id/titleTextView"
+            android:id="@+id/titleVideoDialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lexendmedium"
@@ -28,7 +28,7 @@
 
         <!-- Close Button -->
         <ImageView
-            android:id="@+id/closeButton"
+            android:id="@+id/closeDialogButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
