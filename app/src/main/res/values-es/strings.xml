@@ -445,7 +445,13 @@
     <string name="summary">Resumen</string>
     <string name="events_tracker">Rastreador de eventos</string>
     <string name="choose_date">Elija fecha y hora</string>
-
+    <string name="mindfulness_heading">Atención plena: ¿Qué es?</string>
+    <!--additional resources-->
+    <string name="additional_anxiety_exercise_summary">Las investigaciones han demostrado que el ejercicio mejora la salud celular y potencia el fármaco ansiolítico natural del cerebro. ¿Cómo es eso?
+Los estudios de la Facultad de Medicina de Harvard muestran que el ejercicio desvía nuestra mente de las cosas que nos preocupan. Mover nuestros cuerpos disminuye la tensión muscular, lo que reduce la contribución de nuestro cuerpo a sentir ansiedad. El aumento de nuestra frecuencia cardíaca cambia activamente la química de nuestro cerebro, aumentando la disponibilidad de importantes neuroquímicos ansiolíticos como la serotonina y el GABA. El ejercicio también activa el lóbulo frontal de nuestro cerebro, ayudando a controlar el sistema de reacción ubicado en la amígdala.
+Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio que elijas depende de ti! Incluso la actividad física general, como caminar, limpiar y cuidar animales, es útil. Para maximizar sus beneficios, elija algo que disfrute para que sea más probable que lo repita. Desarrollarás resiliencia poco a poco. Trabaja de manera constante para aumentar tu frecuencia cardíaca. Hacer ejercicio con un amigo o en grupo aporta el beneficio adicional del apoyo social. Si es posible, haga ejercicio en la naturaleza o en un espacio verde. Esto reducirá aún más los niveles de estrés y ansiedad.
+¡Lo más importante es hacerlo! ¿Tienes algo de tiempo hoy para empezar?
+</string>
     <!--    Mindful walking exercise>-->
     <string name="mindfulwalking_exercises_text1">What are the benefits of mindful walking?</string>¿Cuáles son los beneficios de caminar conscientemente?
     <string name="mindfulwalking_exercises_text2">1.Reducción del estrés: Caminar conscientemente puede ser una forma eficaz de reducir el estrés y promover la relajación. Al dirigir su atención a las sensaciones físicas de caminar, crea un descanso mental de los factores estresantes cotidianos. Esta práctica activa la respuesta de relajación en tu cuerpo, lo que lleva a un estado mental más tranquilo.\n

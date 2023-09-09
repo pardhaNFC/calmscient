@@ -153,7 +153,7 @@ class ManageAnxietyActivity : AppCompat() {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety+(1).mp4",
             contentIcons = listOf(R.drawable.lesson_1_1),
             description = getString(R.string.neuropsychology),
             isCompleted = false,
@@ -268,7 +268,7 @@ class ManageAnxietyActivity : AppCompat() {
             description = getString(R.string.make_plan_card6_text2),
             isCompleted = false,
             heading = getString(R.string.make_plan_card6_text2),
-            summary = null,
+            summary = getString(R.string.lesson1_video_summary),
             dialogText = getString(R.string.lesson4_video1_description)
         )
 
@@ -372,14 +372,14 @@ class ManageAnxietyActivity : AppCompat() {
 
     private fun cardItemsAdditionalResource(): List<CardItemDataClass> {
         val card1 = CardItemDataClass(
-            availableContentTypes = listOf(ItemType.LESSON),
+            availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-1+Calming+your+anxious+mind+with+music+English.wav",
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = null,
-            summary = null,
+            heading = getString(R.string.anxiety_exercise),
+            summary = getString(R.string.additional_anxiety_exercise_summary),
             dialogText = null
         )
 

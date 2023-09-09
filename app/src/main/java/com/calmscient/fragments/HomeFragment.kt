@@ -163,7 +163,7 @@ class HomeFragment : Fragment() {
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
-            contentIcons = listOf(R.drawable.video),
+            contentIcons = listOf(R.drawable.lesson_1_1),
             description = getString(R.string.neuropsychology),
             isCompleted = false,
             heading = getString(R.string.the_neuropsychology),
@@ -175,7 +175,7 @@ class HomeFragment : Fragment() {
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
-            contentIcons = listOf(R.drawable.video),
+            contentIcons = listOf(R.drawable.lesson_4_1),
             description = getString(R.string.make_plan_card6_text2),
             isCompleted = false,
             heading = getString(R.string.make_plan_card6_text2),
@@ -184,39 +184,39 @@ class HomeFragment : Fragment() {
         )
 
         val card3 = CardItemDataClass(
-            availableContentTypes = listOf(ItemType.VIDEO),
-            audioResourceId = null,
-            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
-            contentIcons = listOf(R.drawable.video),
-            description = getString(R.string.neuropsychology),
+            availableContentTypes = listOf(ItemType.AUDIO),
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.audio_lesson_1_2),
+            description = getString(R.string.meet_nora_austin),
             isCompleted = false,
-            heading = getString(R.string.the_neuropsychology),
-            summary = getString(R.string.lesson1_video_summary),
-            dialogText = getString(R.string.lesson1_video1_description)
+            heading = null,
+            summary = null,
+            dialogText = null
         )
 
         val card4 = CardItemDataClass(
-            availableContentTypes = listOf(ItemType.VIDEO),
-            audioResourceId = null,
-            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
-            contentIcons = listOf(R.drawable.video),
-            description = getString(R.string.make_plan_card6_text2),
+            availableContentTypes = listOf(ItemType.AUDIO),
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+3+Moral+deficiency+or+anxiety+with+music+English.wav",
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.audio_lesson_1_2),
+            description = getString(R.string.moral_deficiency),
             isCompleted = false,
-            heading = getString(R.string.make_plan_card6_text2),
+            heading = null,
             summary = null,
-            dialogText = getString(R.string.lesson4_video1_description)
+            dialogText = null
         )
 
         val card5 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
-            contentIcons = listOf(R.drawable.video),
-            description = getString(R.string.neuropsychology),
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-1+Calming+your+anxious+mind+with+music+English.wav",
+            contentIcons = listOf(R.drawable.additional_1),
+            description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.the_neuropsychology),
-            summary = getString(R.string.lesson1_video_summary),
-            dialogText = getString(R.string.lesson1_video1_description)
+            heading = getString(R.string.anxiety_exercise),
+            summary = null,
+            dialogText = null
         )
 
         // Add more CardItemDataClass instances as needed for lesson3

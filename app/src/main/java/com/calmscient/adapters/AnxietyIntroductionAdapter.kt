@@ -94,11 +94,37 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
                                 context.startActivity(intent)
-                            } else {
-                                Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show()
+                            } else if (cardItem.description == context.getString(R.string.moral_deficiency)) {
+                                val intent = Intent(context, AudioPlayerActivity::class.java)
+                                intent.putExtra("audioResourceId", cardItem.audioResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("description", cardItem.description)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            } else if (cardItem.description == context.getString(R.string.anxiety_worry)) {
+                                val intent = Intent(context, AudioPlayerActivity::class.java)
+                                intent.putExtra("audioResourceId", cardItem.audioResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("description", cardItem.description)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            }
+                            else if (cardItem.description == context.getString(R.string.anxious_mind)) {
+                                val intent = Intent(context, AudioPlayerActivity::class.java)
+                                intent.putExtra("audioResourceId", cardItem.audioResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("description", cardItem.description)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            }
+                            else {
+                                Toast.makeText(context, "Soon", Toast.LENGTH_SHORT).show()
                             }
                         } else {
-                            Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "No Audio ", Toast.LENGTH_SHORT).show()
                         }
                     }
                     /*cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
@@ -115,12 +141,28 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     }*/
                     cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
                         if (cardItem.videoResourceId != null) {
-                            val intent = Intent(context, PlayerActivity::class.java)
-                            intent.putExtra("mediaResourceId", cardItem.videoResourceId)
-                            intent.putExtra("heading", cardItem.heading)
-                            intent.putExtra("summary", cardItem.summary)
-                            intent.putExtra("dialogText", cardItem.dialogText)
-                            context.startActivity(intent)
+                            if (cardItem.heading == context.getString(R.string.the_neuropsychology)) {
+                                val intent = Intent(context, PlayerActivity::class.java)
+                                intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            } else if (cardItem.heading == context.getString(R.string.make_plan_card6_text2)) {
+                                val intent = Intent(context, PlayerActivity::class.java)
+                                intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            }else if (cardItem.heading == context.getString(R.string.anxiety_exercise)) {
+                                val intent = Intent(context, PlayerActivity::class.java)
+                                intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            }
                         } else {
                             Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
                         }

@@ -26,12 +26,14 @@ import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.calmscient.R
+import com.calmscient.adapters.TakingControlSummaryCardAdapter
 import com.calmscient.databinding.ActivityAudioPlayerBinding
 import com.calmscient.databinding.ActivityMakeAplanBinding
 import com.google.android.exoplayer2.MediaItem
 
-class AudioPlayerActivity : AppCompat() {
+class AudioPlayerActivity : AppCompat(), MediaPlayer.OnPreparedListener, MediaPlayer.OnBufferingUpdateListener  {
     private lateinit var binding: ActivityAudioPlayerBinding
 
     private lateinit var mediaPlayer: MediaPlayer
@@ -60,7 +62,7 @@ class AudioPlayerActivity : AppCompat() {
         val description = intent.getStringExtra("description")
 
         //  mediaPlayer = MediaPlayer.create(this, R.raw.audio1)
-
+        mediaPlayer = MediaPlayer()
         binding.tvTitle.text = description
 
 //        mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFilePath))
@@ -71,34 +73,32 @@ class AudioPlayerActivity : AppCompat() {
         //progressDialog = CustomProgressDialog(this)
         loadingDialog = ProgressDialog(this)
         loadingDialog.setMessage("Loading Audio...")
-
+        loadingDialog.setCanceledOnTouchOutside(false)
+        binding.audioProgressBar.indeterminateDrawable = resources.getDrawable(R.drawable.circular_progressbar)
+        audioFilePath = intent.getStringExtra("audioResourceId")
         handler = Handler()
+        mediaPlayer.setOnPreparedListener(this)
+        mediaPlayer.setOnBufferingUpdateListener(this)
 
         // seekBar.max = mediaPlayer.duration
-
-
         binding.playButton.setOnClickListener {
-
             /*  if (!isMediaPlayerInitialized) {
-
                   loadingDialog.setCanceledOnTouchOutside(false)
                   loadingDialog.show()
-              }
-    */
+              } */
+            binding.audioProgressBar.visibility = View.VISIBLE
             if (!isMediaPlayerInitialized) {
-
-                loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()
-
+                /*loadingDialog.setCanceledOnTouchOutside(false)
+                loadingDialog.show()*/
                 // Initialize the mediaPlayer if it hasn't been initialized yet
-                audioFilePath = intent.getStringExtra("audioResourceId")
-                mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFilePath))
+                mediaPlayer.setDataSource(audioFilePath)
+                mediaPlayer.prepareAsync()
+
                 mediaPlayer.setOnPreparedListener { mp ->
-
-                    // Dismiss the buffering dialog when the media player is prepared
-                    loadingDialog.dismiss()
-
                     mp.start()
+                    // Dismiss the buffering dialog when the media player is prepared
+
+                    //loadingDialog.dismiss()
                     playButton.setImageResource(R.drawable.ic_audio_pause)
                     waveformView.visibility = View.VISIBLE
                     updateWaveformView()
@@ -108,11 +108,6 @@ class AudioPlayerActivity : AppCompat() {
                     playButton.setImageResource(R.drawable.ic_audio_play)
                 }
                 isMediaPlayerInitialized = true
-
-                // Show the buffering dialog when the play button is clicked
-                loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()
-
             } else {
                 if (mediaPlayer.isPlaying) {
                     mediaPlayer.pause()
@@ -152,6 +147,7 @@ class AudioPlayerActivity : AppCompat() {
     private fun updateWaveformView() {
         val audioDuration = mediaPlayer.duration
         val updateInterval = 100 // Update more frequently for smoother progression
+        binding.audioProgressBar.visibility = View.GONE
         handler.post(object : Runnable {
             override fun run() {
                 val currentPosition = mediaPlayer.currentPosition
@@ -227,6 +223,21 @@ class AudioPlayerActivity : AppCompat() {
         // Handle the close button click
         closeButton.setOnClickListener {
             dialog.dismiss()
+        }
+    }
+
+    override fun onPrepared(mp: MediaPlayer?) {
+        // Media player is prepared, start playback
+        mediaPlayer.start()
+    }
+
+    override fun onBufferingUpdate(mp: MediaPlayer?, percent: Int) {
+        // Show the custom loader when buffering is in progress
+        if (percent < 100) {
+            //binding.audioProgressBar.visibility = View.VISIBLE
+        } else {
+            // Hide the custom loader when buffering is complete
+            //binding.audioProgressBar.visibility = View.GONE
         }
     }
 

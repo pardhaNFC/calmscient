@@ -53,14 +53,21 @@ class MindfulnessScreensAdapter (private val items: List<MindfulnessExercisesTex
         item.exercisesBellIcon?.let { holder.exercisesBellIcon.setImageResource(it) }
         item.exercisesHeartImage?.let { holder.exercisesHeartImage.setImageResource(it) }
         item.imageAnxiety?.let { holder.imageAnxiety.setImageResource(it) }
-        /*holder.exercisesHeartImage.setOnClickListener {
+        // Handle click event for exercisesHeartImage
+        holder.exercisesHeartImage.setOnClickListener {
             isFavorite = !isFavorite
+
+            // Update the image based on the isFavorite flag
             if (isFavorite) {
-                holder.exercisesHeartImage.setImageResource(R.drawable.ic_favorites_icon) // Set your desired color
+                holder.exercisesHeartImage.setImageResource(R.drawable.mindfullexercise_heart__image)
+                // Perform any other actions you need when it's set as favorite
             } else {
-                holder.exercisesHeartImage.setImageResource(R.drawable.ic_favorites_red) // Reset color
+                holder.exercisesHeartImage.setImageResource(R.drawable.ic_mind_exercise_red_fill)
+                // Perform any other actions you need when it's not set as favorite
             }
-        }*/
+        }
+
+
     }
 
     inner class MindfullnessQuestionsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

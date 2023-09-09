@@ -33,11 +33,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/lexendmedium"
                 android:gravity="center"
-                android:text="Mindfulness - What is it?"
+                android:maxLines="1"
+                android:text="@string/mindfulness_heading"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_18sdp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_18sdp" />
 
         </RelativeLayout>
 
@@ -65,7 +67,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="-23dp"
             android:layout_marginBottom="@dimen/_5sdp"
-          android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
             android:layout_centerHorizontal="true">
 
             <!-- Step 1 Indicator -->
@@ -119,14 +121,12 @@
         <ScrollView
             android:id="@+id/mainlayout"
             android:layout_width="match_parent"
-            android:layout_height="550dp"
-            android:orientation="vertical"
-            android:clickable="true">
-        <androidx.recyclerview.widget.RecyclerView
-            android:orientation="vertical"
-            android:id="@+id/optionsRecyclerView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/optionsRecyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </ScrollView>
         <LinearLayout
             android:layout_width="match_parent"

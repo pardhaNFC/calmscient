@@ -369,6 +369,7 @@
     <string name="quiz_text_option3_3">I have a hard time acknowledging my own stress and anxiety. I also have a hard time following through with changes in order to manage stress, and end up in a vicious cycle of anxiety.</string>
     <string name="submit">Submit</string>
     <string name="let_make_plan">Let\'s make a plan</string>
+    <string name="mindfulness_heading">Mindfulness - What is it?</string>
 
     <!--Recognize a cycle of anxiety-->
     <string name="title_toolbar_recognize">Recognize a cycle of anxiety</string>
@@ -416,6 +417,12 @@
     <string name="melanie_audio_text2">“I care about people so I’m good at helping others in need. I just constantly have a lot on my plate and I’m tired all the time. I try to be on top of my kid’s school and sports events, and enjoy doing special things for my anniversary and family holidays. I’m incredibly busy and often wonder when I get to live my life for myself.\n\n Sometimes I just go into my room and turn on the TV or scroll through social media to shut down because I’m simply exhausted. I love reading positive quotes because I think if I stay positive I can keep going.”</string>
     <string name="melanie_audio_text3">Have you ever responded to stress like Melanie does?</string>
     <string name="information">Information</string>
+    <!--additional resources-->
+    <string name="additional_anxiety_exercise_summary">Research has shown that exercise improves cell health and boosts the brain’s natural anti-anxiety drug. How so?
+Harvard medical school studies show that exercise diverts our minds from the very things we are anxious about. Moving our bodies decreases muscle tension, lowering our body’s contribution to feeling anxious. Increasing our heart rate actively changes our brain chemistry, increasing the availability of important anti-anxiety neurochemicals such as serotonin and GABA. Exercise also activates our brain’s frontal lobe, helping control the reacting system located in the amygdala.
+We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.
+The most important thing is to do it! Do you have some time today to get started?
+</string>
     <!--Weekly Summary-->
     <string name="summaryofmood">Summary of mood</string>
     <string name="summaryofsleep">Summary of sleep</string>
