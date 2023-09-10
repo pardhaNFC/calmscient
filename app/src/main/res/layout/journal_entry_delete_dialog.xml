@@ -1,0 +1,80 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_200sdp"
+    android:layout_height="@dimen/_220sdp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="@dimen/_10sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@drawable/dialog_border">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:fontFamily="@font/lexendmedium"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/black_head"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Icon ImageView -->
+    <ImageView
+        android:id="@+id/dialog_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_dialog"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Message TextView -->
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_message"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/lexendlight"
+        android:textColor="@color/black_head"
+        />
+
+    <!-- Buttons (Yes and No) in Horizontal LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_no"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="No"
+            android:clickable="true"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_100"
+            android:fontFamily="@font/lexendregular"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/skip_border"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Yes"
+            android:clickable="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:fontFamily="@font/lexendregular"
+            android:textSize="@dimen/_14sdp"
+            android:background="@drawable/button_border"/>
+
+
+    </LinearLayout>
+</LinearLayout>

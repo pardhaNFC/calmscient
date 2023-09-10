@@ -65,6 +65,9 @@ class WeeklySummaryFragment : Fragment() {
         binding.backIcon.setOnClickListener {
             loadFragment(HomeFragment())
         }
+        binding.journalEntryCard.setOnClickListener{
+            loadFragment(JournalEntryFragment())
+        }
         return binding.root
     }
     private fun loadFragment(fragment: Fragment) {
