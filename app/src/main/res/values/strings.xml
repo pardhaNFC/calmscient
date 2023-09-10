@@ -479,5 +479,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="delete">Delete</string>
     <string name="delete_message">Are you sure you want to delete Journal entry data?</string>
     <string name="journal_entry_edit">Journal entry edit</string>
+    <string name="edit">Edit</string>
+
 
 </resources>

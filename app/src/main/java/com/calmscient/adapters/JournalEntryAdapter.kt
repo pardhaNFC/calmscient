@@ -23,7 +23,6 @@ import android.widget.PopupMenu
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
@@ -117,9 +116,7 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
             threeDotsIcon.visibility = View.GONE
             cardDataList[adapterPosition].isExpanded = false
         }
-
     }
-
     override fun getItemCount(): Int {
         Log.d("JournalEntryAdapter", "Item count: ${cardDataList.size}")
         return cardDataList.size
@@ -181,10 +178,9 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
     private fun showPopupMenu(view: View, position: Int) {
         val context = view.context
         val popupMenu = PopupMenu(context, view)
-
         val menuInflater = popupMenu.menuInflater
-        menuInflater.inflate(R.menu.journal_entry_edit_delete_popup_menu, popupMenu.menu)
-
+        popupMenu.inflate(R.menu.journal_entry_edit_delete_popup_menu)
+        //menuInflater.inflate(R.menu.journal_entry_edit_delete_popup_menu, popupMenu.menu)
         popupMenu.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menu_delete -> {
@@ -211,14 +207,12 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
                             .show()
                         dialog.dismiss()
                     }
-
                     buttonNo.setOnClickListener {
                         // Handle the "No" button click (cancel deletion)
                         // Simply dismiss the dialog
                         Toast.makeText(context, "You clicked No", Toast.LENGTH_SHORT).show()
                         dialog.dismiss()
                     }
-
                     // Show the custom dialog
                     dialog.show()
 
@@ -226,17 +220,18 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
                 }
 
                 R.id.menu_edit -> {
-
                     showBottomSheet(view, position, cardDataList[position].description)
                     true
-
                 }
-
                 else -> false
             }
         }
-
         popupMenu.show()
+        val popup = PopupMenu::class.java.getDeclaredField("mPopup")
+        popup.isAccessible = true
+        val menu = popup.get(popupMenu)
+        menu.javaClass.getDeclaredMethod("setForceShowIcon",Boolean::class.java)
+            .invoke(menu,true)
     }
 
 

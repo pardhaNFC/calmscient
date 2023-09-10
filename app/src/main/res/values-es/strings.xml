@@ -462,4 +462,5 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="delete">Borrar</string>
     <string name="delete_message">¿Está seguro de que desea eliminar los datos de las entradas del diario?</string>
     <string name="journal_entry_edit">Edición de entrada de diario</string>
+    <string name="edit">Diario</string>
 </resources>
