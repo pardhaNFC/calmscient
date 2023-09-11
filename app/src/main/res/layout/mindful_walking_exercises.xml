@@ -82,11 +82,20 @@
                     android:layout_marginTop="@dimen/_45sdp"
                     android:src="@drawable/mindfullexercise_heart__image"/>
             </RelativeLayout>
-
+                <ProgressBar
+                    android:id="@+id/audio_progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:progress="50"
+                    android:indeterminateDrawable="@drawable/circular_progressbar"
+                    android:visibility="gone" />
             <com.calmscient.activities.WaveformView
                 android:id="@+id/waveformView"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_60sdp"
+                android:visibility="gone"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_20sdp"

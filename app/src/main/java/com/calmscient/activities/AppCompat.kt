@@ -11,6 +11,10 @@
 
 package com.calmscient.activities
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.calmscient.utils.LocaleHelper
@@ -24,5 +28,17 @@ lateinit var langHelper:LocaleHelper
         savePref = SavePreferences(this)
         langHelper = LocaleHelper(this)
         langHelper.setLocale(this,savePref.getLanguageMode()!!)
+
+        //isNetworkConnected()
+    }
+    fun isNetworkConnected(context: Context): Boolean {
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        val network = connectivityManager.activeNetwork
+        val capabilities = connectivityManager.getNetworkCapabilities(network)
+        return capabilities != null && (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
+                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ||
+                capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET))
     }
 }

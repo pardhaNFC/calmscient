@@ -144,24 +144,35 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewJournalEntry"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_300sdp"
         tools:context=".fragments.JournalEntryFragment"
         android:layout_marginBottom="@dimen/_30sdp"/>
 
     <TextView
         android:id="@+id/tv_noEntry"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_310sdp"
         android:text="@string/no_entries"
         android:layout_gravity="center"
         android:gravity="center"
         android:textAlignment="center"
-        android:textSize="@dimen/_30sdp"
-        android:fontFamily="@font/lexendregular"
+        android:textSize="@dimen/_24sdp"
+        android:fontFamily="@font/lexendlight"
         android:textColor="@color/purple_100"
         android:visibility="gone"/>
 
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/journalNeedToTalkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/button_border"
+        android:fontFamily="@font/lexendregular"
+        android:text="@string/need_to_talk"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
 
 
 </LinearLayout>

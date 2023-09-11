@@ -10,6 +10,7 @@
  */
 
 package com.calmscient.fragments
+
 import android.app.ProgressDialog
 import android.content.Intent
 import android.media.MediaPlayer
@@ -28,8 +29,10 @@ import com.calmscient.R
 import com.calmscient.activities.GlossaryActivity
 import com.calmscient.activities.WaveformView
 import com.calmscient.databinding.MindfulWalkingExercisesBinding
-class MindfulWalkingExerciseFragment :Fragment() {
-    private lateinit var binding:MindfulWalkingExercisesBinding
+
+class MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
+    MediaPlayer.OnBufferingUpdateListener {
+    private lateinit var binding: MindfulWalkingExercisesBinding
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var waveformView: WaveformView
     private lateinit var playButton: ImageView
@@ -42,6 +45,7 @@ class MindfulWalkingExerciseFragment :Fragment() {
             loadFragment(WeeklySummaryFragment())
         }*/
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -59,22 +63,32 @@ class MindfulWalkingExerciseFragment :Fragment() {
         waveformView = requireActivity().findViewById(R.id.waveformView)
         playButton = requireActivity().findViewById(R.id.playButton)
         handler = Handler()
-        loadingDialog = ProgressDialog(requireActivity())
-        loadingDialog.setMessage("Loading Audio...")
+        mediaPlayer = MediaPlayer()
+        mediaPlayer.setOnPreparedListener(this)
+        mediaPlayer.setOnBufferingUpdateListener(this)
+        binding.audioProgressBar.indeterminateDrawable =
+            resources.getDrawable(R.drawable.circular_progressbar)
+
         // seekBar.max = mediaPlayer.duration
         binding.playButton.setOnClickListener {
-            if (!isMediaPlayerInitialized) {
+            /*if (!isMediaPlayerInitialized) {
                 loadingDialog.setCanceledOnTouchOutside(false)
                 loadingDialog.show()
-            }
+            }*/
             if (!isMediaPlayerInitialized) {
-                loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()
+                /*loadingDialog.setCanceledOnTouchOutside(false)
+                loadingDialog.show()*/
                 // Initialize the mediaPlayer if it hasn't been initialized yet
-                mediaPlayer = MediaPlayer.create(requireActivity(), Uri.parse("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3"))
+               /* mediaPlayer = MediaPlayer.create(
+                    requireActivity(),
+                    Uri.parse("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
+                )*/
+                binding.audioProgressBar.visibility = View.VISIBLE
+                mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
+                mediaPlayer.prepareAsync()
                 mediaPlayer.setOnPreparedListener { mp ->
                     // Dismiss the buffering dialog when the media player is prepared
-                    loadingDialog.dismiss()
+                    //loadingDialog.dismiss()
                     mp.start()
                     playButton.setImageResource(R.drawable.ic_audio_pause)
                     waveformView.visibility = View.VISIBLE
@@ -86,8 +100,8 @@ class MindfulWalkingExerciseFragment :Fragment() {
                 }
                 isMediaPlayerInitialized = true
                 // Show the buffering dialog when the play button is clicked
-                loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()
+                /*loadingDialog.setCanceledOnTouchOutside(false)
+                loadingDialog.show()*/
             } else {
                 if (mediaPlayer.isPlaying) {
                     mediaPlayer.pause()
@@ -102,11 +116,11 @@ class MindfulWalkingExerciseFragment :Fragment() {
             }
         }
 
-        binding.audioBackward.setOnClickListener{
+        binding.audioBackward.setOnClickListener {
             skipBackward()
         }
 
-        binding.audioForward.setOnClickListener{
+        binding.audioForward.setOnClickListener {
             skipForward()
         }
 
@@ -119,8 +133,9 @@ class MindfulWalkingExerciseFragment :Fragment() {
                     showInformationDialog()
                 }*/
     }
-    private fun updateWaveformView() {
 
+    private fun updateWaveformView() {
+        binding.audioProgressBar.visibility = View.GONE
         val audioDuration = mediaPlayer.duration
         val updateInterval = 100 // Update more frequently for smoother progression
 
@@ -128,10 +143,8 @@ class MindfulWalkingExerciseFragment :Fragment() {
             override fun run() {
                 val currentPosition = mediaPlayer.currentPosition
                 val progress = currentPosition.toFloat() / audioDuration.toFloat()
-
                 // Set the waveform progress
                 waveformView.setWaveformProgress(progress)
-
                 // Check if playback has completed
                 if (currentPosition < audioDuration) {
                     handler.postDelayed(this, updateInterval.toLong())
@@ -206,5 +219,19 @@ class MindfulWalkingExerciseFragment :Fragment() {
         transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    override fun onPrepared(mp: MediaPlayer?) {
+        mediaPlayer.start()
+    }
+
+    override fun onBufferingUpdate(mp: MediaPlayer?, percent: Int) {
+        // Show the custom loader when buffering is in progress
+        if (percent < 100) {
+            //binding.audioProgressBar.visibility = View.VISIBLE
+        } else {
+            // Hide the custom loader when buffering is complete
+            //binding.audioProgressBar.visibility = View.GONE
+        }
     }
 }

@@ -37,6 +37,7 @@ class EmergencyResourceFragment : Fragment() {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this){
             loadFragment(HomeFragment())
+                //goBackToPreviousFragment()
         }
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -45,7 +46,8 @@ class EmergencyResourceFragment : Fragment() {
 
         //val backToHome = view.findViewById<View>(R.id.backToHomeFragment)
         binding.backToHomeFragment.setOnClickListener {
-            loadFragment(HomeFragment())
+            //loadFragment(HomeFragment())
+            goBackToPreviousFragment()
         }
         binding.learnmoreSuicide.setOnClickListener {
             val intent = Intent(activity, LearnMoreWebviewActivity::class.java)
@@ -124,7 +126,16 @@ class EmergencyResourceFragment : Fragment() {
         textView.text = originalText
         textView.movementMethod = LinkMovementMethod.getInstance()
     }
-
+    private fun goBackToPreviousFragment() {
+        // Use the FragmentManager to go back to the previous fragment on the back stack
+        if (parentFragmentManager.backStackEntryCount > 0) {
+            parentFragmentManager.popBackStack()
+        } else {
+            // If there are no fragments in the back stack, you can handle it as needed.
+            // For example, you can close the activity.
+            requireActivity().finish()
+        }
+    }
     private fun loadFragment(fragment:Fragment)
     {
         // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()

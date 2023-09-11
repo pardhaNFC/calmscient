@@ -24,6 +24,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -33,7 +34,8 @@ import com.calmscient.databinding.ActivityAudioPlayerBinding
 import com.calmscient.databinding.ActivityMakeAplanBinding
 import com.google.android.exoplayer2.MediaItem
 
-class AudioPlayerActivity : AppCompat(), MediaPlayer.OnPreparedListener, MediaPlayer.OnBufferingUpdateListener  {
+class AudioPlayerActivity : AppCompat(), MediaPlayer.OnPreparedListener,
+    MediaPlayer.OnBufferingUpdateListener {
     private lateinit var binding: ActivityAudioPlayerBinding
 
     private lateinit var mediaPlayer: MediaPlayer
@@ -62,86 +64,89 @@ class AudioPlayerActivity : AppCompat(), MediaPlayer.OnPreparedListener, MediaPl
         val description = intent.getStringExtra("description")
 
         //  mediaPlayer = MediaPlayer.create(this, R.raw.audio1)
-        mediaPlayer = MediaPlayer()
-        binding.tvTitle.text = description
-
+        if (isNetworkConnected(this)) {
+            mediaPlayer = MediaPlayer()
+            binding.tvTitle.text = description
 //        mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFilePath))
+            waveformView = findViewById(R.id.waveformView)
+            playButton = findViewById(R.id.playButton)
 
-        waveformView = findViewById(R.id.waveformView)
-        playButton = findViewById(R.id.playButton)
+            //progressDialog = CustomProgressDialog(this)
+            loadingDialog = ProgressDialog(this)
+            loadingDialog.setMessage("Loading Audio...")
+            loadingDialog.setCanceledOnTouchOutside(false)
+            binding.audioProgressBar.indeterminateDrawable =
+                resources.getDrawable(R.drawable.circular_progressbar)
+            audioFilePath = intent.getStringExtra("audioResourceId")
+            handler = Handler()
+            mediaPlayer.setOnPreparedListener(this)
+            mediaPlayer.setOnBufferingUpdateListener(this)
 
-        //progressDialog = CustomProgressDialog(this)
-        loadingDialog = ProgressDialog(this)
-        loadingDialog.setMessage("Loading Audio...")
-        loadingDialog.setCanceledOnTouchOutside(false)
-        binding.audioProgressBar.indeterminateDrawable = resources.getDrawable(R.drawable.circular_progressbar)
-        audioFilePath = intent.getStringExtra("audioResourceId")
-        handler = Handler()
-        mediaPlayer.setOnPreparedListener(this)
-        mediaPlayer.setOnBufferingUpdateListener(this)
+            // seekBar.max = mediaPlayer.duration
+            binding.playButton.setOnClickListener {
+                /*  if (!isMediaPlayerInitialized) {
+                      loadingDialog.setCanceledOnTouchOutside(false)
+                      loadingDialog.show()
+                  } */
+                binding.audioProgressBar.visibility = View.VISIBLE
+                if (!isMediaPlayerInitialized) {
+                    /*loadingDialog.setCanceledOnTouchOutside(false)
+                    loadingDialog.show()*/
+                    // Initialize the mediaPlayer if it hasn't been initialized yet
+                    mediaPlayer.setDataSource(audioFilePath)
+                    mediaPlayer.prepareAsync()
 
-        // seekBar.max = mediaPlayer.duration
-        binding.playButton.setOnClickListener {
-            /*  if (!isMediaPlayerInitialized) {
-                  loadingDialog.setCanceledOnTouchOutside(false)
-                  loadingDialog.show()
-              } */
-            binding.audioProgressBar.visibility = View.VISIBLE
-            if (!isMediaPlayerInitialized) {
-                /*loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()*/
-                // Initialize the mediaPlayer if it hasn't been initialized yet
-                mediaPlayer.setDataSource(audioFilePath)
-                mediaPlayer.prepareAsync()
+                    mediaPlayer.setOnPreparedListener { mp ->
+                        mp.start()
+                        // Dismiss the buffering dialog when the media player is prepared
 
-                mediaPlayer.setOnPreparedListener { mp ->
-                    mp.start()
-                    // Dismiss the buffering dialog when the media player is prepared
-
-                    //loadingDialog.dismiss()
-                    playButton.setImageResource(R.drawable.ic_audio_pause)
-                    waveformView.visibility = View.VISIBLE
-                    updateWaveformView()
-                }
-                mediaPlayer.setOnCompletionListener {
-                    // Playback completed, reset the play button icon
-                    playButton.setImageResource(R.drawable.ic_audio_play)
-                }
-                isMediaPlayerInitialized = true
-            } else {
-                if (mediaPlayer.isPlaying) {
-                    mediaPlayer.pause()
-                    playButton.setImageResource(R.drawable.ic_audio_play)
+                        //loadingDialog.dismiss()
+                        playButton.setImageResource(R.drawable.ic_audio_pause)
+                        waveformView.visibility = View.VISIBLE
+                        updateWaveformView()
+                    }
+                    mediaPlayer.setOnCompletionListener {
+                        // Playback completed, reset the play button icon
+                        playButton.setImageResource(R.drawable.ic_audio_play)
+                    }
+                    isMediaPlayerInitialized = true
                 } else {
-                    mediaPlayer.start()
-                    playButton.setImageResource(R.drawable.ic_audio_pause)
-                    waveformView.visibility = View.VISIBLE
-                    updateWaveformView()
-                    // No need to show the dialog here since it was already shown when the play button was clicked.
+                    if (mediaPlayer.isPlaying) {
+                        mediaPlayer.pause()
+                        playButton.setImageResource(R.drawable.ic_audio_play)
+                    } else {
+                        mediaPlayer.start()
+                        playButton.setImageResource(R.drawable.ic_audio_pause)
+                        waveformView.visibility = View.VISIBLE
+                        updateWaveformView()
+                        // No need to show the dialog here since it was already shown when the play button was clicked.
+                    }
                 }
             }
+        } else {
+            Toast.makeText(this, "No internet connection", Toast.LENGTH_SHORT).show()
         }
+            binding.audioBackward.setOnClickListener {
+                skipBackward()
+            }
 
-        binding.audioBackward.setOnClickListener {
-            skipBackward()
-        }
+            binding.audioForward.setOnClickListener {
+                skipForward()
+            }
 
-        binding.audioForward.setOnClickListener {
-            skipForward()
-        }
+            binding.menuIcon.setOnClickListener {
+                onBackPressed()
+            }
 
-        binding.menuIcon.setOnClickListener {
-            onBackPressed()
-        }
+            binding.icGlossary.setOnClickListener {
+                // isMediaPlayerInitialized = false
+                startActivity(Intent(this, GlossaryActivity::class.java))
+            }
 
-        binding.icGlossary.setOnClickListener {
-            // isMediaPlayerInitialized = false
-            startActivity(Intent(this, GlossaryActivity::class.java))
-        }
+            binding.informationIcon.setOnClickListener {
+                showInformationDialog()
+            }
 
-        binding.informationIcon.setOnClickListener {
-            showInformationDialog()
-        }
     }
 
     private fun updateWaveformView() {

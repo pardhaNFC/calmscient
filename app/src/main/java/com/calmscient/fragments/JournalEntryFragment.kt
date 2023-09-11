@@ -10,6 +10,7 @@
  */
 
 package com.calmscient.fragments
+
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.os.Bundle
@@ -46,6 +47,7 @@ import java.util.Calendar
 import java.util.GregorianCalendar
 import java.util.Locale
 import kotlin.random.Random
+
 class JournalEntryFragment : Fragment(), CellClickListener {
 
     private lateinit var binding: FragmentJournalEntryBinding
@@ -154,7 +156,9 @@ class JournalEntryFragment : Fragment(), CellClickListener {
         binding.recyclerViewJournalEntry.layoutManager = LinearLayoutManager(requireContext())
         adapter = JournalEntryAdapter(cardDataList)
         binding.recyclerViewJournalEntry.adapter = adapter
-
+        binding.journalNeedToTalkButton.setOnClickListener {
+            loadFragment(EmergencyResourceFragment())
+        }
         // Display card views for the initial selected date
         displayCardViewsForSelectedDate()
     }
@@ -231,8 +235,10 @@ class JournalEntryFragment : Fragment(), CellClickListener {
         if (cardCount == 0) {
             // Show "No entries" TextView when card count is 0
             binding.tvNoEntry.text = getString(R.string.no_entries)
+            binding.recyclerViewJournalEntry.visibility = View.GONE
             binding.tvNoEntry.visibility = View.VISIBLE // Make the TextView visible
         } else {
+            binding.recyclerViewJournalEntry.visibility = View.VISIBLE
             binding.tvNoEntry.visibility = View.GONE // Hide the "No entries" TextView
         }
 
@@ -272,7 +278,51 @@ class JournalEntryFragment : Fragment(), CellClickListener {
              }
          }*/
 
-        private val cardSizes =   intArrayOf(4,2,6,3,1,0,8,3,2,4,1,8,0,7,4,2,6,3,1,0,8,3,2,4,1,0,8,7,4,2,6,3,8,1,0,3,2,4,8,1,0,7,8)
+        private val cardSizes = intArrayOf(
+            4,
+            2,
+            6,
+            3,
+            1,
+            0,
+            8,
+            3,
+            2,
+            4,
+            1,
+            8,
+            0,
+            7,
+            4,
+            2,
+            6,
+            3,
+            1,
+            0,
+            8,
+            3,
+            2,
+            4,
+            1,
+            0,
+            8,
+            7,
+            4,
+            2,
+            6,
+            3,
+            8,
+            1,
+            0,
+            3,
+            2,
+            4,
+            8,
+            1,
+            0,
+            7,
+            8
+        )
 
     }
 
@@ -291,7 +341,8 @@ class JournalEntryFragment : Fragment(), CellClickListener {
     }
 
     private fun handleDeleteEntry() {
-        val selectedPosition = adapterPositionToDelete // Create a variable to store the selected position
+        val selectedPosition =
+            adapterPositionToDelete // Create a variable to store the selected position
         if (selectedPosition != -1) {
             adapter.removeEntry(selectedPosition) // Remove the entry from the adapter
             adapterPositionToDelete = -1 // Reset the selected position
