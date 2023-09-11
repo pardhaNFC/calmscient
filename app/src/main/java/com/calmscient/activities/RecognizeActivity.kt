@@ -57,6 +57,7 @@ class RecognizeActivity : AppCompat() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        binding.previousQuestion.visibility = View.GONE
         val images = arrayOf(
             R.drawable.ic_recognize,
             R.drawable.ic_recognize_2,
@@ -246,6 +247,23 @@ class RecognizeActivity : AppCompat() {
             } else {
                 imageView.setImageResource(inactiveTickDrawable)
             }
+        }
+        if(currentIndex ==0)
+        {
+            binding.previousQuestion.visibility = View.GONE
+        }
+        else
+        {
+            binding.previousQuestion.visibility = View.VISIBLE
+        }
+
+        if(currentIndex == indicatorViews.size-1)
+        {
+            binding.nextQuestion.visibility = View.GONE
+        }
+        else
+        {
+            binding.nextQuestion.visibility = View.VISIBLE
         }
     }
 

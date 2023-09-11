@@ -14,6 +14,7 @@ package com.calmscient.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -51,7 +52,7 @@ class MakeAPlanActivity : AppCompatActivity() {
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.optionsRecyclerView1)
 
-
+        binding.previousQuestion.visibility = View.GONE
         val title = intent.getStringExtra("description")
 
         binding.tvTitlePlayer.text = title
@@ -273,6 +274,24 @@ class MakeAPlanActivity : AppCompatActivity() {
         // Update the current step indicator to active
         if (currentQuestionIndex >= 0 && currentQuestionIndex < stepIndicators.size) {
             stepIndicators[currentQuestionIndex].setImageResource(R.drawable.ic_activetickmark)
+        }
+
+        if(currentQuestionIndex ==0)
+        {
+            binding.previousQuestion.visibility = View.GONE
+        }
+        else
+        {
+            binding.previousQuestion.visibility = View.VISIBLE
+        }
+
+        if(currentQuestionIndex == stepIndicators.size-1)
+        {
+            binding.nextQuestion.visibility = View.GONE
+        }
+        else
+        {
+            binding.nextQuestion.visibility = View.VISIBLE
         }
     }
 

@@ -18,6 +18,7 @@ import android.content.res.Configuration
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.view.WindowManager
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -31,7 +32,7 @@ import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerView
 
-class PlayerActivity : AppCompatActivity(){
+class PlayerActivity : AppCompatActivity() {
 
     private lateinit var playerView: PlayerView
     private lateinit var player: ExoPlayer
@@ -41,7 +42,9 @@ class PlayerActivity : AppCompatActivity(){
     private var isVideoPlaying = true
     private var isFavorite = false
     private val isPortrait = false
-    lateinit var title : TextView
+    lateinit var title: TextView
+    lateinit var dialogText: String
+    lateinit var dialog_img: ImageView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +59,8 @@ class PlayerActivity : AppCompatActivity(){
         heading = findViewById(R.id.headingTextView)
         summary = findViewById(R.id.summaryTextView)
         title = findViewById(R.id.tv_title_player)
-
+        dialog_img = findViewById<ImageView>(R.id.informationIcon)
+        dialogText = intent.getStringExtra("dialogText").toString()
         if (savedInstanceState == null) {
             // Initialize ExoPlayer only if activity is initially created
 
@@ -83,8 +87,11 @@ class PlayerActivity : AppCompatActivity(){
             summary.text = summaryText
             title.text = headingText
         }
-
-
+        if (dialogText.equals("null")) {
+            dialog_img.visibility = View.GONE
+        }else{
+            dialog_img.visibility = View.VISIBLE
+        }
         // Rest of your initialization code
         initializeBinding()
         initializeVideoControl()
@@ -110,7 +117,11 @@ class PlayerActivity : AppCompatActivity(){
             val summaryText = intent.getStringExtra("summary")
             playerView.player = player
 
-
+            if (dialogText.equals("null")) {
+                dialog_img.visibility = View.GONE
+            }else{
+                dialog_img.visibility = View.VISIBLE
+            }
             heading.text = headingText
             summary.text = summaryText
             title.text = headingText
@@ -130,6 +141,7 @@ class PlayerActivity : AppCompatActivity(){
             initializeVideoControl()
         }
     }
+
     override fun onPause() {
         super.onPause()
         playerView.player!!.playWhenReady = false;
@@ -140,6 +152,7 @@ class PlayerActivity : AppCompatActivity(){
         super.onStop()
         playerView.player!!.release()
     }
+
     override fun onResume() {
         super.onResume()
         playerView.player!!.playWhenReady = true
@@ -149,18 +162,18 @@ class PlayerActivity : AppCompatActivity(){
         super.onDestroy()
         playerView.player!!.playbackState
     }
+
     private fun initializeBinding() {
         findViewById<ImageButton>(R.id.orientationBtn).setOnClickListener {
             toggleOrientation()
         }
-        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
-        {
-            findViewById<ImageView>(R.id.informationIcon).setOnClickListener {
+        if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+
+            dialog_img.setOnClickListener {
                 showInformationDialog()
             }
         }
-        if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT)
-        {
+        if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
             findViewById<ImageView>(R.id.ic_glossary).setOnClickListener {
                 startActivity(Intent(this, GlossaryActivity::class.java))
             }
@@ -212,7 +225,7 @@ class PlayerActivity : AppCompatActivity(){
         val closeButton = dialogView.findViewById<ImageView>(R.id.closeDialogButton)
         val titleTextView = dialogView.findViewById<TextView>(R.id.titleVideoDialog)
         // Retrieve the dialogText from intent extras
-        val dialogText = intent.getStringExtra("dialogText")
+
 
         // Set the content of the dialog using dialogText
         infoTextView.text = dialogText

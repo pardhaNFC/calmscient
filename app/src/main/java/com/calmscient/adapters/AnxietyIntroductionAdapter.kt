@@ -97,10 +97,10 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             } else if (cardItem.description == context.getString(R.string.moral_deficiency)) {
                                 val intent = Intent(context, AudioPlayerActivity::class.java)
                                 intent.putExtra("audioResourceId", cardItem.audioResourceId)
-                                intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("description", cardItem.description)
+                                /*intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
-                                intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("dialogText", cardItem.dialogText)*/
                                 context.startActivity(intent)
                             } else if (cardItem.description == context.getString(R.string.anxiety_worry)) {
                                 val intent = Intent(context, AudioPlayerActivity::class.java)

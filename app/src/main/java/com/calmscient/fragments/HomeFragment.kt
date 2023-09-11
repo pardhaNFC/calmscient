@@ -210,7 +210,7 @@ class HomeFragment : Fragment() {
         val card5 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+6-1+Calming+your+anxious+mind+with+music+English.wav",
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/1+Anxiety+and+exercise.mp4",
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,

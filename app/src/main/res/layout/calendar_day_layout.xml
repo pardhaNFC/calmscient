@@ -25,19 +25,19 @@
                     android:id="@+id/exSevenDayText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="@font/lexendregular"
                     android:textColor="@color/colorPrimaryDark"
                     android:textAllCaps="true"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/_12sdp"
                     tools:text="Mon"/>
                 <TextView
                     android:id="@+id/exSevenDateText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="@font/lexendregular"
                     android:textColor="@color/black"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/_16sdp"
                     tools:text="24"/>
             </LinearLayout>
         </LinearLayout>

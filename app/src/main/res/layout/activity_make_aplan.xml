@@ -158,27 +158,31 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_450sdp" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/previousQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
                 android:clickable="true"
-                android:paddingRight="@dimen/_190sdp"
-                android:src="@drawable/ic_question_back" />
+                android:src="@drawable/ic_question_back"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp" />
 
             <ImageView
                 android:id="@+id/nextQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:clickable="true"
-                android:src="@drawable/ic_next_question" />
-        </LinearLayout>
+                android:src="@drawable/ic_next_question"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp" />
+        </RelativeLayout>
     </LinearLayout>
 </ScrollView>
