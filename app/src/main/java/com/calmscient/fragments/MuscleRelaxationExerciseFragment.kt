@@ -27,7 +27,8 @@ import com.calmscient.R
 import com.calmscient.activities.WaveformView
 import com.calmscient.databinding.MuscleRelaxationExercisesBinding
 
-class MuscleRelaxationExerciseFragment : Fragment() {
+class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
+    MediaPlayer.OnBufferingUpdateListener {
     private lateinit var binding: MuscleRelaxationExercisesBinding
     private var isFavorite = false
     private lateinit var mediaPlayer: MediaPlayer
@@ -73,25 +74,31 @@ class MuscleRelaxationExerciseFragment : Fragment() {
         waveformView = requireActivity().findViewById(R.id.waveformView)
         playButton = requireActivity().findViewById(R.id.playButton)
         handler = Handler()
-        loadingDialog = ProgressDialog(requireActivity())
-        loadingDialog.setMessage("Loading Audio...")
+        mediaPlayer = MediaPlayer()
+        mediaPlayer.setOnPreparedListener(this)
+        mediaPlayer.setOnBufferingUpdateListener(this)
+        binding.audioProgressBar.indeterminateDrawable =
+            resources.getDrawable(R.drawable.circular_progressbar)
         // seekBar.max = mediaPlayer.duration
         binding.playButton.setOnClickListener {
-            if (!isMediaPlayerInitialized) {
+            /*if (!isMediaPlayerInitialized) {
                 loadingDialog.setCanceledOnTouchOutside(false)
                 loadingDialog.show()
-            }
+            }*/
             if (!isMediaPlayerInitialized) {
-                loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()
+                /*loadingDialog.setCanceledOnTouchOutside(false)
+                loadingDialog.show()*/
                 // Initialize the mediaPlayer if it hasn't been initialized yet
-                mediaPlayer = MediaPlayer.create(
+                /*mediaPlayer = MediaPlayer.create(
                     requireActivity(),
                     Uri.parse("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
-                )
+                )*/
+                binding.audioProgressBar.visibility = View.VISIBLE
+                mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
+                mediaPlayer.prepareAsync()
                 mediaPlayer.setOnPreparedListener { mp ->
                     // Dismiss the buffering dialog when the media player is prepared
-                    loadingDialog.dismiss()
+                    //loadingDialog.dismiss()
                     mp.start()
                     playButton.setImageResource(R.drawable.ic_audio_pause)
                     waveformView.visibility = View.VISIBLE
@@ -102,9 +109,6 @@ class MuscleRelaxationExerciseFragment : Fragment() {
                     playButton.setImageResource(R.drawable.ic_audio_play)
                 }
                 isMediaPlayerInitialized = true
-                // Show the buffering dialog when the play button is clicked
-                loadingDialog.setCanceledOnTouchOutside(false)
-                loadingDialog.show()
             } else {
                 if (mediaPlayer.isPlaying) {
                     mediaPlayer.pause()
@@ -138,7 +142,7 @@ class MuscleRelaxationExerciseFragment : Fragment() {
     }
 
     private fun updateWaveformView() {
-
+        binding.audioProgressBar.visibility = View.GONE
         val audioDuration = mediaPlayer.duration
         val updateInterval = 100 // Update more frequently for smoother progression
 
@@ -224,5 +228,19 @@ class MuscleRelaxationExerciseFragment : Fragment() {
         transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    override fun onPrepared(mp: MediaPlayer?) {
+        mediaPlayer.start()
+    }
+
+    override fun onBufferingUpdate(mp: MediaPlayer?, percent: Int) {
+        // Show the custom loader when buffering is in progress
+        if (percent < 100) {
+            //binding.audioProgressBar.visibility = View.VISIBLE
+        } else {
+            // Hide the custom loader when buffering is complete
+            //binding.audioProgressBar.visibility = View.GONE
+        }
     }
 }
