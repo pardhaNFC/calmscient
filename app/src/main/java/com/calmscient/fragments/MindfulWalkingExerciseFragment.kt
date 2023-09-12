@@ -30,7 +30,8 @@ import com.calmscient.activities.GlossaryActivity
 import com.calmscient.activities.WaveformView
 import com.calmscient.databinding.MindfulWalkingExercisesBinding
 
-class MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
+class
+MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
     MediaPlayer.OnBufferingUpdateListener {
     private lateinit var binding: MindfulWalkingExercisesBinding
     private lateinit var mediaPlayer: MediaPlayer
@@ -38,6 +39,7 @@ class MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListene
     private lateinit var playButton: ImageView
     private lateinit var handler: Handler
     private var isMediaPlayerInitialized = false
+    var isFavorite = false
     private lateinit var loadingDialog: ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +54,15 @@ class MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListene
         savedInstanceState: Bundle?
     ): View? {
         binding = MindfulWalkingExercisesBinding.inflate(inflater, container, false)
+        val favoritesIcon = binding.favoritesIcon
+        favoritesIcon.setOnClickListener {
+            isFavorite = !isFavorite
+            if (isFavorite) {
+                favoritesIcon.setImageResource(R.drawable.mindfullexercise_heart__image) // Set your desired color
+            } else {
+                favoritesIcon.setImageResource(R.drawable.heart_icon_fav) // Reset color
+            }
+        }
         return binding.root
     }
 

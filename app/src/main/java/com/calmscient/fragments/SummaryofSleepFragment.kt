@@ -45,8 +45,8 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
-class SummaryofSleepFragment: Fragment() {
-    private lateinit var binding:SummaryofsleepFragmentBinding
+class SummaryofSleepFragment : Fragment() {
+    private lateinit var binding: SummaryofsleepFragmentBinding
     private lateinit var dateView: TextView
     private lateinit var calenderDateView: TextView
     private var selectedDate = LocalDate.now()
@@ -56,10 +56,11 @@ class SummaryofSleepFragment: Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requireActivity().onBackPressedDispatcher.addCallback(this){
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
             loadFragment(WeeklySummaryFragment())
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -90,6 +91,7 @@ class SummaryofSleepFragment: Fragment() {
 
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Ensure that dateView is part of the FragmentWeeklysummarymoodBinding layout
@@ -129,6 +131,7 @@ class SummaryofSleepFragment: Fragment() {
                     }
                 }
             }
+
             fun bind(day: WeekDay) {
                 this.day = day
                 bind.exSevenDateText.text = dateFormatter.format(day.date)
@@ -170,7 +173,7 @@ class SummaryofSleepFragment: Fragment() {
         )
         binding.exSevenCalendar.scrollToDate(LocalDate.now())
         binding.recyclerViewSummaryMood.layoutManager = LinearLayoutManager(requireContext())
-        summaryOfMoodAdapter = SummaryofMoodFragmentAdapter(summaryCardViewItems )
+        summaryOfMoodAdapter = SummaryofMoodFragmentAdapter(summaryCardViewItems)
         binding.recyclerViewSummaryMood.adapter = summaryOfMoodAdapter
         summaryOfMoodAdapter.updateTasks(summaryCardViewItems)
         displayCardViewsForSelectedDate()
@@ -200,26 +203,28 @@ class SummaryofSleepFragment: Fragment() {
 
     private fun getCardDescription(cardPosition: Int): String {
         return when (cardPosition) {
-            1 -> R.string.eight_hours.toString()
-            2 -> R.string.six_hours.toString()
-            3 -> R.string.eight_hours.toString()
-            4 -> R.string.five_hours.toString()
-            5 -> R.string.three_hours.toString()
-            6 -> R.string.eight_hours.toString()
-            else -> R.string.eight_hours.toString()
+            1 -> getString(R.string.eight_hours)
+            2 -> getString(R.string.six_hours)
+            3 -> getString(R.string.eight_hours)
+            4 -> getString(R.string.five_hours)
+            5 -> getString(R.string.three_hours)
+            6 -> getString(R.string.eight_hours)
+            else -> getString(R.string.eight_hours)
         }
     }
+
     private fun getCardDescription1(cardPosition: Int): String {
         return when (cardPosition) {
-            0 -> R.string.hours_sleep1.toString()
-            1 -> R.string.hours_sleep2.toString()
-            2 -> R.string.hours_sleep3.toString()
-            3 -> R.string.hours_sleep4.toString()
-            4 -> R.string.hours_sleep5.toString()
-            5 -> R.string.hours_sleep6.toString()
-            else -> R.string.hours_sleep1.toString()
+            0 -> getString(R.string.hours_sleep1)
+            1 -> getString(R.string.hours_sleep2)
+            2 -> getString(R.string.hours_sleep3)
+            3 -> getString(R.string.hours_sleep4)
+            4 -> getString(R.string.hours_sleep5)
+            5 -> getString(R.string.hours_sleep6)
+            else -> getString(R.string.hours_sleep1)
         }
     }
+
     fun getWeekPageTitle(week: Week): String {
         val firstDate = week.days.first().date
         val lastDate = week.days.last().date
@@ -227,26 +232,32 @@ class SummaryofSleepFragment: Fragment() {
             firstDate.yearMonth == lastDate.yearMonth -> {
                 firstDate.yearMonth.displayText()
             }
+
             firstDate.year == lastDate.year -> {
                 "${firstDate.month.displayText(short = false)} - ${lastDate.yearMonth.displayText()}"
             }
+
             else -> {
                 "${firstDate.yearMonth.displayText()} - ${lastDate.yearMonth.displayText()}"
             }
         }
     }
+
     fun YearMonth.displayText(short: Boolean = false): String {
         return "${this.month.displayText(short = short)} ${this.year}"
     }
+
     fun Month.displayText(short: Boolean = true): String {
         val style = if (short) TextStyle.SHORT else TextStyle.FULL
         return getDisplayName(style, Locale.ENGLISH)
     }
+
     fun DayOfWeek.displayText(uppercase: Boolean = false): String {
         return getDisplayName(TextStyle.SHORT, Locale.ENGLISH).let { value ->
             if (uppercase) value.uppercase(Locale.ENGLISH) else value
         }
     }
+
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)

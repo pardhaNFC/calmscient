@@ -34,11 +34,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="@font/lexendmedium"
-                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_toEndOf="@+id/back_icon"
+                android:ellipsize="end"
+                android:fontFamily="@font/lexendmedium"
+                android:maxLines="1"
                 android:text="@string/medication_Details"
                 android:textColor="#000000"
                 android:textSize="@dimen/_17sdp" />
@@ -110,7 +112,7 @@
                         android:fontFamily="@font/lexendregular"
                         android:layout_marginHorizontal="@dimen/_20sdp"
                         android:layout_marginTop="20dp"
-                        android:text="Dosage"
+                        android:text="@string/dosage"
                         android:textColor="#424242"
                         android:textSize="@dimen/_11sdp" />
 
@@ -137,7 +139,7 @@
                         android:layout_marginStart="80dp"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/lexendregular"
-                        android:text="Direction"
+                        android:text="@string/direction"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_11sdp" />
 
@@ -145,7 +147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/directiontext"
-                        android:text="2 tablets per day"
+                        android:text="@string/tabletsPerDay"
                         android:fontFamily="@font/lexendregular"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_14sdp" />

@@ -70,6 +70,7 @@
 
     <string name="provider">Provider</string>
     <string name="dosage">Dosage</string>
+    <string name="tabletsPerDay">2 tablets per day</string>
     <string name="direction">Direction</string>
     <!--settings-->
     <string name="settings">Settings</string>
@@ -613,4 +614,6 @@ The most important thing is to do it! Do you have some time today to get started
     <!--AUDIT Card-->
     <string name="audit_text1_weeklysummary">Moderate-severe alcohol use disorder</string>
     <string name="audit_text2_weeklysummary">Harmful alcohol consumption</string>
+
+    <string name="general_check">General Check</string>
 </resources>

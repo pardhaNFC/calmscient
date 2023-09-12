@@ -44,8 +44,8 @@
     <string name="yes">Sí</string>
     <string name="no">No</string>
     <string name="daily_journal">Diario</string>
-    <string name="save">GUARDAR</string>
-    <string name="skip">PASAR</string>
+    <string name="save">Guardar</string>
+    <string name="skip">Pasar</string>
     <string name="medications">medicamentos</string>
     <string name="upcoming_medical_appointments">Próximas Citas Médicas</string>
     <string name="screenings">Proyecciones</string>
@@ -77,6 +77,7 @@
 
     <string name="provider">Proveedora</string>
     <string name="dosage">Dosis</string>
+    <string name="tabletsPerDay">2 comprimidos al día</string>
     <string name="direction">Dirección</string>
 
     <string name="add_medications">Agregar medicamentos</string>
@@ -547,5 +548,5 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="fastPace_screen2_patio">En el patio</string>
     <string name="fastPace_screen2_where">Dónde</string>
 
-
+    <string name="general_check">General controlar</string>
 </resources>

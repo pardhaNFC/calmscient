@@ -188,13 +188,13 @@ class SummaryofMoodFragment : Fragment() {
 
     private fun getCardDescription(cardPosition: Int): String {
         return when (cardPosition) {
-            0 ->R.string.moodCard_text1.toString()
-            1 ->R.string.moodCard_text2.toString()
-            2 -> R.string.moodCard_text3.toString()
-            3 -> R.string.moodCard_text4.toString()
-            4 -> R.string.moodCard_text5.toString()
-            5 ->R.string.moodCard_text6.toString()
-            else -> R.string.moodCard_text1.toString()
+            0 ->getString(R.string.moodCard_text1)
+            1 ->getString(R.string.moodCard_text2)
+            2 -> getString(R.string.moodCard_text3)
+            3 -> getString(R.string.moodCard_text4)
+            4 -> getString(R.string.moodCard_text5)
+            5 ->getString(R.string.moodCard_text5)
+            else -> getString(R.string.moodCard_text1)
         }
     }
     fun getWeekPageTitle(week: Week): String {

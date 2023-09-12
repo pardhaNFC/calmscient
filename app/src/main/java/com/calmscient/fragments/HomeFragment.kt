@@ -215,7 +215,7 @@ class HomeFragment : Fragment() {
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
             heading = getString(R.string.anxiety_exercise),
-            summary = null,
+            summary = getString(R.string.additional_anxiety_exercise_summary),
             dialogText = null
         )
 

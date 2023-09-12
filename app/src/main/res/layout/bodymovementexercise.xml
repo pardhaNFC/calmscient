@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_toRightOf="@+id/menuicon"
             android:maxLines="1"
             android:ellipsize="end"
             android:text="@string/body_moment_exercies"

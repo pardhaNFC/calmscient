@@ -48,6 +48,7 @@ class ButterflyHugExercisesFragment : Fragment() {
             }
         }
         binding.nextQuestion.setOnClickListener {
+            binding.previousQuestion.visibility = View.VISIBLE
             binding.contentText2.visibility = View.VISIBLE
             binding.contentText1.visibility = View.GONE
             binding.nextQuestion.visibility = View.GONE
@@ -56,7 +57,7 @@ class ButterflyHugExercisesFragment : Fragment() {
             binding.contentText1.visibility = View.VISIBLE
             binding.contentText2.visibility = View.GONE
             binding.nextQuestion.visibility = View.VISIBLE
-            //binding.previousQuestion.visibility = View.GONE
+            binding.previousQuestion.visibility = View.GONE
         }
         binding.menuicon.setOnClickListener {
             loadFragment(ExerciseFragment())

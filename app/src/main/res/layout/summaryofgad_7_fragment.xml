@@ -187,7 +187,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewSummaryMood"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_330sdp"
+            android:layout_height="@dimen/_310sdp"
             android:clickable="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:context=".fragments.SummaryofMoodFragment" />

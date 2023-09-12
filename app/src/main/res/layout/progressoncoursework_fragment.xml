@@ -208,20 +208,23 @@
             android:weightSum="3"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_140sdp"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
                 android:fontFamily="@font/lexendregular"
                 android:textSize="@dimen/_12sdp"
                 android:textColor="@color/black_head"
                 android:text="@string/summaryprogress_braving_Anxiety"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
                 android:fontFamily="@font/lexendregular"
                 android:layout_marginStart="@dimen/_60sdp"
                 android:textColor="@color/black_head"
@@ -231,8 +234,9 @@
                 android:id="@+id/braving_AnxietyImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
                 android:src="@drawable/ic_next_new" />
         </LinearLayout>
 
@@ -250,10 +254,12 @@
             android:weightSum="3"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_width="@dimen/_140sdp"
+                android:layout_weight="2"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:fontFamily="@font/lexendregular"
                 android:textSize="@dimen/_12sdp"
                 android:textColor="@color/black_head"
@@ -262,10 +268,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight=".5"
                 android:fontFamily="@font/lexendregular"
-                android:layout_marginStart="@dimen/_70sdp"
+                android:layout_marginStart="@dimen/_60sdp"
                 android:textColor="@color/black_head"
                 android:text="15%"/>
 
@@ -273,8 +280,9 @@
                 android:id="@+id/feeling_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
                 android:src="@drawable/ic_next_new"/>
         </LinearLayout>
 
@@ -292,9 +300,11 @@
             android:weightSum="3"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_140sdp"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lexendregular"
                 android:textSize="@dimen/_12sdp"
@@ -304,10 +314,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_70sdp"
-                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_60sdp"
+                android:layout_weight=".5"
                 android:fontFamily="@font/lexendregular"
-                android:padding="@dimen/_10sdp"
+              android:layout_gravity="center_vertical"
                 android:text="10%"
                 android:textColor="@color/black_head" />
 
@@ -315,7 +325,8 @@
                 android:id="@+id/taking_ControlImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:src="@drawable/ic_next_new"/>
         </LinearLayout>
@@ -334,9 +345,11 @@
             android:weightSum="3"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_170sdp"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 android:layout_weight="1"
                 android:fontFamily="@font/lexendregular"
                 android:textSize="@dimen/_12sdp"
@@ -346,18 +359,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_weight=".5"
+              android:layout_gravity="center_vertical"
                 android:fontFamily="@font/lexendregular"
-                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_30sdp"
                 android:textColor="@color/black_head"
                 android:text="11%"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10sdp"
-                android:layout_weight="1"
+                android:layout_weight=".5"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_next_new"/>
         </LinearLayout>
 
@@ -511,7 +525,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_40sdp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/lexendmedium"
         android:text="@string/need_to_talk"

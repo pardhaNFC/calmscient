@@ -174,7 +174,7 @@ class NextAppointmentsFragment : Fragment() {
                     nextDateStr,
                     R.drawable.ic_appointments,
                     null,
-                    "No Appointments",
+                    getString(R.string.no_appointments),
                     null,
                     null
                 )

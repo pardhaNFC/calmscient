@@ -75,11 +75,11 @@
                     android:layout_marginTop="@dimen/_40sdp"
                     android:src="@drawable/mindfulwalking_exercise_image"/>
                 <ImageView
-                    android:id="@+id/heartImage1"
+                    android:id="@+id/favoritesIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_250sdp"
-                    android:layout_marginTop="@dimen/_45sdp"
+                    android:layout_marginTop="@dimen/_55sdp"
                     android:src="@drawable/mindfullexercise_heart__image"/>
             </RelativeLayout>
                 <ProgressBar

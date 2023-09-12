@@ -197,13 +197,13 @@ class SummaryofGAD7Fragment: Fragment() {
 
     private fun getCardDescription(cardPosition: Int): String {
         return when (cardPosition) {
-            0 -> R.string.gad7_text1_weeklysummary.toString()
-            1 -> R.string.gad7_text1_weeklysummary.toString()
-            2 -> R.string.gad7_text1_weeklysummary.toString()
-            3 -> R.string.gad7_text1_weeklysummary.toString()
-            4 -> R.string.gad7_text2_weeklysummary.toString()
-            5 -> R.string.gad7_text1_weeklysummary.toString()
-            else -> R.string.gad7_text1_weeklysummary.toString()
+            0 -> getString(R.string.gad7_text1_weeklysummary)
+            1 -> getString(R.string.gad7_text1_weeklysummary)
+            2 -> getString(R.string.gad7_text1_weeklysummary)
+            3 -> getString(R.string.gad7_text1_weeklysummary)
+            4 -> getString(R.string.gad7_text2_weeklysummary)
+            5 -> getString(R.string.gad7_text1_weeklysummary)
+            else -> getString(R.string.gad7_text1_weeklysummary)
         }
     }
     fun getWeekPageTitle(week: Week): String {

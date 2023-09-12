@@ -200,13 +200,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_20sdp"
             android:clickable="true"
-            android:paddingRight="@dimen/_190sdp"
+            android:visibility="gone"
+            android:paddingRight="@dimen/_10sdp"
             android:src="@drawable/ic_question_back" />
 
         <ImageView
             android:id="@+id/nextQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_250sdp"
             android:clickable="true"
             android:src="@drawable/ic_next_question" />
     </LinearLayout>

@@ -173,7 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:text="General Check"
+                android:text="@string/general_check"
                 android:textSize="@dimen/_15sdp"
                 android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head"/>
