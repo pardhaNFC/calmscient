@@ -30,6 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:text="@string/body_moment_exercies"
             android:textColor="@color/black_head"
             android:textSize="@dimen/_18sdp"
