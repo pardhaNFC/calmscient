@@ -25,7 +25,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.calmscient.Interface.CellClickListener
 import com.calmscient.R
 import com.calmscient.adapters.JournalEntryAdapter
-import com.calmscient.data.remote.JournalEntryDataClass
+import com.calmscient.di.remote.JournalEntryDataClass
 import com.calmscient.databinding.CalendarDayLayoutBinding
 import com.calmscient.databinding.FragmentJournalEntryBinding
 import com.calmscient.utils.getColorCompat
@@ -328,14 +328,14 @@ class JournalEntryFragment : Fragment(), CellClickListener {
 
     private fun getCardDescription(cardPosition: Int): String {
         return when (cardPosition) {
-            1 -> "Had a reasonably good day today"
-            2 -> "Starting to get a little depressed"
-            3 -> "Had a lot of stress at work today. Didn’t really sleep that well."
-            4 -> "Trying to work through a little bit of anxiety. My boss is pressuring me to give a presentation before a large crowd."
-            5 -> "I wish I could talk with a good friend about how I feel."
-            6 -> "I did terrible on my presentation. My self esteem has dropped."
-            7 -> "I have been having  bad thoughts today.I need help."
-            8 -> "I am very depressed today. I am barely able to get out of bed."
+            1 -> getString(R.string.journal_entry_card1_text)
+            2 -> getString(R.string.journal_entry_card2_text)
+            3 -> getString(R.string.journal_entry_card3_text)
+            4 -> getString(R.string.journal_entry_card4_text)
+            5 -> getString(R.string.journal_entry_card5_text)
+            6 -> getString(R.string.journal_entry_card6_text)
+            7 -> getString(R.string.journal_entry_card7_text)
+            8 -> getString(R.string.journal_entry_card8_text)
             else -> "Default Description"
         }
     }

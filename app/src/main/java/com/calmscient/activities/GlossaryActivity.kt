@@ -11,30 +11,29 @@
 
 package com.calmscient.activities
 
-import android.R
-import android.content.Intent
+import com.calmscient.R
 import android.os.Bundle
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.calmscient.adapters.GlossaryAdapter
-import com.calmscient.data.remote.Task
+import com.calmscient.di.remote.Task
 import com.calmscient.databinding.LayoutGlossaryBinding
 
 
 class GlossaryActivity : AppCompat() {
     lateinit var binding: LayoutGlossaryBinding
     private val glossaryAdapter = GlossaryAdapter(mutableListOf())
-    private val tasks = listOf(
+    private val taskWorkData = mutableListOf<Task>()
+    /*private val tasks = listOf(
         Task(
             "A",
-            "Adrenaline",
+            getString(com.calmscient.R.string.adrenaline),
             "Adrenaline, also known as epinephrine, is a hormone and neurotransmitter produced by the adrenal glands, which are located on top of the kidneys. It plays a crucial role in the body's response to stress and triggering the \"Fight or Flight\" response.\n" +
                     "When a person perceives a threat or danger, whether real or perceived, the brain signals the adrenal glands to release adrenaline into the bloodstream. Adrenaline acts as a chemical messenger, rapidly preparing the body for action to deal with the perceived threat.\n"
         ),
         Task(
             "A",
-            "Anxiety attack",
+            getString(com.calmscient.R.string.anxiety_attack),
             "The term \"anxiety attack\" is not officially recognized in the diagnostic manuals; DSM-5 (Diagnostic and Statistical Manual of Mental Disorders). It is often used to describe a period of heightened anxiety or a more prolonged state of anxiousness. Anxiety attacks may involve similar symptoms to panic attacks, such as excessive worry, restlessness, irritability, muscle tension, difficulty concentrating, and sleep disturbances."
         ),
         Task(
@@ -139,7 +138,7 @@ class GlossaryActivity : AppCompat() {
             "Window of tolerance",
             "Window of tolerance refers to a concept in psychology that describes an optimal range of arousal or activation that allows an individual to effectively cope with and respond to stressors and emotions. The window of tolerance suggests that individuals have a range in which they can handle and adapt to stressors without becoming overwhelmed or shutting down. When a person is within their window of tolerance, they are able to think clearly, make rational decisions, and engage in effective problem-solving. They are also able to experience and regulate emotions in a balanced and healthy manner."
         ),
-    )
+    )*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -153,6 +152,7 @@ class GlossaryActivity : AppCompat() {
         binding.backIcon.setOnClickListener {
             onBackPressed()
         }
+        addTaskData()
         /*lv.setOnGroupExpandListener(OnGroupExpandListener { groupPosition ->
             if (lastExpandedPosition !== -1
                 && groupPosition != lastExpandedPosition
@@ -163,13 +163,129 @@ class GlossaryActivity : AppCompat() {
         })*/
     }
 
+    private fun addTaskData() {
+        val tasks = listOf(
+            Task(
+                "A",
+                getString(R.string.adrenaline),
+                getString(R.string.adrenaline_summary)
+            ),
+            Task(
+                "A",
+                getString(R.string.anxiety_attack),
+                getString(R.string.anxiety_attack_summary)
+            ),
+            Task(
+                "A",
+                getString(R.string.automatic_thinking),
+                getString(R.string.automatic_thinking_summary)
+            ),
+
+            Task(
+                "B",
+                getString(R.string.biased_thinking),
+                getString(R.string.biased_thinking_summary)
+            ),
+            Task(
+                "C",
+                getString(R.string.cortisol),
+                getString(R.string.cortisol_summary)
+            ),
+            Task(
+                "C",
+                getString(R.string.cognitive_distortion),
+                getString(R.string.cognitive_distortion_summary),
+            ),
+            Task(
+                "C",
+                getString(R.string.competency),
+                getString(R.string.competency_summary)
+            ),
+            Task(
+                "C",
+                getString(R.string.compulsive_behaviour),
+                getString(R.string.compulsive_behaviour_summary),
+            ),
+            Task(
+                "D",
+                getString(R.string.Dependency),
+                getString(R.string.Dependency_summary)
+            ),
+            Task(
+                "G",
+                getString(R.string.gaba),
+                getString(R.string.gaba_summary)
+            ),
+            Task(
+                "H",
+                getString(R.string.hyperventilation),
+                getString(R.string.hyper_summary),
+            ),
+            Task(
+                "M",
+                getString(R.string.mindful_breathing),
+                getString(R.string.mindful_breathing_summary)
+            ),
+            Task(
+                "O",
+                getString(R.string.obsession),
+                getString(R.string.obsession_summary)
+            ),
+            Task(
+                "P",
+                getString(R.string.panic_attack),
+                getString(R.string.panic_attack_summary),
+            ),
+            Task(
+                "P",
+                getString(R.string.progressive_muscle_relaxation),
+                getString(R.string.progressive_muscle_relaxation_summary),
+
+                ),
+            Task(
+                "R",
+                getString(R.string.resilience),
+                getString(R.string.resilience_summary),
+            ),
+            Task(
+                "R",
+                getString(R.string.rigid_thinking),
+                getString(R.string.rigid_thinking_summary),
+            ),
+            Task(
+                "R",
+                getString(R.string.rumination),
+                getString(R.string.rumination_summary),
+            ),
+            Task(
+                "S",
+                getString(R.string.selfcompassion),
+                getString(R.string.selfcompassion_summary),
+            ),
+            Task(
+                "S",
+                getString(R.string.serotonin),
+                getString(R.string.serotonin_summary),
+            ),
+            Task(
+                "W",
+                getString(R.string.window_of_tolerance),
+                getString(R.string.window_of_tolerance_summary),
+            ),
+        )
+        taskWorkData.addAll(tasks)
+        glossaryAdapter.notifyDataSetChanged()
+    }
+
     override fun onBackPressed() {
         finish()
     }
+
     override fun onStart() {
         binding.glossaryRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.glossaryRecyclerView.adapter = glossaryAdapter
-        glossaryAdapter.updateTasks(tasks)
+        glossaryAdapter.updateTasks(taskWorkData)
+        addTaskData()
         super.onStart()
     }
 }

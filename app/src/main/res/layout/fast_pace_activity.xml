@@ -199,7 +199,7 @@
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
-                        android:text="You’re looking for only 15 minutes a day to methodically progress through the Calmscient courses…"
+                        android:text="@string/fastPace_screen2_1"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_13sdp" />
 
@@ -209,7 +209,7 @@
                         android:layout_margin="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:fontFamily="@font/lexendregular"
-                        android:text="1. When is a good time for you?"
+                        android:text="@string/fastPace_screen2_2"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_16sdp" />
 
@@ -241,7 +241,7 @@
                                 android:layout_margin="@dimen/_10sdp"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/lexendmedium"
-                                android:text="When"
+                                android:text="@string/fastPace_screen2_when"
                                 android:textColor="@color/black_head"
                                 android:textSize="@dimen/_14sdp" />
 
@@ -266,7 +266,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="Morning"
+                                    android:text="@string/morning"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -282,7 +282,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="Lunch Time"
+                                    android:text="@string/fastPace_screen2_lunch"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -297,7 +297,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="Evening"
+                                    android:text="@string/evening"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -336,7 +336,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/_10sdp"
                                 android:fontFamily="@font/lexendmedium"
-                                android:text="Where"
+                                android:text="@string/fastPace_screen2_when"
                                 android:textColor="@color/black_head"
                                 android:textSize="@dimen/_14sdp" />
 
@@ -362,7 +362,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="My bedroom"
+                                    android:text="@string/fastPace_screen2_bedroom"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -377,7 +377,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="On my couch (with no TV!)"
+                                    android:text="@string/fastPace_screen2_couch"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -406,7 +406,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="In my car"
+                                    android:text="@string/fastPace_screen2_couch"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -421,7 +421,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/lexendregular"
                                     android:gravity="center"
-                                    android:text="On the patio"
+                                    android:text="@string/fastPace_screen2_patio"
                                     android:textAlignment="center"
                                     android:textColor="@color/black_head"
                                     android:textSize="@dimen/_12sdp" />
@@ -482,7 +482,7 @@
                         android:background="@drawable/button_border"
                         android:clickable="true"
                         android:fontFamily="@font/lexendregular"
-                        android:text="Submit"
+                        android:text="@string/submit"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -588,7 +588,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/lexendregular"
                         android:gravity="center"
-                        android:text="set_reminder"
+                        android:text="@string/set_reminder"
                         android:textColor="@color/purple_100"
                         android:textSize="@dimen/_12sdp" />
 

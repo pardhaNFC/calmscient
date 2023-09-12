@@ -101,8 +101,8 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
             binding.mornHoursSleepCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
             binding.tvMeds.text = getString(R.string.take_medic_morning)
-            binding.idSwitch.labelOn = "YES"
-            binding.idSwitch.labelOff = "NO"
+            binding.idSwitch.labelOn = getString(R.string.yes)
+            binding.idSwitch.labelOff = getString(R.string.no)
             binding.layoutButton.visibility = View.VISIBLE
             //binding.cardDailyJournel.visibility = View.VISIBLE
         } else if (greeting == getString(R.string.good_afternoon)) {

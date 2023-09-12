@@ -435,7 +435,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summarymood_by_date_range">Mood by Date Range</string>
     <string name="summarymood_daysateachmood">Days at each Mood</string>
     <string name="summarysleep_by_date_range">Sleep by Date Range</string>
-    <string name="Summaryprogresswork_total_cousrework">Total Course Work Complete</string>Trabajo total del curso completado
+    <string name="Summaryprogresswork_total_cousrework">Total Course Work Complete</string>
     <string name="summaryprogress_course">Course</string>
     <string name="summaryprogress_completed">% Completed</string>
     <string name="summaryprogress_braving_Anxiety">Braving Anxiety</string>
@@ -448,10 +448,10 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="coming_soon">Coming Soon!</string>
 
     <string name="paracetamol">Paracetamol</string>
-    <string name="anti_biotic">Antibiótico</string>
-    <string name="vitamin">Vitamina</string>
-    <string name="two_tablets">2 Tabletas</string>
-    <string name="one_tablet">1 Tableta</string>
+    <string name="anti_biotic">Anti-biotic</string>
+    <string name="vitamin">Vitamin</string>
+    <string name="two_tablets">2 Tablets</string>
+    <string name="one_tablet">1 Tablet</string>
     <string name="update_time_alarm">Update Time &amp; Alarm</string>
     <string name="phq_heading">PHQ-9</string>
     <string name="gad_heading">GAD-7</string>
@@ -480,6 +480,137 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="delete_message">Are you sure you want to delete Journal entry data?</string>
     <string name="journal_entry_edit">Journal entry edit</string>
     <string name="edit">Edit</string>
+    <!--Glossary-->
+    <string name="adrenaline">Adrenaline</string>
+    <string name="adrenaline_summary">Adrenaline, also known as epinephrine, is a hormone and neurotransmitter produced by the adrenal glands, which are located on top of the kidneys. It plays a crucial role in the body\'s response to stress and triggering the \"Fight or Flight\" response.\n
+                        When a person perceives a threat or danger, whether real or perceived, the brain signals the adrenal glands to release adrenaline into the bloodstream. Adrenaline acts as a chemical messenger, rapidly preparing the body for action to deal with the perceived threat.</string>
+    <string name="anxiety_attack">Anxiety attack</string>
+    <string name="anxiety_attack_summary">The term "anxiety attack" is not officially recognized in the diagnostic manuals; DSM-5 (Diagnostic and Statistical Manual of Mental Disorders). It is often used to describe a period of heightened anxiety or a more prolonged state of anxiousness. Anxiety attacks may involve similar symptoms to panic attacks, such as excessive worry, restlessness, irritability, muscle tension, difficulty concentrating, and sleep disturbances.</string>
+    <string name="automatic_thinking">Automatic thinking</string>
+    <string name="automatic_thinking_summary">Automatic thinking refers to the rapid, involuntary, and often unconscious thoughts that arise in response to situations or triggers. These thoughts are automatic in the sense that they occur automatically and effortlessly, without deliberate intention or conscious awareness.\n
+                        Automatic thinking patterns can be influenced by past experiences, beliefs, and cognitive biases. They can be helpful or unhelpful, depending on their content and impact on emotions and behaviors. In the context of anxiety, automatic thoughts often lean towards negative and worrisome interpretations of situations, leading to increased anxiety and distress.</string>
+    <string name="biased_thinking">Biased thinking</string>
+    <string name="biased_thinking_summary">Biased thinking refers to cognitive distortions or errors in thinking that influence how we perceive and interpret information. It involves a tendency to view situations, events, or ourselves in a distorted or exaggerated manner, often leading to negative or irrational thoughts. Biased thinking can contribute to the development and maintenance of anxiety and other mental health issues.</string>
+    <string name="cortisol">Cortisol</string>
+    <string name="cortisol_summary">Cortisol is a hormone produced by the adrenal glands in response to stress. It is often referred to as the primary stress hormone. When the brain detects a threat or perceives stress, it signals the release of cortisol into the bloodstream. While cortisol is important for short-term stress adaptation, chronic or prolonged elevation of cortisol levels due to chronic stress can cause a loss of neurons in the prefrontal cortex and hippocampus. It also decreases serotonin, the “happy hormone”, which makes a person feel angry, depressed, and feel physical pain more quickly and easily.</string>
+    <string name="cognitive_distortion">Cognitive Distortion</string>
+    <string name="cognitive_distortion_summary">Cognitive distortions, also known as biased thinking or irrational thoughts, refer to exaggerated or irrational patterns of thinking that can contribute to emotional distress and maintain anxiety or other mental health issues.\n
+                        Cognitive distortions are common and can affect the way individuals interpret and perceive events, situations, and themselves. They often involve biases or errors in reasoning that lead to distorted or negative thinking patterns.</string>
+    <string name="competency">Competency</string>
+    <string name="competency_summary">Competency refers to the ability to perform or execute a task or set of skills effectively. It is often associated with knowledge, expertise, and proficiency in a particular area. Competency is measured by evaluating our aptitude, qualifications, or capabilities in a specific situation.</string>
+    <string name="compulsive_behaviour">Compulsive behaviour</string>
+    <string name="compulsive_behaviour_summary">Compulsive behavior refers to repetitive and often ritualistic actions or thoughts that individuals feel driven to perform in response to anxiety or distressing thoughts. These behaviors are typically aimed at reducing anxiety, preventing perceived harm, or maintaining a sense of control. However, they are often excessive, time-consuming, and interfere with daily functioning.</string>
+    <string name="Dependency">Dependency</string>
+    <string name="Dependency_summary">Dependency refers to reliance on substances such as alcohol, drugs, or tobacco as a means of coping with anxiety or seeking quick relief or escape from anxiety or help coping with overwhelming emotions. However, substance dependency can be problematic and can lead to long-term physical, psychological, and social consequences.</string>
+    <string name="gaba">GABA</string>
+    <string name="gaba_summary">GABA stands for gamma-aminobutyric acid, which is a neurotransmitter in the brain. It is known as the brains natural anti-anxiety drug because it has inhibitory effects on the central nervous system, helping to reduce neuronal excitability and promote relaxation.GABA acts as a calming agent, counteracting the effects of excitatory neurotransmitters in the brain.\n
+                        By increasing GABA levels through exercise, individuals may experience a reduction in anxiety symptoms, improved mood, and an overall sense of well-being. This is one of the ways in which exercise can have a positive impact on mental health and help alleviate anxiety.</string>
+    <string name="hyperventilation">Hyperventilation</string>
+    <string name="hyper_summary">Hyperventilation refers to a rapid or excessive increase in breathing rate and volume. It involves taking in more oxygen and exhaling more carbon dioxide than the body needs. Hyperventilation can be a physiological response to anxiety or stress and is often associated with panic attacks.</string>
+    <string name="mindful_breathing">Mindful breathing</string>
+    <string name="mindful_breathing_summary">Mindful breathing is a technique that involves intentionally bringing awareness to the breath and focusing on the present moment. It is a fundamental practice in mindfulness and can help promote relaxation, reduce stress, and cultivate a sense of calm.</string>
+    <string name="obsession">Obsession</string>
+    <string name="obsession_summary">Obsession refers to intrusive, persistent, and unwanted thoughts, images, or urges that repeatedly and uncontrollably enter a persons mind. Individuals with obsessions often recognize that their thoughts are irrational or excessive, but they find it challenging to dismiss or ignore them. As a result, they may engage in various repetitive behaviors or mental rituals, known as compulsions, to alleviate the anxiety caused by the obsessions temporarily.</string>
+    <string name="panic_attack">Panic attack</string>
+    <string name="panic_attack_summary">A panic attack is a sudden and intense episode of fear or discomfort that typically peaks within minutes. It is a manifestation of anxiety and can occur without any apparent trigger or in response to a specific situation or object. Panic attacks can be accompanied by various physical and psychological symptoms, such as a rapid heart rate, chest pain, shortness of breath, dizziness, trembling, sweating, a sense of impending doom or loss of control, and feelings of unreality or detachment.</string>
+    <string name="progressive_muscle_relaxation">Progressive muscle relaxation</string>
+    <string name="progressive_muscle_relaxation_summary">Progressive muscle relaxation (PMR) is a relaxation technique that involves systematically tensing and relaxing different muscle groups in the body. It aims to reduce muscle tension, release physical stress, and promote overall relaxation.</string>
+    <string name="resilience">Resilience</string>
+    <string name="resilience_summary">Resilience refers to the capacity to bounce back, adapt, and recover in the face of adversity, challenges, or stressful situations. It is the ability to withstand, cope with, and effectively navigate through difficulties, setbacks, or hardships. Resilience involves psychological, emotional, and sometimes physical strength to maintain a positive mindset and being able to function despite adversity.\n
+                        Resilience is not about avoiding or eliminating challenges, but rather about how we respond and recover from them. It involves skills such as emotional regulation, problem-solving, flexibility, optimism, and social support. Resilience helps us persevere, learn from setbacks, and grow stronger as a result.</string>
+    <string name="rigid_thinking">Rigid thinking</string>
+    <string name="rigid_thinking_summary">Rigid thinking refers to inflexible and narrow patterns of thinking that limit flexibility, adaptability, and open-mindedness. People with rigid thinking tend to adhere strictly to their beliefs, rules, and expectations without considering alternative perspectives or possibilities. They may have a black-and-white view of the world, categorizing things as either all good or all bad, with little room for shades of gray or ambiguity.\n
+                        When faced with challenges or uncertainties, individuals with rigid thinking may become overwhelmed or stuck, as they struggle to adapt and find alternative solutions. Rigid thinking can also lead to self-criticism, perfectionism, and a constant need for control, which can perpetuate anxiety and stress.</string>
+    <string name="rumination">Rumination</string>
+    <string name="rumination_summary">The tendency to continuously and excessively think about negative events, situations, or problems. It involves repetitively focusing on ones distressing thoughts, often with a lack of resolution or progress toward a solution.\n
+                        Rumination is a common cognitive process associated with anxiety and other mental health conditions. When someone ruminates, they may replay past events, worry about future outcomes, or excessively analyze their thoughts and feelings. This prolonged dwelling on negative thoughts can contribute to heightened anxiety and a sense of feeling stuck or trapped in ones worries</string>
+    <string name="selfcompassion">Self-compassion</string>
+    <string name="selfcompassion_summary">Self-compassion refers to the practice of treating oneself with kindness, understanding, and non-judgment during times of difficulty, failure, or suffering. It involves extending the same warmth, care, and support to oneself that one would offer to a close friend or loved one who is struggling.</string>
+    <string name="serotonin">Serotonin</string>
+    <string name="serotonin_summary">Serotonin is a neurotransmitter, a chemical messenger in the brain and nervous system that plays a crucial role in regulating various physiological and psychological processes. It is often referred to as the "feel-good" neurotransmitter because of its association with mood regulation and feelings of well-being.</string>
+    <string name="window_of_tolerance">Window of tolerance</string>
+    <string name="window_of_tolerance_summary">Window of tolerance refers to a concept in psychology that describes an optimal range of arousal or activation that allows an individual to effectively cope with and respond to stressors and emotions. The window of tolerance suggests that individuals have a range in which they can handle and adapt to stressors without becoming overwhelmed or shutting down. When a person is within their window of tolerance, they are able to think clearly, make rational decisions, and engage in effective problem-solving. They are also able to experience and regulate emotions in a balanced and healthy manner.</string>
+    <!--Journal Entry Screen -->
+    <string name="update">Update</string>
+    <string name="success">Success</string>
+    <string name="success_message">Journal entry data is updated successfully.</string>
+    <string name="journal_entry_card1_text">Had a reasonably good day today</string>
+    <string name="journal_entry_card2_text">Starting to get a little depressed</string>
+    <string name="journal_entry_card3_text">Had a lot of stress at work today. Didn’t really sleep that well.</string>
+    <string name="journal_entry_card4_text">Trying to work through a little bit of anxiety. My boss is pressuring me to give a presentation before a large crowd.</string>
+    <string name="journal_entry_card5_text">I wish I could talk with a good friend about how I feel.</string>
+    <string name="journal_entry_card6_text">I did terrible on my presentation. My self esteem has dropped.</string>
+    <string name="journal_entry_card7_text">I have been having  bad thoughts today.I need help.</string>
+    <string name="journal_entry_card8_text">I am very depressed today. I am barely able to get out of bed.</string>
+    <!--Privacy-->
+    <string name="privacy">Privacy</string>
+    <string name="journaling">Journaling</string>
+    <string name="course_work">Course Work</string>
+    <string name="mood">Mood</string>
+    <string name="sleep">Sleep</string>
+    <string name="medication">Medication</string>
+    <string name="phq_9_screening">PHQ-9 Screening</string>
+    <string name="gad_7_screening">GAD-7 Screening</string>
+    <string name="audit_screening">Audit Screening</string>
+    <string name="dast_screening">DAST Screening</string>
+    <string name="fastPace_screen2_1">You’re looking for only 15 minutes a day to methodically progress through the Calmscient courses…</string>
+    <string name="fastPace_screen2_2">1. When is a good time for you?</string>
+    <string name="fastPace_screen2_when">When</string>
+    <string name="fastPace_screen2_lunch">Lunch Time</string>
+    <string name="fastPace_screen2_bedroom">My bedroom</string>
+    <string name="fastPace_screen2_couch">On my couch (with no TV!)</string>
+    <string name="fastPace_screen2_car">In my car</string>
+    <string name="fastPace_screen2_patio">On the patio</string>
+    <string name="fastPace_screen2_where">Where</string>
+    <!--    weekly summary_Progress_Work-->
+    <string name="progresswork_expand1_text1">VIDEO-How Anxiety Works</string>
+    <string name="progresswork_expand1_text2">READING- The Anxiety Loop</string>
+    <string name="progresswork_expand1_text3">LISTEN-Signs &amp; Symptoms</string>
+    <string name="progresswork_expand1_text4">PLAN-Your Anxiety Goals</string>
 
+    <string name="progresswork_expand2_text1">VIDEO-How Anxiety Affects Sleep</string>
+    <string name="progresswork_expand2_text2">READING-The Dangers of Insomnia</string>
+    <string name="progresswork_expand2_text3">LISTEN-Signs &amp; Symptoms</string>
+    <string name="progresswork_expand2_text4">PLAN-Your Sleep Goals</string>
 
+    <string name="progresswork_expand3_text1">VIDEO-How a Support Network Helps</string>
+    <string name="progresswork_expand3_text2">READING-The Dangers of Insomnia</string>
+    <string name="progresswork_expand3_text3">LISTEN-Signs &amp; Symptoms</string>
+    <string name="progresswork_expand3_text4">PLAN-Your Sleep Goals</string>
+
+    <!--    <sleepCard>-->
+    <string name="hours_sleep1">+1 Hours sleep needed</string>
+    <string name="hours_sleep2">+3 Hours sleep needed</string>
+    <string name="hours_sleep3">+1 Hours sleep needed</string>
+    <string name="hours_sleep4">+4 Hours sleep needed</string>
+    <string name="hours_sleep5">+6 Hours sleep needed</string>
+    <string name="hours_sleep6">+1 Hours sleep needed</string>
+    <string name="eight_hours">8 Hours</string>
+    <string name="six_hours">6 Hours</string>
+    <string name="five_hours">5 Hours</string>
+    <string name="three_hours">3 Hours</string>
+
+    <!--    MoodCard-->
+    <string name="moodCard_text1">Good</string>
+    <string name="moodCard_text2">Could be better</string>
+    <string name="moodCard_text3">Fair</string>
+    <string name="moodCard_text4">Bad</string>
+    <string name="moodCard_text5">Could be better</string>
+    <string name="moodCard_text6">Could be bette</string>
+
+    <!--    PHQ9 Card-->
+    <string name="phq9_text1_weeklysummary">Moderately severe depression</string>
+    <string name="phq9_text2_weeklysummary">Moderately depression</string>
+
+    <!--   GAD Card-->
+    <string name="gad7_text1_weeklysummary">Moderate anxiety</string>
+    <string name="gad7_text2_weeklysummary">Mild anxiety</string>
+
+    <!--DAST Card-->
+    <string name="dast7_text1_weeklysummary">Severe level: Referral</string>
+    <string name="dast7_text2_weeklysummary">Moderate level problems related to drug abuse</string>
+
+    <!--AUDIT Card-->
+    <string name="audit_text1_weeklysummary">Moderate-severe alcohol use disorder</string>
+    <string name="audit_text2_weeklysummary">Harmful alcohol consumption</string>
 </resources>

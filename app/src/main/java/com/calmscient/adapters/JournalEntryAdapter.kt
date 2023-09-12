@@ -26,7 +26,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.data.remote.JournalEntryDataClass
+import com.calmscient.di.remote.JournalEntryDataClass
 import com.calmscient.utils.AnimationUtils
 import com.google.android.material.bottomsheet.BottomSheetDialog
 class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDataClass>) :

@@ -9,7 +9,7 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient.data.remote
+package com.calmscient.di.remote
 
 interface NetworkService {
 }

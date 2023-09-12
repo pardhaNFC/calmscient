@@ -413,7 +413,44 @@
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:background="@color/viewbackgroundcolor" />
+        <RelativeLayout
+            android:id="@+id/privacyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:minHeight="40dp"
+            android:contextClickable="true">
 
+            <ImageView
+                android:id="@+id/imageViewPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_privacy" />
+
+            <TextView
+                android:id="@+id/tv_Privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_vertical"
+                android:fontFamily="@font/lexendregular"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textAllCaps="false"
+                android:text="@string/privacy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/viewbackgroundcolor" />
         <RelativeLayout
             android:id="@+id/Notifications"
             android:layout_width="match_parent"

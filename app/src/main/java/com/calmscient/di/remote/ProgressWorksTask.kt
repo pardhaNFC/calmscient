@@ -11,4 +11,6 @@
 
 package com.calmscient.data.remote
 
-data class Task(val alphabet:String,val taskName: String, val taskDescription: String)
+
+data class ProgressWorksTask(val titleView:String?,val titlePercentage: String?, val textView1: String?,
+                              val textView2: String?,val textView3: String?,val textView4: String?,val textView5: String?,val textView6: String?,val textView7: String?,val textView8: String?)

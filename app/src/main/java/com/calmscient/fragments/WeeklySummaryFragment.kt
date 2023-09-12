@@ -35,32 +35,25 @@ class WeeklySummaryFragment : Fragment() {
     ): View? {
         binding = WeeklysummaryBinding.inflate(inflater, container, false)
         binding.moodCard.setOnClickListener {
-            //loadFragment(SummaryofMoodFragment())
-            snackBar()
+            loadFragment(SummaryofMoodFragment())
         }
         binding.summarySleepCard.setOnClickListener {
-            //loadFragment(SummaryofSleepFragment())
-            snackBar()
+            loadFragment(SummaryofSleepFragment())
         }
         binding.summaryPHQCard.setOnClickListener {
-            //loadFragment(SummaryofPHQ9Fragment())
-            snackBar()
+            loadFragment(SummaryofPHQ9Fragment())
         }
         binding.summaryOfGADCard.setOnClickListener {
-            //loadFragment(SummaryofGAD7Fragment())
-            snackBar()
+            loadFragment(SummaryofGAD7Fragment())
         }
         binding.summaryOfAuditCard.setOnClickListener {
-            //loadFragment(SummaryOfAUDITFragment())
-            snackBar()
+            loadFragment(SummaryOfAUDITFragment())
         }
         binding.summaryOfDASTCard.setOnClickListener {
-            //loadFragment(SummaryOfDASTFragment())
-            snackBar()
+            loadFragment(SummaryOfDASTFragment())
         }
         binding.summaryOfProgressWorkCard.setOnClickListener {
-            //loadFragment(ProgressOnCourseWorkFragment())
-            snackBar()
+            loadFragment(ProgressOnCourseWorkFragment())
         }
         binding.backIcon.setOnClickListener {
             loadFragment(HomeFragment())

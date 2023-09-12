@@ -21,8 +21,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.adapters.AnxietyIntroductionAdapter
 import com.calmscient.adapters.CardItemDiffCallback
-import com.calmscient.data.remote.CardItemDataClass
-import com.calmscient.data.remote.ItemType
+import com.calmscient.di.remote.CardItemDataClass
+import com.calmscient.di.remote.ItemType
 
 import com.calmscient.databinding.ActivityManageAnxietyBinding
 import com.calmscient.fragments.DiscoveryFragment

@@ -32,8 +32,8 @@ import com.calmscient.activities.FastPaceActivity
 import com.calmscient.activities.MakeAPlanActivity
 import com.calmscient.activities.PlayerActivity
 import com.calmscient.activities.RecognizeActivity
-import com.calmscient.data.remote.ItemType
-import com.calmscient.data.remote.CardItemDataClass
+import com.calmscient.di.remote.ItemType
+import com.calmscient.di.remote.CardItemDataClass
 
 class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback<CardItemDataClass>) :
     ListAdapter<CardItemDataClass, AnxietyIntroductionAdapter.ViewHolder>(diffCallback) {

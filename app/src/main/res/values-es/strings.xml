@@ -422,12 +422,12 @@
     <string name="braving_sleep">Sueño y ansiedad</string>
     <string name="braving_building">Soporte de construcción</string>
     <string name="coming_soon">¡Muy pronto!</string>
-
     <string name="paracetamol">Paracetamol</string>
-    <string name="anti_biotic">Anti-biotic</string>
-    <string name="vitamin">Vitamin</string>
-    <string name="two_tablets">2 Tablets</string>
-    <string name="one_tablet">1 Tablet</string>
+    <string name="anti_biotic">Antibiótico</string>
+    <string name="vitamin">Vitamina</string>
+    <string name="two_tablets">2 Tabletas</string>
+    <string name="one_tablet">1 Tableta</string>
+
     <string name="update_time_alarm">Actualizar hora y alarmaa</string>
     <string name="phq_heading">PHQ-9</string>
     <string name="gad_heading">GAD-7</string>
@@ -453,14 +453,99 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
 ¡Lo más importante es hacerlo! ¿Tienes algo de tiempo hoy para empezar?
 </string>
     <!--    Mindful walking exercise>-->
-    <string name="mindfulwalking_exercises_text1">What are the benefits of mindful walking?</string>¿Cuáles son los beneficios de caminar conscientemente?
+    <string name="mindfulwalking_exercises_text1">¿Cuáles son los beneficios de caminar conscientemente?</string>
     <string name="mindfulwalking_exercises_text2">1.Reducción del estrés: Caminar conscientemente puede ser una forma eficaz de reducir el estrés y promover la relajación. Al dirigir su atención a las sensaciones físicas de caminar, crea un descanso mental de los factores estresantes cotidianos. Esta práctica activa la respuesta de relajación en tu cuerpo, lo que lleva a un estado mental más tranquilo.\n
     2.Regulación emocional: Caminar conscientemente puede ayudar a regular sus emociones. Al observar tus pensamientos y emociones a medida que surgen durante la práctica, desarrollas una actitud sin prejuicios y de aceptación hacia ellos. Esto puede mejorar la resiliencia emocional y brindarle una mayor sensación de control sobre sus reacciones ante situaciones desafiantes.</string>
     <!--Journal Entry Screen -->
-    <string name="journal_entry">Journal entry</string>
-    <string name="no_entries">No Entries</string>
+    <string name="journal_entry">Entrada de diario</string>
+    <string name="no_entries">No entrar</string>
     <string name="delete">Borrar</string>
     <string name="delete_message">¿Está seguro de que desea eliminar los datos de las entradas del diario?</string>
     <string name="journal_entry_edit">Edición de entrada de diario</string>
     <string name="edit">Diario</string>
+    <!--Glossary-->
+    <string name="adrenaline">Adrenalina</string>
+    <string name="adrenaline_summary">La adrenalina, también conocida como epinefrina, es una hormona y un neurotransmisor producido por las glándulas suprarrenales, que se encuentran encima de los riñones. Desempeña un papel crucial en la respuesta del cuerpo al estrés y desencadena la respuesta de "lucha o huida".\n
+                        Cuando una persona percibe una amenaza o peligro, ya sea real o percibido, el cerebro envía señales a las glándulas suprarrenales para que liberen adrenalina en el torrente sanguíneo. La adrenalina actúa como mensajero químico, preparando rápidamente al cuerpo para actuar y hacer frente a la amenaza percibida.</string>
+    <string name="anxiety_attack">Ataque de ansiedad</string>
+    <string name="anxiety_attack_summary">El término "ataque de ansiedad" no está reconocido oficialmente en los manuales de diagnóstico; DSM-5 (Manual Diagnóstico y Estadístico de los Trastornos Mentales). A menudo se utiliza para describir un período de mayor ansiedad o un estado de ansiedad más prolongado. Los ataques de ansiedad pueden implicar síntomas similares a los ataques de pánico, como preocupación excesiva, inquietud, irritabilidad, tensión muscular, dificultad para concentrarse y alteraciones del sueño.</string>
+    <string name="automatic_thinking">Pensamiento automático</string>
+    <string name="automatic_thinking_summary">El pensamiento automático se refiere a los pensamientos rápidos, involuntarios y, a menudo, inconscientes que surgen en respuesta a situaciones o desencadenantes. Estos pensamientos son automáticos en el sentido de que ocurren automáticamente y sin esfuerzo, sin intención deliberada ni conciencia consciente.\n
+                        Los patrones de pensamiento automático pueden verse influenciados por experiencias, creencias y sesgos cognitivos pasados. Pueden ser útiles o inútiles, según su contenido y su impacto en las emociones y los comportamientos. En el contexto de la ansiedad, los pensamientos automáticos a menudo se inclinan hacia interpretaciones negativas y preocupantes de las situaciones, lo que lleva a un aumento de la ansiedad y la angustia.</string>
+    <string name="biased_thinking">Pensamiento sesgado</string>
+    <string name="biased_thinking_summary">El pensamiento sesgado se refiere a distorsiones cognitivas o errores en el pensamiento que influyen en cómo percibimos e interpretamos la información. Implica una tendencia a ver situaciones, acontecimientos o a nosotros mismos de manera distorsionada o exagerada, lo que a menudo conduce a pensamientos negativos o irracionales. El pensamiento sesgado puede contribuir al desarrollo y mantenimiento de la ansiedad y otros problemas de salud mental.</string>
+    <string name="cortisol">Cortisol</string>
+    <string name="cortisol_summary">El cortisol es una hormona producida por las glándulas suprarrenales en respuesta al estrés. A menudo se la conoce como la principal hormona del estrés. Cuando el cerebro detecta una amenaza o percibe estrés, indica la liberación de cortisol al torrente sanguíneo. Si bien el cortisol es importante para la adaptación al estrés a corto plazo, la elevación crónica o prolongada de los niveles de cortisol debido al estrés crónico puede causar una pérdida de neuronas en la corteza prefrontal y el hipocampo. También disminuye la serotonina, la “hormona de la felicidad”, que hace que una persona se sienta enojada, deprimida y sienta dolor físico con mayor rapidez y facilidad.</string>
+    <string name="cognitive_distortion">Distorsión cognitiva</string>
+    <string name="cognitive_distortion_summary">Las distorsiones cognitivas, también conocidas como pensamiento sesgado o pensamientos irracionales, se refieren a patrones de pensamiento exagerados o irracionales que pueden contribuir a la angustia emocional y mantener la ansiedad u otros problemas de salud mental.\n
+                        Las distorsiones cognitivas son comunes y pueden afectar la forma en que las personas interpretan y perciben eventos, situaciones y a sí mismos. A menudo implican sesgos o errores en el razonamiento que conducen a patrones de pensamiento distorsionados o negativos.</string>
+    <string name="competency">Competencia</string>
+    <string name="competency_summary">La competencia se refiere a la capacidad de realizar o ejecutar una tarea o un conjunto de habilidades de manera efectiva. A menudo se asocia con el conocimiento, la experiencia y la competencia en un área en particular. La competencia se mide evaluando nuestras aptitudes, calificaciones o capacidades en una situación específica.</string>
+    <string name="compulsive_behaviour">Comportamiento compulsivo</string>
+    <string name="compulsive_behaviour_summary">El comportamiento compulsivo se refiere a acciones o pensamientos repetitivos y a menudo rituales que los individuos se sienten impulsados ​​a realizar en respuesta a la ansiedad o pensamientos angustiosos. Estos comportamientos suelen tener como objetivo reducir la ansiedad, prevenir el daño percibido o mantener una sensación de control. Sin embargo, suelen ser excesivos, consumir mucho tiempo e interferir con el funcionamiento diario.</string>
+    <string name="Dependency">Dependencia</string>
+    <string name="Dependency_summary">La dependencia se refiere a la dependencia de sustancias como el alcohol, las drogas o el tabaco como medio para afrontar la ansiedad o buscar un alivio rápido o escapar de la ansiedad o ayuda para afrontar emociones abrumadoras. Sin embargo, la dependencia de sustancias puede ser problemática y tener consecuencias físicas, psicológicas y sociales a largo plazo.</string>
+    <string name="gaba">GABA</string>
+    <string name="gaba_summary">GABA significa ácido gamma-aminobutírico, que es un neurotransmisor en el cerebro. Se le conoce como el ansiolítico natural del cerebro porque tiene efectos inhibidores sobre el sistema nervioso central, ayudando a reducir la excitabilidad neuronal y promover la relajación. GABA actúa como un agente calmante, contrarrestando los efectos de los neurotransmisores excitadores en el cerebro.\n
+                        Al aumentar los niveles de GABA mediante el ejercicio, las personas pueden experimentar una reducción de los síntomas de ansiedad, un mejor estado de ánimo y una sensación general de bienestar. Esta es una de las formas en que el ejercicio puede tener un impacto positivo en la salud mental y ayudar a aliviar la ansiedad. .\norte</string>
+    <string name="hyperventilation">Hiperventilación</string>
+    <string name="hyper_summary">La hiperventilación se refiere a un aumento rápido o excesivo de la frecuencia y el volumen de la respiración. Implica tomar más oxígeno y exhalar más dióxido de carbono del que el cuerpo necesita. La hiperventilación puede ser una respuesta fisiológica a la ansiedad o el estrés y, a menudo, se asocia con ataques de pánico.</string>
+    <string name="mindful_breathing">Respiración consciente</string>
+    <string name="mindful_breathing_summary">La respiración consciente es una técnica que implica concienciar intencionalmente de la respiración y concentrarse en el momento presente. Es una práctica fundamental del mindfulness y puede ayudar a promover la relajación, reducir el estrés y cultivar una sensación de calma.</string>
+    <string name="obsession">Obsesión</string>
+    <string name="obsession_summary">La obsesión se refiere a pensamientos, imágenes o impulsos intrusivos, persistentes y no deseados que entran repetida e incontrolablemente en la mente de una persona. Las personas con obsesiones a menudo reconocen que sus pensamientos son irracionales o excesivos, pero les resulta difícil descartarlos o ignorarlos. Como resultado, pueden participar en diversos comportamientos repetitivos o rituales mentales, conocidos como compulsiones, para aliviar temporalmente la ansiedad causada por las obsesiones.</string>
+    <string name="panic_attack">Ataque de pánico</string>
+    <string name="panic_attack_summary">Un ataque de pánico es un episodio repentino e intenso de miedo o malestar que normalmente alcanza su punto máximo en cuestión de minutos. Es una manifestación de ansiedad y puede ocurrir sin ningún desencadenante aparente o en respuesta a una situación u objeto específico. Los ataques de pánico pueden ir acompañados de diversos síntomas físicos y psicológicos, como frecuencia cardíaca rápida, dolor en el pecho, dificultad para respirar, mareos, temblores, sudoración, sensación de muerte inminente o pérdida de control y sentimientos de irrealidad o desapego.</string>
+    <string name="progressive_muscle_relaxation">Relajación muscular progresiva</string>
+    <string name="progressive_muscle_relaxation_summary">La relajación muscular progresiva (PMR) es una técnica de relajación que consiste en tensar y relajar sistemáticamente diferentes grupos de músculos del cuerpo. Su objetivo es reducir la tensión muscular, liberar el estrés físico y promover la relajación general.</string>
+    <string name="resilience">Resiliencia</string>
+    <string name="resilience_summary">La resiliencia se refiere a la capacidad de recuperarse, adaptarse y recuperarse ante la adversidad, los desafíos o las situaciones estresantes. Es la capacidad de resistir, afrontar y navegar eficazmente a través de dificultades, reveses o penurias. La resiliencia implica fuerza psicológica, emocional y, a veces, física para mantener una mentalidad positiva y poder funcionar a pesar de la adversidad.\n
+                        La resiliencia no se trata de evitar o eliminar desafíos, sino más bien de cómo respondemos y nos recuperamos de ellos. Implica habilidades como la regulación emocional, la resolución de problemas, la flexibilidad, el optimismo y el apoyo social. La resiliencia nos ayuda a perseverar, aprender de los reveses, y, como resultado, hacerse más fuerte.</string>
+    <string name="rigid_thinking">pensamiento rígido</string>
+    <string name="rigid_thinking_summary">El pensamiento rígido se refiere a patrones de pensamiento inflexibles y estrechos que limitan la flexibilidad, la adaptabilidad y la apertura de mente. Las personas con pensamiento rígido tienden a adherirse estrictamente a sus creencias, reglas y expectativas sin considerar perspectivas o posibilidades alternativas. Es posible que tengan una visión del mundo en blanco y negro, categorizando las cosas como totalmente buenas o totalmente malas, con poco espacio para matices grises o ambigüedades.\n
+                        Cuando se enfrentan a desafíos o incertidumbres, las personas con pensamiento rígido pueden sentirse abrumadas o estancadas, mientras luchan por adaptarse y encontrar soluciones alternativas. El pensamiento rígido también puede conducir a la autocrítica, al perfeccionismo y a una necesidad constante de control, lo que puede perpetuar la ansiedad y el estrés.</string>
+    <string name="rumination">Rumia</string>
+    <string name="rumination_summary">La tendencia a pensar continua y excesivamente en eventos, situaciones o problemas negativos. Implica concentrarse repetidamente en los pensamientos angustiosos, a menudo con falta de resolución o progreso hacia una solución.\n
+                        La rumia es un proceso cognitivo común asociado con la ansiedad y otras condiciones de salud mental. Cuando alguien reflexiona, puede repetir eventos pasados, preocuparse por resultados futuros o analizar excesivamente sus pensamientos y sentimientos. Esta perseverancia prolongada en pensamientos negativos puede contribuir a una mayor ansiedad y una sensación de sentirse estancado o atrapado en las propias preocupaciones.</string>
+    <string name="selfcompassion">Autocompasión</string>
+    <string name="selfcompassion_summary">La autocompasión se refiere a la práctica de tratarse a uno mismo con amabilidad, comprensión y sin juzgarse en momentos de dificultad, fracaso o sufrimiento. Implica brindarse a uno mismo la misma calidez, cuidado y apoyo que le ofrecería a un amigo cercano o a un ser querido que está pasando apuros.</string>
+    <string name="serotonin">serotonina</string>
+    <string name="serotonin_summary">La serotonina es un neurotransmisor, un mensajero químico en el cerebro y el sistema nervioso que desempeña un papel crucial en la regulación de diversos procesos fisiológicos y psicológicos. A menudo se le conoce como el neurotransmisor del "bienestar" debido a su asociación con la regulación del estado de ánimo y la sensación de bienestar.</string>
+    <string name="window_of_tolerance">Ventana de tolerancia</string>
+    <string name="window_of_tolerance_summary">La ventana de tolerancia se refiere a un concepto en psicología que describe un rango óptimo de excitación o activación que permite a un individuo afrontar y responder eficazmente a los factores estresantes y las emociones. La ventana de tolerancia sugiere que los individuos tienen un rango en el que pueden manejar y adaptarse a los factores estresantes sin sentirse abrumados ni cerrarse. Cuando una persona está dentro de su ventana de tolerancia, puede pensar con claridad, tomar decisiones racionales y participar en la resolución de problemas de forma eficaz. También son capaces de experimentar y regular las emociones de forma equilibrada y saludable.</string>
+    <!--Journal Entry Screen -->
+    <string name="update">Actualizar</string>
+    <string name="success">Éxito</string>
+    <string name="success_message">Los datos del asiento de diario se actualizan correctamente.</string>
+    <string name="journal_entry_card1_text">Tuve un día razonablemente bueno hoy.</string>
+    <string name="journal_entry_card2_text">Empezando a deprimirme un poco</string>
+    <string name="journal_entry_card3_text">Tuve mucho estrés en el trabajo hoy. Realmente no dormí tan bien.</string>
+    <string name="journal_entry_card4_text">Tratando de superar un poco de ansiedad. Mi jefe me presiona para que haga una presentación ante una gran multitud.</string>
+    <string name="journal_entry_card5_text">Ojalá pudiera hablar con un buen amigo sobre cómo me siento.</string>
+    <string name="journal_entry_card6_text">Lo hice terrible en mi presentación. Mi autoestima ha bajado.</string>
+    <string name="journal_entry_card7_text">He tenido malos pensamientos hoy. Necesito ayuda.</string>
+    <string name="journal_entry_card8_text">Estoy muy deprimido hoy. Apenas puedo levantarme de la cama.</string>
+    <!--Privacy-->
+    <string name="privacy">Privacidad</string>
+    <string name="journaling">Llevar un diario</string>
+    <string name="course_work">Trabajo del curso</string>
+    <string name="mood">Ánimo</string>
+    <string name="sleep">Dormir</string>
+    <string name="medication">Medicamento</string>
+    <string name="phq_9_screening">Detección PHQ-9</string>
+    <string name="gad_7_screening">Detección GAD-7</string>
+    <string name="audit_screening">AUDITORÍA Detección</string>
+    <string name="dast_screening">Detección DAST</string>
+
+    <string name="fastPace_screen2_1">Estás buscando solo 15 minutos al día para progresar metódicamente en los cursos de Calmscient...</string>
+    <string name="fastPace_screen2_2">1. ¿Cuándo es un buen momento para ti?</string>
+    <string name="fastPace_screen2_when">Cuando</string>
+    <string name="fastPace_screen2_lunch">la hora del almuerzo</string>
+    <string name="fastPace_screen2_bedroom">Mi dormitorio</string>
+    <string name="fastPace_screen2_couch">Dónde</string>
+    <string name="fastPace_screen2_car">In my car</string>
+    <string name="fastPace_screen2_patio">En el patio</string>
+    <string name="fastPace_screen2_where">Dónde</string>
+
+
 </resources>

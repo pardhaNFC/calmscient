@@ -115,6 +115,7 @@ class AudioPlayerActivity : AppCompat(), MediaPlayer.OnPreparedListener,
                     isMediaPlayerInitialized = true
                 } else {
                     if (mediaPlayer.isPlaying) {
+                        binding.audioProgressBar.visibility = View.GONE
                         mediaPlayer.pause()
                         playButton.setImageResource(R.drawable.ic_audio_play)
                     } else {

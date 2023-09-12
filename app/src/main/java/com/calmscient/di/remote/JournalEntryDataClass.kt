@@ -9,7 +9,7 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient.data.remote
+package com.calmscient.di.remote
 
 data class JournalEntryDataClass(
     val date: String, // Date in the format "MM/dd/yyyy"

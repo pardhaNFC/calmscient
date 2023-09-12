@@ -39,8 +39,8 @@ import com.calmscient.adapters.AnxietyIntroductionAdapter
 import com.calmscient.adapters.CardItemDiffCallback
 import com.calmscient.adapters.VideoAdapter
 import com.calmscient.adapters.VideoItem
-import com.calmscient.data.remote.CardItemDataClass
-import com.calmscient.data.remote.ItemType
+import com.calmscient.di.remote.CardItemDataClass
+import com.calmscient.di.remote.ItemType
 
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

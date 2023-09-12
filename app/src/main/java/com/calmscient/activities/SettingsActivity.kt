@@ -57,8 +57,13 @@ class SettingsActivity : AppCompat(), View.OnClickListener {
             binding.tvSpanish.setTextColor(this.getColorCompat(R.color.white))
             binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
             binding.tvAsl.setTextColor(this.getColorCompat(R.color.black))
-
-        } else if (savePrefData.getEngLanguageState() == false && savePrefData.getSpanLanguageState() == false) {
+        } else if (savePrefData.getAslLanguageState() == true) {
+            updateBackground(currentClickedLayoutId, R.id.ASL)
+            binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
+            binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
+            binding.tvAsl.setTextColor(this.getColorCompat(R.color.white))
+        } else if (savePrefData.getEngLanguageState() == false && savePrefData.getSpanLanguageState() == false &&
+            savePrefData.getEngLanguageState() == false) {
             updateBackground(currentClickedLayoutId, R.id.English)
             binding.tvEnglish.setTextColor(this.getColorCompat(R.color.white))
             binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
@@ -85,6 +90,14 @@ class SettingsActivity : AppCompat(), View.OnClickListener {
 
         binding.backIcon.setOnClickListener {
             onBackPressed()
+        }
+        binding.privacyLayout.setOnClickListener {
+            val privacyActivity = PrivacyBottomSheet()
+            privacyActivity.show(this.supportFragmentManager, privacyActivity.tag)
+        }
+        binding.logout.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -164,6 +177,8 @@ class SettingsActivity : AppCompat(), View.OnClickListener {
                 binding.tvEnglish.setTextColor(this.getColorCompat(R.color.black))
                 binding.tvSpanish.setTextColor(this.getColorCompat(R.color.black))
                 savePrefData.setAslLanguageState(true)
+                savePrefData.setSpanLanguageState(false)
+                savePrefData.setEngLanguageState(false)
                 //loader()
                 finish()
                 startActivity(intent)

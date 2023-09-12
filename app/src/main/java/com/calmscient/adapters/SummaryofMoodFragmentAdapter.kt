@@ -10,42 +10,47 @@
  */
 
 package com.calmscient.adapters
-
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+
 import android.widget.TextView
+
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.di.remote.Task
+import com.calmscient.data.remote.WeeklySummaryMoodTask
 import com.calmscient.utils.AnimationUtils
+class SummaryofMoodFragmentAdapter (private val allTasks: MutableList<WeeklySummaryMoodTask>) :
+    RecyclerView.Adapter<SummaryofMoodFragmentAdapter.TaskViewHolder>() {
 
-class GlossaryAdapter(private val allTasks: MutableList<Task>) :
-    RecyclerView.Adapter<GlossaryAdapter.TaskViewHolder>() {
     // Store a reference to the currently expanded card position
     private var expandedCardPosition: Int = -1
-    fun updateTasks(newTasks: List<Task>) {
+
+    fun updateTasks(newTasks: List<WeeklySummaryMoodTask>) {
         allTasks.clear()
         allTasks.addAll(newTasks)
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): SummaryofMoodFragmentAdapter.TaskViewHolder {
         val itemView =
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.layout_item_glossary, parent, false)
+                .inflate(R.layout.weeklysummary_item_card_screens, parent, false)
         return TaskViewHolder(itemView)
-
     }
 
-    override fun onBindViewHolder(
-        holder: TaskViewHolder,
-        @SuppressLint("RecyclerView") position: Int
-    ) {
+    override fun onBindViewHolder(holder: SummaryofMoodFragmentAdapter.TaskViewHolder, @SuppressLint(
+        "RecyclerView"
+    ) position: Int) {
         holder.bind(allTasks[position])
+
         // Set an OnClickListener to handle expanding/collapsing
         holder.titleCardView.setOnClickListener {
             if (expandedCardPosition == position) {
@@ -79,33 +84,42 @@ class GlossaryAdapter(private val allTasks: MutableList<Task>) :
 
     inner class TaskViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
+        // ...
+        // (Other code remains the same)
         private var isExpanded = false
-        val alphabetTextView: TextView = itemView.findViewById(R.id.tv_alphabet)
-        val titleCardView: ConstraintLayout = itemView.findViewById(R.id.taskTitleLayout)
-        val titleTextView: TextView = itemView.findViewById(R.id.tv_title)
-        val descriptionTextView: TextView = itemView.findViewById(R.id.tv_Description)
+        val dateView1: TextView = itemView.findViewById(R.id.dateView1)
         val dropDownImage: ImageView = itemView.findViewById(R.id.dropdownButton)
-        fun bind(task: Task) {
-            alphabetTextView.text = task.alphabet
-            titleTextView.text = task.taskName
-            descriptionTextView.text = task.taskDescription
+        val textView2: TextView = itemView.findViewById(R.id.textView2)
+        val textView1: TextView = itemView.findViewById(R.id.textView1)
+        val titleCardView: ConstraintLayout = itemView.findViewById(R.id.taskTitleLayout)
+
+        init {
+            // Set the initial visibility to GONE
+            textView1.visibility = View.GONE
+            textView2.visibility = View.GONE
+            // Set an OnClickListener to handle expanding/collapsing
             titleCardView.setOnClickListener {
-                if (isExpanded) collapse() else expand()
+                if (isExpanded)
+                    collapse()
+                else
+                    expand()
             }
-            //All tasks should be collapsed by default
+            // All tasks should be collapsed by default
             collapse()
         }
-
+        fun bind(task: WeeklySummaryMoodTask) {
+            dateView1.text = task.dateView1
+            textView1.text = task.textView1
+            textView2.text = task.textView2
+        }
         fun expand() {
-            AnimationUtils.expand(descriptionTextView)
+            AnimationUtils.expand(textView1)
             dropDownImage.setImageResource(R.drawable.minus)
-            isExpanded = true
         }
 
         fun collapse() {
-            AnimationUtils.collapse(descriptionTextView)
+            AnimationUtils.collapse(textView1)
             dropDownImage.setImageResource(R.drawable.ic_expand)
-            isExpanded = false
         }
     }
 }

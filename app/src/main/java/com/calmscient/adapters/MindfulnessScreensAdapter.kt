@@ -17,7 +17,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.data.remote.MindfulnessExercisesTextDataClass
+import com.calmscient.di.remote.MindfulnessExercisesTextDataClass
 class MindfulnessScreensAdapter (private val items: List<MindfulnessExercisesTextDataClass>) :
     RecyclerView.Adapter<MindfulnessScreensAdapter.MindfullnessQuestionsViewHolder>() {
 

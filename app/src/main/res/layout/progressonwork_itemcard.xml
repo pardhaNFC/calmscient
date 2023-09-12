@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_5sdp"
+    app:cardUseCompatPadding="true">
+
+    <!-- The constraint layout for the whole card -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+        <!-- This is like the top "bar" of the card that is visible at all times. -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/taskTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+                <TextView
+                    android:id="@+id/titleView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/lexendregular"
+                    android:textColor="@color/black_head"
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:id="@+id/titlePercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="100%"
+                    android:layout_marginStart="@dimen/_200sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:layout_centerVertical="true"/>
+                   <ImageView
+                    android:id="@+id/dropdownButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="0dp"
+                    android:src="@drawable/ic_expand" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- The task description is only visible when the card is expanded. -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taskTitleLayout"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taskTitleLayout"
+            app:layout_constraintVertical_bias="0.0" />
+        <!-- The task description is only visible when the card is expanded. -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0"/>
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Task Description"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black_head"
+            android:fontFamily="@font/lexendlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

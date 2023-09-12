@@ -9,7 +9,7 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient.data.remote
+package com.calmscient.di.remote
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.Cache

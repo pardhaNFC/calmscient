@@ -1,14 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  -->
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -22,7 +12,7 @@
         android:id="@+id/dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Success"
+        android:text="@string/success"
         android:textAlignment="center"
         android:layout_gravity="center"
         android:fontFamily="@font/lexendmedium"
@@ -42,7 +32,7 @@
         android:id="@+id/dialog_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Journal entry data is updated successfully."
+        android:text="@string/success_message"
         android:layout_gravity="center"
         android:gravity="center"
         android:fontFamily="@font/lexendlight"

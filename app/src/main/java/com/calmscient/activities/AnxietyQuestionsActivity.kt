@@ -23,7 +23,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.adapters.AnxietyQuestionsAdapter
-import com.calmscient.data.remote.CardItemDataClass
+import com.calmscient.di.remote.CardItemDataClass
 import com.calmscient.databinding.ManageanxietyQuestionsBinding
 import com.calmscient.fragments.DiscoveryFragment
 

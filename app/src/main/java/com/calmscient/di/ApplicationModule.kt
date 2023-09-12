@@ -14,8 +14,8 @@ package com.calmscient.di
 import android.content.Context
 import android.content.SharedPreferences
 import com.calmscient.R
-import com.calmscient.data.remote.NetworkService
-import com.calmscient.data.remote.Networking
+import com.calmscient.di.remote.NetworkService
+import com.calmscient.di.remote.Networking
 import com.calmscient.utils.network.NetworkHelper
 import dagger.Module
 import dagger.Provides

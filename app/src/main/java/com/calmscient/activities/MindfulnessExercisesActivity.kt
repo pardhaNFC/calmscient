@@ -14,6 +14,7 @@ package com.calmscient.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -23,7 +24,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.adapters.MindfulnessScreensAdapter
-import com.calmscient.data.remote.MindfulnessExercisesTextDataClass
+import com.calmscient.di.remote.MindfulnessExercisesTextDataClass
 import com.calmscient.databinding.MindfulnesscreensBinding
 import com.calmscient.fragments.DiscoveryFragment
 class MindfulnessExercisesActivity : AppCompat() {
@@ -45,7 +46,7 @@ class MindfulnessExercisesActivity : AppCompat() {
         )
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.optionsRecyclerView1)
-
+        binding.previousQuestion.visibility = View.GONE
         // Find your ProgressBar by its ID
         progressBar = findViewById<ProgressBar>(R.id.progressBar2)
 
@@ -88,7 +89,7 @@ class MindfulnessExercisesActivity : AppCompat() {
         anxietyText.add(
             MindfulnessExercisesTextDataClass(
                 null,
-                "Have you ever caught your mind wandering or daydreaming while you are in the middle of a familiar or repetitive task? You could be walking, working or even driving your car, and your mind is miles away, perhaps fantasizing about going on vacation, thinking about your to-do list, or worrying about some upcoming event. \n In either case, you are not focusing on the current situation and not in touch with the ‘here and now’.\n This mode of operation is often referred to as automatic pilot.",
+                getString(R.string.screen1),
                 null,
                 null,
                 R.drawable.ic_mind_1
@@ -98,7 +99,7 @@ class MindfulnessExercisesActivity : AppCompat() {
         anxietyText.add(
             MindfulnessExercisesTextDataClass(
                 null,
-                "Mindfulness is the opposite of automatic pilot. It is about experiencing the world that is firmly in the ‘here and now’. This is referred to as the being mode. It liberates you from automatic and unhelpful thoughts and responses.",
+                getString(R.string.screen2),
                 null,
                 null,
                 R.drawable.ic_mind_2
@@ -184,6 +185,22 @@ class MindfulnessExercisesActivity : AppCompat() {
         // Update the current step indicator to active
         if (currentQuestionIndex >= 0 && currentQuestionIndex < stepIndicators.size) {
             stepIndicators[currentQuestionIndex].setImageResource(R.drawable.ic_activetickmark)
+        }
+        if(currentQuestionIndex == 0)
+        {
+            binding.previousQuestion.visibility = View.GONE
+        }
+        else
+        {
+            binding.previousQuestion.visibility = View.VISIBLE
+        }
+        if(currentQuestionIndex == stepIndicators.size-1)
+        {
+            binding.nextQuestion.visibility = View.GONE
+        }
+        else
+        {
+            binding.nextQuestion.visibility = View.VISIBLE
         }
     }
 
