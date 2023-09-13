@@ -18,9 +18,9 @@
             android:id="@+id/Settings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp">
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/addMedicationsDetailsBackIcon"
@@ -38,7 +38,6 @@
                 android:layout_gravity="top|center_horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="70dp"
-                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/lexendmedium"
                 android:text="@string/add_medications"
                 android:textColor="@color/black_head"
@@ -1555,6 +1554,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
                 android:layout_weight="1"
+                android:fontFamily="@font/lexendregular"
                 android:background="@drawable/button_border"
                 android:gravity="center"
                 android:text="@string/save"

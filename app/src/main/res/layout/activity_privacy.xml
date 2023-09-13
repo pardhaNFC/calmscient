@@ -1,82 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-<?xml version="1.0" encoding="utf-8"?>&lt;!&ndash;
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  &ndash;&gt;
-
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    &lt;!&ndash; CardView Layout &ndash;&gt;
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bottom_sheet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bottomsheet_border"
-        android:paddingBottom="10dp"
-        app:behavior_peekHeight="56dp"
-        tools:context=".activities.PrivacyActivity">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            &lt;!&ndash; Title TextView &ndash;&gt;
-            <TextView
-                android:id="@+id/titlePrivacy"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/lexendlight"
-                android:gravity="center"
-                android:text="Title"
-                android:textAlignment="center"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_16sdp" />
-
-            &lt;!&ndash; Close Button &ndash;&gt;
-            <ImageView
-                android:id="@+id/closePrivacy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="@dimen/_50sdp"
-                android:background="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                android:contentDescription="Close"
-                android:padding="@dimen/_10sdp"
-                android:src="@drawable/ic_recognize_close" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    &lt;!&ndash; RecyclerView &ndash;&gt;
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPrivacy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/bottom_sheet"
-        android:layout_marginHorizontal="@dimen/_8sdp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
--->
-
-<!-- Your other XML code and namespaces here -->
-
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -113,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="16dp"
-                    android:fontFamily="@font/lexendlight"
+                    android:fontFamily="@font/lexendmedium"
                     android:text="Title"
                     android:layout_gravity="center"
                     android:textAlignment="center"

@@ -134,7 +134,7 @@ class NextAppointmentsFragment : Fragment() {
         )
         binding.exSevenCalendar.scrollToDate(LocalDate.now())
         binding.recyclerViewAppointments.layoutManager = LinearLayoutManager(requireContext())
-        cardViewAdapter = NextAppointmentsAdapter(cardViewItems)
+        cardViewAdapter = context?.let { NextAppointmentsAdapter(it,cardViewItems) }!!
         binding.recyclerViewAppointments.adapter = cardViewAdapter
 
 

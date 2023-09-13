@@ -88,6 +88,7 @@
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_toRightOf="@+id/text1"
                 android:paddingLeft="@dimen/_10sdp"
+                android:visibility="gone"
                 android:src="@drawable/ic_down_arrow" />
 
         </RelativeLayout>
@@ -413,12 +414,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10sp"
+                android:fontFamily="@font/lexendregular"
                 android:background="@drawable/button_border"
                 android:text="@string/save"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold">
+                android:textSize="18sp">
 
             </androidx.appcompat.widget.AppCompatButton>
 

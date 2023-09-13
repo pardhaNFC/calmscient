@@ -25,13 +25,13 @@
             android:gravity="center"
             android:text="@string/discovery_lower"
             android:textColor="@color/black_head"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_18sdp" />
 
         <ImageView
             android:id="@+id/ic_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/textView10"
+            android:layout_alignEnd="@+id/textView10"
             android:layout_centerVertical="true"
             android:clickable="true"
             android:src="@drawable/ic_profile" />

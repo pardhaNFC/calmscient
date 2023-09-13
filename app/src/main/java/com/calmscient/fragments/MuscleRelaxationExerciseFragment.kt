@@ -30,7 +30,7 @@ import com.calmscient.databinding.MuscleRelaxationExercisesBinding
 class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
     MediaPlayer.OnBufferingUpdateListener {
     private lateinit var binding: MuscleRelaxationExercisesBinding
-    private var isFavorite = false
+    private var isFavorite = true
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var waveformView: WaveformView
     private lateinit var playButton: ImageView

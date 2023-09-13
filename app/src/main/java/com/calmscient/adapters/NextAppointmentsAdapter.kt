@@ -10,12 +10,14 @@
  */
 
 package com.calmscient.adapters
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +27,7 @@ import com.calmscient.fragments.AppointmentdetailsFragment
 
 import com.calmscient.fragments.CardViewItems
 import com.calmscient.fragments.NextAppointmentsFragment
-class NextAppointmentsAdapter (private val items: List<CardViewItems>) :
+class NextAppointmentsAdapter (val context: Context, private val items: List<CardViewItems>) :
     RecyclerView.Adapter<NextAppointmentsAdapter.CardViewHolder>() {
     lateinit var mListener: CellClickListener
     override fun onCreateViewHolder(
@@ -58,10 +60,15 @@ class NextAppointmentsAdapter (private val items: List<CardViewItems>) :
 
         holder.nextAppointmentsCard.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                val activity = v!!.context as AppCompatActivity
-                val fragment = AppointmentdetailsFragment()
-                activity.supportFragmentManager.beginTransaction()
-                    .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
+                if(item.DoctorNameTextView == context.getString(R.string.doctor_name1)) {
+                    val activity = v!!.context as AppCompatActivity
+                    val fragment = AppointmentdetailsFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
+                }else{
+                    Toast.makeText(context, context.getString(R.string.no_appointments), Toast.LENGTH_SHORT).show()
+
+                }
             }
         })
     }

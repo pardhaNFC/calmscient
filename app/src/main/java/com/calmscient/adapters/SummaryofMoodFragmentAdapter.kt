@@ -114,11 +114,13 @@ class SummaryofMoodFragmentAdapter (private val allTasks: MutableList<WeeklySumm
         }
         fun expand() {
             AnimationUtils.expand(textView1)
+            AnimationUtils.expand(textView2)
             dropDownImage.setImageResource(R.drawable.minus)
         }
 
         fun collapse() {
             AnimationUtils.collapse(textView1)
+            AnimationUtils.collapse(textView2)
             dropDownImage.setImageResource(R.drawable.ic_expand)
         }
     }

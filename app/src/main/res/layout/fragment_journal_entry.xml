@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ~
-  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
-  ~      All source code contained herein remains the property of NFC Solutions Incorporated
-  ~      and protected by trade secret or copyright law of USA.
-  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
-  ~      there is a prior written permission or license agreement from NFC Solutions.
-  ~
-  ~      Author : @Pardha Saradhi
-  -->
-
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -95,14 +84,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:layout_gravity="top|center_horizontal"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="70dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/lexendmedium"
                     android:text="@string/journal_entry"
                     android:textColor="@color/black_head"
-                    android:textSize="@dimen/_16sdp" />
+                    android:textSize="@dimen/_18sdp" />
             </RelativeLayout>
 
         </androidx.appcompat.widget.Toolbar>
@@ -144,9 +132,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewJournalEntry"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_300sdp"
-        tools:context=".fragments.JournalEntryFragment"
-        android:layout_marginBottom="@dimen/_30sdp"/>
+        android:layout_height="@dimen/_320sdp"
+        tools:context=".fragments.JournalEntryFragment"/>
 
     <TextView
         android:id="@+id/tv_noEntry"
@@ -172,7 +159,10 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="@dimen/_14sdp" />
+        android:textSize="@dimen/_14sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"/>
 
 
 </LinearLayout>

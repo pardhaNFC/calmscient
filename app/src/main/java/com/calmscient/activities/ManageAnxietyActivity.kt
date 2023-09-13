@@ -26,8 +26,10 @@ import com.calmscient.di.remote.ItemType
 
 import com.calmscient.databinding.ActivityManageAnxietyBinding
 import com.calmscient.fragments.DiscoveryFragment
+import com.calmscient.utils.common.SavePreferences
 
 class ManageAnxietyActivity : AppCompat() {
+    lateinit var savePrefData: SavePreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityManageAnxietyBinding.inflate(layoutInflater)
@@ -36,18 +38,38 @@ class ManageAnxietyActivity : AppCompat() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        // Data for Introduction
-        val introductionItems = cardItemsIntroduction()
-        val introductionRecyclerView: RecyclerView = binding.recyclerViewIntroduction
-        val introductionAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
-        setupRecyclerView(introductionRecyclerView, introductionItems, introductionAdapter)
+        savePrefData = SavePreferences(this)
+        if(savePrefData.getAslLanguageState() == true){
+            // Data for Introduction
+            val introductionItems = cardAslItemsIntroduction()
+            val introductionRecyclerView: RecyclerView = binding.recyclerViewIntroduction
+            val introductionAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(introductionRecyclerView, introductionItems, introductionAdapter)
 
-        // Data for lesson 1
+            // Data for lesson 1
+            val lesson1Items = cardItemsAslLesson1()
+            val lesson1RecyclerView: RecyclerView = binding.recyclerViewLesson1
+            val lesson1Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson1RecyclerView, lesson1Items, lesson1Adapter)
+        }else {
+            // Data for Introduction
+            val introductionItems = cardItemsIntroduction()
+            val introductionRecyclerView: RecyclerView = binding.recyclerViewIntroduction
+            val introductionAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(introductionRecyclerView, introductionItems, introductionAdapter)
+
+            // Data for lesson 1
+            val lesson1Items = cardItemsLesson1()
+            val lesson1RecyclerView: RecyclerView = binding.recyclerViewLesson1
+            val lesson1Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson1RecyclerView, lesson1Items, lesson1Adapter)
+        }
+       /* // Data for lesson 1
         val lesson1Items = cardItemsLesson1()
         val lesson1RecyclerView: RecyclerView = binding.recyclerViewLesson1
         val lesson1Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
         setupRecyclerView(lesson1RecyclerView, lesson1Items, lesson1Adapter)
-
+*/
         // Data for lesson 2
         val lesson2Items = cardItemsLesson2()
         val lesson2RecyclerView: RecyclerView = binding.recyclerViewLesson2
@@ -148,7 +170,72 @@ class ManageAnxietyActivity : AppCompat() {
         // Add more CardItemDataClass instances as needed for section 1
         return listOf(card1, card2, card3)
     }
+    private fun cardAslItemsIntroduction(): List<CardItemDataClass> {
+        val card1 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/What+is+Anxiety_+Blue+Background(ASL).m4v",
+            contentIcons = listOf(R.drawable.ic_intro_asl),
+            description = getString(R.string.page_2_1),
+            isCompleted = true,
+            heading = getString(R.string.page_2_1),
+            summary = null,
+            dialogText = null
+        )
 
+        val card2 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.LESSON),
+            audioResourceId = null, // Replace with actual audio resource ID
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.intro_2),
+            description = getString(R.string.title_toolbar_pace),
+            isCompleted = false,
+            heading = null,
+            summary = null,
+            dialogText = null
+        )
+        val card3 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.LESSON),
+            audioResourceId = null, // Replace with actual audio resource ID
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.intro_3),
+            description = getString(R.string.let_make_plan),
+            isCompleted = false,
+            heading = null,
+            summary = null,
+            dialogText = null
+        )
+
+        // Add more CardItemDataClass instances as needed for section 1
+        return listOf(card1, card2, card3)
+    }
+    private fun cardItemsAslLesson1(): List<CardItemDataClass> {
+        val card1 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/The+Neuropsychology+of+Anxiety(ASL).m4v",
+            contentIcons = listOf(R.drawable.lesson_1_1),
+            description = getString(R.string.neuropsychology),
+            isCompleted = false,
+            heading = getString(R.string.the_neuropsychology),
+            summary = getString(R.string.lesson1_video_summary),
+            dialogText = getString(R.string.lesson1_video1_description),
+        )
+
+        val card2 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.AUDIO),
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.audio_lesson_1_2),
+            description = getString(R.string.meet_nora_austin),
+            isCompleted = false,
+            heading = null,
+            summary = null,
+            dialogText = null
+        )
+        // Add more CardItemDataClass instances as needed for Lesson1
+        return listOf(card1, card2)
+    }
     private fun cardItemsLesson1(): List<CardItemDataClass> {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),

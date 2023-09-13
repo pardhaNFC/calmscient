@@ -148,7 +148,15 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
                                 context.startActivity(intent)
-                            } else if (cardItem.heading == context.getString(R.string.make_plan_card6_text2)) {
+                            } else if (cardItem.heading == context.getString(R.string.page_2_1)) {
+                                val intent = Intent(context, PlayerActivity::class.java)
+                                intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                context.startActivity(intent)
+                            }
+                            else if (cardItem.heading == context.getString(R.string.make_plan_card6_text2)) {
                                 val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)

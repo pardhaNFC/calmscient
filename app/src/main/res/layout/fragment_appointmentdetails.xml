@@ -62,7 +62,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="@dimen/_18sdp"
                 android:layout_toRightOf="@+id/doctorlogo"
-                android:text="Dr. Hannan Johnson"
+                android:text="@string/doctor_name1"
                 android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_14sdp" />

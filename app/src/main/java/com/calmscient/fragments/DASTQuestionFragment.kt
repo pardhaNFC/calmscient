@@ -92,7 +92,7 @@ class DASTQuestionFragment : Fragment() {
 
         for (index in questionTexts.indices) {
             val questionText = questionTexts[index]
-            val options = listOf("No(0)","Yes(1)")
+            val options = listOf("No","Yes")
             questionsList.add(Question(questionText, options))
         }
 

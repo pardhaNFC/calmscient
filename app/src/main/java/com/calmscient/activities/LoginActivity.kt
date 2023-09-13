@@ -16,6 +16,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.InputType
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnFocusChangeListener
@@ -23,11 +24,15 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
+import com.calmscient.fragments.DiscoveryFragment
 import com.calmscient.fragments.UserMoodFragment
 import com.calmscient.utils.ContextUtils
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import java.util.Locale
 
 
@@ -79,7 +84,6 @@ class LoginActivity : AppCompatActivity() {
                 // Checkbox is unchecked, handle this case if needed
             }
         }
-
         binding.parentLayout.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_DOWN) {
                 // Hide the soft keyboard
@@ -92,12 +96,30 @@ class LoginActivity : AppCompatActivity() {
             }
             false
         }
+        val passwordToggle = findViewById<TextInputLayout>(R.id.Tin_password)
+        val passwordEditText = findViewById<TextInputEditText>(R.id.edit_password)
+        passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
+        passwordToggle.setEndIconOnClickListener {
+            if (passwordEditText.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
+                // Hide the password
+                passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
+            } else {
+                // Show the password
+                passwordEditText.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_open)
+            }
+        }
     }
     /*override fun attachBaseContext(newBase: Context?) {
         val localeToSwitch = Locale("es")
         val localeUpdatedContext = newBase?.let { ContextUtils.updateLocale(it, localeToSwitch) }
         super.attachBaseContext(newBase)
     }*/
+    override fun onBackPressed() {
+        finishAffinity();
+        finish()
+    }
     private fun navigateToDayScreen() {
         startActivity(Intent(this, UserMoodActivity::class.java))
     }

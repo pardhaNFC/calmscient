@@ -11,18 +11,20 @@
 
 package com.calmscient.fragments
 
+import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.calmscient.R
 import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.databinding.FragmentQuestionBinding
+
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -76,6 +78,9 @@ class QuestionFragment : Fragment() {
 
     private fun generateDummyQuestions(): List<Question> {
         val questionsList = mutableListOf<Question>()
+        /*val tab_names = resources.getStringArray(com.calmscient.R.array.screen)
+        val tabname1 = tab_names[0] //"My Tab 1"
+        Toast.makeText(requireContext(), "Coming Soon"+tabname1, Toast.LENGTH_SHORT).show()*/
 
         val questionTexts = listOf(
             "1. Little interest or pleasure in doing things",
@@ -88,8 +93,6 @@ class QuestionFragment : Fragment() {
             "8. Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
             "9. Thoughts that you would be better off dead or of hurting yourself in some way",
             "10. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
-
-
         )
 
         for (questionText in questionTexts) {
@@ -138,7 +141,7 @@ class QuestionFragment : Fragment() {
 
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.flFragment, fragment)
+        transaction.replace(com.calmscient.R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

@@ -69,10 +69,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Introduction"
+                android:text="@string/lesson_intro"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewIntroduction"
@@ -93,10 +93,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Lesson 1"
+                android:text="@string/lesson"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewLesson1"
@@ -118,10 +118,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Lesson 2"
+                android:text="@string/lesson_2"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewLesson2"
@@ -142,10 +142,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Lesson 3"
+                android:text="@string/lesson_3"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewLesson3"
@@ -166,10 +166,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Lesson 4"
+                android:text="@string/lesson_4"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewLesson4"
@@ -190,10 +190,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Lesson 5"
+                android:text="@string/lesson_5"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewLesson5"
@@ -214,10 +214,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lexendregular"
-                android:text="Lesson 6"
+                android:text="@string/lesson_6"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewLesson6"
@@ -242,7 +242,7 @@
                 android:text="Additional Resource"
                 android:textColor="#424242"
                 android:textSize="@dimen/_16sdp"
-                android:layout_marginLeft="@dimen/_10sdp"/>
+                android:layout_marginStart="@dimen/_10sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewAdditionalResource"

@@ -538,7 +538,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="audit_screening">AUDITORÍA Detección</string>
     <string name="dast_screening">Detección DAST</string>
 
-    <string name="fastPace_screen2_1">Estás buscando solo 15 minutos al día para progresar metódicamente en los cursos de Calmscient...</string>
+    <string name="fastPace_screen2_1">Estás buscando solo 15 minutos al día para progresar metódicamente en los cursos de Calmscient..</string>
     <string name="fastPace_screen2_2">1. ¿Cuándo es un buen momento para ti?</string>
     <string name="fastPace_screen2_when">Cuando</string>
     <string name="fastPace_screen2_lunch">la hora del almuerzo</string>
@@ -549,4 +549,80 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="fastPace_screen2_where">Dónde</string>
 
     <string name="general_check">General controlar</string>
+
+    <!--    weekly summary_Progress_Work-->
+    <string name="progresswork_expand1_text1">VIDEO-Cómo funciona la ansiedad</string>
+    <string name="progresswork_expand1_text2">LECTURA- El bucle de la ansiedad</string>
+    <string name="progresswork_expand1_text3">ESCUCHAR-Signos y Síntomas</string>
+    <string name="progresswork_expand1_text4">PLANIFICA-Tus objetivos de ansiedad</string>
+
+
+    <string name="progresswork_expand2_text1">VIDEO-Cómo funciona la ansiedad</string>
+    <string name="progresswork_expand2_text2">LECTURA- El bucle de la ansiedad</string>
+    <string name="progresswork_expand2_text3">ESCUCHAR-Signos y Síntomas</string>
+    <string name="progresswork_expand2_text4">PLANIFICA-Tus objetivos de sueño</string>
+
+    <string name="progresswork_expand3_text1">VIDEO-Cómo funciona la ansiedad</string>
+    <string name="progresswork_expand3_text2">LECTURA- El bucle de la ansiedad</string>
+    <string name="progresswork_expand3_text3">ESCUCHAR-Signos y Síntomas</string>
+    <string name="progresswork_expand3_text4">PLANIFICA-Tus objetivos de sueño</string>
+
+    <!--    <sleepCard>-->
+    <string name="hours_sleep1">+1 Horas de sueño necesarias</string>
+    <string name="hours_sleep2">+3 Horas de sueño necesarias</string>
+    <string name="hours_sleep3">+1 Horas de sueño necesarias</string>
+    <string name="hours_sleep4">+4 Horas de sueño necesarias</string>
+    <string name="hours_sleep5">+6 Horas de sueño necesarias</string>
+    <string name="hours_sleep6">+1 Horas de sueño necesarias</string>
+
+    <string name="eight_hours">8 Horas</string>
+    <string name="six_hours">6 Horas</string>
+    <string name="five_hours">5 Horas</string>
+    <string name="three_hours">3 Horas</string>
+
+    <!--MoodCard-->
+    <string name="moodCard_text1">Buena</string>
+    <string name="moodCard_text2">Podría ser mejor</string>
+    <string name="moodCard_text3">Fair</string>
+    <string name="moodCard_text4">Bad</string>
+    <string name="moodCard_text5">Podría ser mejor</string>
+    <string name="moodCard_text6">Podría ser mejor</string>
+    <!--    PHQ9 Card-->
+    <string name="phq9_text1_weeklysummary">Depresión moderadamente grave</string>
+    <string name="phq9_text2_weeklysummary">Moderadamente depresión</string>
+
+    <!--   GAD Card-->
+    <string name="gad7_text1_weeklysummary">Ansiedad moderada</string>
+    <string name="gad7_text2_weeklysummary">Ansiedad leve</string>
+
+    <!--DAST Card-->
+    <string name="dast7_text1_weeklysummary">Nivel severo: derivación</string>
+    <string name="dast7_text2_weeklysummary">Problemas de nivel moderado relacionados con el abuso de drogas.</string>
+
+    <!--AUDIT Card-->
+    <string name="audit_text1_weeklysummary">Moderate-severe alcohol use disorder</string>
+    <string name="audit_text2_weeklysummary">Consumo nocivo de alcohol</string>
+    <!--screenings-->
+    <string name="screenings_1">1. Poco interés o placer en hacer cosas</string>
+
+    <!--    drink Tracker-->
+    <string name="drink_tracker_text1">alcohol cero</string>
+    <string name="drink_tracker_text2">Cerveza normal (12 onzas líquidas) con aproximadamente 5 % de alcohol.</string>
+    <string name="drink_tracker_text4">Vino de mesa (5 onzas líquidas) aproximadamente 12% de alcohol</string>
+    <string name="drink_tracker_text3">Licor de malta o bebidas de malta aromatizadas como agua mineral dura (8–10 onzas líquidas) con aproximadamente 7 % de alcohol</string>
+    <string name="drink_tracker_text5">Vino fortificado (3–4 onzas líquidas) con aproximadamente 17 % de alcohol.</string>
+    <string name="drink_tracker_text6">Cordial, licor o aperitivo (2–3 fl oz) alrededor del 24% de alcohol</string>
+    <string name="drink_tracker_text7">Brandy o coñac (1–2 onzas líquidas) aproximadamente 40% de alcohol</string>
+    <string name="drink_tracker_text8">Bebidas espirituosas destiladas (1,5 onzas líquidas) aproximadamente 40% de alcohol</string>
+    <string name="total_text">Total</string>
+    <string name="count_text">contar</string>
+    <string name="drink_tracker">Rastreador de bebidas</string>
+    <string name="how_to_do">CÓMO HACERLO</string>
+    <string name="lesson_intro">Introduction</string>
+    <string name="lesson">Lección 1</string>
+    <string name="lesson_2">Lección 2</string>
+    <string name="lesson_3">Lección 3</string>
+    <string name="lesson_4">Lección 4</string>
+    <string name="lesson_5">Lección 5</string>
+    <string name="lesson_6">Lección 5</string>
 </resources>

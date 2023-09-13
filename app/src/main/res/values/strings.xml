@@ -66,7 +66,7 @@
 
     <string name="no_appointments">No Appointments</string>
     <string name="hospital_name1" translatable="false">SCD Hospital</string>
-    <string name="doctor_name1">Dr. Hannah Johnso</string>
+    <string name="doctor_name1">Dr. Hannah Johnson</string>
 
     <string name="provider">Provider</string>
     <string name="dosage">Dosage</string>
@@ -126,8 +126,8 @@
     <string name="trans_number">877-565-8860</string>
     <string name="next_appointments">Next appointments</string>
     <string name="date_time">Date &amp; Time</string>
-    <string name="contact">Date &amp; Time</string>
-    <string name="address">Date &amp; Time</string>
+    <string name="contact">Contact</string>
+    <string name="address">Address</string>
     <string name="appointments_details">Appointment Details</string>
     <string name="your_history">History</string>
     <string name="your_results">Your Results</string>
@@ -597,7 +597,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="moodCard_text3">Fair</string>
     <string name="moodCard_text4">Bad</string>
     <string name="moodCard_text5">Could be better</string>
-    <string name="moodCard_text6">Could be bette</string>
+    <string name="moodCard_text6">Could be better</string>
 
     <!--    PHQ9 Card-->
     <string name="phq9_text1_weeklysummary">Moderately severe depression</string>
@@ -616,4 +616,31 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="audit_text2_weeklysummary">Harmful alcohol consumption</string>
 
     <string name="general_check">General Check</string>
+    <!--screenings-->
+    <string name="screenings_1">1. Little interest or pleasure in doing things</string>
+    <string-array name="screen"><item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item></string-array>
+    <!--    drink Tracker-->
+    <string name="drink_tracker_text1">Zero alcohol</string>
+    <string name="drink_tracker_text2">Regular beer (12 fl oz) about 5% alcohol</string>
+    <string name="drink_tracker_text4">Table wine (5 fl oz ) about 12% alcohol</string>
+    <string name="drink_tracker_text3">Malt liquor or flavored malt beverages such as hard seltzer (8-10 fl oz) about 7% alcohol</string>
+    <string name="drink_tracker_text5">Fortified wine (3–4 fl oz) about 17% alcohol</string>
+    <string name="drink_tracker_text6">Cordial, liqueur or aperitif (2–3 fl oz) about 24% alcohol</string>
+    <string name="drink_tracker_text7">Brandy or cognac (1-2 fl oz) about 40% alcohol</string>
+    <string name="drink_tracker_text8">Distilled spirits (1.5 fl oz)about 40% alcohol</string>
+    <string name="total_text">Total</string>
+    <string name="count_text">count</string>
+    <string name="drink_tracker">Drink tracker</string>
+    <string name="how_to_do">HOW TO DO IT</string>
+    <string name="lesson_intro">Introduction</string>
+    <string name="lesson">Lesson 1</string>
+    <string name="lesson_2">Lesson 2</string>
+    <string name="lesson_3">Lesson 3</string>
+    <string name="lesson_4">Lesson 4</string>
+    <string name="lesson_5">Lesson 5</string>
+    <string name="lesson_6">Lesson 6</string>
+
 </resources>

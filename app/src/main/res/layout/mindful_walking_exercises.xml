@@ -17,14 +17,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/backIcon"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_centerVertical="true"
                 android:clickable="true"
                 android:src="@drawable/ic_back" />
@@ -67,6 +67,7 @@
                     android:layout_height="wrap_content"
                    android:padding="@dimen/_10sdp"
                     android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/lexendlight"
                     android:textColor="@color/black_head"
                     android:text="@string/mindfulwalking_exercises_text1"/>
                 <ImageView
@@ -79,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_250sdp"
-                    android:layout_marginTop="@dimen/_55sdp"
+                    android:layout_marginTop="@dimen/_60sdp"
                     android:src="@drawable/mindfullexercise_heart__image"/>
             </RelativeLayout>
                 <ProgressBar

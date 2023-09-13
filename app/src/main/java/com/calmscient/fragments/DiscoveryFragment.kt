@@ -11,6 +11,7 @@
 
 package com.calmscient.fragments
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.fragment.app.Fragment
 import android.os.Bundle
@@ -19,6 +20,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.calmscient.R
@@ -71,6 +73,25 @@ class DiscoveryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+    fun onBackPressed() {
+        showExitConfirmationDialog()
+    }
+    private fun showExitConfirmationDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(getString(R.string.plz_confirm))
+        builder.setMessage(getString(R.string.exit_app))
+        builder.setPositiveButton(getString(R.string.yes)) { _, _ ->
+            // User clicked "Yes," so exit the app
+            requireActivity().finishAffinity() // This closes the entire app
+        }
+        builder.setNegativeButton(getString(R.string.no)) { _, _ ->
+            // User clicked "No," so dismiss the dialog and stay on the current page
+        }
+        builder.setOnCancelListener(DialogInterface.OnCancelListener {
+            // User canceled the dialog, do nothing
+        })
+        builder.show()
     }
     private fun loadFragment(fragment:Fragment)
     {
