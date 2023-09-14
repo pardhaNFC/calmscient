@@ -190,7 +190,6 @@ class NextAppointmentsFragment : Fragment() {
                 item.HosptailNameTextView = null
             }
             if (item.noAppointmentsTextView.isNullOrEmpty()) {
-
                 item.noAppointmentsTextView = null
             }
         }

@@ -66,7 +66,7 @@
 
     <string name="no_appointments">No Appointments</string>
     <string name="hospital_name1" translatable="false">SCD Hospital</string>
-    <string name="doctor_name1">Dr. Hannah Johnson</string>
+    <string name="doctor_name1">Dr.Hannah Johnson</string>
 
     <string name="provider">Provider</string>
     <string name="dosage">Dosage</string>
@@ -424,6 +424,7 @@ Harvard medical school studies show that exercise diverts our minds from the ver
 We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.
 The most important thing is to do it! Do you have some time today to get started?
 </string>
+    <string name="anxiety_and_diet">Anxiety and Diet</string>
     <!--Weekly Summary-->
     <string name="summaryofmood">Summary of mood</string>
     <string name="summaryofsleep">Summary of sleep</string>
@@ -436,6 +437,10 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summarymood_by_date_range">Mood by Date Range</string>
     <string name="summarymood_daysateachmood">Days at each Mood</string>
     <string name="summarysleep_by_date_range">Sleep by Date Range</string>
+    <string name="summaryphq9_by_date_range">PHQ-9 by Date Range</string>
+    <string name="summarygad_by_date_range">GAD-7 by Date Range</string>
+    <string name="summaryaudit_by_date_range">AUDIT by Date Range</string>
+    <string name="summarydast_by_date_range">DAST by Date Range</string>
     <string name="Summaryprogresswork_total_cousrework">Total Course Work Complete</string>
     <string name="summaryprogress_course">Course</string>
     <string name="summaryprogress_completed">% Completed</string>
@@ -448,6 +453,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="braving_building">Building Support</string>
     <string name="coming_soon">Coming Soon!</string>
 
+    <string name="name">Name</string>
     <string name="paracetamol">Paracetamol</string>
     <string name="anti_biotic">Anti-biotic</string>
     <string name="vitamin">Vitamin</string>

@@ -39,7 +39,7 @@ MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
     private lateinit var playButton: ImageView
     private lateinit var handler: Handler
     private var isMediaPlayerInitialized = false
-    var isFavorite = false
+    var isFavorite = true
     private lateinit var loadingDialog: ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

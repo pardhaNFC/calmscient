@@ -46,9 +46,10 @@
     <string name="daily_journal">Diario</string>
     <string name="save">Guardar</string>
     <string name="skip">Pasar</string>
-    <string name="medications">medicamentos</string>
+    <string name="medications">Medicamentos</string>
     <string name="upcoming_medical_appointments">Próximas Citas Médicas</string>
     <string name="screenings">Proyecciones</string>
+    <string name="name">Nombre</string>
     <!--settings-->
     <string name="settings">Configuración</string>
     <string name="profile">Perfil</string>
@@ -108,7 +109,7 @@
     <string name="trevor_heading">El Proyecto Trevor</string>
     <string name="trevor_text">Llama al <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> oenvía START al <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.Una línea nacional de ayuda confidencial, gratuita y disponible las 24 horas para jóvenes LGBTQ en riesgo de suicidio.
 </string>
-    <string name="doctor_name1"><b>Dra. Hannah Johnson</b></string>
+    <string name="doctor_name1">Dr.Hannah Johnson</string>
     <string name="no_appointments">Sin citas</string>
     <string name="trans_helpline_heading">Línea de vida trans</string>
     <string name="trans_helpline_text">Marque <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> para EE. UU. y<u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> para Canadá.La línea directa de Trans Lifeline es un servicio de apoyo entre pares administrado por personas trans, para personas trans y personas que preguntan.
@@ -412,6 +413,10 @@
     <string name="summarymood_by_date_range">Estado de ánimo por rango de fechas</string>
     <string name="summarymood_daysateachmood">Días en cada estado de ánimo</string>
     <string name="summarysleep_by_date_range">Dormir por rango de fechase</string>
+    <string name="summaryphq9_by_date_range">PHQ-9 por rango de fechas</string>
+    <string name="summarygad_by_date_range">GAD-7 por rango de fechas</string>
+    <string name="summaryaudit_by_date_range">AUDITORÍA por rango de fechas</string>
+    <string name="summarydast_by_date_range">DAST por rango de fechas</string>
     <string name="Summaryprogresswork_total_cousrework">Trabajo total del curso completado</string>
     <string name="summaryprogress_course">Curso</string>
     <string name="summaryprogress_completed">% completado</string>
@@ -453,6 +458,7 @@ Los estudios de la Facultad de Medicina de Harvard muestran que el ejercicio des
 Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio que elijas depende de ti! Incluso la actividad física general, como caminar, limpiar y cuidar animales, es útil. Para maximizar sus beneficios, elija algo que disfrute para que sea más probable que lo repita. Desarrollarás resiliencia poco a poco. Trabaja de manera constante para aumentar tu frecuencia cardíaca. Hacer ejercicio con un amigo o en grupo aporta el beneficio adicional del apoyo social. Si es posible, haga ejercicio en la naturaleza o en un espacio verde. Esto reducirá aún más los niveles de estrés y ansiedad.
 ¡Lo más importante es hacerlo! ¿Tienes algo de tiempo hoy para empezar?
 </string>
+    <string name="anxiety_and_diet">Ansiedad y Dieta</string>
     <!--    Mindful walking exercise>-->
     <string name="mindfulwalking_exercises_text1">¿Cuáles son los beneficios de caminar conscientemente?</string>
     <string name="mindfulwalking_exercises_text2">1.Reducción del estrés: Caminar conscientemente puede ser una forma eficaz de reducir el estrés y promover la relajación. Al dirigir su atención a las sensaciones físicas de caminar, crea un descanso mental de los factores estresantes cotidianos. Esta práctica activa la respuesta de relajación en tu cuerpo, lo que lleva a un estado mental más tranquilo.\n

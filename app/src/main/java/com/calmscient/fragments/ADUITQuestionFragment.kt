@@ -108,7 +108,7 @@ class ADUITQuestionFragment : Fragment() {
                 listOf("1 or 2", "3 or 4", "5 or 6", "7 to 9", "10 or more")
             } else if (index == 8 || index == 9) {
                 // Custom options for the 9th and 10th question
-                listOf("No (0)", "Yes, but not in the past year (2)", "Yes, during the past year ")
+                listOf("No", "Yes, but not in the past year", "Yes, during the past year")
             } else {
                 // Default options for other questions
                 listOf("Never", "Less than monthly", "Monthly", "Weekly", "Daily or almost daily")

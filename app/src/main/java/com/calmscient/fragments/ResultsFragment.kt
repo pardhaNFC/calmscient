@@ -54,6 +54,7 @@ class ResultsFragment : Fragment() {
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(com.calmscient.R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
     }
 

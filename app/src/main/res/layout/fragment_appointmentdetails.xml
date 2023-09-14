@@ -33,8 +33,8 @@
                 android:layout_gravity="top|center_horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
-                android:paddingLeft="@dimen/_20sdp"
                 android:fontFamily="@font/lexendmedium"
+                android:paddingLeft="@dimen/_20sdp"
                 android:text="@string/appointments_details"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
@@ -62,8 +62,8 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="@dimen/_18sdp"
                 android:layout_toRightOf="@+id/doctorlogo"
-                android:text="@string/doctor_name1"
                 android:fontFamily="@font/lexendmedium"
+                android:text="@string/doctor_name1"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_14sdp" />
 
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/date_time"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/grey_light"
                 android:fontFamily="@font/lexendregular"/>
             <TextView
@@ -97,7 +97,7 @@
                 android:text="09/02/2023"
                 android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp"/>
+                android:textSize="@dimen/_14sdp"/>
         </RelativeLayout>
         <View
             android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contact"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/grey_light"
                 android:fontFamily="@font/lexendregular"/>
 
@@ -124,7 +124,7 @@
                 android:layout_marginTop="@dimen/_15sdp"
                 android:text="@string/doctor_phone_number"
                 android:textColor="@color/example_7_button"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/_14sdp"
                 android:fontFamily="@font/lexendmedium"
                 android:textStyle="bold" />
         </RelativeLayout>
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/address"
                 android:textStyle="bold"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_12sdp"
                 android:fontFamily="@font/lexendregular"
                 android:textColor="@color/grey_light"/>
             <TextView
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:text="South Fredreic Av 489"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/_14sdp"
                 android:textColor="@color/black_head"
                 android:fontFamily="@font/lexendmedium"/>
         </RelativeLayout>
@@ -166,7 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/appointments_details"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_12sdp"
                 android:fontFamily="@font/lexendregular"
                 android:textColor="@color/grey_light"/>
             <TextView
@@ -174,7 +174,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:text="@string/general_check"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/_14sdp"
                 android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head"/>
         </RelativeLayout>

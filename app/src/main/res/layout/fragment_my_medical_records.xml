@@ -66,7 +66,7 @@
             android:gravity="center"
             android:text="@string/my_medical_records"
             android:textColor="@color/black_head"
-            android:textSize="@dimen/_17sdp" />
+            android:textSize="@dimen/_16sdp" />
 
         <ImageView
             android:id="@+id/ic_profile"

@@ -486,6 +486,18 @@ class ManageAnxietyActivity : AppCompat() {
             availableContentTypes = listOf(ItemType.LESSON),
             audioResourceId = null,
             videoResourceId = null,
+            contentIcons = listOf(R.drawable.additional_diet),
+            description = getString(R.string.anxiety_and_diet),
+            isCompleted = false,
+            heading = null,
+            summary = null,
+            dialogText = null
+        )
+
+        val card4 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.LESSON),
+            audioResourceId = null,
+            videoResourceId = null,
             contentIcons = listOf(R.drawable.additional_3),
             description = getString(R.string.anxiety_alcohol),
             isCompleted = false,
@@ -494,7 +506,7 @@ class ManageAnxietyActivity : AppCompat() {
             dialogText = null
         )
 
-        val card4 = CardItemDataClass(
+        val card5 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.LESSON),
             audioResourceId = null,
             videoResourceId = null,
@@ -507,7 +519,7 @@ class ManageAnxietyActivity : AppCompat() {
         )
 
         // Add more CardItemDataClass instances as needed for Additional Resource
-        return listOf(card1, card2, card3, card4)
+        return listOf(card1, card2, card3, card4,card5)
     }
 
 

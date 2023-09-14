@@ -30,9 +30,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/deepbreathing_exercises"
+            android:layout_marginTop="@dimen/_3sdp"
             android:textColor="@color/black_head"
-            android:textSize="@dimen/_18sdp"
-            android:fontFamily="@font/lexendregular" />
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/lexendmedium" />
 
     </RelativeLayout>
     <View

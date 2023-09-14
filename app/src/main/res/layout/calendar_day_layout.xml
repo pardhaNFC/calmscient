@@ -28,7 +28,7 @@
                     android:fontFamily="@font/lexendregular"
                     android:textColor="@color/colorPrimaryDark"
                     android:textAllCaps="true"
-                    android:textSize="@dimen/_12sdp"
+                    android:textSize="@dimen/_10sdp"
                     tools:text="Mon"/>
                 <TextView
                     android:id="@+id/exSevenDateText"
@@ -37,7 +37,7 @@
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/lexendregular"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_16sdp"
+                    android:textSize="@dimen/_14sdp"
                     tools:text="24"/>
             </LinearLayout>
         </LinearLayout>

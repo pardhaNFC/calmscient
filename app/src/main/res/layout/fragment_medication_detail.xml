@@ -43,7 +43,7 @@
                 android:text="@string/medication_Details"
                 android:textAlignment="center"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_17sdp" />
+                android:textSize="@dimen/_16sdp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -67,7 +67,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:fontFamily="@font/lexendmedium"
                 android:layout_marginTop="@dimen/_18sdp"
-                android:layout_toRightOf="@+id/tablets"
+                android:layout_toEndOf="@+id/tablets"
                 android:text="Paracetamol"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
@@ -78,10 +78,10 @@
                 android:layout_below="@+id/text1"
                 android:fontFamily="@font/lexendregular"
                 android:layout_marginHorizontal="@dimen/_16sdp"
-                android:layout_toRightOf="@+id/tablets"
+                android:layout_toEndOf="@+id/tablets"
                 android:text="Dr. Samuel parker"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_11sdp" />
+                android:textSize="@dimen/_12sdp" />
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView
@@ -113,7 +113,7 @@
                         android:layout_marginHorizontal="@dimen/_20sdp"
                         android:layout_marginTop="20dp"
                         android:text="@string/dosage"
-                        android:textColor="#424242"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_11sdp" />
 
                     <TextView
@@ -450,7 +450,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:textColor="@color/black_head"
                             android:fontFamily="@font/lexendregular"
                             android:text="@string/morning"
                             android:textSize="@dimen/_12sdp" />
@@ -474,7 +475,7 @@
                             android:fontFamily="@font/lexendmedium"
                             android:text="08:00"
                             android:textColor="@color/purple_100"
-                            android:textSize="@dimen/_22sdp" />
+                            android:textSize="@dimen/_20sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -519,7 +520,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:textColor="@color/black_head"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:fontFamily="@font/lexendregular"
                             android:text="@string/alarm"
                             android:textSize="@dimen/_12sdp" />
@@ -549,7 +551,7 @@
                             android:fontFamily="@font/lexendmedium"
                             android:text="07:50"
                             android:textColor="@color/purple_100"
-                            android:textSize="@dimen/_22sdp" />
+                            android:textSize="@dimen/_20sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -605,7 +607,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:textColor="@color/black_head"
                             android:fontFamily="@font/lexendregular"
                             android:text="@string/afternoon"
                             android:textSize="@dimen/_12sdp" />
@@ -629,7 +632,7 @@
                             android:fontFamily="@font/lexendmedium"
                             android:text="01:00"
                             android:textColor="@color/purple_100"
-                            android:textSize="@dimen/_22sdp" />
+                            android:textSize="@dimen/_20sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -674,7 +677,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:textColor="@color/black_head"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:fontFamily="@font/lexendregular"
                             android:text="@string/alarm"
                             android:textSize="@dimen/_12sdp" />
@@ -704,7 +708,7 @@
                             android:fontFamily="@font/lexendmedium"
                             android:text="12:50"
                             android:textColor="@color/purple_100"
-                            android:textSize="@dimen/_22sdp" />
+                            android:textSize="@dimen/_20sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -761,7 +765,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:textColor="@color/black_head"
                             android:fontFamily="@font/lexendregular"
                             android:text="@string/evening"
                             android:textSize="@dimen/_12sdp" />
@@ -785,7 +790,7 @@
                             android:fontFamily="@font/lexendmedium"
                             android:text="08:00"
                             android:textColor="@color/purple_100"
-                            android:textSize="@dimen/_22sdp" />
+                            android:textSize="@dimen/_20sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -828,7 +833,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:textColor="@color/black_head"
+                            android:layout_marginStart="@dimen/_3sdp"
                             android:fontFamily="@font/lexendregular"
                             android:text="@string/alarm"
                             android:textSize="@dimen/_12sdp" />
@@ -858,7 +864,7 @@
                             android:fontFamily="@font/lexendmedium"
                             android:text="07:50"
                             android:textColor="@color/purple_100"
-                            android:textSize="@dimen/_22sdp" />
+                            android:textSize="@dimen/_20sdp" />
 
                         <TextView
                             android:layout_width="wrap_content"

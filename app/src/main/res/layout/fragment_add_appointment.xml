@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -38,11 +37,11 @@
                 android:layout_gravity="top|center_horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="20dp"
-                android:paddingLeft="@dimen/_20sdp"
                 android:fontFamily="@font/lexendmedium"
+                android:paddingLeft="@dimen/_20sdp"
                 android:text="@string/add_appointment"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_18sdp" />
+                android:textSize="@dimen/_16sdp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -66,7 +65,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="@dimen/_18sdp"
                 android:layout_toEndOf="@+id/doctorlogo"
-                android:fontFamily="@font/lexendsemibold"
+                android:fontFamily="@font/lexendmedium"
                 android:text="Dr. Samuel parker"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_14sdp" />
@@ -79,7 +78,7 @@
                 android:fontFamily="@font/lexendmedium"
                 android:layout_toEndOf="@+id/doctorlogo"
                 android:text="Central Park Hospital"
-                android:textColor="#000000"
+                android:textColor="@color/hospital_name"
                 android:textSize="@dimen/_10sdp" />
 
             <ImageView
@@ -92,7 +91,13 @@
                 android:src="@drawable/ic_down_arrow" />
 
         </RelativeLayout>
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +111,7 @@
                 android:text="@string/choose_date"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp"
-                android:fontFamily="@font/lexendsemibold"/>
+                android:fontFamily="@font/lexendmedium"/>
         </RelativeLayout>
 
         <com.google.android.material.appbar.AppBarLayout
@@ -217,7 +222,7 @@
                 android:text="@string/afternoon"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/lexendsemibold" />
+                android:fontFamily="@font/lexendmedium" />
         </RelativeLayout>
 
         <LinearLayout
@@ -321,7 +326,7 @@
                 android:text="@string/evening"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/lexendsemibold" />
+                android:fontFamily="@font/lexendmedium" />
         </RelativeLayout>
 
         <LinearLayout
@@ -426,3 +431,5 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
 </ScrollView>
+    </LinearLayout>
+</LinearLayout>

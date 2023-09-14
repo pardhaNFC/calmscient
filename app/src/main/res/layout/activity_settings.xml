@@ -38,11 +38,11 @@
                 android:layout_gravity="top|center_horizontal"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="70dp"
-                android:fontFamily="@font/lexendregular"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/lexendmedium"
                 android:text="@string/settings"
-                android:textColor="#000000"
-                android:textSize="@dimen/_18sdp" />
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_16sdp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -103,7 +103,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/lexendmedium"
                 android:text="@string/profile"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
@@ -139,7 +139,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/theme"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
 
             <TextView
@@ -196,7 +196,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/language"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
@@ -442,7 +442,7 @@
                 android:layout_marginTop="@dimen/_7sdp"
                 android:textAllCaps="false"
                 android:text="@string/privacy"
-                android:textColor="@color/black"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
@@ -478,7 +478,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="@string/notifications"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
@@ -515,7 +515,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:text="@string/license_key"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
         </RelativeLayout>
 
@@ -551,7 +551,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="@string/help_support"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>
@@ -588,7 +588,7 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:text="@string/logout"
-                android:textColor="#000000"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_13sdp" />
 
         </RelativeLayout>

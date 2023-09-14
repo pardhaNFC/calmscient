@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="@dimen/_50sdp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
@@ -27,12 +27,11 @@
                 android:id="@+id/img_calm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="@dimen/_60sdp"
-                android:layout_marginEnd="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
                 android:src="@drawable/clamscient_txt_splash" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <!--<com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/userNameTextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -75,8 +74,56 @@
                     android:inputType="textPassword"
                     android:text="" />
 
+            </com.google.android.material.textfield.TextInputLayout>-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userNameTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="10dp"
+
+                android:paddingTop="1dp"
+                app:boxBackgroundColor="#ffffff"
+                app:boxStrokeColor="@color/example_7_button"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:padding="@dimen/_11sdp"
+                    android:inputType="textPersonName" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Tin_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+
+                android:paddingTop="16dp"
+                app:boxBackgroundColor="#ffffff"
+                app:boxStrokeColor="@color/example_7_button"
+                app:hintTextColor="@color/black"
+                app:passwordToggleDrawable="@drawable/password_show"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"
+                    android:padding="@dimen/_10sdp"
+                    android:text=""/>
+
+            </com.google.android.material.textfield.TextInputLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -86,7 +133,7 @@
                     android:id="@+id/termsCheckBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/colorPrimaryDark"
+                    android:buttonTint="@color/purple_100"
                     android:checked="true"
                     android:textSize="@dimen/_12sdp"
                     android:fontFamily="@font/lexendlight"
@@ -128,7 +175,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/id_login_form"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginEnd="25dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">

@@ -10,6 +10,7 @@
  */
 
 package com.calmscient.adapters
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +23,7 @@ import com.calmscient.data.remote.WeeklySummaryMoodTask
 import com.calmscient.utils.AnimationUtils
 class ProgressWorksAdapter (private val allTasks: MutableList<ProgressWorksTask>) :
     RecyclerView.Adapter<ProgressWorksAdapter.TaskViewHolder>() {
+    private var expandedCardPosition: Int = -1
     fun updateTasks(newTasks: List<ProgressWorksTask>) {
         allTasks.clear()
         allTasks.addAll(newTasks)
@@ -38,8 +40,33 @@ class ProgressWorksAdapter (private val allTasks: MutableList<ProgressWorksTask>
 
     }
 
-    override fun onBindViewHolder(holder: ProgressWorksAdapter.TaskViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ProgressWorksAdapter.TaskViewHolder, @SuppressLint("RecyclerView") position: Int) {
         holder.bind(allTasks[position])
+        // Set an OnClickListener to handle expanding/collapsing
+        holder.taskTitleLayout.setOnClickListener {
+            if (expandedCardPosition == position) {
+                // Clicked on an already expanded card, so collapse it
+                holder.collapse()
+                expandedCardPosition = -1
+            } else {
+                // Clicked on a different card, collapse the previously expanded card (if any)
+                val previouslyExpandedCardPosition = expandedCardPosition
+                if (previouslyExpandedCardPosition != -1) {
+                    notifyItemChanged(previouslyExpandedCardPosition)
+                }
+
+                // Expand the clicked card
+                holder.expand()
+                expandedCardPosition = position
+            }
+        }
+
+        // Check if the current card should be expanded or collapsed based on its position
+        if (expandedCardPosition == position) {
+            holder.expand()
+        } else {
+            holder.collapse()
+        }
     }
 
     override fun getItemCount(): Int {
@@ -96,7 +123,7 @@ class ProgressWorksAdapter (private val allTasks: MutableList<ProgressWorksTask>
             textView8.text = task.textView8
         }
 
-        private fun expand() {
+        fun expand() {
             AnimationUtils.expand(textView1)
             AnimationUtils.expand(textView2)
             AnimationUtils.expand(textView3)
@@ -108,7 +135,7 @@ class ProgressWorksAdapter (private val allTasks: MutableList<ProgressWorksTask>
             dropDownImage.setImageResource(R.drawable.minus)
             isExpanded = true
         }
-        private fun collapse() {
+        fun collapse() {
             AnimationUtils.collapse(textView1)
             AnimationUtils.collapse(textView2)
             AnimationUtils.collapse(textView3)

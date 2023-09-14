@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/_40sdp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.ExerciseFragment">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,375 +26,372 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendmedium"
                 android:gravity="center"
                 android:text="@string/exercises_lower"
-                android:textColor="#424242"
+                android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="2dp"
             android:layout_marginBottom="10dp"
             android:background="@color/viewbackgroundcolor" />
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/_5sdp"
-            android:weightSum="2">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/mindfulnessExerciseCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:layout_marginStart="@dimen/_10sdp"
-                app:cardElevation="@dimen/_10sdp">
+            android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/mindfulness_exercises"
-                    android:scaleType="centerCrop" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-
-                    <TextView
-                        android:id="@+id/mindfulnesstext"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/mindfulness_exercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/muscleRelaxationCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                app:cardElevation="@dimen/_10sdp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/musclerelaxationexercise"
-                    android:scaleType="centerCrop" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/musclerelaxation_exercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/_10sdp"
-            android:weightSum="2">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/butterflyCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:layout_marginStart="@dimen/_10sdp"
-                app:cardElevation="@dimen/_10sdp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/butterflyhug_exercises"
-                    android:scaleType="centerCrop" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/butterflyhug_exercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/handOverYourHeartCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                app:cardElevation="@dimen/_10sdp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/hand_over_exercises"
-                    android:scaleType="centerCrop" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/handover_esxercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/_10sdp"
-            android:weightSum="2">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/walking_Card"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/_10sdp"
-                app:cardElevation="@dimen/_10sdp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/walking_exercises"
-                    android:scaleType="centerCrop" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/mindfulwalking_exercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/dancingExercisesCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                app:cardElevation="@dimen/_10sdp">
-
-                <ImageView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/dance_exercise"
-                    android:scaleType="centerCrop" />
-
-                <RelativeLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/dance_exercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="@dimen/_10sdp"
-            android:weightSum="2">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/runningExerciseCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                android:layout_marginStart="@dimen/_10sdp"
-                app:cardElevation="@dimen/_10sdp">
-
-                <ImageView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/runningexercise"
-                    android:scaleType="centerCrop" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-
-                    <TextView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/running_exercises"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/bodyMovementExerciseCard"
-                android:layout_width="@dimen/_150sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                app:cardCornerRadius="10dp"
-                android:layout_weight="1"
-                app:cardElevation="@dimen/_10sdp">
-
-                <ImageView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/body_moment_exercise"
-                    android:scaleType="centerCrop" />
-
-                <RelativeLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_3sdp"
-                    android:gravity="right">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:padding="@dimen/_5sdp"
-                        android:text="@string/body_moment_exercies"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/_11sdp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/deep_breathingCard"
-            android:layout_width="@dimen/_135sdp"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_weight="1"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_20sdp"
-            app:cardElevation="@dimen/_10sdp">
-
-            <ImageView
-
-                android:layout_width="@dimen/_135sdp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/deep_breathing_exercise"
-                android:scaleType="centerCrop" />
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_3sdp"
-                android:gravity="right">
+                android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_5sdp"
-                    android:fontFamily="@font/lexendregular"
-                    android:padding="@dimen/_5sdp"
-                    android:text="@string/deepbreathing_exercises"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_11sdp" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mindfulnessExerciseCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/mindfulness_exercises" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/mindfulnesstext"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/mindfulness_exercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/muscleRelaxationCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/musclerelaxationexercise" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/musclerelaxation_exercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/butterflyCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/butterflyhug_exercises" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/butterflyhug_exercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/handOverYourHeartCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/hand_over_exercises" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/handover_esxercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/walking_Card"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/walking_exercises" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/mindfulwalking_exercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dancingExercisesCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dance_exercise" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/dance_exercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/runningExerciseCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/runningexercise" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/running_exercises"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/bodyMovementExerciseCard"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="@dimen/_10sdp">
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/body_moment_exercise" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lexendregular"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/body_moment_exercies"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_11sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/deep_breathingCard"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="@dimen/_10sdp">
+
+                    <ImageView
+
+                        android:layout_width="@dimen/_135sdp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/deep_breathing_exercise" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/deepbreathing_exercises"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11sdp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

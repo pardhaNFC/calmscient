@@ -11,6 +11,7 @@
 
 package com.calmscient.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Handler
 import android.util.Log
@@ -29,9 +30,11 @@ import com.calmscient.R
 import com.calmscient.di.remote.JournalEntryDataClass
 import com.calmscient.utils.AnimationUtils
 import com.google.android.material.bottomsheet.BottomSheetDialog
-class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDataClass>) :
+
+class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryDataClass>) :
     RecyclerView.Adapter<JournalEntryAdapter.CardViewHolder>() {
 
+    private var expandedCardPosition: Int = -1
     private lateinit var imageViewThreeDotsIcon: ImageView
 
     /* class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -48,30 +51,90 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
         return CardViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
+   /* override fun onBindViewHolder(
+        holder: CardViewHolder,
+        @SuppressLint("RecyclerView") position: Int
+    ) {
         val cardData = cardDataList[position]
         holder.date.text = cardData.date
         holder.description.text = cardData.description
 
-
-        // Set click listener to toggle card expansion/collapse
-        holder.itemView.setOnClickListener {
-            if (cardData.isExpanded) {
-                // Card is expanded, collapse it
+        holder.description.setOnClickListener {
+            if (expandedCardPosition == position) {
+                // Clicked on an already expanded card, so collapse it
                 holder.collapse()
+                expandedCardPosition = -1
             } else {
-                // Card is collapsed, expand it
+                // Clicked on a different card, collapse the previously expanded card (if any)
+                val previouslyExpandedCardPosition = expandedCardPosition
+                if (previouslyExpandedCardPosition != -1) {
+                    notifyItemChanged(previouslyExpandedCardPosition)
+                }
+
+                // Expand the clicked card
                 holder.expand()
+                expandedCardPosition = position
             }
         }
 
-        // Set the initial state of the card (expanded or collapsed)
-        if (cardData.isExpanded) {
+        // Check if the current card should be expanded or collapsed based on its position
+        if (expandedCardPosition == position) {
             holder.expand()
         } else {
             holder.collapse()
         }
-    }
+
+        *//* // Set click listener to toggle card expansion/collapse
+         holder.itemView.setOnClickListener {
+             if (cardData.isExpanded) {
+                 // Card is expanded, collapse it
+                 holder.collapse()
+             } else {
+                 // Card is collapsed, expand it
+                 holder.expand()
+             }
+         }
+
+         // Set the initial state of the card (expanded or collapsed)
+         if (cardData.isExpanded) {
+             holder.expand()
+         } else {
+             holder.collapse()
+         }*//*
+    }*/
+   override fun onBindViewHolder(
+       holder: CardViewHolder,
+       @SuppressLint("RecyclerView") position: Int
+   ) {
+       val cardData = cardDataList[position]
+       holder.date.text = cardData.date
+       holder.description.text = cardData.description
+       // Set an OnClickListener to handle expanding/collapsing
+       holder.description.setOnClickListener {
+           if (expandedCardPosition == position) {
+               // Clicked on an already expanded card, so collapse it
+               holder.collapse()
+               expandedCardPosition = -1
+           } else {
+               // Clicked on a different card, collapse the previously expanded card (if any)
+               val previouslyExpandedCardPosition = expandedCardPosition
+               if (previouslyExpandedCardPosition != -1) {
+                   notifyItemChanged(previouslyExpandedCardPosition)
+               }
+
+               // Expand the clicked card
+               holder.expand()
+               expandedCardPosition = position
+           }
+       }
+
+       // Check if the current card should be expanded or collapsed based on its position
+       if (expandedCardPosition == position) {
+           holder.expand()
+       } else {
+           holder.collapse()
+       }
+   }
 
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -117,6 +180,7 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
             cardDataList[adapterPosition].isExpanded = false
         }
     }
+
     override fun getItemCount(): Int {
         Log.d("JournalEntryAdapter", "Item count: ${cardDataList.size}")
         return cardDataList.size
@@ -223,6 +287,7 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
                     showBottomSheet(view, position, cardDataList[position].description)
                     true
                 }
+
                 else -> false
             }
         }
@@ -230,8 +295,8 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
         val popup = PopupMenu::class.java.getDeclaredField("mPopup")
         popup.isAccessible = true
         val menu = popup.get(popupMenu)
-        menu.javaClass.getDeclaredMethod("setForceShowIcon",Boolean::class.java)
-            .invoke(menu,true)
+        menu.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+            .invoke(menu, true)
     }
 
 
@@ -240,7 +305,7 @@ class JournalEntryAdapter (private val cardDataList: MutableList<JournalEntryDat
         notifyItemRemoved(position)
     }
 
-    private fun showBottomSheet(view: View, position: Int, description : String) {
+    private fun showBottomSheet(view: View, position: Int, description: String) {
         val context = view.context
         val bottomSheetView =
             LayoutInflater.from(context).inflate(R.layout.journal_entry_edit_bottomsheet, null)

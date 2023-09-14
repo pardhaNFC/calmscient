@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/_35sdp"
-    tools:context=".fragments.QuestionFragment">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".fragments.QuestionFragment"
+    tools:ignore="MissingDefaultResource">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:orientation="vertical"
-        tools:context=".fragments.QuestionFragment">
+        tools:ignore="MissingClass">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/title"
@@ -24,9 +26,9 @@
                 android:id="@+id/PHQ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp">
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/backIcon"
@@ -41,78 +43,67 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:layout_gravity="top|center_horizontal"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="70dp"
-                    android:layout_marginBottom="20dp"
                     android:fontFamily="@font/lexendmedium"
                     android:text="@string/phq_heading"
                     android:textColor="@color/black_head"
-                    android:textSize="@dimen/_17sdp" />
+                    android:textSize="@dimen/_16sdp" />
             </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
-
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/viewbackgroundcolor" />
 
-        <!--<TextView
-            android:id="@+id/desc_text_view"
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/questionsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_420sdp"
+                    android:padding="@dimen/_12sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:fontFamily="@font/sfprodisplaysemibold"
-            android:padding="@dimen/_10sdp"
-            android:text="Over the last 2 weeks, how often have you been bothered by any of the following problems?"
-            android:textColor="@color/purple_100"
-            android:textSize="@dimen/_15sdp"
-            android:textStyle="bold" />-->
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/questionsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_12sdp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-50sp"
-            android:orientation="horizontal">
+            android:layout_marginBottom="@dimen/_50sdp">
 
             <ImageView
                 android:id="@+id/previousQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
                 android:clickable="true"
-                android:src="@drawable/ic_question_back" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#424242"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:src="@drawable/ic_question_back"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp" />
 
             <ImageView
                 android:id="@+id/nextQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:clickable="true"
-                android:src="@drawable/ic_next_question" />
-        </LinearLayout>
-
+                android:src="@drawable/ic_next_question"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp" />
+        </RelativeLayout>
 
     </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

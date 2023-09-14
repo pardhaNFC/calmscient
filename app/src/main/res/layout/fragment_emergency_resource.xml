@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/_40sdp"
+    android:orientation="vertical"
     tools:context=".fragments.EmergencyResourceFragment">
 
     <LinearLayout
@@ -24,30 +25,19 @@
                 android:id="@+id/backToHomeFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
-                android:layout_centerVertical="true"
                 android:clickable="true"
                 android:src="@drawable/ic_back" />
-            <!--<ImageView
-                android:id="@+id/backToHomeFragment"
-                android:layout_width="100sp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                android:src="@drawable/ic_back" />-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
                 android:gravity="center_horizontal"
                 android:text="@string/emergency_resource"
-                android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -78,9 +68,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/lexendsemibold"
                     android:gravity="left"
                     android:text="@string/doctor_name"
-                    android:fontFamily="@font/lexendsemibold"
                     android:textAlignment="gravity"
                     android:textColor="@color/black_head"
                     android:textSize="18sp" />
@@ -88,8 +78,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/hospital_name"
                     android:fontFamily="@font/lexendmedium"
+                    android:text="@string/hospital_name"
                     android:textColor="@color/hospital_name"
                     android:textSize="14sp" />
 
@@ -99,8 +89,8 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:focusable="true"
-                    android:fontFamily="@font/lexendsemibold"
                     android:focusableInTouchMode="true"
+                    android:fontFamily="@font/lexendsemibold"
                     android:text="@string/doctor_phone_number"
                     android:textColor="@color/purple_100"
                     android:textSize="18sp"
@@ -109,388 +99,396 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:orientation="vertical"
-            android:weightSum="3">
+            android:layout_height="wrap_content">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/suicide_heading"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/suicideHelpLineNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:fontFamily="@font/lexendlight"
-                android:textColor="@color/black_head"
-                android:justificationMode="inter_word"
-                android:text="@string/suicide_text"
-                android:textSize="@dimen/_12sdp" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right">
-
-                <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:cardBackgroundColor="#F4F3FF"
-                    app:cardCornerRadius="@dimen/_10sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
 
                     <TextView
-                        android:id="@+id/learnmore_suicide"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_new"
-                        android:drawablePadding="@dimen/_5sdp"
-                        android:maxLines="1"
-                        android:text="@string/learn_more"
-                        android:textColor="@color/purple_100" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
-
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/viewbackgroundcolor" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/disaster_heading"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp"  />
-
-            <TextView
-                android:id="@+id/disaster_distress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:fontFamily="@font/lexendlight"
-                android:textColor="@color/black_head"
-                android:justificationMode="inter_word"
-                android:text="@string/disaster_text"
-                android:textSize="@dimen/_12sdp" />
-
-            <RelativeLayout
-                android:id="@+id/disaster_distress_helpline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:cardBackgroundColor="#F4F3FF"
-                    app:cardCornerRadius="@dimen/_10sdp">
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/suicide_heading"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_15sdp" />
 
                     <TextView
-                        android:id="@+id/learnmore_distress"
+                        android:id="@+id/suicideHelpLineNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendlight"
+                        android:justificationMode="inter_word"
+                        android:text="@string/suicide_text"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:clickable="true"
-                        android:drawablePadding="@dimen/_5sdp"
-                        android:drawableRight="@drawable/ic_next_new"
-                        android:maxLines="1"
-                        android:fontFamily="@font/lexendregular"
-                        android:text="@string/learn_more"
-                        android:textColor="@color/purple_100" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
-            <!--<androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/disaster_distress_helpline"
-                android:layout_width="100sp"
+                        android:layout_gravity="right">
 
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:background="@drawable/custom_button_background_cancel"
-                android:clickable="true"
-                android:drawableEnd="@drawable/ic_next"
-                android:text="Learn More"
-                android:textAllCaps="false"
-                android:textColor="@color/purple_100"
-                android:textSize="14sp"
-                android:textStyle="bold">
+                        <androidx.cardview.widget.CardView
 
-            </androidx.appcompat.widget.AppCompatButton>-->
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="#F4F3FF"
+                            app:cardCornerRadius="@dimen/_10sdp">
 
-        </LinearLayout>
+                            <TextView
+                                android:id="@+id/learnmore_suicide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/ic_next_new"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/lexendregular"
+                                android:maxLines="1"
+                                android:text="@string/learn_more"
+                                android:textColor="@color/purple_100" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+                </LinearLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/viewbackgroundcolor" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/viewbackgroundcolor" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/crisis_heading"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp"  />
-
-            <TextView
-                android:id="@+id/crisis_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:fontFamily="@font/lexendlight"
-                android:textColor="@color/black_head"
-                android:justificationMode="inter_word"
-                android:text="@string/crisis_text"
-                android:textSize="@dimen/_12sdp" />
-
-            <RelativeLayout
-                android:id="@+id/crisis_text_line"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:cardBackgroundColor="#F4F3FF"
-                    app:cardCornerRadius="@dimen/_10sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
 
                     <TextView
-                        android:id="@+id/learnmore_crisis"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:clickable="true"
-                        android:drawablePadding="@dimen/_5sdp"
-                        android:fontFamily="@font/lexendregular"
-                        android:drawableRight="@drawable/ic_next_new"
-                        android:maxLines="1"
-                        android:text="@string/learn_more"
-                        android:textColor="@color/purple_100" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
-            <!--<androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/crisis_text_line"
-                android:layout_width="100sp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:background="@drawable/custom_button_background_cancel"
-                android:clickable="true"
-                android:drawableEnd="@drawable/ic_next"
-                android:text="Learn More"
-                android:textAllCaps="false"
-                android:textColor="@color/purple_100"
-                android:textSize="14sp"
-                android:textStyle="bold">
-
-            </androidx.appcompat.widget.AppCompatButton>-->
-
-        </LinearLayout>
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/viewbackgroundcolor" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/trevor_heading"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp"  />
-
-            <TextView
-                android:id="@+id/trevor_project_helplineNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:fontFamily="@font/lexendlight"
-                android:textColor="@color/black_head"
-                android:justificationMode="inter_word"
-                android:text="@string/trevor_text"
-                android:textSize="@dimen/_12sdp" />
-
-            <RelativeLayout
-                android:id="@+id/trevor_project"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:cardBackgroundColor="#F4F3FF"
-                    app:cardCornerRadius="@dimen/_10sdp">
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/disaster_heading"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_15sdp" />
 
                     <TextView
-                        android:id="@+id/learnmore_trevor"
+                        android:id="@+id/disaster_distress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendlight"
+                        android:justificationMode="inter_word"
+                        android:text="@string/disaster_text"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/disaster_distress_helpline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="right">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="#F4F3FF"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/learnmore_distress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/ic_next_new"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/lexendregular"
+                                android:maxLines="1"
+                                android:text="@string/learn_more"
+                                android:textColor="@color/purple_100" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <!--<androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/disaster_distress_helpline"
+                        android:layout_width="100sp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button_background_cancel"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_new"
-                        android:maxLines="1"
-                        android:fontFamily="@font/lexendregular"
-                        android:text="@string/learn_more"
-                        android:textColor="@color/purple_100" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
-            <!--<androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/trevor_project"
-                android:layout_width="100sp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:background="@drawable/custom_button_background_cancel"
-                android:clickable="true"
-                android:drawableEnd="@drawable/ic_next"
-                android:text="Learn More"
-                android:textAllCaps="false"
-                android:textColor="@color/purple_100"
-                android:textSize="14sp"
-                android:textStyle="bold">
+                        android:drawableEnd="@drawable/ic_next"
+                        android:text="Learn More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_100"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
-            </androidx.appcompat.widget.AppCompatButton>-->
+                    </androidx.appcompat.widget.AppCompatButton>-->
 
-        </LinearLayout>
+                </LinearLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/viewbackgroundcolor" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/viewbackgroundcolor" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:orientation="vertical"
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/trans_helpline_heading"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_15sdp"  />
-
-            <TextView
-                android:id="@+id/trans_lifeline_helpLineNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:fontFamily="@font/lexendlight"
-                android:textColor="@color/black_head"
-                android:justificationMode="inter_word"
-                android:text="@string/trans_helpline_text"
-                android:textSize="@dimen/_12sdp" />
-
-            <RelativeLayout
-                android:id="@+id/trans_lifeline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    app:cardBackgroundColor="#F4F3FF"
-                    app:cardCornerRadius="@dimen/_10sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
 
                     <TextView
-                        android:id="@+id/learnmore_trans_lifeline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/crisis_heading"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/crisis_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendlight"
+                        android:justificationMode="inter_word"
+                        android:text="@string/crisis_text"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/crisis_text_line"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_gravity="right">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="#F4F3FF"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/learnmore_crisis"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/ic_next_new"
+                                android:drawablePadding="@dimen/_5sdp"
+                                android:fontFamily="@font/lexendregular"
+                                android:maxLines="1"
+                                android:text="@string/learn_more"
+                                android:textColor="@color/purple_100" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <!--<androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/crisis_text_line"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button_background_cancel"
                         android:clickable="true"
-                        android:drawableRight="@drawable/ic_next_new"
-                        android:maxLines="1"
-                        android:fontFamily="@font/lexendregular"
-                        android:text="@string/learn_more"
-                        android:textColor="@color/purple_100" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
-            <!--<androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/trans_lifeline"
-                android:layout_width="100sp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_weight="1"
-                android:background="@drawable/custom_button_background_cancel"
-                android:clickable="true"
-                android:drawableRight="@drawable/ic_next"
-                android:text="Learn More"
-                android:textAllCaps="false"
-                android:textColor="@color/purple_100"
-                android:textSize="14sp"
-                android:textStyle="bold" />-->
+                        android:drawableEnd="@drawable/ic_next"
+                        android:text="Learn More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_100"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
 
-        </LinearLayout>
+                    </androidx.appcompat.widget.AppCompatButton>-->
+
+                </LinearLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/viewbackgroundcolor" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/viewbackgroundcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/trevor_heading"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/trevor_project_helplineNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendlight"
+                        android:justificationMode="inter_word"
+                        android:text="@string/trevor_text"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/trevor_project"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="#F4F3FF"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/learnmore_trevor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/ic_next_new"
+                                android:fontFamily="@font/lexendregular"
+                                android:maxLines="1"
+                                android:text="@string/learn_more"
+                                android:textColor="@color/purple_100" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <!--<androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/trevor_project"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button_background_cancel"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_next"
+                        android:text="Learn More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_100"
+                        android:textSize="14sp"
+                        android:textStyle="bold">
+
+                    </androidx.appcompat.widget.AppCompatButton>-->
+
+                </LinearLayout>
 
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/viewbackgroundcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/trans_helpline_heading"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/trans_lifeline_helpLineNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendlight"
+                        android:justificationMode="inter_word"
+                        android:text="@string/trans_helpline_text"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/trans_lifeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="#F4F3FF"
+                            app:cardCornerRadius="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/learnmore_trans_lifeline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:clickable="true"
+                                android:drawableRight="@drawable/ic_next_new"
+                                android:fontFamily="@font/lexendregular"
+                                android:maxLines="1"
+                                android:text="@string/learn_more"
+                                android:textColor="@color/purple_100" />
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                    <!--<androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/trans_lifeline"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button_background_cancel"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_next"
+                        android:text="Learn More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_100"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />-->
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/viewbackgroundcolor" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

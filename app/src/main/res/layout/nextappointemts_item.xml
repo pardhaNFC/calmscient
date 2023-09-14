@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,19 +18,21 @@
 
             <TextView
                 android:id="@+id/dateview1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
                 android:fontFamily="@font/lexendregular"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_16sdp"/>
+                android:textSize="@dimen/_14sdp"/>
         </RelativeLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/mainCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             android:clickable="true"
             app:cardCornerRadius="10dp"
             app:cardElevation="@dimen/_10sdp">
@@ -73,7 +73,7 @@
                     android:layout_marginTop="@dimen/_15sdp"
                     android:layout_toRightOf="@+id/doctor_logo"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@color/black_head"
+                    android:textColor="@color/grey_light"
                     android:textSize="@dimen/_14sdp"
                     android:fontFamily="@font/lexendregular" />
                 <TextView

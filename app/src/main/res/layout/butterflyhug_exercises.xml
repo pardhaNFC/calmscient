@@ -30,13 +30,14 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="@dimen/_10sdp"
-            android:layout_toRightOf="@+id/menuicon"
+            android:layout_toEndOf="@+id/menuicon"
             android:ellipsize="end"
-            android:fontFamily="@font/lexendregular"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/lexendmedium"
             android:maxLines="1"
             android:text="@string/butterflyhug_exercises"
             android:textColor="@color/black_head"
-            android:textSize="@dimen/_18sdp" />
+            android:textSize="@dimen/_16sdp" />
 
     </RelativeLayout>
 
@@ -113,7 +114,7 @@
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     android:layout_marginTop="@dimen/_12sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:fontFamily="@font/lexendregular"
+                    android:fontFamily="@font/lexendlight"
                     android:text="@string/how_to_do"
                     android:textColor="@color/black_head"
                     android:textSize="@dimen/_14sdp" />
@@ -142,7 +143,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/lexendregular"
+                            android:fontFamily="@font/lexendlight"
                             android:padding="@dimen/_10sdp"
                             android:text="@string/butterflyScreen2_text1"
                             android:textColor="@color/black_head"
@@ -175,7 +176,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/lexendregular"
+                            android:fontFamily="@font/lexendlight"
                             android:padding="@dimen/_10sdp"
                             android:text="@string/butterflyScreen2_text2"
                             android:textColor="@color/black_head"

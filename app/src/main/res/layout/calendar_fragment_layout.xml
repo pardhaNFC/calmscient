@@ -51,7 +51,7 @@
                         android:fontFamily="@font/lexendmedium"
                         android:text="@string/medications"
                         android:textColor="@color/black_head"
-                        android:textSize="@dimen/_17sdp" />
+                        android:textSize="@dimen/_16sdp" />
                 </RelativeLayout>
                 <!--<ImageView
                     android:id="@+id/backIcon"

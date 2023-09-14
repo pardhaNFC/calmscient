@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start|center_vertical"
             android:layout_marginHorizontal="@dimen/_13sdp"
-            android:fontFamily="@font/lexendmedium"
+            android:fontFamily="@font/lexendlight"
             android:textAllCaps="false"
             android:textColor="@color/black_head"
             android:textSize="@dimen/_15sdp" />
@@ -30,7 +30,7 @@
             android:layout_gravity="start|center_vertical"
             android:layout_marginHorizontal="@dimen/_8sdp"
             android:layout_marginTop="@dimen/_8sdp"
-            android:fontFamily="@font/lexendregular"
+            android:fontFamily="@font/lexendlight"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="@dimen/_12sdp" />
@@ -73,16 +73,16 @@
                 android:id="@+id/exercisesHeartImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_240sdp"
-                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_240sdp"
+                android:layout_marginTop="@dimen/_18sdp"
                 android:clickable="true" />
 
             <ImageView
                 android:id="@+id/exercisesBellIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_200sdp"
-                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_18sdp"
                 android:clickable="true" />
 
         </RelativeLayout>

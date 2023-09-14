@@ -15,7 +15,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp">
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/menu_icon"
@@ -39,7 +41,7 @@
                 android:maxLines="1"
                 android:textAlignment="center"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_17sdp" />
+                android:textSize="@dimen/_16sdp" />
 
             <ImageView
                 android:id="@+id/ic_glossary"
@@ -60,7 +62,7 @@
         <ProgressBar
             android:id="@+id/progressBar2"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="@dimen/_200sdp"
+            android:layout_width="@dimen/_220sdp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
@@ -84,14 +86,14 @@
             <!-- Step 1 Indicator -->
             <ImageView
                 android:id="@+id/step1Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_activetickmark"/>
 
             <!-- Step 2 Indicator -->
             <ImageView
                 android:id="@+id/step2Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:src="@drawable/ic_inactivetickmark"/>
@@ -99,14 +101,14 @@
             <!-- Step 3 Indicator -->
             <ImageView
                 android:id="@+id/step3Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark"/>
             <!-- Step 4 Indicator -->
             <ImageView
                 android:id="@+id/step4Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark"/>
@@ -114,7 +116,7 @@
             <!-- Step 5 Indicator -->
             <ImageView
                 android:id="@+id/step5Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark"/>
@@ -122,14 +124,14 @@
             <!-- Step 6 Indicator -->
             <ImageView
                 android:id="@+id/step6Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_8sdp"
                 android:src="@drawable/ic_inactivetickmark"/>
             <!-- Step 7 Indicator -->
             <ImageView
                 android:id="@+id/step7Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark"/>
@@ -137,7 +139,7 @@
             <!-- Step 8 Indicator -->
             <ImageView
                 android:id="@+id/step8Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark"/>
@@ -145,7 +147,7 @@
             <!-- Step 9 Indicator -->
             <ImageView
                 android:id="@+id/step9Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="@dimen/_18sdp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark"/>

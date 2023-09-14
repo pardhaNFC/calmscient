@@ -32,8 +32,9 @@
                 android:gravity="center"
                 android:text="@string/dancingexercise_titletext"
                 android:textColor="@color/black_head"
-                android:fontFamily="@font/lexendregular"
-                android:textSize="@dimen/_18sdp" />
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/lexendmedium"
+                android:textSize="@dimen/_16sdp" />
 
         </RelativeLayout>
         <View

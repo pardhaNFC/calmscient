@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_10sdp"
     app:cardElevation="@dimen/_5sdp"
     app:cardUseCompatPadding="true"
     android:background="@drawable/dialog_border">
@@ -41,8 +42,9 @@
                     android:text="Date"
                     android:fontFamily="@font/lexendregular"
                     android:gravity="center"
+                    android:textColor="@color/black_head"
                     android:textAlignment="center"
-                    android:textSize="@dimen/_13sdp"
+                    android:textSize="@dimen/_12sdp"
                     app:layout_constraintBottom_toBottomOf="parent" />
                 <ImageView
                     android:id="@+id/dropdownButton"
@@ -73,10 +75,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:text="Entry Description"
                 android:textSize="@dimen/_12sdp"
-                android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
+                android:fontFamily="@font/lexendregular"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/imageViewThreeDots"

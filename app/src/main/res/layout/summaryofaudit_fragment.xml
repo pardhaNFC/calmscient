@@ -15,9 +15,9 @@
         android:id="@+id/Settings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
 
         <ImageView
             android:id="@+id/backIcon"
@@ -41,16 +41,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="@dimen/_70sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:maxLines="1"
             android:ellipsize="end"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/lexendregular"
+            android:fontFamily="@font/lexendmedium"
+            android:maxLines="1"
             android:text="@string/summaryof_audit"
-            android:textSize="@dimen/_20sdp" />
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_16sdp" />
     </RelativeLayout>
     <View
         android:layout_width="wrap_content"
@@ -116,12 +112,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/summarysleep_by_date_range"
+                android:text="@string/summaryaudit_by_date_range"
                 android:fontFamily="@font/lexendregular"
                 android:padding="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_16sdp"/>
+                android:textSize="@dimen/_13sdp"/>
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
