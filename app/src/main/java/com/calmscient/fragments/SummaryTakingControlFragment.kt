@@ -32,7 +32,6 @@ import java.util.Locale
 data class SummaryDataClasss(
     val imageView1: Int?,
     val text1: String?,
-    val text2: String?,
     val text3:String?)
 class SummaryTakingControlFragment : Fragment() {
     private lateinit var binding: LayoutSummaryTakingControlBinding
@@ -100,10 +99,10 @@ class SummaryTakingControlFragment : Fragment() {
         SummaryDataClasss.clear()
         SummaryDataClasss.addAll(
             listOf(
-                SummaryDataClasss(R.drawable.ic_alcoholfree, "Alcohol-Free", "0", "30 days"),
-                SummaryDataClasss(R.drawable.ic_drinks, "Drinks", "0", "60 counts"),
-                SummaryDataClasss(R.drawable.ic_argument1, "Argument", "0", "10"),
-                SummaryDataClasss(R.drawable.ic_accident1, "Accident", "0", "5"),
+                SummaryDataClasss(R.drawable.ic_alcoholfree, "Alcohol-Free", "30 days"),
+                SummaryDataClasss(R.drawable.ic_drinks, "Drinks", "60 counts"),
+                SummaryDataClasss(R.drawable.ic_argument1, "Argument","10"),
+                SummaryDataClasss(R.drawable.ic_accident1, "Accident",  "5"),
             )
         )
         takingControlSummaryCardAdapter.notifyDataSetChanged()

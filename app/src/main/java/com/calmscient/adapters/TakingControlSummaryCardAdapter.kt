@@ -22,7 +22,6 @@ import com.calmscient.R
 import com.calmscient.fragments.SummaryDataClasss
 class TakingControlSummaryCardAdapter (private val items: List<SummaryDataClasss>) :
     RecyclerView.Adapter<TakingControlSummaryCardAdapter.CardViewHolder>() {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.summary_takingconotrol_items, parent, false)
@@ -38,7 +37,6 @@ class TakingControlSummaryCardAdapter (private val items: List<SummaryDataClasss
         item.imageView1?.let { holder.imageView.setImageResource(it) }
         holder.textview1.text = item.text1
         holder.progressValue.progress = 10
-        holder.textview2.text = item.text2
         holder.textview3.text = item.text3
     }
     private fun resultPercent() {
@@ -71,7 +69,6 @@ class TakingControlSummaryCardAdapter (private val items: List<SummaryDataClasss
         val imageView: ImageView = itemView.findViewById(R.id.imageView1)
         val textview1: TextView = itemView.findViewById(R.id.text1)
         val progressValue: ProgressBar = itemView.findViewById(R.id.progressbar_history)
-        val textview2: TextView = itemView.findViewById(R.id.text2)
         val textview3: TextView = itemView.findViewById(R.id.text3)
     }
 }

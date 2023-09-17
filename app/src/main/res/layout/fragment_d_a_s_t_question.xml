@@ -54,12 +54,12 @@
     <!-- RecyclerView below the toolbar -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_400sdp"
         android:layout_below="@+id/separator">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/questionsRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_400sdp"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_above="@+id/bottomLayout" />
     </ScrollView>

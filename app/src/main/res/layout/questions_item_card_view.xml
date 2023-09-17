@@ -4,10 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
+    <!-- Information Button -->
+    <ImageView
+        android:id="@+id/informationDialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:clickable="true"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:src="@drawable/ic_information" />
     <TextView
         android:id="@+id/desc_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
         android:fontFamily="@font/lexendregular"
         android:padding="@dimen/_10sdp"
         android:visibility="gone"
@@ -19,17 +31,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start|center_vertical"
         android:layout_weight="1"
+        android:maxLines="10"
         android:fontFamily="@font/lexendmedium"
         android:textColor="@color/black"
-        android:textSize="@dimen/_15sdp"
-        android:layout_margin="@dimen/_10sdp"/>
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/optionsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_weight="1"
+        android:layout_height="@dimen/_288sdp"/>
 
 
 </LinearLayout>
-
-

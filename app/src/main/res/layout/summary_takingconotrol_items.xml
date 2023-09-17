@@ -27,18 +27,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-           <ImageView
+            <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               android:layout_margin="@dimen/_10sdp"/>
+                android:layout_margin="@dimen/_10sdp"/>
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_18sdp"
                 android:maxLines="1"
-                android:textSize="@dimen/_15sdp" />
+                android:textColor="@color/black_head"
+                android:fontFamily="@font/lexendmedium"
+                android:textSize="@dimen/_14sdp" />
 
         </LinearLayout>
 
@@ -52,7 +54,7 @@
             android:indeterminate="false"
             android:max="60"
             android:progress="1"
-             android:progressDrawable="@drawable/curved_progress_bar"
+            android:progressDrawable="@drawable/curved_progress_bar"
             android:scaleY="1"
             android:theme="@style/ProgressBarStyle" />
 
@@ -70,24 +72,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="left"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:text="0"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:textSize="@dimen/_10sdp"
-                android:textColor="@color/grey_light" />
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/purple_100" />
             <TextView
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="right"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_170sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_180sdp"
                 android:layout_centerInParent="true"
-                android:textSize="@dimen/_10sdp"
-                android:textColor="@color/grey_light"
-                android:textDirection="ltr" />
+                android:textSize="@dimen/_13sdp"
+                android:fontFamily="@font/lexendmedium"
+                android:textColor="@color/purple_100"
+                android:textDirection="rtl" />
 
         </LinearLayout>
     </LinearLayout>

@@ -41,6 +41,7 @@ import com.calmscient.adapters.VideoAdapter
 import com.calmscient.adapters.VideoItem
 import com.calmscient.di.remote.CardItemDataClass
 import com.calmscient.di.remote.ItemType
+import com.calmscient.utils.common.SavePreferences
 
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,8 +52,8 @@ class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var tvProfileName: TextView
     private lateinit var introductionAdapter: AnxietyIntroductionAdapter
-
     private lateinit var profileImage: ImageView
+    lateinit var savePrefData: SavePreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -105,15 +106,26 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = introductionAdapter
 
-
         // Data for Additional Resource
-        val additionalResourceItems = cardItemsFavorites()
-        val additionalResourceRecyclerView: RecyclerView = rootView.findViewById(R.id.recyclerViewVideos)
-        val additionalResourceAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
-        setupRecyclerView(
-            additionalResourceRecyclerView, additionalResourceItems, additionalResourceAdapter
-        )
 
+        savePrefData = SavePreferences(requireContext())
+        if(savePrefData.getAslLanguageState() == true) {
+            val additionalResourceItems = cardItemsFavoritesASL()
+            val additionalResourceRecyclerView: RecyclerView =
+                rootView.findViewById(R.id.recyclerViewVideos)
+            val additionalResourceAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(
+                additionalResourceRecyclerView, additionalResourceItems, additionalResourceAdapter
+            )
+        }else{
+            val additionalResourceItems = cardItemsFavorites()
+            val additionalResourceRecyclerView: RecyclerView =
+                rootView.findViewById(R.id.recyclerViewVideos)
+            val additionalResourceAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(
+                additionalResourceRecyclerView, additionalResourceItems, additionalResourceAdapter
+            )
+        }
 
         // Find the myMedicalRecordsLayout
         val myMedicalRecordsLayout = rootView.findViewById<View>(R.id.myMedicalRecordsLayout)
@@ -163,6 +175,71 @@ class HomeFragment : Fragment() {
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
             videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4",
+            contentIcons = listOf(R.drawable.lesson_1_1),
+            description = getString(R.string.neuropsychology),
+            isCompleted = false,
+            heading = getString(R.string.the_neuropsychology),
+            summary = getString(R.string.lesson1_video_summary),
+            dialogText = getString(R.string.lesson1_video1_description)
+        )
+
+        val card2 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+4-1+Implementing+body+calming+skills.mp4",
+            contentIcons = listOf(R.drawable.lesson_4_1),
+            description = getString(R.string.make_plan_card6_text2),
+            isCompleted = false,
+            heading = getString(R.string.make_plan_card6_text2),
+            summary = null,
+            dialogText = getString(R.string.lesson4_video1_description)
+        )
+
+        val card3 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.AUDIO),
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.audio_lesson_1_2),
+            description = getString(R.string.meet_nora_austin),
+            isCompleted = false,
+            heading = null,
+            summary = null,
+            dialogText = null
+        )
+
+        val card4 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.AUDIO),
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+3+Moral+deficiency+or+anxiety+with+music+English.wav",
+            videoResourceId = null,
+            contentIcons = listOf(R.drawable.audio_lesson_1_2),
+            description = getString(R.string.moral_deficiency),
+            isCompleted = false,
+            heading = null,
+            summary = null,
+            dialogText = null
+        )
+
+        val card5 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/1+Anxiety+and+exercise.mp4",
+            contentIcons = listOf(R.drawable.additional_1),
+            description = getString(R.string.anxiety_exercise),
+            isCompleted = false,
+            heading = getString(R.string.anxiety_exercise),
+            summary = getString(R.string.additional_anxiety_exercise_summary),
+            dialogText = null
+        )
+
+        // Add more CardItemDataClass instances as needed for lesson3
+        return listOf(card1, card2, card3, card4, card5)
+    }
+
+    private fun cardItemsFavoritesASL(): List<CardItemDataClass> {
+        val card1 = CardItemDataClass(
+            availableContentTypes = listOf(ItemType.VIDEO),
+            audioResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/The+Neuropsychology+of+Anxiety(ASL).m4v",
             contentIcons = listOf(R.drawable.lesson_1_1),
             description = getString(R.string.neuropsychology),
             isCompleted = false,

@@ -35,11 +35,14 @@ class TakingControlFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentTakingControlBinding.inflate(inflater, container, false)
-        binding.cardnow.setOnClickListener {
+        binding.btnSummary.setOnClickListener {
             loadFragment(SummaryTakingControlFragment())
         }
-        binding.goalcard.setOnClickListener {
+        binding.btnDrinkTracker.setOnClickListener {
             loadFragment(DrinkTrackerFragment())
+        }
+        binding.btnEventTracker.setOnClickListener {
+            loadFragment(EventsTrackerFragment())
         }
         binding.alcoholtext.setOnClickListener {
             binding.alcohollayout.visibility = View.VISIBLE

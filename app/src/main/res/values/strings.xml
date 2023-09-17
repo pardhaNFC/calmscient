@@ -648,5 +648,19 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="lesson_4">Lesson 4</string>
     <string name="lesson_5">Lesson 5</string>
     <string name="lesson_6">Lesson 6</string>
-
+    <string name="ok">Ok\n</string>
+    <string name="taking_control_substance">Substance</string>
+    <string name="taking_control_alcohol">Alcohol</string>
+    <string name="taking_control_alcoholfeedays">  Alcohol Fee Days</string>
+    <string name="taking_control_now">Now</string>
+    <string name="taking_control_goal">Goal</string>
+    <string name="taking_control_7_days">7 days</string>
+    <string name="taking_control_10_days">10 days</string>
+    <string name="taking_control_drink_count">Drink Counts</string>
+    <string name="taking_control_60_days">60 days</string>
+    <string name="taking_control_texttile">Work your strengths</string>
+    <string name="taking_control_text">Do something you are good at to build self-confidence then tackle a tougher task.</string>
+    <string name="events_tracker_text1">HangOver</string>
+    <string name="events_tracker_text2">Argument</string>
+    <string name="events_tracker_text3">Accident</string>
 </resources>

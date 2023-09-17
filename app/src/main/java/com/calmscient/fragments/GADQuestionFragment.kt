@@ -22,20 +22,27 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.CommonDialog
 import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.databinding.FragmentGadQuestionsBinding
-class GADQuestionFragment  : Fragment() {
+
+class GADQuestionFragment : Fragment() {
 
     private lateinit var questionAdapter: QuestionAdapter
     private lateinit var binding: FragmentGadQuestionsBinding
     private val questions: List<Question> = generateDummyQuestions()
     private var currentQuestionIndex = 0
+    private var isPreviousButtonVisible = false
+    private var isNextButtonVisible = true // Initially, show the next button
+    private val totalQuestions = questions.size
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        requireActivity().onBackPressedDispatcher.addCallback(this){
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
             loadFragment(ScreeningsFragment())
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -56,19 +63,21 @@ class GADQuestionFragment  : Fragment() {
             binding.tvGadtitle.text = selectedTitle
         }
         val titleG = "GAD-7"
-        questionAdapter = QuestionAdapter(requireContext(),questions,titleG)
+        questionAdapter = QuestionAdapter(requireContext(), questions, titleG)
         binding.questionsRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
         }
+// Create an instance of the CommonDialog class
+        val commonDialog = CommonDialog(requireContext())
 
+        // Show a dialog when the fragment is loaded
+        commonDialog.showDialog(getString(R.string.gad))
         // Use a PagerSnapHelper for snapping to a question's position
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
-
         setupNavigation()
-
-        binding.backIcon.setOnClickListener{
+        binding.backIcon.setOnClickListener {
             loadFragment(ScreeningsFragment())
         }
     }
@@ -91,7 +100,12 @@ class GADQuestionFragment  : Fragment() {
             val questionText = questionTexts[index]
             val options = if (index == 7) {
                 // Custom options for the 8th question
-                listOf("Not difficult at all", "Somewhat difficult", "Very difficult", "Extremely difficult")
+                listOf(
+                    "Not difficult at all",
+                    "Somewhat difficult",
+                    "Very difficult",
+                    "Extremely difficult"
+                )
             } else {
                 // Default options for other questions
                 listOf("Not at all", "Several days", "More than half the days", "Nearly every day")
@@ -100,6 +114,7 @@ class GADQuestionFragment  : Fragment() {
         }
         return questionsList
     }
+
     private fun setupNavigation() {
         binding.nextQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex + 1)
@@ -117,9 +132,10 @@ class GADQuestionFragment  : Fragment() {
                 if (Math.abs(dx) > Math.abs(dy)) {
                     val layoutManager = recyclerView.layoutManager as LinearLayoutManager
                     val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-                    if (firstVisibleItemPosition != currentQuestionIndex) {
-                        currentQuestionIndex = firstVisibleItemPosition
-                    }
+                    // Update the current question index
+                    currentQuestionIndex = firstVisibleItemPosition
+                    // Toggle the visibility of the buttons based on the current index
+                    toggleButtonVisibility()
                 }
             }
         })
@@ -130,24 +146,38 @@ class GADQuestionFragment  : Fragment() {
         if (index in 0 until questions.size) {
             currentQuestionIndex = index
             binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
-        }else{
-            if(currentQuestionIndex == questions.size-1){
+        } else {
+            if (currentQuestionIndex == questions.size - 1) {
                 loadFragment(ResultsFragment())
             }
         }
     }
+
     private fun showResult() {
         val toastMessage = "You've reached the end of the questions!"
         Toast.makeText(requireContext(), toastMessage, Toast.LENGTH_SHORT).show()
     }
 
-    private fun loadFragment(fragment: Fragment)
-    {
+    private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
 
+    private fun toggleButtonVisibility() {
+        isPreviousButtonVisible = currentQuestionIndex > 0
+        isNextButtonVisible = currentQuestionIndex < totalQuestions - 1
+
+
+        // Always show both "Previous" and "Next" buttons/icons for the last question
+        if (currentQuestionIndex >= questions.size - 1) {
+            isPreviousButtonVisible = true
+            isNextButtonVisible = true
+        }
+        binding.previousQuestion.visibility =
+            if (isPreviousButtonVisible) View.VISIBLE else View.GONE
+        binding.nextQuestion.visibility = if (isNextButtonVisible) View.VISIBLE else View.GONE
+    }
 
 }

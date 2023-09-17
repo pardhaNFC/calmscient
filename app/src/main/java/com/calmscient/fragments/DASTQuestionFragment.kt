@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.CommonDialog
 import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.databinding.FragmentADUITQuestionBinding
 import com.calmscient.databinding.FragmentDASTQuestionBinding
@@ -31,6 +32,10 @@ class DASTQuestionFragment : Fragment() {
     private lateinit var binding: FragmentDASTQuestionBinding
     private val questions: List<Question> = generateDummyQuestions()
     private var currentQuestionIndex = 0
+    private var isPreviousButtonVisible = false
+    private var isNextButtonVisible = true // Initially, show the next button
+    private val totalQuestions = questions.size
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +67,11 @@ class DASTQuestionFragment : Fragment() {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
         }
+        // Create an instance of the CommonDialog class
+        val commonDialog = CommonDialog(requireContext())
+
+        // Show a dialog when the fragment is loaded
+        commonDialog.showDialog(getString(R.string.dast))
         // Use a PagerSnapHelper for snapping to a question's position
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
@@ -70,11 +80,8 @@ class DASTQuestionFragment : Fragment() {
             loadFragment(ScreeningsFragment())
         }
     }
-
-
     private fun generateDummyQuestions(): List<Question> {
         val questionsList = mutableListOf<Question>()
-
         val questionTexts = listOf(
             "1. Have you used drugs other than those required for medical reasons? ",
             "2. Do you use more than one drug at a time?",
@@ -86,8 +93,6 @@ class DASTQuestionFragment : Fragment() {
             "8. Have you engaged in illegal activities in order to obtain drugs?",
             "9. Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?",
             "10.  Have you had medical problems as a result of your drug use (e.g., memory loss, hepatitis, convulsions, bleeding, etc.)?"
-
-
         )
 
         for (index in questionTexts.indices) {
@@ -95,7 +100,6 @@ class DASTQuestionFragment : Fragment() {
             val options = listOf("No","Yes")
             questionsList.add(Question(questionText, options))
         }
-
         return questionsList
     }
 
@@ -103,11 +107,9 @@ class DASTQuestionFragment : Fragment() {
         binding.nextQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex + 1)
         }
-
         binding.previousQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex - 1)
         }
-
         binding.questionsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
@@ -116,9 +118,10 @@ class DASTQuestionFragment : Fragment() {
                 if (Math.abs(dx) > Math.abs(dy)) {
                     val layoutManager = recyclerView.layoutManager as LinearLayoutManager
                     val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-                    if (firstVisibleItemPosition != currentQuestionIndex) {
-                        currentQuestionIndex = firstVisibleItemPosition
-                    }
+                    // Update the current question index
+                    currentQuestionIndex = firstVisibleItemPosition
+                    // Toggle the visibility of the buttons based on the current index
+                    toggleButtonVisibility()
                 }
             }
         })
@@ -147,5 +150,16 @@ class DASTQuestionFragment : Fragment() {
         transaction.commit()
     }
 
+    private fun toggleButtonVisibility() {
+        isPreviousButtonVisible = currentQuestionIndex > 0
+        isNextButtonVisible = currentQuestionIndex < totalQuestions - 1
 
+        // Always show both "Previous" and "Next" buttons/icons for the last question
+        if (currentQuestionIndex >= questions.size - 1) {
+            isPreviousButtonVisible = true
+            isNextButtonVisible = true
+        }
+        binding.previousQuestion.visibility = if (isPreviousButtonVisible) View.VISIBLE else View.GONE
+        binding.nextQuestion.visibility = if (isNextButtonVisible) View.VISIBLE else View.GONE
+    }
 }

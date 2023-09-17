@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.CommonDialog
 import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.databinding.FragmentADUITQuestionBinding
 import com.calmscient.databinding.FragmentGadQuestionsBinding
@@ -31,7 +32,9 @@ class ADUITQuestionFragment : Fragment() {
     private lateinit var binding: FragmentADUITQuestionBinding
     private val questions: List<Question> = generateDummyQuestions()
     private var currentQuestionIndex = 0
-
+    private var isPreviousButtonVisible = false
+    private var isNextButtonVisible = true // Initially, show the next button
+    private val totalQuestions = questions.size
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this){
@@ -49,11 +52,8 @@ class ADUITQuestionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         // Get the selected title from arguments
         val selectedTitle = arguments?.getString("selectedTitle")
-
         // Update your UI with the selected title
         if (!selectedTitle.isNullOrEmpty()) {
             binding.titleTextView.text = selectedTitle
@@ -64,6 +64,11 @@ class ADUITQuestionFragment : Fragment() {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
         }
+        // Create an instance of the CommonDialog class
+        val commonDialog = CommonDialog(requireContext())
+
+        // Show a dialog when the fragment is loaded
+        commonDialog.showDialog(getString(R.string.audit))
         // Use a PagerSnapHelper for snapping to a question's position
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
@@ -72,7 +77,6 @@ class ADUITQuestionFragment : Fragment() {
             loadFragment(ScreeningsFragment())
         }
     }
-
 
     private fun generateDummyQuestions(): List<Question> {
         val questionsList = mutableListOf<Question>()
@@ -88,8 +92,6 @@ class ADUITQuestionFragment : Fragment() {
             "8. During the past year, how often have you been unable to remember what happened the night before because you had been drinking?",
             "9. Have you or someone else been injured as a result of your drinking?",
             "10. Has a relative or friend, doctor or other health worker been concerned about your drinking or suggested you cut down?"
-
-
         )
 
         for (index in questionTexts.indices) {
@@ -123,22 +125,23 @@ class ADUITQuestionFragment : Fragment() {
         binding.nextQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex + 1)
         }
-
         binding.previousQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex - 1)
         }
-
         binding.questionsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
+
+
 
                 // Check if the user is scrolling horizontally
                 if (Math.abs(dx) > Math.abs(dy)) {
                     val layoutManager = recyclerView.layoutManager as LinearLayoutManager
                     val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-                    if (firstVisibleItemPosition != currentQuestionIndex) {
-                        currentQuestionIndex = firstVisibleItemPosition
-                    }
+                    // Update the current question index
+                    currentQuestionIndex = firstVisibleItemPosition
+                    // Toggle the visibility of the buttons based on the current index
+                    toggleButtonVisibility()
                 }
             }
         })
@@ -164,5 +167,19 @@ class ADUITQuestionFragment : Fragment() {
         transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+    private fun toggleButtonVisibility() {
+        isPreviousButtonVisible = currentQuestionIndex > 0
+        isNextButtonVisible = currentQuestionIndex < totalQuestions - 1
+
+
+
+        // Always show both "Previous" and "Next" buttons/icons for the last question
+        if (currentQuestionIndex >= questions.size - 1) {
+            isPreviousButtonVisible = true
+            isNextButtonVisible = true
+        }
+        binding.previousQuestion.visibility = if (isPreviousButtonVisible) View.VISIBLE else View.GONE
+        binding.nextQuestion.visibility = if (isNextButtonVisible) View.VISIBLE else View.GONE
     }
 }

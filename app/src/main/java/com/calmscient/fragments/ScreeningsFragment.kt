@@ -69,10 +69,10 @@ class ScreeningsFragment : Fragment() {
         cardViewItems.clear()
         cardViewItems.addAll(
             listOf(
-                ScreeningsCardItem("PHQ-9", R.drawable.ic_history, R.drawable.ic_next),
-                ScreeningsCardItem("GAD-7", null, R.drawable.ic_next),
-                ScreeningsCardItem("AUDIT", null, R.drawable.ic_next),
-                ScreeningsCardItem("DAST-10", null, R.drawable.ic_next),
+                ScreeningsCardItem("PHQ-9", R.drawable.ic_history, R.drawable.ic_next_new),
+                ScreeningsCardItem("GAD-7", null, R.drawable.ic_next_new),
+                ScreeningsCardItem("AUDIT", null, R.drawable.ic_next_new),
+                ScreeningsCardItem("DAST-10", null, R.drawable.ic_next_new),
                 ScreeningsCardItem("SBIRT", null, R.drawable.ic_key)
 
             )

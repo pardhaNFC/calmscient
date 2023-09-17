@@ -11,20 +11,19 @@
 
 package com.calmscient.fragments
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.calmscient.R
+import com.calmscient.activities.CommonDialog
 import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.databinding.FragmentQuestionBinding
-
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -40,6 +39,10 @@ class QuestionFragment : Fragment() {
     private lateinit var binding: FragmentQuestionBinding
     private val questions: List<Question> = generateDummyQuestions()
     private var currentQuestionIndex = 0
+
+    private var isPreviousButtonVisible = false
+    private var isNextButtonVisible = true // Initially, show the next button
+    private val totalQuestions = questions.size
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,9 +68,18 @@ class QuestionFragment : Fragment() {
             adapter = questionAdapter
         }
 
+        // Create an instance of the CommonDialog class
+        val commonDialog = CommonDialog(requireContext())
+
+        // Show a dialog when the fragment is loaded
+        commonDialog.showDialog(getString(R.string.phq))
         // Use a PagerSnapHelper for snapping to a question's position
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
+
+
+        // Call toggleButtonVisibility to set the initial button visibility
+        toggleButtonVisibility()
 
         setupNavigation()
 
@@ -78,9 +90,6 @@ class QuestionFragment : Fragment() {
 
     private fun generateDummyQuestions(): List<Question> {
         val questionsList = mutableListOf<Question>()
-        /*val tab_names = resources.getStringArray(com.calmscient.R.array.screen)
-        val tabname1 = tab_names[0] //"My Tab 1"
-        Toast.makeText(requireContext(), "Coming Soon"+tabname1, Toast.LENGTH_SHORT).show()*/
 
         val questionTexts = listOf(
             "1. Little interest or pleasure in doing things",
@@ -93,6 +102,8 @@ class QuestionFragment : Fragment() {
             "8. Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
             "9. Thoughts that you would be better off dead or of hurting yourself in some way",
             "10. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+
+
         )
 
         for (questionText in questionTexts) {
@@ -102,6 +113,36 @@ class QuestionFragment : Fragment() {
         }
         return questionsList
     }
+
+    /* private fun setupNavigation() {
+         binding.nextQuestion.setOnClickListener {
+             binding.previousQuestion.visibility = View.VISIBLE
+             navigateToQuestion(currentQuestionIndex + 1)
+         }
+
+         binding.previousQuestion.setOnClickListener {
+             if(currentQuestionIndex == 1)
+             {
+                 binding.previousQuestion.visibility = View.GONE
+             }
+             navigateToQuestion(currentQuestionIndex - 1)
+         }
+
+         binding.questionsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                 super.onScrolled(recyclerView, dx, dy)
+
+                 // Check if the user is scrolling horizontally
+                 if (Math.abs(dx) > Math.abs(dy)) {
+                     val layoutManager = recyclerView.layoutManager as LinearLayoutManager
+                     val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
+                     if (firstVisibleItemPosition != currentQuestionIndex) {
+                         currentQuestionIndex = firstVisibleItemPosition
+                     }
+                 }
+             }
+         })
+     }*/
 
     private fun setupNavigation() {
         binding.nextQuestion.setOnClickListener {
@@ -120,13 +161,30 @@ class QuestionFragment : Fragment() {
                 if (Math.abs(dx) > Math.abs(dy)) {
                     val layoutManager = recyclerView.layoutManager as LinearLayoutManager
                     val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-                    if (firstVisibleItemPosition != currentQuestionIndex) {
-                        currentQuestionIndex = firstVisibleItemPosition
-                    }
+
+                    // Update the current question index
+                    currentQuestionIndex = firstVisibleItemPosition
+
+                    // Toggle the visibility of the buttons based on the current index
+                    toggleButtonVisibility()
                 }
             }
         })
     }
+
+    private fun toggleButtonVisibility() {
+        isPreviousButtonVisible = currentQuestionIndex > 0
+        isNextButtonVisible = currentQuestionIndex < totalQuestions - 1
+
+        // Always show both "Previous" and "Next" buttons/icons for the last question
+        if (currentQuestionIndex >= questions.size - 1) {
+            isPreviousButtonVisible = true
+            isNextButtonVisible = true
+        }
+        binding.previousQuestion.visibility = if (isPreviousButtonVisible) View.VISIBLE else View.GONE
+        binding.nextQuestion.visibility = if (isNextButtonVisible) View.VISIBLE else View.GONE
+    }
+
 
     private fun navigateToQuestion(index: Int) {
         if (index in 0 until questions.size) {
@@ -141,7 +199,7 @@ class QuestionFragment : Fragment() {
 
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-        transaction.replace(com.calmscient.R.id.flFragment, fragment)
+        transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
