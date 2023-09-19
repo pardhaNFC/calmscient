@@ -16,20 +16,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.fragments.ADUITQuestionFragment
+import com.calmscient.fragments.AUDITQuestionFragment
 import com.calmscient.fragments.DASTQuestionFragment
 import com.calmscient.fragments.GADQuestionFragment
 import com.calmscient.fragments.HistoryFragment
 import com.calmscient.fragments.QuestionFragment
-import com.calmscient.fragments.ResultsFragment
 import com.calmscient.fragments.ScreeningsCardItem
-import com.calmscient.fragments.ScreeningsFragment
 
 class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
     RecyclerView.Adapter<ScreeningsCardAdapter.CardViewHolder>() {
@@ -81,7 +77,7 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
                 }
 
                 2 -> {
-                    val fragment = ADUITQuestionFragment()
+                    val fragment = AUDITQuestionFragment()
                     activity.supportFragmentManager.beginTransaction()
                         .replace(R.id.flFragment, fragment)
                         .addToBackStack(null)

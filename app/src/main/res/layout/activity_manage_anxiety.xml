@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:fontFamily="@font/lexendregular"
-                        android:text="@string/lesson_intro"
+                        android:text="@string/introduction"
                         android:textColor="#424242"
                         android:textSize="@dimen/_16sdp" />
 

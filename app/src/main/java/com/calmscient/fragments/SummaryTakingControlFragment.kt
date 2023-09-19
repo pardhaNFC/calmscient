@@ -99,10 +99,10 @@ class SummaryTakingControlFragment : Fragment() {
         SummaryDataClasss.clear()
         SummaryDataClasss.addAll(
             listOf(
-                SummaryDataClasss(R.drawable.ic_alcoholfree, "Alcohol-Free", "30 days"),
-                SummaryDataClasss(R.drawable.ic_drinks, "Drinks", "60 counts"),
-                SummaryDataClasss(R.drawable.ic_argument1, "Argument","10"),
-                SummaryDataClasss(R.drawable.ic_accident1, "Accident",  "5"),
+                SummaryDataClasss(R.drawable.ic_alcoholfree, getString(R.string.alchol_free), "30 days"),
+                SummaryDataClasss(R.drawable.ic_drinks, getString(R.string.drinks), "60 counts"),
+                SummaryDataClasss(R.drawable.ic_argument1, getString(R.string.argument),"10"),
+                SummaryDataClasss(R.drawable.ic_accident1, getString(R.string.events_tracker_text3),  "5"),
             )
         )
         takingControlSummaryCardAdapter.notifyDataSetChanged()

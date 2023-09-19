@@ -12,30 +12,29 @@
 package com.calmscient.fragments
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.addCallback
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.CommonDialog
 import com.calmscient.adapters.QuestionAdapter
-import com.calmscient.databinding.FragmentGadQuestionsBinding
+import com.calmscient.databinding.FragmentADUITQuestionBinding
 import com.calmscient.utils.common.SavePreferences
 
-class GADQuestionFragment : Fragment() {
-
+class AUDITQuestionFragment : Fragment() {
     private lateinit var questionAdapter: QuestionAdapter
-    private lateinit var binding: FragmentGadQuestionsBinding
+    private lateinit var binding: FragmentADUITQuestionBinding
     lateinit var savePrefData: SavePreferences
+
     private var currentQuestionIndex = 0
     private var isPreviousButtonVisible = false
     private var isNextButtonVisible = true // Initially, show the next button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
@@ -48,34 +47,32 @@ class GADQuestionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentGadQuestionsBinding.inflate(inflater, container, false)
+        binding = FragmentADUITQuestionBinding.inflate(inflater, container, false)
         savePrefData = SavePreferences(requireContext())
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // Get the selected title from arguments
         val selectedTitle = arguments?.getString("selectedTitle")
-
         // Update your UI with the selected title
         if (!selectedTitle.isNullOrEmpty()) {
-            binding.tvGadtitle.text = selectedTitle
+            binding.titleTextView.text = selectedTitle
         }
-        val titleG = "GAD-7"
+        val titleA = "AUDIT"
         val questions: List<Question> = generateDummyQuestions()
         val totalQuestions = questions.size
-        questionAdapter = QuestionAdapter(requireContext(), questions, titleG)
+        questionAdapter = QuestionAdapter(requireContext(), questions, titleA)
         binding.questionsRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
         }
-// Create an instance of the CommonDialog class
+        // Create an instance of the CommonDialog class
         val commonDialog = CommonDialog(requireContext())
 
         // Show a dialog when the fragment is loaded
-        commonDialog.showDialog(getString(R.string.gad))
+        commonDialog.showDialog(getString(R.string.audit))
         // Use a PagerSnapHelper for snapping to a question's position
         val pagerSnapHelper = PagerSnapHelper()
         pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
@@ -89,69 +86,80 @@ class GADQuestionFragment : Fragment() {
         val questionsList = mutableListOf<Question>()
         if (savePrefData.getSpanLanguageState() == true) {
             val questionTexts = listOf(
-                "1. Se ha sentido nervioso(a), ansioso(a) o con los nervios de punta",
-                "2. No ha sido capaz de parar o controlar su preocupación",
-                "3. Se ha preocupado demasiado por motivos diferentes",
-                "4. Ha tenido dificultad para relajarse",
-                "5. Se ha sentido tan inquieto(a) que no ha podido quedarse quieto(a)",
-                "6. Se ha molestado o irritado fácilmente",
-                "7. Ha tenido miedo de que algo terrible fuera a pasar",
-                "8. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                "1. ¿Con qué frecuencia bebe un trago con contenido de alcohol?",
+                "2. ¿Cuántos tragos que contengan alcohol consume en un día típico cuando está bebiendo?",
+                "3. ¿Con qué frecuencia bebe cuatro o más tragos en una ocasión?",
+                "4. ¿Con qué frecuencia durante el último año se dio cuenta de que no pudo dejar de beber una vez que había empezado?",
+                "5. ¿Con qué frecuencia durante el último año ha dejado de hacer lo que normalmente se esperaba de usted debido a la bebida?",
+                "6. ¿Con qué frecuencia durante el último año ha necesitado un primer trago en la mañana para ponerse en acción después de una sesión de beber abundantemente?",
+                "7. ¿Con qué frecuencia durante el último año ha tenido una sensación de culpa o remordimiento después de beber?",
+                "8. ¿Con qué frecuencia durante el último año ha sido incapaz de recordar lo que pasó la noche anterior debido a su forma de beber?",
+                "9. ¿Usted o alguien más han resultado heridos debido a su forma de beber?",
+                "10. ¿Ha estado preocupado por su forma de beber o le ha sugerido que beba menos algún pariente, amigo, médico u otro trabajador de la atención a la salud?"
             )
+
             for (index in questionTexts.indices) {
                 val questionText = questionTexts[index]
-                val options = if (index == 7) {
-                    // Custom options for the 8th question
+                val options = if (index == 0) {
+                    // Custom options for the 1st question
                     listOf(
-                        "No es nada difícil",//Not difficult at all
-                        "Algo dificil",//Somewhat difficult
-                        "Very difficult", //Very difficult
-                        "Extremadamente difícil"//Extremely difficult
+                        "Nunca",
+                        "Una vez al mes o menos",
+                        "2-4 veces al mes",
+                        "2-3 veces por semana",
+                        "4 o más veces por semana"
                     )
+                } else if (index == 1) {
+                    // Custom options for the 2nd question
+                    listOf("0- 2", "3 o 4", "5 o 6", "7 - 9", "10 o más")
+                } else if (index == 8 || index == 9) {
+                    // Custom options for the 9th and 10th question
+                    listOf("No", "Sí, pero no en el último año", "Sí, en el último año")
                 } else {
                     // Default options for other questions
-                    listOf(
-                        "Ningún día",
-                        "Varios días",
-                        "Más de la mitad de los días",
-                        "Casi todos los días "
-                    )
+                    listOf("Nunca", "Menos de una vez al mes", "Mensualmente", "Semanalmente", "Diario o casi a diario")
                 }
                 questionsList.add(Question(questionText, options))
             }
-        } else {
+        }else{
             val questionTexts = listOf(
-                "1. Feeling nervous, anxious or on edge",
-                "2. Not being able to stop or control worrying",
-                "3. Worrying too much about different things",
-                "4. Trouble relaxing",
-                "5. Being so restless that it is hard to sit still",
-                "6. Becoming easily annoyed or irritable",
-                "7. Feeling afraid as if something awful might happen"
-                //"8. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                "1. How often do you have a drink containing alcohol?",
+                "2. How many standard drinks containing alcohol do you have on a typical day when drinking?",
+                "3. How often do you have six or more drinks on one occasion?",
+                "4. During the past year, how often have you found that you were not able to stop drinking once you had started?",
+                "5. During the past year, how often have you failed to do what was normally expected of you because of drinking?",
+                "6. During the past year, how often have you needed a drink in the morning to get yourself going after a heavy drinking session?",
+                "7. During the past year, how often have you had a feeling of guilt or remorse after drinking?",
+                "8. During the past year, how often have you been unable to remember what happened the night before because you had been drinking?",
+                "9. Have you or someone else been injured as a result of your drinking?",
+                "10. Has a relative or friend, doctor or other health worker been concerned about your drinking or suggested you cut down?"
             )
+
             for (index in questionTexts.indices) {
                 val questionText = questionTexts[index]
-                val options = if (index == 7) {
-                    // Custom options for the 8th question
+                val options = if (index == 0) {
+                    // Custom options for the 1st question
                     listOf(
-                        "Not difficult at all",
-                        "Somewhat difficult",
-                        "Very difficult",
-                        "Extremely difficult"
+                        "Never",
+                        "Monthly or less",
+                        "2-4 times a month",
+                        "2-3 times a week",
+                        "4 or more times a week"
                     )
+                } else if (index == 1) {
+                    // Custom options for the 2nd question
+                    listOf("1 or 2", "3 or 4", "5 or 6", "7 to 9", "10 or more")
+                } else if (index == 8 || index == 9) {
+                    // Custom options for the 9th and 10th question
+                    listOf("No", "Yes, but not in the past year", "Yes, during the past year")
                 } else {
                     // Default options for other questions
-                    listOf(
-                        "Not at all",
-                        "Several days",
-                        "More than half the days",
-                        "Nearly every day"
-                    )
+                    listOf("Never", "Less than monthly", "Monthly", "Weekly", "Daily or almost daily")
                 }
                 questionsList.add(Question(questionText, options))
             }
         }
+
 
         return questionsList
     }
@@ -160,14 +168,13 @@ class GADQuestionFragment : Fragment() {
         binding.nextQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex + 1)
         }
-
         binding.previousQuestion.setOnClickListener {
             navigateToQuestion(currentQuestionIndex - 1)
         }
-
         binding.questionsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
+
 
                 // Check if the user is scrolling horizontally
                 if (Math.abs(dx) > Math.abs(dy)) {
@@ -181,7 +188,6 @@ class GADQuestionFragment : Fragment() {
             }
         })
     }
-
 
     private fun navigateToQuestion(index: Int) {
         val questions: List<Question> = generateDummyQuestions()
@@ -224,5 +230,4 @@ class GADQuestionFragment : Fragment() {
             if (isPreviousButtonVisible) View.VISIBLE else View.GONE
         binding.nextQuestion.visibility = if (isNextButtonVisible) View.VISIBLE else View.GONE
     }
-
 }

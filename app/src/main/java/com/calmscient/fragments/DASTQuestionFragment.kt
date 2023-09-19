@@ -27,14 +27,16 @@ import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.databinding.FragmentADUITQuestionBinding
 import com.calmscient.databinding.FragmentDASTQuestionBinding
 import com.calmscient.databinding.FragmentGadQuestionsBinding
+import com.calmscient.utils.common.SavePreferences
+
 class DASTQuestionFragment : Fragment() {
     private lateinit var questionAdapter: QuestionAdapter
     private lateinit var binding: FragmentDASTQuestionBinding
-    private val questions: List<Question> = generateDummyQuestions()
+    lateinit var savePrefData: SavePreferences
+
     private var currentQuestionIndex = 0
     private var isPreviousButtonVisible = false
     private var isNextButtonVisible = true // Initially, show the next button
-    private val totalQuestions = questions.size
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +51,7 @@ class DASTQuestionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDASTQuestionBinding.inflate(inflater, container, false)
+        savePrefData = SavePreferences(requireContext())
         return binding.root
     }
 
@@ -62,6 +65,8 @@ class DASTQuestionFragment : Fragment() {
             binding.titleTextView.text = selectedTitle
         }
         val titleD = "DAST-10"
+        val questions: List<Question> = generateDummyQuestions()
+        val totalQuestions = questions.size
         questionAdapter = QuestionAdapter(requireContext(),questions,titleD)
         binding.questionsRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -82,24 +87,46 @@ class DASTQuestionFragment : Fragment() {
     }
     private fun generateDummyQuestions(): List<Question> {
         val questionsList = mutableListOf<Question>()
-        val questionTexts = listOf(
-            "1. Have you used drugs other than those required for medical reasons? ",
-            "2. Do you use more than one drug at a time?",
-            "3. Are you always able to stop using drugs when you want to?",
-            "4. Have you had \"blackouts\" or \"flashbacks\" as a result of drug use?",
-            "5. Do you ever feel bad or guilty about your drug use?",
-            "6. Does your spouse (or parents) ever complain about your involvement with drugs?",
-            "7. Have you neglected your family because of your use of drugs?",
-            "8. Have you engaged in illegal activities in order to obtain drugs?",
-            "9. Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?",
-            "10.  Have you had medical problems as a result of your drug use (e.g., memory loss, hepatitis, convulsions, bleeding, etc.)?"
-        )
+        if (savePrefData.getSpanLanguageState() == true) {
+            val questionTexts = listOf(
+                "1. ¿Ha utilizado medicamentos distintos de los necesarios por motivos médicos?",
+                "2. ¿Abusa de más de una droga a la vez?",
+                "3. ¿Puede dejar de consumir drogas cuando quiera?",
+                "4. ¿Ha experimentado pérdida temporal de la memoria o escenas retrospectivas como resultado del uso de drogas?",
+                "5. ¿En ocasiones se siente mal o culpable por su uso de drogas?",
+                "6. ¿Se quejan alguna vez su cónyuge (o padres) por su implicación con las drogas?",
+                "7. ¿Ha descuidado a su familia debido a su uso de drogas?",
+                "8. ¿Ha participado en actividades ilegales a fin de obtener drogas?",
+                "9. ¿Ha experimentado alguna vez síntomas de abstinencia (sentirse enfermo) cuando ha dejado de consumir drogas? ",
+                "10. ¿Ha tenido problemas médicos como resultado de su uso de drogas (por ejemplo, pérdida de memoria, hepatitis, convulsiones, hemorragias)?"
+            )
 
-        for (index in questionTexts.indices) {
-            val questionText = questionTexts[index]
-            val options = listOf("No","Yes")
-            questionsList.add(Question(questionText, options))
+            for (index in questionTexts.indices) {
+                val questionText = questionTexts[index]
+                val options = listOf("No","Sí")
+                questionsList.add(Question(questionText, options))
+            }
+        }else{
+            val questionTexts = listOf(
+                "1. Have you used drugs other than those required for medical reasons? ",
+                "2. Do you use more than one drug at a time?",
+                "3. Are you always able to stop using drugs when you want to?",
+                "4. Have you had \"blackouts\" or \"flashbacks\" as a result of drug use?",
+                "5. Do you ever feel bad or guilty about your drug use?",
+                "6. Does your spouse (or parents) ever complain about your involvement with drugs?",
+                "7. Have you neglected your family because of your use of drugs?",
+                "8. Have you engaged in illegal activities in order to obtain drugs?",
+                "9. Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?",
+                "10.  Have you had medical problems as a result of your drug use (e.g., memory loss, hepatitis, convulsions, bleeding, etc.)?"
+            )
+
+            for (index in questionTexts.indices) {
+                val questionText = questionTexts[index]
+                val options = listOf("No","Yes")
+                questionsList.add(Question(questionText, options))
+            }
         }
+
         return questionsList
     }
 
@@ -129,6 +156,8 @@ class DASTQuestionFragment : Fragment() {
 
 
     private fun navigateToQuestion(index: Int) {
+        val questions: List<Question> = generateDummyQuestions()
+        val totalQuestions = questions.size
         if (index in 0 until questions.size) {
             currentQuestionIndex = index
             binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
@@ -151,6 +180,8 @@ class DASTQuestionFragment : Fragment() {
     }
 
     private fun toggleButtonVisibility() {
+        val questions: List<Question> = generateDummyQuestions()
+        val totalQuestions = questions.size
         isPreviousButtonVisible = currentQuestionIndex > 0
         isNextButtonVisible = currentQuestionIndex < totalQuestions - 1
 

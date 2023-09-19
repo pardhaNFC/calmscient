@@ -8,7 +8,7 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="create_new_account">Create an new account</string>
     <string name="or">or</string>
-    <string name="happy_to_see_you">We are happy to see you</string>
+    <string name="happy_to_see_you">We are happy to see you.</string>
     <string name="hello">Hello</string>
     <string name="home">HOME</string>
     <string name="discovery">DISCOVERY</string>
@@ -100,6 +100,10 @@
     <string name="anxiety">Managing anxiety</string>
     <string name="stress">Changing your response to stress</string>
     <string name="control">Taking control</string>
+    <string name="alchol_free">Alcohol-Free</string>
+    <string name="drinks">Drinks</string>
+    <string name="argument">Argument</string>
+    <string name="drink_count">Drink Counts</string>
     <string name="terms">Accept <u>Terms and Conditions</u></string>
     <!--Emergency Resource Page strings-->
     <string name="emergency_resource">Emergency Resource</string>
@@ -651,7 +655,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="ok">Ok\n</string>
     <string name="taking_control_substance">Substance</string>
     <string name="taking_control_alcohol">Alcohol</string>
-    <string name="taking_control_alcoholfeedays">  Alcohol Fee Days</string>
+    <string name="taking_control_alcoholfeedays">Alcohol Free Days</string>
     <string name="taking_control_now">Now</string>
     <string name="taking_control_goal">Goal</string>
     <string name="taking_control_7_days">7 days</string>
@@ -663,4 +667,6 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="events_tracker_text1">HangOver</string>
     <string name="events_tracker_text2">Argument</string>
     <string name="events_tracker_text3">Accident</string>
+    <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
+
 </resources>

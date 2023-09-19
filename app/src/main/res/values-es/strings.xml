@@ -3,20 +3,20 @@
     <string name="app_name">Calmscient</string>
     <string name="splash_science">La ciencia de la calma</string>
     <string name="welcome_message">¡Bienvenido a mi aplicación!</string>
-    <string name="username">Nombre de usuario</string>
+    <string name="username">Usuario</string>
     <string name="password">Contraseña</string>
-    <string name="login">Acceso</string>
+    <string name="login">Login</string>
     <string name="forgot_password">Has olvidado tu contraseña</string>
     <string name="create_new_account">Crear una nueva cuenta</string>
     <string name="or">o</string>
-    <string name="happy_to_see_you">estamos felices de verte</string>
+    <string name="happy_to_see_you">Estamos felices de verte.</string>
     <string name="hello">Hola</string>
-    <string name="home">HOGAR</string>
-    <string name="discovery">DESCUBRIMIENTO</string>
+    <string name="home">Inicio</string>
+    <string name="discovery">Descubrimiento</string>
     <string name="discovery_lower">Descubrimiento</string>
-    <string name="exercises">EJERCICIOS</string>
+    <string name="exercises">Ejercicios</string>
     <string name="exercises_lower">Ejercicios</string>
-    <string name="rewards">RECOMPENSAS</string>
+    <string name="rewards">Recompensa</string>
     <string name="rewards_lower">Recompensas</string>
     <string name="my_medical_records">Mis registros médicos</string>
     <string name="weekly_summary">Resumen semanal</string>
@@ -29,12 +29,12 @@
     <string name="take_medic_morning">¿Tomaste tus medicamentos esta maňaňa?</string>
     <string name="hours_night">¿Cuántas horas dormiste anoche?</string>
     <string name="day_today">¿Cómo te ha ido?</string>
-    <string name="bad">MAL</string>
-    <string name="be_better">PODRÍA SER MEJOR</string>
-    <string name="fair">JUSTO</string>
+    <string name="bad">Mal</string>
+    <string name="be_better">Podría ser mejor</string>
+    <string name="fair">asi asi</string>
     <string name="good">Bueno</string>
-    <string name="excellent">EXCELENTE</string>
-    <string name="spend_time">Con quién pasate tiempo?</string>
+    <string name="excellent">Excelente</string>
+    <string name="spend_time">Con quién pasaste tiempo juntos?</string>
     <string name="family">FAMILIA</string>
     <string name="friends">AMIGOS</string>
     <string name="workmates">COMPAÑEROS DE TRABAJO</string>
@@ -45,10 +45,10 @@
     <string name="no">No</string>
     <string name="daily_journal">Diario</string>
     <string name="save">Guardar</string>
-    <string name="skip">Pasar</string>
+    <string name="skip">Omitir</string>
     <string name="medications">Medicamentos</string>
     <string name="upcoming_medical_appointments">Próximas Citas Médicas</string>
-    <string name="screenings">Proyecciones</string>
+    <string name="screenings">Exámenes</string>
     <string name="name">Nombre</string>
     <!--settings-->
     <string name="settings">Configuración</string>
@@ -56,12 +56,12 @@
     <string name="theme">Aspecto</string>
     <string name="dark_mode">Oscuro</string>
     <string name="language">Idioma</string>
-    <string name="english">Ingles</string>
-    <string name="spanish">Espanol</string>
-    <string name="asl">Hanbla de Seňa</string>
+    <string name="english">Inglés</string>
+    <string name="spanish">Español</string>
+    <string name="asl">Lenguaje de Seňas americano</string>
     <string name="notifications">Notificaciones</string>
     <string name="license_key">Licencia</string>
-    <string name="help_support">Ayuda &amp; Apoyo</string>
+    <string name="help_support">Ayuda &amp; Soporte</string>
     <string name="logout">cerrar sesión</string>
     <!--network errors-->
     <string name="network_connection_error">Se perdió la conexión a Internet, vuelva a intentarlo</string>
@@ -101,8 +101,8 @@
         La Línea Nacional de Ayuda para Desastres está disponible para cualquier persona que experimente angustia emocional relacionada con desastres naturales o causados por humanos.
         Llame o envíe un mensaje de texto al <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> para conectarse con un consejero capacitado y atento, las 24 horas del día, los 7 días de la semana, los 365 días del año.
 </string>
-    <string name="lets_begin_btn">vamos a empezar</string>
-    <string name="lets_begin_are_ready">Estas listo</string>
+    <string name="lets_begin_btn">Empezamos</string>
+    <string name="lets_begin_are_ready">¿Estás listo?</string>
     <string name="lets_begin">El descubrimiento de Calmscient será tan efectivo como usted lo haga. \nAsí que esté decidido a dedicar tiempo a seguir y completar los ejercicios. Cada sección tiene contenido interesante e informativo diseñado para mantenerlo pensando activamente en sus desafíos específicos. Pero, al igual que hacer un viaje por carretera a un destino desconocido, ¡deberás comprometerte a seguir el mapa! Puede que suponga un poco más de trabajo del que estás acostumbrado, pero al final dará sus frutos.</string>
     <string name="crisis_heading">Línea de texto de crisis</string>
     <string name="crisis_text">Envíe un mensaje de texto con MHA al 741741 y lo conectarán con un consejero de crisis capacitado. Crisis Text Line brinda soporte gratuito basado en texto las 24 horas del día, los 7 días de la semana.</string>
@@ -124,15 +124,19 @@
     <!--discovery-->
     <string name="anxiety">Manejo de la ansiedad</string>
     <string name="stress">Cambiar tu respuesta al estrés</string>
-    <string name="control">Tomando el control</string>
+    <string name="control">Tomar el control</string>
     <string name="next_appointments">Próximas citas</string>
     <string name="date_time">Fecha y Hora</string>
     <string name="contact">Contacto</string>
+    <string name="alchol_free">Ningún Alcohol</string>
+    <string name="drinks">Bebidas</string>
+    <string name="argument">Discusiones</string>
+    <string name="drink_count">Cantidad de bebida</string>
     <string name="address">Dirección</string>
     <string name="appointments_details">Detalles de la Cita</string>
     <string name="add_appointment">Agregar cita</string>
     <string name="your_history">Historia</string>
-    <string name="your_results">Tus resultados</string>
+    <string name="your_results">Tus Resultados</string>
     <string name="summary_takingcontrol">Resumen</string>
     <!--Anxiety-->
     <string name="manage_anxiety">Manejar la ansiedad</string>
@@ -157,7 +161,7 @@
     <string name="write_a_place">escribe un lugar</string>
 
     <!--Screenings-->
-    <string name="phq">Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado alguno de los siguientes problemas?</string>
+    <string name="phq">Durante las últimas dos semanas, ¿con qué frecuencia te ha molestado uno o más de los siguientes problemas?</string>
     <string name="gad">Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado alguno de los siguientes problemas?</string>
     <string name="audit">¿Disfruta de una bebida de vez en cuando? Muchos de nosotros lo hacemos, a menudo cuando socializamos con amigos y familiares. Echemos un vistazo a sus patrones de consumo de alcohol y cómo pueden afectar su salud. El cuestionario AUDIT está diseñado para ayudar en la autoevaluación del consumo de alcohol e identificar cualquier implicación para la salud y el bienestar de la persona, ahora y en el futuro.</string>
     <string name="dast">El uso de "drogas" se refiere a (1) el uso de medicamentos recetados o de venta libre que exceden las instrucciones y (2) cualquier uso no médico de drogas.\nLas diversas clases de drogas pueden incluir cannabis (marihuana, hachís) , disolventes (p. ej., diluyente de pintura), tranquilizantes (p. ej., Valium), barbitúricos, cocaína, estimulantes (p. ej., speed), alucinógenos (p. ej., LSD) o narcóticos (p. ej., heroína). Las preguntas no incluyen bebidas alcohólicas.\n\nResponda todas las preguntas. Si tiene dificultad con una declaración, elija la respuesta que sea mayormente correcta.</string>
@@ -191,8 +195,8 @@
 
     <!--Exrercises-->
     <string name="mindfulness_exercises">Atención plena – ¿Qué es?</string>
-    <string name="butterflyhug_exercises">El tacto y el abrazo de mariposa</string>
-    <string name="handover_esxercises">Entrega tu oído</string>
+    <string name="butterflyhug_exercises">El tapping y el abrazo de mariposa</string>
+    <string name="handover_esxercises">Las manos sobre el corazon</string>
     <string name="mindfulwalking_exercises">Caminar conscientemente</string>
     <string name="dance_exercises">Movimiento: Danza</string>
     <string name="running_exercises">Movimiento: correr</string>
@@ -359,7 +363,7 @@
 
     <!--butterfly_hug Screens Exercises-->
 
-    <string name="butterflyScreen1_text1">Los humanos responden poderosamente al tacto. Un toque suave y afectuoso ayuda a calmar el sistema nervioso y puede desencadenar la liberación de oxitocina, la hormona del apego. Curiosamente, cuando se trata de liberar oxitocina, nuestros cuerpos no diferencian entre el toque de un ser querido o el nuestro propio toque mientras nos abrazamos.\n</string>
+    <string name="butterflyScreen1_text1">Los humanos responden poderosamente al tacto. Un toque suave y afectuoso ayuda a calmar el sistema nervioso y puede desencadenar la liberación de oxitocina, la hormona del apego. Curiosamente, cuando se trata de liberar oxitocina, nuestros cuerpos no diferencian entre el tapping de un ser querido o el nuestro propio toque mientras nos abrazamos.\n</string>
     <string name="butterflyScreen1_text2">Cuando se sienta molesto, desconectado, agitado o irritable, intente darse un abrazo o una caricia suave en la mejilla y observe cómo afecta su forma de sentir.</string>
     <string name="butterflyScreen2_text1">Entrelaza tus pulgares para formar una mariposa.</string>
     <string name="butterflyScreen2_text2">Coloque ambas manos sobre su pecho y, alternativamente, golpee con el dedo medio justo debajo de la clavícula.</string>
@@ -437,15 +441,15 @@
     <string name="update_time_alarm">Actualizar hora y alarmaa</string>
     <string name="phq_heading">PHQ-9</string>
     <string name="gad_heading">GAD-7</string>
-    <string name="audit_heading">AUDITORÍA</string>
+    <string name="audit_heading">AUDIT</string>
     <string name="dast_heading">DAST-10</string>
     <string name="sbirt_heading">SBIRT</string>
     <string name="remind_me">Recuerdame</string>
     <string name="weekly">Semanalmente</string>
-    <string name="score">Puntuación marcada</string>
+    <string name="score">La nota marcada</string>
     <string name="total_score">Puntaje total</string>
     <string name="more_info">Más información</string>
-    <string name="more_desc_1">Esta evaluación se basa en el Cuestionario de salud del paciente (PHQ), que es una versión autoadministrada del instrumento de diagnóstico PRIME-MD para trastornos mentales comunes.\n\nPHQ9 Copyright © Pfizer Inc. Todos los derechos reservados. Reproducido con permiso. PRIME-MD® es una marca comercial de Pfizer Inc.</string>
+    <string name="more_desc_1">Esta evaluación se basa en el Cuestionario de La salud del Paciente(PHQ-9). Una versión autoadministrada del instrumento de diagnóstico PRIME MD para trastornos mentales comunes</string>
     <string name="learn_more">Aprende más</string>
     <string name="taking_control">Tomando el control</string>
     <string name="summary">Resumen</string>
@@ -624,7 +628,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="count_text">contar</string>
     <string name="drink_tracker">Rastreador de bebidas</string>
     <string name="how_to_do">CÓMO HACERLO</string>
-    <string name="lesson_intro">Introduction</string>
+    <string name="lesson_intro">Introducción</string>
     <string name="lesson">Lección 1</string>
     <string name="lesson_2">Lección 2</string>
     <string name="lesson_3">Lección 3</string>
@@ -635,7 +639,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
 
     <string name="taking_control_substance">Sustancia</string>
     <string name="taking_control_alcohol">Alcohol</string>
-    <string name="taking_control_alcoholfeedays">Días de tarifa de alcohol</string>
+    <string name="taking_control_alcoholfeedays">Días sin alcohol</string>
     <string name="taking_control_now">Ahora</string>
     <string name="taking_control_goal">Meta</string>
     <string name="taking_control_7_days">7 días</string>
@@ -643,8 +647,10 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="taking_control_drink_count">La bebida cuenta</string>
     <string name="taking_control_60_days">60 días</string>
     <string name="taking_control_texttile">Trabaja tus fortalezas</string>
-    <string name="taking_control_text">Haga algo en lo que sea bueno para desarrollar la confianza en sí mismo y luego aborde una tarea más difícil.</string>
+    <string name="taking_control_text">Haz algo que puedas hacer bien, para fortalecer o reforzar tu confianza en ti mismo. Luego, intenta hacer una tarea o actividad más difícil.</string>
     <string name="events_tracker_text1">Resaca</string>
     <string name="events_tracker_text2">Argumento</string>
     <string name="events_tracker_text3">Accidente</string>
+    <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
+
 </resources>

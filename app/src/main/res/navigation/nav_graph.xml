@@ -78,7 +78,7 @@
     </fragment>
     <fragment
         android:id="@+id/ADUITQuestionFragment"
-        android:name="com.calmscient.fragments.ADUITQuestionFragment"
+        android:name="com.calmscient.fragments.AUDITQuestionFragment"
         android:label="fragment_a_d_u_i_t_question"
         tools:layout="@layout/fragment_a_d_u_i_t_question" >
         <action
