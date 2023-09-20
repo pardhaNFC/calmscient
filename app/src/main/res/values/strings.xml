@@ -668,5 +668,18 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="events_tracker_text2">Argument</string>
     <string name="events_tracker_text3">Accident</string>
     <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
+    <!--    Dancing Exercise-->
+    <string name="dancingexercise_titletext">Movement: Dance</string>
+    <string name="dancingexercises_text">Moving your body to music can be a fun and fast way to shift your state and reconnect with your body, rhythm and expression.</string>
+
+
+    <!-- Running Exercise-->
+    <string name="runningexercise_titletext">Movement: Running</string>
+    <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
+
+
+    <!--bodymovemet Exercise-->
+    <string name="bodymovementexercise_titletext">Mindful Body Movement</string>
+
 
 </resources>

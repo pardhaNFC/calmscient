@@ -199,7 +199,7 @@
     <string name="handover_esxercises">Las manos sobre el corazon</string>
     <string name="mindfulwalking_exercises">Caminar conscientemente</string>
     <string name="dance_exercises">Movimiento: Danza</string>
-    <string name="running_exercises">Movimiento: correr</string>
+    <string name="running_exercises">Movimiento: Correr</string>
     <string name="body_moment_exercies">Movimiento corporal consciente</string>
     <string name="deepbreathing_exercises">Respiración profunda</string>
     <string name="musclerelaxation_exercises">Relajación muscular progresiva</string>
@@ -386,8 +386,8 @@
 </string>
 
     <!--    Dancing Exercise-->
-    <string name="dancingexercise_titletext">Movimiento: Danza</string>
-    <string name="dancingexercises_text">Mover tu cuerpo al ritmo de la música puede ser una forma divertida y rápida de cambiar tu estado y reconectarte con tu cuerpo, ritmo y expresión.</string>
+    <string name="dancingexercise_titletext">Movimiento: Baile</string>
+    <string name="dancingexercises_text">Mover tu cuerpo al ritmo de la música puede ser una forma divertida y rápida de cambiar tu estado y reconectar con tu cuerpo, ritmo y expresión.</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_text">Existen muchas rutinas de movimiento que te invitan a reconectar con tu cuerpo. Pilates, yoga y otros ejercicios de estiramiento similares incorporan una conciencia consciente de los movimientos y posturas. Además, coordinar el movimiento del cuerpo y la respiración potencia aún más su capacidad para cambiar su estado.</string>
     <!--deepBreathingExercise-->
@@ -652,5 +652,13 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="events_tracker_text2">Argumento</string>
     <string name="events_tracker_text3">Accidente</string>
     <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
+
+    
+    <!-- Running Exercise-->
+    <string name="runningexercise_titletext">Movimiento: Correr</string>
+    <string name="runningexercises_text">No es fácil moverse cuando te sientes apagado o entumecido. Correr puede cambiar rápidamente tu estado de desconexión y volver a darte energías .</string>
+
+    <!--bodymovemet Exercise-->
+    <string name="bodymovementexercise_titletext">Movimiento Corporal con la conciencia plena</string>
 
 </resources>
