@@ -668,13 +668,13 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="events_tracker_text1">HangOver</string>
     <string name="events_tracker_text2">Argument</string>
     <string name="events_tracker_text3">Accident</string>
-    <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
+    <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
 
     <!-- Running Exercise-->
     <string name="runningexercise_titletext">Movement: Running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-
+    <string name="version">Version 1.9</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful Body Movement</string>
     <!--summary of sleep-->

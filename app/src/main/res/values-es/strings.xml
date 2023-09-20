@@ -657,8 +657,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="events_tracker_text1">Resaca</string>
     <string name="events_tracker_text2">Argumento</string>
     <string name="events_tracker_text3">Accidente</string>
-    <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
-
+    <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
     <!-- Running Exercise-->
     <string name="runningexercise_titletext">Movimiento: Correr</string>
     <string name="runningexercises_text">No es fácil moverse cuando te sientes apagado o entumecido. Correr puede cambiar rápidamente tu estado de desconexión y volver a darte energías .</string>
@@ -675,11 +674,12 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="title_response_to_stress">RESPUESTA AL ESTRÉS</string>
     <string name="nora">NORA</string>
     <string name="austin">AUSTIN</string>
+    <string name="version">Versión 1.9</string>
 
     <!--summary of sleep-->
-    <string name="chart_sleep_avg_sleep_score">Puntuación media del sueño</string>
-    <string name="chart_sleep_moresleepneeded">Se necesita más sueño</string>
-    <string name="chart_sleep_mosthours_slept">Mayor cantidad de horas dormidas</string>
-    <string name="chart_sleep_avghours_slept">Horas promedio dormidas</string>
+    <string name="chart_sleep_avg_sleep_score">Puntuación de sueño promedio</string>
+    <string name="chart_sleep_moresleepneeded">Necesitas más sueño</string>
+    <string name="chart_sleep_mosthours_slept">Horas dormidas más largas</string>
+    <string name="chart_sleep_avghours_slept">Horas prometido de sueño</string>
     <string name="chart_sleep_leaset_hours_slept">Menos horas dormidas</string>
 </resources>
