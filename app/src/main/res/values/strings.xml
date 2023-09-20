@@ -149,6 +149,7 @@
     <string name="calming_body">Calming the body</string>
     <string name="anxiety_worry">Anxiety and worry</string>
     <string name="moral_deficiency">Moral deficiency</string>
+    <string name="moral_deficiency_anxiety">Moral deficiency or anxiety?</string>
     <string name="anxiety_hide">Where can anxiety hide?</string>
     <string name="postpone_worry">Learn to postpone your worry</string>
     <string name="anxious_mind">Calming your anxious mind</string>
@@ -668,10 +669,6 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="events_tracker_text2">Argument</string>
     <string name="events_tracker_text3">Accident</string>
     <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
-    <!--    Dancing Exercise-->
-    <string name="dancingexercise_titletext">Movement: Dance</string>
-    <string name="dancingexercises_text">Moving your body to music can be a fun and fast way to shift your state and reconnect with your body, rhythm and expression.</string>
-
 
     <!-- Running Exercise-->
     <string name="runningexercise_titletext">Movement: Running</string>
@@ -680,6 +677,17 @@ The most important thing is to do it! Do you have some time today to get started
 
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful Body Movement</string>
+    <!--summary of sleep-->
+    <string name="chart_sleep_avg_sleep_score">Average Sleep Score</string>
+    <string name="chart_sleep_moresleepneeded">More Sleep Needed</string>
+    <string name="chart_sleep_mosthours_slept">Most Hours Slept</string>
+    <string name="chart_sleep_avghours_slept">Average Hours Slept</string>
+    <string name="chart_sleep_leaset_hours_slept">Least Hours Slept</string>
 
+    <!--    summary-->
+    <string name="summary_alcohol_free">Alcohol-Free</string>
+    <string name="summary_drinks">Drinks</string>
+    <string name="summary_argument">Alcohol-Free</string>
+    <string name="summary_accident">Accident</string>
 
 </resources>

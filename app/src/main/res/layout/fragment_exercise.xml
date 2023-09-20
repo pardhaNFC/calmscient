@@ -195,7 +195,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lexendregular"
                                 android:padding="@dimen/_5sdp"
-                                android:text="@string/handover_esxercises"
+                                android:text="@string/handoveryourHeart_titletext"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_11sdp" />
                         </RelativeLayout>
@@ -271,7 +271,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lexendregular"
                                 android:padding="@dimen/_5sdp"
-                                android:text="@string/dance_exercises"
+                                android:text="@string/dancingexercise_titletext"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_11sdp" />
                         </RelativeLayout>
@@ -314,7 +314,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lexendregular"
                                 android:padding="@dimen/_5sdp"
-                                android:text="@string/running_exercises"
+                                android:text="@string/runningexercise_titletext"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_11sdp" />
 
@@ -349,7 +349,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/lexendregular"
                                 android:padding="@dimen/_5sdp"
-                                android:text="@string/body_moment_exercies"
+                                android:text="@string/bodymovementexercise_titletext"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_11sdp" />
                         </RelativeLayout>

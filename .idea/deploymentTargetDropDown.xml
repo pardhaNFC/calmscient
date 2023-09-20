@@ -6,8 +6,8 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="SERIAL_NUMBER" />
-            <value value="2ef7f506" />
+            <type value="VIRTUAL_DEVICE_PATH" />
+            <value value="C:\Users\PardhaSaradhiDevinen\.android\avd\Pixel_6_API_33.avd" />
           </Key>
         </deviceKey>
       </Target>

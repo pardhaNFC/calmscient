@@ -56,7 +56,7 @@ class DiscoveryFragment : Fragment() {
         }
         binding.manageAnxietyCard.setOnClickListener {
             //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(requireActivity(),BeginManageAnxietyActivity::class.java))
+            loadFragment(BeginManageAnxietyFragment())
         }
         binding.upcomingsMedicalAppointmentsCard.setOnClickListener {
             /*val bottomSheetFragment = BottomSheetFragment()

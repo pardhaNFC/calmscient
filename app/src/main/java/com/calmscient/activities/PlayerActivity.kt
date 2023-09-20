@@ -26,6 +26,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.calmscient.R
+import com.calmscient.utils.common.SavePreferences
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
@@ -45,6 +46,7 @@ class PlayerActivity : AppCompatActivity() {
     lateinit var title: TextView
     lateinit var dialogText: String
     lateinit var dialog_img: ImageView
+    lateinit var savePrefData: SavePreferences
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +56,7 @@ class PlayerActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        savePrefData = SavePreferences(this)
         playerView = findViewById(R.id.playerViewLayout)
         favoritesIcon = findViewById(R.id.favoritesIcon)
         heading = findViewById(R.id.headingTextView)
@@ -82,7 +85,14 @@ class PlayerActivity : AppCompatActivity() {
             player.setMediaItem(mediaItem)
             player.playWhenReady = true
             // player.prepare()
-
+            if(savePrefData.getAslLanguageState() == true)
+            {
+                heading.visibility = View.GONE
+            }
+            else
+            {
+                heading.visibility = View.VISIBLE
+            }
             heading.text = headingText
             summary.text = summaryText
             title.text = headingText
@@ -121,6 +131,14 @@ class PlayerActivity : AppCompatActivity() {
                 dialog_img.visibility = View.GONE
             }else{
                 dialog_img.visibility = View.VISIBLE
+            }
+            if(savePrefData.getAslLanguageState() == true)
+            {
+                heading.visibility = View.GONE
+            }
+            else
+            {
+                heading.visibility = View.VISIBLE
             }
             heading.text = headingText
             summary.text = summaryText

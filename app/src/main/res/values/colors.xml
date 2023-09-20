@@ -17,6 +17,7 @@
     <color name="example_7_calendar">#E8E7F4</color>
     <color name="btn_gradient_color">#6E6BB3</color>
     <color name="alphabet_color">#F48383</color>
+    <color name="grey_light_dark">#9B9B9B</color>
 
     <color name="colorPrimary">#272D6B</color>
     <color name="colorPrimaryDark">#002763</color>

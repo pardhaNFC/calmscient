@@ -185,7 +185,7 @@ class FastPaceActivity : AppCompatActivity(){
         val closeButton = dialogView.findViewById<ImageButton>(R.id.closeButton)
 
         // Retrieve the dialogText from intent extras
-        val dialogText = "Great! \nYou’ve taken some positive action, and that’s a bigger deal than you might think.\n"
+        val dialogText = getString(R.string.fast_pase_card2_text3)
 
         // Set the content of the dialog using dialogText
         infoTextView.text = dialogText

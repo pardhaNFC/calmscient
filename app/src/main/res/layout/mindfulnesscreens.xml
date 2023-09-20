@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".activities.MindfulnessExercisesActivity"
     tools:ignore="MissingDefaultResource">
     <LinearLayout
         android:layout_width="match_parent"
@@ -129,7 +128,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_16sdp">
 
             <ImageView

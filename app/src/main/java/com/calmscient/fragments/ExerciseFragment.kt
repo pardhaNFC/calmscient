@@ -51,8 +51,7 @@ class ExerciseFragment:Fragment() {
         binding = FragmentExerciseBinding.inflate(inflater, container, false)
         binding.mindfulnessExerciseCard.setOnClickListener {
             // Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
-            val intent = Intent(activity, MindfulnessExercisesActivity::class.java)
-            startActivity(intent)
+            loadFragment(MindfulnessExercisesFragment())
         }
         binding.handOverYourHeartCard.setOnClickListener {
             loadFragment(HandOverYourHeartFragment())
