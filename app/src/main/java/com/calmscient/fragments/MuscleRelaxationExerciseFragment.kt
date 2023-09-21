@@ -100,8 +100,10 @@ class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListe
                     mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
                 }else if(savePrefData.getSpanLanguageState() == true){
                     mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+with+music+Spanish.wav")
+                }else{
+                    mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
                 }
-                    mediaPlayer.prepareAsync()
+                mediaPlayer.prepareAsync()
                 mediaPlayer.setOnPreparedListener { mp ->
                     // Dismiss the buffering dialog when the media player is prepared
                     //loadingDialog.dismiss()

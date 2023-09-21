@@ -105,7 +105,6 @@ MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
                     mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+Spanish.mp3")
                 } else {
                     mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
-
                 }
                 mediaPlayer.prepareAsync()
                 mediaPlayer.setOnPreparedListener { mp ->

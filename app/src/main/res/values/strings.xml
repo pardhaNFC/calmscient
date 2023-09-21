@@ -1,3 +1,4 @@
+<!--
 <resources>
     <string name="app_name">calmscient</string>
     <string name="splash_science">The Science of Calm</string>
@@ -52,7 +53,7 @@
     <string name="add_appointment">Add Appointment</string>
     <string name="plz_confirm">Please confirm.</string>
     <string name="exit_app">Are you want to exit the app?</string>
-    <!--network errors-->
+    &lt;!&ndash;network errors&ndash;&gt;
     <string name="network_connection_error">Internet connection lost, please retry again</string>
     <string name="network_default_error">Something wrong happened, please retry again</string>
     <string name="network_internal_error">Our systems got an error, please retry again</string>
@@ -72,7 +73,7 @@
     <string name="dosage">Dosage</string>
     <string name="tabletsPerDay">2 tablets per day</string>
     <string name="direction">Direction</string>
-    <!--settings-->
+    &lt;!&ndash;settings&ndash;&gt;
     <string name="settings">Settings</string>
     <string name="profile">Profile</string>
     <string name="theme">Theme</string>
@@ -96,7 +97,7 @@
     <string name="morning">Morning</string>
     <string name="evening">Evening</string>
     <string name="cancel">Cancel</string>
-    <!--discovery-->
+    &lt;!&ndash;discovery&ndash;&gt;
     <string name="anxiety">Managing anxiety</string>
     <string name="stress">Changing your response to stress</string>
     <string name="control">Taking control</string>
@@ -105,7 +106,7 @@
     <string name="argument">Argument</string>
     <string name="drink_count">Drink Counts</string>
     <string name="terms">Accept <u>Terms and Conditions</u></string>
-    <!--Emergency Resource Page strings-->
+    &lt;!&ndash;Emergency Resource Page strings&ndash;&gt;
     <string name="emergency_resource">Emergency Resource</string>
     <string name="doctor_name">Dr. Samuel Parker</string>
     <string name="hospital_name">Central Park Hospital</string>
@@ -139,7 +140,7 @@
     <string name="glossary">Glossary</string>
     <string name="torch_national"><u>US National Institute of Health American Psychological Association Stanford University</u></string>
     <string name="torch_phq">PHQ9 Copyright \u00a9 Pfizer Inc. All rights reserved.Reproduced with permission. PRIME-MD \u00AE is a trademark of Pfizer Inc.</string>
-    <!--Anxiety-->
+    &lt;!&ndash;Anxiety&ndash;&gt;
     <string name="manage_anxiety">Manage anxiety</string>
     <string name="managing_anxiety">Managing anxiety</string>
     <string name="introduction">Introduction</string>
@@ -160,7 +161,7 @@
     <string name="anxiety_sleep">Anxiety and Sleep</string>
     <string name="anxiety_alcohol">Anxiety &amp; Alcohol/Substances</string>
     <string name="managing_stress">Managing stress to reduce anxiety</string>
-    <!--lesson1.2-->
+    &lt;!&ndash;lesson1.2&ndash;&gt;
     <string name="title_toolbar_pace">Get yourself out of “fast pace cycle</string>
     <string name="title_pace">We are all stressed out…</string>
     <string name="desc_one_pace">Most of us work too much, schedule too much, and hear about too many negative events in the world. Sometimes, you can’t avoid any of it. </string>
@@ -168,6 +169,699 @@
     <string name="checkbox_pace">Choose a time and place to devote to this mental wellness discovery..</string>
     <string name="title_third_pace">What should you do during these 15 minutes?</string>
     <string name="desc_third_one_pace">During this course, you’ll be given lots of positive and productive things to think about. During each 15 minute session, set a timer on your phone so you can responsibly disconnect from the other things you might have scheduled. In your mind, shut the door on all the noisy thoughts you may be used to and enjoy the time you’ve dedicated toward improving your mental health. </string>
+    <string name="title_third_two_pace">Make sure to set a reminder for the time and place you specified above.</string>
+
+    <string name="set_reminder">Set reminder:</string>
+    <string name="set_timer">Set timer:</string>
+    <string name="other">Other?</string>
+    <string name="write_a_place">Write a place</string>
+
+    &lt;!&ndash;Screenings&ndash;&gt;
+    <string name="phq">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
+    <string name="gad">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
+    <string name="audit">Do you enjoy a drink now and then\nMany of us do, often when socializing with friends and family. Lets take a look at your drinking patterns and how they may affect your health.\nThe AUDIT questionnaire is designed to help in the self-assessment of alcohol consumption and to identify any implications for the persons health and well being, now and in the future.</string>
+    <string name="dast">Drug use refers to the use of prescribed or over‐the‐counter drugs in excess of the directions, and any non medical use of drugs.
+        \nThe various classes of drugs may include cannabis , solvents , tranquilizers, barbiturates, cocaine, stimulants, hallucinogens or narcotics . The questions do not include alcoholic beverages.\nPlease answer every question. If you have difficulty with a statement, then choose the response that is mostly right.</string>
+
+    <string name="afternoon">Afternoon</string>
+    <string name="add_time_alarm">Add Time &amp; Alarm</string>
+    <string name="page_1.1">DID YOU KNOW?</string>
+    <string name="page_2_1">What is anxiety?</string>
+    <string name="lets_begin_btn">Let\'s begin!</string>
+    <string name="lets_begin_are_ready">Are you ready?</string>
+    <string name="lets_begin">The Calmscient discovery will only be as effective as you make it. \nSo be determined to dedicate time to following along and completing the exercises. Each section has interesting and informative content that is designed to keep you actively thinking about your specific challenges. But, like taking a road trip to an unknown destination, you’ll need to be committed to following the map! It may be a little more work than you’re used to, but it will absolutely pay off in the end.</string>
+    <string name="page_7.1"><font color="#6E6BB3">If a person could simply “remember” past experiences,</font></string>
+    &lt;!&ndash; lesson 1&ndash;&gt;
+    <string name="lesson1_video_summary">
+        Anxiety is a normal brain response to stress. The Fight, Flight, and Freeze responses help us meet the demands of potential threats. Things that can cause anxiety are:<br />
+        \n
+        &#8226; Encountering past threats\n
+        &#8226; Unknown risks, changes, or results\n
+        &#8226; Lack of skill or support\n
+        Our nervous system is not broken! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.
+</string>
+
+    <string name="lesson1_video1_description">
+    Our brain is like a computer. It has a basic operating system that helps us deal with the normal, day-to-day tasks and complexities of life. But when it detects a threat that can interrupt or damage normal operation, an alarm activates that immediately alerts us to the danger.\n\n
+    You can imagine why this “Threat Alert” in our nervous system always takes priority. It’s so that we can get back to normal operations as quickly as possible. When this threat system is triggered, stress responses such as Fight/Flight/Freeze are activated. Stress hormones, such as adrenaline and cortisol, flood our system in order to meet the demands of the danger. Intense emotions, such as anxiety, fear and feeling overwhelmed, can overtake our mind.\n\n
+    Understandably, general brain functions slow down or may be put “on hold” until the danger is taken care of. This is why we might feel that our thinking capacity diminishes when we are experiencing anxiety. Our “Threat Alert” system is an important part of our brain function, but when it is constantly engaged, enjoying life or having a full sense of self becomes difficult and may even feel out of reach.\n\n
+    What are some things that can activate our “Threat Alert” system? They can be:\n
+    …the thought that we might encounter situations or people that threatened us in the past.\n
+    …unknown risks, unknown changes or unknown results when making a decision.\n
+    …facing a challenging situation that we don’t think we have enough skills or support to overcome.\n\n
+    Remember: anxiety is a normal brain response to stress. Our nervous system is not broken and there is nothing wrong with us when we feel anxious! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.\n
+</string>
+    <string name="lesson4_video1_description">
+                A calm mind can only start with a calm body. Why is that?\n\n
+        Remember: anxiety is our body’s response to danger, whether real or imagined. So if we can control our body, we can suppress our mind from responding with overwhelming worry and rumination.\n\n
+        The very beginning of anxiety starts with “body sensations”. As soon as we perceive them, we will learn to “press pause”, so to speak. Our goal is to lower our stress hormones and this will result in stabilizing our nervous system.\n
+        Some of the best techniques include exercises for mindful breathing, progressive muscle relaxation, body movement and resource installation.\n\n
+        These exercises will calm your stress response and give you the space to handle anxious thoughts and build healthy behaviors. This will result in physical and emotional betterment.\n\n
+        Why don’t you practice some of these exercises for ten minutes every morning or right before bedtime? The key is consistency so that your body learns what it feels like to have a calm nervous system.\n\n
+</string>
+
+    &lt;!&ndash;Exrercises&ndash;&gt;
+
+    <string name="mindfulness_exercises">Mindfulness – What is it?</string>
+    <string name="butterflyhug_exercises">Touch and the Butterfly Hug</string>
+    <string name="handover_esxercises">Hand Over Your Heart</string>
+    <string name="mindfulwalking_exercises">Mindful Walking</string>
+    <string name="dance_exercises">Movement: Dance</string>
+    <string name="running_exercises">Movement: Running</string>
+    <string name="body_moment_exercies">Mindful Body Movement</string>
+    <string name="deepbreathing_exercises">Deep breathing</string>
+    <string name="musclerelaxation_exercises">Progressive Muscle Relaxation</string>
+    &lt;!&ndash;    Exercise_items&ndash;&gt;
+    <string name="screen1">Have you ever caught your mind wandering or daydreaming while you are in the middle of a familiar or repetitive task? You could be walking, working or even driving your car, and your mind is miles away, perhaps fantasizing about going on vacation, thinking about your to-do list, or worrying about some upcoming event. In either case, you are not focusing on the current situation and not in touch with the ‘here and now’.  This mode of operation is often referred to as automatic pilot.</string>
+    <string name="screen2">Mindfulness is the opposite of automatic pilot. It is about experiencing the world that is firmly in the ‘here and now’. This is referred to as the being mode. It liberates you from automatic and unhelpful thoughts and responses.</string>
+    <string name="screen3_heading">How does mindfulness help with anxiety?</string>
+    <string name="screen3_belowheading">When we allow our brain to enter automatic pilot mode too often, it can be at risk of being conditioned to be overly preoccupied about the future, past experiences or our emotions in negative ways. If we have fallen into this old and unhelpful habit, we can unlearn it and replace it with skills that help us resist ‘buying into’ automatic worry and anxiety. </string>
+    <string name="screen4">Mindfulness reminds us that we don’t have to take immediate control of, remove or fix unpleasant experiences. Instead, we can identify and actively engage in something that will give us a sense of safety and connection.</string>
+    <string name="screen5">As a simple example: Instead of focusing on how many miles you walked in the morning, can you be mindfully aware of the birds singing, actively feel the fresh air, and sense the changing of the season? When you connect your senses to nature, animals, people and your own body, you capture the attention of your nervous system, which in turn soothes your anxiety. When you return home, you will be in a better frame of mind and more prepared to face your day.</string>
+    <string name="screen6">Which mindfulness exercises would you like to make part of your daily routine? Calmscient can remind you of some easy mindfulness routines that will help you stay in a healthy, being mode.</string>
+
+    &lt;!&ndash;butterfly_hug Screens Exercises&ndash;&gt;
+
+    <string name="butterflyScreen1_text1">Humans respond powerfully to touch. Gentle, affectionate touch helps calm the nervous system and can trigger the release of oxytocin, the attachment hormone. Interestingly, when it comes to releasing oxytocin, our bodies don’t differentiate between the touch of a loved one or our own touch as we hold ourselves.\n </string>
+    <string name="butterflyScreen1_text2">When you are feeling upset, ungrounded, agitated or irritable, try giving yourself a hug or a gentle stroke on the cheek and see how it impacts the way you feel.</string>
+    <string name="butterflyScreen2_text1">Interlock your thumbs to form a butterfly shape</string>
+    <string name="butterflyScreen2_text2">Place both hands over your chest, and alternate tapping your middle finger just below your collarbone</string>
+    <string name="butterflyScreen2_text3">Breathe slowly and deeply (abdominal breathing) while you mentally observe what is going through your mind and body—thoughts, images, sounds, odors, feelings, and physical sensation.</string>
+
+    &lt;!&ndash;    Hand over your heart Exercise&ndash;&gt;
+    <string name="handoveryourHeart_titletext">Hand Over Your Heart</string>
+    <string name="handoveryourHeart_text">HOW TO DO IT</string>
+    <string name="handoveryourHeart_text_desc">&#8226; Rest the heel of your hand on your sternum around your heart area.<br />\n
+    &#8226; Apply a steady, gentle, but firm pressure.<br />\n
+    &#8226; For added effect, you can place your other hand across your forehead or on your abdomen.<br />\n
+    &#8226; Experiment with the various placements and wait until you feel a shift. It may take up to 5 or 10 minutes of deep breathing in this position to shift if you are very activated.</string>
+
+    &lt;!&ndash;    Dancing Exercise&ndash;&gt;
+    <string name="dancingexercise_titletext">Movement: Dance</string>
+    <string name="dancingexercises_text">Moving your body to music can be a fun and fast way to shift your state and reconnect with your body, rhythm and expression.</string>
+    &lt;!&ndash;bodymovemet Exercise&ndash;&gt;
+    <string name="bodymovementexercise_text">There are many movement routines that invite you to reconnect with your body. Pilates, yoga and other similar stretching exercises incorporate mindful awareness of movements and postures. Additionally, coordinating body movement and breath further potentiates your ability to shift your state.</string>
+    &lt;!&ndash;deepBreathingExercise&ndash;&gt;
+    <string name="deepbreathingexercise_text">Find a comfortable and quiet place to sit or lie down. You can also practice deep breathing while standing, but ensure you have proper balance and support. </string>
+    &lt;!&ndash;Anxiety cards introduction 1 &ndash;&gt;
+    <string name="anxiety_card1_text1">DID YOU KNOW?</string>
+    <string name="anxiety_card1_text2">An estimated <font color="#6E6BB3">31.1% of U.S. adults</font> experience any anxiety disorder at some time in their lives.</string>
+    <string name="anxiety_card1_text3">You’re not alone!</string>
+
+    <string name="anxiety_card2_text1">What is anxiety?</string>
+    <string name="anxiety_card2_text2">Simply put, Anxiety is a helpful survival mechanism</string>
+    <string name="anxiety_card2_text3">Imagine an early human trying to survive out in the woods. As in most forms of life, several built-in survival mechanisms are passed along from one generation to the next through DNA, and are an important part of the survival of a species.</string>
+
+    <string name="anxiety_card3_text1">Some of the responses to this survival mechanism are:</string>
+    <string name="anxiety_card3_text2">FIGHT</string>
+    <string name="anxiety_card3_text3">Face the threat head on!</string>
+
+    <string name="anxiety_card4_text1">FIGHT</string>
+    <string name="anxiety_card4_text2">Look for a way out!</string>
+
+    <string name="anxiety_card5_text1">FREEZE</string>
+    <string name="anxiety_card5_text2">Can’t move!</string>
+
+
+    <string name="anxiety_card6_text1">But now imagine this person coming face-to-face with a hungry bear. Fight, Flight, or Freeze may not be enough to survive this encounter! A bear is much stronger, faster, and smarter for either of those responses.</string>
+    <string name="anxiety_card6_text2">This is where the “Worry” survival mechanism comes into play.</string>
+
+    <string name="anxiety_card7_text1">If a person could simply “remember” past experiences,  “Worry” could help them take measures to avoid or back away from dangers before they became life threatening.</string>
+    <string name="anxiety_card7_text2">In this example, if the person spotted a hungry bear from a distance, they would remember the potential danger and take another route, or possibly remember and avoid the places where bears were actively hunting for food. In both cases, “Worry” would help them survive successfully.</string>
+    <string name="anxiety_card7_text3">So, worrying is a helpful skill!</string>
+
+    <string name="anxiety_card8_text1">But how does too much “Worry” affect us?</string>
+    <string name="anxiety_card8_text2">We often called this excess of worry “Anxiety”.</string>
+
+    <string name="anxiety_card9_text1">In our modern world, there are many bear-like situations we face every day. It’s easy to become conditioned to constantly trigger our “Worry” response in order to avoid the need to “Fight, Flight or Freeze”.\n\nBut overprotecting ourselves with anxiety often comes at the expense of our happiness. </string>
+    <string name="anxiety_card9_text2">Excessive use of worry, rumination, or fear of being at the wrong place at the wrong time limits our ability to enjoy life.</string>
+
+    <string name="anxiety_card10_text1">Remember: worry and anxiety are not your enemies! </string>
+    <string name="anxiety_card10_text2">The key to more peace of mind lies in enhancing your understanding of both and then learning the skills to use them in the right moments and for the right amounts of time.</string>
+
+
+    &lt;!&ndash;Anxiety cards introduction 2 &ndash;&gt;
+    <string name="fast_pase_card1_text1">We are all stressed out…</string>
+    <string name="fast_pase_card1_text2">Most of us work too much, schedule too much, and hear about too many negative events in the world. Sometimes, you can’t avoid any of it.</string>
+    <string name="fast_pase_card1_text3">Here’s your first task on your journey toward peace of mind:</string>
+
+    <string name="fast_pase_card2_text1">You’re looking for only <b>15 minutes</b> a day to methodically progress through the Calmscient courses…</string>
+    <string name="fast_pase_card2_text2">When is a good time for you?</string>
+    <string name="fast_pase_card2_text3">Great! You’ve taken some positive action, and that’s a bigger deal than you might think. </string>
+
+
+    <string name="fast_pase_card3_text1">What should you do during these 15 minutes?</string>
+    <string name="fast_pase_card3_text2">During this course, you’ll be given lots of positive and productive things to think about. <b>During each 15 minute session, set a timer on your phone</b> so you can responsibly disconnect from the other things you might have scheduled. In your mind, shut the door on all the noisy thoughts you may be used to and enjoy the time you’ve dedicated toward improving your mental health.</string>
+    <string name="fast_pase_card3_text3">Make sure to set a reminder for the time and place you specified above. </string>
+
+    &lt;!&ndash;Anxiety cards Introduction 3 &ndash;&gt;
+    <string name="make_plan_card1_text1">Making a plan to tackle anxiety is like mapping a route to a destination.</string>
+    <string name="make_plan_card1_text2">Seeing the whole journey at a glance can help you visualize your trip and be confident in how you will get there. Once the route is set, you know you’ll arrive if you follow all the indicated turns and directions. There will be fewer surprises and you will feel more in control.</string>
+
+    <string name="make_plan_card2_text1">When faced with a situation that causes you anxiety, imagine that the “destination” is the other side of that stressful situation.</string>
+    <string name="make_plan_card2_text2">Here is how navigating that stressful situation might look like:</string>
+
+    <string name="make_plan_card3_text1">STEP 1</string>
+    <string name="make_plan_card3_text2">BE AWARE OF WHAT’S AROUND YOU</string>
+    <string name="make_plan_card3_text3">Take note of how your anxiety is impacting your emotions, choices and decisions. \n\nChange your thinking from: “Something must be wrong with me” to: “I just need to protect myself from my environment which is filled with anxiety-inducing things”.</string>
+
+    <string name="make_plan_card4_text1">STEP 2</string>
+    <string name="make_plan_card4_text2">SPOT YOUR ANXIETY TRIGGERS</string>
+    <string name="make_plan_card4_text3">Take note of which specific situations, thoughts or feelings trigger your anxiety and even write them down somewhere. Where possible, this will help you take action to avoid anxiety-inducing situations and learn to manage the ones you have no control over.</string>
+
+
+    <string name="make_plan_card5_text1">STEP 3</string>
+    <string name="make_plan_card5_text2">REMEMBER THAT YOU ARE NOT AN ANXIOUS PERSON</string>
+    <string name="make_plan_card5_text3">Learn to identify the three components of anxiety: Physiological (Body), Cognitive (Mind) and Behavioral (Actions). This will help to follow action plans that calm your mind, body and actions. </string>
+
+
+    <string name="make_plan_card6_text1">STEP 4</string>
+    <string name="make_plan_card6_text2">Implement body calming skills</string>
+    <string name="make_plan_card6_text3">You can learn to force your body to calm down. Once your body is calm, your mind will follow. Skills such as relaxation, progressive muscle relaxation, mindful breathing and walking will become second nature.</string>
+
+
+    <string name="make_plan_card7_text1">STEP 5</string>
+    <string name="make_plan_card7_text2">SET A MENTAL BOUNDARY BETWEEN YOU AND YOUR WORRIES</string>
+    <string name="make_plan_card7_text3">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.</string>
+
+
+    <string name="make_plan_card8_text1">STEP 6</string>
+    <string name="make_plan_card8_text2">IMPLEMENT MIND CALMING SKILLS</string>
+    <string name="make_plan_card8_text3">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our mind.</string>
+
+
+    <string name="make_plan_card9_text1">YOU’VE ARRIVED!</string>
+    <string name="make_plan_card9_text2">Congratulations! You’ve gotten to the other side of your stressful situation.</string>
+    <string name="make_plan_card9_text3">If you map this same route every time, you’ll be able to navigate any stressful situation that comes your way.
+\n\n What do you think of this action plan? Don’t worry if you aren’t sure of how to “drive” this path yet. This is why we are learning the skills one step at a time.
+ </string>
+    &lt;!&ndash;Quiz&ndash;&gt;
+    <string name="quiz_title">QUIZ</string>
+    <string name="quiz_text1">It can be hard to clearly identify specific fears that trigger our anxiety cycles. In time, you’ll be able to quickly recognize and avoid them. To learn this skill, let’s walk through a series of questions together that will teach you to recognize, identify and understand your anxiety.</string>
+    <string name="quiz_text2">1. Recognize the stressful situation(s):</string>
+    <string name="quiz_text3">Over the last 30 days, have you been affected by the following problems?</string>
+    <string name="quiz_text_option1">Work related stress</string>
+    <string name="quiz_text_option2">Personal health stress</string>be
+    <string name="quiz_text_option3">Family related stress</string>
+    <string name="quiz_text_option4">Social relations stress</string>
+    <string name="quiz_text_option5">Acute/chronic stress</string>
+    <string name="quiz_text2_1">2. Identify your response </string>
+    <string name="quiz_text_option2_1">Push Away/Avoidance (“I avoid stressful situations and people at any cost.”)</string>
+    <string name="quiz_text_option2_2">Push Through (“I try to ignore and push through stress.”)</string>
+    <string name="quiz_text_option2_3">Denial (“I either stay positive and push through or shutdown.”)</string>
+    <string name="quiz_ques_3">3. Understand the consequences of your response: </string>
+    <string name="quiz_ques_3_1">What happens to your anxiety as a result?</string>
+    <string name="quiz_text_option3_1">I end up giving up, rejecting, avoiding, and possibly losing important parts of my life, such as relationships, work, grades, time, and health.</string>
+    <string name="quiz_text_option3_2">I ignore stress, get overly productive, multitask, keep myself way too busy, get restless and seek quick relief from stress by unhelpful coping habits. Sometimes I get sick or injured.</string>
+    <string name="quiz_text_option3_3">I have a hard time acknowledging my own stress and anxiety. I also have a hard time following through with changes in order to manage stress, and end up in a vicious cycle of anxiety.</string>
+    <string name="submit">Submit</string>
+    <string name="let_make_plan">Let\'s make a plan</string>
+    <string name="mindfulness_heading">Mindfulness - What is it?</string>
+
+    &lt;!&ndash;Recognize a cycle of anxiety&ndash;&gt;
+    <string name="title_toolbar_recognize">Recognize a cycle of anxiety</string>
+    <string name="recognize_card1_text1">Earlier, we compared facing stressful situations to planning a route to a destination. When the correct steps are taken, there is a beginning and there is an end to the anxiety.</string>
+    <string name="recognize_card1_text2">GETTING CAUGHT IN THE CYCLE</string>
+    <string name="recognize_card1_text3">Unfortunately, instead of approaching our stress in this linear way, we often get stuck in a vicious circle: a cycle of anxiety! How does this cycle start? By excessively worrying about a potential threat that hasn’t occurred yet.</string>
+    <string name="recognize_card2_text1">In addition to worrying about this potential threat, our biased thinking may make us assume that this future event will have a negative outcome. </string>
+    <string name="recognize_card2_text2">We start to pay more and more attention to possible signs that this negative outcome is likely. Once we have convinced ourselves of this, we look internally to see whether or not we’ll be able to cope with these potential threats. Our anxious symptoms begin to manifest themselves, confirming our suspicions that we won’t be able to cope, which in turn make us more anxious. We have now fully entered a cycle of anxiety!</string>
+    <string name="recognize_card3_text1">RECOGNIZE THAT EVERYONE IS DIFFERENT</string>
+    <string name="recognize_card3_text2">The truth is that not everyone feels stressed by the same things! By recognizing your personal fears and responses, you’ll be able to avoid falling into the cycle.</string>
+    <string name="recognize_card3_text3">Let’s examine the responses of Nora, Austin and Melanie to deepen our understanding of this cycle. See if you can identify where Nora, Austin and Melanie enter this cycle, and note how each person’s point of entry is unique. After reading each person’s response, click on the button to highlight the fear that makes them victims of the cycle of anxiety.</string>
+
+    &lt;!&ndash;Dialog text for Recognize &ndash;&gt;
+    <string name="nora_ss">My personal health causes me anxiety. In order for me to reduce the risk of a health emergency I can’t afford, I’ll need to work full time, and that will require me to pick up new skills in order to meet higher expectations.”</string>
+    <string name="nora_rs">“I avoid and escape from stressful situations. That’s why I quit my job. Because of my health problem, I don’t think I have enough strength to handle pressure. I also keep thinking about how I failed at my first job.”</string>
+    <string name="nora_c">Nora worries so much about her health that she loses more and more confidence about being able to cope successfully.</string>
+    <string name="austin_ss">“My work-family balance causes me stress. I’m self-employed and my family thinks I can make time for them while I’m working. I’m constantly multi-tasking, trying to meet everyone’s expectations.”</string>
+    <string name="austin_rs">“I’m constantly trying to push myself so I won’t fail in all my tasks and responsibilities. I escape from this pressure by drinking and watching games at night.”</string>
+    <string name="austin_c">Austin takes on additional pressures, using anxiety as a booster to push himself harder. His family complains that he’s checked out in the evenings.</string>
+
+    <string name="melanie_ss">“At first, I had a hard time identifying what makes me anxious because I thought I’ve always managed to keep my head above water by just staying busy and staying positive. But I’m constantly overscheduling myself, mostly to keep up with kids, friends, and family events. My friends tell me I’m pushing myself too hard, but I can’t actually recognize when I’m doing that.”</string>
+    <string name="melanie_rs">“I’m not aware of it. I’m a bit in denial because I don’t know what normal life looks like. I tend to think everything is fine.”</string>
+    <string name="melanie_c">Melanie is often confused and second guessing her feelings. She’s constantly asking others if they are happy and tends to do things in excess.</string>
+
+    <string name="title_stressful_situation">STRESSFUL SITUATION</string>
+    <string name="title_consequences">CONSEQUENCES</string>
+    <string name="title_response_to_stress">RESPONSE TO STRESS</string>
+    <string name="nora">NORA</string>
+    <string name="austin">AUSTIN</string>
+    &lt;!&ndash;<string name="fear">[ SHOW AUSTIN’S FEAR ]</string>&ndash;&gt;
+    <string name="melanie">Melanie</string>
+    <string name="how_about_you">HOW ABOUT YOU?</string>
+    <string name="melanie_desc">Can you identify the specific fears that could cause you to enter the vicious cycle of anxiety? In the next lesson, answer a few helpful questions that will guide you toward recognizing these fears and avoiding this dangerous cycle.</string>
+
+
+    &lt;!&ndash;Audio Player text and its dialog Text &ndash;&gt;
+    <string name="meet_nora_austrin_melanie_description">Sometimes, seeing anxiety through others’ eyes can help us understand it better. Let’s meet three friends who view and respond to stress differently. Though their personalities and lifestyles are different, you will probably relate to one of them.</string>
+    <string name="nora_audio_text1">First, let’s meet Nora. Nora tends to push away and avoid stressful situations. See if you can identify this in the way she expresses herself:</string>
+    <string name="nora_audio_text2">“I studied business and marketing at university, but I couldn’t handle the pressure of meeting monthly goals at work. I got sick so I quit, and now I’m working at a coffee shop during the day and have a part time cleaning job at night. My health problems have put a lot of restrictions on my life choices and I can’t enjoy things I used to enjoy.  I often stay up late at night thinking about my problems and escape by watching TV. Something needs to change, but I\'m not sure where to begin. I\'m scared my health is not going to get better and this is just going to be my new life.”></string>
+    <string name="nora_audio_text3">Do you relate to some of Nora’s feelings and reactions?</string>
+    <string name="austin_audio_text1">Next, let’s meet Austin. Austin believes that pushing through stress is the way to go. Listen to how he feels about his work life:</string>
+    <string name="austin_audio_text2">“People tell me that I’m a hard-working and productive person, and it’s true… I can push myself pretty hard. I run my own business and I can multitask all day. I don’t ask others for help because it’s just easier and quicker if I do it all myself. I can’t really trust anyone else to get things done right.\n\n I subconsciously use anxiety to drive myself. I rely on facts, analysis, and information, I don’t think anyone views me as an anxious person.”</string>
+    <string name="austin_audio_text3">Do you respond to stressful situations like Austin does?</string>
+    <string name="melanie_audio_text1">Finally, let’s meet Melanie. She tends to force herself to stay positive, even though doing so can sometimes result in her being in denial about her circumstances:</string>
+    <string name="melanie_audio_text2">“I care about people so I’m good at helping others in need. I just constantly have a lot on my plate and I’m tired all the time. I try to be on top of my kid’s school and sports events, and enjoy doing special things for my anniversary and family holidays. I’m incredibly busy and often wonder when I get to live my life for myself.\n\n Sometimes I just go into my room and turn on the TV or scroll through social media to shut down because I’m simply exhausted. I love reading positive quotes because I think if I stay positive I can keep going.”</string>
+    <string name="melanie_audio_text3">Have you ever responded to stress like Melanie does?</string>
+    <string name="information">Information</string>
+    &lt;!&ndash;additional resources&ndash;&gt;
+    <string name="additional_anxiety_exercise_summary">Research has shown that exercise improves cell health and boosts the brain’s natural anti-anxiety drug. How so?
+Harvard medical school studies show that exercise diverts our minds from the very things we are anxious about. Moving our bodies decreases muscle tension, lowering our body’s contribution to feeling anxious. Increasing our heart rate actively changes our brain chemistry, increasing the availability of important anti-anxiety neurochemicals such as serotonin and GABA. Exercise also activates our brain’s frontal lobe, helping control the reacting system located in the amygdala.
+We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.
+The most important thing is to do it! Do you have some time today to get started?
+</string>
+    <string name="anxiety_and_diet">Anxiety and Diet</string>
+    &lt;!&ndash;Weekly Summary&ndash;&gt;
+    <string name="summaryofmood">Summary of mood</string>
+    <string name="summaryofsleep">Summary of sleep</string>
+    <string name="summaryof_phq_9">Summary of PHQ-9</string>
+    <string name="summaryof_gad">Summary of GAD-7</string>
+    <string name="summaryof_audit">Summary of AUDIT</string>
+    <string name="summaryof_dast">Summary of DAST</string>
+    <string name="summaryof_progressofwork">Progress on course work</string>
+    <string name="summaryof_journalentry">Journal entry</string>
+    <string name="summarymood_by_date_range">Mood by Date Range</string>
+    <string name="summarymood_daysateachmood">Days at each Mood</string>
+    <string name="summarysleep_by_date_range">Sleep by Date Range</string>
+    <string name="summaryphq9_by_date_range">PHQ-9 by Date Range</string>
+    <string name="summarygad_by_date_range">GAD-7 by Date Range</string>
+    <string name="summaryaudit_by_date_range">AUDIT by Date Range</string>
+    <string name="summarydast_by_date_range">DAST by Date Range</string>
+    <string name="Summaryprogresswork_total_cousrework">Total Course Work Complete</string>
+    <string name="summaryprogress_course">Course</string>
+    <string name="summaryprogress_completed">% Completed</string>
+    <string name="summaryprogress_braving_Anxiety">Braving Anxiety</string>
+    <string name="summaryprogress_feeling_better">Feeling Better</string>
+    <string name="summaryprogress_taking_control">Taking Control</string>
+    <string name="summaryprogress_building_confidence">Building Confidence</string>
+    <string name="bravinganxiety_anxietyworks">How to Anxiety Works</string>
+    <string name="braving_sleep">Sleep &amp; Anxiety</string>
+    <string name="braving_building">Building Support</string>
+    <string name="coming_soon">Coming Soon!</string>
+
+    <string name="name">Name</string>
+    <string name="paracetamol">Paracetamol</string>
+    <string name="anti_biotic">Anti-biotic</string>
+    <string name="vitamin">Vitamin</string>
+    <string name="two_tablets">2 Tablets</string>
+    <string name="one_tablet">1 Tablet</string>
+    <string name="update_time_alarm">Update Time &amp; Alarm</string>
+    <string name="phq_heading">PHQ-9</string>
+    <string name="gad_heading">GAD-7</string>
+    <string name="audit_heading">AUDIT</string>
+    <string name="dast_heading">DAST-10</string>
+    <string name="sbirt_heading">SBIRT</string>
+    <string name="remind_me">Remind me</string>
+    <string name="weekly">Weekly</string>
+    <string name="score">Score marked</string>
+    <string name="total_score">Total Score</string>
+    <string name="more_info">More Info</string>
+    <string name="more_desc_1">This assessment is based on the Patient Health Questionnaire (PHQ), which is a self-administered version of the PRIME-MD diagnostic instrument for common mental disorders.\n\nPHQ9 Copyright © Pfizer Inc. All rights reserved. Reproduced with permission. PRIME-MD ® is a trademark of Pfizer Inc.</string>
+    <string name="learn_more">Learn more</string>
+    <string name="taking_control">Taking Control</string>
+    <string name="summary">Summary</string>
+    <string name="events_tracker">Events Tracker</string>
+    <string name="choose_date">Choose Date and Time</string>
+
+    &lt;!&ndash;    Mindful walking exercise>&ndash;&gt;
+    <string name="mindfulwalking_exercises_text1">What are the benefits of mindful walking?</string>
+    <string name="mindfulwalking_exercises_text2">1.Stress Reduction: Engaging in mindful walking can be an effective way to reduce stress and promote relaxation. By directing your attention to the physical sensations of walking, you create a mental break from everyday stressors. This practice activates the relaxation response in your body, leading to a calmer state of mind.\n
+    2.Emotional Regulation: Engaging in mindful walking can help regulate your emotions. By observing your thoughts and emotions as they arise during the practice, you develop a non-judgmental and accepting attitude towards them. This can enhance emotional resilience and provide you with a greater sense of control over your reactions to challenging situations.</string>
+    <string name="journal_entry">Journal entry</string>
+    <string name="no_entries">No Entries</string>
+    <string name="delete">Delete</string>
+    <string name="delete_message">Are you sure you want to delete Journal entry data?</string>
+    <string name="journal_entry_edit">Journal entry edit</string>
+    <string name="edit">Edit</string>
+    &lt;!&ndash;Glossary&ndash;&gt;
+    <string name="adrenaline">Adrenaline</string>
+    <string name="adrenaline_summary">Adrenaline, also known as epinephrine, is a hormone and neurotransmitter produced by the adrenal glands, which are located on top of the kidneys. It plays a crucial role in the body\'s response to stress and triggering the \"Fight or Flight\" response.\n
+                        When a person perceives a threat or danger, whether real or perceived, the brain signals the adrenal glands to release adrenaline into the bloodstream. Adrenaline acts as a chemical messenger, rapidly preparing the body for action to deal with the perceived threat.</string>
+    <string name="anxiety_attack">Anxiety attack</string>
+    <string name="anxiety_attack_summary">The term "anxiety attack" is not officially recognized in the diagnostic manuals; DSM-5 (Diagnostic and Statistical Manual of Mental Disorders). It is often used to describe a period of heightened anxiety or a more prolonged state of anxiousness. Anxiety attacks may involve similar symptoms to panic attacks, such as excessive worry, restlessness, irritability, muscle tension, difficulty concentrating, and sleep disturbances.</string>
+    <string name="automatic_thinking">Automatic thinking</string>
+    <string name="automatic_thinking_summary">Automatic thinking refers to the rapid, involuntary, and often unconscious thoughts that arise in response to situations or triggers. These thoughts are automatic in the sense that they occur automatically and effortlessly, without deliberate intention or conscious awareness.\n
+                        Automatic thinking patterns can be influenced by past experiences, beliefs, and cognitive biases. They can be helpful or unhelpful, depending on their content and impact on emotions and behaviors. In the context of anxiety, automatic thoughts often lean towards negative and worrisome interpretations of situations, leading to increased anxiety and distress.</string>
+    <string name="biased_thinking">Biased thinking</string>
+    <string name="biased_thinking_summary">Biased thinking refers to cognitive distortions or errors in thinking that influence how we perceive and interpret information. It involves a tendency to view situations, events, or ourselves in a distorted or exaggerated manner, often leading to negative or irrational thoughts. Biased thinking can contribute to the development and maintenance of anxiety and other mental health issues.</string>
+    <string name="cortisol">Cortisol</string>
+    <string name="cortisol_summary">Cortisol is a hormone produced by the adrenal glands in response to stress. It is often referred to as the primary stress hormone. When the brain detects a threat or perceives stress, it signals the release of cortisol into the bloodstream. While cortisol is important for short-term stress adaptation, chronic or prolonged elevation of cortisol levels due to chronic stress can cause a loss of neurons in the prefrontal cortex and hippocampus. It also decreases serotonin, the “happy hormone”, which makes a person feel angry, depressed, and feel physical pain more quickly and easily.</string>
+    <string name="cognitive_distortion">Cognitive Distortion</string>
+    <string name="cognitive_distortion_summary">Cognitive distortions, also known as biased thinking or irrational thoughts, refer to exaggerated or irrational patterns of thinking that can contribute to emotional distress and maintain anxiety or other mental health issues.\n
+                        Cognitive distortions are common and can affect the way individuals interpret and perceive events, situations, and themselves. They often involve biases or errors in reasoning that lead to distorted or negative thinking patterns.</string>
+    <string name="competency">Competency</string>
+    <string name="competency_summary">Competency refers to the ability to perform or execute a task or set of skills effectively. It is often associated with knowledge, expertise, and proficiency in a particular area. Competency is measured by evaluating our aptitude, qualifications, or capabilities in a specific situation.</string>
+    <string name="compulsive_behaviour">Compulsive behaviour</string>
+    <string name="compulsive_behaviour_summary">Compulsive behavior refers to repetitive and often ritualistic actions or thoughts that individuals feel driven to perform in response to anxiety or distressing thoughts. These behaviors are typically aimed at reducing anxiety, preventing perceived harm, or maintaining a sense of control. However, they are often excessive, time-consuming, and interfere with daily functioning.</string>
+    <string name="Dependency">Dependency</string>
+    <string name="Dependency_summary">Dependency refers to reliance on substances such as alcohol, drugs, or tobacco as a means of coping with anxiety or seeking quick relief or escape from anxiety or help coping with overwhelming emotions. However, substance dependency can be problematic and can lead to long-term physical, psychological, and social consequences.</string>
+    <string name="gaba">GABA</string>
+    <string name="gaba_summary">GABA stands for gamma-aminobutyric acid, which is a neurotransmitter in the brain. It is known as the brains natural anti-anxiety drug because it has inhibitory effects on the central nervous system, helping to reduce neuronal excitability and promote relaxation.GABA acts as a calming agent, counteracting the effects of excitatory neurotransmitters in the brain.\n
+                        By increasing GABA levels through exercise, individuals may experience a reduction in anxiety symptoms, improved mood, and an overall sense of well-being. This is one of the ways in which exercise can have a positive impact on mental health and help alleviate anxiety.</string>
+    <string name="hyperventilation">Hyperventilation</string>
+    <string name="hyper_summary">Hyperventilation refers to a rapid or excessive increase in breathing rate and volume. It involves taking in more oxygen and exhaling more carbon dioxide than the body needs. Hyperventilation can be a physiological response to anxiety or stress and is often associated with panic attacks.</string>
+    <string name="mindful_breathing">Mindful breathing</string>
+    <string name="mindful_breathing_summary">Mindful breathing is a technique that involves intentionally bringing awareness to the breath and focusing on the present moment. It is a fundamental practice in mindfulness and can help promote relaxation, reduce stress, and cultivate a sense of calm.</string>
+    <string name="obsession">Obsession</string>
+    <string name="obsession_summary">Obsession refers to intrusive, persistent, and unwanted thoughts, images, or urges that repeatedly and uncontrollably enter a persons mind. Individuals with obsessions often recognize that their thoughts are irrational or excessive, but they find it challenging to dismiss or ignore them. As a result, they may engage in various repetitive behaviors or mental rituals, known as compulsions, to alleviate the anxiety caused by the obsessions temporarily.</string>
+    <string name="panic_attack">Panic attack</string>
+    <string name="panic_attack_summary">A panic attack is a sudden and intense episode of fear or discomfort that typically peaks within minutes. It is a manifestation of anxiety and can occur without any apparent trigger or in response to a specific situation or object. Panic attacks can be accompanied by various physical and psychological symptoms, such as a rapid heart rate, chest pain, shortness of breath, dizziness, trembling, sweating, a sense of impending doom or loss of control, and feelings of unreality or detachment.</string>
+    <string name="progressive_muscle_relaxation">Progressive muscle relaxation</string>
+    <string name="progressive_muscle_relaxation_summary">Progressive muscle relaxation (PMR) is a relaxation technique that involves systematically tensing and relaxing different muscle groups in the body. It aims to reduce muscle tension, release physical stress, and promote overall relaxation.</string>
+    <string name="resilience">Resilience</string>
+    <string name="resilience_summary">Resilience refers to the capacity to bounce back, adapt, and recover in the face of adversity, challenges, or stressful situations. It is the ability to withstand, cope with, and effectively navigate through difficulties, setbacks, or hardships. Resilience involves psychological, emotional, and sometimes physical strength to maintain a positive mindset and being able to function despite adversity.\n
+                        Resilience is not about avoiding or eliminating challenges, but rather about how we respond and recover from them. It involves skills such as emotional regulation, problem-solving, flexibility, optimism, and social support. Resilience helps us persevere, learn from setbacks, and grow stronger as a result.</string>
+    <string name="rigid_thinking">Rigid thinking</string>
+    <string name="rigid_thinking_summary">Rigid thinking refers to inflexible and narrow patterns of thinking that limit flexibility, adaptability, and open-mindedness. People with rigid thinking tend to adhere strictly to their beliefs, rules, and expectations without considering alternative perspectives or possibilities. They may have a black-and-white view of the world, categorizing things as either all good or all bad, with little room for shades of gray or ambiguity.\n
+                        When faced with challenges or uncertainties, individuals with rigid thinking may become overwhelmed or stuck, as they struggle to adapt and find alternative solutions. Rigid thinking can also lead to self-criticism, perfectionism, and a constant need for control, which can perpetuate anxiety and stress.</string>
+    <string name="rumination">Rumination</string>
+    <string name="rumination_summary">The tendency to continuously and excessively think about negative events, situations, or problems. It involves repetitively focusing on ones distressing thoughts, often with a lack of resolution or progress toward a solution.\n
+                        Rumination is a common cognitive process associated with anxiety and other mental health conditions. When someone ruminates, they may replay past events, worry about future outcomes, or excessively analyze their thoughts and feelings. This prolonged dwelling on negative thoughts can contribute to heightened anxiety and a sense of feeling stuck or trapped in ones worries</string>
+    <string name="selfcompassion">Self-compassion</string>
+    <string name="selfcompassion_summary">Self-compassion refers to the practice of treating oneself with kindness, understanding, and non-judgment during times of difficulty, failure, or suffering. It involves extending the same warmth, care, and support to oneself that one would offer to a close friend or loved one who is struggling.</string>
+    <string name="serotonin">Serotonin</string>
+    <string name="serotonin_summary">Serotonin is a neurotransmitter, a chemical messenger in the brain and nervous system that plays a crucial role in regulating various physiological and psychological processes. It is often referred to as the "feel-good" neurotransmitter because of its association with mood regulation and feelings of well-being.</string>
+    <string name="window_of_tolerance">Window of tolerance</string>
+    <string name="window_of_tolerance_summary">Window of tolerance refers to a concept in psychology that describes an optimal range of arousal or activation that allows an individual to effectively cope with and respond to stressors and emotions. The window of tolerance suggests that individuals have a range in which they can handle and adapt to stressors without becoming overwhelmed or shutting down. When a person is within their window of tolerance, they are able to think clearly, make rational decisions, and engage in effective problem-solving. They are also able to experience and regulate emotions in a balanced and healthy manner.</string>
+    &lt;!&ndash;Journal Entry Screen &ndash;&gt;
+    <string name="update">Update</string>
+    <string name="success">Success</string>
+    <string name="success_message">Journal entry data is updated successfully.</string>
+    <string name="journal_entry_card1_text">Had a reasonably good day today</string>
+    <string name="journal_entry_card2_text">Starting to get a little depressed</string>
+    <string name="journal_entry_card3_text">Had a lot of stress at work today. Didn’t really sleep that well.</string>
+    <string name="journal_entry_card4_text">Trying to work through a little bit of anxiety. My boss is pressuring me to give a presentation before a large crowd.</string>
+    <string name="journal_entry_card5_text">I wish I could talk with a good friend about how I feel.</string>
+    <string name="journal_entry_card6_text">I did terrible on my presentation. My self esteem has dropped.</string>
+    <string name="journal_entry_card7_text">I have been having  bad thoughts today.I need help.</string>
+    <string name="journal_entry_card8_text">I am very depressed today. I am barely able to get out of bed.</string>
+    &lt;!&ndash;Privacy&ndash;&gt;
+    <string name="privacy">Privacy</string>
+    <string name="journaling">Journaling</string>
+    <string name="course_work">Course Work</string>
+    <string name="mood">Mood</string>
+    <string name="sleep">Sleep</string>
+    <string name="medication">Medication</string>
+    <string name="phq_9_screening">PHQ-9 Screening</string>
+    <string name="gad_7_screening">GAD-7 Screening</string>
+    <string name="audit_screening">Audit Screening</string>
+    <string name="dast_screening">DAST Screening</string>
+    <string name="fastPace_screen2_1">You’re looking for only 15 minutes a day to methodically progress through the Calmscient courses…</string>
+    <string name="fastPace_screen2_2">1. When is a good time for you?</string>
+    <string name="fastPace_screen2_when">When</string>
+    <string name="fastPace_screen2_lunch">Lunch Time</string>
+    <string name="fastPace_screen2_bedroom">My bedroom</string>
+    <string name="fastPace_screen2_couch">On my couch (with no TV!)</string>
+    <string name="fastPace_screen2_car">In my car</string>
+    <string name="fastPace_screen2_patio">On the patio</string>
+    <string name="fastPace_screen2_where">Where</string>
+    &lt;!&ndash;    weekly summary_Progress_Work&ndash;&gt;
+    <string name="progresswork_expand1_text1">VIDEO-How Anxiety Works</string>
+    <string name="progresswork_expand1_text2">READING- The Anxiety Loop</string>
+    <string name="progresswork_expand1_text3">LISTEN-Signs &amp; Symptoms</string>
+    <string name="progresswork_expand1_text4">PLAN-Your Anxiety Goals</string>
+
+    <string name="progresswork_expand2_text1">VIDEO-How Anxiety Affects Sleep</string>
+    <string name="progresswork_expand2_text2">READING-The Dangers of Insomnia</string>
+    <string name="progresswork_expand2_text3">LISTEN-Signs &amp; Symptoms</string>
+    <string name="progresswork_expand2_text4">PLAN-Your Sleep Goals</string>
+
+    <string name="progresswork_expand3_text1">VIDEO-How a Support Network Helps</string>
+    <string name="progresswork_expand3_text2">READING-The Dangers of Insomnia</string>
+    <string name="progresswork_expand3_text3">LISTEN-Signs &amp; Symptoms</string>
+    <string name="progresswork_expand3_text4">PLAN-Your Sleep Goals</string>
+
+    &lt;!&ndash;    <sleepCard>&ndash;&gt;
+    <string name="hours_sleep1">+1 Hours sleep needed</string>
+    <string name="hours_sleep2">+3 Hours sleep needed</string>
+    <string name="hours_sleep3">+1 Hours sleep needed</string>
+    <string name="hours_sleep4">+4 Hours sleep needed</string>
+    <string name="hours_sleep5">+6 Hours sleep needed</string>
+    <string name="hours_sleep6">+1 Hours sleep needed</string>
+    <string name="eight_hours">8 Hours</string>
+    <string name="six_hours">6 Hours</string>
+    <string name="five_hours">5 Hours</string>
+    <string name="three_hours">3 Hours</string>
+
+    &lt;!&ndash;    MoodCard&ndash;&gt;
+    <string name="moodCard_text1">Good</string>
+    <string name="moodCard_text2">Could be better</string>
+    <string name="moodCard_text3">Fair</string>
+    <string name="moodCard_text4">Bad</string>
+    <string name="moodCard_text5">Could be better</string>
+    <string name="moodCard_text6">Could be better</string>
+
+    &lt;!&ndash;    PHQ9 Card&ndash;&gt;
+    <string name="phq9_text1_weeklysummary">Moderately severe depression</string>
+    <string name="phq9_text2_weeklysummary">Moderately depression</string>
+
+    &lt;!&ndash;   GAD Card&ndash;&gt;
+    <string name="gad7_text1_weeklysummary">Moderate anxiety</string>
+    <string name="gad7_text2_weeklysummary">Mild anxiety</string>
+
+    &lt;!&ndash;DAST Card&ndash;&gt;
+    <string name="dast7_text1_weeklysummary">Severe level: Referral</string>
+    <string name="dast7_text2_weeklysummary">Moderate level problems related to drug abuse</string>
+
+    &lt;!&ndash;AUDIT Card&ndash;&gt;
+    <string name="audit_text1_weeklysummary">Moderate-severe alcohol use disorder</string>
+    <string name="audit_text2_weeklysummary">Harmful alcohol consumption</string>
+
+    <string name="general_check">General Check</string>
+    &lt;!&ndash;screenings&ndash;&gt;
+    <string name="screenings_1">1. Little interest or pleasure in doing things</string>
+    <string-array name="screen"><item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item></string-array>
+    &lt;!&ndash;    drink Tracker&ndash;&gt;
+    <string name="drink_tracker_text1">Zero alcohol</string>
+    <string name="drink_tracker_text2">Regular beer (12 fl oz) about 5% alcohol</string>
+    <string name="drink_tracker_text4">Table wine (5 fl oz ) about 12% alcohol</string>
+    <string name="drink_tracker_text3">Malt liquor or flavored malt beverages such as hard seltzer (8-10 fl oz) about 7% alcohol</string>
+    <string name="drink_tracker_text5">Fortified wine (3–4 fl oz) about 17% alcohol</string>
+    <string name="drink_tracker_text6">Cordial, liqueur or aperitif (2–3 fl oz) about 24% alcohol</string>
+    <string name="drink_tracker_text7">Brandy or cognac (1-2 fl oz) about 40% alcohol</string>
+    <string name="drink_tracker_text8">Distilled spirits (1.5 fl oz)about 40% alcohol</string>
+    <string name="total_text">Total</string>
+    <string name="count_text">count</string>
+    <string name="drink_tracker">Drink tracker</string>
+    <string name="how_to_do">HOW TO DO IT</string>
+    <string name="lesson_intro">Introduction</string>
+    <string name="lesson">Lesson 1</string>
+    <string name="lesson_2">Lesson 2</string>
+    <string name="lesson_3">Lesson 3</string>
+    <string name="lesson_4">Lesson 4</string>
+    <string name="lesson_5">Lesson 5</string>
+    <string name="lesson_6">Lesson 6</string>
+    <string name="ok">Ok\n</string>
+    <string name="taking_control_substance">Substance</string>
+    <string name="taking_control_alcohol">Alcohol</string>
+    <string name="taking_control_alcoholfeedays">Alcohol Free Days</string>
+    <string name="taking_control_now">Now</string>
+    <string name="taking_control_goal">Goal</string>
+    <string name="taking_control_7_days">7 days</string>
+    <string name="taking_control_10_days">10 days</string>
+    <string name="taking_control_drink_count">Drink Counts</string>
+    <string name="taking_control_60_days">60 days</string>
+    <string name="taking_control_texttile">Work your strengths</string>
+    <string name="taking_control_text">Do something you are good at to build self-confidence then tackle a tougher task.</string>
+    <string name="events_tracker_text1">Hangover</string>
+    <string name="events_tracker_text2">Argument</string>
+    <string name="events_tracker_text3">Accident</string>
+    <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
+
+    &lt;!&ndash; Running Exercise&ndash;&gt;
+    <string name="runningexercise_titletext">Movement: Running</string>
+    <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
+
+    <string name="version">Version 1.9</string>
+    &lt;!&ndash;bodymovemet Exercise&ndash;&gt;
+    <string name="bodymovementexercise_titletext">Mindful Body Movement</string>
+    &lt;!&ndash;summary of sleep&ndash;&gt;
+    <string name="chart_sleep_avg_sleep_score">Average Sleep Score</string>
+    <string name="chart_sleep_moresleepneeded">More Sleep Needed</string>
+    <string name="chart_sleep_mosthours_slept">Most Hours Slept</string>
+    <string name="chart_sleep_avghours_slept">Average Hours Slept</string>
+    <string name="chart_sleep_leaset_hours_slept">Least Hours Slept</string>
+
+    &lt;!&ndash;    summary&ndash;&gt;
+    <string name="summary_alcohol_free">Alcohol-Free</string>
+    <string name="summary_drinks">Drinks</string>
+    <string name="summary_argument">Argument</string>
+    <string name="summary_accident">Accident</string>
+
+</resources>-->
+<resources>
+    <string name="app_name">calmscient</string>
+    <string name="splash_science">The Science of Calm</string>
+    <string name="welcome_message">Welcome to my app!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_new_account">Create a new account</string>
+    <string name="or">or</string>
+    <string name="happy_to_see_you">We are happy to see you.</string>
+    <string name="hello">Hello</string>
+    <string name="home">Home</string>
+    <string name="discovery">Discovery</string>
+    <string name="discovery_lower">Discovery</string>
+    <string name="exercises">Exercises</string>
+    <string name="exercises_lower">Exercises</string>
+    <string name="rewards">Rewards</string>
+    <string name="rewards_lower">Rewards</string>
+    <string name="my_medical_records">My medical records</string>
+    <string name="weekly_summary">Weekly summary</string>
+    <string name="favorites">Favorites</string>
+    <string name="need_to_talk">Need to talk with someone?</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="good_afternoon">Good afternoon!</string>
+    <string name="good_evening">Good evening!</string>
+    <string name="mood_right_now">How is your mood right now?</string>
+    <string name="day_today">How was your day?</string>
+    <string name="bad">Bad</string>
+    <string name="be_better">Could be better</string>
+    <string name="fair">Fair</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="spend_time">Who did you spend time with?</string>
+    <string name="family">Family</string>
+    <string name="friends">Friends</string>
+    <string name="workmates">Workmates</string>
+    <string name="others">Others</string>
+    <string name="alone">Alone</string>
+    <string name="take_medic_evening">Did you take your meds this evening?</string>
+    <string name="take_medic_morning">Did you take your meds this morning?</string>
+    <string name="hours_night">How many hours did you sleep last night?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="daily_journal">Daily journal</string>
+    <string name="save">Save</string>
+    <string name="skip">Skip</string>
+    <string name="medications">Medications</string>
+    <string name="medication_Details">Medications details</string>
+    <string name="upcoming_medical_appointments">Upcoming medical appointments</string>
+    <string name="screenings">Screenings</string>
+    <string name="add_appointment">Add appointment</string>
+    <string name="plz_confirm">Please confirm.</string>
+    <string name="exit_app">Are you want to exit the app?</string>
+    <!--network errors-->
+    <string name="network_connection_error">Internet connection lost, please retry again</string>
+    <string name="network_default_error">Something wrong happened, please retry again</string>
+    <string name="network_internal_error">Our systems got an error, please retry again</string>
+    <string name="network_server_not_available">Our services are under maintenance, please retry after some time
+    </string>
+    <string name="network_invalidation_error">Username or password is incorrect,Please retry again</string>
+    <string name="server_connection_error">Not able to connect, please retry again</string>
+    <string name="network_login_again">Please log in again</string>
+    <string name="strAlertMessage_Something">Something is not right here try again later</string>
+    <string name="title_activity_home_fragment">Something is not right here try again later</string>
+
+    <string name="no_appointments">No appointments</string>
+    <string name="hospital_name1" translatable="false">SCD Hospital</string>
+    <string name="doctor_name1">Dr.Hannah Johnson</string>
+
+    <string name="provider">Provider</string>
+    <string name="dosage">Dosage</string>
+    <string name="tabletsPerDay">2 tablets per day</string>
+    <string name="direction">Direction</string>
+    <!--settings-->
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="theme">Theme</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="asl">ASL</string>
+    <string name="notifications">Notifications</string>
+    <string name="license_key">License key</string>
+    <string name="help_support">Help &amp; support</string>
+    <string name="logout">Logout</string>
+
+    <string name="add_medications">Add medications</string>
+    <string name="alarm">Alarm</string>
+    <string name="repeat">Repeat</string>
+    <string name="everyday">Every Day</string>
+    <string name="time">Time</string>
+    <string name="schedule_time_and_alarm">Schedule time &amp; alarm</string>
+    <string name="with_meal">With meal</string>
+    <string name="morning">Morning</string>
+    <string name="evening">Evening</string>
+    <string name="cancel">Cancel</string>
+    <!--discovery-->
+    <string name="anxiety">Managing anxiety</string>
+    <string name="stress">Changing your response to stress</string>
+    <string name="control">Taking control</string>
+    <string name="alchol_free">Alcohol-free</string>
+    <string name="drinks">Drinks</string>
+    <string name="argument">Argument</string>
+    <string name="drink_count">Drink counts</string>
+    <string name="terms">Accept <u>terms and conditions</u></string>
+    <!--Emergency Resource Page strings-->
+    <string name="emergency_resource">Emergency resource</string>
+    <string name="doctor_name">Dr. Samuel parker</string>
+    <string name="hospital_name">Central park hospital</string>
+    <string name="doctor_phone_number"><u><a href="tel:(804)0938172"><font color="#6E6BB3">(804)0938172</font></a></u></string>
+    <string name="suicide_heading">988 Suicide &amp; crisis lifeline</string>
+    <string name="suicide_text">Call or text 988 or chat 988lifeline.org. The 988 Suicide &amp; Crisis Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week.</string>
+    <string name="disaster_heading">Disaster distress helpline</string>
+    <string name="disaster_text">The national Disaster Distress Helpline is available for anyone experiencing emotional distress related to natural or human-caused disasters.Call or text <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> to be connected to a trained, caring counselor, 24/7/365.
+</string>
+    <string name="crisis_heading">Crisis text line</string>
+    <string name="crisis_text">Text MHA to<a href="sms:678678"><font color="#6E6BB3"> 741741</font></a> and you\'ll be connected to a trained Crisis Counselor. Crisis Text Line provides free, text-based support 24/7.</string>
+    <string name="trevor_heading">The trevor project</string>
+    <string name="trevor_text">
+        Call <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> or text START to <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.A national 24-hour, toll free confidential suicide hotline for LGBTQ youth.
+</string>
+    <string name="trans_helpline_heading">Trans lifeline</string>
+    <string name="trans_helpline_text">Dial <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> for US and <u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> for Canada.Trans Lifeline\'s Hotline is a peer support service run by trans people, for trans and questioning callers.
+</string>
+    <string name="disaster_number">1-800-985-5990</string>
+    <string name="crisis_number">741741</string>
+    <string name="trevor_number">1-866-488-7386</string>
+    <string name="trans_number">877-565-8860</string>
+    <string name="next_appointments">Next appointments</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="contact">Contact</string>
+    <string name="address">Address</string>
+    <string name="appointments_details">Appointment details</string>
+    <string name="your_history">History</string>
+    <string name="your_results">Your results</string>
+    <string name="summary_takingcontrol">Summary</string>
+    <string name="glossary">Glossary</string>
+    <string name="torch_national"><u>US National Institute of Health American Psychological Association Stanford University</u></string>
+    <string name="torch_phq">PHQ9 Copyright \u00a9 Pfizer Inc. All rights reserved.Reproduced with permission. PRIME-MD \u00AE is a trademark of Pfizer Inc.</string>
+    <!--Anxiety-->
+    <string name="manage_anxiety">Manage anxiety</string>
+    <string name="managing_anxiety">Managing anxiety</string>
+    <string name="introduction">Introduction</string>
+    <string name="neuropsychology">Neuropsychology of anxiety</string>
+    <string name="the_neuropsychology">The neuropsychology of anxiety</string>
+    <string name="meet_nora_austin">Meet Nora,Austin and Melanie</string>
+    <string name="calming_body">Calming the body</string>
+    <string name="anxiety_worry">Anxiety and worry</string>
+    <string name="moral_deficiency">Moral deficiency</string>
+    <string name="moral_deficiency_anxiety">Moral deficiency or anxiety?</string>
+    <string name="anxiety_hide">Where can anxiety hide?</string>
+    <string name="postpone_worry">Learn to postpone your worry</string>
+    <string name="anxious_mind">Calming your anxious mind</string>
+    <string name="biased_think">Biased thinking</string>
+    <string name="making_connection">Making connection</string>
+    <string name="restructure_biased">Restructure biased thinking</string>
+    <string name="anxiety_exercise">Anxiety and exercise</string>
+    <string name="anxiety_sleep">Anxiety and sleep</string>
+    <string name="anxiety_alcohol">Anxiety &amp; alcohol/substances</string>
+    <string name="managing_stress">Managing stress to reduce anxiety</string>
+    <!--lesson1.2-->
+    <string name="title_toolbar_pace">Get yourself out of “fast pace cycle</string>
+    <string name="title_pace">We are all stressed out…</string>
+    <string name="desc_one_pace">Most of us work too much, schedule too much, and hear about too many negative events in the world. Sometimes, you can’t avoid any of it. </string>
+    <string name="desc_two_pace">Here’s your first task on your journey toward peace of mind:</string>
+    <string name="checkbox_pace">Choose a time and place to devote to this mental wellness discovery..</string>
+    <string name="title_third_pace">What should you do during these 15 minutes?</string>
+    <string name="desc_third_one_pace">During this course, you’ll be given lots of positive and productive things to think about. During each 15 minute session, set a timer on your phone so you can responsibly disconnect from the other things you might have scheduled. In your mind, shut the door on all the noisy thoughts you may be used to and enjoy the time you’ve dedicated toward improving your mental health. </string>
     <string name="title_third_two_pace">Make sure to set a reminder for the time and place you specified above.</string>
 
     <string name="set_reminder">Set reminder:</string>
@@ -183,7 +877,7 @@
         \nThe various classes of drugs may include cannabis , solvents , tranquilizers, barbiturates, cocaine, stimulants, hallucinogens or narcotics . The questions do not include alcoholic beverages.\nPlease answer every question. If you have difficulty with a statement, then choose the response that is mostly right.</string>
 
     <string name="afternoon">Afternoon</string>
-    <string name="add_time_alarm">Add Time &amp; Alarm</string>
+    <string name="add_time_alarm">Add time &amp; alarm</string>
     <string name="page_1.1">DID YOU KNOW?</string>
     <string name="page_2_1">What is anxiety?</string>
     <string name="lets_begin_btn">Let\'s begin!</string>
@@ -221,15 +915,15 @@
 
     <!--Exrercises-->
 
-    <string name="mindfulness_exercises">Mindfulness – What is it?</string>
-    <string name="butterflyhug_exercises">Touch and the Butterfly Hug</string>
-    <string name="handover_esxercises">Hand Over Your Heart</string>
-    <string name="mindfulwalking_exercises">Mindful Walking</string>
-    <string name="dance_exercises">Movement: Dance</string>
-    <string name="running_exercises">Movement: Running</string>
-    <string name="body_moment_exercies">Mindful Body Movement</string>
+    <string name="mindfulness_exercises">Mindfulness – what is it?</string>
+    <string name="butterflyhug_exercises">Touch and the butterfly hug</string>
+    <string name="handover_esxercises">Hand over your heart</string>
+    <string name="mindfulwalking_exercises">Mindful walking</string>
+    <string name="dance_exercises">Movement: dance</string>
+    <string name="running_exercises">Movement: running</string>
+    <string name="body_moment_exercies">Mindful body movement</string>
     <string name="deepbreathing_exercises">Deep breathing</string>
-    <string name="musclerelaxation_exercises">Progressive Muscle Relaxation</string>
+    <string name="musclerelaxation_exercises">Progressive muscle relaxation</string>
     <!--    Exercise_items-->
     <string name="screen1">Have you ever caught your mind wandering or daydreaming while you are in the middle of a familiar or repetitive task? You could be walking, working or even driving your car, and your mind is miles away, perhaps fantasizing about going on vacation, thinking about your to-do list, or worrying about some upcoming event. In either case, you are not focusing on the current situation and not in touch with the ‘here and now’.  This mode of operation is often referred to as automatic pilot.</string>
     <string name="screen2">Mindfulness is the opposite of automatic pilot. It is about experiencing the world that is firmly in the ‘here and now’. This is referred to as the being mode. It liberates you from automatic and unhelpful thoughts and responses.</string>
@@ -248,7 +942,7 @@
     <string name="butterflyScreen2_text3">Breathe slowly and deeply (abdominal breathing) while you mentally observe what is going through your mind and body—thoughts, images, sounds, odors, feelings, and physical sensation.</string>
 
     <!--    Hand over your heart Exercise-->
-    <string name="handoveryourHeart_titletext">Hand Over Your Heart</string>
+    <string name="handoveryourHeart_titletext">Hand over your heart</string>
     <string name="handoveryourHeart_text">HOW TO DO IT</string>
     <string name="handoveryourHeart_text_desc">&#8226; Rest the heel of your hand on your sternum around your heart area.<br />\n
     &#8226; Apply a steady, gentle, but firm pressure.<br />\n
@@ -256,7 +950,7 @@
     &#8226; Experiment with the various placements and wait until you feel a shift. It may take up to 5 or 10 minutes of deep breathing in this position to shift if you are very activated.</string>
 
     <!--    Dancing Exercise-->
-    <string name="dancingexercise_titletext">Movement: Dance</string>
+    <string name="dancingexercise_titletext">Movement: dance</string>
     <string name="dancingexercises_text">Moving your body to music can be a fun and fast way to shift your state and reconnect with your body, rhythm and expression.</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_text">There are many movement routines that invite you to reconnect with your body. Pilates, yoga and other similar stretching exercises incorporate mindful awareness of movements and postures. Additionally, coordinating body movement and breath further potentiates your ability to shift your state.</string>
@@ -355,7 +1049,7 @@
 \n\n What do you think of this action plan? Don’t worry if you aren’t sure of how to “drive” this path yet. This is why we are learning the skills one step at a time.
  </string>
     <!--Quiz-->
-    <string name="quiz_title">QUIZ</string>
+    <string name="quiz_title">Quiz</string>
     <string name="quiz_text1">It can be hard to clearly identify specific fears that trigger our anxiety cycles. In time, you’ll be able to quickly recognize and avoid them. To learn this skill, let’s walk through a series of questions together that will teach you to recognize, identify and understand your anxiety.</string>
     <string name="quiz_text2">1. Recognize the stressful situation(s):</string>
     <string name="quiz_text3">Over the last 30 days, have you been affected by the following problems?</string>
@@ -364,7 +1058,7 @@
     <string name="quiz_text_option3">Family related stress</string>
     <string name="quiz_text_option4">Social relations stress</string>
     <string name="quiz_text_option5">Acute/chronic stress</string>
-    <string name="quiz_text2_1">2. Identify your response </string>
+    <string name="quiz_text2_1">2. Identify your response </string>
     <string name="quiz_text_option2_1">Push Away/Avoidance (“I avoid stressful situations and people at any cost.”)</string>
     <string name="quiz_text_option2_2">Push Through (“I try to ignore and push through stress.”)</string>
     <string name="quiz_text_option2_3">Denial (“I either stay positive and push through or shutdown.”)</string>
@@ -375,16 +1069,16 @@
     <string name="quiz_text_option3_3">I have a hard time acknowledging my own stress and anxiety. I also have a hard time following through with changes in order to manage stress, and end up in a vicious cycle of anxiety.</string>
     <string name="submit">Submit</string>
     <string name="let_make_plan">Let\'s make a plan</string>
-    <string name="mindfulness_heading">Mindfulness - What is it?</string>
+    <string name="mindfulness_heading">Mindfulness - what is it?</string>
 
     <!--Recognize a cycle of anxiety-->
     <string name="title_toolbar_recognize">Recognize a cycle of anxiety</string>
     <string name="recognize_card1_text1">Earlier, we compared facing stressful situations to planning a route to a destination. When the correct steps are taken, there is a beginning and there is an end to the anxiety.</string>
-    <string name="recognize_card1_text2">GETTING CAUGHT IN THE CYCLE</string>
+    <string name="recognize_card1_text2">Getting Caught In The Cycle</string>
     <string name="recognize_card1_text3">Unfortunately, instead of approaching our stress in this linear way, we often get stuck in a vicious circle: a cycle of anxiety! How does this cycle start? By excessively worrying about a potential threat that hasn’t occurred yet.</string>
     <string name="recognize_card2_text1">In addition to worrying about this potential threat, our biased thinking may make us assume that this future event will have a negative outcome. </string>
     <string name="recognize_card2_text2">We start to pay more and more attention to possible signs that this negative outcome is likely. Once we have convinced ourselves of this, we look internally to see whether or not we’ll be able to cope with these potential threats. Our anxious symptoms begin to manifest themselves, confirming our suspicions that we won’t be able to cope, which in turn make us more anxious. We have now fully entered a cycle of anxiety!</string>
-    <string name="recognize_card3_text1">RECOGNIZE THAT EVERYONE IS DIFFERENT</string>
+    <string name="recognize_card3_text1">Recognize That Everyone Is Different</string>
     <string name="recognize_card3_text2">The truth is that not everyone feels stressed by the same things! By recognizing your personal fears and responses, you’ll be able to avoid falling into the cycle.</string>
     <string name="recognize_card3_text3">Let’s examine the responses of Nora, Austin and Melanie to deepen our understanding of this cycle. See if you can identify where Nora, Austin and Melanie enter this cycle, and note how each person’s point of entry is unique. After reading each person’s response, click on the button to highlight the fear that makes them victims of the cycle of anxiety.</string>
 
@@ -429,34 +1123,34 @@ Harvard medical school studies show that exercise diverts our minds from the ver
 We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.
 The most important thing is to do it! Do you have some time today to get started?
 </string>
-    <string name="anxiety_and_diet">Anxiety and Diet</string>
+    <string name="anxiety_and_diet">Anxiety and diet</string>
     <!--Weekly Summary-->
     <string name="summaryofmood">Summary of mood</string>
     <string name="summaryofsleep">Summary of sleep</string>
     <string name="summaryof_phq_9">Summary of PHQ-9</string>
-    <string name="summaryof_gad">Summary of GAD-7</string>
+    <string name="summaryof_gad">Summary of GAD</string>
     <string name="summaryof_audit">Summary of AUDIT</string>
     <string name="summaryof_dast">Summary of DAST</string>
     <string name="summaryof_progressofwork">Progress on course work</string>
     <string name="summaryof_journalentry">Journal entry</string>
-    <string name="summarymood_by_date_range">Mood by Date Range</string>
-    <string name="summarymood_daysateachmood">Days at each Mood</string>
-    <string name="summarysleep_by_date_range">Sleep by Date Range</string>
-    <string name="summaryphq9_by_date_range">PHQ-9 by Date Range</string>
-    <string name="summarygad_by_date_range">GAD-7 by Date Range</string>
-    <string name="summaryaudit_by_date_range">AUDIT by Date Range</string>
-    <string name="summarydast_by_date_range">DAST by Date Range</string>
-    <string name="Summaryprogresswork_total_cousrework">Total Course Work Complete</string>
+    <string name="summarymood_by_date_range">Mood by date range</string>
+    <string name="summarymood_daysateachmood">Days at each mood</string>
+    <string name="summarysleep_by_date_range">Sleep by date range</string>
+    <string name="summaryphq9_by_date_range">PHQ-9 by date range</string>
+    <string name="summarygad_by_date_range">GAD-7 by date range</string>
+    <string name="summaryaudit_by_date_range">AUDIT by date range</string>
+    <string name="summarydast_by_date_range">DAST by date range</string>
+    <string name="Summaryprogresswork_total_cousrework">Total course work complete</string>
     <string name="summaryprogress_course">Course</string>
     <string name="summaryprogress_completed">% Completed</string>
-    <string name="summaryprogress_braving_Anxiety">Braving Anxiety</string>
-    <string name="summaryprogress_feeling_better">Feeling Better</string>
-    <string name="summaryprogress_taking_control">Taking Control</string>
-    <string name="summaryprogress_building_confidence">Building Confidence</string>
-    <string name="bravinganxiety_anxietyworks">How to Anxiety Works</string>
-    <string name="braving_sleep">Sleep &amp; Anxiety</string>
-    <string name="braving_building">Building Support</string>
-    <string name="coming_soon">Coming Soon!</string>
+    <string name="summaryprogress_braving_Anxiety">Braving anxiety</string>
+    <string name="summaryprogress_feeling_better">Feeling better</string>
+    <string name="summaryprogress_taking_control">Taking control</string>
+    <string name="summaryprogress_building_confidence">Building confidence</string>
+    <string name="bravinganxiety_anxietyworks">How to anxiety works</string>
+    <string name="braving_sleep">Sleep &amp; anxiety</string>
+    <string name="braving_building">Building support</string>
+    <string name="coming_soon">Coming soon!</string>
 
     <string name="name">Name</string>
     <string name="paracetamol">Paracetamol</string>
@@ -464,7 +1158,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="vitamin">Vitamin</string>
     <string name="two_tablets">2 Tablets</string>
     <string name="one_tablet">1 Tablet</string>
-    <string name="update_time_alarm">Update Time &amp; Alarm</string>
+    <string name="update_time_alarm">Update time &amp; alarm</string>
     <string name="phq_heading">PHQ-9</string>
     <string name="gad_heading">GAD-7</string>
     <string name="audit_heading">AUDIT</string>
@@ -473,14 +1167,14 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="remind_me">Remind me</string>
     <string name="weekly">Weekly</string>
     <string name="score">Score marked</string>
-    <string name="total_score">Total Score</string>
+    <string name="total_score">Total score</string>
     <string name="more_info">More Info</string>
     <string name="more_desc_1">This assessment is based on the Patient Health Questionnaire (PHQ), which is a self-administered version of the PRIME-MD diagnostic instrument for common mental disorders.\n\nPHQ9 Copyright © Pfizer Inc. All rights reserved. Reproduced with permission. PRIME-MD ® is a trademark of Pfizer Inc.</string>
     <string name="learn_more">Learn more</string>
-    <string name="taking_control">Taking Control</string>
+    <string name="taking_control">Taking control</string>
     <string name="summary">Summary</string>
-    <string name="events_tracker">Events Tracker</string>
-    <string name="choose_date">Choose Date and Time</string>
+    <string name="events_tracker">Events tracker</string>
+    <string name="choose_date">Choose date and time</string>
 
     <!--    Mindful walking exercise>-->
     <string name="mindfulwalking_exercises_text1">What are the benefits of mindful walking?</string>
@@ -505,7 +1199,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="biased_thinking_summary">Biased thinking refers to cognitive distortions or errors in thinking that influence how we perceive and interpret information. It involves a tendency to view situations, events, or ourselves in a distorted or exaggerated manner, often leading to negative or irrational thoughts. Biased thinking can contribute to the development and maintenance of anxiety and other mental health issues.</string>
     <string name="cortisol">Cortisol</string>
     <string name="cortisol_summary">Cortisol is a hormone produced by the adrenal glands in response to stress. It is often referred to as the primary stress hormone. When the brain detects a threat or perceives stress, it signals the release of cortisol into the bloodstream. While cortisol is important for short-term stress adaptation, chronic or prolonged elevation of cortisol levels due to chronic stress can cause a loss of neurons in the prefrontal cortex and hippocampus. It also decreases serotonin, the “happy hormone”, which makes a person feel angry, depressed, and feel physical pain more quickly and easily.</string>
-    <string name="cognitive_distortion">Cognitive Distortion</string>
+    <string name="cognitive_distortion">Cognitive distortion</string>
     <string name="cognitive_distortion_summary">Cognitive distortions, also known as biased thinking or irrational thoughts, refer to exaggerated or irrational patterns of thinking that can contribute to emotional distress and maintain anxiety or other mental health issues.\n
                         Cognitive distortions are common and can affect the way individuals interpret and perceive events, situations, and themselves. They often involve biases or errors in reasoning that lead to distorted or negative thinking patterns.</string>
     <string name="competency">Competency</string>
@@ -557,7 +1251,7 @@ The most important thing is to do it! Do you have some time today to get started
     <!--Privacy-->
     <string name="privacy">Privacy</string>
     <string name="journaling">Journaling</string>
-    <string name="course_work">Course Work</string>
+    <string name="course_work">Course work</string>
     <string name="mood">Mood</string>
     <string name="sleep">Sleep</string>
     <string name="medication">Medication</string>
@@ -568,27 +1262,27 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="fastPace_screen2_1">You’re looking for only 15 minutes a day to methodically progress through the Calmscient courses…</string>
     <string name="fastPace_screen2_2">1. When is a good time for you?</string>
     <string name="fastPace_screen2_when">When</string>
-    <string name="fastPace_screen2_lunch">Lunch Time</string>
+    <string name="fastPace_screen2_lunch">Lunch time</string>
     <string name="fastPace_screen2_bedroom">My bedroom</string>
     <string name="fastPace_screen2_couch">On my couch (with no TV!)</string>
     <string name="fastPace_screen2_car">In my car</string>
     <string name="fastPace_screen2_patio">On the patio</string>
     <string name="fastPace_screen2_where">Where</string>
     <!--    weekly summary_Progress_Work-->
-    <string name="progresswork_expand1_text1">VIDEO-How Anxiety Works</string>
-    <string name="progresswork_expand1_text2">READING- The Anxiety Loop</string>
-    <string name="progresswork_expand1_text3">LISTEN-Signs &amp; Symptoms</string>
-    <string name="progresswork_expand1_text4">PLAN-Your Anxiety Goals</string>
+    <string name="progresswork_expand1_text1">VIDEO-How anxiety works</string>
+    <string name="progresswork_expand1_text2">READING- The anxiety loop</string>
+    <string name="progresswork_expand1_text3">LISTEN-signs &amp; symptoms</string>
+    <string name="progresswork_expand1_text4">PLAN-Your anxiety goals</string>
 
-    <string name="progresswork_expand2_text1">VIDEO-How Anxiety Affects Sleep</string>
-    <string name="progresswork_expand2_text2">READING-The Dangers of Insomnia</string>
-    <string name="progresswork_expand2_text3">LISTEN-Signs &amp; Symptoms</string>
-    <string name="progresswork_expand2_text4">PLAN-Your Sleep Goals</string>
+    <string name="progresswork_expand2_text1">VIDEO-How anxiety affects sleep</string>
+    <string name="progresswork_expand2_text2">READING-The dangers of insomnia</string>
+    <string name="progresswork_expand2_text3">LISTEN-Signs &amp; symptoms</string>
+    <string name="progresswork_expand2_text4">PLAN-Your sleep goals</string>
 
-    <string name="progresswork_expand3_text1">VIDEO-How a Support Network Helps</string>
-    <string name="progresswork_expand3_text2">READING-The Dangers of Insomnia</string>
-    <string name="progresswork_expand3_text3">LISTEN-Signs &amp; Symptoms</string>
-    <string name="progresswork_expand3_text4">PLAN-Your Sleep Goals</string>
+    <string name="progresswork_expand3_text1">VIDEO-How a support network helps</string>
+    <string name="progresswork_expand3_text2">READING-The dangers of insomnia</string>
+    <string name="progresswork_expand3_text3">LISTEN-signs &amp; symptoms</string>
+    <string name="progresswork_expand3_text4">PLAN-Your sleep goals</string>
 
     <!--    <sleepCard>-->
     <string name="hours_sleep1">+1 Hours sleep needed</string>
@@ -619,14 +1313,14 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="gad7_text2_weeklysummary">Mild anxiety</string>
 
     <!--DAST Card-->
-    <string name="dast7_text1_weeklysummary">Severe level: Referral</string>
+    <string name="dast7_text1_weeklysummary">Severe level: referral</string>
     <string name="dast7_text2_weeklysummary">Moderate level problems related to drug abuse</string>
 
     <!--AUDIT Card-->
     <string name="audit_text1_weeklysummary">Moderate-severe alcohol use disorder</string>
     <string name="audit_text2_weeklysummary">Harmful alcohol consumption</string>
 
-    <string name="general_check">General Check</string>
+    <string name="general_check">General check</string>
     <!--screenings-->
     <string name="screenings_1">1. Little interest or pleasure in doing things</string>
     <string-array name="screen"><item value="1">1. Little interest or pleasure in doing things</item>
@@ -656,12 +1350,12 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="ok">Ok\n</string>
     <string name="taking_control_substance">Substance</string>
     <string name="taking_control_alcohol">Alcohol</string>
-    <string name="taking_control_alcoholfeedays">Alcohol Free Days</string>
+    <string name="taking_control_alcoholfeedays">Alcohol free days</string>
     <string name="taking_control_now">Now</string>
     <string name="taking_control_goal">Goal</string>
     <string name="taking_control_7_days">7 days</string>
     <string name="taking_control_10_days">10 days</string>
-    <string name="taking_control_drink_count">Drink Counts</string>
+    <string name="taking_control_drink_count">Drink counts</string>
     <string name="taking_control_60_days">60 days</string>
     <string name="taking_control_texttile">Work your strengths</string>
     <string name="taking_control_text">Do something you are good at to build self-confidence then tackle a tougher task.</string>
@@ -671,21 +1365,21 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
 
     <!-- Running Exercise-->
-    <string name="runningexercise_titletext">Movement: Running</string>
+    <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
     <string name="version">Version 1.9</string>
     <!--bodymovemet Exercise-->
-    <string name="bodymovementexercise_titletext">Mindful Body Movement</string>
+    <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
-    <string name="chart_sleep_avg_sleep_score">Average Sleep Score</string>
-    <string name="chart_sleep_moresleepneeded">More Sleep Needed</string>
-    <string name="chart_sleep_mosthours_slept">Most Hours Slept</string>
-    <string name="chart_sleep_avghours_slept">Average Hours Slept</string>
-    <string name="chart_sleep_leaset_hours_slept">Least Hours Slept</string>
+    <string name="chart_sleep_avg_sleep_score">Average sleep score</string>
+    <string name="chart_sleep_moresleepneeded">More sleep needed</string>
+    <string name="chart_sleep_mosthours_slept">Most hours slept</string>
+    <string name="chart_sleep_avghours_slept">Average hours slept</string>
+    <string name="chart_sleep_leaset_hours_slept">Least hours slept</string>
 
     <!--    summary-->
-    <string name="summary_alcohol_free">Alcohol-Free</string>
+    <string name="summary_alcohol_free">Alcohol-free</string>
     <string name="summary_drinks">Drinks</string>
     <string name="summary_argument">Argument</string>
     <string name="summary_accident">Accident</string>

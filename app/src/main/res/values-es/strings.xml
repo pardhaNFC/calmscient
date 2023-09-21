@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
 <resources>
     <string name="app_name">Calmscient</string>
     <string name="splash_science">La ciencia de la calma</string>
@@ -50,7 +52,7 @@
     <string name="upcoming_medical_appointments">Próximas Citas Médicas</string>
     <string name="screenings">Exámenes</string>
     <string name="name">Nombre</string>
-    <!--settings-->
+    &lt;!&ndash;settings&ndash;&gt;
     <string name="settings">Configuración</string>
     <string name="profile">Perfil</string>
     <string name="theme">Tema</string>
@@ -63,7 +65,7 @@
     <string name="license_key">Licencia</string>
     <string name="help_support">Ayuda &amp; Soporte</string>
     <string name="logout">cerrar sesión</string>
-    <!--network errors-->
+    &lt;!&ndash;network errors&ndash;&gt;
     <string name="network_connection_error">Se perdió la conexión a Internet, vuelva a intentarlo</string>
     <string name="network_default_error">Ocurrió algo incorrecto, inténtalo de nuevo</string>
     <string name="network_internal_error">Nuestros sistemas recibieron un error, inténtalo de nuevo</string>
@@ -89,7 +91,7 @@
     <string name="morning">La Mañana</string>
     <string name="evening">La Noche</string>
     <string name="cancel">Cancelar</string>
-    <!--Emergency Resource Page strings-->
+    &lt;!&ndash;Emergency Resource Page strings&ndash;&gt;
     <string name="emergency_resource">Recurso de emergencia</string>
     <string name="doctor_name">Dr. Samuel Parker</string>
     <string name="hospital_name">Hospital del parque central</string>
@@ -121,7 +123,7 @@
     <string name="medication_Details">Detalles de los medicamentos</string>
     <string name="plz_confirm">Por favor confirmar..</string>
     <string name="exit_app">¿Quieres salir de la aplicación?</string>
-    <!--discovery-->
+    &lt;!&ndash;discovery&ndash;&gt;
     <string name="anxiety">Manejo de la ansiedad</string>
     <string name="stress">Cambiar tu respuesta al estrés</string>
     <string name="control">Tomar el control</string>
@@ -137,6 +139,691 @@
     <string name="add_appointment">Agregar cita</string>
     <string name="your_history">Historia</string>
     <string name="your_results">Tus Resultados</string>
+    <string name="summary_takingcontrol">Resumen</string>
+    &lt;!&ndash;Anxiety&ndash;&gt;
+    <string name="manage_anxiety">Manejar la ansiedad</string>
+    <string name="managing_anxiety">Manejar la ansiedad</string>
+    <string name="introduction">Introducción</string>
+    <string name="glossary">Glosario</string>
+    <string name="terms">Aceptar <u>terminos y condiciones</u></string>
+
+    &lt;!&ndash;lesson1.2&ndash;&gt;
+    <string name="title_toolbar_pace">Sal de este ciclo de ritmo “acelerado”</string>
+    <string name="title_pace">Todos estamos estresados.</string>
+    <string name="desc_one_pace">La mayoría de nosotros trabajamos demasiado, tenemos agendas muy apretadas y escuchamos sobre muchos eventos negativos en el mundo. A veces, no puedes evitar ninguna de estas cosas.</string>
+    <string name="desc_two_pace">Aquí tienes tu primera tarea en tu camino hacia la paz mental:</string>
+    <string name="checkbox_pace">Elige un momento y lugar para <u>dedicarte a este descubrimiento de bienestar mental</u></string>
+    <string name="title_third_pace">¿Qué deberías hacer durante estos 15 minutos?</string>
+    <string name="desc_third_one_pace">Durante este curso, se te proporcionarán muchas cosas positivas y productivas en las que pensar. Configura una alarma en tu teléfono de 15 minutos, de manera que puedas desconectarte responsablemente de las otras cosas que podrías tener programadas. Luego, imagina que sales de una fiesta ruidosa y caótica, cierras la puerta detrás de ti, respiras profundamente y disfrutas del silencio y disfruta del tiempo que has dedicado para mejorar tu salud mental.</string>
+    <string name="title_third_two_pace">Asegúrate de configurar un recordatorio para el momento y lugar que especificaste anteriormente.</string>
+    <string name="set_reminder">Configurar un recordatorio</string>
+    <string name="set_timer">Configurar la alarma</string>
+
+    <string name="other">¿Otro lugar?</string>
+    <string name="write_a_place">Escribe</string>
+
+    &lt;!&ndash;Screenings&ndash;&gt;
+    <string name="phq">Durante las últimas dos semanas, ¿con qué frecuencia te ha molestado uno o más de los siguientes problemas?</string>
+    <string name="gad">Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado alguno de los siguientes problemas?</string>
+    <string name="audit">¿Disfruta de una bebida de vez en cuando? Muchos de nosotros lo hacemos, a menudo cuando socializamos con amigos y familiares. Echemos un vistazo a sus patrones de consumo de alcohol y cómo pueden afectar su salud. El cuestionario AUDIT está diseñado para ayudar en la autoevaluación del consumo de alcohol e identificar cualquier implicación para la salud y el bienestar de la persona, ahora y en el futuro.</string>
+    <string name="dast">El uso de “drogas” se refiere a (1) el uso de medicamentos recetados o de venta libre que exceden las instrucciones y (2) cualquier uso no médico de drogas.\nLas diversas clases de drogas pueden incluir cannabis (marihuana, hachís) , disolventes (p. ej., diluyente de pintura), tranquilizantes (p. ej., Valium), barbitúricos, cocaína, estimulantes (p. ej., speed), alucinógenos (p. ej., LSD) o narcóticos (p. ej., heroína). Las preguntas no incluyen bebidas alcohólicas.\n\nResponda todas las preguntas. Si tiene dificultad con una declaración, elija la respuesta que sea mayormente correcta.</string>
+    <string name="torch_national"><u>Instituto Nacional de Salud de EE. UU. Asociación Estadounidense de Psicología Universidad de Stanford</u></string>
+    <string name="torch_phq">PHQ9 Copyright \u00a9 Pfizer Inc. Todos los derechos reservados. Reproducido con permiso. PRIME-MD \u00AE es una marca comercial de Pfizer Inc.</string>
+    <string name="repeat">Repetir</string>
+    <string name="everyday">Cada día</string>
+    <string name="afternoon">Tarde</string>
+    <string name="add_time_alarm">Agregar hora y hora Alarma</string>
+    <string name="page_1.1">¿SABÍAS?</string>
+    <string name="page_2_1">¿Qué es la ansiedad?</string>
+    <string name="page_7.1"><font color="#6E6BB3">Si una persona pudiera simplemente “recordar” experiencias pasadas,</font></string>
+    <string name="lesson1_video1_description">
+    Nuestro cerebro es como una computadora. Tiene un sistema operativo básico que nos ayuda a lidiar con las tareas cotidianas y las complejidades de la vida. Pero cuando detecta una amenaza que puede interrumpir o dañar el funcionamiento normal, se activa una alarma que nos alerta de inmediato sobre el peligro.
+    Puedes imaginar por qué esta “Sistema de Amenaza” en nuestro sistema nervioso siempre tiene prioridad. Es para que podamos volver a la normalidad lo más rápido posible. Cuando se activa este sistema de amenaza, se activan respuestas al estrés como la luchar/huir/congelar. Las hormonas del estrés, como la adrenalina y el cortisol, inundan nuestro sistema para responder a las exigencias del peligro. Emociones intensas como la ansiedad, el miedo y la sensación de estar abrumados pueden apoderarse de nuestra mente.
+    Es comprensible que las funciones generales del cerebro  se vuelvan más lentas o se pongan en “pausa” hasta que se solucione el peligro. Por eso podríamos sentir que nuestra capacidad de pensar disminuye cuando estamos experimentando ansiedad. Nuestra “sistema de amenaza” es una parte importante de la función cerebral, pero cuando está constantemente activado, disfrutar de la vida o tener sentido pleno de uno mismo se vuelve difícil e incluso puede parecer inalcanzable.\n
+    ¿Cuáles son algunas cosas que pueden activar nuestro sistema de amenaza? Pueden ser: \n
+        …el pensamiento de que podríamos encontrarnos con situaciones o personas que nos amenazaron en el pasado. \n
+        …riesgos, cambios o resultados desconocidos al tomar una decisión. \n
+        …enfrentar una situación desafiante en la que no creemos tener suficientes habilidades o apoyo para superarla.\n
+    Recuerda: la ansiedad es una respuesta normal del cerebro al estrés. ¡Nuestro sistema nervioso no está roto y no hay nada malo en nosotros cuando nos sentimos ansiosos! Aprender a controlarlo es una habilidad importante y poderosa que podemos dominar para mantener las situaciones estresantes en su lugar.
+</string>
+    <string name="lesson4_video1_description">
+               Una mente tranquila sólo puede comenzar con un cuerpo tranquilo. ¿Por qué es eso?\n\n
+        Recuerde: la ansiedad es la respuesta de nuestro cuerpo al peligro, ya sea real o imaginario. Entonces, si podemos controlar nuestro cuerpo, podemos evitar que nuestra mente responda con una preocupación y cavilación abrumadoras.\n\n
+        El comienzo mismo de la ansiedad comienza con las “sensaciones corporales”. En cuanto los percibamos, aprenderemos a “pulsar pausa”, por así decirlo. Nuestro objetivo es reducir nuestras hormonas del estrés y esto dará como resultado la estabilización de nuestro sistema nervioso.\n
+        Algunas de las mejores técnicas incluyen ejercicios de respiración consciente, relajación muscular progresiva, movimiento corporal e instalación de recursos.\n\n
+        Estos ejercicios calmarán su respuesta al estrés y le brindarán el espacio para manejar los pensamientos ansiosos y desarrollar comportamientos saludables. Esto resultará en una mejora física y emocional.\n\n
+        ¿Por qué no practicas algunos de estos ejercicios durante diez minutos cada mañana o justo antes de acostarte? La clave es la constancia para que tu cuerpo aprenda lo que se siente al tener un sistema nervioso tranquilo.\n\n
+</string>
+
+    &lt;!&ndash;Exrercises&ndash;&gt;
+    <string name="mindfulness_exercises">La Conciencia Plena - ¿QUÉ ES?</string>
+    <string name="butterflyhug_exercises">El toque y el abrazo de la mariposa</string>
+    <string name="handover_esxercises">Entrega tu oído</string>
+    <string name="mindfulwalking_exercises">Caminata la conciencia plena</string>
+    <string name="dance_exercises">Movimiento: Danza</string>
+    <string name="running_exercises">Movimiento: Correr</string>
+    <string name="body_moment_exercies">Movimiento corporal consciente</string>
+    <string name="deepbreathing_exercises">Respiración profunda</string>
+    <string name="musclerelaxation_exercises">Relajación muscular progresiva</string>
+
+    <string name="calming_body">Calmar el cuerpo</string>
+    <string name="anxiety_worry">Ansiedad y preocupación</string>
+    <string name="moral_deficiency">Deficiencia moral</string>
+    <string name="moral_deficiency_anxiety">¿Deficiencia moral o ansiedad?</string>
+    <string name="anxiety_hide">¿Dónde se puede esconder la ansiedad?</string>
+    <string name="postpone_worry">Aprende a posponer tu preocupación</string>
+    <string name="anxious_mind">Calmar tu mente ansiosa</string>
+    <string name="biased_think">Pensamiento sesgado</string>
+    <string name="making_connection">Haciendo conexión</string>
+    <string name="restructure_biased">Reestructurar el pensamiento sesgado</string>
+    <string name="anxiety_exercise">Ansiedad y ejercicio</string>
+    <string name="anxiety_sleep">Ansiedad y sueño</string>
+    <string name="anxiety_alcohol">Ansiedad y alcohol/sustancias</string>
+    <string name="managing_stress">Manejar el estrés para reducir la ansiedad</string>
+    &lt;!&ndash;manage anxiety&ndash;&gt;
+    &lt;!&ndash; Anxiety cards Introduction 1 &ndash;&gt;
+    <string name="anxiety_card1_text1">¿LO SABÍAS?</string>
+    <string name="neuropsychology">La Neuropsicología de la Ansiedad</string>
+    <string name="the_neuropsychology">La Neuropsicología de la Ansiedad</string>
+    <string name="meet_nora_austin">Conoce a Nora, Austin y Melanie</string>
+    <string name="let_make_plan">Hagamos un plan</string>
+    <string name="anxiety_card1_text2">Se estima que el 31,1% de los adultos en Estados Unidos experimentan algún trastorno de ansiedad en algún momento de sus vidas.</string>
+    <string name="anxiety_card1_text3">¡No estás solo!</string>
+
+    <string name="anxiety_card2_text1">¿QUÉ ES LA ANSIEDAD?</string>
+    <string name="anxiety_card2_text2">En pocas palabras, la ansiedad es un mecanismo útil de supervivencia.</string>
+    <string name="anxiety_card2_text3">Imagina a un ser humano primitivo tratando de sobrevivir en el bosque. Al igual que en la mayoría de las formas de vida, varios mecanismos de supervivencia innatos se transmiten de una generación a otra a través del ADN y son una parte importante para la supervivencia de una especie.</string>
+
+    <string name="anxiety_card3_text1">Algunas de las reacciones  a este mecanismo de supervivencia son:</string>
+    <string name="anxiety_card3_text2">LUCHA:</string>
+    <string name="anxiety_card3_text3">¡Enfrenta la amenaza directamente!</string>
+
+    <string name="anxiety_card4_text1">HUIR: </string>
+    <string name="anxiety_card4_text2">¡Busca una salida!</string>
+
+    <string name="anxiety_card5_text1">CONGELARSE :</string>
+    <string name="anxiety_card5_text2">¡No te muevas!</string>
+
+    <string name="anxiety_card6_text1">Pero ahora imagina a esta persona enfrentándose cara a cara con un oso hambriento. ¡Luchar, huir o congelarse pueden no ser suficientes para sobrevivir a este encuentro! Un oso es mucho más fuerte, rápido e inteligente para cualquiera de esas respuestas.</string>
+    <string name="anxiety_card6_text2">Aquí es donde entra en juego el mecanismo de supervivencia de “Preocupación”.</string>
+
+    <string name="anxiety_card7_text1">Si una persona pudiera simplemente “recordar” experiencias pasadas, la “Preocupación” podría ayudarle a tomar medidas para evitar o alejarse de los peligros antes de que se conviertan en amenazas mortales.</string>
+    <string name="anxiety_card7_text2">En este ejemplo, si la persona ve a un oso hambriento desde la distancia, recordaría el posible peligro y tomaría otra ruta, o posiblemente recordaría y evitaría los lugares donde los osos estuvieran cazando activamente comida. En ambos casos, la “Preocupación” le ayudaría a sobrevivir con exito..</string>
+    <string name="anxiety_card7_text3">Entonces, ¡preocuparse es una habilidad útil! </string>
+
+    <string name="anxiety_card8_text1">Pero, ¿cómo nos afecta demasiada “Preocupación”?</string>
+    <string name="anxiety_card8_text2">A menudo llamamos a este exceso de preocupación “Ansiedad”.</string>
+
+    <string name="anxiety_card9_text1">En nuestro mundo de hoy, enfrentamos muchas situaciones parecidas al encuentro con un oso todos los días. Es fácil condicionarse para  constantemente activar nuestra respuesta de “Preocupación” para evitar la necesidad de “Luchar, Huir o Congelarse”. Pero protegernos en exceso con ansiedad a menudo viene a costa de nuestra felicidad. </string>
+    <string name="anxiety_card9_text2">El uso excesivo de la preocupación, la rumiación o el miedo a estar en el lugar equivocado en el momento equivocado limita nuestra capacidad de disfrutar de la vida.</string>
+
+    <string name="anxiety_card10_text1">Recuerda: ¡la preocupación y la ansiedad no son tus enemigos!</string>
+    <string name="anxiety_card10_text2">La clave para tener más paz mental radica en mejorar tu comprensión de ambas y luego aprender las habilidades para utilizarlas en los momentos adecuados y durante el tiempo adecuado.</string>
+    &lt;!&ndash;Anxiety cards introduction 2 &ndash;&gt;
+    <string name="fast_pase_card1_text1">Todas estamos estresadas ...</string>
+    <string name="fast_pase_card1_text2">La mayoría de nosotros trabajamos demasiado, programamos demasiado y escuchamos sobre demasiados eventos negativos en el mundo. A veces, no puedes evitar nada de esto.</string>
+    <string name="fast_pase_card1_text3">Esta es su primera tarea en su viaje hacia la tranquilidad:</string>
+
+    <string name="fast_pase_card2_text1">Sólo estás buscando 15 minutos al día para regalarte un espacio mental tranquilo, lejos de tus problemas y del bullicio del mundo que te rodea.</string>
+    <string name="fast_pase_card2_text2">¿Cuándo es un buen momento para ti?</string>
+    <string name="fast_pase_card2_text3">¡Excelente! Has tomado una acción positiva, y eso es más importante de lo que puedes imaginar.</string>
+    <string name="fast_pase_card3_text1">¿Qué debes hacer durante estos 15 minutos?</string>
+    <string name="fast_pase_card3_text2">Durante este curso, se le brindarán muchas cosas positivas y productivas en las que pensar. <b>Durante cada sesión de 15 minutos, configura un temporizador en tu teléfono</b> para que puedas desconectarte responsablemente de otras cosas que hayas programado. En tu mente, cierra la puerta a todos los pensamientos ruidosos a los que estés acostumbrado y disfruta del tiempo que has dedicado a mejorar tu salud mental.</string>
+    <string name="fast_pase_card3_text3">Asegúrese de configurar un recordatorio para la hora y el lugar que especificó anteriormente. </string>
+
+    &lt;!&ndash;Anxiety cards Introduction 3 &ndash;&gt;
+    <string name="make_plan_card1_text1">Hacer un plan para enfrentarse a la ansiedad es como trazar una ruta hacia un destino.</string>
+    <string name="make_plan_card1_text2">Ver todo el viaje de un vistazo puede ayudarte a visualizar tu recorrido y tener confianza en cómo llegarás allí. Una vez que se establece la ruta, sabes que llegarás si sigues todas las indicaciones y direcciones señaladas. Habrá menos sorpresas y te sentirás más en control.</string>
+
+
+    <string name="make_plan_card2_text1">Cuando te enfrentes a una situación que te causa ansiedad, imagina que el “destino” es el otro lado de esa situación estresante. </string>
+    <string name="make_plan_card2_text2">Aquí tienes un ejemplo de cómo navegar esa situación estresante:</string>
+
+
+    <string name="make_plan_card3_text1">PASO 1</string>
+    <string name="make_plan_card3_text2">SÉ CONSCIENTE DE LO QUE TE RODEA</string>
+    <string name="make_plan_card3_text3">Toma nota de cómo tu ansiedad está afectando tus emociones, selecciones y decisiones. Cambia tu forma de pensar de: “Estoy mal y necesito ser arreglado/a” a: “Solo necesito protegerme de mi entorno que está lleno de cosas que generan ansiedad”.</string>
+
+
+    <string name="make_plan_card4_text1">PASO 2</string>
+    <string name="make_plan_card4_text2">IDENTIFICA LO QUE ACTIVA TU ANSIEDAD</string>
+    <string name="make_plan_card4_text3">Toma nota de las situaciones, pensamientos o sentimientos específicos que activan tu ansiedad e incluso escríbelos en algún lugar. Cuando sea posible, esto te ayudará a tomar medidas para evitar situaciones que generan ansiedad y aprender a manejar aquellas sobre las que no tienes control.</string>
+
+
+    <string name="make_plan_card5_text1">PASO 3</string>
+    <string name="make_plan_card5_text2">RECUERDA QUE TU NO ERES UNA PERSONA ANSIOSA </string>
+    <string name="make_plan_card5_text3">Aprende a identificar los tres componentes de la ansiedad: Fisiológico (Cuerpo), Cognitivo (Mente) y Comportamiento (Acciones). Esto te ayudará a seguir planes de acción que calmen tu mente, cuerpo y acciones.</string>
+
+
+    <string name="make_plan_card6_text1">PASO 4</string>
+    <string name="make_plan_card6_text2">Implementa Habilidades Calmen El Cuerpo </string>
+    <string name="make_plan_card6_text3">Puedes aprender a calmar tu cuerpo de forma consciente. Una vez que tu cuerpo esté calmado, tu mente hara lo mismo. Recursos como la relajación, la relajación muscular progresiva, la respiración consciente y caminar se convertirán en algo natural para ti.</string>
+
+
+    <string name="make_plan_card7_text1">PASO 5</string>
+    <string name="make_plan_card7_text2">Establece Un Limite Mental Entre Tu Y Tus Preocupaciones</string>
+    &lt;!&ndash;<string name="make_plan_card7_text2">ESTABLECE UN LÍMITE MENTAL ENTRE TÚ Y TUS PREOCUPACIONES</string>&ndash;&gt;
+    <string name="make_plan_card7_text3">Existen formas de “posponer” tus preocupaciones hasta un “momento de preocupación” designado, de manera que puedas concentrarte en tu rutina diaria sin temor a olvidar cosas importantes.</string>
+
+
+    <string name="make_plan_card8_text1">PASO 6</string>
+    <string name="make_plan_card8_text2">IMPLEMENTA HABILIDADES PARA CALMAR LA MENTE</string>
+    <string name="make_plan_card8_text3">El prejuicio  (Las distorsiones cognitivas) afecta en gran medida nuestra tendencia a preocuparnos de manera irracional y provoca ansiedad persistente. Esto ocurre cuando, basados en experiencias pasadas, subestimamos o exageramos  los factores estresantes de una situación particular sin mirarlos de manera realista. En ambos casos, no nos permite ver la situación claramente. Detectar Las distorsiones cognitivas nos ayudará a modificar nuestro pensamiento de manera que calme nuestra mente.</string>
+    <string name="make_plan_card9_text1">¡HAS LLEGADO!</string>
+    <string name="make_plan_card9_text2">¡Felicidades ! Has llegado al otro lado de tu situación estresante.</string>
+    <string name="make_plan_card9_text3"> Si sigues este mismo camino cada vez, podrás enfrentar cualquier situación estresante que se te presente en el camino. ¿Qué opinas de este plan de acción? No te preocupes si aún no estás seguro/a de cómo “navegar” este camino. Por eso estamos aprendiendo las habilidades paso a paso.</string>
+    <string name="quiz_title">PRUEBA</string>
+    <string name="quiz_text1">Puede ser difícil identificar claramente los miedos específicos que desencadenan nuestros ciclos de ansiedad. Con el tiempo, serás capaz de reconocerlos rápidamente y evitarlos. Para aprender esta habilidad, recorramos juntos una serie de preguntas que te enseñarán a reconocer, identificar y comprender tu ansiedad.</string>
+    <string name="quiz_text2">1. Reconocer las situaciones estresantes(s):</string>
+    <string name="quiz_text3"> Durante los últimos 30 días, ¿te has visto afectado por los siguientes problemas?</string>
+    <string name="quiz_text_option1">Estrés relacionado con el trabajo</string>
+    <string name="quiz_text_option2">Estrés relacionado con la salud personal</string>
+    <string name="quiz_text_option3">Estrés relacionado con la familia</string>
+    <string name="quiz_text_option4">Estrés relacionado con las relaciones sociales</string>
+    <string name="quiz_text_option5">Estrés agudo/crónico</string>
+    <string name="quiz_text2_1">2. Identifica tu respuesta a las situaciones</string>
+    <string name="quiz_text_option2_1">Alejar y Evitar (“Evito las situaciones estresantes y a las personas a toda costa.”).</string>
+    <string name="quiz_text_option2_2">Superar a toda costa (“Intento ignorar y superar el estrés.”).</string>
+    <string name="quiz_text_option2_3">Negar (“Ya sea que mantenga una actitud positiva y siga adelante o me cierre.”).</string>
+    <string name="quiz_ques_3">3. Comprendo las consecuencias de tu respuesta: ¿Qué sucede con tu ansiedad como resultado?</string>
+    <string name="quiz_ques_3_1">¿Qué sucede con su ansiedad como resultado?</string>
+    <string name="quiz_text_option3_1">Termino renunciando, rechazando, evitando y posiblemente perdiendo partes importantes de mi vida, como las relaciones, el trabajo, las calificaciones, el tiempo y la salud.</string>
+    <string name="quiz_text_option3_2">Ignoro el estrés, me vuelvo excesivamente productivo, hago varias tareas al mismo tiempo, me mantengo demasiado ocupado, me siento inquieto y busco un alivio rápido del estrés a través de hábitos poco saludables. A veces, esto puede resultar en enfermedades o lesiones.</string>
+    <string name="quiz_text_option3_3">Me cuesta reconocer mi propio estrés y ansiedad. También me resulta difícil seguir adelante con los cambios necesarios para gestionar el estrés, y termino atrapado en un ciclo vicioso de ansiedad.</string>
+    <string name="submit">Entregar</string>
+    &lt;!&ndash;Recognize a cycle of anxiety&ndash;&gt;
+    <string name="title_toolbar_recognize">Reconoce un ciclo de ansiedad</string>
+    <string name="recognize_card1_text1">Anteriormente, comparamos enfrentar situaciones estresantes con planificar una ruta hacia un destino. Cuando se toman los pasos correctos, hay un comienzo y un fin para la ansiedad.</string>
+    <string name="recognize_card1_text2">QUEDANDO ATRAPADO EN EL CICLO</string>
+    <string name="recognize_card1_text3">Desafortunadamente, en lugar de lidiar con  nuestro estrés de manera lineal, a menudo nos quedamos atrapados en un círculo vicioso: ¡un ciclo de ansiedad! ¿Cómo comienza este ciclo? Preocupándonos excesivamente  por una posible amenaza que aún no ha ocurrido.</string>
+    <string name="recognize_card2_text1">Además de preocuparte por esta posible amenaza, nuestras distorsiones cognitivas pueden hacernos sentir que este evento futuro tendrá un resultado negativo.</string>
+    <string name="recognize_card2_text2">Comenzamos a prestar cada vez más atención a posibles señales de que este resultado negativo es probable. Una vez que nos hemos convencido de esto, buscamos internamente para ver si seremos capaces o no de hacer frente a estas posibles amenazas. Nuestros síntomas de ansiedad comienzan a manifestarse, confirmando nuestras sospechas de que no seremos capaces de hacer frente, lo que a su vez nos hace sentir más ansiosos. ¡Ahora hemos entrado por completo en un ciclo de ansiedad!</string>
+    <string name="recognize_card3_text1">RECONOCE QUE TODOS SOMOS DIFERENTES</string>
+    <string name="recognize_card3_text2">¡La verdad es que no a todos les estresan las mismas cosas! Al reconocer tus temores  y reacciones  personales, podrás evitar caer en el ciclo.</string>
+    <string name="recognize_card3_text3">Examinemos las respuestas de Nora, Austin y Melanie para profundizar nuestra comprensión de este ciclo.Observa si puedes identificar en qué punto Nora, Austin y Melanie entran en este ciclo, y ten en cuenta cómo el punto de entrada de cada persona es único. Después de leer la respuesta de cada persona, haz clic en el botón para resaltar el miedo que los convierte en víctimas del ciclo de ansiedad.</string>
+    &lt;!&ndash;Dialog text for Recognize &ndash;&gt;
+    <string name="nora_ss">“Mi salud personal me causa ansiedad. Para reducir el riesgo de una emergencia de salud que no puedo permitirme, necesitaré trabajar a tiempo completo, y eso requerirá que adquiera nuevas habilidades para cumplir con expectativas más altas”.</string>
+    <string name="nora_rs">“Evito y escapo de situaciones estresantes. Por eso renuncié a mi trabajo. Debido a mi problema de salud, no creo tener suficiente fuerza para manejar la presión. También sigo pensando en cómo fracasé en mi primer trabajo”.</string>
+    <string name="nora_c">Nora se preocupa tanto por su salud que pierde cada vez más confianza en su capacidad para hacer frente de manera exitosa.</string>
+    <string name="austin_ss">“El equilibrio entre mi trabajo y mi familia me causa estrés. Trabajo por cuenta propia y mi familia piensa que puedo hacer tiempo para ellos mientras trabajo. Estoy constantemente haciendo varias tareas durante todo el día, tratando de cumplir con las expectativas de todos”.</string>
+    <string name="austin_rs">“Siempre me estoy obligando  para no fracasar en todas mis tareas y responsabilidades. Escapo de esta presión bebiendo y viendo partidos por la noche”.</string>
+    <string name="austin_c"> Austin asume presiones adicionales, utilizando la ansiedad como un impulso para esforzarse más. Su familia se queja de que está desconectado por las noches.</string>
+    <string name="melanie_ss">“Al principio, me costaba identificar qué me causa ansiedad porque pensaba que siempre me las arreglaba para salir adelante al mantenerme ocupada y positiva. Pero estoy constantemente sobrecargándome de actividades, principalmente para cumplir con mis hijos, amigos y eventos familiares. Mis amigos me dicen que me estoy esforzando demasiado, pero en realidad no puedo reconocer cuándo lo estoy haciendo”.</string>
+    <string name="melanie_rs">“No soy consciente de ello. Niego reconocerlo  porque no sé cómo es una vida normal. Tiendo a pensar que todo está bien”.</string>
+    <string name="melanie_c">Melanie suele estar confundida y duda constantemente de sus sentimientos. Siempre pregunta a los demás si son felices y tiende a hacer las cosas en exceso.</string>
+    <string name="melanie_desc">¿Puedes identificar los miedos específicos que podrían llevarte a entrar en el ciclo vicioso de la ansiedad? En la próxima lección, responde algunas preguntas útiles que te guiarán para reconocer estos temores  y evitar este ciclo peligroso.</string>
+    &lt;!&ndash;<string name="fear">[ MOSTRAR EL MIEDO DE AUSTIN ]</string>&ndash;&gt;
+    <string name="melanie">Melanie</string>
+    <string name="how_about_you">¿Y TÚ?</string>
+    &lt;!&ndash;    Exercise_items&ndash;&gt;
+    <string name="screen1">¿Alguna vez has atrapado a tu mente divagando o soñando despierto mientras estás en medio de una tarea familiar o repetitiva? Podrías estar caminando, trabajando o incluso conduciendo tu auto, y tu mente está a kilómetros de distancia, tal vez fantaseando con ir de vacaciones, pensando en tu lista de tareas pendientes o preocupándote por algún evento próximo.
+\nEn ambos casos, no estás enfocado en la situación actual y no estás en contacto con el “aquí y ahora”. Esta forma de operar se conoce comúnmente como piloto automático.</string>
+    <string name="screen2">La atención plena es lo opuesto al piloto automático. Se trata de experimentar el mundo de manera consciente y firme en el “aquí y ahora”. Esto se conoce como el modo ser. Te libera de pensamientos y respuestas automáticas y poco útiles.</string>
+    <string name="screen3_heading">¿Cómo ayuda la conciencia plena con la ansiedad?</string>
+    <string name="screen3_belowheading">Cuando permitimos que nuestro cerebro entre con demasiada frecuencia en el modo de piloto automático, corre el riesgo de condicionarse para estar excesivamente preocupado por el futuro, experiencias pasadas o nuestras emociones de manera negativa. Si hemos caído en este hábito antiguo e inútil, podemos desaprenderlo y reemplazarlo con habilidades que nos ayuden a resistir la tendencia automática de preocupación y ansiedad.</string>
+    <string name="screen4">La atención plena nos recuerda que no tenemos que tomar un control inmediato, eliminar o solucionar las experiencias desagradables. En cambio, podemos identificar y participar activamente en algo que nos brinde una sensación de seguridad y conexión.</string>
+    <string name="screen5">Como ejemplo simple: en lugar de enfocarte en cuántas millas caminaste por la mañana,  ¿puedes ser consciente de manera plena de los pájaros cantando, sentir activamente el aire fresco y percibir el cambio de estación? Cuando conectas tus sentidos con la naturaleza, los animales, las personas y tu propio cuerpo, captas la atención de tu sistema nervioso, lo que a su vez calma tu ansiedad. Cuando regreses a casa, estarás en un mejor estado de ánimo y más preparado para enfrentar tu día.</string>
+    <string name="screen6">¿Qué ejercicios de atención plena te gustaría incorporar en tu rutina diaria? Calmscient puede recordarte algunas rutinas sencillas de atención plena que te ayudarán a mantenerte en un estado saludable y consciente.</string>
+
+    &lt;!&ndash;butterfly_hug Screens Exercises&ndash;&gt;
+    <string name="butterflyScreen1_text1">Los seres humanos responden poderosamente al tacto. El contacto suave y afectuoso ayuda a calmar el sistema nervioso y puede desencadenar la liberación de oxitocina, la hormona del apego. Curiosamente, cuando se trata de liberar oxitocina, nuestros cuerpos no diferencian entre el contacto de un ser querido o nuestro propio contacto al abrazarnos a nosotros mismos.</string>
+    <string name="butterflyScreen1_text2">Cuando te sientas molesto, desequilibrado, agitado o irritable, intenta darte un abrazo o acariciarte suavemente en la mejilla y observa cómo afecta la forma en que te sientes.</string>
+    <string name="butterflyScreen2_text1">Entrelaza tus pulgares para formar una forma de mariposa:</string>
+    <string name="butterflyScreen2_text2">Coloca ambas manos sobre tu pecho y alterna golpeando con el dedo medio justo debajo de tu clavícula:</string>
+    <string name="butterflyScreen2_text3">Respira lentamente y profundamente (respiración abdominal) mientras observas mentalmente lo que está pasando por tu mente y cuerpo: pensamientos, imágenes, sonidos, olores, sentimientos y sensaciones físicas.</string>
+
+    &lt;!&ndash;    Hand over your heart Exercise&ndash;&gt;
+    <string name="handoveryourHeart_titletext">La mano sobre el corazón</string>
+    <string name="handoveryourHeart_text">CÓMO HACERLO</string>
+    <string name="handoveryourHeart_text_desc">&#8226; Coloca el talón de tu mano sobre el esternón, alrededor del área del corazón.\n
+    &#8226; Aplica una presión constante, suave pero firme.\n
+    &#8226; Para obtener un efecto adicional, puedes colocar la otra mano sobre tu frente o sobre tu abdomen.\n
+    &#8226; Experimenta con las diferentes posiciones y espera hasta sentir un cambio. Puede tomar hasta 5 o 10 minutos de respiración profunda en esta posición para lograr un cambio si estás muy activado.</string>
+    <string name="lesson1_video_summary">
+        La ansiedad es una respuesta normal del cerebro al estrés. Las respuestas de Lucha, Huida y Congelación nos ayudan a enfrentar las demandas de posibles amenazas. Las cosas que pueden causar ansiedad son:<br />
+        \n
+&#8226; Enfrentar amenazas pasadas\n
+&#8226; Riesgos desconocidos, cambios o resultados\n
+&#8226; Falta de habilidad o apoyo\n
+        ¡Nuestro sistema nervioso no está roto! Aprender a controlarlo es una habilidad importante y poderosa que podemos dominar para mantener las situaciones estresantes en su lugar.
+</string>
+
+    &lt;!&ndash;    Dancing Exercise&ndash;&gt;
+    <string name="dancingexercise_titletext">Movimiento: Baile</string>
+    <string name="dancingexercises_text">Mover tu cuerpo al ritmo de la música puede ser una forma divertida y rápida de cambiar tu estado y reconectar con tu cuerpo, ritmo y expresión.</string>
+    &lt;!&ndash;bodymovemet Exercise&ndash;&gt;
+    <string name="bodymovementexercise_text">Hay muchas rutinas de movimiento que te invitan a reconectar con tu cuerpo. El pilates, el yoga y otros ejercicios de estiramiento similares incorporan una conciencia plena de los movimientos y posturas. Además, coordinar el movimiento corporal con la respiración potencia aún más tu capacidad para cambiar tu estado.</string>
+    &lt;!&ndash;deepBreathingExercise&ndash;&gt;
+    <string name="deepbreathingexercise_text">Encuentra un lugar cómodo y tranquilo para sentarte o recostarte. También puedes practicar la respiración profunda mientras estás de pie, pero asegúrate de tener equilibrio y apoyo adecuado.</string>
+    &lt;!&ndash;Audio Player text and its dialog Text &ndash;&gt;
+    <string name="meet_nora_austrin_melanie_description">A veces, ver la ansiedad a través de los ojos de los demás puede ayudarnos a entenderla mejor. Conozcamos a tres amigos que ven y responden al estrés de manera diferente. Aunque sus personalidades y estilos de vida son diferentes, probablemente te identificarás con uno de ellos. </string>
+    <string name="nora_audio_text1">Primero, conozcamos a Nora. Nora tiende a alejarse y a evitar situaciones estresantes. Observa si puedes identificar esto en su forma de expresarse:</string>
+    <string name="nora_audio_text2">“Estudié administración de empresas y mercadeo  en la universidad, pero no podía lidiar con la presión de alcanzar metas mensuales en el trabajo. Me enfermé así que renuncié, y ahora trabajo en una cafetería durante el día y tengo un trabajo de limpieza de tiempo parcial por las noches, Mis problemas de salud me limitan demasiado, y por eso ya no puedo disfrutar de las cosas que antes disfrutaba. A menudo, me quedo despierta hasta muy tarde en la noche pensando en mis problemas, mi único escape es ver la televisión. Algo tiene que cambiar, pero no sé por dónde empezar. Tengo miedo de que mi salud no mejore y de que esta vaya a ser mi nueva vida”</string>
+    <string name="nora_audio_text3">¿Te identificas con algunos de los sentimientos y reacciones de Nora?</string>
+    <string name="austin_audio_text1">A continuación, conozcamos Austin. Él cree que atravesar  el estrés es la mejor manera de enfrentarlo. Escucha cómo se siente respecto a su vida laboral:</string>
+    <string name="austin_audio_text2">“La gente suele decirme que soy una persona trabajadora y productiva, y es verdad, puedo esforzarme mucho. Manejo mi propio negocio y puedo realizar múltiples tareas todo el día. No pido ayuda a nadie porque es más fácil y rápido si lo hago todo yo. La verdad, no puedo confiar en nadie más para hacer las cosas bien.\n
+    Pero a menudo regreso a casa sintiendo que estoy a punto de explotar y trato de desconectarme de todo bebiendo mientras veo un partido. No es que no me importe mi familia, pero lidiar con los problemas y emociones es simplemente demasiado para mi. Confío en hechos, análisis e información para poder estar lejos de sentirme vulnerable o tener que afrontar mis emociones.\n
+    Inconscientemente uso la ansiedad para impulsarme. Me baso en hechos, análisis e información, no creo que nadie me vea como una persona ansiosa”
+    </string>
+    <string name="austin_audio_text3">¿Respondes a situaciones estresantes como lo hace Austin?</string>
+    <string name="melanie_audio_text1">Finalmente, conozcamos a Melanie. Ella tiende a obligarse a mantenerse positiva, aunque hacerlo, a veces resulta en negar sus circunstancias:</string>
+    <string name="melanie_audio_text2">“Me preocupo por los demás así que soy buena ayudando a quienes lo necesitan. Solo que siempre tengo mucho que hacer y me siento cansada todo el tiempo.\n
+    Trato de estar al día con los eventos escolares y deportivos de mis hijos, disfruto mucho organizando detalles especiales para mi aniversario y vacaciones familiares. Siempre ando increíblemente ocupada y muchas veces me pregunto cuándo podré empezar a vivir mi vida para  mí misma.\n
+    A veces, me meto a mi cuarto y enciendo la televisión o reviso las redes sociales solo para desconectarme, porque sencillamente estoy agotada. Me encanta leer citas motivadoras porque creo que si me mantengo positiva podré seguir adelante.”
+    </string>
+    <string name="melanie_audio_text3">¿Alguna vez has respondido al estrés de la misma manera que Melanie?</string>
+    <string name="information">Información</string>
+
+    &lt;!&ndash;    Weekly Summary&ndash;&gt;
+    <string name="summaryofmood">Resumen de estado de ánimo</string>
+    <string name="summaryofsleep"> Resumen del sueño</string>
+    <string name="summaryof_phq_9">Resumen del PHQ-9</string>
+    <string name="summaryof_gad">Resumen del GAD-10</string>
+    <string name="summaryof_audit">Resumen de AUDIT</string>
+    <string name="summaryof_dast">Resumen de DAST</string>
+    <string name="summaryof_progressofwork">Progreso en el trabajo del curso.</string>
+    <string name="summaryof_journalentry">entrada de diario</string>
+    <string name="summarymood_by_date_range">Estado de ánimo por rango de fechas</string>
+    <string name="summarymood_daysateachmood">Días en cada estado de ánimo</string>
+    <string name="summarysleep_by_date_range">Dormir por rango de fechase</string>
+    <string name="summaryphq9_by_date_range">PHQ-9 por rango de fechas</string>
+    <string name="summarygad_by_date_range">GAD-7 por rango de fechas</string>
+    <string name="summaryaudit_by_date_range">AUDITORÍA por rango de fechas</string>
+    <string name="summarydast_by_date_range">DAST por rango de fechas</string>
+    <string name="Summaryprogresswork_total_cousrework">Trabajo total del curso completado</string>
+    <string name="summaryprogress_course">Curso</string>
+    <string name="summaryprogress_completed">% completado</string>
+    <string name="summaryprogress_braving_Anxiety">Desafiando la ansiedad</string>
+    <string name="summaryprogress_feeling_better">Sentirse mejor</string>
+    <string name="summaryprogress_taking_control">Tomando el controll</string>
+    <string name="summaryprogress_building_confidence">Construyendo confianza</string>
+    <string name="bravinganxiety_anxietyworks">Cómo funciona la ansiedad</string>
+    <string name="braving_sleep">Sueño y ansiedad</string>
+    <string name="braving_building">Soporte de construcción</string>
+    <string name="coming_soon">¡Muy pronto!</string>
+    <string name="paracetamol">Paracetamol</string>
+    <string name="anti_biotic">Antibiótico</string>
+    <string name="vitamin">Vitamina</string>
+    <string name="two_tablets">2 Tabletas</string>
+    <string name="one_tablet">1 Tableta</string>
+
+    <string name="update_time_alarm">Actualizar hora y alarmaa</string>
+    <string name="phq_heading">PHQ-9</string>
+    <string name="gad_heading">GAD-7</string>
+    <string name="audit_heading">AUDIT</string>
+    <string name="dast_heading">DAST-10</string>
+    <string name="sbirt_heading">SBIRT</string>
+    <string name="remind_me">Recuerdame</string>
+    <string name="weekly">Semanalmente</string>
+    <string name="score">La nota marcada</string>
+    <string name="total_score">Puntaje total</string>
+    <string name="more_info">Más información</string>
+    <string name="more_desc_1">Esta evaluación se basa en el Cuestionario de La salud del Paciente(PHQ-9). Una versión autoadministrada del instrumento de diagnóstico PRIME MD para trastornos mentales comunes</string>
+    <string name="learn_more">Aprende más</string>
+    <string name="taking_control">Tomando el control</string>
+    <string name="summary">Resumen</string>
+    <string name="events_tracker">Rastreador de eventos</string>
+    <string name="choose_date">Elija fecha y hora</string>
+    <string name="mindfulness_heading">Atención plena: ¿Qué es?</string>
+    &lt;!&ndash;additional resources&ndash;&gt;
+    <string name="additional_anxiety_exercise_summary">Las investigaciones han demostrado que el ejercicio mejora la salud celular y potencia el fármaco ansiolítico natural del cerebro. ¿Cómo es eso?
+Los estudios de la Facultad de Medicina de Harvard muestran que el ejercicio desvía nuestra mente de las cosas que nos preocupan. Mover nuestros cuerpos disminuye la tensión muscular, lo que reduce la contribución de nuestro cuerpo a sentir ansiedad. El aumento de nuestra frecuencia cardíaca cambia activamente la química de nuestro cerebro, aumentando la disponibilidad de importantes neuroquímicos ansiolíticos como la serotonina y el GABA. El ejercicio también activa el lóbulo frontal de nuestro cerebro, ayudando a controlar el sistema de reacción ubicado en la amígdala.
+Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio que elijas depende de ti! Incluso la actividad física general, como caminar, limpiar y cuidar animales, es útil. Para maximizar sus beneficios, elija algo que disfrute para que sea más probable que lo repita. Desarrollarás resiliencia poco a poco. Trabaja de manera constante para aumentar tu frecuencia cardíaca. Hacer ejercicio con un amigo o en grupo aporta el beneficio adicional del apoyo social. Si es posible, haga ejercicio en la naturaleza o en un espacio verde. Esto reducirá aún más los niveles de estrés y ansiedad.
+¡Lo más importante es hacerlo! ¿Tienes algo de tiempo hoy para empezar?
+</string>
+    <string name="anxiety_and_diet">Ansiedad y Dieta</string>
+    &lt;!&ndash;    Mindful walking exercise>&ndash;&gt;
+    <string name="mindfulwalking_exercises_text1">¿Cuáles son los beneficios de caminar conscientemente?</string>
+    <string name="mindfulwalking_exercises_text2">1.Reducción del estrés: Caminar conscientemente puede ser una forma eficaz de reducir el estrés y promover la relajación. Al dirigir su atención a las sensaciones físicas de caminar, crea un descanso mental de los factores estresantes cotidianos. Esta práctica activa la respuesta de relajación en tu cuerpo, lo que lleva a un estado mental más tranquilo.\n
+    2.Regulación emocional: Caminar conscientemente puede ayudar a regular sus emociones. Al observar tus pensamientos y emociones a medida que surgen durante la práctica, desarrollas una actitud sin prejuicios y de aceptación hacia ellos. Esto puede mejorar la resiliencia emocional y brindarle una mayor sensación de control sobre sus reacciones ante situaciones desafiantes.</string>
+    &lt;!&ndash;Journal Entry Screen &ndash;&gt;
+    <string name="journal_entry">Entrada de diario</string>
+    <string name="no_entries">No entrar</string>
+    <string name="delete">Borrar</string>
+    <string name="delete_message">¿Está seguro de que desea eliminar los datos de las entradas del diario?</string>
+    <string name="journal_entry_edit">Edición de entrada de diario</string>
+    <string name="edit">Diario</string>
+    &lt;!&ndash;Glossary&ndash;&gt;
+    <string name="adrenaline">Adrenalina</string>
+    <string name="adrenaline_summary">La adrenalina, también conocida como epinefrina, es una hormona y un neurotransmisor producido por las glándulas suprarrenales, que se encuentran encima de los riñones. Desempeña un papel crucial en la respuesta del cuerpo al estrés y desencadena la respuesta de "lucha o huida".\n
+                        Cuando una persona percibe una amenaza o peligro, ya sea real o percibido, el cerebro envía señales a las glándulas suprarrenales para que liberen adrenalina en el torrente sanguíneo. La adrenalina actúa como mensajero químico, preparando rápidamente al cuerpo para actuar y hacer frente a la amenaza percibida.</string>
+    <string name="anxiety_attack">Ataque de ansiedad</string>
+    <string name="anxiety_attack_summary">El término "ataque de ansiedad" no está reconocido oficialmente en los manuales de diagnóstico; DSM-5 (Manual Diagnóstico y Estadístico de los Trastornos Mentales). A menudo se utiliza para describir un período de mayor ansiedad o un estado de ansiedad más prolongado. Los ataques de ansiedad pueden implicar síntomas similares a los ataques de pánico, como preocupación excesiva, inquietud, irritabilidad, tensión muscular, dificultad para concentrarse y alteraciones del sueño.</string>
+    <string name="automatic_thinking">Pensamiento automático</string>
+    <string name="automatic_thinking_summary">El pensamiento automático se refiere a los pensamientos rápidos, involuntarios y, a menudo, inconscientes que surgen en respuesta a situaciones o desencadenantes. Estos pensamientos son automáticos en el sentido de que ocurren automáticamente y sin esfuerzo, sin intención deliberada ni conciencia consciente.\n
+                        Los patrones de pensamiento automático pueden verse influenciados por experiencias, creencias y sesgos cognitivos pasados. Pueden ser útiles o inútiles, según su contenido y su impacto en las emociones y los comportamientos. En el contexto de la ansiedad, los pensamientos automáticos a menudo se inclinan hacia interpretaciones negativas y preocupantes de las situaciones, lo que lleva a un aumento de la ansiedad y la angustia.</string>
+    <string name="biased_thinking">Pensamiento sesgado</string>
+    <string name="biased_thinking_summary">El pensamiento sesgado se refiere a distorsiones cognitivas o errores en el pensamiento que influyen en cómo percibimos e interpretamos la información. Implica una tendencia a ver situaciones, acontecimientos o a nosotros mismos de manera distorsionada o exagerada, lo que a menudo conduce a pensamientos negativos o irracionales. El pensamiento sesgado puede contribuir al desarrollo y mantenimiento de la ansiedad y otros problemas de salud mental.</string>
+    <string name="cortisol">Cortisol</string>
+    <string name="cortisol_summary">El cortisol es una hormona producida por las glándulas suprarrenales en respuesta al estrés. A menudo se la conoce como la principal hormona del estrés. Cuando el cerebro detecta una amenaza o percibe estrés, indica la liberación de cortisol al torrente sanguíneo. Si bien el cortisol es importante para la adaptación al estrés a corto plazo, la elevación crónica o prolongada de los niveles de cortisol debido al estrés crónico puede causar una pérdida de neuronas en la corteza prefrontal y el hipocampo. También disminuye la serotonina, la “hormona de la felicidad”, que hace que una persona se sienta enojada, deprimida y sienta dolor físico con mayor rapidez y facilidad.</string>
+    <string name="cognitive_distortion">Distorsión cognitiva</string>
+    <string name="cognitive_distortion_summary">Las distorsiones cognitivas, también conocidas como pensamiento sesgado o pensamientos irracionales, se refieren a patrones de pensamiento exagerados o irracionales que pueden contribuir a la angustia emocional y mantener la ansiedad u otros problemas de salud mental.\n
+                        Las distorsiones cognitivas son comunes y pueden afectar la forma en que las personas interpretan y perciben eventos, situaciones y a sí mismos. A menudo implican sesgos o errores en el razonamiento que conducen a patrones de pensamiento distorsionados o negativos.</string>
+    <string name="competency">Competencia</string>
+    <string name="competency_summary">La competencia se refiere a la capacidad de realizar o ejecutar una tarea o un conjunto de habilidades de manera efectiva. A menudo se asocia con el conocimiento, la experiencia y la competencia en un área en particular. La competencia se mide evaluando nuestras aptitudes, calificaciones o capacidades en una situación específica.</string>
+    <string name="compulsive_behaviour">Comportamiento compulsivo</string>
+    <string name="compulsive_behaviour_summary">El comportamiento compulsivo se refiere a acciones o pensamientos repetitivos y a menudo rituales que los individuos se sienten impulsados ​​a realizar en respuesta a la ansiedad o pensamientos angustiosos. Estos comportamientos suelen tener como objetivo reducir la ansiedad, prevenir el daño percibido o mantener una sensación de control. Sin embargo, suelen ser excesivos, consumir mucho tiempo e interferir con el funcionamiento diario.</string>
+    <string name="Dependency">Dependencia</string>
+    <string name="Dependency_summary">La dependencia se refiere a la dependencia de sustancias como el alcohol, las drogas o el tabaco como medio para afrontar la ansiedad o buscar un alivio rápido o escapar de la ansiedad o ayuda para afrontar emociones abrumadoras. Sin embargo, la dependencia de sustancias puede ser problemática y tener consecuencias físicas, psicológicas y sociales a largo plazo.</string>
+    <string name="gaba">GABA</string>
+    <string name="gaba_summary">GABA significa ácido gamma-aminobutírico, que es un neurotransmisor en el cerebro. Se le conoce como el ansiolítico natural del cerebro porque tiene efectos inhibidores sobre el sistema nervioso central, ayudando a reducir la excitabilidad neuronal y promover la relajación. GABA actúa como un agente calmante, contrarrestando los efectos de los neurotransmisores excitadores en el cerebro.\n
+                        Al aumentar los niveles de GABA mediante el ejercicio, las personas pueden experimentar una reducción de los síntomas de ansiedad, un mejor estado de ánimo y una sensación general de bienestar. Esta es una de las formas en que el ejercicio puede tener un impacto positivo en la salud mental y ayudar a aliviar la ansiedad. .\norte</string>
+    <string name="hyperventilation">Hiperventilación</string>
+    <string name="hyper_summary">La hiperventilación se refiere a un aumento rápido o excesivo de la frecuencia y el volumen de la respiración. Implica tomar más oxígeno y exhalar más dióxido de carbono del que el cuerpo necesita. La hiperventilación puede ser una respuesta fisiológica a la ansiedad o el estrés y, a menudo, se asocia con ataques de pánico.</string>
+    <string name="mindful_breathing">Respiración consciente</string>
+    <string name="mindful_breathing_summary">La respiración consciente es una técnica que implica concienciar intencionalmente de la respiración y concentrarse en el momento presente. Es una práctica fundamental del mindfulness y puede ayudar a promover la relajación, reducir el estrés y cultivar una sensación de calma.</string>
+    <string name="obsession">Obsesión</string>
+    <string name="obsession_summary">La obsesión se refiere a pensamientos, imágenes o impulsos intrusivos, persistentes y no deseados que entran repetida e incontrolablemente en la mente de una persona. Las personas con obsesiones a menudo reconocen que sus pensamientos son irracionales o excesivos, pero les resulta difícil descartarlos o ignorarlos. Como resultado, pueden participar en diversos comportamientos repetitivos o rituales mentales, conocidos como compulsiones, para aliviar temporalmente la ansiedad causada por las obsesiones.</string>
+    <string name="panic_attack">Ataque de pánico</string>
+    <string name="panic_attack_summary">Un ataque de pánico es un episodio repentino e intenso de miedo o malestar que normalmente alcanza su punto máximo en cuestión de minutos. Es una manifestación de ansiedad y puede ocurrir sin ningún desencadenante aparente o en respuesta a una situación u objeto específico. Los ataques de pánico pueden ir acompañados de diversos síntomas físicos y psicológicos, como frecuencia cardíaca rápida, dolor en el pecho, dificultad para respirar, mareos, temblores, sudoración, sensación de muerte inminente o pérdida de control y sentimientos de irrealidad o desapego.</string>
+    <string name="progressive_muscle_relaxation">Relajación muscular progresiva</string>
+    <string name="progressive_muscle_relaxation_summary">La relajación muscular progresiva (PMR) es una técnica de relajación que consiste en tensar y relajar sistemáticamente diferentes grupos de músculos del cuerpo. Su objetivo es reducir la tensión muscular, liberar el estrés físico y promover la relajación general.</string>
+    <string name="resilience">Resiliencia</string>
+    <string name="resilience_summary">La resiliencia se refiere a la capacidad de recuperarse, adaptarse y recuperarse ante la adversidad, los desafíos o las situaciones estresantes. Es la capacidad de resistir, afrontar y navegar eficazmente a través de dificultades, reveses o penurias. La resiliencia implica fuerza psicológica, emocional y, a veces, física para mantener una mentalidad positiva y poder funcionar a pesar de la adversidad.\n
+                        La resiliencia no se trata de evitar o eliminar desafíos, sino más bien de cómo respondemos y nos recuperamos de ellos. Implica habilidades como la regulación emocional, la resolución de problemas, la flexibilidad, el optimismo y el apoyo social. La resiliencia nos ayuda a perseverar, aprender de los reveses, y, como resultado, hacerse más fuerte.</string>
+    <string name="rigid_thinking">pensamiento rígido</string>
+    <string name="rigid_thinking_summary">El pensamiento rígido se refiere a patrones de pensamiento inflexibles y estrechos que limitan la flexibilidad, la adaptabilidad y la apertura de mente. Las personas con pensamiento rígido tienden a adherirse estrictamente a sus creencias, reglas y expectativas sin considerar perspectivas o posibilidades alternativas. Es posible que tengan una visión del mundo en blanco y negro, categorizando las cosas como totalmente buenas o totalmente malas, con poco espacio para matices grises o ambigüedades.\n
+                        Cuando se enfrentan a desafíos o incertidumbres, las personas con pensamiento rígido pueden sentirse abrumadas o estancadas, mientras luchan por adaptarse y encontrar soluciones alternativas. El pensamiento rígido también puede conducir a la autocrítica, al perfeccionismo y a una necesidad constante de control, lo que puede perpetuar la ansiedad y el estrés.</string>
+    <string name="rumination">Rumia</string>
+    <string name="rumination_summary">La tendencia a pensar continua y excesivamente en eventos, situaciones o problemas negativos. Implica concentrarse repetidamente en los pensamientos angustiosos, a menudo con falta de resolución o progreso hacia una solución.\n
+                        La rumia es un proceso cognitivo común asociado con la ansiedad y otras condiciones de salud mental. Cuando alguien reflexiona, puede repetir eventos pasados, preocuparse por resultados futuros o analizar excesivamente sus pensamientos y sentimientos. Esta perseverancia prolongada en pensamientos negativos puede contribuir a una mayor ansiedad y una sensación de sentirse estancado o atrapado en las propias preocupaciones.</string>
+    <string name="selfcompassion">Autocompasión</string>
+    <string name="selfcompassion_summary">La autocompasión se refiere a la práctica de tratarse a uno mismo con amabilidad, comprensión y sin juzgarse en momentos de dificultad, fracaso o sufrimiento. Implica brindarse a uno mismo la misma calidez, cuidado y apoyo que le ofrecería a un amigo cercano o a un ser querido que está pasando apuros.</string>
+    <string name="serotonin">serotonina</string>
+    <string name="serotonin_summary">La serotonina es un neurotransmisor, un mensajero químico en el cerebro y el sistema nervioso que desempeña un papel crucial en la regulación de diversos procesos fisiológicos y psicológicos. A menudo se le conoce como el neurotransmisor del "bienestar" debido a su asociación con la regulación del estado de ánimo y la sensación de bienestar.</string>
+    <string name="window_of_tolerance">Ventana de tolerancia</string>
+    <string name="window_of_tolerance_summary">La ventana de tolerancia se refiere a un concepto en psicología que describe un rango óptimo de excitación o activación que permite a un individuo afrontar y responder eficazmente a los factores estresantes y las emociones. La ventana de tolerancia sugiere que los individuos tienen un rango en el que pueden manejar y adaptarse a los factores estresantes sin sentirse abrumados ni cerrarse. Cuando una persona está dentro de su ventana de tolerancia, puede pensar con claridad, tomar decisiones racionales y participar en la resolución de problemas de forma eficaz. También son capaces de experimentar y regular las emociones de forma equilibrada y saludable.</string>
+    &lt;!&ndash;Journal Entry Screen &ndash;&gt;
+    <string name="update">Actualizar</string>
+    <string name="success">Éxito</string>
+    <string name="success_message">Los datos del asiento de diario se actualizan correctamente.</string>
+    <string name="journal_entry_card1_text">Tuve un día razonablemente bueno hoy.</string>
+    <string name="journal_entry_card2_text">Empezando a deprimirme un poco</string>
+    <string name="journal_entry_card3_text">Tuve mucho estrés en el trabajo hoy. Realmente no dormí tan bien.</string>
+    <string name="journal_entry_card4_text">Tratando de superar un poco de ansiedad. Mi jefe me presiona para que haga una presentación ante una gran multitud.</string>
+    <string name="journal_entry_card5_text">Ojalá pudiera hablar con un buen amigo sobre cómo me siento.</string>
+    <string name="journal_entry_card6_text">Lo hice terrible en mi presentación. Mi autoestima ha bajado.</string>
+    <string name="journal_entry_card7_text">He tenido malos pensamientos hoy. Necesito ayuda.</string>
+    <string name="journal_entry_card8_text">Estoy muy deprimido hoy. Apenas puedo levantarme de la cama.</string>
+    &lt;!&ndash;Privacy&ndash;&gt;
+    <string name="privacy">Privacidad</string>
+    <string name="journaling">Diario</string>
+    <string name="course_work">Trabajo del curso</string>
+    <string name="mood">Ánimo</string>
+    <string name="sleep">Sueño</string>
+    <string name="medication">Medicamento</string>
+    <string name="phq_9_screening">Resultado de PHQ-9</string>
+    <string name="gad_7_screening">Resultado de GAD-7</string>
+    <string name="audit_screening">Resultado de AUDIT</string>
+    <string name="dast_screening">Resultado de DAST</string>
+
+    <string name="fastPace_screen2_1">Sólo estás buscando 15 minutos al día para regalarte un espacio mental tranquilo, lejos de tus problemas y del bullicio del mundo que te rodea.</string>
+    <string name="fastPace_screen2_2">1. ¿Cuándo es un buen momento para ti?</string>
+    <string name="fastPace_screen2_when">CUÁNDO:</string>
+    <string name="fastPace_screen2_lunch">Hora del almuerzo</string>
+    <string name="fastPace_screen2_bedroom">Mi dormitorio</string>
+    <string name="fastPace_screen2_couch">En mi sofá (¡sin television!)</string>
+    <string name="fastPace_screen2_car">En mi coche</string>
+    <string name="fastPace_screen2_patio">En el patio</string>
+    <string name="fastPace_screen2_where">DÓNDE:</string>
+
+    <string name="general_check">General controlar</string>
+
+    &lt;!&ndash;    weekly summary_Progress_Work&ndash;&gt;
+    <string name="progresswork_expand1_text1">VIDEO-Cómo funciona la ansiedad</string>
+    <string name="progresswork_expand1_text2">LECTURA- El bucle de la ansiedad</string>
+    <string name="progresswork_expand1_text3">ESCUCHAR-Signos y Síntomas</string>
+    <string name="progresswork_expand1_text4">PLANIFICA-Tus objetivos de ansiedad</string>
+
+
+    <string name="progresswork_expand2_text1">VIDEO-Cómo funciona la ansiedad</string>
+    <string name="progresswork_expand2_text2">LECTURA- El bucle de la ansiedad</string>
+    <string name="progresswork_expand2_text3">ESCUCHAR-Signos y Síntomas</string>
+    <string name="progresswork_expand2_text4">PLANIFICA-Tus objetivos de sueño</string>
+
+    <string name="progresswork_expand3_text1">VIDEO-Cómo funciona la ansiedad</string>
+    <string name="progresswork_expand3_text2">LECTURA- El bucle de la ansiedad</string>
+    <string name="progresswork_expand3_text3">ESCUCHAR-Signos y Síntomas</string>
+    <string name="progresswork_expand3_text4">PLANIFICA-Tus objetivos de sueño</string>
+
+    &lt;!&ndash;    <sleepCard>&ndash;&gt;
+    <string name="hours_sleep1">+1 Horas de sueño necesarias</string>
+    <string name="hours_sleep2">+3 Horas de sueño necesarias</string>
+    <string name="hours_sleep3">+1 Horas de sueño necesarias</string>
+    <string name="hours_sleep4">+4 Horas de sueño necesarias</string>
+    <string name="hours_sleep5">+6 Horas de sueño necesarias</string>
+    <string name="hours_sleep6">+1 Horas de sueño necesarias</string>
+
+    <string name="eight_hours">8 Horas</string>
+    <string name="six_hours">6 Horas</string>
+    <string name="five_hours">5 Horas</string>
+    <string name="three_hours">3 Horas</string>
+
+    &lt;!&ndash;MoodCard&ndash;&gt;
+    <string name="moodCard_text1">Buena</string>
+    <string name="moodCard_text2">Podría ser mejor</string>
+    <string name="moodCard_text3">Fair</string>
+    <string name="moodCard_text4">Bad</string>
+    <string name="moodCard_text5">Podría ser mejor</string>
+    <string name="moodCard_text6">Podría ser mejor</string>
+    &lt;!&ndash;    PHQ9 Card&ndash;&gt;
+    <string name="phq9_text1_weeklysummary">Depresión moderadamente grave</string>
+    <string name="phq9_text2_weeklysummary">Moderadamente depresión</string>
+
+    &lt;!&ndash;   GAD Card&ndash;&gt;
+    <string name="gad7_text1_weeklysummary">Ansiedad moderada</string>
+    <string name="gad7_text2_weeklysummary">Ansiedad leve</string>
+
+    &lt;!&ndash;DAST Card&ndash;&gt;
+    <string name="dast7_text1_weeklysummary">Nivel severo: derivación</string>
+    <string name="dast7_text2_weeklysummary">Problemas de nivel moderado relacionados con el abuso de drogas.</string>
+
+    &lt;!&ndash;AUDIT Card&ndash;&gt;
+    <string name="audit_text1_weeklysummary">Moderate-severe alcohol use disorder</string>
+    <string name="audit_text2_weeklysummary">Consumo nocivo de alcohol</string>
+    &lt;!&ndash;screenings&ndash;&gt;
+    <string name="screenings_1">1. Poco interés o placer en hacer cosas</string>
+
+    &lt;!&ndash;    drink Tracker&ndash;&gt;
+    <string name="drink_tracker_text1">alcohol cero</string>
+    <string name="drink_tracker_text2">Cerveza normal (12 onzas líquidas) con aproximadamente 5 % de alcohol.</string>
+    <string name="drink_tracker_text4">Vino de mesa (5 onzas líquidas) aproximadamente 12% de alcohol</string>
+    <string name="drink_tracker_text3">Licor de malta o bebidas de malta aromatizadas como agua mineral dura (8–10 onzas líquidas) con aproximadamente 7 % de alcohol</string>
+    <string name="drink_tracker_text5">Vino fortificado (3–4 onzas líquidas) con aproximadamente 17 % de alcohol.</string>
+    <string name="drink_tracker_text6">Cordial, licor o aperitivo (2–3 fl oz) alrededor del 24% de alcohol</string>
+    <string name="drink_tracker_text7">Brandy o coñac (1–2 onzas líquidas) aproximadamente 40% de alcohol</string>
+    <string name="drink_tracker_text8">Bebidas espirituosas destiladas (1,5 onzas líquidas) aproximadamente 40% de alcohol</string>
+    <string name="total_text">Total</string>
+    <string name="count_text">contar</string>
+    <string name="drink_tracker">Rastreador de bebidas</string>
+    <string name="how_to_do">CÓMO HACERLO</string>
+    <string name="lesson_intro">Introducción</string>
+    <string name="lesson">Lección 1</string>
+    <string name="lesson_2">Lección 2</string>
+    <string name="lesson_3">Lección 3</string>
+    <string name="lesson_4">Lección 4</string>
+    <string name="lesson_5">Lección 5</string>
+    <string name="lesson_6">Lección 5</string>
+    <string name="ok">Ok\n</string>
+
+    <string name="taking_control_substance">Sustancia</string>
+    <string name="taking_control_alcohol">Alcohol</string>
+    <string name="taking_control_alcoholfeedays">Días sin alcohol</string>
+    <string name="taking_control_now">Ahora</string>
+    <string name="taking_control_goal">Meta</string>
+    <string name="taking_control_7_days">7 días</string>
+    <string name="taking_control_10_days">10 días</string>
+    <string name="taking_control_drink_count">La bebida cuenta</string>
+    <string name="taking_control_60_days">60 días</string>
+    <string name="taking_control_texttile">Trabaja tus fortalezas</string>
+    <string name="taking_control_text">Haz algo que puedas hacer bien, para fortalecer o reforzar tu confianza en ti mismo. Luego, intenta hacer una tarea o actividad más difícil.</string>
+    <string name="events_tracker_text1">Resaca</string>
+    <string name="events_tracker_text2">Argumento</string>
+    <string name="events_tracker_text3">Accidente</string>
+    <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
+    &lt;!&ndash; Running Exercise&ndash;&gt;
+    <string name="runningexercise_titletext">Movimiento: Correr</string>
+    <string name="runningexercises_text">No es fácil moverse cuando te sientes apagado o entumecido. Correr puede cambiar rápidamente tu estado de desconexión y volver a darte energías .</string>
+
+    &lt;!&ndash;bodymovemet Exercise&ndash;&gt;
+    <string name="bodymovementexercise_titletext">Movimiento Corporal con la conciencia plena</string>
+    &lt;!&ndash;    summary&ndash;&gt;
+    <string name="summary_alcohol_free">Ningún Alcohol</string>
+    <string name="summary_drinks">Bebidas</string>
+    <string name="summary_argument">Discusiones</string>
+    <string name="summary_accident">Accidentes</string>
+    <string name="title_stressful_situation">SITUACIÓN ESTRESANTE</string>
+    <string name="title_consequences">CONSECUENCIAS</string>
+    <string name="title_response_to_stress">RESPUESTA AL ESTRÉS</string>
+    <string name="nora">NORA</string>
+    <string name="austin">AUSTIN</string>
+    <string name="version">Versión 2.0</string>
+
+    &lt;!&ndash;summary of sleep&ndash;&gt;
+    <string name="chart_sleep_avg_sleep_score">Puntuación de sueño promedio</string>
+    <string name="chart_sleep_moresleepneeded">Necesitas más sueño</string>
+    <string name="chart_sleep_mosthours_slept">Horas dormidas más largas</string>
+    <string name="chart_sleep_avghours_slept">Horas prometido de sueño</string>
+    <string name="chart_sleep_leaset_hours_slept">Menos horas dormidas</string>
+</resources>-->
+<resources>
+    <string name="app_name">Calmscient</string>
+    <string name="splash_science">La ciencia de la calma</string>
+    <string name="welcome_message">¡Bienvenido a mi aplicación!</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Has olvidado tu contraseña</string>
+    <string name="create_new_account">Crear una nueva cuenta</string>
+    <string name="or">o</string>
+    <string name="happy_to_see_you">Estamos felices de verte.</string>
+    <string name="hello">Hola</string>
+    <string name="home">Inicio</string>
+    <string name="discovery">Descubrimiento</string>
+    <string name="discovery_lower">Descubrimiento</string>
+    <string name="exercises">Ejercicios</string>
+    <string name="exercises_lower">Ejercicios</string>
+    <string name="rewards">Recompensa</string>
+    <string name="rewards_lower">Recompensas</string>
+    <string name="my_medical_records">Mis registros médicos</string>
+    <string name="weekly_summary">Resumen semanal</string>
+    <string name="favorites">Favoritos</string>
+    <string name="need_to_talk">¿Necesitas hablar con alguien?</string>
+    <string name="good_morning"><b>¡Buenos días!</b></string>
+    <string name="good_afternoon"><b>Buenas tardes!</b></string>
+    <string name="good_evening"><b>¡Buenas noches!</b></string>
+    <string name="mood_right_now">¿Cómo está tu estado de ánimo en este momento?</string>
+    <string name="take_medic_morning">¿Tomaste tus medicamentos esta maňaňa?</string>
+    <string name="hours_night">¿Cuántas horas dormiste anoche?</string>
+    <string name="day_today">¿Cómo te ha ido?</string>
+    <string name="bad">Mal</string>
+    <string name="be_better">Podría ser mejor</string>
+    <string name="fair">asi asi</string>
+    <string name="good">Bueno</string>
+    <string name="excellent">Excelente</string>
+    <string name="spend_time">Con quién pasaste tiempo juntos?</string>
+    <string name="family">Familia</string>
+    <string name="friends">Amigos</string>
+    <string name="workmates">Colegas</string>
+    <string name="others">Otros</string>
+    <string name="alone">Solo</string>
+    <string name="take_medic_evening">¿Tomaste tus medicamentos esta noche?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="daily_journal">Diario</string>
+    <string name="save">Guardar</string>
+    <string name="skip">Omitir</string>
+    <string name="medications">Medicamentos</string>
+    <string name="upcoming_medical_appointments">Próximas citas médicas</string>
+    <string name="screenings">Exámenes</string>
+    <string name="name">Nombre</string>
+    <!--settings-->
+    <string name="settings">Configuración</string>
+    <string name="profile">Perfil</string>
+    <string name="theme">Tema</string>
+    <string name="dark_mode">Oscuro</string>
+    <string name="language">Idioma</string>
+    <string name="english">Inglés</string>
+    <string name="spanish">Español</string>
+    <string name="asl">Lenguaje de seňas americano</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="license_key">Licencia</string>
+    <string name="help_support">Ayuda &amp; soporte</string>
+    <string name="logout">cerrar sesión</string>
+    <!--network errors-->
+    <string name="network_connection_error">Se perdió la conexión a Internet, vuelva a intentarlo</string>
+    <string name="network_default_error">Ocurrió algo incorrecto, inténtalo de nuevo</string>
+    <string name="network_internal_error">Nuestros sistemas recibieron un error, inténtalo de nuevo</string>
+    <string name="network_server_not_available">Nuestros servicios están en mantenimiento, vuelva a intentarlo después de un tiempo
+    </string>
+    <string name="network_invalidation_error">El nombre de usuario o la contraseña son incorrectos, vuelva a intentarlo</string>
+    <string name="server_connection_error">No se puede conectar, inténtalo de nuevo</string>
+    <string name="network_login_again">Inicie sesión de nuevo</string>
+
+    <string name="strAlertMessage_Something">Algo no está bien aquí inténtalo de nuevo más tarde</string>
+    <string name="title_activity_home_fragment">Algo no está bien aquí inténtalo de nuevo más tarde</string>
+
+    <string name="provider">Proveedora</string>
+    <string name="dosage">Dosis</string>
+    <string name="tabletsPerDay">2 veces al día</string>
+    <string name="direction">Dirección</string>
+
+    <string name="add_medications">Agregar medicamentos</string>
+    <string name="alarm">Alarma</string>
+    <string name="schedule_time_and_alarm">Configurar La hora y alarma</string>
+    <string name="with_meal">Con alimentos</string>
+    <string name="time">Hora</string>
+    <string name="morning">La Mañana</string>
+    <string name="evening">La Noche</string>
+    <string name="cancel">Cancelar</string>
+    <!--Emergency Resource Page strings-->
+    <string name="emergency_resource">Recurso de emergencia</string>
+    <string name="doctor_name">Dr. Samuel Parker</string>
+    <string name="hospital_name">Hospital del parque central</string>
+    <string name="doctor_phone_number"><u><a href="tel:(804)0938172"><font color="#6E6BB3">(804)0938172</font></a></u></string>
+    <string name="suicide_heading">988 Suicidio y crisis lifeline</string>
+    <string name="suicide_text">Llame o envíe un mensaje de texto al 988 o chatee en 988lifeline.org. 988 Suicide &amp; Crisis Lifeline es una red nacional de centros locales de crisis que brinda apoyo emocional gratuito y confidencial a personas en crisis suicida o angustia emocional las 24 horas del día, los 7 días de la semana.</string>
+    <string name="disaster_heading">Línea de ayuda para casos de desastre</string>
+    <string name="disaster_text">
+        La Línea Nacional de Ayuda para Desastres está disponible para cualquier persona que experimente angustia emocional relacionada con desastres naturales o causados por humanos.
+        Llame o envíe un mensaje de texto al <u><a href="tel:1-800-985-5990"><font color="#6E6BB3">1-800-985-5990</font></a></u> para conectarse con un consejero capacitado y atento, las 24 horas del día, los 7 días de la semana, los 365 días del año.
+</string>
+    <string name="lets_begin_btn">Empezamos</string>
+    <string name="lets_begin_are_ready">¿Estás listo?</string>
+    <string name="lets_begin">El descubrimiento de Calmscient será tan efectivo como usted lo haga. \nAsí que esté decidido a dedicar tiempo a seguir y completar los ejercicios. Cada sección tiene contenido interesante e informativo diseñado para mantenerlo pensando activamente en sus desafíos específicos. Pero, al igual que hacer un viaje por carretera a un destino desconocido, ¡deberás comprometerte a seguir el mapa! Puede que suponga un poco más de trabajo del que estás acostumbrado, pero al final dará sus frutos.</string>
+    <string name="crisis_heading">Línea de texto de crisis</string>
+    <string name="crisis_text">Envíe un mensaje de texto con MHA al 741741 y lo conectarán con un consejero de crisis capacitado. Crisis Text Line brinda soporte gratuito basado en texto las 24 horas del día, los 7 días de la semana.</string>
+    <string name="trevor_heading">El proyecto trevor</string>
+    <string name="trevor_text">Llama al <u><a href="tel:1-866-488-7386"><font color="#6E6BB3">1-866-488-7386</font></a></u> oenvía START al <a href="sms:678678"><font color="#6E6BB3">678678</font></a>.Una línea nacional de ayuda confidencial, gratuita y disponible las 24 horas para jóvenes LGBTQ en riesgo de suicidio.
+</string>
+    <string name="doctor_name1">Dr.Hannah Johnson</string>
+    <string name="no_appointments">Sin citas</string>
+    <string name="trans_helpline_heading">Línea de vida trans</string>
+    <string name="trans_helpline_text">Marque <u><a href="tel:877-565-8860"><font color="#6E6BB3">877-565-8860</font></a></u> para EE. UU. y<u><a href="tel:877-330-6366"><font color="#6E6BB3">877-330-6366</font></a></u> para Canadá.La línea directa de Trans Lifeline es un servicio de apoyo entre pares administrado por personas trans, para personas trans y personas que preguntan.
+</string>
+    <string name="disaster_number">1-800-985-5990</string>
+    <string name="crisis_number">741741</string>
+    <string name="trevor_number">1-866-488-7386</string>
+    <string name="trans_number">877-565-8860</string>
+    <string name="medication_Details">Detalles de los medicamentos</string>
+    <string name="plz_confirm">Por favor confirmar..</string>
+    <string name="exit_app">¿Quieres salir de la aplicación?</string>
+    <!--discovery-->
+    <string name="anxiety">Manejo de la ansiedad</string>
+    <string name="stress">Cambiar tu respuesta al estrés</string>
+    <string name="control">Tomar el control</string>
+    <string name="next_appointments">Próximas citas</string>
+    <string name="date_time">Fecha y Hora</string>
+    <string name="contact">Contacto</string>
+    <string name="alchol_free">Ningún alcohol</string>
+    <string name="drinks">Bebidas</string>
+    <string name="argument">Discusiones</string>
+    <string name="drink_count">Cantidad de bebida</string>
+    <string name="address">Dirección</string>
+    <string name="appointments_details">Detalles de la Cita</string>
+    <string name="add_appointment">Agregar cita</string>
+    <string name="your_history">Historia</string>
+    <string name="your_results">Tus resultados</string>
     <string name="summary_takingcontrol">Resumen</string>
     <!--Anxiety-->
     <string name="manage_anxiety">Manejar la ansiedad</string>
@@ -170,7 +857,7 @@
     <string name="repeat">Repetir</string>
     <string name="everyday">Cada día</string>
     <string name="afternoon">Tarde</string>
-    <string name="add_time_alarm">Agregar hora y hora Alarma</string>
+    <string name="add_time_alarm">Agregar hora y hora alarma</string>
     <string name="page_1.1">¿SABÍAS?</string>
     <string name="page_2_1">¿Qué es la ansiedad?</string>
     <string name="page_7.1"><font color="#6E6BB3">Si una persona pudiera simplemente “recordar” experiencias pasadas,</font></string>
@@ -198,8 +885,8 @@
     <string name="butterflyhug_exercises">El toque y el abrazo de la mariposa</string>
     <string name="handover_esxercises">Entrega tu oído</string>
     <string name="mindfulwalking_exercises">Caminata la conciencia plena</string>
-    <string name="dance_exercises">Movimiento: Danza</string>
-    <string name="running_exercises">Movimiento: Correr</string>
+    <string name="dance_exercises">Movimiento: danza</string>
+    <string name="running_exercises">Movimiento: correr</string>
     <string name="body_moment_exercies">Movimiento corporal consciente</string>
     <string name="deepbreathing_exercises">Respiración profunda</string>
     <string name="musclerelaxation_exercises">Relajación muscular progresiva</string>
@@ -221,14 +908,14 @@
     <!--manage anxiety-->
     <!-- Anxiety cards Introduction 1 -->
     <string name="anxiety_card1_text1">¿LO SABÍAS?</string>
-    <string name="neuropsychology">La Neuropsicología de la Ansiedad</string>
+    <string name="neuropsychology">La Neuropsicología de la ansiedad</string>
     <string name="the_neuropsychology">La Neuropsicología de la Ansiedad</string>
     <string name="meet_nora_austin">Conoce a Nora, Austin y Melanie</string>
     <string name="let_make_plan">Hagamos un plan</string>
     <string name="anxiety_card1_text2">Se estima que el 31,1% de los adultos en Estados Unidos experimentan algún trastorno de ansiedad en algún momento de sus vidas.</string>
     <string name="anxiety_card1_text3">¡No estás solo!</string>
 
-    <string name="anxiety_card2_text1">¿QUÉ ES LA ANSIEDAD?</string>
+    <string name="anxiety_card2_text1">¿qué es la ansiedad?</string>
     <string name="anxiety_card2_text2">En pocas palabras, la ansiedad es un mecanismo útil de supervivencia.</string>
     <string name="anxiety_card2_text3">Imagina a un ser humano primitivo tratando de sobrevivir en el bosque. Al igual que en la mayoría de las formas de vida, varios mecanismos de supervivencia innatos se transmiten de una generación a otra a través del ADN y son una parte importante para la supervivencia de una especie.</string>
 
@@ -236,7 +923,7 @@
     <string name="anxiety_card3_text2">LUCHA:</string>
     <string name="anxiety_card3_text3">¡Enfrenta la amenaza directamente!</string>
 
-    <string name="anxiety_card4_text1">HUIR: </string>
+    <string name="anxiety_card4_text1">LUCHA:: </string>
     <string name="anxiety_card4_text2">¡Busca una salida!</string>
 
     <string name="anxiety_card5_text1">CONGELARSE :</string>
@@ -310,7 +997,7 @@
     <string name="make_plan_card9_text1">¡HAS LLEGADO!</string>
     <string name="make_plan_card9_text2">¡Felicidades ! Has llegado al otro lado de tu situación estresante.</string>
     <string name="make_plan_card9_text3"> Si sigues este mismo camino cada vez, podrás enfrentar cualquier situación estresante que se te presente en el camino. ¿Qué opinas de este plan de acción? No te preocupes si aún no estás seguro/a de cómo “navegar” este camino. Por eso estamos aprendiendo las habilidades paso a paso.</string>
-    <string name="quiz_title">PRUEBA</string>
+    <string name="quiz_title">Prueba</string>
     <string name="quiz_text1">Puede ser difícil identificar claramente los miedos específicos que desencadenan nuestros ciclos de ansiedad. Con el tiempo, serás capaz de reconocerlos rápidamente y evitarlos. Para aprender esta habilidad, recorramos juntos una serie de preguntas que te enseñarán a reconocer, identificar y comprender tu ansiedad.</string>
     <string name="quiz_text2">1. Reconocer las situaciones estresantes(s):</string>
     <string name="quiz_text3"> Durante los últimos 30 días, ¿te has visto afectado por los siguientes problemas?</string>
@@ -332,11 +1019,11 @@
     <!--Recognize a cycle of anxiety-->
     <string name="title_toolbar_recognize">Reconoce un ciclo de ansiedad</string>
     <string name="recognize_card1_text1">Anteriormente, comparamos enfrentar situaciones estresantes con planificar una ruta hacia un destino. Cuando se toman los pasos correctos, hay un comienzo y un fin para la ansiedad.</string>
-    <string name="recognize_card1_text2">QUEDANDO ATRAPADO EN EL CICLO</string>
+    <string name="recognize_card1_text2">Quedando Atrapado En El Ciclo</string>
     <string name="recognize_card1_text3">Desafortunadamente, en lugar de lidiar con  nuestro estrés de manera lineal, a menudo nos quedamos atrapados en un círculo vicioso: ¡un ciclo de ansiedad! ¿Cómo comienza este ciclo? Preocupándonos excesivamente  por una posible amenaza que aún no ha ocurrido.</string>
     <string name="recognize_card2_text1">Además de preocuparte por esta posible amenaza, nuestras distorsiones cognitivas pueden hacernos sentir que este evento futuro tendrá un resultado negativo.</string>
     <string name="recognize_card2_text2">Comenzamos a prestar cada vez más atención a posibles señales de que este resultado negativo es probable. Una vez que nos hemos convencido de esto, buscamos internamente para ver si seremos capaces o no de hacer frente a estas posibles amenazas. Nuestros síntomas de ansiedad comienzan a manifestarse, confirmando nuestras sospechas de que no seremos capaces de hacer frente, lo que a su vez nos hace sentir más ansiosos. ¡Ahora hemos entrado por completo en un ciclo de ansiedad!</string>
-    <string name="recognize_card3_text1">RECONOCE QUE TODOS SOMOS DIFERENTES</string>
+    <string name="recognize_card3_text1">Reconoce Que Todos Somos Diferentes</string>
     <string name="recognize_card3_text2">¡La verdad es que no a todos les estresan las mismas cosas! Al reconocer tus temores  y reacciones  personales, podrás evitar caer en el ciclo.</string>
     <string name="recognize_card3_text3">Examinemos las respuestas de Nora, Austin y Melanie para profundizar nuestra comprensión de este ciclo.Observa si puedes identificar en qué punto Nora, Austin y Melanie entran en este ciclo, y ten en cuenta cómo el punto de entrada de cada persona es único. Después de leer la respuesta de cada persona, haz clic en el botón para resaltar el miedo que los convierte en víctimas del ciclo de ansiedad.</string>
     <!--Dialog text for Recognize -->
@@ -416,8 +1103,8 @@
     <string name="summaryofmood">Resumen de estado de ánimo</string>
     <string name="summaryofsleep"> Resumen del sueño</string>
     <string name="summaryof_phq_9">Resumen del PHQ-9</string>
-    <string name="summaryof_gad">Resumen del GAD-10</string>
-    <string name="summaryof_audit">Resumen de AUDIT</string>
+    <string name="summaryof_gad">Resumen del TAG</string>
+    <string name="summaryof_audit">Resumen de AUDITORÍA</string>
     <string name="summaryof_dast">Resumen de DAST</string>
     <string name="summaryof_progressofwork">Progreso en el trabajo del curso.</string>
     <string name="summaryof_journalentry">entrada de diario</string>
@@ -500,7 +1187,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="competency">Competencia</string>
     <string name="competency_summary">La competencia se refiere a la capacidad de realizar o ejecutar una tarea o un conjunto de habilidades de manera efectiva. A menudo se asocia con el conocimiento, la experiencia y la competencia en un área en particular. La competencia se mide evaluando nuestras aptitudes, calificaciones o capacidades en una situación específica.</string>
     <string name="compulsive_behaviour">Comportamiento compulsivo</string>
-    <string name="compulsive_behaviour_summary">El comportamiento compulsivo se refiere a acciones o pensamientos repetitivos y a menudo rituales que los individuos se sienten impulsados ​​a realizar en respuesta a la ansiedad o pensamientos angustiosos. Estos comportamientos suelen tener como objetivo reducir la ansiedad, prevenir el daño percibido o mantener una sensación de control. Sin embargo, suelen ser excesivos, consumir mucho tiempo e interferir con el funcionamiento diario.</string>
+    <string name="compulsive_behaviour_summary">El comportamiento compulsivo se refiere a acciones o pensamientos repetitivos y a menudo rituales que los individuos se sienten impulsados a realizar en respuesta a la ansiedad o pensamientos angustiosos. Estos comportamientos suelen tener como objetivo reducir la ansiedad, prevenir el daño percibido o mantener una sensación de control. Sin embargo, suelen ser excesivos, consumir mucho tiempo e interferir con el funcionamiento diario.</string>
     <string name="Dependency">Dependencia</string>
     <string name="Dependency_summary">La dependencia se refiere a la dependencia de sustancias como el alcohol, las drogas o el tabaco como medio para afrontar la ansiedad o buscar un alivio rápido o escapar de la ansiedad o ayuda para afrontar emociones abrumadoras. Sin embargo, la dependencia de sustancias puede ser problemática y tener consecuencias físicas, psicológicas y sociales a largo plazo.</string>
     <string name="gaba">GABA</string>
@@ -666,7 +1353,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Movimiento Corporal con la conciencia plena</string>
     <!--    summary-->
-    <string name="summary_alcohol_free">Ningún Alcohol</string>
+    <string name="summary_alcohol_free">Ningún alcohol</string>
     <string name="summary_drinks">Bebidas</string>
     <string name="summary_argument">Discusiones</string>
     <string name="summary_accident">Accidentes</string>

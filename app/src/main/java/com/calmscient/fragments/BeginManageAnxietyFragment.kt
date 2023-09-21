@@ -16,6 +16,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.calmscient.R
 import com.calmscient.activities.ManageAnxietyActivity
 import com.calmscient.databinding.LayoutBeginanxietyBinding
 class BeginManageAnxietyFragment : Fragment() {
@@ -33,11 +34,20 @@ class BeginManageAnxietyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.beginButton.setOnClickListener {
-            startActivity(Intent(requireContext(), ManageAnxietyActivity::class.java))
+            //startActivity(Intent(requireContext(), ManageAnxietyActivity::class.java))
+            loadFragment(ManageAnxietyFragment())
         }
 
         binding.backIcon.setOnClickListener {
-            requireActivity().finish()
+            loadFragment(DiscoveryFragment())
+            //requireActivity().finish()
         }
+    }
+    private fun loadFragment(fragment: Fragment) {
+
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }
