@@ -196,14 +196,14 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                     cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
                         if (cardItem.videoResourceId != null) {
                             if (cardItem.heading == context.getString(R.string.the_neuropsychology)) {
-                                /*val intent = Intent(context, PlayerActivity::class.java)
+                                val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
-                                context.startActivity(intent)*/
+                                context.startActivity(intent)
 
-                                replaceFragmentWithPlayerFragment(
+                                /*replaceFragmentWithPlayerFragment(
                                     fragmentManager,
                                     cardItem.videoResourceId,
                                     cardItem.audioResourceId,
@@ -212,17 +212,17 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     cardItem.summary,
                                     cardItem.dialogText,
                                     PlayerFragment()
-                                )
+                                )*/
 
                             } else if (cardItem.heading == context.getString(R.string.page_2_1)) {
-                                /*val intent = Intent(context, PlayerActivity::class.java)
+                                val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
-                                context.startActivity(intent)*/
+                                context.startActivity(intent)
 
-                                replaceFragmentWithPlayerFragment(
+                               /* replaceFragmentWithPlayerFragment(
                                     fragmentManager,
                                     cardItem.videoResourceId,
                                     cardItem.audioResourceId,
@@ -231,17 +231,17 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     cardItem.summary,
                                     cardItem.dialogText,
                                     PlayerFragment()
-                                )
+                                )*/
                             }
                             else if (cardItem.heading == context.getString(R.string.make_plan_card6_text2)) {
-                                /* val intent = Intent(context, PlayerActivity::class.java)
+                                 val intent = Intent(context, PlayerActivity::class.java)
                                  intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                  intent.putExtra("heading", cardItem.heading)
                                  intent.putExtra("summary", cardItem.summary)
                                  intent.putExtra("dialogText", cardItem.dialogText)
-                                 context.startActivity(intent)*/
+                                 context.startActivity(intent)
 
-                                replaceFragmentWithPlayerFragment(
+                               /* replaceFragmentWithPlayerFragment(
                                     fragmentManager,
                                     cardItem.videoResourceId,
                                     null,
@@ -250,16 +250,16 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     null,
                                     cardItem.dialogText,
                                     PlayerFragment()
-                                )
+                                )*/
                             }else if (cardItem.heading == context.getString(R.string.anxiety_exercise)) {
-                                /* val intent = Intent(context, PlayerActivity::class.java)
+                                 val intent = Intent(context, PlayerActivity::class.java)
                                  intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                  intent.putExtra("heading", cardItem.heading)
                                  intent.putExtra("summary", cardItem.summary)
                                  intent.putExtra("dialogText", cardItem.dialogText)
-                                 context.startActivity(intent)*/
+                                 context.startActivity(intent)
 
-                                replaceFragmentWithPlayerFragment(
+                                /*replaceFragmentWithPlayerFragment(
                                     fragmentManager,
                                     cardItem.videoResourceId,
                                     cardItem.audioResourceId,
@@ -268,7 +268,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     cardItem.summary,
                                     cardItem.dialogText,
                                     PlayerFragment()
-                                )
+                                )*/
                             }
                         } else {
                             Toast.makeText(context, "No Video Available", Toast.LENGTH_SHORT).show()
