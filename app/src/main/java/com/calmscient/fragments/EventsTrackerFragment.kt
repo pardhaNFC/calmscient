@@ -63,12 +63,14 @@ class EventsTrackerFragment : Fragment() {
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
             updateLabel(myCalendar)
         }
-        binding.alarmToggleButton1.labelOn = getString(R.string.yes)
-        binding.alarmToggleButton1.labelOff = getString(R.string.no)
-        binding.alarmToggleButton2.labelOff = getString(R.string.yes)
-        binding.alarmToggleButton2.labelOff = getString(R.string.no)
-        binding.alarmToggleButton3.labelOff = getString(R.string.yes)
-        binding.alarmToggleButton3.labelOff = getString(R.string.no)
+        binding.hangoverToggleButton.labelOn = getString(R.string.yes)
+        binding.hangoverToggleButton.labelOff = getString(R.string.no)
+
+        binding.argumentToggleButton.labelOn = getString(R.string.yes)
+        binding.argumentToggleButton.labelOff = getString(R.string.no)
+
+        binding.accidentToggleButton.labelOn = getString(R.string.yes)
+        binding.accidentToggleButton.labelOff = getString(R.string.no)
 //        calendarView.setOnClickListener {
 //            DatePickerDialog(
 //                requireContext(),

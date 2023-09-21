@@ -434,7 +434,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summaryofmood">Summary of mood</string>
     <string name="summaryofsleep">Summary of sleep</string>
     <string name="summaryof_phq_9">Summary of PHQ-9</string>
-    <string name="summaryof_gad">Summary of GAD</string>
+    <string name="summaryof_gad">Summary of GAD-7</string>
     <string name="summaryof_audit">Summary of AUDIT</string>
     <string name="summaryof_dast">Summary of DAST</string>
     <string name="summaryof_progressofwork">Progress on course work</string>
@@ -687,7 +687,7 @@ The most important thing is to do it! Do you have some time today to get started
     <!--    summary-->
     <string name="summary_alcohol_free">Alcohol-Free</string>
     <string name="summary_drinks">Drinks</string>
-    <string name="summary_argument">Alcohol-Free</string>
+    <string name="summary_argument">Argument</string>
     <string name="summary_accident">Accident</string>
 
 </resources>

@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.activities.WaveformView
 import com.calmscient.databinding.MuscleRelaxationExercisesBinding
+import com.calmscient.utils.common.SavePreferences
 
 class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
     MediaPlayer.OnBufferingUpdateListener {
@@ -37,7 +38,7 @@ class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListe
     private lateinit var handler: Handler
     private var isMediaPlayerInitialized = false
     private lateinit var loadingDialog: ProgressDialog
-
+    lateinit var savePrefData: SavePreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
@@ -52,6 +53,7 @@ class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListe
     ): View? {
         binding = MuscleRelaxationExercisesBinding.inflate(inflater, container, false)
         val favoritesIcon = binding.favoritesIcon
+        savePrefData = SavePreferences(requireContext())
         favoritesIcon.setOnClickListener {
             isFavorite = !isFavorite
             if (isFavorite) {
@@ -94,8 +96,12 @@ class MuscleRelaxationExerciseFragment : Fragment(), MediaPlayer.OnPreparedListe
                     Uri.parse("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
                 )*/
                 binding.audioProgressBar.visibility = View.VISIBLE
-                mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
-                mediaPlayer.prepareAsync()
+                if (savePrefData.getAslLanguageState() == true) {
+                    mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+English+with+music.wav")
+                }else if(savePrefData.getSpanLanguageState() == true){
+                    mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/2+Progressive+muscle+relaxation+with+music+Spanish.wav")
+                }
+                    mediaPlayer.prepareAsync()
                 mediaPlayer.setOnPreparedListener { mp ->
                     // Dismiss the buffering dialog when the media player is prepared
                     //loadingDialog.dismiss()

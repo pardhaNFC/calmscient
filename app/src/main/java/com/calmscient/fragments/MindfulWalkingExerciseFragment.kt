@@ -29,6 +29,7 @@ import com.calmscient.R
 import com.calmscient.activities.GlossaryActivity
 import com.calmscient.activities.WaveformView
 import com.calmscient.databinding.MindfulWalkingExercisesBinding
+import com.calmscient.utils.common.SavePreferences
 
 class
 MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
@@ -39,6 +40,7 @@ MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
     private lateinit var playButton: ImageView
     private lateinit var handler: Handler
     private var isMediaPlayerInitialized = false
+    lateinit var savePrefData: SavePreferences
     var isFavorite = true
     private lateinit var loadingDialog: ProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +57,8 @@ MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
     ): View? {
         binding = MindfulWalkingExercisesBinding.inflate(inflater, container, false)
         val favoritesIcon = binding.favoritesIcon
+        savePrefData = SavePreferences(requireContext())
+
         favoritesIcon.setOnClickListener {
             isFavorite = !isFavorite
             if (isFavorite) {
@@ -90,12 +94,19 @@ MindfulWalkingExerciseFragment : Fragment(), MediaPlayer.OnPreparedListener,
                 /*loadingDialog.setCanceledOnTouchOutside(false)
                 loadingDialog.show()*/
                 // Initialize the mediaPlayer if it hasn't been initialized yet
-               /* mediaPlayer = MediaPlayer.create(
-                    requireActivity(),
-                    Uri.parse("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
-                )*/
+                /* mediaPlayer = MediaPlayer.create(
+                     requireActivity(),
+                     Uri.parse("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
+                 )*/
                 binding.audioProgressBar.visibility = View.VISIBLE
-                mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
+                if (savePrefData.getAslLanguageState() == true) {
+                    mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
+                } else if (savePrefData.getSpanLanguageState() == true) {
+                    mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+Spanish.mp3")
+                } else {
+                    mediaPlayer.setDataSource("https://calmscient-videos.s3.ap-south-1.amazonaws.com/5+Mindful+walking+with+music+English.mp3")
+
+                }
                 mediaPlayer.prepareAsync()
                 mediaPlayer.setOnPreparedListener { mp ->
                     // Dismiss the buffering dialog when the media player is prepared

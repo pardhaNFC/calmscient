@@ -97,7 +97,7 @@
                 android:fontFamily="@font/lexendmedium" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
-                android:id="@+id/alarmToggleButton1"
+                android:id="@+id/hangoverToggleButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -145,7 +145,7 @@
                 android:fontFamily="@font/lexendmedium" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
-                android:id="@+id/alarmToggleButton2"
+                android:id="@+id/argumentToggleButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -192,7 +192,7 @@
                 android:fontFamily="@font/lexendmedium" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
-                android:id="@+id/alarmToggleButton3"
+                android:id="@+id/accidentToggleButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

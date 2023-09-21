@@ -416,8 +416,8 @@
     <string name="summaryofmood">Resumen de estado de ánimo</string>
     <string name="summaryofsleep"> Resumen del sueño</string>
     <string name="summaryof_phq_9">Resumen del PHQ-9</string>
-    <string name="summaryof_gad">Resumen del TAG</string>
-    <string name="summaryof_audit">Resumen de AUDITORÍA</string>
+    <string name="summaryof_gad">Resumen del GAD-10</string>
+    <string name="summaryof_audit">Resumen de AUDIT</string>
     <string name="summaryof_dast">Resumen de DAST</string>
     <string name="summaryof_progressofwork">Progreso en el trabajo del curso.</string>
     <string name="summaryof_journalentry">entrada de diario</string>
