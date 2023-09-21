@@ -10,12 +10,12 @@
     <string name="or">or</string>
     <string name="happy_to_see_you">We are happy to see you.</string>
     <string name="hello">Hello</string>
-    <string name="home">HOME</string>
-    <string name="discovery">DISCOVERY</string>
+    <string name="home">Home</string>
+    <string name="discovery">Discovery</string>
     <string name="discovery_lower">Discovery</string>
-    <string name="exercises">EXERCISES</string>
+    <string name="exercises">Exercises</string>
     <string name="exercises_lower">Exercises</string>
-    <string name="rewards">REWARDS</string>
+    <string name="rewards">Rewards</string>
     <string name="rewards_lower">Rewards</string>
     <string name="my_medical_records">My Medical Records</string>
     <string name="weekly_summary">Weekly Summary</string>
@@ -665,7 +665,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="taking_control_60_days">60 days</string>
     <string name="taking_control_texttile">Work your strengths</string>
     <string name="taking_control_text">Do something you are good at to build self-confidence then tackle a tougher task.</string>
-    <string name="events_tracker_text1">HangOver</string>
+    <string name="events_tracker_text1">Hangover</string>
     <string name="events_tracker_text2">Argument</string>
     <string name="events_tracker_text3">Accident</string>
     <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>

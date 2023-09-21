@@ -40,6 +40,7 @@ class EventsTrackerFragment : Fragment() {
         requireActivity().onBackPressedDispatcher.addCallback(this){
             loadFragment(TakingControlFragment())
         }
+
     }
 
     override fun onCreateView(
@@ -62,7 +63,12 @@ class EventsTrackerFragment : Fragment() {
             myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
             updateLabel(myCalendar)
         }
-
+        binding.alarmToggleButton1.labelOn = getString(R.string.yes)
+        binding.alarmToggleButton1.labelOff = getString(R.string.no)
+        binding.alarmToggleButton2.labelOff = getString(R.string.yes)
+        binding.alarmToggleButton2.labelOff = getString(R.string.no)
+        binding.alarmToggleButton3.labelOff = getString(R.string.yes)
+        binding.alarmToggleButton3.labelOff = getString(R.string.no)
 //        calendarView.setOnClickListener {
 //            DatePickerDialog(
 //                requireContext(),

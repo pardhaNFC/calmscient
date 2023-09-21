@@ -68,19 +68,19 @@ class AddMedicationsFragment : Fragment(),
         }
 
         //For with meal
-        binding.idSwitch.labelOn = "Yes"
-        binding.idSwitch.labelOff = "No"
+        binding.idSwitch.labelOn = getString(R.string.yes)
+        binding.idSwitch.labelOff = getString(R.string.no)
 
         //For Morning Alarm
-        binding.alarmToggleButtonMorning.labelOn = "Yes"
-        binding.alarmToggleButtonMorning.labelOff = "No"
+        binding.alarmToggleButtonMorning.labelOn = getString(R.string.yes)
+        binding.alarmToggleButtonMorning.labelOff = getString(R.string.no)
 
         //For Evening Alarm
-        binding.alarmToggleButtonEvening.labelOn = "Yes"
-        binding.alarmToggleButtonEvening.labelOff = "No"
+        binding.alarmToggleButtonEvening.labelOn = getString(R.string.yes)
+        binding.alarmToggleButtonEvening.labelOff = getString(R.string.no)
         //afternoon alarm
-        binding.alarmToggleButtonAfternoon.labelOn = "Yes"
-        binding.alarmToggleButtonAfternoon.labelOff = "No"
+        binding.alarmToggleButtonAfternoon.labelOn = getString(R.string.yes)
+        binding.alarmToggleButtonAfternoon.labelOff = getString(R.string.no)
 
 
         /*binding.morningCalendar.setOnClickListener {

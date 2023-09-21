@@ -37,7 +37,7 @@
     <string name="spend_time">Con quién pasaste tiempo juntos?</string>
     <string name="family">FAMILIA</string>
     <string name="friends">AMIGOS</string>
-    <string name="workmates">COMPAÑEROS DE TRABAJO</string>
+    <string name="workmates">COLEGAS</string>
     <string name="others">OTROS</string>
     <string name="alone">SOLO</string>
     <string name="take_medic_evening">¿Tomaste tus medicamentos esta noche?</string>
@@ -53,7 +53,7 @@
     <!--settings-->
     <string name="settings">Configuración</string>
     <string name="profile">Perfil</string>
-    <string name="theme">Aspecto</string>
+    <string name="theme">Tema</string>
     <string name="dark_mode">Oscuro</string>
     <string name="language">Idioma</string>
     <string name="english">Inglés</string>
@@ -78,7 +78,7 @@
 
     <string name="provider">Proveedora</string>
     <string name="dosage">Dosis</string>
-    <string name="tabletsPerDay">2 comprimidos al día</string>
+    <string name="tabletsPerDay">2 veces al día</string>
     <string name="direction">Dirección</string>
 
     <string name="add_medications">Agregar medicamentos</string>
@@ -294,12 +294,13 @@
 
 
     <string name="make_plan_card6_text1">PASO 4</string>
-    <string name="make_plan_card6_text2">IMPLEMENTA HABILIDADES CALMEN EL CUERPO </string>
+    <string name="make_plan_card6_text2">Implementa Habilidades Calmen El Cuerpo </string>
     <string name="make_plan_card6_text3">Puedes aprender a calmar tu cuerpo de forma consciente. Una vez que tu cuerpo esté calmado, tu mente hara lo mismo. Recursos como la relajación, la relajación muscular progresiva, la respiración consciente y caminar se convertirán en algo natural para ti.</string>
 
 
     <string name="make_plan_card7_text1">PASO 5</string>
-    <string name="make_plan_card7_text2">ESTABLECE UN LÍMITE MENTAL ENTRE TÚ Y TUS PREOCUPACIONES</string>
+    <string name="make_plan_card7_text2">Establece Un Limite Mental Entre Tu Y Tus Preocupaciones</string>
+    <!--<string name="make_plan_card7_text2">ESTABLECE UN LÍMITE MENTAL ENTRE TÚ Y TUS PREOCUPACIONES</string>-->
     <string name="make_plan_card7_text3">Existen formas de “posponer” tus preocupaciones hasta un “momento de preocupación” designado, de manera que puedas concentrarte en tu rutina diaria sin temor a olvidar cosas importantes.</string>
 
 
@@ -544,15 +545,15 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="journal_entry_card8_text">Estoy muy deprimido hoy. Apenas puedo levantarme de la cama.</string>
     <!--Privacy-->
     <string name="privacy">Privacidad</string>
-    <string name="journaling">Llevar un diario</string>
+    <string name="journaling">Diario</string>
     <string name="course_work">Trabajo del curso</string>
     <string name="mood">Ánimo</string>
-    <string name="sleep">Dormir</string>
+    <string name="sleep">Sueño</string>
     <string name="medication">Medicamento</string>
-    <string name="phq_9_screening">Detección PHQ-9</string>
-    <string name="gad_7_screening">Detección GAD-7</string>
-    <string name="audit_screening">AUDITORÍA Detección</string>
-    <string name="dast_screening">Detección DAST</string>
+    <string name="phq_9_screening">Resultado de PHQ-9</string>
+    <string name="gad_7_screening">Resultado de GAD-7</string>
+    <string name="audit_screening">Resultado de AUDIT</string>
+    <string name="dast_screening">Resultado de DAST</string>
 
     <string name="fastPace_screen2_1">Sólo estás buscando 15 minutos al día para regalarte un espacio mental tranquilo, lejos de tus problemas y del bullicio del mundo que te rodea.</string>
     <string name="fastPace_screen2_2">1. ¿Cuándo es un buen momento para ti?</string>
@@ -674,7 +675,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="title_response_to_stress">RESPUESTA AL ESTRÉS</string>
     <string name="nora">NORA</string>
     <string name="austin">AUSTIN</string>
-    <string name="version">Versión 1.9</string>
+    <string name="version">Versión 2.0</string>
 
     <!--summary of sleep-->
     <string name="chart_sleep_avg_sleep_score">Puntuación de sueño promedio</string>

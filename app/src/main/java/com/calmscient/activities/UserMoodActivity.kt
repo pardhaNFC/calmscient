@@ -114,8 +114,8 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
             binding.idMornMeds.visibility = View.VISIBLE
             binding.cardDailyJournel.visibility = View.VISIBLE
             binding.tvMeds.text = getString(R.string.take_medic_evening)
-            binding.idSwitch.labelOn = "YES"
-            binding.idSwitch.labelOff = "NO"
+            binding.idSwitch.labelOn = getString(R.string.yes)
+            binding.idSwitch.labelOff = getString(R.string.no)
             binding.layoutButton.visibility = View.VISIBLE
         }
     }

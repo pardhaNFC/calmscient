@@ -447,7 +447,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|center_vertical"
-                android:fontFamily="@font/lexendregular"
+                android:fontFamily="@font/lexendmedium"
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="@dimen/_7sdp"
                 android:textAllCaps="false"

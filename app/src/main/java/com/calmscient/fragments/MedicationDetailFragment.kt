@@ -50,13 +50,13 @@ class MedicationDetailFragment : Fragment(),
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMedicationDetailBinding.inflate(inflater, container, false)
-        binding.alarmToggleButtonMorning.labelOn = "Yes"
-        binding.alarmToggleButtonMorning.labelOff = "No"
-        binding.alarmToggleButtonAfternoon.labelOn = "Yes"
-        binding.alarmToggleButtonAfternoon.labelOff = "No"
+        binding.alarmToggleButtonMorning.labelOn = getString(R.string.yes)
+        binding.alarmToggleButtonMorning.labelOff = getString(R.string.no)
+        binding.alarmToggleButtonAfternoon.labelOn = getString(R.string.yes)
+        binding.alarmToggleButtonAfternoon.labelOff = getString(R.string.no)
 
-        binding.alarmToggleButtonEvening.labelOn = "Yes"
-        binding.alarmToggleButtonEvening.labelOff = "No"
+        binding.alarmToggleButtonEvening.labelOn = getString(R.string.yes)
+        binding.alarmToggleButtonEvening.labelOff = getString(R.string.no)
         binding.backIcon.setOnClickListener {
             loadFragment(CalendarFragment())
         }

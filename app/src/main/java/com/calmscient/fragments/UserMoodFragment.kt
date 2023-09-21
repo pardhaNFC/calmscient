@@ -104,8 +104,8 @@ class UserMoodFragment : Fragment(), View.OnClickListener {
             binding.cardMorniMood.visibility = View.VISIBLE
             binding.mornHoursSleepCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
-            binding.idSwitch.labelOn = "Yes"
-            binding.idSwitch.labelOff = "No"
+            binding.idSwitch.labelOn = getString(R.string.yes)
+            binding.idSwitch.labelOff = getString(R.string.no)
             binding.idSwitch.colorOn = requireActivity().getColorCompat(R.color.example_7_button)
             //binding.idSwitch.colorOff =requireActivity().getColorCompat(R.color.hospital_name)
 
@@ -116,8 +116,8 @@ class UserMoodFragment : Fragment(), View.OnClickListener {
             binding.spendTimeCard.visibility = View.VISIBLE
             binding.idMornMeds.visibility = View.VISIBLE
             binding.cardDailyJournel.visibility = View.VISIBLE
-            binding.idSwitch.labelOn = "Yes"
-            binding.idSwitch.labelOff = "No"
+            binding.idSwitch.labelOn = getString(R.string.yes)
+            binding.idSwitch.labelOff = getString(R.string.no)
             binding.idSwitch.colorOn = requireActivity().getColorCompat(R.color.example_7_button)
             //binding.idSwitch.colorOff =requireActivity().getColorCompat(R.color.hospital_name)
         }
