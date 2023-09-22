@@ -9,13 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/appointmentdetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp">
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/back_icon"
@@ -30,11 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_gravity="top|center_horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/lexendmedium"
-                android:paddingLeft="@dimen/_20sdp"
                 android:text="@string/appointments_details"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
@@ -73,32 +70,35 @@
                 android:layout_below="@+id/text1"
                 android:layout_marginHorizontal="@dimen/_16sdp"
                 android:layout_toRightOf="@+id/doctorlogo"
-                android:visibility="gone"
                 android:text="Dr. Hannan Johnson"
                 android:textColor="#000000"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_20sdp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lexendlight"
                 android:text="@string/date_time"
-                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/grey_light"
-                android:fontFamily="@font/lexendregular"/>
+                android:textSize="@dimen/_12sdp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/lexendregular"
                 android:text="09/02/2023"
-                android:fontFamily="@font/lexendmedium"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_14sdp"/>
+                android:textSize="@dimen/_14sdp" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
@@ -112,72 +112,78 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lexendlight"
                 android:text="@string/contact"
-                android:textSize="@dimen/_12sdp"
                 android:textColor="@color/grey_light"
-                android:fontFamily="@font/lexendregular"/>
+                android:textSize="@dimen/_12sdp" />
 
             <TextView
                 android:id="@+id/phonenumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/lexendregular"
                 android:text="@string/doctor_phone_number"
                 android:textColor="@color/example_7_button"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/lexendmedium"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_14sdp" />
         </RelativeLayout>
 
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:background="@color/viewbackgroundcolor" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_20sdp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lexendlight"
                 android:text="@string/address"
-                android:textStyle="bold"
-                android:textSize="@dimen/_12sdp"
-                android:fontFamily="@font/lexendregular"
-                android:textColor="@color/grey_light"/>
+                android:textColor="@color/grey_light"
+                android:textSize="@dimen/_12sdp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:text="South Fredreic Av 489"
-                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/lexendregular"
+                android:text="@string/doctor_address"
                 android:textColor="@color/black_head"
-                android:fontFamily="@font/lexendmedium"/>
+                android:textSize="@dimen/_14sdp" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"
             android:background="@color/viewbackgroundcolor" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/_20sdp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/lexendlight"
                 android:text="@string/appointments_details"
-                android:textSize="@dimen/_12sdp"
-                android:fontFamily="@font/lexendregular"
-                android:textColor="@color/grey_light"/>
+                android:textColor="@color/grey_light"
+                android:textSize="@dimen/_12sdp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/lexendregular"
                 android:text="@string/general_check"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black_head"/>
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_14sdp" />
         </RelativeLayout>
+
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp"

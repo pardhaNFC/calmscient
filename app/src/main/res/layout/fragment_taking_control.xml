@@ -63,9 +63,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:clickable="true"
-                    android:textColor="@color/example_7_button"
-                    android:text="Alcohol"
                     android:fontFamily="@font/lexendregular"
+                    android:text="@string/taking_control_alcohol"
+                    android:textColor="@color/example_7_button"
                     android:textSize="@dimen/_13sdp" />
                 <View
                     android:id="@+id/viewalcohol"
@@ -88,8 +88,9 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:clickable="true"
-                    android:fontFamily="@font/montserratsemibold"
-                    android:text="Substance"
+                    android:fontFamily="@font/lexendregular"
+                    android:text="@string/taking_control_substance"
+                    android:textColor="@color/grey_view"
                     android:textSize="16dp" />
                 <View
                     android:id="@+id/viewsubstance"
@@ -369,7 +370,7 @@
                     </LinearLayout>
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="@dimen/_140sdp"
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginHorizontal="@dimen/_10sdp"
                         app:cardElevation="@dimen/_5sdp"

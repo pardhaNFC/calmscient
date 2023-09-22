@@ -11,7 +11,6 @@
 
 package com.calmscient.adapters
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,8 +18,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.activities.AnxietyTextDataClass
-class AnxietyQuestionsAdapter (private val items: List<AnxietyTextDataClass>) :
+import com.calmscient.fragments.AnxietyTextDataClass
+
+class AnxietyQuestionsAdapter(private val items: MutableList<AnxietyTextDataClass>) :
     RecyclerView.Adapter<AnxietyQuestionsAdapter.AnxietyQuestionViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AnxietyQuestionViewHolder {

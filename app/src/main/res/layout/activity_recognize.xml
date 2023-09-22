@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_40sdp"
         tools:ignore="MissingConstraints">
 
         <RelativeLayout
@@ -21,7 +22,7 @@
             <ImageView
                 android:id="@+id/menu_icon"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
@@ -38,6 +39,7 @@
                 android:fontFamily="@font/lexendmedium"
                 android:gravity="center"
                 android:maxLines="1"
+                android:text="@string/title_toolbar_recognize"
                 android:textAlignment="center"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_17sdp" />
@@ -45,7 +47,7 @@
             <ImageView
                 android:id="@+id/ic_glossary"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
@@ -148,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_20sdp"
                     android:orientation="vertical"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:weightSum="5">
 
                     <TextView
@@ -211,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_20sdp"
                     android:orientation="vertical"
-                    android:visibility="visible">
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/screen2_tv_text1"
@@ -377,8 +379,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_16sdp">
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_20sdp">
 
             <ImageView
                 android:id="@+id/previousQuestion"

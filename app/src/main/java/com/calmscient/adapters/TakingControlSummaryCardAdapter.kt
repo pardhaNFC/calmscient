@@ -35,9 +35,10 @@ class TakingControlSummaryCardAdapter (private val items: List<SummaryDataClasss
         holder: TakingControlSummaryCardAdapter.CardViewHolder, position: Int) {
         val item = items[position]
         item.imageView1?.let { holder.imageView.setImageResource(it) }
+        holder.progressValue.progress = item.process
         holder.textview1.text = item.text1
-        holder.progressValue.progress = 10
         holder.textview3.text = item.text3
+        holder.textview4.text = item.text4
     }
     private fun resultPercent() {
 
@@ -47,7 +48,7 @@ class TakingControlSummaryCardAdapter (private val items: List<SummaryDataClasss
         val handler = Handler()
 
         Thread {
-            while (progressStatus < 60) {
+            while (progressStatus < 100) {
                 progressStatus += 1
                 // Update the progress bar and display the
                 //current value in the text view
@@ -70,5 +71,6 @@ class TakingControlSummaryCardAdapter (private val items: List<SummaryDataClasss
         val textview1: TextView = itemView.findViewById(R.id.text1)
         val progressValue: ProgressBar = itemView.findViewById(R.id.progressbar_history)
         val textview3: TextView = itemView.findViewById(R.id.text3)
+        val textview4: TextView = itemView.findViewById(R.id.text4)
     }
 }

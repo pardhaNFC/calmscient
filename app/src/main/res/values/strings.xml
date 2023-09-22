@@ -706,7 +706,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="hello">Hello</string>
     <string name="home">Home</string>
     <string name="discovery">Discovery</string>
-    <string name="discovery_lower">Discovery</string>
+    <string name="discovery_lower">The Discovery</string>
     <string name="exercises">Exercises</string>
     <string name="exercises_lower">Exercises</string>
     <string name="rewards">Rewards</string>
@@ -1124,6 +1124,7 @@ We all have different health conditions and body types. Which exercise you choos
 The most important thing is to do it! Do you have some time today to get started?
 </string>
     <string name="anxiety_and_diet">Anxiety and diet</string>
+    <string name="additional_resources">Additional resources</string>
     <!--Weekly Summary-->
     <string name="summaryofmood">Summary of mood</string>
     <string name="summaryofsleep">Summary of sleep</string>
@@ -1184,8 +1185,9 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="no_entries">No Entries</string>
     <string name="delete">Delete</string>
     <string name="delete_message">Are you sure you want to delete Journal entry data?</string>
-    <string name="journal_entry_edit">Journal entry edit</string>
+    <string name="journal_entry_edit">Edit journal entry</string>
     <string name="edit">Edit</string>
+    <string name="journal_entry_add">Add journal entry</string>
     <!--Glossary-->
     <string name="adrenaline">Adrenaline</string>
     <string name="adrenaline_summary">Adrenaline, also known as epinephrine, is a hormone and neurotransmitter produced by the adrenal glands, which are located on top of the kidneys. It plays a crucial role in the body\'s response to stress and triggering the \"Fight or Flight\" response.\n
@@ -1237,6 +1239,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="window_of_tolerance">Window of tolerance</string>
     <string name="window_of_tolerance_summary">Window of tolerance refers to a concept in psychology that describes an optimal range of arousal or activation that allows an individual to effectively cope with and respond to stressors and emotions. The window of tolerance suggests that individuals have a range in which they can handle and adapt to stressors without becoming overwhelmed or shutting down. When a person is within their window of tolerance, they are able to think clearly, make rational decisions, and engage in effective problem-solving. They are also able to experience and regulate emotions in a balanced and healthy manner.</string>
     <!--Journal Entry Screen -->
+    <string name="add">Add</string>
     <string name="update">Update</string>
     <string name="success">Success</string>
     <string name="success_message">Journal entry data is updated successfully.</string>
@@ -1255,10 +1258,10 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="mood">Mood</string>
     <string name="sleep">Sleep</string>
     <string name="medication">Medication</string>
-    <string name="phq_9_screening">PHQ-9 Screening</string>
-    <string name="gad_7_screening">GAD-7 Screening</string>
-    <string name="audit_screening">Audit Screening</string>
-    <string name="dast_screening">DAST Screening</string>
+    <string name="phq_9_screening">PHQ-9 screening</string>
+    <string name="gad_7_screening">GAD-7 screening</string>
+    <string name="audit_screening">Audit screening</string>
+    <string name="dast_screening">DAST screening</string>
     <string name="fastPace_screen2_1">You’re looking for only 15 minutes a day to methodically progress through the Calmscient courses…</string>
     <string name="fastPace_screen2_2">1. When is a good time for you?</string>
     <string name="fastPace_screen2_when">When</string>
@@ -1362,13 +1365,13 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="events_tracker_text1">Hangover</string>
     <string name="events_tracker_text2">Argument</string>
     <string name="events_tracker_text3">Accident</string>
-    <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either Yes or No next to each data element below</string>
+    <string name="privacy_heading">Data from Calmscient can be transmitted to your doctor for clinical review purposes. Please indicate which data you allow to be shared with your doctor by selecting either <b>Yes</b> or <b>No</b> next to each data element below</string>
 
     <!-- Running Exercise-->
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 1.9</string>
+    <string name="version">Version 2.0</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
@@ -1383,5 +1386,11 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summary_drinks">Drinks</string>
     <string name="summary_argument">Argument</string>
     <string name="summary_accident">Accident</string>
+
+    <string name="summary_takingcontrol_counts">counts</string>
+    <string name="summary_takingcontrol_times">times</string>
+    <string name="summary_takingcontrol_days">days</string>
+
+    <string name="doctor_address">South fredreic Av 489</string>
 
 </resources>

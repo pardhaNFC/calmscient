@@ -32,7 +32,9 @@ import java.util.Locale
 data class SummaryDataClasss(
     val imageView1: Int?,
     val text1: String?,
-    val text3:String?)
+    val text3:String?,
+    val text4:String?,
+    val process: Int)
 class SummaryTakingControlFragment : Fragment() {
     private lateinit var binding: LayoutSummaryTakingControlBinding
     private lateinit var calenderView: ImageView
@@ -99,10 +101,10 @@ class SummaryTakingControlFragment : Fragment() {
         SummaryDataClasss.clear()
         SummaryDataClasss.addAll(
             listOf(
-                SummaryDataClasss(R.drawable.ic_alcoholfree, getString(R.string.alchol_free), "30 days"),
-                SummaryDataClasss(R.drawable.ic_drinks, getString(R.string.drinks), "60 counts"),
-                SummaryDataClasss(R.drawable.ic_argument1, getString(R.string.argument),"10"),
-                SummaryDataClasss(R.drawable.ic_accident1, getString(R.string.events_tracker_text3),  "5"),
+                SummaryDataClasss(R.drawable.ic_alcoholfree, getString(R.string.alchol_free), "10",getString(R.string.summary_takingcontrol_days),10),
+                SummaryDataClasss(R.drawable.ic_drinks, getString(R.string.drinks), "60",getString(R.string.summary_takingcontrol_counts),60),
+                SummaryDataClasss(R.drawable.ic_argument1, getString(R.string.argument),"04",getString(R.string.summary_takingcontrol_times),4),
+                SummaryDataClasss(R.drawable.ic_accident1, getString(R.string.events_tracker_text3),  "02",getString(R.string.summary_takingcontrol_times),2),
             )
         )
         takingControlSummaryCardAdapter.notifyDataSetChanged()

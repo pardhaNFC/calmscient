@@ -49,6 +49,7 @@ class AUDITQuestionFragment : Fragment() {
     ): View? {
         binding = FragmentADUITQuestionBinding.inflate(inflater, container, false)
         savePrefData = SavePreferences(requireContext())
+        binding.previousQuestion.visibility = View.GONE
         return binding.root
     }
 

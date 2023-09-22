@@ -11,10 +11,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
 
         <ImageView
             android:id="@+id/menuicon"
@@ -29,14 +28,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_toRightOf="@+id/menuicon"
+            android:layout_toEndOf="@+id/menuicon"
             android:fontFamily="@font/lexendregular"
             android:layout_marginStart="@dimen/_10sdp"
             android:maxLines="1"
             android:ellipsize="end"
             android:text="@string/butterflyhug_exercises"
             android:textColor="@color/black_head"
-            android:textSize="@dimen/_18sdp" />
+            android:textSize="@dimen/_16sdp" />
 
     </RelativeLayout>
     <View
@@ -100,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/_25sdp"
-                    android:text="HOW TO DO IT?"
+                    android:text="@string/how_to_do"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_12sdp"
                     android:textColor="@color/black_head"

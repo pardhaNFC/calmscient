@@ -152,13 +152,13 @@ class NextAppointmentsFragment : Fragment() {
         // Format the selected date as "MM/dd/yyyy" and set it as the first dateview1
         val dateFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy")
         val dateStr = selectedDate.format(dateFormatter)
-        val doctorName = "Dr. Hannah Johnson"
+        val doctorName = "Dr.Hannah Johnson"
         val hospitalName = "SCD Hospital"
         cardViewItems.add(
             CardViewItems(
                 dateStr,
                 R.drawable.ic_doctor_logo,
-                "Dr. Hannah Johnson",
+                "Dr.Hannah Johnson",
                 null,
                 "SCD Hospital",
                 R.drawable.ic_next

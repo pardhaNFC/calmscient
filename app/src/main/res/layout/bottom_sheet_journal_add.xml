@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- Title TextView -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexendregular"
+            android:gravity="center"
+            android:text="@string/journal_entry_add"
+            android:textAlignment="center"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_16sdp" />
+
+        <!-- Close Button -->
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="Close"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_recognize_close" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_daily_journel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_12sdp"
+        android:background="@drawable/edittext_grey_background"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:fontFamily="@font/lexendlight"
+        android:textColor="@color/hospital_name"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:textSize="@dimen/_12sdp"
+        android:overScrollMode="always"
+        android:textCursorDrawable="@null"
+        android:padding="@dimen/_12sdp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/button_border"
+        android:fontFamily="@font/lexendregular"
+        android:gravity="center"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+</LinearLayout>

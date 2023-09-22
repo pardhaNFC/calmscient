@@ -5,17 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/_50sdp"
-    android:orientation="vertical"
-    tools:context=".activities.ManageAnxietyActivity">
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/manage_anxiety_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".activities.ManageAnxiety">
-
-
+        android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +41,7 @@
             <ImageView
                 android:id="@+id/ic_glossary"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_alignEnd="@+id/textView10"
                 android:layout_centerVertical="true"
                 android:clickable="true"
@@ -247,7 +243,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_10sdp"
                         android:fontFamily="@font/lexendregular"
-                        android:text="Additional Resource"
+                        android:text="@string/additional_resources"
                         android:textColor="#424242"
                         android:textSize="@dimen/_16sdp" />
 

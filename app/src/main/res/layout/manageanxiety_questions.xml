@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".activities.AnxietyQuestionsActivity"
+    tools:context=".fragments.AnxietyQuestionsFragment"
     tools:ignore="MissingDefaultResource">
 
     <LinearLayout
@@ -18,10 +18,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/menu_icon"
@@ -39,13 +38,13 @@
                 android:fontFamily="@font/lexendmedium"
                 android:gravity="center"
                 android:textColor="@color/black_head"
-                android:textSize="@dimen/_17sdp" />
+                android:textSize="@dimen/_16sdp" />
 
             <ImageView
                 android:id="@+id/ic_glossary"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/tv_title"
+                android:layout_height="35dp"
+                android:layout_alignEnd="@+id/tv_title"
                 android:layout_centerVertical="true"
                 android:clickable="true"
                 android:src="@drawable/ic_filesiconanxiety" />

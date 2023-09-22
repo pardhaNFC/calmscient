@@ -700,7 +700,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="hello">Hola</string>
     <string name="home">Inicio</string>
     <string name="discovery">Descubrimiento</string>
-    <string name="discovery_lower">Descubrimiento</string>
+    <string name="discovery_lower">El descubrimiento</string>
     <string name="exercises">Ejercicios</string>
     <string name="exercises_lower">Ejercicios</string>
     <string name="rewards">Recompensa</string>
@@ -717,6 +717,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="hours_night">¿Cuántas horas dormiste anoche?</string>
     <string name="day_today">¿Cómo te ha ido?</string>
     <string name="bad">Mal</string>
+
     <string name="be_better">Podría ser mejor</string>
     <string name="fair">asi asi</string>
     <string name="good">Bueno</string>
@@ -908,7 +909,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <!--manage anxiety-->
     <!-- Anxiety cards Introduction 1 -->
     <string name="anxiety_card1_text1">¿LO SABÍAS?</string>
-    <string name="neuropsychology">La Neuropsicología de la ansiedad</string>
+    <string name="neuropsychology">La neuropsicología de la ansiedad</string>
     <string name="the_neuropsychology">La Neuropsicología de la Ansiedad</string>
     <string name="meet_nora_austin">Conoce a Nora, Austin y Melanie</string>
     <string name="let_make_plan">Hagamos un plan</string>
@@ -981,7 +982,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
 
 
     <string name="make_plan_card6_text1">PASO 4</string>
-    <string name="make_plan_card6_text2">Implementa Habilidades Calmen El Cuerpo </string>
+    <string name="make_plan_card6_text2">Implementa habilidades calmen el cuerpo </string>
     <string name="make_plan_card6_text3">Puedes aprender a calmar tu cuerpo de forma consciente. Una vez que tu cuerpo esté calmado, tu mente hara lo mismo. Recursos como la relajación, la relajación muscular progresiva, la respiración consciente y caminar se convertirán en algo natural para ti.</string>
 
 
@@ -1103,8 +1104,8 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="summaryofmood">Resumen de estado de ánimo</string>
     <string name="summaryofsleep"> Resumen del sueño</string>
     <string name="summaryof_phq_9">Resumen del PHQ-9</string>
-    <string name="summaryof_gad">Resumen del TAG</string>
-    <string name="summaryof_audit">Resumen de AUDITORÍA</string>
+    <string name="summaryof_gad">Resumen del GAD-7</string>
+    <string name="summaryof_audit">Resumen de AUDIT</string>
     <string name="summaryof_dast">Resumen de DAST</string>
     <string name="summaryof_progressofwork">Progreso en el trabajo del curso.</string>
     <string name="summaryof_journalentry">entrada de diario</string>
@@ -1166,7 +1167,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="no_entries">No entrar</string>
     <string name="delete">Borrar</string>
     <string name="delete_message">¿Está seguro de que desea eliminar los datos de las entradas del diario?</string>
-    <string name="journal_entry_edit">Edición de entrada de diario</string>
+    <string name="journal_entry_edit">Editar diario</string>
     <string name="edit">Diario</string>
     <!--Glossary-->
     <string name="adrenaline">Adrenalina</string>
@@ -1219,6 +1220,8 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="window_of_tolerance">Ventana de tolerancia</string>
     <string name="window_of_tolerance_summary">La ventana de tolerancia se refiere a un concepto en psicología que describe un rango óptimo de excitación o activación que permite a un individuo afrontar y responder eficazmente a los factores estresantes y las emociones. La ventana de tolerancia sugiere que los individuos tienen un rango en el que pueden manejar y adaptarse a los factores estresantes sin sentirse abrumados ni cerrarse. Cuando una persona está dentro de su ventana de tolerancia, puede pensar con claridad, tomar decisiones racionales y participar en la resolución de problemas de forma eficaz. También son capaces de experimentar y regular las emociones de forma equilibrada y saludable.</string>
     <!--Journal Entry Screen -->
+    <string name="journal_entry_add">Agregar diario</string>
+    <string name="add">Agregar</string>
     <string name="update">Actualizar</string>
     <string name="success">Éxito</string>
     <string name="success_message">Los datos del asiento de diario se actualizan correctamente.</string>
@@ -1329,6 +1332,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="lesson_4">Lección 4</string>
     <string name="lesson_5">Lección 5</string>
     <string name="lesson_6">Lección 6</string>
+    <string name="additional_resources">Recursos adicionales</string>
     <string name="ok">Ok\n</string>
 
     <string name="taking_control_substance">Sustancia</string>
@@ -1345,7 +1349,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="events_tracker_text1">Resaca</string>
     <string name="events_tracker_text2">Argumento</string>
     <string name="events_tracker_text3">Accidente</string>
-    <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí” o “No”</b> junto a cada elemento de datos a continuación.</string>
+    <string name="privacy_heading">Los datos de Calmscient pueden ser transmitidos a su médico con fines de revisión clínica. Por favor, indique qué datos permite compartir con su médico seleccionando <b>“Sí”</b> o <b>“No”</b> junto a cada elemento de datos a continuación.</string>
     <!-- Running Exercise-->
     <string name="runningexercise_titletext">Movimiento: Correr</string>
     <string name="runningexercises_text">No es fácil moverse cuando te sientes apagado o entumecido. Correr puede cambiar rápidamente tu estado de desconexión y volver a darte energías .</string>
@@ -1370,4 +1374,10 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="chart_sleep_mosthours_slept">Horas dormidas más largas</string>
     <string name="chart_sleep_avghours_slept">Horas prometido de sueño</string>
     <string name="chart_sleep_leaset_hours_slept">Menos horas dormidas</string>
+
+    <string name="summary_takingcontrol_counts">puntos</string>
+    <string name="summary_takingcontrol_times">veces</string>
+    <string name="summary_takingcontrol_days">días</string>
+
+    <string name="doctor_address">South fredreic Av 489</string>
 </resources>

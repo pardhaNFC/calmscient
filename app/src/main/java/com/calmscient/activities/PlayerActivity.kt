@@ -102,6 +102,9 @@ class PlayerActivity : AppCompatActivity() {
         }else{
             dialog_img.visibility = View.VISIBLE
         }
+        dialog_img.setOnClickListener {
+            showInformationDialog()
+        }
         // Rest of your initialization code
         initializeBinding()
         initializeVideoControl()
@@ -186,7 +189,6 @@ class PlayerActivity : AppCompatActivity() {
             toggleOrientation()
         }
         if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
-
             dialog_img.setOnClickListener {
                 showInformationDialog()
             }

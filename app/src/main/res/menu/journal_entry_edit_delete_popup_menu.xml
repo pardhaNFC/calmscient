@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <!--we add icons-->
     <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/ic_add_foreground"
+        android:title="@string/add" />
+    <item
         android:id="@+id/menu_edit"
         android:icon="@drawable/ic_edit"
         android:title="@string/edit" />

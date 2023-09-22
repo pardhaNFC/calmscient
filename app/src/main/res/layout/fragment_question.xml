@@ -5,13 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".activities.AnxietyQuestionsActivity"
+
     tools:ignore="MissingDefaultResource">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
+
 
         <RelativeLayout
             android:id="@+id/audit"
@@ -39,7 +35,7 @@
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
         </RelativeLayout>
-    </androidx.appcompat.widget.Toolbar>
+
 
     <!-- Separator view -->
     <View
@@ -47,7 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_marginBottom="10dp"
-        android:layout_below="@id/toolbar"
         android:background="@color/viewbackgroundcolor" />
 
 

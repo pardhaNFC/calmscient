@@ -25,7 +25,7 @@ import com.calmscient.R
 import com.calmscient.adapters.AnxietyQuestionsAdapter
 import com.calmscient.di.remote.CardItemDataClass
 import com.calmscient.databinding.ActivityMakeAplanBinding
-import com.calmscient.databinding.ManageanxietyQuestionsBinding
+import com.calmscient.fragments.AnxietyTextDataClass
 import com.calmscient.fragments.DiscoveryFragment
 
 class MakeAPlanActivity : AppCompatActivity() {

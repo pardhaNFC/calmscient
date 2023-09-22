@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_marginBottom="@dimen/_40sdp"
+    android:orientation="vertical"
     tools:context=".fragments.AddAppointmentFragment">
 
     <LinearLayout
@@ -17,9 +17,9 @@
             android:id="@+id/addappointment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp">
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
 
             <ImageView
                 android:id="@+id/back_icon"
@@ -34,11 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_gravity="top|center_horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/lexendmedium"
-                android:paddingLeft="@dimen/_20sdp"
                 android:text="@string/add_appointment"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
@@ -75,8 +71,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text1"
                 android:layout_marginHorizontal="@dimen/_16sdp"
-                android:fontFamily="@font/lexendmedium"
                 android:layout_toEndOf="@+id/doctorlogo"
+                android:fontFamily="@font/lexendmedium"
                 android:text="Central Park Hospital"
                 android:textColor="@color/hospital_name"
                 android:textSize="@dimen/_10sdp" />
@@ -87,349 +83,352 @@
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_toRightOf="@+id/text1"
                 android:paddingLeft="@dimen/_10sdp"
-                android:visibility="gone"
-                android:src="@drawable/ic_down_arrow" />
+                android:src="@drawable/ic_down_arrow"
+                android:visibility="gone" />
 
         </RelativeLayout>
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RelativeLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_5sdp"
-            android:paddingLeft="@dimen/_10sdp">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/_10sdp"
-                android:text="@string/choose_date"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_16sdp"
-                android:fontFamily="@font/lexendmedium"/>
-        </RelativeLayout>
-
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/exSevenToolbar"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                app:navigationIcon="@drawable/ic_calendar"
-                app:popupTheme="@style/AppTheme.PopupOverlay">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/toolbar_cal_icon"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lexendmedium"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/choose_date"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_16sdp" />
+                </RelativeLayout>
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:theme="@style/AppTheme.AppBarOverlay">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/exSevenToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:navigationIcon="@drawable/ic_calendar"
+                        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                        <ImageView
+                            android:id="@+id/toolbar_cal_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_5sdp"
+                            android:background="@drawable/ic_down_arrow" />
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <com.kizitonwose.calendar.view.WeekCalendarView
+                        android:id="@+id/exSevenCalendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cv_daySize="seventhWidth"
+                        app:cv_dayViewResource="@layout/calendar_day_layout"
+                        app:cv_orientation="horizontal"
+                        tools:ignore="MissingClass" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/lexendsemibold"
+                        android:text="@string/morning"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_14sdp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/morningtiming"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/_5sdp"
-                    android:background="@drawable/ic_down_arrow" />
-            </androidx.appcompat.widget.Toolbar>
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_10sdp">
 
-            <com.kizitonwose.calendar.view.WeekCalendarView
-                android:id="@+id/exSevenCalendar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:cv_daySize="seventhWidth"
-                app:cv_dayViewResource="@layout/calendar_day_layout"
-                app:cv_orientation="horizontal"
-                tools:ignore="MissingClass" />
+                    <TextView
+                        android:id="@+id/mark09"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="09 AM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-        </com.google.android.material.appbar.AppBarLayout>
+                    <TextView
+                        android:id="@+id/mark10"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="10 AM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp">
+                    <TextView
+                        android:id="@+id/mark11"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="11  AM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="@string/morning"
-                android:fontFamily="@font/lexendsemibold"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_14sdp"/>
-        </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
 
-        <LinearLayout
-            android:id="@+id/morningtiming"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:paddingLeft="@dimen/_10sdp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/afternoon"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_14sdp" />
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/mark09"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="09 AM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_10sdp">
 
-            <TextView
-                android:id="@+id/mark10"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="10 AM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    <TextView
+                        android:id="@+id/mark12"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="12 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:id="@+id/mark11"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="11  AM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/mark13"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="01 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp">
+                    <TextView
+                        android:id="@+id/mark14"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="02 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="@string/afternoon"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/lexendmedium" />
-        </RelativeLayout>
+                    <TextView
+                        android:id="@+id/mark15"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="03 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/_10sdp">
+                    <TextView
+                        android:id="@+id/mark16"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
 
-            <TextView
-                android:id="@+id/mark12"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="12 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                        android:text="04 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:id="@+id/mark13"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="01 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    <TextView
+                        android:id="@+id/mark17"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="05 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
 
-            <TextView
-                android:id="@+id/mark14"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="02 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
 
-            <TextView
-                android:id="@+id/mark15"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="03 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:fontFamily="@font/lexendmedium"
+                        android:text="@string/evening"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_14sdp" />
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/mark16"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:weightSum="3">
 
-                android:text="04 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    <TextView
+                        android:id="@+id/mark18"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="06 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:id="@+id/mark17"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="05 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/mark19"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="07 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp">
+                    <TextView
+                        android:id="@+id/mark20"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="08 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_5sdp"
-                android:text="@string/evening"
-                android:textColor="@color/black_head"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/lexendmedium" />
-        </RelativeLayout>
+                    <TextView
+                        android:id="@+id/mark21"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_textview"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="09 PM"
+                        android:textColor="@color/addappointmenttimimg_textcolor"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/_10sdp"
-            android:weightSum="3">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:gravity="center"
 
-            <TextView
-                android:id="@+id/mark18"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="06 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/mark19"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="07 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/skip_border"
+                        android:fontFamily="@font/lexendsemibold"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_100"
+                        android:textSize="18sp"
+                        android:textStyle="bold">
 
-            <TextView
-                android:id="@+id/mark20"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="08 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
+                    </androidx.appcompat.widget.AppCompatButton>
 
-            <TextView
-                android:id="@+id/mark21"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_textview"
-                android:clickable="true"
-                android:gravity="center"
-                android:padding="@dimen/_5sdp"
-                android:text="09 PM"
-                android:textColor="@color/addappointmenttimimg_textcolor"
-                android:textSize="@dimen/_10sdp" />
-        </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/saveButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:fontFamily="@font/lexendregular"
+                        android:text="@string/save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20sp"
-            android:gravity="center"
+                    </androidx.appcompat.widget.AppCompatButton>
 
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cancel_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:background="@drawable/skip_border"
-                android:text="@string/cancel"
-                android:fontFamily="@font/lexendsemibold"
-                android:textAllCaps="false"
-                android:textColor="@color/purple_100"
-                android:textSize="18sp"
-                android:textStyle="bold">
-
-            </androidx.appcompat.widget.AppCompatButton>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/saveButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:fontFamily="@font/lexendregular"
-                android:background="@drawable/button_border"
-                android:text="@string/save"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp">
-
-            </androidx.appcompat.widget.AppCompatButton>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </LinearLayout>
-</ScrollView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </LinearLayout>

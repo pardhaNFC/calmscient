@@ -28,18 +28,18 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.activities.AnxietyPlayerActivity
-import com.calmscient.activities.AnxietyQuestionsActivity
 import com.calmscient.activities.AnxietyQuizActivity
-import com.calmscient.activities.AudioPlayerActivity
-import com.calmscient.activities.FastPaceActivity
-import com.calmscient.activities.MakeAPlanActivity
 import com.calmscient.activities.PlayerActivity
 import com.calmscient.activities.RecognizeActivity
 import com.calmscient.di.remote.ItemType
 import com.calmscient.di.remote.CardItemDataClass
+import com.calmscient.fragments.AnxietyQuestionsFragment
+import com.calmscient.fragments.AnxietyQuizFragment
 import com.calmscient.fragments.AudioPlayerFragment
+import com.calmscient.fragments.FastPaceFragment
+import com.calmscient.fragments.MakeAPlanFragment
 import com.calmscient.fragments.PlayerFragment
+import com.calmscient.fragments.RecognizeFragment
 
 class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback<CardItemDataClass>) :
     ListAdapter<CardItemDataClass, AnxietyIntroductionAdapter.ViewHolder>(diffCallback) {
@@ -175,10 +175,10 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 )
                             }
                             else {
-                                Toast.makeText(context, "Soon", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(context, "Comming soon", Toast.LENGTH_SHORT).show()
                             }
                         } else {
-                            Toast.makeText(context, "No Audio ", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(context, "No audio", Toast.LENGTH_SHORT).show()
                         }
                     }
                     /*cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
@@ -281,28 +281,70 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                         intent.putExtra("description", cardItem.description)
                         context.startActivity(intent)*/
                         if (cardItem.description == context.getString(R.string.page_2_1)) {
-                            val intent = Intent(context, AnxietyQuestionsActivity::class.java)
-                            intent.putExtra("description", cardItem.description)
-                            context.startActivity(intent)
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyQuestionsFragment()
+                            )
+
                         } else if (cardItem.description == context.getString(R.string.title_toolbar_pace)) {
-                            val intent = Intent(context, FastPaceActivity::class.java)
-                            intent.putExtra("description", cardItem.description)
-                            context.startActivity(intent)
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                FastPaceFragment()
+                            )
                         } else if (cardItem.description == context.getString(R.string.let_make_plan)) {
-                            val intent = Intent(context, MakeAPlanActivity::class.java)
-                            intent.putExtra("description", cardItem.description)
-                            context.startActivity(intent)
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                MakeAPlanFragment()
+                            )
                         } else if (cardItem.description == context.getString(R.string.title_toolbar_recognize)) {
-                            val intent = Intent(context, RecognizeActivity::class.java)
+                            /*val intent = Intent(context, RecognizeActivity::class.java)
                             intent.putExtra("description", cardItem.description)
-                            context.startActivity(intent)
+                            context.startActivity(intent)*/
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                RecognizeFragment()
+                            )
                         }
                     }
 
                     cardItem.availableContentTypes.contains(ItemType.QUIZ) -> {
                         // Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(context, AnxietyQuizActivity::class.java)
-                        context.startActivity(intent)
+                        /*val intent = Intent(context, AnxietyQuizActivity::class.java)
+                        context.startActivity(intent)*/
+                        replaceFragmentWithPlayerFragment(
+                            fragmentManager,
+                            null,
+                            null,
+                            null,
+                            cardItem.description,
+                            null,
+                            null,
+                            AnxietyQuizFragment()
+                        )
                     }
 
                     else -> {

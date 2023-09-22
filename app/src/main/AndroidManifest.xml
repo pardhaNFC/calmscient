@@ -44,17 +44,11 @@
         <activity android:name=".activities.MainActivity" />
         <activity
             android:name=".activities.DashboardActivity"
-            android:configChanges="locale|orientation"
+            android:configChanges="screenSize|locale|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
-        <activity
-            android:name=".activities.AnxietyQuestionsActivity"
-            android:configChanges="locale|orientation"
-            android:exported="false"
-            android:label="Anxiety Introduction"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.NoActionBar" />
+
         <activity
             android:name=".activities.WeeklySummary"
             android:configChanges="locale|orientation"

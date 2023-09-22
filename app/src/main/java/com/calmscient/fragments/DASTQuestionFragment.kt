@@ -52,6 +52,7 @@ class DASTQuestionFragment : Fragment() {
     ): View? {
         binding = FragmentDASTQuestionBinding.inflate(inflater, container, false)
         savePrefData = SavePreferences(requireContext())
+        binding.previousQuestion.visibility = View.GONE
         return binding.root
     }
 

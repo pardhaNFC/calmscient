@@ -51,57 +51,6 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
         return CardViewHolder(view)
     }
 
-   /* override fun onBindViewHolder(
-        holder: CardViewHolder,
-        @SuppressLint("RecyclerView") position: Int
-    ) {
-        val cardData = cardDataList[position]
-        holder.date.text = cardData.date
-        holder.description.text = cardData.description
-
-        holder.description.setOnClickListener {
-            if (expandedCardPosition == position) {
-                // Clicked on an already expanded card, so collapse it
-                holder.collapse()
-                expandedCardPosition = -1
-            } else {
-                // Clicked on a different card, collapse the previously expanded card (if any)
-                val previouslyExpandedCardPosition = expandedCardPosition
-                if (previouslyExpandedCardPosition != -1) {
-                    notifyItemChanged(previouslyExpandedCardPosition)
-                }
-
-                // Expand the clicked card
-                holder.expand()
-                expandedCardPosition = position
-            }
-        }
-
-        // Check if the current card should be expanded or collapsed based on its position
-        if (expandedCardPosition == position) {
-            holder.expand()
-        } else {
-            holder.collapse()
-        }
-
-        *//* // Set click listener to toggle card expansion/collapse
-         holder.itemView.setOnClickListener {
-             if (cardData.isExpanded) {
-                 // Card is expanded, collapse it
-                 holder.collapse()
-             } else {
-                 // Card is collapsed, expand it
-                 holder.expand()
-             }
-         }
-
-         // Set the initial state of the card (expanded or collapsed)
-         if (cardData.isExpanded) {
-             holder.expand()
-         } else {
-             holder.collapse()
-         }*//*
-    }*/
    override fun onBindViewHolder(
        holder: CardViewHolder,
        @SuppressLint("RecyclerView") position: Int
@@ -110,7 +59,7 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
        holder.date.text = cardData.date
        holder.description.text = cardData.description
        // Set an OnClickListener to handle expanding/collapsing
-       holder.description.setOnClickListener {
+       /*holder.description.setOnClickListener {
            if (expandedCardPosition == position) {
                // Clicked on an already expanded card, so collapse it
                holder.collapse()
@@ -126,25 +75,24 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
                holder.expand()
                expandedCardPosition = position
            }
-       }
+       }*/
 
        // Check if the current card should be expanded or collapsed based on its position
-       if (expandedCardPosition == position) {
+       /*if (expandedCardPosition == position) {
            holder.expand()
        } else {
            holder.collapse()
-       }
+       }*/
    }
 
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val date: TextView = itemView.findViewById(R.id.tv_date)
         val description: TextView = itemView.findViewById(R.id.tv_Description)
-        val dropDownImage: ImageView = itemView.findViewById(R.id.dropdownButton)
         val threeDotsIcon: ImageView = itemView.findViewById(R.id.imageViewThreeDots)
         private val expandLayout: RelativeLayout = itemView.findViewById(R.id.expandLayout)
 
-
+/*
         init {
             // Add a click listener to the expandLayout
             expandLayout.setOnClickListener {
@@ -156,7 +104,7 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
                     expand()
                 }
             }
-        }
+        }*/
 
         init {
             threeDotsIcon.setOnClickListener { view ->
@@ -165,7 +113,7 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
         }
 
         // Toggle card expansion
-        fun expand() {
+        /*fun expand() {
             AnimationUtils.expand(description) // Implement AnimationUtils to expand view
             dropDownImage.setImageResource(R.drawable.minus) // Replace with your image resource
             threeDotsIcon.visibility = View.VISIBLE
@@ -178,7 +126,7 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
             dropDownImage.setImageResource(R.drawable.ic_expand) // Replace with your image resource
             threeDotsIcon.visibility = View.GONE
             cardDataList[adapterPosition].isExpanded = false
-        }
+        }*/
     }
 
     override fun getItemCount(): Int {
@@ -287,7 +235,10 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
                     showBottomSheet(view, position, cardDataList[position].description)
                     true
                 }
-
+                R.id.menu_add -> {
+                    addBottomSheet(view)
+                    true
+                }
                 else -> false
             }
         }
@@ -304,7 +255,28 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
         cardDataList.removeAt(position)
         notifyItemRemoved(position)
     }
+    private fun addBottomSheet(view: View) {
+        val context = view.context
+        val bottomSheetView =
+            LayoutInflater.from(context).inflate(R.layout.bottom_sheet_journal_add, null)
+        val dialog = BottomSheetDialog(context)
 
+        // Initialize views in the bottom sheet layout
+        //   val textViewEditJournal = bottomSheetView.findViewById<TextView>(R.id.et_daily_journel)
+        val closeIcon = bottomSheetView.findViewById<ImageView>(R.id.closeButton)
+        val editTextJournalEntry = bottomSheetView.findViewById<EditText>(R.id.et_daily_journel)
+        val addButton = bottomSheetView.findViewById<AppCompatButton>(R.id.addButton)
+        closeIcon.setOnClickListener {
+            dialog.dismiss()
+        }
+        // Set a click listener for the "Update" button
+        addButton.setOnClickListener {
+            // Dismiss the bottom sheet
+            dialog.dismiss()
+        }
+        dialog.setContentView(bottomSheetView)
+        dialog.show()
+    }
     private fun showBottomSheet(view: View, position: Int, description: String) {
         val context = view.context
         val bottomSheetView =
@@ -343,8 +315,6 @@ class JournalEntryAdapter(private val cardDataList: MutableList<JournalEntryData
 
         dialog.setContentView(bottomSheetView)
         dialog.show()
-
-
     }
 
     private fun showCustomDialog(context: Context) {

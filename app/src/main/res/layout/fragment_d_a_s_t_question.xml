@@ -7,12 +7,12 @@
     android:layout_marginBottom="@dimen/_50sdp">
 
     <!-- Toolbar at the top -->
-    <androidx.appcompat.widget.Toolbar
+    <!--<androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:popupTheme="@style/AppTheme.PopupOverlay">
+        app:popupTheme="@style/AppTheme.PopupOverlay">-->
 
         <RelativeLayout
             android:id="@+id/PHQ"
@@ -40,7 +40,7 @@
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_16sdp" />
         </RelativeLayout>
-    </androidx.appcompat.widget.Toolbar>
+    <!--</androidx.appcompat.widget.Toolbar>-->
 
     <!-- Separator view -->
     <View
@@ -48,21 +48,22 @@
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:layout_marginBottom="10dp"
-        android:layout_below="@id/toolbar"
         android:background="@color/viewbackgroundcolor" />
 
     <!-- RecyclerView below the toolbar -->
-    <ScrollView
+    <!--<ScrollView
         android:layout_width="match_parent"
         android:layout_height="@dimen/_400sdp"
-        android:layout_below="@+id/separator">
+        android:layout_below="@+id/separator">-->
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/questionsRecyclerView"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_height="@dimen/_400sdp"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_above="@+id/bottomLayout" />
-    </ScrollView>
+            android:layout_below="@+id/PHQ"
+            android:layout_marginHorizontal="@dimen/_10sdp" />
+    <!--</ScrollView>-->
 
     <!-- Bottom layout with back and next icons -->
     <LinearLayout

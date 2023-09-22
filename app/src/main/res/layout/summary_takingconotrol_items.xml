@@ -52,46 +52,39 @@
             android:layout_gravity="bottom"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:indeterminate="false"
-            android:max="60"
-            android:progress="1"
+            android:max="100"
             android:progressDrawable="@drawable/curved_progress_bar"
             android:scaleY="1"
             android:theme="@style/ProgressBarStyle" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp">
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/lexendmedium"
+            android:textColor="@color/purple_100"
+            android:textDirection="rtl" />
 
-            <TextView
-                android:id="@+id/text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:textSize="@dimen/_13sdp"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/purple_100" />
-            <TextView
-                android:id="@+id/text3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="right"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginStart="@dimen/_180sdp"
-                android:layout_centerInParent="true"
-                android:textSize="@dimen/_13sdp"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/purple_100"
-                android:textDirection="rtl" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_gravity="right"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/lexendmedium"
+            android:textColor="@color/purple_100"
+            android:textDirection="rtl" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
