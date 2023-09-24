@@ -130,7 +130,7 @@
                     android:background="@drawable/circle_background"
                     android:fontFamily="@font/lexendsemibold"
                     android:gravity="center"
-                    android:text="20"
+                    android:text="8"
                     android:textColor="@color/black_head"
                     android:textSize="@dimen/_11sdp" />
             </RelativeLayout>
@@ -197,6 +197,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_68sdp"
                             android:layout_marginTop="@dimen/_22sdp"
+                            android:visibility="gone"
                             android:orientation="horizontal">
 
                             <TextView
@@ -205,7 +206,7 @@
                                 android:background="@drawable/singlecount"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text=""
                                 android:textSize="@dimen/_7sdp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -260,7 +261,7 @@
                                 android:background="@drawable/singlecount"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="4"
                                 android:textSize="@dimen/_7sdp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -369,6 +370,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_65sdp"
                             android:layout_marginTop="@dimen/_15sdp"
+                            android:visibility="gone"
                             android:orientation="horizontal">
 
                             <TextView
@@ -433,7 +435,7 @@
                                 android:background="@drawable/singlecount"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="2"
                                 android:textSize="10dp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -548,7 +550,7 @@
                                 android:background="@drawable/singlecount"
                                 android:fontFamily="@font/montserratbold"
                                 android:gravity="center"
-                                android:text="5"
+                                android:text="2"
                                 android:textSize="10dp"
                                 android:visibility="visible" />
                         </LinearLayout>
@@ -597,6 +599,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_75sdp"
                             android:layout_marginTop="@dimen/_15sdp"
+                            android:visibility="gone"
+
                             android:orientation="horizontal">
 
                             <TextView
@@ -712,6 +716,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_52sdp"
                             android:layout_marginTop="@dimen/_15sdp"
+                            android:visibility="gone"
                             android:orientation="horizontal">
 
                             <TextView
@@ -771,6 +776,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_52sdp"
                             android:layout_marginTop="@dimen/_15sdp"
+                            android:visibility="gone"
                             android:orientation="horizontal">
 
                             <TextView

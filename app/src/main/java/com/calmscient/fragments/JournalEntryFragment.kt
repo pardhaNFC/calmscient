@@ -22,6 +22,7 @@ import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.calmscient.Interface.BottomSheetListener
 import com.calmscient.Interface.CellClickListener
 import com.calmscient.R
 import com.calmscient.adapters.JournalEntryAdapter
@@ -48,7 +49,7 @@ import java.util.GregorianCalendar
 import java.util.Locale
 import kotlin.random.Random
 
-class JournalEntryFragment : Fragment(), CellClickListener {
+class JournalEntryFragment : Fragment(), CellClickListener, BottomSheetListener {
 
     private lateinit var binding: FragmentJournalEntryBinding
     private lateinit var adapter: JournalEntryAdapter
@@ -79,7 +80,7 @@ class JournalEntryFragment : Fragment(), CellClickListener {
         val recyclerView = binding.recyclerViewJournalEntry
         val layoutManager = LinearLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager
-        adapter = JournalEntryAdapter(cardDataList)
+        adapter = JournalEntryAdapter(cardDataList,this)
         recyclerView.adapter = adapter
 
         // Add the Log.d statement here to check the cardDataList size
@@ -154,7 +155,7 @@ class JournalEntryFragment : Fragment(), CellClickListener {
         )
         binding.exSevenCalendar.scrollToDate(LocalDate.now())
         binding.recyclerViewJournalEntry.layoutManager = LinearLayoutManager(requireContext())
-        adapter = JournalEntryAdapter(cardDataList)
+        adapter = JournalEntryAdapter(cardDataList,this)
         binding.recyclerViewJournalEntry.adapter = adapter
         binding.journalNeedToTalkButton.setOnClickListener {
             loadFragment(EmergencyResourceFragment())
@@ -266,18 +267,6 @@ class JournalEntryFragment : Fragment(), CellClickListener {
 
     companion object {
         // Create a static array to store card sizes for each date
-        //private val cardSizes = IntArray(40) // Initialize for 40 days
-
-        /* init {
-             // Initialize the card sizes based on your requirements
-             val random = Random
-
-             for (i in 0 until 40) {
-                 // Generate a random card size between 0 and 5
-                 cardSizes[i] = random.nextInt(8)
-             }
-         }*/
-
         private val cardSizes = intArrayOf(
             1,
             1,
@@ -324,7 +313,6 @@ class JournalEntryFragment : Fragment(), CellClickListener {
             1,
             1
         )
-
     }
 
     private fun getCardDescription(cardPosition: Int): String {
@@ -348,5 +336,15 @@ class JournalEntryFragment : Fragment(), CellClickListener {
             adapter.removeEntry(selectedPosition) // Remove the entry from the adapter
             adapterPositionToDelete = -1 // Reset the selected position
         }
+    }
+
+    override fun onShowBottomSheet() {
+        val bottomSheetFragment = BottomSheetAddFragment()
+        bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)
+    }
+
+    override fun onShowEditBottomSheet(view: View, position: Int, description: String) {
+        val bottomSheetEditFragment = BottomSheetEditFragment(view,position,description)
+        bottomSheetEditFragment.show(requireActivity().supportFragmentManager, bottomSheetEditFragment.tag)
     }
 }

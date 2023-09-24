@@ -750,7 +750,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="notifications">Notificaciones</string>
     <string name="license_key">Licencia</string>
     <string name="help_support">Ayuda &amp; soporte</string>
-    <string name="logout">cerrar sesión</string>
+    <string name="logout">Cerrar sesión</string>
     <!--network errors-->
     <string name="network_connection_error">Se perdió la conexión a Internet, vuelva a intentarlo</string>
     <string name="network_default_error">Ocurrió algo incorrecto, inténtalo de nuevo</string>
@@ -1108,7 +1108,7 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="summaryof_audit">Resumen de AUDIT</string>
     <string name="summaryof_dast">Resumen de DAST</string>
     <string name="summaryof_progressofwork">Progreso en el trabajo del curso.</string>
-    <string name="summaryof_journalentry">entrada de diario</string>
+    <string name="summaryof_journalentry">Entrada de diario</string>
     <string name="summarymood_by_date_range">Estado de ánimo por rango de fechas</string>
     <string name="summarymood_daysateachmood">Días en cada estado de ánimo</string>
     <string name="summarysleep_by_date_range">Dormir por rango de fechase</string>
@@ -1380,4 +1380,9 @@ Todos tenemos diferentes condiciones de salud y tipos de cuerpo. ¡El ejercicio 
     <string name="summary_takingcontrol_days">días</string>
 
     <string name="doctor_address">South fredreic Av 489</string>
+
+    <string name="quiz_stressful">Las situaciones estresantes</string>
+    <string name="quiz_conseq">Las consecuencias</string>
+    <string name="quiz_response">Ciclo de ansiedad</string>
+
 </resources>

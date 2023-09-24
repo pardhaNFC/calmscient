@@ -21,12 +21,14 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.databinding.LayoutAnxietyQuizBinding
+import com.calmscient.utils.common.SavePreferences
 
 class AnxietyQuizFragment : Fragment() {
     private lateinit var binding: LayoutAnxietyQuizBinding
     private var selectedOptionSection1: TextView? = null
     private var selectedOptionSection2: TextView? = null
     private var selectedOptionSection3: TextView? = null
+    lateinit var savePrefData: SavePreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,6 +36,7 @@ class AnxietyQuizFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = LayoutAnxietyQuizBinding.inflate(inflater, container, false)
+        savePrefData = SavePreferences(requireContext())
         return binding.root
     }
 
@@ -58,6 +61,13 @@ class AnxietyQuizFragment : Fragment() {
         val tv3_1 = binding.tv31
         val tv3_2 = binding.tv32
         val tv3_3 = binding.tv33
+
+        if(savePrefData.getSpanLanguageState() == true){
+            binding.quizImage.setImageResource(R.drawable.spanish_quiz)
+        }else{
+            binding.quizImage.setImageResource(R.drawable.ic_an_quiz)
+        }
+
 
         // Section 1
         tvWork.setOnClickListener { selectOptionSection1(tvWork) }

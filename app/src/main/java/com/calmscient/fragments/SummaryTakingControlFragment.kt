@@ -101,8 +101,8 @@ class SummaryTakingControlFragment : Fragment() {
         SummaryDataClasss.clear()
         SummaryDataClasss.addAll(
             listOf(
-                SummaryDataClasss(R.drawable.ic_alcoholfree, getString(R.string.alchol_free), "10",getString(R.string.summary_takingcontrol_days),10),
-                SummaryDataClasss(R.drawable.ic_drinks, getString(R.string.drinks), "60",getString(R.string.summary_takingcontrol_counts),60),
+                SummaryDataClasss(R.drawable.ic_alcoholfree, getString(R.string.alchol_free), "10",getString(R.string.summary_takingcontrol_days),30),
+                SummaryDataClasss(R.drawable.ic_drinks, getString(R.string.drinks), "60",getString(R.string.summary_takingcontrol_counts),80),
                 SummaryDataClasss(R.drawable.ic_argument1, getString(R.string.argument),"04",getString(R.string.summary_takingcontrol_times),4),
                 SummaryDataClasss(R.drawable.ic_accident1, getString(R.string.events_tracker_text3),  "02",getString(R.string.summary_takingcontrol_times),2),
             )

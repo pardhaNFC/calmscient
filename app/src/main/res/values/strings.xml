@@ -1375,7 +1375,7 @@ The most important thing is to do it! Do you have some time today to get started
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
-    <string name="chart_sleep_avg_sleep_score">Average sleep score</string>
+    <string name="chart_sleep_avg_sleep_score">Average hours of sleep</string>
     <string name="chart_sleep_moresleepneeded">More sleep needed</string>
     <string name="chart_sleep_mosthours_slept">Most hours slept</string>
     <string name="chart_sleep_avghours_slept">Average hours slept</string>
@@ -1392,5 +1392,11 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summary_takingcontrol_days">days</string>
 
     <string name="doctor_address">South fredreic Av 489</string>
+
+    <string name="quiz_stressful">STRESSFUL SITUATION</string>
+    <string name="quiz_conseq">CONSEQUENCES</string>
+    <string name="quiz_response">RESPONSE TO STRESS</string>
+
+
 
 </resources>

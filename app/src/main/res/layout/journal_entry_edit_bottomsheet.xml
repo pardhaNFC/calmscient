@@ -27,7 +27,7 @@
 
         <!-- Close Button -->
         <ImageView
-            android:id="@+id/closeButton"
+            android:id="@+id/closeEditButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|top"
@@ -41,14 +41,14 @@
 
 
     <EditText
-        android:id="@+id/et_daily_journel"
+        android:id="@+id/edit_daily_journel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_12sdp"
         android:background="@drawable/edittext_grey_background"
         android:gravity="top"
         android:inputType="textMultiLine"
-        android:lines="8"
+        android:lines="5"
         android:fontFamily="@font/lexendlight"
         android:textColor="@color/hospital_name"
         android:layout_marginStart="@dimen/_15sdp"

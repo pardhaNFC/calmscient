@@ -56,6 +56,41 @@ class ManageAnxietyFragment : Fragment() {
             val lesson1RecyclerView: RecyclerView = binding.recyclerViewLesson1
             val lesson1Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
             setupRecyclerView(lesson1RecyclerView, lesson1Items, lesson1Adapter)
+            // Data for lesson 2
+            val lesson2Items = cardItemsLesson2()
+            val lesson2RecyclerView: RecyclerView = binding.recyclerViewLesson2
+            val lesson2Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson2RecyclerView, lesson2Items, lesson2Adapter)
+            // Data for lesson 3
+            val lesson3Items = cardItemsLesson3()
+            val lesson3RecyclerView: RecyclerView = binding.recyclerViewLesson3
+            val lesson3Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson3RecyclerView, lesson3Items, lesson3Adapter)
+            // Data for lesson 4
+            val lesson4Items = cardItemsLesson4()
+            val lesson4RecyclerView: RecyclerView = binding.recyclerViewLesson4
+            val lesson4Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson4RecyclerView, lesson4Items, lesson4Adapter)
+            // Data for lesson 5
+            val lesson5Items = cardItemsLesson5()
+            val lesson5RecyclerView: RecyclerView = binding.recyclerViewLesson5
+            val lesson5Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson5RecyclerView, lesson5Items, lesson5Adapter)
+
+            // Data for lesson 6
+            val lesson6Items = cardItemsLesson6()
+            val lesson6RecyclerView: RecyclerView = binding.recyclerViewLesson6
+            val lesson6Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson6RecyclerView, lesson6Items, lesson6Adapter)
+
+            // Data for Additional Resource
+            val additionalResourceItems = cardItemsAdditionalResource()
+            val additionalResourceRecyclerView: RecyclerView =
+                binding.recyclerViewAdditionalResource
+            val additionalResourceAdapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(
+                additionalResourceRecyclerView, additionalResourceItems, additionalResourceAdapter
+            )
         } else if (savePrefData.getSpanLanguageState() == true) {
             // Data for Introduction
             val introductionItems = cardItemsIntroduction()
@@ -110,6 +145,11 @@ class ManageAnxietyFragment : Fragment() {
             val lesson1RecyclerView: RecyclerView = binding.recyclerViewLesson1
             val lesson1Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
             setupRecyclerView(lesson1RecyclerView, lesson1Items, lesson1Adapter)
+            // Data for lesson 2
+            val lesson2Items = cardItemsLesson2()
+            val lesson2RecyclerView: RecyclerView = binding.recyclerViewLesson2
+            val lesson2Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+            setupRecyclerView(lesson2RecyclerView, lesson2Items, lesson2Adapter)
             // Data for lesson 3
             val lesson3Items = cardItemsLesson3()
             val lesson3RecyclerView: RecyclerView = binding.recyclerViewLesson3
@@ -154,11 +194,11 @@ class ManageAnxietyFragment : Fragment() {
         val lesson3Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
         setupRecyclerView(lesson3RecyclerView, lesson3Items, lesson3Adapter)*/
 
-       /* // Data for lesson 4
-        val lesson4Items = cardItemsLesson4()
-        val lesson4RecyclerView: RecyclerView = binding.recyclerViewLesson4
-        val lesson4Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
-        setupRecyclerView(lesson4RecyclerView, lesson4Items, lesson4Adapter)*/
+        /* // Data for lesson 4
+         val lesson4Items = cardItemsLesson4()
+         val lesson4RecyclerView: RecyclerView = binding.recyclerViewLesson4
+         val lesson4Adapter = AnxietyIntroductionAdapter(CardItemDiffCallback())
+         setupRecyclerView(lesson4RecyclerView, lesson4Items, lesson4Adapter)*/
 
         /*// Data for lesson 5
         val lesson5Items = cardItemsLesson5()

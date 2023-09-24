@@ -48,7 +48,7 @@
         android:background="@drawable/edittext_grey_background"
         android:gravity="top"
         android:inputType="textMultiLine"
-        android:lines="8"
+        android:lines="5"
         android:fontFamily="@font/lexendlight"
         android:textColor="@color/hospital_name"
         android:layout_marginStart="@dimen/_15sdp"
