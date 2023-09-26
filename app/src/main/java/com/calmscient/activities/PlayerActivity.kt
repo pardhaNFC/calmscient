@@ -188,21 +188,23 @@ class PlayerActivity : AppCompatActivity() {
         findViewById<ImageButton>(R.id.orientationBtn).setOnClickListener {
             toggleOrientation()
         }
+
         if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            dialog_img.setOnClickListener {
+            // Set the click listener for informationIcon in portrait mode only
+            val informationIcon = findViewById<ImageView>(R.id.informationIcon)
+            informationIcon.setOnClickListener {
                 showInformationDialog()
             }
-        }
-        if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+
             findViewById<ImageView>(R.id.ic_glossary).setOnClickListener {
                 startActivity(Intent(this, GlossaryActivity::class.java))
+
             }
 
             findViewById<ImageView>(R.id.menu_icon).setOnClickListener {
                 onBackPressed()
             }
         }
-
         findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
             onBackPressed()
         }

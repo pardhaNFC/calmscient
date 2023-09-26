@@ -65,7 +65,6 @@ class DashboardActivity : AppCompat() {
                 }
 
                 R.id.discovery -> {
-                    //Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
                     loadFragment(DiscoveryFragment())
                     it.setIcon(R.drawable.ic_discovery_selected)
                     true
@@ -73,7 +72,6 @@ class DashboardActivity : AppCompat() {
 
                 R.id.exercises -> {
                     loadFragment(ExerciseFragment())
-                    //Toast.makeText(applicationContext, "Coming Soon", Toast.LENGTH_SHORT).show()
                     it.setIcon(R.drawable.ic_exercises_selected)
                     true
                 }

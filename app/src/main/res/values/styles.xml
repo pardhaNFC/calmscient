@@ -7,10 +7,11 @@
         <item name="colorPrimaryVariant">@color/example_7_calendar</item>
         <item name="android:textStyle">bold</item>
     </style>
-    <style name="Widget.BottomNavigationView"
-        parent="Widget.Design.BottomNavigationView">
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
         <item name="fontFamily">@font/lexendextralight</item>
     </style>
+
     <style name="CustomMenuTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/custom_text_color</item>
         <!-- Add more attributes as needed -->
@@ -19,13 +20,17 @@
     <style name="MenuTextStyle" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
         <item name="android:textColor">#FFFFFF</item>
     </style>
+
     <style name="CustomDialog" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:windowBackground">@drawable/dialog_border</item>
     </style>
+
     <style name="BottomNavStyle" parent="Widget.Design.BottomNavigationView">
         <item name="itemIconSize">@dimen/_24sdp</item>
         <item name="android:fontFamily">@font/lexendlight</item>
+        <item name="android:textSize">@dimen/_7sdp</item>
     </style>
+
     <style name="OuterButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/grey_background</item>
         <item name="android:textColor">@android:color/white</item>
@@ -35,9 +40,11 @@
         <item name="android:background">@drawable/custom_background</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
+
     <style name="ProgressBarStyle">
         <item name="colorAccent">@color/example_7_button</item>
     </style>
+
     <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="android:windowIsFloating">false</item>
         <item name="android:statusBarColor">@android:color/transparent</item>

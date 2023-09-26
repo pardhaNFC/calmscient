@@ -204,18 +204,42 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
      }*/
 
     private fun skipForward() {
-        val currentPosition = mediaPlayer.currentPosition
+        /*val currentPosition = mediaPlayer.currentPosition
         val newPosition = currentPosition + 10000 // Skip forward by 10 seconds (in milliseconds)
         if (newPosition <= mediaPlayer.duration) {
             mediaPlayer.seekTo(newPosition)
+        }*/
+        val currentPosition = mediaPlayer.currentPosition
+        val newPosition = currentPosition + 10000
+
+        binding.audioProgressBar.visibility = View.VISIBLE
+
+        if (newPosition <= mediaPlayer.duration) {
+            mediaPlayer.seekTo(newPosition)
+        }
+
+        mediaPlayer.setOnSeekCompleteListener {
+
+            binding.audioProgressBar.visibility = View.GONE
         }
     }
 
     private fun skipBackward() {
-        val currentPosition = mediaPlayer.currentPosition
+        /*val currentPosition = mediaPlayer.currentPosition
         val newPosition = currentPosition - 10000 // Skip backward by 10 seconds (in milliseconds)
         if (newPosition >= 0) {
             mediaPlayer.seekTo(newPosition)
+        }*/
+        val currentPosition = mediaPlayer.currentPosition
+        val newPosition = currentPosition - 10000
+
+        binding.audioProgressBar.visibility = View.VISIBLE
+
+        if (newPosition >= 0) {
+            mediaPlayer.seekTo(newPosition)
+        }
+        mediaPlayer.setOnSeekCompleteListener {
+            binding.audioProgressBar.visibility = View.GONE
         }
     }
 
