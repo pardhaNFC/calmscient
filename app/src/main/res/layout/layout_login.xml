@@ -82,7 +82,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="10dp"
-
                 android:paddingTop="1dp"
                 app:boxBackgroundColor="#ffffff"
                 app:boxStrokeColor="@color/example_7_button"

@@ -58,19 +58,6 @@ class BottomSheetEditFragment(private val view: View, val position: Int, val des
             showCustomDialog(requireContext())
             dismiss()
         }
-        //etEdit.setText(description)
-        /*updateButton.setOnClickListener {
-            // Handle the update action here
-            val updatedEntry = etEdit.text.toString()
-            // Update the data in your cardDataList or perform any necessary updates
-            if (position >= 0 && position < cardDataList.size) {
-                cardDataList[position].description = updatedEntry
-                notifyItemChanged(position) // Notify the adapter of the data change for this card only
-            }
-
-            // Dismiss the bottom sheet
-            dialog!!.dismiss()
-        }*/
         closeButton.setOnClickListener {
             dismiss()
         }

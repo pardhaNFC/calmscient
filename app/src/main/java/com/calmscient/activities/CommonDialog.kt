@@ -23,31 +23,17 @@ import com.calmscient.R
 class CommonDialog(private val context: Context) {
 
     @SuppressLint("MissingInflatedId")
-    fun showDialog( message: String) {
-        /* val alertDialogBuilder = AlertDialog.Builder(context)
-         alertDialogBuilder.setTitle(title)
-         alertDialogBuilder.setMessage(message)
-         alertDialogBuilder.setPositiveButton(positiveButtonText) { dialog, _ ->
-             // Handle dialog button click if needed
-             dialog.dismiss()
-         }
-         alertDialogBuilder.setCancelable(false)
-         val alertDialog = alertDialogBuilder.create()
-         alertDialog.show()*/
-
+    fun showDialog(message: String) {
         val dialogView = LayoutInflater.from(context).inflate(R.layout.common_dialog, null)
         val infoTextView = dialogView.findViewById<TextView>(R.id.dialogInfoTextView)
         val closeButton = dialogView.findViewById<ImageView>(R.id.closeDialogButton)
         val titleTextView = dialogView.findViewById<TextView>(R.id.titleVideoDialog)
         val okButton = dialogView.findViewById<AppCompatButton>(R.id.okButton)
-        // Retrieve the dialogText from intent extras
-
-
-        // Set the content of the dialog using dialogText
         infoTextView.text = message
         titleTextView.text = context.getString(R.string.information)
-        val dialogBuilder = androidx.appcompat.app.AlertDialog.Builder(context, R.style.CustomDialog)
-            .setView(dialogView)
+        val dialogBuilder =
+            androidx.appcompat.app.AlertDialog.Builder(context, R.style.CustomDialog)
+                .setView(dialogView)
 
         val dialog = dialogBuilder.create()
         dialog.show()
