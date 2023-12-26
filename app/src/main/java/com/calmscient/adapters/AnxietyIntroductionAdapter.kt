@@ -28,17 +28,22 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.AnxietyHideFragment
 import com.calmscient.activities.AnxietyQuizActivity
 import com.calmscient.activities.PlayerActivity
 import com.calmscient.activities.RecognizeActivity
 import com.calmscient.di.remote.ItemType
 import com.calmscient.di.remote.CardItemDataClass
+import com.calmscient.fragments.AnxietyBiasedThinkingFragment
+import com.calmscient.fragments.AnxietyPostponeWorry
 import com.calmscient.fragments.AnxietyQuestionsFragment
 import com.calmscient.fragments.AnxietyQuizFragment
+import com.calmscient.fragments.AnxietyQuizLessonsFragment
 import com.calmscient.fragments.AudioPlayerFragment
 import com.calmscient.fragments.FastPaceFragment
 import com.calmscient.fragments.MakeAPlanFragment
 import com.calmscient.fragments.PlayerFragment
+import com.calmscient.fragments.PostponeWorryFirstScreen
 import com.calmscient.fragments.RecognizeFragment
 
 class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback<CardItemDataClass>) :
@@ -328,6 +333,53 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 null,
                                 RecognizeFragment()
                             )
+                        }else if (cardItem.description == context.getString(R.string.anxiety_hide)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyHideFragment()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.calming_body)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyHideFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.postpone_worry)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                //PostponeWorryFirstScreen()
+                                AnxietyPostponeWorry()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.biased_think)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                //PostponeWorryFirstScreen()
+                                AnxietyBiasedThinkingFragment()
+                            )
                         }
                     }
 
@@ -345,6 +397,18 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             null,
                             AnxietyQuizFragment()
                         )
+                        if(cardItem.description == context.getString(R.string.quiz_title3_2)){
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyQuizLessonsFragment()
+                            )
+                        }
                     }
 
                     else -> {

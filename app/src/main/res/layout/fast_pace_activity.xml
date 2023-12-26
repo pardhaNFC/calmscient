@@ -926,6 +926,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_15sdp"
                     android:layout_marginTop="@dimen/_10sdp"
+                    android:textStyle="bold"
                     android:fontFamily="@font/lexendlight"
                     android:text="@string/title_third_two_pace"
                     android:textSize="@dimen/_15sdp" />

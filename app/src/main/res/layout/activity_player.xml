@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:weightSum="2">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,9 +58,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_300sdp"
             android:layout_centerInParent="true"
+            app:buffered_color="@color/example_7_button"
             app:resize_mode="fit"
             app:show_buffering="always"
-            app:buffered_color="@color/example_7_button"
             app:use_controller="true" />
 
         <!-- Back Icon -->
@@ -72,12 +73,12 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
-            android:visibility="gone"
             android:layout_marginBottom="@dimen/_10sdp"
             android:background="@android:color/transparent"
             android:contentDescription="Back"
             android:padding="@dimen/_10sdp"
-            android:src="@drawable/ic_back_white" />
+            android:src="@drawable/ic_back_white"
+            android:visibility="gone" />
 
         <!-- Favorites Icon -->
         <ImageButton
@@ -155,9 +156,9 @@
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:clickable="true"
-                android:visibility="visible"
                 android:padding="@dimen/_10sdp"
-                android:src="@drawable/ic_information" />
+                android:src="@drawable/ic_information"
+                android:visibility="visible" />
         </RelativeLayout>
 
         <ScrollView
@@ -175,4 +176,19 @@
                 android:textSize="@dimen/_12sdp" />
         </ScrollView>
     </LinearLayout>
+
+    <!--<LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layoutDescription"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:text="@string/anxiety_postPoneCard0_text2"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_13sdp" />
+    </LinearLayout>-->
 </LinearLayout>

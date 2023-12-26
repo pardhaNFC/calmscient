@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,6 +10,7 @@
     tools:context=".activities.AudioPlayerActivity">
 
     <RelativeLayout
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -19,23 +19,23 @@
             android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lexendmedium"
-            android:text="Title"
-            android:textColor="@color/black_head"
-            android:textSize="@dimen/_18sdp"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:textAlignment="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/lexendmedium"
+            android:gravity="center"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_18sdp" />
 
         <!-- Close Button -->
         <ImageView
             android:id="@+id/closeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
             android:layout_alignEnd="@+id/titleTextView"
+            android:layout_gravity="end"
             android:clickable="true"
             android:contentDescription="Close"
             android:padding="@dimen/_10sdp"
@@ -47,196 +47,230 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_400sdp"
         android:layout_marginTop="@dimen/_40sdp"
-        android:padding="@dimen/_10sdp">
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone">
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-               <TextView
-                   android:id="@+id/tv_nora_name"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:text="@string/nora"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:fontFamily="@font/lexendlight"
-                   android:textSize="@dimen/_18sdp"
-                   android:textColor="@color/purple_100"/>
+                <TextView
+                    android:id="@+id/tv_nora_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/nora"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_100"
+                    android:textSize="@dimen/_18sdp" />
 
-               <TextView
-                   android:id="@+id/nora_audio_text1"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="left|center"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:fontFamily="@font/lexendlight"
-                   android:textColor="@color/black_head"
-                   android:textSize="@dimen/_13sdp"
-                   android:text="@string/nora_audio_text1"/>
-               <ImageView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/ic_audio_dialog_nora"
-                   android:layout_gravity="center"/>
-               <TextView
-                   android:id="@+id/nora_audio_text2"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="left|center"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:fontFamily="@font/lexendlight"
-                   android:textColor="@color/black_head"
-                   android:textSize="@dimen/_13sdp"
-                   android:text="@string/nora_audio_text2"/>
-               <TextView
-                   android:id="@+id/nora_audio_text3"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:text="@string/nora_audio_text3"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:fontFamily="@font/lexendmedium"
-                   android:textSize="@dimen/_18sdp"
-                   android:textColor="@color/purple_100"/>
+                <TextView
+                    android:id="@+id/nora_audio_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/nora_audio_text1"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_13sdp" />
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_audio_dialog_nora" />
 
-           </LinearLayout>
+                <TextView
+                    android:id="@+id/nora_audio_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/nora_audio_text2"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_13sdp" />
 
-           <View
-               android:layout_width="wrap_content"
-               android:layout_height="2dp"
-               android:layout_marginTop="@dimen/_8sdp"
-               android:layout_marginBottom="@dimen/_8sdp"
-               android:background="@color/viewbackgroundcolor" />
-
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
-
-               <TextView
-                   android:id="@+id/tv_austin_name"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:text="@string/austin"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:fontFamily="@font/lexendlight"
-                   android:textSize="@dimen/_18sdp"
-                   android:textColor="@color/purple_100"/>
-
-               <TextView
-                   android:id="@+id/austin_audio_text1"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="left|center"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:fontFamily="@font/lexendlight"
-                   android:textColor="@color/black_head"
-                   android:textSize="@dimen/_13sdp"
-                   android:text="@string/austin_audio_text1"/>
-               <ImageView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/ic_audio_dialog_austin"
-                   android:layout_gravity="center"/>
-               <TextView
-                   android:id="@+id/austin_audio_text2"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="left|center"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:fontFamily="@font/lexendlight"
-                   android:textColor="@color/black_head"
-                   android:textSize="@dimen/_13sdp"
-                   android:text="@string/austin_audio_text2"/>
-               <TextView
-                   android:id="@+id/austin_audio_text3"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:text="@string/austin_audio_text3"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:fontFamily="@font/lexendmedium"
-                   android:textSize="@dimen/_18sdp"
-                   android:textColor="@color/purple_100"/>
+                <TextView
+                    android:id="@+id/nora_audio_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="center"
+                    android:text="@string/nora_audio_text3"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_100"
+                    android:textSize="@dimen/_18sdp" />
 
 
-           </LinearLayout>
-           <View
-               android:layout_width="wrap_content"
-               android:layout_height="2dp"
-               android:layout_marginTop="@dimen/_8sdp"
-               android:layout_marginBottom="@dimen/_8sdp"
-               android:background="@color/viewbackgroundcolor" />
+            </LinearLayout>
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:orientation="vertical">
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/viewbackgroundcolor" />
 
-               <TextView
-                   android:id="@+id/tv_melanie_name"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:text="@string/melanie"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:fontFamily="@font/lexendlight"
-                   android:textSize="@dimen/_18sdp"
-                   android:textColor="@color/purple_100"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-               <TextView
-                   android:id="@+id/melanie_audio_text1"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="left|center"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:fontFamily="@font/lexendlight"
-                   android:textColor="@color/black_head"
-                   android:textSize="@dimen/_13sdp"
-                   android:text="@string/melanie_audio_text1"/>
-               <ImageView
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:src="@drawable/ic_audio_dialog_melanie"
-                   android:layout_gravity="center"/>
-               <TextView
-                   android:id="@+id/melanie_audio_text2"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="left|center"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:fontFamily="@font/lexendlight"
-                   android:textColor="@color/black_head"
-                   android:textSize="@dimen/_13sdp"
-                   android:text="@string/melanie_audio_text2"/>
-               <TextView
-                   android:id="@+id/melanie_audio_text3"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:text="@string/melanie_audio_text3"
-                   android:textAlignment="center"
-                   android:gravity="center"
-                   android:fontFamily="@font/lexendmedium"
-                   android:textSize="@dimen/_18sdp"
-                   android:textColor="@color/purple_100"/>
+                <TextView
+                    android:id="@+id/tv_austin_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/austin"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_100"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/austin_audio_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/austin_audio_text1"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_audio_dialog_austin" />
+
+                <TextView
+                    android:id="@+id/austin_audio_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/austin_audio_text2"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/austin_audio_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="center"
+                    android:text="@string/austin_audio_text3"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_100"
+                    android:textSize="@dimen/_18sdp" />
 
 
-           </LinearLayout>
-       </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/viewbackgroundcolor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_melanie_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/melanie"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_100"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/melanie_audio_text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/melanie_audio_text1"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_13sdp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_audio_dialog_melanie" />
+
+                <TextView
+                    android:id="@+id/melanie_audio_text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/melanie_audio_text2"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/melanie_audio_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="center"
+                    android:text="@string/melanie_audio_text3"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_100"
+                    android:textSize="@dimen/_18sdp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:id="@+id/layoutCalm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:textColor="@color/black_head"
+                android:text="@string/information_calm" />
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

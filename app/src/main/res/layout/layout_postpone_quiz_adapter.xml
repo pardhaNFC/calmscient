@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questions_item_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+        <TextView
+            android:id="@+id/text0_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/anxiety_postPoneCard2_text1"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/text1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/anxiety_postPoneCard2_text2"
+            android:fontFamily="@font/lexendlight"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/text1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexendmedium"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/text1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexendlight"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <ImageView
+            android:id="@+id/imageanxiety_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:src="@drawable/anxiety_postpone_2" />
+
+        <TextView
+            android:id="@+id/text0_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:fontFamily="@font/lexendlight"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_margin="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexendlight"
+            android:gravity="left"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_16sdp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lexendmedium"
+            android:gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_13sdp" />
+    </LinearLayout>
+
+</ScrollView>

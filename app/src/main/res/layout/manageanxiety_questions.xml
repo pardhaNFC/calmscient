@@ -100,7 +100,7 @@
             <!-- Step 3 Indicator -->
             <ImageView
                 android:id="@+id/step3Indicator"
-                android:layout_width="@dimen/_15sdp"
+                android:layout_width="19dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/ic_inactivetickmark" />

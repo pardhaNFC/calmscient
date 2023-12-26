@@ -96,7 +96,11 @@ class PlayerActivity : AppCompatActivity() {
             heading.text = headingText
             summary.text = summaryText
             title.text = headingText
+            /*if(headingText == getString(R.string.make_plan_card6_text2)){
+                summary.text = getString(R.string.video_calming_skills)
+            }*/
         }
+
         if (dialogText.equals("null")) {
             dialog_img.visibility = View.GONE
         }else{

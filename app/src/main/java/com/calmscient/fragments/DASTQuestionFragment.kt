@@ -38,7 +38,6 @@ class DASTQuestionFragment : Fragment() {
     private var isPreviousButtonVisible = false
     private var isNextButtonVisible = true // Initially, show the next button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this){

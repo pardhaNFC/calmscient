@@ -91,10 +91,8 @@ class AnxietyQuizActivity : AppCompat() {
             setBackgroundResource(R.drawable.anxiety_border)
             setTextColor(Color.parseColor("#424242"))
         }
-
         selectedTextView.setBackgroundResource(R.drawable.anxiety_selected)
         selectedTextView.setTextColor(Color.parseColor("#FFFFFF"))
-
         selectedOptionSection2 = selectedTextView
     }
 
