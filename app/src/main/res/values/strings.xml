@@ -1265,7 +1265,26 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="anxiety_biased_card_eight_one">What do you think?
         \nDo you recognize any of these thinking patterns in yourself?</string>
     <!--Calming the body-->
-
+    <string name="anxiety_calming_title_one">Our window of tolerance</string>
+    <string name="anxiety_calming_title_two">Hyper-arousal</string>
+    <string name="anxiety_calming_title_three">Making a plan</string>
+    <string name="anxiety_calming_card_one">Have you ever filled a party balloon with air? If so, you’ll know what it feels like as the balloon stretches and stretches until it can’t stretch any further. Any more air.... and it pops!</string>
+    <string name="anxiety_calming_card_two">Similarly, our bodies have an optimal emotional range where it functions best. We call this our “Window of Tolerance”.</string>
+    <string name="anxiety_calming_card_two1">When we are in our Window of Tolerance, we feel like we can deal with whatever’s happening in our life. We might feel stress or pressure, but it doesn’t bother us too much. This is the ideal place to be.</string>
+    <string name="anxiety_calming_card_three">But when we are under stress, that window becomes very small. It can stretch a bit, but if our stressors are greater than our window, we will fall outside into one of two opposite states:</string>
+    <string name="anxiety_calming_card_dialog_one">Anxiety, fear, irritation, panic.</string>
+    <string name="anxiety_calming_card_dialog_one2">You might experience the “Fight or Flight” response.</string>
+    <string name="anxiety_calming_card_dialog_two1">Emotional numbness, exhaustion, depression, dissociation, withdrawal, lethargy.</string>
+    <string name="anxiety_calming_card_dialog_two2">You might experience your body shutting down or freezing.</string>
+    <string name="anxiety_calming_card_making_heading">The good news is that there are exercises that target both states:</string>
+    <string name="anxiety_calming_card_making_heading1">Mindfulness-what is it?</string>
+    <string name="anxiety_calming_card_making_heading2">Progressive muscle relaxation</string>
+    <string name="anxiety_calming_card_making_heading3">Touch and butterfly hug</string>
+    <string name="anxiety_calming_card_making_heading4">Hand over your heart</string>
+    <string name="anxiety_calming_card_making_heading5">Mindful walking</string>
+    <string name="anxiety_calming_card_making_heading6">Mindful dance</string>
+    <string name="anxiety_calming_card_making_heading7">Mindful running</string>
+    <string name="anxiety_calming_card_making_heading8">Mindful body movement</string>
     <!--Audio Player text and its dialog Text -->
     <string name="meet_nora_austrin_melanie_description">Sometimes, seeing anxiety through others’ eyes can help us understand it better. Let’s meet three friends who view and respond to stress differently. Though their personalities and lifestyles are different, you will probably relate to one of them.</string>
     <string name="nora_audio_text1">First, let’s meet Nora. Nora tends to push away and avoid stressful situations. See if you can identify this in the way she expresses herself:</string>
@@ -1285,6 +1304,8 @@ The most important thing is to do it! Do you have some time today to get started
     \n Normally, worry is short-lived and leads to positive problem-solving. For example, “I worry that I won’t have time to cook dinner tonight and the kids will go to bed hungry” leads to deciding to prepare food ahead of time or ordering takeout on the way home from work. Worrying has led to a smart decision and a successful outcome.
     \n
     \n On the other hand, worry becomes unhelpful when we both overestimate the stress of the situation and also believe we don’t have the necessary competency, resiliency or outside resources to face it. What started as worry turns into anxiety and fear.
+    \n
+    \n Let’s learn a technique to create more balance in how much you are allowing your worry to affect your nervous system. The goal is to use worry in a healthy way by making smart decisions to avoid potential dangers without letting that worry dominate you!
     </string>
     <string name="information_moral">After an anxiety attack, it’s common to feel embarrassed and think: “I don’t even recognize myself.” That’s because when we experience anxiety, we often respond in ways that we normally don’t. What we are noticing in retrospect was a <b>behavioral response to anxiety.</b>
     \n

@@ -35,6 +35,7 @@ import com.calmscient.activities.RecognizeActivity
 import com.calmscient.di.remote.ItemType
 import com.calmscient.di.remote.CardItemDataClass
 import com.calmscient.fragments.AnxietyBiasedThinkingFragment
+import com.calmscient.fragments.AnxietyCalmingBodyFragment
 import com.calmscient.fragments.AnxietyPostponeWorry
 import com.calmscient.fragments.AnxietyQuestionsFragment
 import com.calmscient.fragments.AnxietyQuizFragment
@@ -353,7 +354,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyHideFragment()
+                                AnxietyCalmingBodyFragment()
                             )
                         }
                         else if (cardItem.description == context.getString(R.string.postpone_worry)) {

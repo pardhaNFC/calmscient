@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_30sdp"
+    android:orientation="vertical">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/calmingBodyLayout0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/textCalmTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lexendsemibold"
+                        android:text="@string/anxiety_calming_title_one"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purple_100"
+                        android:textSize="@dimen/_14sdp" />
+                    <TextView
+                        android:id="@+id/textCalmPara1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:text="@string/anxiety_biased_card_intro"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/textinfo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="@dimen/_2sdp"
+                            android:fontFamily="@font/lexendlight"
+                            android:gravity="center"
+                            android:drawableEnd="@drawable/ic_information"
+                            android:text="@string/anxiety_calming_title_two"
+                            android:textAllCaps="false"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/imageAnxietyCalming1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/anxiety_postpone_0" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/textinfo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="@dimen/_2sdp"
+                            android:fontFamily="@font/lexendlight"
+                            android:gravity="center"
+                            android:drawableEnd="@drawable/ic_information"
+                            android:text="@string/anxiety_calming_title_two"
+                            android:textAllCaps="false"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/textCalmPara2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:text="@string/anxiety_calming_card_two"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    <!--</LinearLayout>-->
+</LinearLayout>
