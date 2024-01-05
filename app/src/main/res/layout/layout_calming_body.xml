@@ -10,7 +10,6 @@
         android:id="@+id/idToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_10sdp"
         android:orientation="vertical"
         tools:ignore="MissingClass">
 
@@ -58,16 +57,12 @@
         <ProgressBar
             android:id="@+id/calmingProgressBar"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="@dimen/_200sdp"
+            android:layout_width="@dimen/_220sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:progress="5"
+            android:progress="8"
             android:progressTint="@color/pink"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/step4Indicator"
-            app:layout_constraintStart_toStartOf="@+id/step1Indicator"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:visibility="visible"/>
 
         <LinearLayout
             android:id="@+id/stepIndicator"
@@ -84,7 +79,6 @@
                 android:id="@+id/step1Indicator"
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_25sdp"
                 android:src="@drawable/ic_activetickmark" />
 
             <!-- Step 2 Indicator -->
@@ -123,36 +117,37 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/calmingBodyRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_420sdp"
+            android:layout_height="wrap_content"
             android:orientation="vertical" />
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_53sdp">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/previousQuestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
-                android:clickable="true"
-                android:src="@drawable/ic_question_back" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:visibility="visible">
 
-            <ImageView
-                android:id="@+id/nextQuestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
-                android:clickable="true"
-                android:src="@drawable/ic_next_question" />
-        </RelativeLayout>
+                <ImageView
+                    android:id="@+id/previousQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_question_back" />
+
+                <ImageView
+                    android:id="@+id/nextQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_next_question" />
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>

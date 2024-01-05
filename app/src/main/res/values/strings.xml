@@ -1224,28 +1224,25 @@ The most important thing is to do it! Do you have some time today to get started
         \n
         \n • You tend to dismiss positive experiences while amplifying negative ones:
         \n
-        \n      • “My work meeting didn’t go well because I forgot to mention something that I prepared.”
+        \n     “My work meeting didn’t go well because I forgot to mention something that I prepared.”
         \n
-        \n      • “My husband didn’t like what I said at the restaurant. It was such a bad night.”</string>
-    <string name="anxiety_biased_card_five">
-        \n • You believe you are responsible for things that are actually outside your control and feel guilty or ashamed for not being able to control or prevent them.
+        \n     “My husband didn’t like what I said at the restaurant. It was such a bad night.”</string>
+    <string name="anxiety_biased_card_five"> • You believe you are responsible for things that are actually outside your control and feel guilty or ashamed for not being able to control or prevent them.
         \n
         \n • This thinking involves self-criticism and judgment:
         \n
-        \n      •“I should have tried harder or done better”...when the problem was mutual (ex. relationship breakup, being laid off from work)“
+        \n   “I should have tried harder or done better”...when the problem was mutual (ex. relationship breakup, being laid off from work)“
         \n
-        \n      •"I should help out more”... when you see someone struggling.
-        \n
-        \n      • Taking an event or situation and making it about you when it has nothing to do with you:
-        \n
-        \n      •“They must be talking about me” ...when someone simply had a private conversation with someone else.</string>
+        \n   "I should help out more”... when you see someone struggling.
+        \n• Taking an event or situation and making it about you when it has nothing to do with you:
+        \n   “They must be talking about me” ...when someone simply had a private conversation with someone else.</string>
     <string name="anxiety_biased_card_six">• You jump to conclusions with little to no information or facts.
         \n
         \n • You quickly label yourself or others by one negative factor:
         \n
-        \n      •“I don’t have much to contribute to the conversation, so I KNOW I’m going to look stupid.”
+        \n      “I don’t have much to contribute to the conversation, so I KNOW I’m going to look stupid.”
         \n
-        \n      •“They stopped talking when I walked in. They were talking about me.”
+        \n      “They stopped talking when I walked in. They were talking about me.”
         \n
         \n      • This thinking unnecessarily upsets you emotionally because you believe that the conclusions and judgments you made are true.</string>
     <string name="anxiety_biased_card_seven">• This is similar to jumping to conclusions, but you have written a “negative script” in your mind without the possibility that it may be incorrect.
@@ -1257,9 +1254,9 @@ The most important thing is to do it! Do you have some time today to get started
         \n • You prophesy what’s going to happen, and you either make statements based on your predictions or feel negative about them.</string>
     <string name="anxiety_biased_card_eight"> • You create “emotional truth” (assumptions) based on your strong feelings (especially fear) on matters:
         \n
-        \n      •“I feel guilty so I must have done something bad.”
+        \n    “I feel guilty so I must have done something bad.”
         \n
-        \n      •“Something bad is going to happen because I strongly feel fear.”
+        \n    “Something bad is going to happen because I strongly feel fear.”
         \n
         \n • Although you think you are reasoning logically, you are allowing your strong emotions to lead you to a skewed view of reality.</string>
     <string name="anxiety_biased_card_eight_one">What do you think?
@@ -1587,7 +1584,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 2.5</string>
+    <string name="version">Version 2.6</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->

@@ -17,14 +17,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
-import com.calmscient.fragments.AnxietyCalmingBodyFragment
 import com.calmscient.fragments.AnxietyCalmingDataClass
-import com.calmscient.fragments.MedicationDetailFragment
 
 
 class CalmingTheBodyAdapter(
@@ -92,6 +91,11 @@ class CalmingTheBodyAdapter(
             showInformationDialog(v, context.getString(R.string.anxiety_calming_title_two),
                 context.getString(R.string.anxiety_calming_card_dialog_two1),context.getString(R.string.anxiety_calming_card_dialog_two2))
         }
+        if(position==(items.size-1)){
+            // here goes some code
+            holder.scrollViewCardLast.visibility = View.VISIBLE
+            holder.scrollViewCardFirst.visibility = View.GONE
+        }
 
     }
 
@@ -148,6 +152,8 @@ class CalmingTheBodyAdapter(
         val text3: TextView = itemView.findViewById(R.id.textCalmPara2)
         val text2_1: TextView = itemView.findViewById(R.id.textinfo1)
         val text3_1: TextView = itemView.findViewById(R.id.textinfo2)
+        val scrollViewCardLast: ScrollView = itemView.findViewById(R.id.scroll_calming_last)
+        val scrollViewCardFirst: ScrollView = itemView.findViewById(R.id.scrollCardsView)
         /*val text4: TextView = itemView.findViewById(R.id.text4)
         val text5: TextView = itemView.findViewById(R.id.text5)
         val text6: TextView = itemView.findViewById(R.id.text6)

@@ -107,7 +107,7 @@ class AnxietyCalmingBodyFragment : Fragment() {
     private fun initializeAdapter() {
         binding.calmingBodyRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        calmingAdapter = CalmingTheBodyAdapter(requireContext(),anxietyCalmingText)
+        calmingAdapter = CalmingTheBodyAdapter(requireContext(), anxietyCalmingText)
         binding.calmingBodyRecyclerView.adapter = calmingAdapter
     }
 
@@ -160,19 +160,19 @@ class AnxietyCalmingBodyFragment : Fragment() {
                 null
             )
         );
+
         anxietyCalmingText.add(
             AnxietyCalmingDataClass(
                 null,
                 null,
-                null,
-                null,
-                null,
+                getString(R.string.anxiety_calming_title_two),
+                R.drawable.img_calming_4,
+                getString(R.string.anxiety_calming_title_two),
                 null,
                 null,
                 null
             )
         );
-
         calmingAdapter.notifyDataSetChanged()
     }
 

@@ -267,6 +267,15 @@ class AnxietyBiasedThinkingFragment : Fragment() {
                 6
             )
         )
+        anxietyBiasedText.add(
+            AnxietyBiasedDataClass(
+                getString(R.string.anxiety_biased_card_emotional),
+                R.drawable.biased_making,
+                getString(R.string.anxiety_biased_card_eight),
+                null,
+                7
+            )
+        )
         /*anxietyBiasedText.add(
             AnxietyBiasedDataClass(
                 getString(R.string.anxiety_biased_card_emotional),

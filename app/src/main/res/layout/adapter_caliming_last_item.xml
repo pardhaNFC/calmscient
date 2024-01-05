@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_biased"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/layoutFirstScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_biased_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendsemibold"
+                android:gravity="center"
+                android:text="@string/anxiety_calming_title_three"
+                android:textAllCaps="false"
+                android:textColor="@color/purple_100"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/text1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/anxiety_calming_card_making_heading"
+                android:textAllCaps="false"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading1"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/closeCalmingButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_iceberg" />
+
+                        <ImageView
+                            android:id="@+id/volcano"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading2"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/volcano2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading3"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/volcano3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading4"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/volcano4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading5"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/iceberg5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/_53sdp"
+                            android:src="@drawable/ic_iceberg"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/volcano5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading6"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+                        <ImageView
+                            android:id="@+id/iceberg6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/_53sdp"
+                            android:src="@drawable/ic_iceberg"
+                            android:visibility="visible" />
+                        <ImageView
+                            android:id="@+id/volcano6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading7"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+                        <ImageView
+                            android:id="@+id/iceberg7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingRight="@dimen/_53sdp"
+                            android:src="@drawable/ic_iceberg"
+                            android:visibility="visible" />
+                        <ImageView
+                            android:id="@+id/volcano7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/touchCard8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="18dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lexendregular"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/anxiety_calming_card_making_heading8"
+                            android:textColor="@color/purple_100"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/volcano8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:clickable="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_volcano" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <!--<androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingMindfullness"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/button_background_rectangle"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingProgressive"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading2"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingTouch"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading3"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingHandOver"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading4"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingMindful"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingDance"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading6"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingRunning"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading7"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calmingMindfulBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/skip_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:gravity="center"
+                    android:text="@string/anxiety_calming_card_making_heading8"
+                    android:textAllCaps="false"
+                    android:textColor="@color/btn_gradient_color"
+                    android:textSize="@dimen/_14sdp" />-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

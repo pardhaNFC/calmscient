@@ -157,7 +157,7 @@
             android:orientation="vertical"
             android:id="@+id/optionsRecyclerView1"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_450sdp" />
+            android:layout_height="@dimen/_420sdp" />
 
         <RelativeLayout
             android:layout_width="match_parent"

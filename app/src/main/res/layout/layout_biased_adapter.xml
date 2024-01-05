@@ -74,7 +74,7 @@
                         android:layout_weight="1"
                         android:lineSpacingExtra="@dimen/_2sdp"
                         android:fontFamily="@font/lexendlight"
-                        android:text="@string/anxiety_biased_card_one"
+                        android:text="@string/anxiety_biased_card_five"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="@dimen/_13sdp" />
