@@ -51,7 +51,7 @@ class AnxietyPostponeWorry : Fragment() {
     private lateinit var stepIndicators: List<ImageView>
     private val maxProgress = 99
     private val anxietyText = mutableListOf<PostponeWorryDataClass>()
-    private val textArrays = listOf(
+    /*private val textArrays = listOf(
         arrayOf(null, R.string.anxiety_postPoneCard0_text1, R.string.anxiety_postPoneCard0_text2),
         arrayOf(
             R.string.anxiety_postPoneCard1_text1,
@@ -65,7 +65,7 @@ class AnxietyPostponeWorry : Fragment() {
             R.string.anxiety_postPoneCard3_text3
         ),
         arrayOf(R.string.anxiety_postPoneCard4_text1, R.string.anxiety_postPoneCard4_text2)
-    )
+    )*/
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -193,76 +193,7 @@ class AnxietyPostponeWorry : Fragment() {
                 null
             )
         );
-        /*anxietyText.add(
-            PostponeWorryDataClass(
-                AnxietyPostponeAdapter.VIEW_TYPE_TYPE_B,
-                getString(R.string.anxiety_hideCard5_text1),
-                null,
-                null,
-                null,
-                null,
-                R.drawable.anxiety_hide_5,
-                getString(R.string.anxiety_hideCard5_text2),
-                getString(R.string.anxiety_hideCard5_text3),
-                null
-            )
-        );
-        anxietyText.add(
-            PostponeWorryDataClass(
-                AnxietyPostponeAdapter.VIEW_TYPE_TYPE_B,
-                null,
-                null,
-                null,
-                null,
-                null,
-                R.drawable.anxiety_hide_6,
-                getString(R.string.anxiety_hideCard6_text1),
-                getString(R.string.anxiety_hideCard6_text2),
-                null
-            )
-        );
-        anxietyText.add(
-            PostponeWorryDataClass(
-                AnxietyPostponeAdapter.VIEW_TYPE_TYPE_B,
-                null,
-                null,
-                null,
-                null,
-                null,
-                R.drawable.anxiety_hide_7,
-                getString(R.string.anxiety_hideCard7_text1),
-                null,
-                null
-            )
-        );
-        anxietyText.add(
-            PostponeWorryDataClass(
-                AnxietyPostponeAdapter.VIEW_TYPE_TYPE_B,
-                null,
-                getString(R.string.anxiety_hideCard8_text1),
-                getString(R.string.anxiety_hideCard8_text2),
-                null,
-                null,
-                R.drawable.anxiety_hide_8,
-                null,
-                null,
-                null
-            )
-        );
-        anxietyText.add(
-            PostponeWorryDataClass(
-                AnxietyPostponeAdapter.VIEW_TYPE_TYPE_B,
-                null,
-                getString(R.string.anxiety_hideCard9_text1),
-                null,
-                null,
-                null,
-                null,
-                null,
-                getString(R.string.anxiety_hideCard9_text2),
-                null
-            )
-        );*/
+
         anxietyadapter.notifyDataSetChanged()
     }
 

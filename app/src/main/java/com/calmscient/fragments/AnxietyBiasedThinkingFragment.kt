@@ -194,7 +194,6 @@ class AnxietyBiasedThinkingFragment : Fragment() {
         } else {
             binding.nextQuestion.visibility = View.VISIBLE
         }
-
     }
 
     private fun scrollToPosition(position: Int) {

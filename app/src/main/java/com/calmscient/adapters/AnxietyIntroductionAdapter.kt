@@ -40,6 +40,7 @@ import com.calmscient.fragments.AnxietyPostponeWorry
 import com.calmscient.fragments.AnxietyQuestionsFragment
 import com.calmscient.fragments.AnxietyQuizFragment
 import com.calmscient.fragments.AnxietyQuizLessonsFragment
+import com.calmscient.fragments.AnxietyRestructureBiased
 import com.calmscient.fragments.AudioPlayerFragment
 import com.calmscient.fragments.FastPaceFragment
 import com.calmscient.fragments.MakeAPlanFragment
@@ -380,6 +381,18 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 null,
                                 //PostponeWorryFirstScreen()
                                 AnxietyBiasedThinkingFragment()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.restructure_biased)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                //PostponeWorryFirstScreen()
+                                AnxietyRestructureBiased()
                             )
                         }
                     }

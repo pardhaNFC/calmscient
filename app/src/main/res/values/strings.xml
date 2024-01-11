@@ -1261,6 +1261,44 @@ The most important thing is to do it! Do you have some time today to get started
         \n • Although you think you are reasoning logically, you are allowing your strong emotions to lead you to a skewed view of reality.</string>
     <string name="anxiety_biased_card_eight_one">What do you think?
         \nDo you recognize any of these thinking patterns in yourself?</string>
+    <string name="anxiety_restructure_screen1_one">Hopefully, you can now recognize how holding on to biased thinking is detrimental to your emotional wellbeing. It’s time to add warm sunlight to your biased thinking!</string>
+    <string name="anxiety_restructure_screen1_two">Think of yourself as your own best friend... reasonable and kind. The following exercise will help you go through the motions of catching and correcting your thoughts so you can be more like the Sun and less like the North Wind.</string>
+    <string name="anxiety_restructure_screen2_one">1. Pick a situation</string>
+    <string name="anxiety_restructure_screen2_two">Under what circumstances can you catch yourself holding onto one of the examples of biased thinking?
+    \n
+    \nThink of one specific situation where you always hold yourself to a fixed, rigid standard. Is it usually about..</string>
+    <string name="anxiety_restructure_screen2_checkOne">Money</string>
+    <string name="anxiety_restructure_screen2_checkTwo">Job security or performance</string>
+    <string name="anxiety_restructure_screen2_checkThree">Study</string>
+    <string name="anxiety_restructure_screen2_checkFour">Relationships</string>
+    <string name="anxiety_restructure_screen2_checkFive">Health</string>
+    <string name="anxiety_restructure_screen2_checkSix">Traveling (airplane, driving)</string>
+    <string name="anxiety_restructure_screen2_checkSeven">Parenting</string>
+    <string name="anxiety_restructure_screen2_checkEight">Time management or appointments</string>
+    <string name="anxiety_restructure_screen2_checkNine">Public speaking</string>
+    <string name="anxiety_restructure_screen2_checkTen">Pets</string>
+    <string name="anxiety_restructure_screen2_checkEleven">Other</string>
+    <string name="anxiety_restructure_screen3_one">2. Choose one example of biased thinking you identify with</string>
+    <string name="anxiety_restructure_screen3_button_name">Review the types of biased thinking</string>
+    <string name="anxiety_restructure_screen3_checkOne">All or nothing (black and white) thinking (pop up description for each one)</string>
+    <string name="anxiety_restructure_screen3_checkEight">Making negative assumptions (fortune telling)</string>
+    <string name="anxiety_restructure_screen4_one">3. Based on the type of biased thinking you’ve chosen, write one or two thoughts, beliefs or reactions you might typically have in your specific situation:</string>
+    <string name="anxiety_restructure_screen4_confirmMessage">Save it to weekly summary journal entry</string>
+    <string name="anxiety_restructure_screen5_one">Rate yourself:</string>
+    <string name="anxiety_restructure_screen5_two">How strongly do you feel that the thoughts or beliefs you listed above are true?</string>
+    <string name="anxiety_restructure_screen5_three">1: I know they’re not true</string>
+    <string name="anxiety_restructure_screen5_four">5: I strongly believe them to be true</string>
+    <string name="anxiety_restructure_screen6_one">5. Evaluate your thoughts:</string>
+    <string name="anxiety_restructure_screen6_two">Even though your biased thinking sounds logical, why isn’t it necessarily realistic? Can you come up with three reasons why your thoughts or beliefs may not be completely true?
+    \n
+    If you have a hard time coming up with reasons why your thinking may not be realistic, think about the following questions:</string>
+    <string name="anxiety_restructure_screen6_three">. “What are the consequences of my thinking and beliefs?”</string>
+    <string name="anxiety_restructure_screen6_four">. “How does my thinking feed my anxiety and worry?”</string>
+    <string name="anxiety_restructure_screen6_evidence1">Evidence 1</string>
+    <string name="anxiety_restructure_screen6_evidence2">Evidence 2</string>
+    <string name="anxiety_restructure_screen6_evidence3">Evidence 3</string>
+    <string name="anxiety_restructure_screen6_evidenceMessage">Make sure to fill out three of your own reasons before moving to the next step.</string>
+
     <!--Calming the body-->
     <string name="anxiety_calming_title_one">Our window of tolerance</string>
     <string name="anxiety_calming_title_two">Hyper-arousal</string>
@@ -1584,7 +1622,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 2.6</string>
+    <string name="version">Version 2.7</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->

@@ -70,8 +70,6 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
         //button click
         binding.btnSave.setOnClickListener(this)
         binding.btnSkip.setOnClickListener(this)
-
-
     }
 
     fun greeting() {
@@ -82,7 +80,7 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
         val ampm: Int = cal.get(Calendar.AM_PM)
         Log.d("ampm",""+ampm)
         var greeting: String? = null
-        if (hour in 5..11) {
+        if (hour in 0..11) {
             greeting = getString(R.string.good_morning)
         } else if (hour in 12..16) {
             //greeting = getString(R.string.good_afternoon)
