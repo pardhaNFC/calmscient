@@ -32,6 +32,7 @@ class AdapterRestructureBinding(val context: Context,
     val VIEW_TYPE_TYPE_A: Int = 0
     val VIEW_TYPE_TYPE_B: Int = 1
     val VIEW_TYPE_TYPE_C: Int = 2
+    val VIEW_TYPE_TYPE_D: Int = 3
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
