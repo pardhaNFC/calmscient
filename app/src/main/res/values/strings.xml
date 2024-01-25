@@ -1678,4 +1678,119 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="applied_to_degree">Applied to me to some degree, or some of the time</string>
     <string name="applied_to_considerable">Applied to me to a considerable degree, or a good part of time</string>
     <string name="applied_to_very_much">Applied to me very much, or most of the time</string>
+
+    <string name="rate_yourself_4">4.Rate yourself:</string>
+    <string name="rate_yourself_description">How strongly do you feel that the thoughts or beliefs you listed above are true?</string>
+    <string name="iKnow_they_re_not_true">1: I know they’re not true</string>
+    <string name="iStrongly_believe_them_to_be_true">5: I strongly believe them to be true</string>
+    <string name="this_is_your_report">This is your report</string>
+    <string name="tittle_restructure_your_biased_thinkings">Tittle: Restructure your biased thinkings</string>
+    <string name="specific_situation_where_you_hold_on_to_biased_thinking">1. Specific situation where you hold on to biased thinking:</string>
+    <string name="job">Job</string>
+    <string name="health">Health</string>
+    <string name="parenting">Parenting</string>
+    <string name="biased_thinking_that_you_identified_with">2. Biased thinking that you identified with:</string>
+    <string name="perfectionist_thinking">Perfectionist thinking</string>
+    <string name="negative_filtering">Negative filtering</string>
+    <string name="jumping_to_conclusion">Jumping to conclusion</string>
+    <string name="your_thoughts_about_the_situation">3. Your thoughts about the situation:</string>
+    <string name="reasons_why_your_thoughts_are_not_realistic">5.Reasons why your thoughts are not realistic:</string>
+    <string name="your_modified_thoughts">6. Your modified thoughts:</string>
+    <string name="rate_yourself_7">7. Rate yourself:</string>
+    <string name="write_down_what_have_you_recognized_about_how_biased_thinking_affects_your_emotions_and_behaviors">Write down what have you recognized about how biased thinking affects your emotions and behaviors.</string>
+    <string name="save_it_to_weekly_summary_journal_entry">Save it to weekly summary journal entry</string>
+    <string name="based_on_the_type_of_biased_thinking_you_ve_chosen_write_one_or_two_thoughts_beliefs_or_reactions_you_might_typically_have_in_your_specific_situation">3. Based on the type of biased thinking you’ve chosen, write one or two thoughts, beliefs or reactions you might typically have in your specific situation:</string>
+    <string name="write_your_thoughts_here">Write your thoughts here...</string>
+    <string name="evaluate_your_thoughts">5. Evaluate your thoughts:</string>
+    <string name="even_though_your_biased_thinking_sounds_logical">Even though your biased thinking sounds logical, why isn’t it necessarily realistic? Can you come up with three reasons why your thoughts or beliefs may not be completely true?</string>
+    <string name="if_you_have_a_hard_time_coming_up">If you have a hard time coming up with reasons why your thinking may not be realistic, think about the following questions:</string>
+    <string name="what_are_the_consequences_of_my_thinking_and_beliefs">• What are the consequences of my thinking and beliefs?</string>
+    <string name="how_does_my_thinking_feed_my_anxiety_and_worry">• How does my thinking feed my anxiety and worry?</string>
+    <string name="need_additional_help">Need additional help?</string>
+    <string name="evidence_1">Evidence 1</string>
+    <string name="write_your_reason_here">Write your reason here...</string>
+    <string name="evidence_2">Evidence 2</string>
+    <string name="make_sure_to_fill_out_three_">Make sure to fill out three of your own reasons before moving to the next step.</string>
+    <string name="evidence_3">Evidence 3</string>
+    <string name="modify_your_thoughts">6. Modify your thoughts:</string>
+    <string name="now_that_you_ve_recognized">Now that you’ve recognized the possibility that your thinking may not be realistic or completely true, what would be a more realistic way of thinking about your situation?</string>
+    <string name="new_thought_1">New thought 1</string>
+    <string name="new_thought_2">New thought 2</string>
+    <string name="can_you_appreciate_that_you_are"><![CDATA[Can you appreciate that you are now talking to yourself in a kinder, more reasonable and wise manner? ]]></string>
+    <string name="congratulations_you_ve_modified_your_biased_thinking">Congratulations! You’ve modified your biased thinking, even if just a little.</string>
+
+    //review thinks dialog text
+    <string name="anxiety_review_think_one"> • You have a fixed standard to how you want to proceed with tasks, relationships and problem solving.
+        \n
+        \n • You have expectations of how it “should” turn out. If it doesn’t turn out like you think, you judge yourself to be a failure or as someone who didn’t work hard enough to succeed.
+        \n
+        \n • You judge your own performance, relationships and decisions as either totally good or totally bad.
+        \n
+        \n • Your evaluation of yourself and others tends to be black and white, making it hard to see matters in shades of gray.</string>
+
+    <string name="anxiety_review_think_two"> • You often see things as a catastrophe, which means a “complete disaster”.
+        \n
+        \n • You think of exaggerated negative consequences of events or decisions.
+        \n
+        \n • You think that the worst possible outcome will occur if one thing fails.
+             For example:
+        \n
+        \n  “If I fail in this test, I will be a total failure in life”
+            “If he leaves me, I will never find anyone else”
+            “I’ll be unhappy for the rest of my life”
+           .This thinking leads to unnecessary increases in levels of anxiety and can lean to “acting out” or other unhelpful behaviors. </string>
+    <string name="anxiety_review_think_three"> • You have a tendency to demand an extremely high or even flawless level of performance from yourself or others, even when your expectations are in excess of what is required of the situation(ex. cleaning, organizing your closet, etc..)
+        \n
+        \n • This thinking is different from being a high achiever because your expectations are motivated by fear or are paralyzed by the idea of failure (vs. motivated by doing your best).
+        \n
+        \n • Your expectations make you feel anxious, fearful and like you are losing control.
+        \n
+        \n • This thinking often leads to procrastination, self-criticism/judgment or OCD.</string>
+    <string name="anxiety_review_think_four"> • You only see one side of a situation (usually the negative side), and you dwell on it obsessively.
+        \n
+        \n • You tend to dismiss positive experiences while amplifying negative ones:
+        \n
+        \n   “My work meeting didn’t go well because I forgot to mention something that I prepared.”
+        \n
+        \n  “My husband didn’t like what I said at the restaurant. It was such a bad night.”</string>
+    <string name="anxiety_review_think_five"> • You believe you are responsible for things that are actually outside your control and feel guilty or ashamed for not being able to control or prevent them.
+        \n
+        \n • This thinking involves self-criticism and judgment:
+        \n
+        \n   “I should have tried harder or done better” ..when the problem was mutual (ex. relationship breakup, being laid off from work)
+        \n
+        \n  “I should help out more” ..when you see someone struggling.
+        \n
+        \n • Taking an event or situation and making it about you when it has nothing to do with you
+        \n
+        \n • “They must be talking about me” ..when someone simply had a private conversation with someone else.</string>
+
+    <string name="anxiety_review_think_six"> • You jump to conclusions with little to no information or facts.
+        \n
+        \n • You quickly label yourself or others by one negative factor:
+        \n
+        \n   “I don’t have much to contribute to the conversation, so I KNOW I’m going to look stupid.”
+        \n
+        \n   “They stopped talking when I walked in. They were talking about me.”
+        \n
+        \n • This thinking unnecessarily upsets you emotionally because you believe that the conclusions and judgments you made are true.</string>
+    <string name="anxiety_review_think_seven"> • This is similar to jumping to conclusions, but you have written a “negative script” in your mind without the possibility that it may be incorrect.
+        \n
+        \n • You have strong negative feelings about tasks or relationships because they have happened to you before.
+        \n
+        \n • Mind reading
+        \n
+        \n • You prophesy what’s going to happen, and you either make statements based on your predictions or feel negative about them.</string>
+    <string name="anxiety_review_think_eight"> • You create “emotional truth” (assumptions) based on your strong feelings (especially fear) on matters:
+        \n
+        \n   “I feel guilty so I must have done something bad.”
+        \n
+        \n   “Something bad is going to happen because I strongly feel fear.”
+        \n
+        \n • Although you think you are reasoning logically, you are allowing your strong emotions to lead you to a skewed view of reality.</string>
+    <string name="rate_yourself_again">7. Rate yourself again:</string>
+    <string name="now_that_you_ve_adjusted_your_biased_thinking_how">Now that you’ve adjusted your biased thinking, how strongly do you feel that the thoughts or beliefs you listed above are true?</string>
+    <string name="if_your_rating_has_remained_at_four_or_five_try_this">If your rating has remained at four or five, try this exercise again. The goal is to reach a rating of one. If you find it hard to reach a lower rating, try applying it to different scenarios and situations until you learn to step away from biased thinking. If you are still having a hard time modifying your thinking, you might ask someone you trust to help you through this exercise.</string>
+    <string name="it_s_important_to_keep_practicing_using_this_format">It’s important to keep practicing using this format because you don’t always realize when you’re using biased thinking in your day-to-day life. The more you practice, the more you’ll be aware of it, and the easier it will be to catch and modify it as you face daily circumstances.</string>
+    <string name="you_ll_also_start_recognizing_biased_thinking_in_other_people"><![CDATA[You’ll also start recognizing biased thinking in other people.\n There will be times when people communicate with you using their own biased thinking, which you might believe to be the definite truth.  Many times, someone else’s biased thinking may trigger your own.  If you can master the ability to recognize it, you’ll not only avoid unhelpful behavior, but you may also help others think and act in more positive and productive ways.]]></string>
 </resources>

@@ -11,18 +11,26 @@
 
 package com.calmscient.adapters
 
-import android.R
 import android.content.Context
+import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.calmscient.R
+import com.calmscient.activities.ReviewTypeRestructureActivity
 import com.calmscient.di.remote.AnxietyRestructureDataClass
+import com.calmscient.di.remote.Task
 
 
-class AdapterRestructureBinding(val context: Context,
-                                private val items: MutableList<AnxietyRestructureDataClass>
+class AdapterRestructureBinding(
+    val context: Context,
+    private val items: MutableList<AnxietyRestructureDataClass>
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     companion object {
@@ -33,6 +41,17 @@ class AdapterRestructureBinding(val context: Context,
     val VIEW_TYPE_TYPE_B: Int = 1
     val VIEW_TYPE_TYPE_C: Int = 2
     val VIEW_TYPE_TYPE_D: Int = 3
+    val VIEW_TYPE_TYPE_E: Int = 4
+    val VIEW_TYPE_TYPE_F: Int = 5
+    val VIEW_TYPE_TYPE_EXPAND_E: Int = 6
+    val VIEW_TYPE_TYPE_G: Int = 7
+    val VIEW_TYPE_TYPE_H: Int = 8
+    val VIEW_TYPE_TYPE_I: Int = 9
+    val VIEW_TYPE_TYPE_J: Int = 10
+    val VIEW_TYPE_TYPE_K: Int = 11
+
+    private val taskWorkData = mutableListOf<Task>()
+    val expandAdapter = ExpandFiveRestructureAdapter(mutableListOf())
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -48,35 +67,103 @@ class AdapterRestructureBinding(val context: Context,
                     .inflate(com.calmscient.R.layout.layout_restructure_two, parent, false)
                 TypeViewHolderScreenTwo(view)
             }
+
             VIEW_TYPE_TYPE_C -> {
                 val view = LayoutInflater.from(parent.context)
                     .inflate(com.calmscient.R.layout.layout_restructure_three, parent, false)
                 TypeViewHolderScreenThree(view)
             }
-            /*VIEW_TYPE_TYPE_C -> {
-                val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_postpone_quiz_adapter, parent, false)
-                MyViewHolder(view)
-            }
-
-            VIEW_TYPE_TYPE_C_A -> {
-                val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_postpone_quiz_adapter, parent, false)
-                MyViewHolder(view)
-            }
 
             VIEW_TYPE_TYPE_D -> {
-                val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_postpone_quiz_adapter, parent, false)
-                MyViewHolder(view)
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_four, parent, false
+                    )
+                TypeViewHolderScreenFour(view)
             }
 
-            VIEW_TYPE_TYPE_D_A -> {
-                val view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.layout_postpone_quiz_adapter, parent, false)
-                MyViewHolder(view)
+            VIEW_TYPE_TYPE_E -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_five, parent, false
+                    )
+                TypeViewHolderScreenFive(view)
             }
-*/
+
+            VIEW_TYPE_TYPE_EXPAND_E -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_five_expand, parent, false
+                    )
+                TypeViewHolderScreenFiveExpand(view)
+            }
+
+            VIEW_TYPE_TYPE_F -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_six, parent, false
+                    )
+                TypeViewHolderScreenSix(view)
+            }
+
+            VIEW_TYPE_TYPE_G -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_seven, parent, false
+                    )
+                TypeViewHolderScreenSeven(view)
+            }
+
+            VIEW_TYPE_TYPE_H -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_eight, parent, false
+                    )
+                TypeViewHolderScreenEight(view)
+            }
+
+            VIEW_TYPE_TYPE_I -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_nine, parent, false
+                    )
+                TypeViewHolderScreenNine(view)
+            }
+
+            VIEW_TYPE_TYPE_J -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_ten, parent, false
+                    )
+                TypeViewHolderScreenTen(view)
+            }
+
+            VIEW_TYPE_TYPE_K -> {
+                val view = LayoutInflater.from(
+                    parent.context
+                )
+                    .inflate(
+                        R.layout.layout_restructure_eleven, parent, false
+                    )
+                TypeViewHolderScreenEleven(view)
+            }
+
             else -> throw IllegalArgumentException("Invalid view type")
         }
     }
@@ -93,35 +180,202 @@ class AdapterRestructureBinding(val context: Context,
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }*/
-        val checkboxText1: TextView = itemView.findViewById(com.calmscient.R.id.custom_checkbox_1)
+        val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
     }
+
     class TypeViewHolderScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+        }
+
+        val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
+        val btnReviewType: Button = itemView.findViewById(R.id.btnReviewTypes)
+    }
+
+    class TypeViewHolderScreenFour(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: AnxietyRestructureDataClass) {
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }
-        val checkboxText1: TextView = itemView.findViewById(com.calmscient.R.id.custom_checkbox_1)
     }
+
+    class TypeViewHolderScreenFive(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+            //val recyclerViewModel = itemsList.text1
+            //message.text = recyclerViewModel.textData
+        }
+    }
+
+    class TypeViewHolderScreenFiveExpand(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+        }
+
+        val expandRecyclerview: RecyclerView =
+            itemView.findViewById(R.id.expandRestructureRecyclerView)
+
+    }
+
+    class TypeViewHolderScreenSix(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+            //val recyclerViewModel = itemsList.text1
+            //message.text = recyclerViewModel.textData
+        }
+    }
+
+    class TypeViewHolderScreenSeven(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+            //val recyclerViewModel = itemsList.text1
+            //message.text = recyclerViewModel.textData
+        }
+    }
+
+    class TypeViewHolderScreenEight(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+        }
+    }
+
+    class TypeViewHolderScreenNine(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+        }
+    }
+
+    class TypeViewHolderScreenEleven(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+        }
+
+    }
+
+    class TypeViewHolderScreenTen(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(
+                    R.id.optionJob
+                ),
+                itemView.findViewById(
+                    R.id.optionHealth
+                ),
+                itemView.findViewById(
+                    R.id.optionParenting
+                )
+            ),
+            listOf
+                (
+                itemView.findViewById(
+                    R.id.optionPerfectionistThinking
+                ),
+                itemView.findViewById(
+                    R.id.optionNegativeFiltering
+                ),
+                itemView.findViewById(
+                    R.id.optionParentingJumping
+                )
+            ),
+            listOf
+                (
+                itemView.findViewById(
+                    R.id.optionPerfectionistThinking_5
+                ),
+                itemView.findViewById(
+                    R.id.optionNegativeFiltering_5
+                ),
+                itemView.findViewById(
+                    R.id.optionParentingJumping_5
+                )
+            ),
+            listOf
+                (
+                itemView.findViewById(
+                    R.id.optionPerfectionistThinking_6
+                ),
+                itemView.findViewById(
+                    R.id.optionNegativeFiltering_6
+                ),
+                itemView.findViewById(
+                    R.id.optionParentingJumping_6
+                )
+            ),
+            // Add more sets as needed
+        )
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
+    }
+
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is TypeViewHolderA -> {
                 holder.bind(items[position])
             }
+
             is TypeViewHolderScreenTwo -> {
                 //holder.bind(items[position])
-               /* if (holder.includedLayout1.visibility == View.VISIBLE) {
-                    holder.checkboxText1.text = context.getString(com.calmscient.R.string.anxiety_restructure_screen2_checkOne)
-                } else if (holder.includedLayout2.visibility == View.VISIBLE) {
-                    //holder.checkboxText1.setText("Job security or performance")
-                    holder.checkboxText1.text = context.getString(com.calmscient.R.string.anxiety_restructure_screen2_checkTwo)
-                }*/
+                /* if (holder.includedLayout1.visibility == View.VISIBLE) {
+                     holder.checkboxText1.text = context.getString(R.string.anxiety_restructure_screen2_checkOne)
+                 } else if (holder.includedLayout2.visibility == View.VISIBLE) {
+                     //holder.checkboxText1.setText("Job security or performance")
+                     holder.checkboxText1.text = context.getString(R.string.anxiety_restructure_screen2_checkTwo)
+                 }*/
 
             }
 
-            /* is MyViewHolder -> {
-                 holder.bind(items[position])
-             }*/
+            is TypeViewHolderScreenThree -> {
+                holder.bind(items[position])
+                holder.btnReviewType.setOnClickListener {
+                    context.startActivity(
+                        Intent(
+                            context,
+                            ReviewTypeRestructureActivity::class.java
+                        )
+                    )
+                }
+                holder.checkboxText1.setOnClickListener {
+                    Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            is TypeViewHolderScreenFiveExpand -> {
+                holder.bind(items[position])
+
+                val innerAdapter = ExpandFiveRestructureAdapter(mutableListOf())
+                holder.expandRecyclerview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                holder.expandRecyclerview.adapter = innerAdapter
+                addTaskData()
+                expandAdapter.updateTasks(taskWorkData)
+            }
         }
     }
 
@@ -131,5 +385,68 @@ class AdapterRestructureBinding(val context: Context,
 
     override fun getItemViewType(position: Int): Int {
         return items[position].theViewType
+    }
+
+    private fun addTaskData() {
+        val tasks = listOf(
+            Task(
+                "A",
+                context.getString(R.string.adrenaline),
+                context.getString(R.string.adrenaline_summary)
+            ),
+            Task(
+                "B",
+                context.getString(R.string.anxiety_attack),
+                context.getString(R.string.anxiety_attack_summary)
+            ),
+            Task(
+                "C",
+                context.getString(R.string.automatic_thinking),
+                context.getString(R.string.automatic_thinking_summary)
+            ),
+
+            Task(
+                "D",
+                context.getString(R.string.biased_thinking),
+                context.getString(R.string.biased_thinking_summary)
+            ),
+            Task(
+                "E",
+                context.getString(R.string.cortisol),
+                context.getString(R.string.cortisol_summary)
+            ),
+            Task(
+                "F",
+                context.getString(R.string.cognitive_distortion),
+                context.getString(R.string.cognitive_distortion_summary),
+            ),
+            Task(
+                "G",
+                context.getString(R.string.competency),
+                context.getString(R.string.competency_summary)
+            ),
+            Task(
+                "H",
+                context.getString(R.string.compulsive_behaviour),
+                context.getString(R.string.compulsive_behaviour_summary),
+            ),
+            Task(
+                "I",
+                context.getString(R.string.Dependency),
+                context.getString(R.string.Dependency_summary)
+            ),
+            Task(
+                "J",
+                context.getString(R.string.gaba),
+                context.getString(R.string.gaba_summary)
+            ),
+            Task(
+                "K",
+                context.getString(R.string.hyperventilation),
+                context.getString(R.string.hyper_summary),
+            )
+        )
+        taskWorkData.addAll(tasks)
+        expandAdapter.notifyDataSetChanged()
     }
 }

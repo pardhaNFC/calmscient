@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/anxiety_6_4_6"
+        android:layout_margin="@dimen/_10sdp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image_view"
+        android:text="@string/it_s_important_to_keep_practicing_using_this_format"
+        android:fontFamily="@font/lexendlight"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black_head"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="@dimen/_10sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

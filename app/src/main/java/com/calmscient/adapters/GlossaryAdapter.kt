@@ -58,7 +58,6 @@ class GlossaryAdapter(private val allTasks: MutableList<Task>) :
                 if (previouslyExpandedCardPosition != -1) {
                     notifyItemChanged(previouslyExpandedCardPosition)
                 }
-
                 // Expand the clicked card
                 holder.expand()
                 expandedCardPosition = position

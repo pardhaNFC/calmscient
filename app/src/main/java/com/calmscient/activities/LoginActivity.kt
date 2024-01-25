@@ -111,11 +111,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
-    /*override fun attachBaseContext(newBase: Context?) {
-        val localeToSwitch = Locale("es")
-        val localeUpdatedContext = newBase?.let { ContextUtils.updateLocale(it, localeToSwitch) }
-        super.attachBaseContext(newBase)
-    }*/
+
     override fun onBackPressed() {
         finishAffinity();
         finish()

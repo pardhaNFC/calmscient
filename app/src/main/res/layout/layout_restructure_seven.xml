@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/modify_your_thoughts"
+            android:fontFamily="@font/lexendmedium"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_description_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/now_that_you_ve_recognized"
+            android:fontFamily="@font/lexendlight"
+            android:textSize="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black_head"
+            tools:ignore="MissingConstraints"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question"/>
+
+        <LinearLayout
+            android:id="@+id/liner_layout_thought_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_thought_1"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/lexendregular"
+                android:textColor="@color/black_head"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px"
+                android:background="@drawable/edittext_grey_background"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_grey_background"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null"
+                    android:fontFamily="@font/lexendlight"
+                    android:textSize="@dimen/_12sdp"
+                    android:hint="@string/write_your_reason_here"
+                    android:layout_below="@+id/textViewQuestionThree"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/liner_layout_thought_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/liner_layout_thought_1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_thought_2"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/lexendregular"
+                android:textColor="@color/black_head"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px"
+                android:background="@drawable/edittext_grey_background"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_grey_background"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null"
+                    android:fontFamily="@font/lexendlight"
+                    android:textSize="@dimen/_12sdp"
+                    android:hint="@string/write_your_reason_here"
+                    android:layout_below="@+id/textViewQuestionThree"/>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_description_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/can_you_appreciate_that_you_are"
+            android:fontFamily="@font/lexendlight"
+            android:textSize="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black_head"
+            tools:ignore="MissingConstraints"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/liner_layout_thought_2"/>
+
+        <TextView
+            android:id="@+id/tv_description_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/congratulations_you_ve_modified_your_biased_thinking"
+            android:fontFamily="@font/lexendlight"
+            android:textSize="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black_head"
+            tools:ignore="MissingConstraints"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description_2"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/anxiety_6_4_6"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description_3"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -19,6 +19,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.GlossaryActivity
@@ -59,7 +60,8 @@ class AnxietyRestructureBiased : Fragment() {
             view.findViewById(R.id.step7Indicator),
             view.findViewById(R.id.step8Indicator),
             view.findViewById(R.id.step9Indicator),
-            view.findViewById(R.id.step10Indicator)
+            view.findViewById(R.id.step10Indicator),
+            view.findViewById(R.id.step11Indicator)
         )
         setupNavigation()
         initializeAdapter()
@@ -72,25 +74,42 @@ class AnxietyRestructureBiased : Fragment() {
         binding.menuIcon.setOnClickListener {
             loadFragment(ManageAnxietyFragment())
         }
+        val pagerSnapHelper = PagerSnapHelper()
+        pagerSnapHelper.attachToRecyclerView(binding.anxietyResructureRecyclerView)
     }
 
     private fun displayRestructureViews() {
-        restructureText.add(AnxietyRestructureDataClass(
-            restructureAdapter.VIEW_TYPE_TYPE_A,0
-        ));
-        restructureText.add(AnxietyRestructureDataClass(
-            restructureAdapter.VIEW_TYPE_TYPE_B,1
-        ));
-        restructureText.add(AnxietyRestructureDataClass(
-            restructureAdapter.VIEW_TYPE_TYPE_C,2
-        ));
+        restructureText.add(
+            AnxietyRestructureDataClass(
+                restructureAdapter.VIEW_TYPE_TYPE_A, 0
+            )
+        );
+        restructureText.add(
+            AnxietyRestructureDataClass(
+                restructureAdapter.VIEW_TYPE_TYPE_B, 1
+            )
+        );
+        restructureText.add(
+            AnxietyRestructureDataClass(
+                restructureAdapter.VIEW_TYPE_TYPE_C, 2
+            )
+        );
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_D, 3));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_E, 4));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_EXPAND_E, 5));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_F, 6));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_G, 7));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_H, 8));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_I, 9));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_J, 10));
+        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_K, 11));
         restructureAdapter.notifyDataSetChanged()
     }
 
     private fun initializeAdapter() {
         binding.anxietyResructureRecyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        restructureAdapter = AdapterRestructureBinding(requireContext(),restructureText)
+        restructureAdapter = AdapterRestructureBinding(requireContext(), restructureText)
         binding.anxietyResructureRecyclerView.adapter = restructureAdapter
     }
 
