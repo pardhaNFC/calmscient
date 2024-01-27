@@ -9,20 +9,17 @@
     android:layout_marginBottom="@dimen/dp_8"
     android:orientation="vertical">
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_1sdp"
-        android:layout_marginTop="@dimen/_5sdp"
         app:cardCornerRadius="@dimen/_8sdp"
-        app:cardElevation="40dp">
-
+        android:layout_marginBottom="@dimen/_5sdp">
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/btn_reviewItem"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/button_background_rectangle"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:fontFamily="@font/lexendregular"
             android:gravity="start|center_vertical"
             android:text="@string/anxiety_biased_card_catas"

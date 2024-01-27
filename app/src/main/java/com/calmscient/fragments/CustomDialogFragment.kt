@@ -20,36 +20,12 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.calmscient.R
 
 class CustomDialogFragment(context: Context, private val message: String) : Dialog(context) {
-    /*override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.adapter_review_dialog, container, false)
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val title = view.findViewById<TextView>(R.id.tvReviewInfo)
-        val closeBtn = view.findViewById<ImageView>(R.id.closeButton)
-
-        // Set title, content, and button click listener
-        title.text = "Dialog Title"
-
-        closeBtn.setOnClickListener {
-            // Handle button click
-            dismiss()
-        }
-    }
-
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return super.onCreateDialog(savedInstanceState)
-    }*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -60,21 +36,21 @@ class CustomDialogFragment(context: Context, private val message: String) : Dial
         val closeBtn = findViewById<ImageView>(R.id.closeButton)
         title.text = message
         //tvInfo.text = info
-        if(message.contains("All or nothing (black and white) thinking")){
+        if (message.contains("All or nothing (black and white) thinking")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_one)
-        }else if(message.contains("Catastrophizing")){
+        } else if (message.contains("Catastrophizing")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_two)
-        }else if(message.contains("Perfectionist thinking")){
+        } else if (message.contains("Perfectionist thinking")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_three)
-        }else if(message.contains("Negative (mental) filtering")){
+        } else if (message.contains("Negative (mental) filtering")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_four)
-        }else if(message.contains("Personalization and blame")){
+        } else if (message.contains("Personalization and blame")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_five)
-        }else if(message.contains("Jumping to conclusions")){
+        } else if (message.contains("Jumping to conclusions")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_six)
-        }else if(message.contains("Making negative assumptions")){
+        } else if (message.contains("Making negative assumptions")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_seven)
-        }else if(message.contains("Emotional reasoning (“fear talk”)")){
+        } else if (message.contains("Emotional reasoning (“fear talk”)")) {
             tvInfo.text = context.getString(R.string.anxiety_review_think_eight)
         }
 

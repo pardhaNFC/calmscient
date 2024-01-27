@@ -1793,4 +1793,42 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="if_your_rating_has_remained_at_four_or_five_try_this">If your rating has remained at four or five, try this exercise again. The goal is to reach a rating of one. If you find it hard to reach a lower rating, try applying it to different scenarios and situations until you learn to step away from biased thinking. If you are still having a hard time modifying your thinking, you might ask someone you trust to help you through this exercise.</string>
     <string name="it_s_important_to_keep_practicing_using_this_format">It’s important to keep practicing using this format because you don’t always realize when you’re using biased thinking in your day-to-day life. The more you practice, the more you’ll be aware of it, and the easier it will be to catch and modify it as you face daily circumstances.</string>
     <string name="you_ll_also_start_recognizing_biased_thinking_in_other_people"><![CDATA[You’ll also start recognizing biased thinking in other people.\n There will be times when people communicate with you using their own biased thinking, which you might believe to be the definite truth.  Many times, someone else’s biased thinking may trigger your own.  If you can master the ability to recognize it, you’ll not only avoid unhelpful behavior, but you may also help others think and act in more positive and productive ways.]]></string>
+
+    //expand adapter restructed
+    <string name="all_summary_title">All or nothing</string>
+    <string name="all_summary">Why isn’t the idea of "setting up a fixed standard of how you do things" realistic?
+        \n
+        \nExample:
+        \n
+        \nMost tasks can’t be measured as just "good" or "bad" (there is a measure of progress).
+        \n
+        \nEven if I try hard, other factors can affect my performance (e.g., difficult clients, exams harder than usual, unfavorable weather). \n\nThere were times when others commended me for a job well done, but I felt I could’ve done better.</string>
+    <string name="Catastrophizing_summary">Why isn\'t the idea of \“the worst possible outcome will occur if one thing fails\” realistic?\n\nExample:\n\nMost of the things that people worry about never actually happen.\n\nSuccessful people also experience setbacks \n(ex. failing in exam), but they still manage to find a way to be successful. (ex. finding a job)\n\nSometimes it\'s the \“fear\” that social media or others create, but it\'s up to me to believe it or not.</string>
+
+    <string name="Personalization_summary">Why isn’t the idea of &quot;believing your responsible for things that are outside of your control&quot; realistic?\n\nExample:\n\n
+        We all tend to think of ourselves and forget the other persons needs and circumstances without bad intention.\n\n
+        Humans are limited with control (no one has enough power to control unpleasant situations), therefore it’s not necessary "I" failed in fixing it.\n\n
+        People have their own feelings and needs so what I think should be their needs can be different from what they actually need. They are held accountable to figure it out for themselves.\n\n
+        There may be a reason that I don’t know explaining why people didn’t include me, but it doesn’t mean they intentionally excluded me.\n\n
+        There are other factors involved in other people’s behaviors besides me.\n
+        </string>
+    <string name="Jumping_summary">Why isn’t the idea of “jumping to conclusions with little to no facts” realistic?\n\nExample:\n\n
+        Many times, my “worries” make me jump to conclusions because I don’t want to get hurt.\n\n
+        Just because it happened once before, it’s not reasonable to assume it will always be that way. (ex. people cheating, rejection, lies etc.)\n\n
+        Telling myself the worst-case scenario or being judgmental is not really a kind way of protecting myself, rather it will take me to a twisted way of viewing people, situations, and the world.\n
+        </string>
+    <string name="Making_summary">Why isn’t the idea of “writing a negative script in your mind” why isn\’t it realistic?\n\n Example:\n\n
+        Many times, this occurs because people grow up in a family where honest communication rarely existed and I was unable to express my honest feelings. But it’s not fair to assume that everyone grew up the same way I did.\n\n
+        If I have the right support, there is always a way to resolve negative situations, therefore I don’t have to be overly worried about what’s going to happen.\n\n
+        There were times I really thought that a certain thing would occur, but in the end, it turned out completely different or it never happened.\n
+        </string>
+    <string name="Emotional_summary">Why isn’t the idea of “emotional reasoning based on your strong fears” realistic?\n\nExample:\n\n
+        Many times, “worries” make me jump to conclusions because I don’t want to get hurt.\n\n
+        Just because it happened once before, it’s not reasonable to assume it will always be that way. (ex. people cheating, rejection, lies etc.)\n\n
+        Telling myself the worst-case scenario or being judgmental is not really a kind way of protecting myself, rather it will take me to a twisted way of viewing people, situations, and the world.\n
+        </string>
+    <string name="Perfectionist_summary">Why isn’t the idea of “expect to perform at the highest level” realistic?\n\nExample:\n\nIn reality, being perfect is not the way to get what I need; appreciation, love, approval.\n\nIt\'s possible to grow and mature, but it\'s impossible to become perfect.\n\nJust because it didn\'t turn out the way I wanted to, it\'s not all bad.\nIt\'s my internal voice telling me to set a high standard, no one is expecting it from me.\n\nIf I overly focus on the result, I would be dismissing the efforts and enjoyment in process.</string>
+    <string name="Negative_summary">Why isn’t the idea of “excessively dwelling on the negative aspects” realistic?\n\nExample:\n\nWe are all imperfect and there is no one who never makes a mistake.\n\nIt\'s up to me to learn from my mistakes or let them bring me down. It depends on how I look at it.\n\nIt\'s my critical mind that is focusing on the negatives and in reality, the actual experiences are not all negative.</string>
+
+
 </resources>

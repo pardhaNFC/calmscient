@@ -61,7 +61,8 @@ class AnxietyRestructureBiased : Fragment() {
             view.findViewById(R.id.step8Indicator),
             view.findViewById(R.id.step9Indicator),
             view.findViewById(R.id.step10Indicator),
-            view.findViewById(R.id.step11Indicator)
+            view.findViewById(R.id.step11Indicator),
+            view.findViewById(R.id.step12Indicator)
         )
         setupNavigation()
         initializeAdapter()

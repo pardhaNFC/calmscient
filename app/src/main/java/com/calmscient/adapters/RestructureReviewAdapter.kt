@@ -15,7 +15,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ScrollView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatTextView
@@ -46,10 +49,48 @@ class RestructureReviewAdapter(val context: Context, private val items: List<Rev
         holder.btnItem.text = item.text
         holder.llItem.setOnClickListener {
             //Toast.makeText(context, "Clicked" + item.text, Toast.LENGTH_SHORT).show()
-            showCustomDialog(context,item.text)
+            //showCustomDialog(context,item.text)
+            showInformationDialog(context,item.text)
         }
     }
+    private fun showInformationDialog(context:Context,message: String) {
+        val dialogView =
+            LayoutInflater.from(context).inflate(R.layout.adapter_review_dialog, null)
+        val title = dialogView.findViewById<TextView>(R.id.titleTextDialog)
+        val tvInfo = dialogView.findViewById<TextView>(R.id.tvReviewInfo)
+        val closeBtn = dialogView.findViewById<ImageView>(R.id.closeButton)
 
+        title.text = message
+        if (message.contains("All or nothing (black and white) thinking")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_one)
+        } else if (message.contains("Catastrophizing")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_two)
+        } else if (message.contains("Perfectionist thinking")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_three)
+        } else if (message.contains("Negative (mental) filtering")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_four)
+        } else if (message.contains("Personalization and blame")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_five)
+        } else if (message.contains("Jumping to conclusions")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_six)
+        } else if (message.contains("Making negative assumptions")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_seven)
+        } else if (message.contains("Emotional reasoning (“fear talk”)")) {
+            tvInfo.text = context.getString(R.string.anxiety_review_think_eight)
+        }
+        val dialogBuilder = context?.let {
+            AlertDialog.Builder(it, R.style.CustomDialog)
+                .setView(dialogView)
+        }
+
+        val dialog = dialogBuilder?.create()
+        dialog?.show()
+
+        // Handle the close button click
+        closeBtn.setOnClickListener {
+            dialog?.dismiss()
+        }
+    }
     inner class TaskViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
         val btnItem = itemView.findViewById<AppCompatTextView>(R.id.btn_reviewItem)

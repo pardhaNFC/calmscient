@@ -34,7 +34,7 @@ class ExpandFiveRestructureAdapter(private val allTasks: MutableList<Task>) :
         parent: ViewGroup,
         viewType: Int
     ): ExpandFiveRestructureAdapter.TaskViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.layout_item_glossary, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.layout_expand_adapter, parent, false)
         return TaskViewHolder(itemView)
     }
 

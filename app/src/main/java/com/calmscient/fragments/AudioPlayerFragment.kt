@@ -72,13 +72,13 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
             if (description == getString(R.string.meet_nora_austin)) {
                 binding.audioScrollView.visibility = View.VISIBLE
             }
-            if (description == getString(R.string.anxiety_worry)  ) {
+            if (description == getString(R.string.anxiety_worry)) {
                 binding.layoutBulb.visibility = View.VISIBLE
                 binding.audioWorryTextView.text = getString(R.string.anxiety_audio_worry_text1)
                 binding.worryScrollView.visibility = View.VISIBLE
-            }else if(description == getString(R.string.moral_deficiency)){
+            } else if (description == getString(R.string.moral_deficiency)) {
                 binding.layoutBulb.visibility = View.VISIBLE
-            }else if(description == getString(R.string.anxious_mind)){
+            } else if (description == getString(R.string.anxious_mind)) {
                 binding.layoutBulb.visibility = View.VISIBLE
                 binding.layoutCalmingText.visibility = View.VISIBLE
             }
@@ -270,18 +270,12 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
     private fun showInformationDialog() {
         val dialogView =
             LayoutInflater.from(context).inflate(R.layout.audio_information_dialog, null)
-        //  val infoTextView = dialogView.findViewById<TextView>(R.id.dialogTextView)
         val closeButton = dialogView.findViewById<ImageView>(R.id.closeButton)
         val titleTextView = dialogView.findViewById<TextView>(R.id.titleTextView)
         val messageTextView = dialogView.findViewById<TextView>(R.id.tvInfo)
         val infoScroll = dialogView.findViewById<ScrollView>(R.id.scrollView)
         val calmLinearLayout = dialogView.findViewById<LinearLayout>(R.id.layoutCalm)
 
-        /*  // Retrieve the dialogText from intent extras
-          val dialogText = intent.getStringExtra("dialogText")
-
-          // Set the content of the dialog using dialogText
-          infoTextView.text = dialogText*/
         titleTextView.text = getString(R.string.information)
         if (description == getString(R.string.meet_nora_austin)) {
             infoScroll.visibility = View.VISIBLE
@@ -296,7 +290,7 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
             infoScroll.visibility = View.GONE
             calmLinearLayout.visibility = View.VISIBLE
             messageTextView.text = getString(R.string.information_moral)
-        }else if(description == getString(R.string.anxious_mind)){
+        } else if (description == getString(R.string.anxious_mind)) {
             infoScroll.visibility = View.GONE
             calmLinearLayout.visibility = View.VISIBLE
             messageTextView.text = getString(R.string.information_anxious_mind)

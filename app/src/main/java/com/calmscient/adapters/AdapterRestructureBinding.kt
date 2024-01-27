@@ -51,7 +51,7 @@ class AdapterRestructureBinding(
     val VIEW_TYPE_TYPE_K: Int = 11
 
     private val taskWorkData = mutableListOf<Task>()
-    val expandAdapter = ExpandFiveRestructureAdapter(mutableListOf())
+    var expandAdapter = ExpandFiveRestructureAdapter(mutableListOf())
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -369,12 +369,11 @@ class AdapterRestructureBinding(
 
             is TypeViewHolderScreenFiveExpand -> {
                 holder.bind(items[position])
-
-                val innerAdapter = ExpandFiveRestructureAdapter(mutableListOf())
-                holder.expandRecyclerview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-                holder.expandRecyclerview.adapter = innerAdapter
                 addTaskData()
-                expandAdapter.updateTasks(taskWorkData)
+                holder.expandRecyclerview.layoutManager =
+                    LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                expandAdapter = ExpandFiveRestructureAdapter(taskWorkData)
+                holder.expandRecyclerview.adapter = expandAdapter
             }
         }
     }
@@ -391,60 +390,46 @@ class AdapterRestructureBinding(
         val tasks = listOf(
             Task(
                 "A",
-                context.getString(R.string.adrenaline),
-                context.getString(R.string.adrenaline_summary)
-            ),
-            Task(
-                "B",
-                context.getString(R.string.anxiety_attack),
-                context.getString(R.string.anxiety_attack_summary)
+                context.getString(R.string.all_summary_title),
+                context.getString(R.string.all_summary)
             ),
             Task(
                 "C",
-                context.getString(R.string.automatic_thinking),
-                context.getString(R.string.automatic_thinking_summary)
-            ),
-
-            Task(
-                "D",
-                context.getString(R.string.biased_thinking),
-                context.getString(R.string.biased_thinking_summary)
+                context.getString(R.string.anxiety_biased_card_catas),
+                context.getString(R.string.Catastrophizing_summary)
             ),
             Task(
                 "E",
-                context.getString(R.string.cortisol),
-                context.getString(R.string.cortisol_summary)
-            ),
-            Task(
-                "F",
-                context.getString(R.string.cognitive_distortion),
-                context.getString(R.string.cognitive_distortion_summary),
-            ),
-            Task(
-                "G",
-                context.getString(R.string.competency),
-                context.getString(R.string.competency_summary)
-            ),
-            Task(
-                "H",
-                context.getString(R.string.compulsive_behaviour),
-                context.getString(R.string.compulsive_behaviour_summary),
-            ),
-            Task(
-                "I",
-                context.getString(R.string.Dependency),
-                context.getString(R.string.Dependency_summary)
+                context.getString(R.string.anxiety_biased_card_emotional),
+                context.getString(R.string.Emotional_summary),
             ),
             Task(
                 "J",
-                context.getString(R.string.gaba),
-                context.getString(R.string.gaba_summary)
+                context.getString(R.string.anxiety_biased_card_jumping),
+                context.getString(R.string.Jumping_summary)
             ),
             Task(
-                "K",
-                context.getString(R.string.hyperventilation),
-                context.getString(R.string.hyper_summary),
-            )
+                "M",
+                context.getString(R.string.anxiety_biased_card_making),
+                context.getString(R.string.Making_summary)
+            ),
+            Task(
+                "N",
+                context.getString(R.string.anxiety_biased_card_negative),
+                context.getString(R.string.Negative_summary)
+            ),
+            Task(
+                "P",
+                context.getString(R.string.anxiety_biased_card_perfect),
+                context.getString(R.string.Perfectionist_summary)
+            ),
+
+            Task(
+                "P",
+                context.getString(R.string.anxiety_biased_card_personalizeBlame),
+                context.getString(R.string.Personalization_summary)
+            ),
+
         )
         taskWorkData.addAll(tasks)
         expandAdapter.notifyDataSetChanged()
