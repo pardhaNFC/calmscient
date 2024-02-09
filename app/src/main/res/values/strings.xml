@@ -1622,7 +1622,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 2.7</string>
+    <string name="version">Version 2.8</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
@@ -1829,6 +1829,93 @@ The most important thing is to do it! Do you have some time today to get started
         </string>
     <string name="Perfectionist_summary">Why isn’t the idea of “expect to perform at the highest level” realistic?\n\nExample:\n\nIn reality, being perfect is not the way to get what I need; appreciation, love, approval.\n\nIt\'s possible to grow and mature, but it\'s impossible to become perfect.\n\nJust because it didn\'t turn out the way I wanted to, it\'s not all bad.\nIt\'s my internal voice telling me to set a high standard, no one is expecting it from me.\n\nIf I overly focus on the result, I would be dismissing the efforts and enjoyment in process.</string>
     <string name="Negative_summary">Why isn’t the idea of “excessively dwelling on the negative aspects” realistic?\n\nExample:\n\nWe are all imperfect and there is no one who never makes a mistake.\n\nIt\'s up to me to learn from my mistakes or let them bring me down. It depends on how I look at it.\n\nIt\'s my critical mind that is focusing on the negatives and in reality, the actual experiences are not all negative.</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- lesson 6.3-->
+    <string name="now_that_we_ve_discussed_what_biased_thinking">Now that we’ve discussed what biased thinking is, let’s connect the dots! How exactly does biased thinking affect the way we feel, which in turn affects the way we behave?\n\n Listen to the tale of “The north wind and the sun”:</string>
+    <string name="let_s_imagine_that_the_north_wind_represents_biased">Let’s imagine that the north wind represents biased thinking and that the sun represents self-compassion.</string>
+    <string name="which_one_do_you_think_is_most_effective_in_guiding_our_behavior">Which one do you think is most effective in guiding our behavior?</string>
+    <string name="biased_thinking_can_be_logical_and_true_but">Biased thinking can be logical and true, but when it becomes too rigid and lacking in self-compassion, the result is defensive behavior, just like the traveler.</string>
+    <string name="read_the_following_thoughts_from_nora_and_melanie">Read the following thoughts from Nora and Melanie, and see if you can identify how biased thinking skews their ability to evaluate their respective situations clearly:</string>
+    <string name="i_was_in_a_pretty_intense_work_environment_having_to_meet">“I was in a pretty intense work environment, having to meet monthly goals. When I started making up bunch of internal rules and standards in my mind and talking to myself like a judgmental friend my anxiety spiked. I began to feel inadequate and I quit”</string>
+    <string name="which_biased_thinkings_does_she_have">1. Which biased thinkings does she have?</string>
+    <string name="all_or_nothing_thinking">All or nothing thinking</string>
+    <string name="perfectionism_thinking">Perfectionism thinking</string>
+    <string name="making_negative_assumptions">Making negative assumptions</string>
+    <string name="how_has_her_biased_thinking_triggered_her_emotion">2. How has her biased thinking triggered her emotion?</string>
+    <string name="sad">Sad</string>
+    <string name="anxiety_makingconnection">Anxiety</string>
+    <string name="inadequacy">Inadequacy</string>
+    <string name="anger">Anger</string>
+    <string name="that_s_right">That\'s right!</string>
+    <string name="let_s_try_again">Let\'s try again</string>
+    <string name="i_was_in_a_pretty_intense_work_environment_having_to_meet_monthly">“I was in a pretty intense work environment, having to meet monthly goals. When I started making up bunch of internal rules and standards in my mind and talking to myself like a judgmental friend my anxiety spiked. I began to feel inadequate and I quit”</string>
+    <string name="i_always_thought_that_if_i_stay_positive_everything">“I always thought that if I stay positive, everything will be fine and that it’s my job to make everyone happy. I have to admit there were plenty of moments that I was driven by fear and anxiety to make everyone happy, and I overscheduled myself. It got me into an ‘overdrive-crash’ lifestyle cycle”</string>
+    <string name="personalization_and_blame">Personalization and blame</string>
+    <string name="fear">Fear</string>
+    <string name="it_s_important_to_understand_the_role_that_biased_thinking_plays_in_excessive">It’s important to understand the role that biased thinking plays in excessive, irrational worry and persistent anxiety. Biased thinking can happen to any of us! The goal is to catch ourselves and modify our thinking before it starts to create intense anxiety.\n\n Let’s do an exercise that will help you fine tune your ability to make the connection between your thoughts and feelings and your actions. Check which reactions you most identify with.</string>
+    <string name="scenario_1">Scenario 1</string>
+    <string name="you_came_to_work_on_monday_and_unexpectedly_found_troubling_emails_from_clients">You came to work on Monday and unexpectedly found troubling emails from clients.</string>
+    <string name="i_might_think_biased_thinking">I might think (biased thinking):</string>
+    <string name="there_is_no_way_i_can_resolve_it_by_the_end_of_the_day_i_ve_already_failed">Negative assumptions: \n “There is no way I can resolve it by the end of the day. I’ve already failed.”</string>
+    <string name="they_are_upset_and_i_m_in_trouble">Jumping to conclusions: \n “They are upset and I’m in trouble.”</string>
+    <string name="_i_need_to_think_every_single_mistakes_i_possible_made">Perfectionism:\n “I need to think every single mistakes I possible made to cause this trouble first, otherwise I can’t respond back to them”</string>
+    <string name="if_i_don_t_get_back_to_them_today_i_ll_lose_my_clients_and_will_be_in_trouble_with_my_boss">Catastrophizing:\n “If I don’t get back to them today, I’ll lose my clients and will be in trouble with my boss.”</string>
+    <string name="i_might_feel">I might feel:</string>
+    <string name="incompetent">Incompetent</string>
+    <string name="disappointed">Disappointed</string>
+    <string name="shame">Shame</string>
+    <string name="fear_afraid_of_challenges_and_failing">Fear (afraid of challenges and failing)</string>
+    <string name="nervous">Nervous</string>
+    <string name="pressure">Pressure</string>
+    <string name="overwhelmed">Overwhelmed</string>
+    <string name="agitated">Agitated</string>
+    <string name="frustrated">Frustrated</string>
+    <string name="angry">Angry</string>
+    <string name="judgmental">Judgmental</string>
+    <string name="hopeless_helpless">Hopeless/Helpless</string>
+    <string name="bad_mood">Bad mood</string>
+    <string name="numb">Numb</string>
+    <string name="depressed">Depressed</string>
+    <string name="i_might_behavior">I might (behavior):</string>
+    <string name="use_the_phrases_should_have_to_and_must_are_running_through_my_mind">..use the phrases “should”, “have to” and “must” are running through my mind</string>
+    <string name="procrastinate_in_responding_to_emails">..procrastinate in responding to emails</string>
+    <string name="skip_taking_a_break_and_lunch_and_not_talk_to_anyone_at_work_all_day">..skip taking a break and lunch and not talk to anyone at work all day</string>
+    <string name="have_a_panic_attack">..have a panic attack</string>
+    <string name="get_discouraged_before_even_trying">..get discouraged before even trying</string>
+    <string name="have_negative_thoughts_and_beliefs_that_snowball">..have negative thoughts and beliefs that snowball and spiral, and there will be no room to change it</string>
+    <string name="forecast_what_s_going_to_happen_and_make_decisions_based_on_it">..forecast what’s going to happen and make decisions based on it</string>
+    <string name="have_lots_of_negative_and_fear_talk">..have lots of negative and fear talk</string>
+    <string name="overly_generalize_matters_i_ll_never_get_better_it_s_always_like_this">..overly generalize matters: “I’ll never get better”, “It’s always like this”...</string>
+    <string name="isolate_myself_or_shut_down_feeling_hopeless_because">..isolate myself or shut down, feeling hopeless because I have no way to avoid the idea of worst-case scenario</string>
+    <string name="there_is_no_right_or_wrong_answers">There is no right or wrong answers.\nThis exercise help connect\nthe thinking with the action.</string>
+    <string name="you_came_to_a_party_and_started_to_get_overwhelmed_because_very_few_people_interacted_with_you">You came to a party and started to get overwhelmed because very few people interacted with you.</string>
+    <string name="scenario_2">Scenario 2</string>
+    <string name="it_was_a_bad_idea_to_come_to_this_party">All or nothing:\n “It was a bad idea to come to this party.”</string>
+    <string name="i_ve_been_rejected_i_might_have_done_or_said_something_bad">Fear talk: \n “I’ve been rejected. I might have done or said something bad.”</string>
+    <string name="i_m_boring_and_no_one_wants_to_talk_to_me">Negative filtering:\n “I’m boring and no one wants to talk to me.”</string>
+    <string name="they_didn_t_really_come_talk_to_me_they_didn_t_want">Personalization and blame: \n “They didn’t really come talk to me. They didn’t want me to come (maybe I’m not fun enough).”</string>
+    <string name="try_to_excessively_fix_situations_or_relationships">...try to excessively fix situations or relationships</string>
+    <string name="ruminate_over_things_i_said_or_did_wrong">...ruminate over things I said or did wrong</string>
+    <string name="feel_insecure_and_inadequate_in_that_social_setting">...feel insecure and inadequate in that social setting. I will be afraid of making mistakes in public.</string>
+    <string name="have_difficulty_receiving_constructive_criticism_or_feedback">...have difficulty receiving constructive criticism or feedback because I will dwell on the negative side of it and dismiss the positives</string>
+    <string name="try_to_excessively_help_out_or_talk_to_entertain_friends">Try to excessively help out or talk to entertain friends</string>
+    <string name="excessively_observe_people_s_facial_expressions_behaviors_and_reaction_to_read_their_mind">Excessively observe people\'s facial expressions, behaviors and reaction to read their mind</string>
+    <string name="leave_the_party_right_away">Leave the party right away</string>
+    <string name="all_or_nothing">All or nothing</string>
+    <string name="emotions">Emotions:</string>
+    <string name="behaviors">Behaviors:</string>
+    <string name="quitting_work">Quitting work</string>
+    <string name="this_is_your_report_tittle_biased_thinkings">This is your report \nTittle: Biased thinkings</string>
+    <string name="thoughts">Thoughts:</string>
+    <string name="perfectionism">Perfectionism</string>
+    <string name="were_any_of_these_reactions_familiar_to_you">Were any of these reactions familiar to you?</string>
+    <string name="learning_to_identify_them_early_o_will_help_you_avoid">Learning to identify them early o will help you avoid the trap of biases thinking! But what can you do about it once you’ve identified it ?</string>
+    <string name="rigid_biased_thinkings">Rigid biased thinkings</string>
+    <string name="fear_talk">Fear talk</string>
+    <string name="painful_emotions">Painful emotions</string>
+    <string name="unhelpful_coping_skills_behaviors">Unhelpful coping skills/behaviors</string>
+    <string name="trigger">Trigger</string>
+    <string name="motivates">motivates</string>
 
 </resources>

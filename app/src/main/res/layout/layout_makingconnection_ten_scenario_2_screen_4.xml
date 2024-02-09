@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollCardsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scenario1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/purple_100"
+                android:text="@string/scenario_2"
+                android:gravity="center"
+                android:fontFamily="@font/lexendsemibold"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/scenario_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scenario_2"
+                app:layout_constraintTop_toBottomOf="@+id/scenario1_tv"/>
+
+            <TextView
+                android:id="@+id/tv_question1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendsemibold"
+                android:text="@string/i_might_behavior"
+                android:textAllCaps="false"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@+id/scenario_image"/>
+            <LinearLayout
+                android:id="@+id/optionsLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_question1">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/try_to_excessively_fix_situations_or_relationships"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/ruminate_over_things_i_said_or_did_wrong"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/feel_insecure_and_inadequate_in_that_social_setting"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/have_difficulty_receiving_constructive_criticism_or_feedback"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/try_to_excessively_help_out_or_talk_to_entertain_friends"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/excessively_observe_people_s_facial_expressions_behaviors_and_reaction_to_read_their_mind"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <CheckBox
+                        android:id="@+id/option_1_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:buttonTint="@color/purple_100"
+                        android:text="@string/leave_the_party_right_away"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

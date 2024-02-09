@@ -44,6 +44,7 @@ import com.calmscient.fragments.AnxietyRestructureBiased
 import com.calmscient.fragments.AudioPlayerFragment
 import com.calmscient.fragments.FastPaceFragment
 import com.calmscient.fragments.MakeAPlanFragment
+import com.calmscient.fragments.MakingConnectionFragment
 import com.calmscient.fragments.PlayerFragment
 import com.calmscient.fragments.PostponeWorryFirstScreen
 import com.calmscient.fragments.RecognizeFragment
@@ -162,7 +163,22 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     cardItem.dialogText,
                                     AudioPlayerFragment()
                                 )
-                            } else {
+                            }else if(cardItem.description == context.getString(R.string.
+                                making_connection
+                                )){
+                                replaceFragmentWithPlayerFragment(
+                                    fragmentManager,
+                                    null,
+                                    cardItem.audioResourceId,
+                                    null,
+                                    cardItem.description,
+                                    null,
+                                    null,
+                                    MakingConnectionFragment()
+                                )
+                            }
+
+                            else {
                                 Toast.makeText(context, "Comming soon", Toast.LENGTH_SHORT).show()
                             }
                         } else {

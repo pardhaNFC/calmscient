@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollCardsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@dimen/_10sdp"
+           android:orientation="vertical">
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_audio_dialog_nora"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:text="@string/biased_thinking"
+               android:textSize="@dimen/_12sdp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/lexendsemibold"/>
+
+           <androidx.cardview.widget.CardView
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_40sdp"
+               android:layout_marginHorizontal="@dimen/_14sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:clipChildren="false"
+               android:clipToPadding="false"
+               android:divider="@android:color/transparent"
+               android:dividerHeight="0.0px"
+               app:cardCornerRadius="@dimen/_3sdp"
+               app:cardElevation="10dp"
+               app:cardPreventCornerOverlap="false">
+
+
+               <TextView
+                   android:id="@+id/optionOne"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="@font/lexendlight"
+                   android:gravity="center"
+                   android:text="@string/all_or_nothing_thinking"
+                   android:textColor="@color/black_head"
+                   android:textSize="@dimen/_12sdp" />
+
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_40sdp"
+               android:layout_marginHorizontal="@dimen/_14sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:clipChildren="false"
+               android:clipToPadding="false"
+               android:divider="@android:color/transparent"
+               android:dividerHeight="0.0px"
+               app:cardCornerRadius="@dimen/_3sdp"
+               app:cardElevation="10dp"
+               app:cardPreventCornerOverlap="false">
+
+
+               <TextView
+                   android:id="@+id/optiontwo"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="@font/lexendlight"
+                   android:gravity="center"
+                   android:textColor="@color/black_head"
+                   android:text="@string/perfectionist_thinking"
+                   android:textSize="@dimen/_12sdp" />
+
+           </androidx.cardview.widget.CardView>
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:src="@drawable/down_arrow"
+               android:layout_marginTop="@dimen/_12sdp"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:text="@string/emotions"
+               android:textSize="@dimen/_12sdp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/lexendsemibold"/>
+
+           <androidx.cardview.widget.CardView
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_40sdp"
+               android:layout_marginHorizontal="@dimen/_14sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:clipChildren="false"
+               android:clipToPadding="false"
+               android:divider="@android:color/transparent"
+               android:dividerHeight="0.0px"
+               app:cardCornerRadius="@dimen/_3sdp"
+               app:cardElevation="10dp"
+               app:cardPreventCornerOverlap="false">
+
+
+               <TextView
+                   android:id="@+id/optionOne_emotions"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="@font/lexendlight"
+                   android:gravity="center"
+                   android:text="@string/inadequacy"
+                   android:textColor="@color/black_head"
+                   android:textSize="@dimen/_12sdp" />
+
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_40sdp"
+               android:layout_marginHorizontal="@dimen/_14sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:clipChildren="false"
+               android:clipToPadding="false"
+               android:divider="@android:color/transparent"
+               android:dividerHeight="0.0px"
+               app:cardCornerRadius="@dimen/_3sdp"
+               app:cardElevation="10dp"
+               app:cardPreventCornerOverlap="false">
+
+
+               <TextView
+                   android:id="@+id/optiontwo_emotions"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="@font/lexendlight"
+                   android:gravity="center"
+                   android:text="@string/anxiety_makingconnection"
+                   android:textColor="@color/black_head"
+                   android:textSize="@dimen/_12sdp" />
+
+           </androidx.cardview.widget.CardView>
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:src="@drawable/down_arrow"
+               android:layout_marginTop="@dimen/_12sdp"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:text="@string/behaviors"
+               android:textSize="@dimen/_12sdp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/lexendsemibold"/>
+
+           <androidx.cardview.widget.CardView
+               xmlns:app="http://schemas.android.com/apk/res-auto"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_40sdp"
+               android:layout_marginHorizontal="@dimen/_14sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               android:clipChildren="false"
+               android:clipToPadding="false"
+               android:layout_marginBottom="@dimen/_10sdp"
+               android:divider="@android:color/transparent"
+               android:dividerHeight="0.0px"
+               app:cardCornerRadius="@dimen/_3sdp"
+               app:cardElevation="10dp"
+               app:cardPreventCornerOverlap="false">
+
+
+               <TextView
+                   android:id="@+id/optionOne_behaviors"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="@font/lexendlight"
+                   android:gravity="center"
+                   android:text="@string/quitting_work"
+                   android:textColor="@color/black_head"
+                   android:textSize="@dimen/_12sdp" />
+
+           </androidx.cardview.widget.CardView>
+
+
+       </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

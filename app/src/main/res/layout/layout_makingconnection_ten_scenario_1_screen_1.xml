@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/scenario1_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/purple_100"
+        android:text="@string/scenario_1"
+        android:gravity="center"
+        android:fontFamily="@font/lexendsemibold"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/you_came_to_work_on_monday_and_unexpectedly_found_troubling_emails_from_clients"
+        android:textAllCaps="false"
+        android:fontFamily="@font/lexendlight"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@+id/scenario1_tv"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scenario_1"
+        app:layout_constraintTop_toBottomOf="@+id/text"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
