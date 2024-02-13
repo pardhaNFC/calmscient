@@ -37,8 +37,6 @@ class MakingConnectionFragment : Fragment() {
     private lateinit var stepIndicators: List<ImageView>
     private val restructureText = mutableListOf<MakingConnectionDataClass>()
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

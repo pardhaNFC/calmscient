@@ -180,7 +180,61 @@ class AdapterRestructureBinding(
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }*/
-        val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
+        //val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
+
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.optionOne),
+                itemView.findViewById(R.id.optionTwo),
+                itemView.findViewById(R.id.optionThree),
+                itemView.findViewById(R.id.optionFour),
+                itemView.findViewById(R.id.optionFive),
+                itemView.findViewById(R.id.optionSix),
+                itemView.findViewById(R.id.optionSeven),
+                itemView.findViewById(R.id.optionEight),
+                itemView.findViewById(R.id.optionNine),
+                itemView.findViewById(R.id.optionTen),
+                itemView.findViewById(R.id.optionEleven)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
     }
 
     class TypeViewHolderScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
