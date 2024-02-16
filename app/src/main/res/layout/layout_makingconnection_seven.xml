@@ -66,71 +66,103 @@
                 android:layout_height="wrap_content">
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_1_1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/jumping_to_conclusion"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_1_2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/perfectionism_thinking"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_1_3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/personalization_and_blame"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_1_4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/negative_filtering"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
@@ -154,71 +186,103 @@
                 android:layout_height="wrap_content">
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_2_1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/anger"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_2_2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/fear"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_2_3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/anxiety_makingconnection"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_8sdp"
-                    app:cardCornerRadius="4dp">
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardPreventCornerOverlap="false">
 
-                    <CheckBox
+
+                    <TextView
                         android:id="@+id/option_2_4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="center"
                         android:text="@string/sad"
                         android:textSize="@dimen/_12sdp" />
+
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>

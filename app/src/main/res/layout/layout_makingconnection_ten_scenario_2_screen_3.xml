@@ -61,11 +61,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -78,11 +77,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -95,11 +93,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -112,11 +109,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -129,11 +125,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -146,11 +141,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -164,11 +158,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -181,11 +174,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -198,11 +190,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -215,11 +206,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -232,11 +222,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -249,11 +238,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -266,11 +254,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -283,11 +270,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -300,11 +286,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -317,11 +302,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -334,11 +318,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -351,22 +334,17 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
                         android:text="@string/depressed"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
-
-
-
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

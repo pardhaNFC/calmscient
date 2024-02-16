@@ -12,11 +12,13 @@
 package com.calmscient.adapters
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
@@ -170,6 +172,7 @@ class MakingConnectionAdapter (
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }
+        val playPauseButton : ImageView = itemView.findViewById(R.id.playButton)
     }
     class TypeViewHolderTwo(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: MakingConnectionDataClass) {
@@ -198,10 +201,67 @@ class MakingConnectionAdapter (
 
 
         }
-        val checkboxText1: CheckBox = itemView.findViewById(R.id.option_1_1)
-        val checkboxText2: CheckBox = itemView.findViewById(R.id.option_1_2)
+        val text1: TextView = itemView.findViewById(R.id.option_1_1)
+        val text2: TextView = itemView.findViewById(R.id.option_1_2)
+
+        val text_2_1: TextView = itemView.findViewById(R.id.option_2_1)
+        val text_2_2: TextView = itemView.findViewById(R.id.option_2_2)
 
         val savebutton : AppCompatButton = itemView.findViewById(R.id.btn_save_making_connection)
+
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4)
+            ),
+            listOf
+                (
+                itemView.findViewById(R.id.option_2_1),
+                itemView.findViewById(R.id.option_2_2),
+                itemView.findViewById(R.id.option_2_3),
+                itemView.findViewById(R.id.option_2_4)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
 
 
 
@@ -218,8 +278,69 @@ class MakingConnectionAdapter (
 
 
         }
-        val checkboxText1: CheckBox = itemView.findViewById(R.id.option_1_1)
-        val checkboxText2: CheckBox = itemView.findViewById(R.id.option_1_2)
+        val text1: TextView = itemView.findViewById(R.id.option_1_1)
+        val text2: TextView = itemView.findViewById(R.id.option_1_2)
+
+
+
+        val text2_1: TextView = itemView.findViewById(R.id.option_2_1)
+        val text2_2: TextView = itemView.findViewById(R.id.option_2_2)
+
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4)
+            ),
+            listOf
+                (
+                itemView.findViewById(R.id.option_2_1),
+                itemView.findViewById(R.id.option_2_2),
+                itemView.findViewById(R.id.option_2_3),
+                itemView.findViewById(R.id.option_2_4)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
+
+
 
     }
 
@@ -247,11 +368,120 @@ class MakingConnectionAdapter (
 
 
         }
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
+
+
+
     }
     class TypeViewHolderTenTwo(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: MakingConnectionDataClass) {
 
 
+        }
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4),
+                itemView.findViewById(R.id.option_1_5),
+                itemView.findViewById(R.id.option_1_6),
+                itemView.findViewById(R.id.option_1_7),
+                itemView.findViewById(R.id.option_1_8),
+                itemView.findViewById(R.id.option_1_9),
+                itemView.findViewById(R.id.option_1_10),
+                itemView.findViewById(R.id.option_1_11),
+                itemView.findViewById(R.id.option_1_12),
+                itemView.findViewById(R.id.option_1_13),
+                itemView.findViewById(R.id.option_1_14),
+                itemView.findViewById(R.id.option_1_15),
+                itemView.findViewById(R.id.option_1_16),
+                itemView.findViewById(R.id.option_1_17),
+                itemView.findViewById(R.id.option_1_18),
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
         }
     }
     class TypeViewHolderTenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -259,12 +489,68 @@ class MakingConnectionAdapter (
 
 
         }
+
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4),
+                itemView.findViewById(R.id.option_1_5),
+                itemView.findViewById(R.id.option_1_6),
+                itemView.findViewById(R.id.option_1_7),
+                itemView.findViewById(R.id.option_1_8),
+                itemView.findViewById(R.id.option_1_9),
+                itemView.findViewById(R.id.option_1_10)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
     }
     class TypeViewHolderTenFour(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: MakingConnectionDataClass) {
 
 
         }
+        var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
+        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
+
     }
     class TypeViewHolderScenarioTwoScreenOne(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: MakingConnectionDataClass) {
@@ -277,11 +563,118 @@ class MakingConnectionAdapter (
 
 
         }
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4),
+
+                ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
     }
     class TypeViewHolderScenarioTwoScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: MakingConnectionDataClass) {
 
 
+        }
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4),
+                itemView.findViewById(R.id.option_1_5),
+                itemView.findViewById(R.id.option_1_6),
+                itemView.findViewById(R.id.option_1_7),
+                itemView.findViewById(R.id.option_1_8),
+                itemView.findViewById(R.id.option_1_9),
+                itemView.findViewById(R.id.option_1_10),
+                itemView.findViewById(R.id.option_1_11),
+                itemView.findViewById(R.id.option_1_12),
+                itemView.findViewById(R.id.option_1_13),
+                itemView.findViewById(R.id.option_1_14),
+                itemView.findViewById(R.id.option_1_15),
+                itemView.findViewById(R.id.option_1_16),
+                itemView.findViewById(R.id.option_1_17),
+                itemView.findViewById(R.id.option_1_18),
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
         }
     }
     class TypeViewHolderScenarioTwoScreenFour(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -289,63 +682,163 @@ class MakingConnectionAdapter (
 
 
         }
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.option_1_1),
+                itemView.findViewById(R.id.option_1_2),
+                itemView.findViewById(R.id.option_1_3),
+                itemView.findViewById(R.id.option_1_4),
+                itemView.findViewById(R.id.option_1_5),
+                itemView.findViewById(R.id.option_1_6),
+                itemView.findViewById(R.id.option_1_7)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
+        }
+
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
     }
     class TypeViewHolderScenarioTwoScreenFive(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: MakingConnectionDataClass) {
 
 
         }
+        var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
+        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
     }
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is TypeViewHolderA -> {
                 holder.bind(items[position])
+                holder.playPauseButton.setOnClickListener{
+                    Toast.makeText(context, "Audio Not Available", Toast.LENGTH_SHORT).show()
+                }
             }
             is TypeViewHolderFive ->{
                 holder.bind(items[position])
-                holder.checkboxText1.setOnCheckedChangeListener { buttonView, isChecked ->
-                    if (isChecked) {
-                        showPositiveDialog(holder.itemView)
-                    }
+                holder.text1.setOnClickListener{
+
+                    holder.text1.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text1.setTextColor(Color.parseColor("#FFFFFF"))
+                    holder.text2.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text2.setTextColor(Color.parseColor("#424242"))
+                    showPositiveDialog(holder.itemView)
                 }
-                holder.checkboxText2.setOnCheckedChangeListener { buttonView, isChecked ->
-                    if (isChecked) {
-                        showNegativeDialog(holder.itemView)
-                    }
+                holder.text2.setOnClickListener{
+
+
+                    holder.text1.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text1.setTextColor(Color.parseColor("#424242"))
+                    holder.text2.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text2.setTextColor(Color.parseColor("#FFFFFF"))
+                    showNegativeDialog(holder.itemView)
                 }
-                holder.savebutton.setOnClickListener{
-                    Toast.makeText(context, "message", Toast.LENGTH_LONG).show()
 
-//                    val layoutSix = LayoutInflater.from(context).inflate(R.layout.layout_makingconnection_six, null)
-//                    val layoutFive = LayoutInflater.from(context).inflate(R.layout.layout_makingconnection_five, null)
-//                    layoutSix.visibility= View.VISIBLE
-//                    layoutFive.visibility = View.GONE
+                holder.text_2_1.setOnClickListener{
 
-                    // Determine the index of the next screen
-                    val nextScreenIndex = position + 1
-
-                    // Call navigateToQuestion in the fragment passing the index of the next screen
-                    (context as? MakingConnectionFragment)?.navigateToQuestion(nextScreenIndex, true)
-
-
+                    holder.text_2_1.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text_2_1.setTextColor(Color.parseColor("#FFFFFF"))
+                    holder.text_2_2.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text_2_2.setTextColor(Color.parseColor("#424242"))
+                    showPositiveDialog(holder.itemView)
                 }
+                holder.text_2_2.setOnClickListener{
+
+
+                    holder.text_2_1.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text_2_1.setTextColor(Color.parseColor("#424242"))
+                    holder.text_2_2.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text_2_2.setTextColor(Color.parseColor("#FFFFFF"))
+                    showNegativeDialog(holder.itemView)
+                }
+
 
             }
             is TypeViewHolderSeven ->{
                 holder.bind(items[position])
-                holder.checkboxText1.setOnCheckedChangeListener { buttonView, isChecked ->
-                    if (isChecked) {
-                        showPositiveDialog(holder.itemView)
-                    }
-                }
-                holder.checkboxText2.setOnCheckedChangeListener { buttonView, isChecked ->
-                    if (isChecked) {
-                        showNegativeDialog(holder.itemView)
-                    }
-                }
+                holder.bind(items[position])
+                holder.text1.setOnClickListener{
 
+                    holder.text1.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text1.setTextColor(Color.parseColor("#FFFFFF"))
+                    holder.text2.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text2.setTextColor(Color.parseColor("#424242"))
+                    showPositiveDialog(holder.itemView)
+                }
+                holder.text2.setOnClickListener{
+
+                    holder.text1.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text1.setTextColor(Color.parseColor("#424242"))
+                    holder.text2.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text2.setTextColor(Color.parseColor("#FFFFFF"))
+                    showNegativeDialog(holder.itemView)
+                }
+                holder.text2_1.setOnClickListener{
+
+                    holder.text2_1.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text2_1.setTextColor(Color.parseColor("#FFFFFF"))
+                    holder.text2_2.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text2_2.setTextColor(Color.parseColor("#424242"))
+                    showPositiveDialog(holder.itemView)
+                }
+                holder.text2_2.setOnClickListener{
+
+                    holder.text2_1.setBackgroundResource(R.drawable.default_option_background)
+                    holder.text2_1.setTextColor(Color.parseColor("#424242"))
+                    holder.text2_2.setBackgroundResource(R.drawable.card_selected_background)
+                    holder.text2_2.setTextColor(Color.parseColor("#FFFFFF"))
+                    showNegativeDialog(holder.itemView)
+                }
             }
 
+            is TypeViewHolderTenFour->{
+                holder.bind(items[position])
+                holder.saveBtn.setOnClickListener {
+                    holder.saveBtn.visibility = View.GONE;
+                    holder.savedBtn.visibility = View.VISIBLE;
+                }
+            }
+            is TypeViewHolderScenarioTwoScreenFive ->{
+                holder.bind(items[position])
+                holder.saveBtn.setOnClickListener {
+                    holder.saveBtn.visibility = View.GONE;
+                    holder.savedBtn.visibility = View.VISIBLE;
+                }
+            }
         }
     }
 

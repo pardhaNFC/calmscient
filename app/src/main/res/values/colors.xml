@@ -37,4 +37,5 @@
     <color name="hospital_name">#575757</color>
     <color name="transparent">#27EEECEC</color>
     <color name="red">#FF2020</color>
+    <color name="saved_text">#6D6D6D</color>
 </resources>

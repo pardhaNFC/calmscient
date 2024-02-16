@@ -20,6 +20,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
@@ -99,9 +100,9 @@ class AdapterRestructureBinding(
                     parent.context
                 )
                     .inflate(
-                        R.layout.layout_restructure_five_expand, parent, false
+                        R.layout.layout_restructure_six, parent, false
                     )
-                TypeViewHolderScreenFiveExpand(view)
+                TypeViewHolderScreenSix(view)
             }
 
             VIEW_TYPE_TYPE_F -> {
@@ -109,9 +110,9 @@ class AdapterRestructureBinding(
                     parent.context
                 )
                     .inflate(
-                        R.layout.layout_restructure_six, parent, false
+                        R.layout.layout_restructure_five_expand, parent, false
                     )
-                TypeViewHolderScreenSix(view)
+                TypeViewHolderScreenFiveExpand(view)
             }
 
             VIEW_TYPE_TYPE_G -> {
@@ -237,12 +238,72 @@ class AdapterRestructureBinding(
         }
     }
 
+//    class TypeViewHolderScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
+//        fun bind(itemsList: AnxietyRestructureDataClass) {
+//        }
+//
+//        val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
+//        val btnReviewType: Button = itemView.findViewById(R.id.btnReviewTypes)
+//    }
+
+
     class TypeViewHolderScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         fun bind(itemsList: AnxietyRestructureDataClass) {
+
+        }
+        //val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
+        val btnReviewType: Button = itemView.findViewById(R.id.btnReviewTypes)
+        private val optionSets: List<List<TextView>> = listOf(
+            listOf
+                (
+                itemView.findViewById(R.id.custom_textBox_1),
+                itemView.findViewById(R.id.custom_textBox_2),
+                itemView.findViewById(R.id.custom_textBox_3),
+                itemView.findViewById(R.id.custom_textBox_4),
+                itemView.findViewById(R.id.custom_textBox_5),
+                itemView.findViewById(R.id.custom_textBox_6),
+                itemView.findViewById(R.id.custom_textBox_7),
+                itemView.findViewById(R.id.custom_textBox_8)
+            ),
+        )
+
+
+        init {
+            // Set OnClickListener for each set
+            optionSets.forEachIndexed { setIndex, set ->
+                set.forEachIndexed { optionIndex, textView ->
+                    textView.setOnClickListener {
+                        onOptionClicked(setIndex, optionIndex)
+                    }
+                }
+            }
         }
 
-        val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
-        val btnReviewType: Button = itemView.findViewById(R.id.btnReviewTypes)
+        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
+        {
+            -1
+        }
+
+        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
+            if (selectedIndex != selectedOptionIndices[setIndex]) {
+                selectedOptionIndices[setIndex] = selectedIndex
+                clearSelection(setIndex)
+                selectOption(setIndex, selectedIndex)
+            }
+        }
+
+        private fun clearSelection(setIndex: Int) {
+            optionSets[setIndex].forEach { textView ->
+                textView.setBackgroundResource(R.drawable.card_default_background)
+                textView.setTextColor(Color.parseColor("#424242"))
+            }
+        }
+
+        private fun selectOption(setIndex: Int, selectedIndex: Int) {
+            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
+            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
+        }
     }
 
     class TypeViewHolderScreenFour(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -250,6 +311,9 @@ class AdapterRestructureBinding(
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }
+        var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
+        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
+
     }
 
     class TypeViewHolderScreenFive(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -300,92 +364,14 @@ class AdapterRestructureBinding(
     }
 
     class TypeViewHolderScreenTen(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val optionSets: List<List<TextView>> = listOf(
-            listOf
-                (
-                itemView.findViewById(
-                    R.id.optionJob
-                ),
-                itemView.findViewById(
-                    R.id.optionHealth
-                ),
-                itemView.findViewById(
-                    R.id.optionParenting
-                )
-            ),
-            listOf
-                (
-                itemView.findViewById(
-                    R.id.optionPerfectionistThinking
-                ),
-                itemView.findViewById(
-                    R.id.optionNegativeFiltering
-                ),
-                itemView.findViewById(
-                    R.id.optionParentingJumping
-                )
-            ),
-            listOf
-                (
-                itemView.findViewById(
-                    R.id.optionPerfectionistThinking_5
-                ),
-                itemView.findViewById(
-                    R.id.optionNegativeFiltering_5
-                ),
-                itemView.findViewById(
-                    R.id.optionParentingJumping_5
-                )
-            ),
-            listOf
-                (
-                itemView.findViewById(
-                    R.id.optionPerfectionistThinking_6
-                ),
-                itemView.findViewById(
-                    R.id.optionNegativeFiltering_6
-                ),
-                itemView.findViewById(
-                    R.id.optionParentingJumping_6
-                )
-            ),
-            // Add more sets as needed
-        )
-        private val selectedOptionIndices: MutableList<Int> = MutableList(optionSets.size)
-        {
-            -1
+        fun bind(itemsList: AnxietyRestructureDataClass) {
+            //val recyclerViewModel = itemsList.text1
+            //message.text = recyclerViewModel.textData
         }
+        var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
+        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
 
-        init {
-            // Set OnClickListener for each set
-            optionSets.forEachIndexed { setIndex, set ->
-                set.forEachIndexed { optionIndex, textView ->
-                    textView.setOnClickListener {
-                        onOptionClicked(setIndex, optionIndex)
-                    }
-                }
-            }
-        }
 
-        private fun onOptionClicked(setIndex: Int, selectedIndex: Int) {
-            if (selectedIndex != selectedOptionIndices[setIndex]) {
-                selectedOptionIndices[setIndex] = selectedIndex
-                clearSelection(setIndex)
-                selectOption(setIndex, selectedIndex)
-            }
-        }
-
-        private fun clearSelection(setIndex: Int) {
-            optionSets[setIndex].forEach { textView ->
-                textView.setBackgroundResource(R.drawable.card_default_background)
-                textView.setTextColor(Color.parseColor("#424242"))
-            }
-        }
-
-        private fun selectOption(setIndex: Int, selectedIndex: Int) {
-            optionSets[setIndex][selectedIndex].setBackgroundResource(R.drawable.card_selected_background)
-            optionSets[setIndex][selectedIndex].setTextColor(Color.parseColor("#FFFFFF"))
-        }
     }
 
 
@@ -416,9 +402,9 @@ class AdapterRestructureBinding(
                         )
                     )
                 }
-                holder.checkboxText1.setOnClickListener {
-                    Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
-                }
+//                holder.checkboxText1.setOnClickListener {
+//                    Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
+//                }
             }
 
             is TypeViewHolderScreenFiveExpand -> {
@@ -428,6 +414,20 @@ class AdapterRestructureBinding(
                     LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                 expandAdapter = ExpandFiveRestructureAdapter(taskWorkData)
                 holder.expandRecyclerview.adapter = expandAdapter
+            }
+            is TypeViewHolderScreenFour ->{
+                holder.bind(items[position])
+                holder.saveBtn.setOnClickListener{
+                    holder.saveBtn.visibility = View.GONE;
+                    holder.savedBtn.visibility = View.VISIBLE;
+                }
+            }
+            is TypeViewHolderScreenTen ->{
+                holder.bind(items[position])
+                holder.saveBtn.setOnClickListener{
+                    holder.saveBtn.visibility = View.GONE;
+                    holder.savedBtn.visibility = View.VISIBLE;
+                }
             }
         }
     }
@@ -484,7 +484,7 @@ class AdapterRestructureBinding(
                 context.getString(R.string.Personalization_summary)
             ),
 
-        )
+            )
         taskWorkData.addAll(tasks)
         expandAdapter.notifyDataSetChanged()
     }

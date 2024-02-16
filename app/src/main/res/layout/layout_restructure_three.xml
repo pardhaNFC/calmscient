@@ -49,18 +49,16 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_1"
+                    <TextView
+                        android:id="@+id/custom_textBox_1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_restructure_screen3_checkOne"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -68,127 +66,120 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_2"
+                    <TextView
+                        android:id="@+id/custom_textBox_2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_biased_card_catas"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_3"
+                    <TextView
+                        android:id="@+id/custom_textBox_3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_biased_card_perfect"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_4"
+                    <TextView
+                        android:id="@+id/custom_textBox_4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_biased_card_negative"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_5"
+                    <TextView
+                        android:id="@+id/custom_textBox_5"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_biased_card_personalizeBlame"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_6"
+                    <TextView
+                        android:id="@+id/custom_textBox_6"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_biased_card_jumping"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_8"
+                    <TextView
+                        android:id="@+id/custom_textBox_7"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_restructure_screen3_checkEight"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
-                        android:id="@+id/custom_checkbox_9"
+                    <TextView
+                        android:id="@+id/custom_textBox_8"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:buttonTint="@color/purple_100"
+                        android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
                         android:text="@string/anxiety_biased_card_emotional"
+                        android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
 

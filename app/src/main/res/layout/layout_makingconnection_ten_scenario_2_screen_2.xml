@@ -61,14 +61,13 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
-                        android:padding="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_4sdp"
                         android:fontFamily="@font/lexendlight"
-                        android:buttonTint="@color/purple_100"
+                        android:gravity="left|center"
                         android:text="@string/it_was_a_bad_idea_to_come_to_this_party"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
@@ -78,11 +77,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -95,11 +93,10 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
@@ -112,20 +109,17 @@
                     android:layout_margin="@dimen/_8sdp"
                     app:cardCornerRadius="4dp">
 
-                    <CheckBox
+                    <TextView
                         android:id="@+id/option_1_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:padding="@dimen/_10sdp"
                         android:fontFamily="@font/lexendlight"
                         android:buttonTint="@color/purple_100"
                         android:text="@string/they_didn_t_really_come_talk_to_me_they_didn_t_want"
                         android:textSize="@dimen/_12sdp" />
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
