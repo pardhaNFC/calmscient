@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_anxiety_and_alcohol_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+        <TextView
+            android:id="@+id/tv_anxiety_and_alcohol_desc_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:text="Description 1"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/bulb_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Bulb Icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_anxiety_and_alcohol_desc_1" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Center Image"
+            app:layout_constraintTop_toBottomOf="@+id/bulb_icon" />
+
+
+
+        <TextView
+            android:id="@+id/tv_anxiety_and_alcohol_desc_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:text="Description 1"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/alcohol_substance_tracking_button"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@+id/tv_anxiety_and_alcohol_desc_2"
+           android:text="@string/anxiety_alcohol"
+           android:gravity="center"
+           android:layout_marginTop="@dimen/_16sdp"
+           android:background="@drawable/button_border"
+           android:fontFamily="@font/lexendregular"
+           android:textAllCaps="false"
+           android:textAlignment="center"
+           android:layout_marginHorizontal="@dimen/_10sdp"
+           android:textColor="@color/white"
+           android:textSize="@dimen/_14sdp" />
+
+        <!--This is added because of button is not visible completely -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/alcohol_substance_tracking_button"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

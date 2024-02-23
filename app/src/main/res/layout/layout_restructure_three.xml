@@ -58,7 +58,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen3_checkOne"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -75,7 +76,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_biased_card_catas"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -92,7 +94,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_biased_card_perfect"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -109,7 +112,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_biased_card_negative"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -126,7 +130,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_biased_card_personalizeBlame"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -143,7 +148,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_biased_card_jumping"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -160,7 +166,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen3_checkEight"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -177,7 +184,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_biased_card_emotional"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />

@@ -84,7 +84,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/all_or_nothing_thinking"
                         android:textSize="@dimen/_12sdp" />
 
@@ -109,7 +110,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/perfectionism_thinking"
                         android:textSize="@dimen/_12sdp" />
 
@@ -134,7 +136,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/making_negative_assumptions"
                         android:textSize="@dimen/_12sdp" />
 
@@ -159,7 +162,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/negative_filtering"
                         android:textSize="@dimen/_12sdp" />
 
@@ -204,7 +208,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anger"
                         android:textSize="@dimen/_12sdp" />
 
@@ -229,7 +234,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/inadequacy"
                         android:textSize="@dimen/_12sdp" />
 
@@ -254,7 +260,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_makingconnection"
                         android:textSize="@dimen/_12sdp" />
 
@@ -279,7 +286,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/sad"
                         android:textSize="@dimen/_12sdp" />
 

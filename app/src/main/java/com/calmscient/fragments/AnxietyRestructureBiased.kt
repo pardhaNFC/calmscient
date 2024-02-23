@@ -61,8 +61,7 @@ class AnxietyRestructureBiased : Fragment() {
             view.findViewById(R.id.step8Indicator),
             view.findViewById(R.id.step9Indicator),
             view.findViewById(R.id.step10Indicator),
-            view.findViewById(R.id.step11Indicator),
-            view.findViewById(R.id.step12Indicator)
+            view.findViewById(R.id.step11Indicator)
         )
         setupNavigation()
         initializeAdapter()
@@ -98,7 +97,7 @@ class AnxietyRestructureBiased : Fragment() {
         restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_D, 3));
         restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_E, 4));
         restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_EXPAND_E, 5));
-        restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_F, 6));
+        //restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_F, 6));
         restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_G, 7));
         restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_H, 8));
         restructureText.add(AnxietyRestructureDataClass(restructureAdapter.VIEW_TYPE_TYPE_I, 9));

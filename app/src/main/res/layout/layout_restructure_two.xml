@@ -83,7 +83,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkOne"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -99,7 +100,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkTwo"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -115,7 +117,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkThree"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -131,7 +134,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkFour"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -147,7 +151,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkFive"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -163,7 +168,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkSix"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -179,7 +185,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkSeven"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -195,7 +202,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkEight"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -211,7 +219,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkNine"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -227,7 +236,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkTen"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />
@@ -243,7 +253,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/lexendlight"
-                        android:gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:text="@string/anxiety_restructure_screen2_checkEleven"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_12sdp" />

@@ -85,12 +85,9 @@ class PlayerActivity : AppCompatActivity() {
             player.setMediaItem(mediaItem)
             player.playWhenReady = true
             // player.prepare()
-            if(savePrefData.getAslLanguageState() == true)
-            {
+            if (savePrefData.getAslLanguageState() == true) {
                 heading.visibility = View.GONE
-            }
-            else
-            {
+            } else {
                 heading.visibility = View.VISIBLE
             }
             heading.text = headingText
@@ -103,7 +100,7 @@ class PlayerActivity : AppCompatActivity() {
 
         if (dialogText.equals("null")) {
             dialog_img.visibility = View.GONE
-        }else{
+        } else {
             dialog_img.visibility = View.VISIBLE
         }
         dialog_img.setOnClickListener {
@@ -136,15 +133,12 @@ class PlayerActivity : AppCompatActivity() {
 
             if (dialogText.equals("null")) {
                 dialog_img.visibility = View.GONE
-            }else{
+            } else {
                 dialog_img.visibility = View.VISIBLE
             }
-            if(savePrefData.getAslLanguageState() == true)
-            {
+            if (savePrefData.getAslLanguageState() == true) {
                 heading.visibility = View.GONE
-            }
-            else
-            {
+            } else {
                 heading.visibility = View.VISIBLE
             }
             heading.text = headingText

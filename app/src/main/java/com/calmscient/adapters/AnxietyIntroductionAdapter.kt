@@ -34,6 +34,9 @@ import com.calmscient.activities.PlayerActivity
 import com.calmscient.activities.RecognizeActivity
 import com.calmscient.di.remote.ItemType
 import com.calmscient.di.remote.CardItemDataClass
+import com.calmscient.fragments.AnxietyAndAlcoholSubstancesFragment
+import com.calmscient.fragments.AnxietyAndDietFragment
+import com.calmscient.fragments.AnxietyAndSleepFragment
 import com.calmscient.fragments.AnxietyBiasedThinkingFragment
 import com.calmscient.fragments.AnxietyCalmingBodyFragment
 import com.calmscient.fragments.AnxietyPostponeWorry
@@ -45,6 +48,7 @@ import com.calmscient.fragments.AudioPlayerFragment
 import com.calmscient.fragments.FastPaceFragment
 import com.calmscient.fragments.MakeAPlanFragment
 import com.calmscient.fragments.MakingConnectionFragment
+import com.calmscient.fragments.ManagingStressToReduceAnxietyFragment
 import com.calmscient.fragments.PlayerFragment
 import com.calmscient.fragments.PostponeWorryFirstScreen
 import com.calmscient.fragments.RecognizeFragment
@@ -388,6 +392,53 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 null,
                                 //PostponeWorryFirstScreen()
                                 AnxietyRestructureBiased()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.anxiety_sleep)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyAndSleepFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.anxiety_and_diet)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyAndDietFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.anxiety_alcohol)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyAndAlcoholSubstancesFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.managing_stress)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                ManagingStressToReduceAnxietyFragment()
                             )
                         }
                     }

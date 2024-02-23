@@ -1714,7 +1714,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="evidence_3">Evidence 3</string>
     <string name="modify_your_thoughts">6. Modify your thoughts:</string>
     <string name="now_that_you_ve_recognized">Now that you’ve recognized the possibility that your thinking may not be realistic or completely true, what would be a more realistic way of thinking about your situation?</string>
-    <string name="new_thought_1">New thought 1</string>
+    <string name="new_thought_1">New thought</string>
     <string name="new_thought_2">New thought 2</string>
     <string name="can_you_appreciate_that_you_are"><![CDATA[Can you appreciate that you are now talking to yourself in a kinder, more reasonable and wise manner? ]]></string>
     <string name="congratulations_you_ve_modified_your_biased_thinking">Congratulations! You’ve modified your biased thinking, even if just a little.</string>
@@ -1857,10 +1857,10 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="scenario_1">Scenario 1</string>
     <string name="you_came_to_work_on_monday_and_unexpectedly_found_troubling_emails_from_clients">You came to work on Monday and unexpectedly found troubling emails from clients.</string>
     <string name="i_might_think_biased_thinking">I might think (biased thinking):</string>
-    <string name="there_is_no_way_i_can_resolve_it_by_the_end_of_the_day_i_ve_already_failed">Negative assumptions: \n “There is no way I can resolve it by the end of the day. I’ve already failed.”</string>
-    <string name="they_are_upset_and_i_m_in_trouble">Jumping to conclusions: \n “They are upset and I’m in trouble.”</string>
-    <string name="_i_need_to_think_every_single_mistakes_i_possible_made">Perfectionism:\n “I need to think every single mistakes I possible made to cause this trouble first, otherwise I can’t respond back to them”</string>
-    <string name="if_i_don_t_get_back_to_them_today_i_ll_lose_my_clients_and_will_be_in_trouble_with_my_boss">Catastrophizing:\n “If I don’t get back to them today, I’ll lose my clients and will be in trouble with my boss.”</string>
+    <string name="there_is_no_way_i_can_resolve_it_by_the_end_of_the_day_i_ve_already_failed"><b>Negative assumptions:</b> \n “There is no way I can resolve it by the end of the day. I’ve already failed.”</string>
+    <string name="they_are_upset_and_i_m_in_trouble"><b>Jumping to conclusions:</b> \n “They are upset and I’m in trouble.”</string>
+    <string name="_i_need_to_think_every_single_mistakes_i_possible_made"><b>Perfectionism:</b>\n “I need to think every single mistakes I possible made to cause this trouble first, otherwise I can’t respond back to them”</string>
+    <string name="if_i_don_t_get_back_to_them_today_i_ll_lose_my_clients_and_will_be_in_trouble_with_my_boss"><b>Catastrophizing:</b>\n “If I don’t get back to them today, I’ll lose my clients and will be in trouble with my boss.”</string>
     <string name="i_might_feel">I might feel:</string>
     <string name="incompetent">Incompetent</string>
     <string name="disappointed">Disappointed</string>
@@ -1918,5 +1918,56 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="unhelpful_coping_skills_behaviors">Unhelpful coping skills/behaviors</string>
     <string name="trigger">Trigger</string>
     <string name="motivates">motivates</string>
+    <!--additional resources-->
+    <string name="anxiety_and_sleep_card_1_desc_1">\n“You should get eight hours of sleep!” Regardless of how many hours of sleep we should technically get, it remains an important but elusive part of our day. Few people understand why sleep is so important when it comes to anxiety management.</string>
+    <string name="sleep_deprivation_causes_insulin_resistance">\nSleep deprivation causes insulin resistance</string>
+    <string name="anxiety_and_sleep_card_2_desc_1">\nStudies show that one third of Americans have insulin resistance, resulting in a reduced ability to adapt to stress and stimulate chronic stress hormones. This, in turn, results in increased anxiety and depression.</string>
+    <string name="anxiety_and_sleep_card_3_desc_1">Researchers have found that during sleep, the glymphatic system (our body’s waste removal system, part of the nervous system) was ten times more active than while it was awake. In other words, our brain goes through a detoxification process while we are sleeping. When completed properly, we wake up with a clearer head and a more alert mind.</string>
+    <string name="here_are_some_tips_to_improve_your_sleep">\nHere are some tips to improve your sleep:</string>
+    <string name="anxiety_and_sleep_card_3_desc_2">\n1. Try not to depend on artificial stimulation to help keep you awake. Highly refined foods, excessive caffeine and adrenaline producing activities lead to chronic sleep deprivation. Because you’re not getting enough sleep, your brain comes to believe that you are fine without it! \n
+    \n2. Create a sleep-conducive environment by reducing the level of brightness where you sleep. Intentionally turning lights way down about an hour before bedtime helps create more melatonin in your system. You can also design your bedroom to support quality sleep by using black out and sound baffling drapes to keep it dark and quiet. \n
+    \n3. Stick to a regular sleep schedule: go to bed and get up at about the same time every day of the week. \n
+    \n4. It’s OK to use sedating supplements such as chamomile, theanine, GABA and melatonin as long as they are used occasionally, in moderation, and as indicated. These are generally more conducive to natural sleep rather than getting “knocked out” by prescription sleeping pills.</string>
+    <string name="did_you_know">Did you know?</string>
+    <string name="anxiety_and_sleep_card_2_dialog_text">Insulin resistance is when cells in your muscles, fat, and liver don’t respond well to insulin and can’t use glucose from your blood for energy. To make up for it, your pancreas makes more insulin. Over time, your blood sugar levels go up.</string>
+    <string name="anxiety_and_sleep_card_3_heading_2">\nDo you think there are some ways you can start improving your sleep quality?\n\n</string>
+    <string name="anxiety_and_diet_card_1_desc_1">Sugar lights up the addiction centers in our brains, similar to what happens when someone uses cocaine. This is important to remember, considering that our brain controls our emotions and behaviors</string>
+    <string name="anxiety_and_diet_card_2_desc_1">Three negative effects that sugar and processed food have on anxiety are:\n\n
+    1. Insulin resistance (You’ve already learned about this danger in the section on “Anxiety and Sleep”)\n\n
+    2. Leptin resistance (You can’t feel when you are full at mealtimes)\n\n
+    3. Increased inflammation in your body (Causes you pains and stress)\n\n
+    As you can imagine, experiencing one or more of these effects produces more anxiety.\n\n\n
+    </string>
+
+    <string name="anxiety_and_diet_card_3_heading_1">How can you determine if you are addicted to sugar and processed food?\n</string>
+    <string name="anxiety_and_diet_card_3_desc_1">Look for these signs \n\n
+    •Frequent headaches, lethargy, feeling tired, cravings, muscle pain, nausea, bloating, insomnia\n\n
+    •Trying to quit sugar produces headaches or fatigue\n\n
+    •Having a hard time recognizing when you are full or have eaten enough\n\n
+    </string>
+    <string name="anxiety_and_sleep_card_4_heading_1">Some tips to improve your diet</string>
+    <string name="anxiety_and_sleep_card_4_desc_1">\nThis information does not promote or suggest any specific diet plan. Any intervention in your diet must be balanced and responsible. But here are two things you can do to start on a path toward a healthier diet:\n
+    \n1.Consult with a nutritionist or doctor for recommendations on a specific diet plan tailored to you\n
+    \n2.Try a sugar detox in order to “reset” your body. This will:\n
+    \u00A0\u00A0a.Improve your cells’ sensitivity to insulin\n
+    \u00A0\u00A0b.Reduce cortisol levels\n
+    \u00A0\u00A0c.Lower ghrelin levels (regulates hunger and appetite)\n
+    \u00A0\u00A0d.Improve leptin sensitivity\n
+    \u00A0\u00A0e.Increase dopamine levels naturally\n
+    \u00A0\u00A0f.Reset your taste buds\n
+    \u00A0\u00A0g.Reduce inflammation\n\n</string>
+    <string name="anxiety_and_diet_card_1_dialog_text_1">Unfortunately, many of us consume more sugar than we are aware of because it’s lurking in so many foods we would never expect to contain it. The average person consumes 152 lbs. (69 kg) of sugar per year! It’s true, sugar is responsible for increased waist lines. But the real problem is addiction. A study by Dr. Serge H. Ahmed (“Is Sugar As Addictive As Cocaine?”) shows that sugar was eight times more addictive than cocaine.</string>
+    <string name="anxiety_and_diet_card_4_dialog_text_1">Diets such as the “Keto Diet” and Dr. Mark Hyman’s “10-day Detox Diet” are designed to reset your body. When it comes to establishing long-term eating habits, you need to make sure you are doing so in a balanced and reasonable way.</string>
+    <string name="alcohol_substances_tracking">Alcohol/Substances Tracking</string>
+    <string name="anxiety_and_alcohol_card_1_desc_1">It’s not easy to tolerate anxiety.\n</string>
+    <string name="anxiety_and_alcohol_card_2_desc_2">Understandably, many who want to control their anxiety without prescriptions often turn to alcohol or substances: they are easy to acquire and they provide quick relief from stress, rumination and worries. But in the long run, this easy path quickly leads to destructive patterns that can be impossible to escape from without drastic intervention.\n
+    \n Since alcohol and substances are commonly associated with anxiety, we’d like to provide you with information on ways to cope with alcohol and substances.  What do you think?\n</string>
+    <string name="anxiety_and_alcohol_card_1_dialog_text">• 40 million americans suffer from some kind of anxiety disorder at any given time\n
+    • 1 in 5 individuals with anxiety report using alcohol or substance to cope with stress\n
+    • 20% of people diagnosed with alcohol or substance use disorder also suffer from an anxiety or mood disorder\n\n
+    The purpose of learning about the prevalence of alcohol and substance dependence is not to make ourselves feel judged. Understanding it helps us be aware of and avoid the vicious cycle of addiction we can easily find ourselves in when looking for comfort from anxiety.</string>
+    <string name="managing_stress_to_reduce_anxiety_desc">“Stress” and “Anxiety” are two words we hear often in our everyday lives. This is not surprising, because both things are related to each other. Ultimately, they have a direct effect on our behaviors.\n\n Though anxiety is often triggered by fear, both external and internal experiences can trigger stress and anxiety. External experiences could be things like challenging situations or health problems. Internal experiences can be things like negative thoughts, self-criticism, judgements or remembering shameful memories. In either case, understanding your stress can help you manage your anxiety.</string>
+    <string name="learn_how_to_manage_your_anxiety">Learn how to Manage your Anxiety</string>
+    <string name="yes_we_ve_all_heard_it">Yes, we’ve all heard it</string>
 
 </resources>

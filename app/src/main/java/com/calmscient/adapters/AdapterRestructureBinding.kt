@@ -24,6 +24,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.EvaluateExpandActivity
 import com.calmscient.activities.ReviewTypeRestructureActivity
 import com.calmscient.di.remote.AnxietyRestructureDataClass
 import com.calmscient.di.remote.Task
@@ -65,13 +66,13 @@ class AdapterRestructureBinding(
 
             VIEW_TYPE_TYPE_B -> {
                 val view = LayoutInflater.from(parent.context)
-                    .inflate(com.calmscient.R.layout.layout_restructure_two, parent, false)
+                    .inflate(R.layout.layout_restructure_two, parent, false)
                 TypeViewHolderScreenTwo(view)
             }
 
             VIEW_TYPE_TYPE_C -> {
                 val view = LayoutInflater.from(parent.context)
-                    .inflate(com.calmscient.R.layout.layout_restructure_three, parent, false)
+                    .inflate(R.layout.layout_restructure_three, parent, false)
                 TypeViewHolderScreenThree(view)
             }
 
@@ -105,15 +106,15 @@ class AdapterRestructureBinding(
                 TypeViewHolderScreenSix(view)
             }
 
-            VIEW_TYPE_TYPE_F -> {
-                val view = LayoutInflater.from(
-                    parent.context
-                )
-                    .inflate(
-                        R.layout.layout_restructure_five_expand, parent, false
-                    )
-                TypeViewHolderScreenFiveExpand(view)
-            }
+            /*            VIEW_TYPE_TYPE_F -> {
+                            val view = LayoutInflater.from(
+                                parent.context
+                            )
+                                .inflate(
+                                    R.layout.layout_restructure_five_expand, parent, false
+                                )
+                            TypeViewHolderScreenFiveExpand(view)
+                        }*/
 
             VIEW_TYPE_TYPE_G -> {
                 val view = LayoutInflater.from(
@@ -177,12 +178,6 @@ class AdapterRestructureBinding(
     }
 
     class TypeViewHolderScreenTwo(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        /*fun bind(itemsList: AnxietyRestructureDataClass) {
-            //val recyclerViewModel = itemsList.text1
-            //message.text = recyclerViewModel.textData
-        }*/
-        //val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
-
         private val optionSets: List<List<TextView>> = listOf(
             listOf
                 (
@@ -199,8 +194,6 @@ class AdapterRestructureBinding(
                 itemView.findViewById(R.id.optionEleven)
             ),
         )
-
-
         init {
             // Set OnClickListener for each set
             optionSets.forEachIndexed { setIndex, set ->
@@ -238,21 +231,10 @@ class AdapterRestructureBinding(
         }
     }
 
-//    class TypeViewHolderScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        fun bind(itemsList: AnxietyRestructureDataClass) {
-//        }
-//
-//        val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
-//        val btnReviewType: Button = itemView.findViewById(R.id.btnReviewTypes)
-//    }
-
-
     class TypeViewHolderScreenThree(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         fun bind(itemsList: AnxietyRestructureDataClass) {
-
         }
-        //val checkboxText1: TextView = itemView.findViewById(R.id.custom_checkbox_1)
+
         val btnReviewType: Button = itemView.findViewById(R.id.btnReviewTypes)
         private val optionSets: List<List<TextView>> = listOf(
             listOf
@@ -267,7 +249,6 @@ class AdapterRestructureBinding(
                 itemView.findViewById(R.id.custom_textBox_8)
             ),
         )
-
 
         init {
             // Set OnClickListener for each set
@@ -311,8 +292,9 @@ class AdapterRestructureBinding(
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }
-        var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
-        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
+
+        var saveBtn: AppCompatButton = itemView.findViewById(R.id.yesButton)
+        var savedBtn: AppCompatButton = itemView.findViewById(R.id.savedButton)
 
     }
 
@@ -323,20 +305,21 @@ class AdapterRestructureBinding(
         }
     }
 
-    class TypeViewHolderScreenFiveExpand(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(itemsList: AnxietyRestructureDataClass) {
-        }
-
-        val expandRecyclerview: RecyclerView =
-            itemView.findViewById(R.id.expandRestructureRecyclerView)
-
-    }
+    /* class TypeViewHolderScreenFiveExpand(itemView: View) : RecyclerView.ViewHolder(itemView) {
+         fun bind(itemsList: AnxietyRestructureDataClass) {
+         }
+         val expandRecyclerview: RecyclerView =
+             itemView.findViewById(R.id.expandRestructureRecyclerView)
+     }*/
 
     class TypeViewHolderScreenSix(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(itemsList: AnxietyRestructureDataClass) {
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }
+
+        val yesBtn: AppCompatButton =
+            itemView.findViewById(R.id.yesButtonFour)
     }
 
     class TypeViewHolderScreenSeven(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -352,7 +335,6 @@ class AdapterRestructureBinding(
     }
 
     class TypeViewHolderScreenNine(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         fun bind(itemsList: AnxietyRestructureDataClass) {
         }
     }
@@ -368,8 +350,9 @@ class AdapterRestructureBinding(
             //val recyclerViewModel = itemsList.text1
             //message.text = recyclerViewModel.textData
         }
-        var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
-        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
+
+        var saveBtn: AppCompatButton = itemView.findViewById(R.id.yesButton)
+        var savedBtn: AppCompatButton = itemView.findViewById(R.id.savedButton)
 
 
     }
@@ -402,31 +385,42 @@ class AdapterRestructureBinding(
                         )
                     )
                 }
-//                holder.checkboxText1.setOnClickListener {
-//                    Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show()
-//                }
             }
 
-            is TypeViewHolderScreenFiveExpand -> {
+            /*is TypeViewHolderScreenFiveExpand -> {
                 holder.bind(items[position])
                 addTaskData()
                 holder.expandRecyclerview.layoutManager =
                     LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                 expandAdapter = ExpandFiveRestructureAdapter(taskWorkData)
                 holder.expandRecyclerview.adapter = expandAdapter
-            }
-            is TypeViewHolderScreenFour ->{
+            }*/
+
+            is TypeViewHolderScreenFour -> {
                 holder.bind(items[position])
-                holder.saveBtn.setOnClickListener{
+                holder.saveBtn.setOnClickListener {
                     holder.saveBtn.visibility = View.GONE;
                     holder.savedBtn.visibility = View.VISIBLE;
                 }
             }
-            is TypeViewHolderScreenTen ->{
+
+            is TypeViewHolderScreenTen -> {
                 holder.bind(items[position])
-                holder.saveBtn.setOnClickListener{
+                holder.saveBtn.setOnClickListener {
                     holder.saveBtn.visibility = View.GONE;
                     holder.savedBtn.visibility = View.VISIBLE;
+                }
+            }
+
+            is TypeViewHolderScreenSix -> {
+                holder.bind(items[position])
+                holder.yesBtn.setOnClickListener {
+                    context.startActivity(
+                        Intent(
+                            context,
+                            EvaluateExpandActivity::class.java
+                        )
+                    )
                 }
             }
         }

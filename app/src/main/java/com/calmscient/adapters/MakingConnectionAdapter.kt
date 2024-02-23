@@ -738,7 +738,7 @@ class MakingConnectionAdapter (
 
         }
         var saveBtn : AppCompatButton = itemView.findViewById(R.id.yesButton)
-        var savedBtn : AppCompatButton = itemView.findViewById(R.id.savedButton)
+        var savedBtn : AppCompatButton = itemView.findViewById(R.id.saved_button)
     }
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
