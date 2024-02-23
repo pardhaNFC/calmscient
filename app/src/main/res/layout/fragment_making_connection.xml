@@ -225,7 +225,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
+            <com.calmscient.utils.NonSwipeRecyclerView
                 android:id="@+id/makingConnectionRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_420sdp"
