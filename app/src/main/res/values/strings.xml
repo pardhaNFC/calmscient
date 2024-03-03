@@ -1622,7 +1622,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 2.8</string>
+    <string name="version">Version 3.0</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
@@ -1969,5 +1969,45 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="managing_stress_to_reduce_anxiety_desc">“Stress” and “Anxiety” are two words we hear often in our everyday lives. This is not surprising, because both things are related to each other. Ultimately, they have a direct effect on our behaviors.\n\n Though anxiety is often triggered by fear, both external and internal experiences can trigger stress and anxiety. External experiences could be things like challenging situations or health problems. Internal experiences can be things like negative thoughts, self-criticism, judgements or remembering shameful memories. In either case, understanding your stress can help you manage your anxiety.</string>
     <string name="learn_how_to_manage_your_anxiety">Learn how to Manage your Anxiety</string>
     <string name="yes_we_ve_all_heard_it">Yes, we’ve all heard it</string>
+
+    <!--changing response to stress-->
+    <!-- Understanding your response to stress-->
+    <string name="understanding_the_stress_signs">Understanding the stress signs</string>
+    <string name="understanding_the_cause_of_your_stress">Understanding the cause of your stress</string>
+    <string name="resources">Resources</string>
+    <string name="where_can_stress_hide">Where can stress hide?</string>
+    <string name="your_physiological_signs_of_stress_quiz">Your physiological signs of stress quiz</string>
+    <string name="what_are_physiological_signs_of_stress">What are physiological signs of stress?</string>
+    <string name="your_emotional_signs_of_stress_quiz">Your emotional signs of stress quiz</string>
+    <string name="emotional_signs_of_stress_fight_flight_freeze_shutdown">Emotional signs of stress? Fight/Flight/Freeze/Shutdown</string>
+    <string name="your_behavioral_signs_of_stress_quiz">Your behavioral signs of stress quiz</string>
+    <string name="defense_response_and_behavioral_response">Defense response and behavioral response</string>
+    <string name="what_is_causing_you_stress">What is causing you stress?</string>
+    <string name="what_s_causing_nora_austin_and_melanie_stress">What’s causing Nora, Austin, and Melanie stress</string>
+    <string name="what_triggers_our_stress">What triggers our stress</string>
+    <string name="your_stress_triggers_quiz">Your stress triggers quiz</string>
+    <string name="what_is_your_response_to_stress">What is your response to stress?</string>
+    <string name="push_away_avoidance">Push away/avoidance</string>
+    <string name="push_through">Push through</string>
+    <string name="stress_hormones">Stress hormones</string>
+    <string name="in_denial">In denial</string>
+    <string name="coping_with_stress">Coping with stress</string>
+    <string name="cost_benefit_analysis">Cost benefit analysis</string>
+    <string name="relaxation_techniques">Relaxation techniques</string>
+    <string name="biased_thinking_and_stress">Biased thinking and stress</string>
+    <string name="body_stress_signs_text">Our bodies are well-equipped to handle stress in small doses, but when that stress becomes long-term or chronic, it can have serious effects on your body.</string>
+    <string name="emotional_stress_sign_card_1_desc_1">Along with a physiological response to stress, your defense responses, such as fight-flight-freeze-shutdown, are triggered by a release of hormones in your nervous system, resulting in the experience of strong emotions.\n \n When we face stress, our brain quickly runs an inventory to decide which defense response to activate.\n</string>
+    <string name="emotional_stress_sign_card_2_desc_1">FIGHT the threat (to overpower and regain control of yourself) or FLIGHT (to flee for safety by finding an exit). When we don\’t know what to do or our FIGHT or <font color="#6E6BB3">FLIGHT</font> responses are not working, we go into FREEZE, and after some time, it can lead to <font color="#6E6BB3">SHUTDOWN</font> (feeling hopeless/helpless).\n \nLet\’s take a look at each defense response and see how they are related to your emotions!</string>
+    <string name="shut_down">SHUT DOWN</string>
+    <string name="emotional_stress_sign_card_3_desc_2">Angry, judgmental, mistrustful, impatient, frustrated, obsessive, hatred, disgust, alert.\n</string>
+    <string name="emotional_stress_sign_card_4_desc_2">Inadequate, anxious, worried, fearful, overwhelmed, nervous, timid.</string>
+    <string name="emotional_stress_sign_card_5_desc_2">Panicky, overwhelmed, ruminating, hypervigilant, brain feels offline, feels like a deer caught in headlights.</string>
+    <string name="emotional_stress_sign_card_6_desc_2">Numb, hopeless/helpless, dissociated, sad, depressive, feel like a zombie.</string>
+    <string name="flight">FLIGHT</string>
+    <string name="fight">FIGHT</string>
+    <string name="freeze">FREEZE</string>
+    <string name="window_tolerance_card_1_desc_2">Have you ever filled a party balloon with air? If so, you’ll know what it feels like as the balloon stretches and stretches until it can’t stretch any further. Any more air.... and it pops!\n \n Similarly, our bodies have an optimal emotional range where it functions best. We call this our “Window of Tolerance”. When we are in our Window of Tolerance, we feel like we can deal with whatever’s happening in our life. We might feel stress or pressure, but it doesn’t bother us too much. This is the ideal place to be. But when we are under stress, that window becomes very small. It can stretch a bit, but if our stressors are greater than our window, we will fall outside into one of two opposite states.</string>
+    <string name="window_tolerance_card_2_desc_1">HYPER-AROUSAL: Anxiety, fear, irritation, panic. You might experience the “Fight or Flight” response.</string>
+    <string name="window_tolerance_card_2_desc_2">HYPO-AROUSAL: Emotional numbness, exhaustion, depression, dissociation, withdrawal, lethargy. You might experience your body shutting down or freezing.</string>
 
 </resources>
