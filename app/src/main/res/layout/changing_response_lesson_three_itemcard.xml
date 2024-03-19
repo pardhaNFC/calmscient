@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/questions_item_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv_heading_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="Heading 1"
+            android:textAlignment="center"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tv_heading_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="Heading 2"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading_1"/>
+
+        <TextView
+            android:id="@+id/description_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:text="Description 1"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading_2"/>
+
+        <TextView
+            android:id="@+id/tv_heading_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="Heading 3"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/description_1"/>
+
+        <TextView
+            android:id="@+id/description_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:text="Description 2"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading_3"/>
+
+        <TextView
+            android:id="@+id/tv_heading_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="Heading 4"
+            android:textColor="@color/purple_100"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/description_2"/>
+
+         <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Center Image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_heading_4"/>
+
+        <TextView
+            android:id="@+id/description_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:text="Description 3"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

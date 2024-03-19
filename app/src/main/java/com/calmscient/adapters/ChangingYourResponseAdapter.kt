@@ -45,16 +45,30 @@ import com.calmscient.fragments.AnxietyQuizFragment
 import com.calmscient.fragments.AnxietyQuizLessonsFragment
 import com.calmscient.fragments.AnxietyRestructureBiased
 import com.calmscient.fragments.AudioPlayerFragment
+import com.calmscient.fragments.BehaviouralSignsStressQuizFragment
+import com.calmscient.fragments.BiasedThinkingStressFragment
+import com.calmscient.fragments.CopyingWithStressFragment
+import com.calmscient.fragments.CostBenefitAnalysisFragment
+import com.calmscient.fragments.DefenseResponseFragment
 import com.calmscient.fragments.EmotionalSignsOFStressLessonFragment
+import com.calmscient.fragments.EmotionalSignsStressQuizFragment
 import com.calmscient.fragments.FastPaceFragment
+import com.calmscient.fragments.InDenialFragment
 import com.calmscient.fragments.MakeAPlanFragment
 import com.calmscient.fragments.MakingConnectionFragment
 import com.calmscient.fragments.ManagingStressToReduceAnxietyFragment
 import com.calmscient.fragments.PhysiologicalSignsOfStressLessonFragment
+import com.calmscient.fragments.PhysiologicalSignsStressQuizFragment
 import com.calmscient.fragments.PlayerFragment
 import com.calmscient.fragments.PostponeWorryFirstScreen
+import com.calmscient.fragments.PushAwayAvoidanceFragment
+import com.calmscient.fragments.PushThoughFragment
 import com.calmscient.fragments.RecognizeFragment
+import com.calmscient.fragments.RelaxationTechniquesFragment
+import com.calmscient.fragments.StressHormonesFragment
+import com.calmscient.fragments.TriggersOurStressFragemnt
 import com.calmscient.fragments.WindowOfToleranceFragment
+import com.calmscient.fragments.YourStressTriggersQuizFragment
 
 class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallback<CardItemDataClass>) :
     ListAdapter<CardItemDataClass, ChangingYourResponseAdapter.ViewHolder>(diffCallback) {
@@ -92,7 +106,7 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                 when {
                     cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
                         if (cardItem.audioResourceId != null) {
-                            if (cardItem.description == context.getString(R.string.meet_nora_austin)) {
+                            if (cardItem.summary == context.getString(R.string.let_s_meet_nora_austin_and_melanie)) {
                                 /* val intent = Intent(context, AudioPlayerActivity::class.java)
                                 intent.putExtra("audioResourceId", cardItem.audioResourceId)
                                 intent.putExtra("heading", cardItem.heading)
@@ -112,7 +126,7 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                     AudioPlayerFragment()
                                 )
 
-                            } else if (cardItem.description == context.getString(R.string.moral_deficiency)) {
+                            } else if (cardItem.description == context.getString(R.string.what_s_causing_nora_austin_and_melanie_stress)) {
                                 /* val intent = Intent(context, AudioPlayerActivity::class.java)
                                  intent.putExtra("audioResourceId", cardItem.audioResourceId)
                                  intent.putExtra("description", cardItem.description)
@@ -206,12 +220,13 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                     }*/
                     cardItem.availableContentTypes.contains(ItemType.VIDEO) -> {
                         if (cardItem.videoResourceId != null) {
-                            if (cardItem.heading == context.getString(R.string.the_neuropsychology)) {
+                            if (cardItem.description == context.getString(R.string.where_can_stress_hide)) {
                                 val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
                                 context.startActivity(intent)
 
                                 /*replaceFragmentWithPlayerFragment(
@@ -225,12 +240,13 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                     PlayerFragment()
                                 )*/
 
-                            } else if (cardItem.heading == context.getString(R.string.page_2_1)) {
+                            } else if (cardItem.description == context.getString(R.string.what_is_causing_you_stress)) {
                                 val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
                                 context.startActivity(intent)
 
                                 /* replaceFragmentWithPlayerFragment(
@@ -243,12 +259,13 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                      cardItem.dialogText,
                                      PlayerFragment()
                                  )*/
-                            } else if (cardItem.heading == context.getString(R.string.make_plan_card6_text2)) {
+                            } else if (cardItem.description == context.getString(R.string.what_is_your_response_to_stress)) {
                                 val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
                                 context.startActivity(intent)
 
                                 /* replaceFragmentWithPlayerFragment(
@@ -313,7 +330,18 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 null,
                                 EmotionalSignsOFStressLessonFragment()
                             )
-                        } else if (cardItem.description == context.getString(R.string.window_of_tolerance)) {
+                        }else if (cardItem.description == context.getString(R.string.defense_response_and_behavioral_response)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                DefenseResponseFragment()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.window_of_tolerance)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -324,7 +352,7 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 null,
                                 WindowOfToleranceFragment()
                             )
-                        } else if (cardItem.description == context.getString(R.string.title_toolbar_recognize)) {
+                        } else if (cardItem.description == context.getString(R.string.what_triggers_our_stress)) {
                             /*val intent = Intent(context, RecognizeActivity::class.java)
                             intent.putExtra("description", cardItem.description)
                             context.startActivity(intent)*/
@@ -336,9 +364,9 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                RecognizeFragment()
+                                TriggersOurStressFragemnt()
                             )
-                        } else if (cardItem.description == context.getString(R.string.anxiety_hide)) {
+                        } else if (cardItem.description == context.getString(R.string.push_away_avoidance)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -347,9 +375,9 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyHideFragment()
+                                PushAwayAvoidanceFragment()
                             )
-                        } else if (cardItem.description == context.getString(R.string.calming_body)) {
+                        } else if (cardItem.description == context.getString(R.string.push_through)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -358,21 +386,9 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyCalmingBodyFragment()
+                                PushThoughFragment()
                             )
-                        } else if (cardItem.description == context.getString(R.string.postpone_worry)) {
-                            replaceFragmentWithPlayerFragment(
-                                fragmentManager,
-                                null,
-                                null,
-                                null,
-                                cardItem.description,
-                                null,
-                                null,
-                                //PostponeWorryFirstScreen()
-                                AnxietyPostponeWorry()
-                            )
-                        } else if (cardItem.description == context.getString(R.string.biased_think)) {
+                        } else if (cardItem.description == context.getString(R.string.stress_hormones)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -382,9 +398,9 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 null,
                                 null,
                                 //PostponeWorryFirstScreen()
-                                AnxietyBiasedThinkingFragment()
+                                StressHormonesFragment()
                             )
-                        } else if (cardItem.description == context.getString(R.string.restructure_biased)) {
+                        } else if (cardItem.description == context.getString(R.string.in_denial)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -394,9 +410,9 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 null,
                                 null,
                                 //PostponeWorryFirstScreen()
-                                AnxietyRestructureBiased()
+                                InDenialFragment()
                             )
-                        }else if (cardItem.description == context.getString(R.string.anxiety_sleep)) {
+                        } else if (cardItem.description == context.getString(R.string.coping_with_stress)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -405,10 +421,22 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyAndSleepFragment()
+                                //PostponeWorryFirstScreen()
+                                CopyingWithStressFragment()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.cost_benefit_analysis)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                CostBenefitAnalysisFragment()
                             )
                         }
-                        else if (cardItem.description == context.getString(R.string.anxiety_and_diet)) {
+                        else if (cardItem.description == context.getString(R.string.relaxation_techniques)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -417,10 +445,10 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyAndDietFragment()
+                                RelaxationTechniquesFragment()
                             )
                         }
-                        else if (cardItem.description == context.getString(R.string.anxiety_alcohol)) {
+                        else if (cardItem.description == context.getString(R.string.biased_thinking_and_stress)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -429,7 +457,7 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyAndAlcoholSubstancesFragment()
+                                BiasedThinkingStressFragment()
                             )
                         }
                         else if (cardItem.description == context.getString(R.string.managing_stress)) {
@@ -453,7 +481,7 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                         // Toast.makeText(context, "No Quiz Available", Toast.LENGTH_SHORT).show()
                         /*val intent = Intent(context, AnxietyQuizActivity::class.java)
                         context.startActivity(intent)*/
-                        if (cardItem.description == context.getString(R.string.quiz_title3_2)) {
+                        if (cardItem.description == context.getString(R.string.your_physiological_signs_of_stress_quiz)) {
                             replaceFragmentWithPlayerFragment(
                                 fragmentManager,
                                 null,
@@ -462,7 +490,40 @@ class ChangingYourResponseAdapter(private val diffCallback: DiffUtil.ItemCallbac
                                 cardItem.description,
                                 null,
                                 null,
-                                AnxietyQuizLessonsFragment()
+                                PhysiologicalSignsStressQuizFragment()
+                            )
+                        }else  if (cardItem.description == context.getString(R.string.your_emotional_signs_of_stress_quiz)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                EmotionalSignsStressQuizFragment()
+                            )
+                        }else  if (cardItem.description == context.getString(R.string.your_behavioral_signs_of_stress_quiz)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                BehaviouralSignsStressQuizFragment()
+                            )
+                        }else  if (cardItem.description == context.getString(R.string.your_stress_triggers_quiz)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                YourStressTriggersQuizFragment()
                             )
                         }
                         else {

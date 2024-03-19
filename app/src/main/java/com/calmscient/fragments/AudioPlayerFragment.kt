@@ -50,6 +50,7 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
     private var audioFilePath: String? = null
     private var isMediaPlayerInitialized = false
     var description: String? = null
+    private  var tvdescription: String? = null
 
     private lateinit var loadingDialog: ProgressDialog
 
@@ -65,12 +66,25 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
         super.onViewCreated(view, savedInstanceState)
 
         description = requireArguments().getString("description")
-
+        tvdescription = requireArguments().getString("summary")
         if (isNetworkConnected(requireContext())) {
             mediaPlayer = MediaPlayer()
             binding.tvTitle.text = description
-            if (description == getString(R.string.meet_nora_austin)) {
+            binding.tvDescription.text = tvdescription
+            if (description == getString(R.string.meet_nora_austin)  ) {
                 binding.audioScrollView.visibility = View.VISIBLE
+                binding.tvDescription.text = tvdescription
+            }
+            if(tvdescription == getString(R.string.let_s_meet_nora_austin_and_melanie))
+            {
+                binding.audioScrollView.visibility = View.VISIBLE
+                binding.informationIcon.isClickable = false
+
+            }
+            if(description == getString(R.string.what_s_causing_nora_austin_and_melanie_stress))
+            {
+                binding.audioScrollView.visibility = View.VISIBLE
+                binding.informationIcon.isClickable = false
             }
             if (description == getString(R.string.anxiety_worry)) {
                 binding.layoutBulb.visibility = View.VISIBLE
@@ -148,9 +162,17 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
 
         }
 
-        binding.informationIcon.setOnClickListener {
-            showInformationDialog()
+        if(tvdescription ==  getString(R.string.let_s_meet_nora_austin_and_melanie) || description ==  getString(R.string.what_s_causing_nora_austin_and_melanie_stress))
+        {
+            binding.informationIcon.isClickable = false;
         }
+        else
+        {
+            binding.informationIcon.setOnClickListener {
+                showInformationDialog()
+            }
+        }
+
         binding.bulbIcon.setOnClickListener {
             showInformationDialog()
         }

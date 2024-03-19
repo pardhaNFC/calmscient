@@ -692,7 +692,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summary_accident">Accident</string>
 
 </resources>-->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">calmscient</string>
     <string name="splash_science">The Science of Calm</string>
     <string name="welcome_message">Welcome to my app!</string>
@@ -1367,11 +1367,13 @@ The most important thing is to do it! Do you have some time today to get started
     \n First, let’s bring these rigid and automatic types of thinking into awareness by learning how they can trigger our emotions and behaviors.</string>
     <string name="anxious_mind_text">If you’ve come this far, you’re doing great! So far, we’ve learned skills to calm our anxious body. Now let’s identify unhelpful self-statements and thoughts that can feed our worries and anxieties.</string>
     <!--additional resources-->
-    <string name="additional_anxiety_exercise_summary">Research has shown that exercise improves cell health and boosts the brain’s natural anti-anxiety drug. How so?
-Harvard medical school studies show that exercise diverts our minds from the very things we are anxious about. Moving our bodies decreases muscle tension, lowering our body’s contribution to feeling anxious. Increasing our heart rate actively changes our brain chemistry, increasing the availability of important anti-anxiety neurochemicals such as serotonin and GABA. Exercise also activates our brain’s frontal lobe, helping control the reacting system located in the amygdala.
-We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.
+    <string name="additional_anxiety_exercise_dialogText">Research has shown that exercise improves cell health and boosts the brain’s natural anti-anxiety drug. How so?\n\n
+Harvard medical school studies show that exercise diverts our minds from the very things we are anxious about. Moving our bodies decreases muscle tension, lowering our body’s contribution to feeling anxious. Increasing our heart rate actively changes our brain chemistry, increasing the availability of important anti-anxiety neurochemicals such as serotonin and GABA. Exercise also activates our brain’s frontal lobe, helping control the reacting system located in the amygdala.\n\n
+We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.\n\n
 The most important thing is to do it! Do you have some time today to get started?
 </string>
+
+
     <string name="anxiety_and_diet">Anxiety and diet</string>
     <string name="additional_resources">Additional resources</string>
     <!--Weekly Summary-->
@@ -1622,7 +1624,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 3.0</string>
+    <string name="version">Version 2.8</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
@@ -1970,7 +1972,6 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="learn_how_to_manage_your_anxiety">Learn how to Manage your Anxiety</string>
     <string name="yes_we_ve_all_heard_it">Yes, we’ve all heard it</string>
 
-    <!--changing response to stress-->
     <!-- Understanding your response to stress-->
     <string name="understanding_the_stress_signs">Understanding the stress signs</string>
     <string name="understanding_the_cause_of_your_stress">Understanding the cause of your stress</string>
@@ -1996,7 +1997,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="relaxation_techniques">Relaxation techniques</string>
     <string name="biased_thinking_and_stress">Biased thinking and stress</string>
     <string name="body_stress_signs_text">Our bodies are well-equipped to handle stress in small doses, but when that stress becomes long-term or chronic, it can have serious effects on your body.</string>
-    <string name="emotional_stress_sign_card_1_desc_1">Along with a physiological response to stress, your defense responses, such as fight-flight-freeze-shutdown, are triggered by a release of hormones in your nervous system, resulting in the experience of strong emotions.\n \n When we face stress, our brain quickly runs an inventory to decide which defense response to activate.\n</string>
+    <string name="emotional_stress_sign_card_1_desc_1">Along with a physiological response to stress, your defense responses, such as fight-flight-freeze-shutdown, are triggered by a release of hormones in your nervous system, resulting in the experience of strong emotions.\n \n  When we face stress, our brain quickly runs an inventory to decide which defense response to activate.\n</string>
     <string name="emotional_stress_sign_card_2_desc_1">FIGHT the threat (to overpower and regain control of yourself) or FLIGHT (to flee for safety by finding an exit). When we don\’t know what to do or our FIGHT or <font color="#6E6BB3">FLIGHT</font> responses are not working, we go into FREEZE, and after some time, it can lead to <font color="#6E6BB3">SHUTDOWN</font> (feeling hopeless/helpless).\n \nLet\’s take a look at each defense response and see how they are related to your emotions!</string>
     <string name="shut_down">SHUT DOWN</string>
     <string name="emotional_stress_sign_card_3_desc_2">Angry, judgmental, mistrustful, impatient, frustrated, obsessive, hatred, disgust, alert.\n</string>
@@ -2006,8 +2007,82 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="flight">FLIGHT</string>
     <string name="fight">FIGHT</string>
     <string name="freeze">FREEZE</string>
-    <string name="window_tolerance_card_1_desc_2">Have you ever filled a party balloon with air? If so, you’ll know what it feels like as the balloon stretches and stretches until it can’t stretch any further. Any more air.... and it pops!\n \n Similarly, our bodies have an optimal emotional range where it functions best. We call this our “Window of Tolerance”. When we are in our Window of Tolerance, we feel like we can deal with whatever’s happening in our life. We might feel stress or pressure, but it doesn’t bother us too much. This is the ideal place to be. But when we are under stress, that window becomes very small. It can stretch a bit, but if our stressors are greater than our window, we will fall outside into one of two opposite states.</string>
+    <string name="window_tolerance_card_1_desc_2">Have you ever filled a party balloon with air? If so, you’ll know what it feels like as the balloon stretches and stretches until it can’t stretch any further. Any more air.... and it pops!\n \n Similarly, our bodies have an optimal emotional range where it functions best. We call this our “Window of Tolerance”. When we are in our Window of Tolerance, we feel like we can deal with whatever’s happening in our life. We might feel stress or pressure, but it doesn’t bother us too much. This is the ideal place to be. But when we are under stress, that window becomes very small. It can stretch a bit, but if our stressors are greater than our window, we will fall outside into one of two opposite states.\n\n</string>
     <string name="window_tolerance_card_2_desc_1">HYPER-AROUSAL: Anxiety, fear, irritation, panic. You might experience the “Fight or Flight” response.</string>
     <string name="window_tolerance_card_2_desc_2">HYPO-AROUSAL: Emotional numbness, exhaustion, depression, dissociation, withdrawal, lethargy. You might experience your body shutting down or freezing.</string>
+    <string name="triggers_our_stress_card_1_desc_1">Situations that require you to give up or lose something that is important to you or if something you feel you deserve is being threatened or taken away…\n\n  What are the reasons why many struggle with adapting to and managing stressful situations?</string>
+    <string name="triggers_our_stress_card_2_heading_1">“I am not ready” \n(for this change/loss)</string>
+    <string name="triggers_our_stress_card_2_desc_2">When we face sudden changes that force us to adapt without being prepared, when things happen unexpectedly, or when we haven\’t wrapped our minds around the situation yet, the brain experiences a slight freeze (like a deer caught in headlights) or strong emotions such as anger, frustration, and even sadness. This is because we lose a sense of control, freedom, and choice.\n</string>
+    <string name="triggers_our_stress_card_3_heading_1">“I don’t like it” (this change/loss)</string>
+    <string name="triggers_our_stress_card_3_desc_2">When we experience stress or changes that are beyond our control, and something important to us (such as time, choices, freedom, relationships) is taken away or limited with little choice, we feel hopeless or helpless. Our initial response is to reject or avoid it because we don\’t like the new reality, leading to struggles in accepting it.</string>
+    <string name="triggers_our_stress_card_4_heading_1">“I don’t feel competent”(to face this change/loss)</string>
+    <string name="triggers_our_stress_card_4_desc_2">We tend to overestimate stress when we don\'t fully understand what\'s going on or when we cannot comprehend it. Examples of this can be mental illness, work pressure, or relationship challenges, which make us feel \“not good enough,\” \“powerless,\” or \“worthless.\” When faced with a challenge that requires us to do something we have never done before, have failed in the past, or fear something bad will happen, the brain experiences flight, freeze, or shutdown. This often comes with strong emotions such as anxiety, fear, feeling overwhelmed, and depression.\n\n</string>
+    <string name="push_away_card_1_heading_1">Push away</string>
+    <string name="push_away_card_1_desc_3">Push away/avoidance response comes from a view\n “Stress is a dangerous enemy!”\n\n It leads us to believe that the stressor is too overwhelming for us to handle…\n</string>
+    <string name="lesson_3_thoughts">Thoughts</string>
+    <string name="push_away_card_2_desc_1">•\u00A0I don’t have the power or strength to face this challenge.\n\n •\u00A0I don\’t have enough experience or knowledge to know what to do.\n\n •\u00A0I don’t have external resources (support or information) to assist me.\n</string>
+    <string name="feelings_enotions_triggered_by_these_thoughts">Feelings (Emotions) triggered by these thoughts\n</string>
+    <string name="push_away_card_2_desc_2">•\u00A0Anxiety\n\n•\u00A0Fear\n\n•\u00A0Worry\n\n•\u00A0Inadequacy\n\n•\u00A0A desire to mentally escape\n</string>
+    <string name="behavioural_responses">Behavioral response\n</string>
+    <string name="push_away_card_2_desc_3">It is natural to avoid stressors, but when this response becomes excessively activated, you may find yourself constantly taking detours in life to evade any person or situation perceived as stressful. This can result in giving up, rejecting, avoiding and potentially losing significant aspects of life, such as relationships, work, grades, time and health…\n\n</string>
+    <string name="push_away_card_3_heading_1">Why does the push away/avoidance response occur?</string>
+    <string name="push_away_card_3_desc_3">This response is common when you have experienced past trauma or intense pain or when your sense of safety was threatened. Traumatic memories (PTSD) can continue to evoke a certain degree of fear, adversely affecting your emotional well-being and derailing your life. It may also stem from feeling judged by others, being labeled as irresponsible, lazy or selfish.\n\n</string>
+    <string name="push_through_card_1_heading_1">Push through</string>
+    <string name="push_through_card_1_desc_3">Push through response comes from a view “Stress is helpful!”\n\n It makes us believe the stressor is necessary for us to get going with our life..\n</string>
+
+    <string name="push_through_card_2_desc_1">•\u00A0Stress helps me to be productive and boosts my energy levels.\n \n •\u00A0It does matter how stressed I am, keep up with the demands of life is top priority\n</string>
+    <string name="push_through_card_2_desc_2">•\u00A0Anger\n\n•\u00A0Irritability\n\n•\u00A0Impatience\n\n•\u00A0Guilty\n\n•\u00A0Drive by fear or anxiety\n\n•\u00A0Restless\n\n•\u00A0Obsessed\n</string>
+    <string name="push_through_card_2_desc_3">It\’s normal to use stress to drive us, but when this response gets activated too often, you will often ignore stress, get overly productive, multitasking, keep yourself too busy, be restless and seek quick relief from stress by unhelpful coping habits.\n\n</string>
+    <string name="push_through_card_3_heading_1">Why does a thorough response happen?</string>
+    <string name="push_through_card_3_desc_3">It’s common when you relate your self-value to productivity and/or believe you have to be a rescuer to others. It’s also common when you are addicted to stress hormones.</string>
+    <string name="additional_anxiety_exercise_summary"><![CDATA[•5 X 30: Jog, walk, bike, or dance three to five times a week for 30 minutes.\n\n•Set small daily goals and aim for daily consistency rather than perfect workouts. It\'s better to walk every day for 15–20 minutes than to wait until the weekend for a 3-hour fitness marathon. Lots of scientific data suggests that frequency is most important.\n\n•Find forms of exercise that are fun or enjoyable. Extroverted people often like classes and group activities. People who are more introverted often prefer solo pursuits.\n\n•Distract yourself with an iPod or other portable media player to download audiobooks, podcasts, or music. Many people find it\'s more fun to exercise while listening to something they enjoy.\n\n•Recruit an “exercise buddy.” It\'s often easier to stick to your exercise routine when you have to stay committed to a friend, partner, or colleague.\n\n•Be patient when you start a new exercise program. Most sedentary people require about four to eight weeks to feel coordinated and sufficiently in shape so that exercise feels easier.\n]]></string>
+    <string name="fitness_tips">Fitness tips</string>
+    <string name="where_can_stress_hide_summary">Let\'s start by understanding how stress affects your mind and body. Understanding yourself and prioritizing your knowledge of stress is the key to better mental health.</string>
+    <string name="let_s_meet_nora_austin_and_melanie">let’s meet Nora, Austin and Melanie</string>
+    <string name="change_response_meet_nora_austin">Meet Nora,Austin and Melanie</string>
+    <string name="defense_response_card_1_desc"><![CDATA[These signs are trickier to identify because we all tend to judge our behaviors as if they are our personality traits or natural tendencies. We usually react to the stressful situation by rigidly controlling things around us, or by disengaging and giving up all control of anything.]]></string>
+    <string name="defense_response_card_1_desc_2">Let\'s take a look at each defense response and see how they are related to your behaviors!</string>
+    <string name="defense_response_fight_dialog_desc">Outbursts of anger, frequent fights, becoming argumentative, inability to ask others for help, inability to say no, acting compulsively, being controlling, judgmental and critical.</string>
+    <string name="fight_lowercase">Fight</string>
+    <string name="flight_lowercase">Flight</string>
+    <string name="defense_response_flight_dialog_desc">Avoiding tasks, commitment and responsibility, being indecisive, feeling invisible and absent, escaping the mind through addictive behaviors, being passive, distant and ignoring phone calls/texts.</string>
+    <string name="defense_response_freez_dialog_desc">Feeling panic, being speechless, engaging in rumination, experiencing racing thoughts and having flashbacks.</string>
+    <string name="freeze_lowercase">Freeze</string>
+    <string name="defense_response_shutdown_dialog_desc">Giving up, feeling disconnected from reality, shutting down for days, neglecting personal hygiene, lacking empathy and being unmotivated.</string>
+    <string name="shutdown_lowercase">Shutdown</string>
+    <string name="stress_hormones_card_1_desc_1">Adrenaline and cortisol work in conjunction with the autonomic nerves to increase blood pressure and heart rate, preparing the body to deal with emergencies. Normally, their levels decrease once a stressful moment passes, leading to a return of blood pressure and heart rate to baseline levels and the body returning to its normal state.</string>
+    <string name="stress_hormones_card_1_desc_2">However, chronic stress introduces persistently high levels of adrenaline and cortisol into the system, that isn’t good for you!</string>
+    <string name="stress_hormones_card_2_desc_1">Excessive cortisol can lead to a loss of neurons in the prefrontal cortex and hippocampus.</string>
+    <string name="stress_hormones_card_2_desc_2">It can also decrease serotonin, commonly known as the “happy hormone,” resulting in feelings of anger, depression and increased sensitivity to physical pain.</string>
+    <string name="in_denial_card_1_desc_3">Denial response come from a view\n“Stress is in my mind!” (It’s imaginary)\n\nIt makes it difficult for us to acknowledge our stress levels and identify the sources of stress.\n</string>
+    <string name="in_denial_card_2_desc_1">•\u00A0Uncertainty about what normal behavior/emotion is (e.g., \“It\’s not that bad!\”)\n\n•\u00A0Being self-critical or judgmental for feeling stressed (e.g., \“I should be positive!\”)\n\n•\u00A0Believing that once a specific event or problem is over, everything will be fine.\n\n</string>
+    <string name="in_denial_card_2_desc_2">•\u00A0All-or-nothing thinking (alternating between feeling super responsible or super irresponsible)\n\n•\u00A0Second-guessing what normal behavior is\n\n•\u00A0Prioritizing loyalty and affirmation\n\n•\u00A0Impulsiveness\n\n•\u00A0Ignoring or pushing away stress\n\n</string>
+    <string name="in_denial__card_2_desc_3">This combination of extreme \“push away/avoidance\” and \“push through\” response patterns occurs when it is challenging for you to acknowledge that you are under stress or identify the exact causes of your stress. Individuals exhibiting this response tend to struggle with following through with changes in stress management, often leading to repetitive cycles.\n\n</string>
+    <string name="in_denial_card_3_heading_1">Why does this response occur?\n\n</string>
+    <string name="in_denial_card_3_desc_3"><![CDATA[This response pattern is often learned in environments characterized by alcoholism, abuse (physical, emotional or sexual), neglect, substance use, emotional immaturity of parents or other forms of family dysfunction. In such environments, family members may be expected to compromise, hold secrets, remain silent, be codependent or rescue one another. Consequently, you don’t mean to intentionally ignore your stress, but it gets pushed aside as you have become accustomed to prioritizing other\’s needs over your own.\n]]></string>
+    <string name="copying_stress_desc_1">Learning what causes or triggers your stress and what coping techniques work for you can help reduce your anxiety and improve your daily life. It may take trial and error to discover what works best for you. Here are some activities you can try when you start to feel overwhelmed:\n</string>
+    <string name="copying_stress_desc_2">•\u00A0Keep a journal.\n\n •\u00A0Practice relaxation exercise (such as deep breathing or visualization) or tips for practicing mindfulness, which is a psychological process of actively paying attention to the present moment.\n\n •\u00A0Exercise, and make sure you are eating healthy, regular meals.\n\n •\u00A0Stick to a sleep routine, and make sure you are getting enough sleep.\n\n •\u00A0Avoid drinking excess caffeine such as soft drinks or coffee.\n\n •\u00A0Identify and challenge your negative and unhelpful thoughts.\n\n •\u00A0Reach out to your friends or family members wh help you cope in a positive way.\n\n</string>
+    <string name="cost_benefit_question_1">1. When stress hits, I am most likely to</string>
+    <string name="cost_benefit_question_1_points"><![CDATA[• Push away and avoid the source of stress\n\n• Push through it with determination and keep going\n\n• Be in denial and pretend the stress doesn’t exist\n\n]]></string>
+    <string name="cost_benefit_question_2">2. What actions do you take correspond to your stress response?</string>
+    <string name="cost_benefit_question_2_desc">Read some examples and write down your comments.</string>
+    <string name="push_away">Push away</string>
+    <string name="my_actions">My actions</string>
+    <string name="cost_benefit_question_3">3. What are the immediate benefits of your action?</string>
+    <string name="cost_benefit_question_4">4.How would you rate the impact- high, medium and low?</string>
+    <string name="cost_benefit_question_5">5. What are the costs of your action (short/long term negative consequences)?</string>
+    <string name="cost_benefit_question_6">6. How would you rate the impact- high, medium and low?</string>
+    <string name="cost_benefit_question_7">7. Comparing the benefits and costs of your action, what do you think is the best long-term solution?</string>
+    <string name="cost_benefit_question_8">8. If you are unsure of the solution, who can help guide you to make the best decision?</string>
+    <string name="save_your_answer_to_journal_entry">Save your answer to journal entry</string>
+    <string name="push_away_dialog_text">•\u00A0Seek distractions or engage in calming activities to relax.\n\n•\u00A0Avoid discussing the stressor with others.\n\n•\u00A0Take breaks to distance yourself from the source of stress.\n\n•\u00A0Isolate yourself from the situation to find emotional relief.</string>
+    <string name="push_throgh_dialog_text"><![CDATA[• Confront the stressful situation head-on.\n\n• Focus on finding solutions and problem solving.\n\n• Maintain determination and persistence to overcome challenges.\n\n• Rally your energy and resources to deal with the stressor effectively.]]></string>
+    <string name="in_denial_dialog_text"><![CDATA[• Act as if the stressor doesn’t exist or isn’t affecting you.\n\n• Minimize the importance of the stressor and downplay its impact.\n\n• Pretend the everything is fine even when facing significant stress.\n\n• Avoid acknowledging or addressing the stress in any meaningful way.]]></string>
+    <string name="go_to_exercises">Go to exercises</string>
+    <string name="causing_your_stress_summary">You can face stressful situations successfully by analyzing your response in three steps:\n\n1. Recognize the stressful situation\n\n2. Identify what you are having difficulty adapting to\n\n3. Understand why are you are struggling to adapt/manage\n\n</string>
+    <string name="cause_your_stress_summary">Let’s see how Nora, Austin and Melanie Recognize, Identify and Understand in order to change their brains’ responses to stressful situations.</string>
+    <string name="your_response_video_summary">The way we view stress (thought), affects the way we feel, and this will affect how we behave and act in a stressful situation. There are 3 common views and responses to stress\n</string>
+    <string name="work_related_stress_quiz">Work-related stress quiz</string>
+
 
 </resources>

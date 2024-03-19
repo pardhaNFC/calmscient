@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+<!-- custom_thumb.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Outer white layer -->
+    <item android:id="@+id/outerLayer">
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/_10sdp"
+            android:height="@dimen/_10sdp" /> <!-- Adjust outer layer height -->
+            <solid android:color="@android:color/white" /> <!-- White color for outer layer -->
+        </shape>
+    </item>
+    <!-- Inner circle (the actual thumb) -->
+    <item android:id="@+id/innerLayer" android:top="@dimen/_5sdp" android:left="@dimen/_5sdp" android:right="@dimen/_5sdp" android:bottom="@dimen/_5sdp">
+        <shape android:shape="oval">
+            <size
+                android:width="@dimen/_30sdp"
+            android:height="@dimen/_30sdp" /> <!-- Adjust inner circle height -->
+            <solid android:color="@color/purple_100" /> <!-- Adjust inner circle color -->
+        </shape>
+    </item>
+</layer-list>
+

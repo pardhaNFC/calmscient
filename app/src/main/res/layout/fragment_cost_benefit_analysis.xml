@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_50sdp"
+    android:orientation="vertical"
+    tools:context=".fragments.CostBenefitAnalysisFragment">
+
+    <LinearLayout
+        android:id="@+id/changing_your_response_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/backIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_manageanxietyicon" />
+
+            <TextView
+                android:id="@+id/tv_title_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/ic_glossary"
+                android:layout_toEndOf="@id/backIcon"
+                android:ellipsize="end"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_16sdp" />
+
+            <ImageView
+                android:id="@+id/ic_glossary"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_filesiconanxiety" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/viewbackgroundcolor" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_desc_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/copying_stress_desc_1"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_1"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_1_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendlight"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/cost_benefit_question_1_points"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_2"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_2_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendlight"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@string/cost_benefit_question_2_desc"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <TextView
+                        android:id="@+id/option_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendmedium"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/push_away"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/purple_100"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <TextView
+                        android:id="@+id/option_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendmedium"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/push_through"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/purple_100"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <TextView
+                        android:id="@+id/option_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendmedium"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/in_denial"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/purple_100"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/my_actions"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/myActions_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:dividerHeight="0.0px"
+                    android:background="@drawable/edittext_grey_background"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/et_myActions"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_grey_background"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:overScrollMode="always"
+                        android:textCursorDrawable="@null"
+                        android:fontFamily="@font/lexendlight"
+                        android:textSize="@dimen/_12sdp"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_3"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/questionThree_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:dividerHeight="0.0px"
+                    android:background="@drawable/edittext_grey_background"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/et_questionThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_grey_background"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:overScrollMode="always"
+                        android:textCursorDrawable="@null"
+                        android:fontFamily="@font/lexendlight"
+                        android:textSize="@dimen/_12sdp"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_4"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints"/>
+
+
+                 <androidx.cardview.widget.CardView
+                    android:id="@+id/seekBarCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    tools:ignore="MissingConstraints">
+
+                    <!-- Step Numbers Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <!-- Step Number TextViews -->
+                        <TextView
+                            android:id="@+id/step1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lexendmedium"
+                            android:gravity="left"
+                            android:text="Low"
+                            android:textColor="@color/black_head"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/step2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lexendmedium"
+                            android:gravity="center"
+                            android:text="Medium"
+                            android:textColor="@color/black_head"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/step3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lexendmedium"
+                            android:gravity="right"
+                            android:text="High"
+                            android:textColor="@color/black_head"
+                            android:textSize="@dimen/_12sdp" />
+
+
+
+                    </LinearLayout>
+
+                    <!-- SeekBar -->
+                    <SeekBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:max="3"
+                        android:progress="1"
+                        android:progressDrawable="@drawable/curved_progress_bar"
+                        android:progressTint="@color/btn_gradient_color"
+                        android:thumbTint="@color/btn_gradient_color" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_5"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/questionFive_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:dividerHeight="0.0px"
+                    android:background="@drawable/edittext_grey_background"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/et_questionFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_grey_background"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:overScrollMode="always"
+                        android:textCursorDrawable="@null"
+                        android:fontFamily="@font/lexendlight"
+                        android:textSize="@dimen/_12sdp"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_6"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/seekBarQuestionSixCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_description"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    tools:ignore="MissingConstraints">
+
+                    <!-- Step Numbers Container -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <!-- Step Number TextViews -->
+                        <TextView
+                            android:id="@+id/step1Question6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lexendmedium"
+                            android:gravity="left"
+                            android:text="Low"
+                            android:textColor="@color/black_head"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/step2Question6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lexendmedium"
+                            android:gravity="center"
+                            android:text="Medium"
+                            android:textColor="@color/black_head"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:id="@+id/step3Question6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/lexendmedium"
+                            android:gravity="right"
+                            android:text="High"
+                            android:textColor="@color/black_head"
+                            android:textSize="@dimen/_12sdp" />
+
+
+
+                    </LinearLayout>
+
+                    <!-- SeekBar -->
+                    <SeekBar
+                        android:id="@+id/progressBarQuestion6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:max="3"
+                        android:progress="1"
+                        android:progressDrawable="@drawable/curved_progress_bar"
+                        android:progressTint="@color/btn_gradient_color"
+                        android:thumbTint="@color/btn_gradient_color" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_7"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/questionSeven_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:dividerHeight="0.0px"
+                    android:background="@drawable/edittext_grey_background"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/et_questionSeven"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_grey_background"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:overScrollMode="always"
+                        android:textCursorDrawable="@null"
+                        android:fontFamily="@font/lexendlight"
+                        android:textSize="@dimen/_12sdp"/>
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tv_cost_benefit_analysis_question_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendmedium"
+                    android:textColor="@color/black_head"
+                    android:text="@string/cost_benefit_question_8"
+                    android:textSize="@dimen/_15sdp"
+                    tools:ignore="MissingConstraints"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/questionEight_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:dividerHeight="0.0px"
+                    android:background="@drawable/edittext_grey_background"
+                    tools:ignore="MissingConstraints">
+
+                    <EditText
+                        android:id="@+id/et_questionEight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/edittext_grey_background"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:overScrollMode="always"
+                        android:textCursorDrawable="@null"
+                        android:fontFamily="@font/lexendlight"
+                        android:textSize="@dimen/_12sdp"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tv_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/save_your_answer_to_journal_entry"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_save_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_need_help">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/yesButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:background="@drawable/button_border"
+                        android:fontFamily="@font/lexendregular"
+                        android:gravity="center"
+                        android:text="@string/yes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

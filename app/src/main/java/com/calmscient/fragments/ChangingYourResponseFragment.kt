@@ -59,11 +59,11 @@ class ChangingYourResponseFragment : Fragment() {
         val yourStressAdapter = ChangingYourResponseAdapter(CardItemDiffCallback1())
         setupRecyclerView(yourStressRecyclerView, yourStressItems, yourStressAdapter)
 
-         // Data for Understanding your stress response
-         val stressResponseItems = cardItemsStressResponse()
-         val stressResponseRecyclerView: RecyclerView = binding.recyclerViewUnderstandingStressResponse
-         val stressResponseAdapter = ChangingYourResponseAdapter(CardItemDiffCallback1())
-         setupRecyclerView(stressResponseRecyclerView, stressResponseItems, stressResponseAdapter)
+        // Data for Understanding your stress response
+        val stressResponseItems = cardItemsStressResponse()
+        val stressResponseRecyclerView: RecyclerView = binding.recyclerViewUnderstandingStressResponse
+        val stressResponseAdapter = ChangingYourResponseAdapter(CardItemDiffCallback1())
+        setupRecyclerView(stressResponseRecyclerView, stressResponseItems, stressResponseAdapter)
 
         // Data for Resources
         val resourceItems = cardItemsResource()
@@ -102,24 +102,24 @@ class ChangingYourResponseFragment : Fragment() {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Where+can+stress+hide.mp4",
             contentIcons = listOf(R.drawable.stress_signs_1),
             description = getString(R.string.where_can_stress_hide),
             isCompleted = true,
             heading = null,
-            summary = null,
+            summary = getString(R.string.where_can_stress_hide_summary),
             dialogText = null
         )
 
         val card2 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = null, // Replace with actual audio resource ID
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.stress_signs_2),
             description = getString(R.string.meet_nora_austin),
             isCompleted = false,
             heading = null,
-            summary = null,
+            summary = getString(R.string.let_s_meet_nora_austin_and_melanie),
             dialogText = null
         )
         val card3 = CardItemDataClass(
@@ -135,7 +135,7 @@ class ChangingYourResponseFragment : Fragment() {
         )
         val card4 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.LESSON),
-            audioResourceId = null, // Replace with actual audio resource ID
+            audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.stress_signs_4),
             description = getString(R.string.what_are_physiological_signs_of_stress),
@@ -146,7 +146,7 @@ class ChangingYourResponseFragment : Fragment() {
         )
         val card5 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.QUIZ),
-            audioResourceId = null, // Replace with actual audio resource ID
+            audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.changing_response_quiz),
             description = getString(R.string.your_emotional_signs_of_stress_quiz),
@@ -168,7 +168,7 @@ class ChangingYourResponseFragment : Fragment() {
         )
         val card7 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.LESSON),
-            audioResourceId = null, // Replace with actual audio resource ID
+            audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.stress_signs_7),
             description = getString(R.string.window_of_tolerance),
@@ -179,7 +179,7 @@ class ChangingYourResponseFragment : Fragment() {
         )
         val card8 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.QUIZ),
-            audioResourceId = null, // Replace with actual audio resource ID
+            audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.changing_response_quiz),
             description = getString(R.string.your_behavioral_signs_of_stress_quiz),
@@ -207,30 +207,30 @@ class ChangingYourResponseFragment : Fragment() {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety+(1).mp4",
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/What+is+causing+you+stress.mp4",
             contentIcons = listOf(R.drawable.cause_your_stress_1),
             description = getString(R.string.what_is_causing_you_stress),
             isCompleted = false,
-            heading = getString(R.string.what_is_causing_you_stress),
-            summary = getString(R.string.lesson1_video_summary),
-            dialogText = getString(R.string.lesson1_video1_description),
+            heading = null,
+            summary = getString(R.string.causing_your_stress_summary),
+            dialogText = null,
         )
 
         val card2 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.AUDIO),
-            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
+            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Interview+Nora+Austin+and+Melanie.wav",
             videoResourceId = null,
             contentIcons = listOf(R.drawable.cause_your_stress_2),
             description = getString(R.string.what_s_causing_nora_austin_and_melanie_stress),
             isCompleted = false,
             heading = null,
-            summary = null,
+            summary = getString(R.string.cause_your_stress_summary),
             dialogText = null
         )
 
         val card3 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.LESSON),
-            audioResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav",
+            audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.cause_your_stress_3),
             description = getString(R.string.what_triggers_our_stress),
@@ -258,12 +258,12 @@ class ChangingYourResponseFragment : Fragment() {
         val card1 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.VIDEO),
             audioResourceId = null,
-            videoResourceId = null,
+            videoResourceId = "https://calmscient-videos.s3.ap-south-1.amazonaws.com/What+is+your+response+to+stress_.mp4",// need to replace with the original URL
             contentIcons = listOf(R.drawable.stress_response_1),
             description = getString(R.string.what_is_your_response_to_stress),
             isCompleted = false,
             heading = null,
-            summary = null,
+            summary = getString(R.string.your_response_video_summary),
             dialogText = null
         )
 

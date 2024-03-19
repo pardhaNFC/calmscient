@@ -242,9 +242,9 @@ class ManageAnxietyFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText),
         )
 
         val card2 = CardItemDataClass(
@@ -631,7 +631,7 @@ class ManageAnxietyFragment : Fragment() {
             description = getString(R.string.meet_nora_austin),
             isCompleted = false,
             heading = null,
-            summary = null,
+            summary = getString(R.string.meet_nora_austrin_melanie_description),
             dialogText = null
         )
         // Add more CardItemDataClass instances as needed for Lesson1
@@ -839,9 +839,9 @@ class ManageAnxietyFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText),
         )
 
         val card2 = CardItemDataClass(

@@ -72,6 +72,7 @@ class PlayerActivity : AppCompatActivity() {
             val contentUri = intent.getStringExtra("mediaResourceId")
             val headingText = intent.getStringExtra("heading")
             val summaryText = intent.getStringExtra("summary")
+            val titleText = intent.getStringExtra("titleText")
             val videoResourceId = intent.getIntExtra("videoResourceId", 0)
             val mediaItem = if (contentUri != null) {
                 MediaItem.fromUri(contentUri)
@@ -87,12 +88,16 @@ class PlayerActivity : AppCompatActivity() {
             // player.prepare()
             if (savePrefData.getAslLanguageState() == true) {
                 heading.visibility = View.GONE
+                dialog_img.visibility = View.GONE
+                summary.visibility = View.GONE
             } else {
                 heading.visibility = View.VISIBLE
+                dialog_img.visibility = View.VISIBLE
+                summary.visibility = View.VISIBLE
             }
             heading.text = headingText
             summary.text = summaryText
-            title.text = headingText
+            title.text = titleText
             /*if(headingText == getString(R.string.make_plan_card6_text2)){
                 summary.text = getString(R.string.video_calming_skills)
             }*/
@@ -129,6 +134,7 @@ class PlayerActivity : AppCompatActivity() {
 
             val headingText = intent.getStringExtra("heading")
             val summaryText = intent.getStringExtra("summary")
+            val titleText = intent.getStringExtra("titleText")
             playerView.player = player
 
             if (dialogText.equals("null")) {
@@ -138,12 +144,18 @@ class PlayerActivity : AppCompatActivity() {
             }
             if (savePrefData.getAslLanguageState() == true) {
                 heading.visibility = View.GONE
+                dialog_img.visibility = View.GONE
+                summary.visibility = View.GONE
+
             } else {
                 heading.visibility = View.VISIBLE
+                dialog_img.visibility = View.VISIBLE
+                summary.visibility = View.VISIBLE
             }
             heading.text = headingText
             summary.text = summaryText
             title.text = headingText
+            title.text = titleText
             // Initialize your binding and control setup after re-binding views
             initializeBinding()
             initializeVideoControl()

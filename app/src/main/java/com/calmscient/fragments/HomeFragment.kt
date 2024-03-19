@@ -204,7 +204,7 @@ class HomeFragment : Fragment() {
             description = getString(R.string.meet_nora_austin),
             isCompleted = false,
             heading = null,
-            summary = null,
+            summary = getString(R.string.meet_nora_austrin_melanie_description),
             dialogText = null
         )
 
@@ -227,9 +227,9 @@ class HomeFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText)
         )
 
         // Add more CardItemDataClass instances as needed for lesson3
@@ -256,7 +256,7 @@ class HomeFragment : Fragment() {
             description = getString(R.string.make_plan_card6_text2),
             isCompleted = false,
             heading = getString(R.string.make_plan_card6_text2),
-            summary = null,
+            summary =  getString(R.string.lesson4_video_summary),
             dialogText = getString(R.string.lesson4_video1_description)
         )
 
@@ -291,9 +291,9 @@ class HomeFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText)
         )
 
         // Add more CardItemDataClass instances as needed for lesson3
@@ -356,9 +356,9 @@ class HomeFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText)
         )
 
         // Add more CardItemDataClass instances as needed for lesson3
@@ -379,7 +379,7 @@ class HomeFragment : Fragment() {
         adapter.submitList(cardItems)
     }
 
-     fun onBackPressed() {
+    fun onBackPressed() {
         showExitConfirmationDialog()
     }
     private fun showExitConfirmationDialog() {
