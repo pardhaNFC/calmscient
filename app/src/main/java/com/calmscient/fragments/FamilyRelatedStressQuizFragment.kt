@@ -23,23 +23,41 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.CommonDialog
+import com.calmscient.adapters.OnOptionSelectedListener
 import com.calmscient.adapters.QuestionAdapter
+import com.calmscient.adapters.YourStressTriggerQuizAdapter
+import com.calmscient.databinding.FragmentFamilyRelatedStressQuizBinding
 import com.calmscient.databinding.FragmentGadQuestionsBinding
+import com.calmscient.databinding.FragmentPersonalHealthStressQuizBinding
+import com.calmscient.databinding.FragmentWorkRelatedStressQuizBinding
 import com.calmscient.utils.common.SavePreferences
 
-class GADQuestionFragment : Fragment() {
+class FamilyRelatedStressQuizFragment : Fragment() , OnOptionSelectedListener {
 
-    private lateinit var questionAdapter: QuestionAdapter
-    private lateinit var binding: FragmentGadQuestionsBinding
+    private lateinit var questionAdapter: YourStressTriggerQuizAdapter
+    private lateinit var binding: FragmentFamilyRelatedStressQuizBinding
     lateinit var savePrefData: SavePreferences
     private var currentQuestionIndex = 0
     private var isPreviousButtonVisible = false
     private var isNextButtonVisible = true // Initially, show the next button
 
+
+    override fun onOptionSelected(isYesSelected: Boolean) {
+        if (isYesSelected) {
+            val fragmentTag = this.javaClass.simpleName // Get the fragment tag
+            val fragment = YesOptionFragment.newInstance(fragmentTag,getString(R.string.family_related_stress_quiz))
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.flFragment, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
-            loadFragment(ScreeningsFragment())
+            loadFragment(YourStressTriggersQuizFragment())
         }
     }
 
@@ -48,41 +66,36 @@ class GADQuestionFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentGadQuestionsBinding.inflate(inflater, container, false)
+        binding = FragmentFamilyRelatedStressQuizBinding.inflate(inflater, container, false)
         savePrefData = SavePreferences(requireContext())
         binding.previousQuestion.visibility = View.GONE
+
+        binding.backIcon.setOnClickListener{
+            loadFragment(YourStressTriggersQuizFragment())
+        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Get the selected title from arguments
-        val selectedTitle = arguments?.getString("selectedTitle")
 
-        // Update your UI with the selected title
-        if (!selectedTitle.isNullOrEmpty()) {
-            binding.tvGadtitle.text = selectedTitle
-        }
+        val fragment = this
         val titleG = "GAD-7"
         val questions: List<Question> = generateDummyQuestions()
         val totalQuestions = questions.size
-        questionAdapter = QuestionAdapter(requireContext(), questions, titleG)
-        binding.questionsRecyclerView.apply {
+        questionAdapter = YourStressTriggerQuizAdapter(requireContext(), questions, titleG,fragment)
+        binding.familyStressQuizRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
         }
-// Create an instance of the CommonDialog class
-        val commonDialog = CommonDialog(requireContext())
 
-        // Show a dialog when the fragment is loaded
-        commonDialog.showDialog(getString(R.string.gad))
         // Use a PagerSnapHelper for snapping to a question's position
         val pagerSnapHelper = PagerSnapHelper()
-        pagerSnapHelper.attachToRecyclerView(binding.questionsRecyclerView)
+        pagerSnapHelper.attachToRecyclerView(binding.familyStressQuizRecyclerView)
         setupNavigation()
         binding.backIcon.setOnClickListener {
-            loadFragment(ScreeningsFragment())
+            loadFragment(YourStressTriggersQuizFragment())
         }
     }
 
@@ -90,68 +103,65 @@ class GADQuestionFragment : Fragment() {
         val questionsList = mutableListOf<Question>()
         if (savePrefData.getSpanLanguageState() == true) {
             val questionTexts = listOf(
-                "1. Se ha sentido nervioso(a), ansioso(a) o con los nervios de punta",
-                "2. No ha sido capaz de parar o controlar su preocupación",
-                "3. Se ha preocupado demasiado por motivos diferentes",
-                "4. Ha tenido dificultad para relajarse",
-                "5. Se ha sentido tan inquieto(a) que no ha podido quedarse quieto(a)",
-                "6. Se ha molestado o irritado fácilmente",
-                "7. Ha tenido miedo de que algo terrible fuera a pasar",
-                "8. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                "1. Have you experienced changes in any relationships lately? (Loss of loved ones/miscarriage/infertility, separation/divorce/break-up, or infidelity)",
+                "2. Have you been dealing with a family member's health issue? Either physical or mental?",
+                "3. Are you experiencing difficulty parenting?",
+                "4. Are you experiencing difficulty with blended family related matters?",
+                "5. Have you been having a hard time dealing with the care giving of a family member?",
+                "6. Are you experiencing difficulty in dealing with a child’s behavioral or attitude problems?",
+                "7. Have you been having marital problems? (communication, financial, trust and infidelity, sexual issues, in-law conflicts, emotional/physical abuse, addiction/dependency)"
             )
+
             for (index in questionTexts.indices) {
                 val questionText = questionTexts[index]
-                val options = if (index == 7) {
+                val options = if (index == 0) {
                     // Custom options for the 8th question
                     listOf(
-                        "No es nada difícil",//Not difficult at all
-                        "Algo dificil",//Somewhat difficult
-                        "Very difficult", //Very difficult
-                        "Extremadamente difícil"//Extremely difficult
+                        "Yes",
+                        "No"
                     )
                 } else {
                     // Default options for other questions
                     listOf(
-                        "Ningún día",
-                        "Varios días",
-                        "Más de la mitad de los días",
-                        "Casi todos los días "
+                        "No",
+                        "Sometimes",
+                        "Often",
+                        "Constantly"
                     )
                 }
                 questionsList.add(Question(questionText, options))
             }
-        } else {
+        } else{
             val questionTexts = listOf(
-                "1. Feeling nervous, anxious or on edge",
-                "2. Not being able to stop or control worrying",
-                "3. Worrying too much about different things",
-                "4. Trouble relaxing",
-                "5. Being so restless that it is hard to sit still",
-                "6. Becoming easily annoyed or irritable",
-                "7. Feeling afraid as if something awful might happen"
-                //"8. If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?"
+                "1. Have you experienced changes in any relationships lately? (Loss of loved ones/miscarriage/infertility, separation/divorce/break-up, or infidelity)",
+                "2. Have you been dealing with a family member's health issue? Either physical or mental?",
+                "3. Are you experiencing difficulty parenting?",
+                "4. Are you experiencing difficulty with blended family related matters?",
+                "5. Have you been having a hard time dealing with the care giving of a family member?",
+                "6. Are you experiencing difficulty in dealing with a child’s behavioral or attitude problems?",
+                "7. Have you been having marital problems? (communication, financial, trust and infidelity, sexual issues, in-law conflicts, emotional/physical abuse, addiction/dependency)"
             )
+
             for (index in questionTexts.indices) {
                 val questionText = questionTexts[index]
-                val options = if (index == 7) {
+                val options = if (index == 0) {
                     // Custom options for the 8th question
                     listOf(
-                        "Not difficult at all",
-                        "Somewhat difficult",
-                        "Very difficult",
-                        "Extremely difficult"
+                        "Yes",
+                        "No"
                     )
                 } else {
                     // Default options for other questions
                     listOf(
-                        "Not at all",
-                        "Several days",
-                        "More than half the days",
-                        "Nearly every day"
+                        "No",
+                        "Sometimes",
+                        "Often",
+                        "Constantly"
                     )
                 }
                 questionsList.add(Question(questionText, options))
             }
+
         }
 
         return questionsList
@@ -166,7 +176,7 @@ class GADQuestionFragment : Fragment() {
             navigateToQuestion(currentQuestionIndex - 1)
         }
 
-        binding.questionsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        binding.familyStressQuizRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
 
@@ -189,10 +199,11 @@ class GADQuestionFragment : Fragment() {
         val totalQuestions = questions.size
         if (index in 0 until questions.size) {
             currentQuestionIndex = index
-            binding.questionsRecyclerView.smoothScrollToPosition(currentQuestionIndex)
+            binding.familyStressQuizRecyclerView.smoothScrollToPosition(currentQuestionIndex)
         } else {
             if (currentQuestionIndex == questions.size - 1) {
                 loadFragment(ResultsFragment())
+                //showResult()
             }
         }
     }
@@ -204,8 +215,9 @@ class GADQuestionFragment : Fragment() {
 
     private fun loadFragment(fragment: Fragment) {
         val bundle = Bundle()
-        bundle.putString("description", getString(R.string.your_results))
-        bundle.putInt(ResultsFragment.SOURCE_SCREEN_KEY, ResultsFragment.SCREENINGS_FRAGMENT)
+        bundle.putString("description", getString(R.string.your_stress_triggers_quiz))
+        bundle.putString("title", "Your family-related stress report")
+        bundle.putInt(ResultsFragment.SOURCE_SCREEN_KEY, ResultsFragment.YOUR_STRESS_FRAGMENT)
         fragment.arguments = bundle
 
         val transaction = requireActivity().supportFragmentManager.beginTransaction()

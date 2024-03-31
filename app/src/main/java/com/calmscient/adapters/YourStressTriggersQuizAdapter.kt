@@ -22,6 +22,9 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.di.remote.StressTriggerDataClass
+import com.calmscient.fragments.FamilyRelatedStressQuizFragment
+import com.calmscient.fragments.PersonalHealthStressQuizFragment
+import com.calmscient.fragments.SocialRelationshipStressQuizFragment
 import com.calmscient.fragments.WorkRelatedStressQuizFragment
 
 class YourStressTriggersQuizAdapter(private val items: List<StressTriggerDataClass>) :
@@ -58,32 +61,32 @@ class YourStressTriggersQuizAdapter(private val items: List<StressTriggerDataCla
                 }
 
                 1 -> {
-//                    val fragment = GADQuestionFragment()
-//                    activity.supportFragmentManager.beginTransaction()
-//                        .replace(R.id.flFragment, fragment)
-//                        .addToBackStack(null)
-//                        .commit()
-                    Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
+                    val fragment = PersonalHealthStressQuizFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
+                    //Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
                 }
 
                 2 -> {
-//                    val fragment = AUDITQuestionFragment()
-//                    activity.supportFragmentManager.beginTransaction()
-//                        .replace(R.id.flFragment, fragment)
-//                        .addToBackStack(null)
-//                        .commit()
+                    val fragment = FamilyRelatedStressQuizFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
 
-                    Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
+                   // Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
                 }
 
                 3 -> {
-//                    val fragment = DASTQuestionFragment()
-//                    activity.supportFragmentManager.beginTransaction()
-//                        .replace(R.id.flFragment, fragment)
-//                        .addToBackStack(null)
-//                        .commit()
+                    val fragment = SocialRelationshipStressQuizFragment()
+                    activity.supportFragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, fragment)
+                        .addToBackStack(null)
+                        .commit()
 
-                    Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(activity, "Coming soon", Toast.LENGTH_SHORT).show()
                 }
                 // Add more cases for other card positions if needed
                 else -> {

@@ -12,7 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.fragments.Question
 
-class YourStressTriggerQuizAdapter(private val context: Context, private val questions: List<Question>, val title: String) :
+interface OnOptionSelectedListener {
+    fun onOptionSelected(isYesSelected: Boolean)
+}
+
+class YourStressTriggerQuizAdapter(private val context: Context, private val questions: List<Question>, val title: String,private val listener: OnOptionSelectedListener) :
     RecyclerView.Adapter<YourStressTriggerQuizAdapter.YourStressTriggerQuizHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): YourStressTriggerQuizHolder {
@@ -33,13 +37,12 @@ class YourStressTriggerQuizAdapter(private val context: Context, private val que
 
         fun bindOptions(options: List<String>, selectedOptionIndex: Int) {
             val optionsAdapter = OptionsAdapter(options, selectedOptionIndex) { clickedPosition ->
+                val isYesSelected = options[clickedPosition] == "Yes"
+                listener.onOptionSelected(isYesSelected)
                 questions[adapterPosition].selectedOption = clickedPosition
                 notifyDataSetChanged()
             }
             optionsRecyclerView.adapter = optionsAdapter
-            //descTextView.visibility = if (isFirstItem) View.VISIBLE else View.GONE
-
-
         }
     }
 

@@ -209,6 +209,11 @@ class AUDITQuestionFragment : Fragment() {
     }
 
     private fun loadFragment(fragment: Fragment) {
+        val bundle = Bundle()
+        bundle.putString("description", getString(R.string.your_results))
+        bundle.putInt(ResultsFragment.SOURCE_SCREEN_KEY, ResultsFragment.SCREENINGS_FRAGMENT)
+        fragment.arguments = bundle
+
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)
         transaction.addToBackStack(null)

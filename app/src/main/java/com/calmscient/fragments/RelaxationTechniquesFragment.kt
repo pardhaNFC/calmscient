@@ -21,6 +21,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.calmscient.R
+import com.calmscient.activities.DashboardActivity
 import com.calmscient.activities.GlossaryActivity
 import com.calmscient.databinding.FragmentCopyingWithStressBinding
 import com.calmscient.databinding.FragmentCostBenefitAnalysisBinding
@@ -29,7 +30,9 @@ import com.calmscient.databinding.FragmentManagingStressToReduceAnxietyBinding
 import com.calmscient.databinding.FragmentRelaxationTechniquesBinding
 import com.calmscient.databinding.FragmentStressHormonesBinding
 
-
+interface ExerciseInteractionListener {
+    fun onExerciseSelected()
+}
 class RelaxationTechniquesFragment : Fragment() {
     private lateinit var binding: FragmentRelaxationTechniquesBinding
 
@@ -57,7 +60,23 @@ class RelaxationTechniquesFragment : Fragment() {
             requireActivity().onBackPressed()
         }
 
+        binding.goToExerciseLayout.setOnClickListener{
+            navigateToExerciseFragment()
+        }
         return view
+
+    }
+    private fun loadFragment(fragment: Fragment) {
+        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.flFragment, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+    private fun navigateToExerciseFragment() {
+        val dashboardActivity = activity as? DashboardActivity
+        dashboardActivity?.onExerciseSelected()
+        loadFragment(ExerciseFragment())
     }
 
 

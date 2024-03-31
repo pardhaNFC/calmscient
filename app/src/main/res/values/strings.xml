@@ -2083,6 +2083,9 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="cause_your_stress_summary">Let’s see how Nora, Austin and Melanie Recognize, Identify and Understand in order to change their brains’ responses to stressful situations.</string>
     <string name="your_response_video_summary">The way we view stress (thought), affects the way we feel, and this will affect how we behave and act in a stressful situation. There are 3 common views and responses to stress\n</string>
     <string name="work_related_stress_quiz">Work-related stress quiz</string>
+    <string name="personal_health_stress_quiz">Personal health stress quiz</string>
+    <string name="family_related_stress_quiz">Family-related stress quiz</string>
+    <string name="social_relationship_stress_quiz">Social/relationship stress quiz</string>
 
 
 </resources>

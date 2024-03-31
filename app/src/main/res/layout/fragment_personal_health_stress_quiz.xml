@@ -16,7 +16,7 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="@dimen/_50sdp"
-    tools:context=".fragments.WorkRelatedStressQuizFragment">
+    tools:context=".fragments.PersonalHealthStressQuizFragment">
 
     <!-- Toolbar at the top -->
     <!--<androidx.appcompat.widget.Toolbar
@@ -28,7 +28,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/workRelatedRelativeLayout"
+        android:id="@+id/personalStressQuizRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_5sdp"
@@ -49,14 +49,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/work_related_stress_quiz"
             android:layout_toStartOf="@id/ic_glossary"
             android:layout_toEndOf="@id/backIcon"
-
             android:ellipsize="end"
             android:fontFamily="@font/lexendmedium"
             android:gravity="center"
             android:maxLines="1"
+            android:text="@string/personal_health_stress_quiz"
             android:textAlignment="center"
             android:textColor="#424242"
             android:textSize="@dimen/_16sdp" />
@@ -85,11 +84,11 @@
         android:layout_below="@+id/separator">-->
 
     <com.calmscient.utils.NonSwipeRecyclerView
-        android:id="@+id/workRelatedStressRecyclerView"
+        android:id="@+id/personalStressQuizRecyclerView"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_height="@dimen/_400sdp"
-        android:layout_below="@+id/workRelatedRelativeLayout"
+        android:layout_below="@+id/personalStressQuizRelativeLayout"
         android:layout_marginHorizontal="@dimen/_10sdp" />
     <!--</ScrollView>-->
 

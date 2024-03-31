@@ -20,14 +20,24 @@ import androidx.fragment.app.Fragment
 import com.calmscient.R
 import com.calmscient.fragments.DiscoveryFragment
 import com.calmscient.fragments.ExerciseFragment
+import com.calmscient.fragments.ExerciseInteractionListener
 import com.calmscient.fragments.HomeFragment
 import com.calmscient.utils.common.SavePreferences
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 
-class DashboardActivity : AppCompat() {
+class DashboardActivity : AppCompat(), ExerciseInteractionListener {
     lateinit var bottomNav: BottomNavigationView
     lateinit var savePrefData: SavePreferences
+
+    override fun onExerciseSelected() {
+        bottomNav.menu.findItem(R.id.home).setIcon(R.drawable.ic_home)
+        bottomNav.menu.findItem(R.id.discovery).setIcon(R.drawable.ic_discovery_un)
+        bottomNav.menu.findItem(R.id.exercises).setIcon(R.drawable.ic_exercises_selected)
+        bottomNav.menu.findItem(R.id.rewards).setIcon(R.drawable.ic_rewards_un)
+
+        bottomNav.menu.findItem(R.id.title)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)

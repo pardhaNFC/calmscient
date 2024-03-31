@@ -23,13 +23,14 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.activities.CommonDialog
+import com.calmscient.adapters.OnOptionSelectedListener
 import com.calmscient.adapters.QuestionAdapter
 import com.calmscient.adapters.YourStressTriggerQuizAdapter
 import com.calmscient.databinding.FragmentGadQuestionsBinding
 import com.calmscient.databinding.FragmentWorkRelatedStressQuizBinding
 import com.calmscient.utils.common.SavePreferences
 
-class WorkRelatedStressQuizFragment : Fragment() {
+class WorkRelatedStressQuizFragment : Fragment() , OnOptionSelectedListener {
 
     private lateinit var questionAdapter: YourStressTriggerQuizAdapter
     private lateinit var binding: FragmentWorkRelatedStressQuizBinding
@@ -63,11 +64,11 @@ class WorkRelatedStressQuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        val fragment = this
         val titleG = "GAD-7"
         val questions: List<Question> = generateDummyQuestions()
         val totalQuestions = questions.size
-        questionAdapter = YourStressTriggerQuizAdapter(requireContext(), questions, titleG)
+        questionAdapter = YourStressTriggerQuizAdapter(requireContext(), questions, titleG,fragment)
         binding.workRelatedStressRecyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             adapter = questionAdapter
@@ -82,11 +83,22 @@ class WorkRelatedStressQuizFragment : Fragment() {
         }
     }
 
+    override fun onOptionSelected(isYesSelected: Boolean) {
+        if (isYesSelected) {
+            val fragmentTag = this.javaClass.simpleName // Get the fragment tag
+            val fragment = YesOptionFragment.newInstance(fragmentTag,getString(R.string.work_related_stress_quiz))
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.flFragment, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
+    }
+
     private fun generateDummyQuestions(): List<Question> {
         val questionsList = mutableListOf<Question>()
         if (savePrefData.getSpanLanguageState() == true) {
             val questionTexts = listOf(
-                "1. Have you lost your job recently? Or have been unemployed? (*if user answer YES, jump to the section 2)",
+                "1. Have you lost your job recently? Or have been unemployed? ",
                 "2. Do you feel unsatisfied with work?",
                 "3. Do you feel your job description or responsibilities at work are unclear?",
                 "4. Do you feel overwhelmed by your job or workload?",
@@ -116,7 +128,7 @@ class WorkRelatedStressQuizFragment : Fragment() {
             }
         } else{
             val questionTexts = listOf(
-                "1. Have you lost your job recently? Or have been unemployed? (*if user answer YES, jump to the section 2)",
+                "1. Have you lost your job recently? Or have been unemployed? ",
                 "2. Do you feel unsatisfied with work?",
                 "3. Do you feel your job description or responsibilities at work are unclear?",
                 "4. Do you feel overwhelmed by your job or workload?",
@@ -198,7 +210,9 @@ class WorkRelatedStressQuizFragment : Fragment() {
     private fun loadFragment(fragment: Fragment) {
 
         val bundle = Bundle()
-        bundle.putString("description", getString(R.string.work_related_stress_quiz))
+        bundle.putString("description", getString(R.string.your_stress_triggers_quiz))
+        bundle.putString("title", "Your work-related stress report")
+        bundle.putInt(ResultsFragment.SOURCE_SCREEN_KEY, ResultsFragment.YOUR_STRESS_FRAGMENT)
         fragment.arguments = bundle
 
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
