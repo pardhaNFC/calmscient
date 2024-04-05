@@ -2086,6 +2086,12 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="personal_health_stress_quiz">Personal health stress quiz</string>
     <string name="family_related_stress_quiz">Family-related stress quiz</string>
     <string name="social_relationship_stress_quiz">Social/relationship stress quiz</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="your_email_phone_number">Your email/Phone number</string>
+    <string name="forgot_password_screen_text">Forgot password</string>
+    <string name="please_enter_your_email_to_reset_the_password">Please enter your email to reset the password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="verify_code">Verify Code</string>
 
 
 </resources>

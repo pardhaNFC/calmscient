@@ -24,6 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calmscient"
         tools:targetApi="33">
+
         <activity
             android:name=".activities.UserMoodActivity"
             android:configChanges="orientation"
@@ -38,6 +39,7 @@
             android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -54,7 +56,6 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
-
         <activity
             android:name=".activities.WeeklySummary"
             android:configChanges="locale|orientation"
@@ -68,6 +69,28 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity android:name=".base.BaseActivity" />
+
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:exported="false"
+            android:label="Medications"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.VerifyForgotPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:exported="false"
+            android:label="Medications"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.SetNewPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:exported="false"
+            android:label="Medications"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.MedicationsActivity"
             android:configChanges="locale|orientation"
@@ -202,9 +225,11 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
+
         <receiver
             android:name=".receivers.AlarmReceiver"
             android:enabled="true"
             android:exported="false" />
     </application>
+
 </manifest>

@@ -51,6 +51,9 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             navigateToDayScreen()
         }
+        binding.forgotPass.setOnClickListener{
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
+        }
         binding.userName.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 binding.userName.hint = "xxxxxxxxxxxx@gmail.com"
