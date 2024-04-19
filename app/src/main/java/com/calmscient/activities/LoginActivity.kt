@@ -12,32 +12,44 @@
 package com.calmscient.activities
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputType
+import android.text.TextWatcher
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
-import androidx.activity.ComponentActivity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
-import com.calmscient.fragments.DiscoveryFragment
-import com.calmscient.fragments.UserMoodFragment
-import com.calmscient.utils.ContextUtils
+import com.calmscient.di.remote.response.LoginResponse
+import com.calmscient.utils.CommonAPICallDialog
+import com.calmscient.viewmodels.LoginViewModel
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import java.util.Locale
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
+import com.calmscient.utils.CustomProgressDialog
 
-
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: LayoutLoginBinding
+    @Inject
+    lateinit var loginViewModel: LoginViewModel
+    private lateinit var  responseDate :  LoginResponse
+    private lateinit var customProgressDialog: CustomProgressDialog
+
+    private lateinit var commonDialog: CommonAPICallDialog
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +60,11 @@ class LoginActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
+        customProgressDialog = CustomProgressDialog(this)
+
+        commonDialog = CommonAPICallDialog(this)
+
         binding.btnLogin.setOnClickListener {
             navigateToDayScreen()
         }
@@ -99,6 +116,61 @@ class LoginActivity : AppCompatActivity() {
             }
             false
         }
+
+
+
+
+        loginViewModel.loginResultLiveData.observe(this) { isValidLogin ->
+            if (isValidLogin) {
+                // Login successful, navigate to the next screen
+                responseDate = loginViewModel.responseData.value!!
+                handleLoginResponse(responseDate)
+
+                Log.d("LoginActivity Response","${responseDate.loginDetails}")
+                navigateToDayScreen()
+            } else {
+
+                loginViewModel.failureResponseData.value?.let { failureMessage ->
+                    failureMessage.statusResponse.responseMessage.let {
+                        commonDialog.showDialog(
+                            it
+                        )
+                    }
+                }
+                //Snackbar.make(binding.root, "Invalid username or password", Snackbar.LENGTH_SHORT).show()
+            }
+        }
+        loginViewModel.loadingLiveData.observe(this) { isLoading ->
+            if (isLoading) {
+                customProgressDialog.show("Loading...")
+            } else {
+
+                customProgressDialog.dialogDismiss()
+            }
+        }
+
+        // Adding a text change listener to the email and password fields
+        binding.userName.addTextChangedListener(inputTextWatcher)
+        binding.editPassword.addTextChangedListener(inputTextWatcher)
+
+        binding.errorIconUsername.setOnClickListener { showInfoMessage("Please enter Email ") }
+        binding.errorIconPassword.setOnClickListener { showInfoMessage("Please enter Password ") }
+
+
+        // Set up your views and listeners as before
+        binding.btnLogin.setOnClickListener {
+            val username = binding.userName.text.toString()
+            val password = binding.editPassword.text.toString()
+
+            if (username.isEmpty()) {
+                showError(binding.userNameTextInputLayout, "Please enter Email")
+            } else if (password.isEmpty()) {
+                showError(binding.TinPassword, "Please enter Password")
+            } else {
+                loginViewModel.loginUser(username, password)
+            }
+        }
+
         val passwordToggle = findViewById<TextInputLayout>(R.id.Tin_password)
         val passwordEditText = findViewById<TextInputEditText>(R.id.edit_password)
         passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
@@ -114,6 +186,25 @@ class LoginActivity : AppCompatActivity() {
             }
         }
     }
+    private val inputTextWatcher = object : TextWatcher {
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+        override fun afterTextChanged(s: Editable?) {
+            // Clear error and remove tint when text is entered
+            binding.userNameTextInputLayout.error = null
+            binding.TinPassword.error = null
+        }
+    }
+
+    private fun showError(textInputLayout: TextInputLayout, errorMessage: String) {
+        textInputLayout.error = errorMessage
+        textInputLayout.editText?.background?.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP)
+    }
+
+    private fun showInfoMessage(message: String) {
+        Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
+    }
 
     override fun onBackPressed() {
         finishAffinity();
@@ -121,5 +212,8 @@ class LoginActivity : AppCompatActivity() {
     }
     private fun navigateToDayScreen() {
         startActivity(Intent(this, UserMoodActivity::class.java))
+    }
+    private fun handleLoginResponse(response: LoginResponse) {
+        loginViewModel.setResponseDate(response)
     }
 }

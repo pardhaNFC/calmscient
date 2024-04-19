@@ -9,18 +9,9 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient
+package com.calmscient.di.remote.request
 
-import android.app.Application
-import androidx.appcompat.app.AppCompatDelegate
-import dagger.hilt.android.HiltAndroidApp
-
-
-@HiltAndroidApp
-class AppController : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-    }
-}
+data class LoginRequest(
+    val username: String,
+    val password: String
+)

@@ -9,18 +9,24 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient
+package com.calmscient.di.remote.response
 
-import android.app.Application
-import androidx.appcompat.app.AppCompatDelegate
-import dagger.hilt.android.HiltAndroidApp
+data class MenuStatusResponse(
+    val responseCode: Int,
+    val responseMessage: String
+)
 
+data class MenuItem(
+    val menuId: Int,
+    val menuName: String,
+    val menuType: String,
+    val parentId: Int,
+    val isChildExist: Int,
+    val seqOrder: String
+)
 
-@HiltAndroidApp
-class AppController : Application() {
+data class MenuItemsResponse(
+    val statusResponse: MenuStatusResponse,
+    val menuItems: List<MenuItem>
+)
 
-    override fun onCreate() {
-        super.onCreate()
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-    }
-}

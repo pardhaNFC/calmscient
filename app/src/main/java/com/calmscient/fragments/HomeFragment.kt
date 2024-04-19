@@ -18,6 +18,7 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StyleSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,8 +31,14 @@ import androidx.compose.ui.text.font.Typeface
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.text.buildSpannedString
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.calmscient.ApiService
 import com.calmscient.R
 import com.calmscient.activities.SettingsActivity
 import com.calmscient.activities.WeeklySummary
@@ -41,19 +48,45 @@ import com.calmscient.adapters.VideoAdapter
 import com.calmscient.adapters.VideoItem
 import com.calmscient.di.remote.CardItemDataClass
 import com.calmscient.di.remote.ItemType
+import com.calmscient.di.remote.response.LoginResponse
+import com.calmscient.repository.LoginRepository
 import com.calmscient.utils.common.SavePreferences
+import com.calmscient.viewmodels.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var tvProfileName: TextView
     private lateinit var introductionAdapter: AnxietyIntroductionAdapter
     private lateinit var profileImage: ImageView
     lateinit var savePrefData: SavePreferences
+    @Inject
+    lateinit var loginViewModel: LoginViewModel
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        //val model = ViewModelProviders.of(requireActivity())[LoginViewModel::class.java]
+        loginViewModel.loginResponse.observe(viewLifecycleOwner, Observer { response ->
+
+            loginViewModel.loginResponse.observe(viewLifecycleOwner) { response ->
+                response?.loginDetails?.clientID?.let { clientId ->
+                    Log.d( "Home Fragment Client ID", clientId.toString())
+                }
+            }
+            if(response != null)
+            {
+                var clientId = response.loginDetails.clientID
+                Log.d("Home Fargement Client ID ","$clientId")
+            }
+        })
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,6 +94,16 @@ class HomeFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
+
+        loginViewModel.responseData.observe(viewLifecycleOwner) { response ->
+            response?.loginDetails?.clientID?.let { clientId ->
+                Log.d("Home Fragment Client ID", clientId.toString())
+            }
+        }
+        Log.d("HomeFragment", loginViewModel.responseData.value.toString())
+
+
+        //Log.d("HomeFragment","${loginResponse.loginDetails.patientLocationID}")
         /*   val videoItems = listOf(
                VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/L1-1-Neuropsychology+of+Anxiety.mp4", R.drawable.thumbnail1),
                VideoItem("https://calmscient-videos.s3.ap-south-1.amazonaws.com/Lesson+1-2+Meet+Nora%2C+Austin+and+Melanie.wav", R.drawable.thumbnail2),

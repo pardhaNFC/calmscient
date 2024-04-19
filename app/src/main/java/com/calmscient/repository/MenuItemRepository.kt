@@ -9,18 +9,17 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient
+package com.calmscient.repository
 
-import android.app.Application
-import androidx.appcompat.app.AppCompatDelegate
-import dagger.hilt.android.HiltAndroidApp
+import com.calmscient.ApiService
+import com.calmscient.di.remote.request.MenuItemRequest
+import com.calmscient.di.remote.response.MenuItemsResponse
+import retrofit2.Call
+import javax.inject.Inject
 
-
-@HiltAndroidApp
-class AppController : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+class MenuItemRepository @Inject constructor(private val apiService: ApiService)
+{
+    fun fetchMenuItems(menuItemRequest: MenuItemRequest): Call<MenuItemsResponse> {
+        return apiService.fetchMenuItems(menuItemRequest)
     }
 }

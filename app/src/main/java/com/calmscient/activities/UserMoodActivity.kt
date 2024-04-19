@@ -5,17 +5,49 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.calmscient.R
 import com.calmscient.databinding.FragmentUserMoodBinding
+import com.calmscient.di.remote.response.LoginResponse
 import com.calmscient.fragments.HomeFragment
+import com.calmscient.repository.LoginRepository
+import com.calmscient.utils.CommonAPICallDialog
+import com.calmscient.utils.CustomProgressDialog
+import com.calmscient.viewmodels.LoginViewModel
+import com.calmscient.viewmodels.MenuItemViewModel
 import java.util.Calendar
 import java.util.Date
+import androidx.lifecycle.Observer
+import com.calmscient.ApiService
+import com.calmscient.AppController
+import com.calmscient.retrofit.ApplicationModule
+import com.calmscient.retrofit.ApplicationModule.provideApiService
+import com.calmscient.retrofit.ApplicationModule.provideRetrofit
+import dagger.hilt.android.AndroidEntryPoint
+import okhttp3.OkHttpClient
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class UserMoodActivity : AppCompat(), View.OnClickListener {
     lateinit var binding: FragmentUserMoodBinding
+    @Inject
+    lateinit var menuItemsViewModel: MenuItemViewModel
+    @Inject
+    lateinit var apiService: ApiService
+     lateinit var loginViewModel: LoginViewModel
+     lateinit var loginRepository: LoginRepository
+
+    private lateinit var customProgressDialog: CustomProgressDialog
+    private lateinit var commonDialog: CommonAPICallDialog
+    private var patientId: Int = 0
+    private var clientId: Int = 0
+    private var plid: Int = 0
+    private var parentId: Int = 0
+
+
     private var isImage1Visible = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +58,35 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
+
+        // Create LoginRepository with injected ApiService
+         loginRepository = LoginRepository(apiService)
+
+        // Create LoginViewModel with LoginRepository
+        loginViewModel = LoginViewModel(loginRepository)
+
+       var res =  loginViewModel.responseData.value
+        Log.d("UserMoodActiivity","$res")
+
+        loginViewModel.loginResultLiveData.observe(this) { isValidLogin ->
+            if (isValidLogin) {
+                // Login successful
+                val responseData: LoginResponse? = loginViewModel.responseData.value
+                // Handle the response data
+                if (responseData != null) {
+                    val patientId = responseData.loginDetails.patientID
+                    val clientId = responseData.loginDetails.clientID
+                    val plid = responseData.loginDetails.patientLocationID
+
+                    Log.d("UserMoodActivity", "Patient ID: $patientId, Client ID: $clientId, plid: $plid")
+                }
+            } else {
+                // Login failed
+                // Handle login failure, if needed
+            }
+        }
+
         greeting()
         /*binding.imgMBad.setOnClickListener {
             if(isImage1Visible){
@@ -70,6 +131,11 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
         //button click
         binding.btnSave.setOnClickListener(this)
         binding.btnSkip.setOnClickListener(this)
+
+        //API calling
+        //menuItemsViewModel.fetchMenuItems(plid, parentId, patientId, clientId)
+
+
     }
 
     fun greeting() {

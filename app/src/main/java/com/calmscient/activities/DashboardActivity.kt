@@ -25,7 +25,9 @@ import com.calmscient.fragments.HomeFragment
 import com.calmscient.utils.common.SavePreferences
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DashboardActivity : AppCompat(), ExerciseInteractionListener {
     lateinit var bottomNav: BottomNavigationView
     lateinit var savePrefData: SavePreferences
