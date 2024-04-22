@@ -39,13 +39,15 @@ import com.google.android.material.textfield.TextInputLayout
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import com.calmscient.utils.CustomProgressDialog
+import com.calmscient.utils.common.CommonClass
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     lateinit var binding: LayoutLoginBinding
+
     @Inject
     lateinit var loginViewModel: LoginViewModel
-    private lateinit var  responseDate :  LoginResponse
+    private lateinit var responseDate: LoginResponse
     private lateinit var customProgressDialog: CustomProgressDialog
 
     private lateinit var commonDialog: CommonAPICallDialog
@@ -68,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             navigateToDayScreen()
         }
-        binding.forgotPass.setOnClickListener{
+        binding.forgotPass.setOnClickListener {
             startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
         binding.userName.setOnFocusChangeListener(OnFocusChangeListener { view, hasFocus ->
@@ -117,16 +119,13 @@ class LoginActivity : AppCompatActivity() {
             false
         }
 
-
-
-
         loginViewModel.loginResultLiveData.observe(this) { isValidLogin ->
             if (isValidLogin) {
                 // Login successful, navigate to the next screen
                 responseDate = loginViewModel.responseData.value!!
                 handleLoginResponse(responseDate)
 
-                Log.d("LoginActivity Response","${responseDate.loginDetails}")
+                Log.d("LoginActivity Response", "${responseDate.loginDetails}")
                 navigateToDayScreen()
             } else {
 
@@ -159,33 +158,48 @@ class LoginActivity : AppCompatActivity() {
 
         // Set up your views and listeners as before
         binding.btnLogin.setOnClickListener {
+
             val username = binding.userName.text.toString()
             val password = binding.editPassword.text.toString()
 
-            if (username.isEmpty()) {
-                showError(binding.userNameTextInputLayout, "Please enter Email")
-            } else if (password.isEmpty()) {
-                showError(binding.TinPassword, "Please enter Password")
+            if (!username.isEmpty() && !password.isEmpty()) {
+                if (CommonClass.isNetworkAvailable(this)) {
+                    loginViewModel.loginUser(username, password)
+                } else {
+                    CommonClass.showInternetDialogue(this)
+                }
             } else {
-                loginViewModel.loginUser(username, password)
+                showError(binding.TinPassword, "Enter Valid Username & Password")
             }
+            /*
+
+                        else if (password.isEmpty()) {
+                            showError(binding.TinPassword, "Please enter Password")
+                        } else {
+                            loginViewModel.loginUser(username, password)
+                        }*/
         }
 
         val passwordToggle = findViewById<TextInputLayout>(R.id.Tin_password)
         val passwordEditText = findViewById<TextInputEditText>(R.id.edit_password)
-        passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
+        passwordToggle.passwordVisibilityToggleDrawable =
+            ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
         passwordToggle.setEndIconOnClickListener {
             if (passwordEditText.inputType == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
                 // Hide the password
-                passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
+                passwordEditText.inputType =
+                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                passwordToggle.passwordVisibilityToggleDrawable =
+                    ContextCompat.getDrawable(this, R.drawable.ic_eye_close)
             } else {
                 // Show the password
                 passwordEditText.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                passwordToggle.passwordVisibilityToggleDrawable = ContextCompat.getDrawable(this, R.drawable.ic_eye_open)
+                passwordToggle.passwordVisibilityToggleDrawable =
+                    ContextCompat.getDrawable(this, R.drawable.ic_eye_open)
             }
         }
     }
+
     private val inputTextWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -210,9 +224,11 @@ class LoginActivity : AppCompatActivity() {
         finishAffinity();
         finish()
     }
+
     private fun navigateToDayScreen() {
         startActivity(Intent(this, UserMoodActivity::class.java))
     }
+
     private fun handleLoginResponse(response: LoginResponse) {
         loginViewModel.setResponseDate(response)
     }
