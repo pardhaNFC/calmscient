@@ -26,39 +26,45 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.res.ResourcesCompat
 import com.calmscient.R
 
-class CustomProgressDialog {
-    var context: Context
-    lateinit var dialog: Dialog
-    lateinit var loading_title: TextView
-    lateinit var cardview: CardView
-    lateinit var progress: ProgressBar
 
-    constructor(context: Context) {
-        this.context = context
+
+class CustomProgressDialog(private val context: Context) {
+    private lateinit var dialog: Dialog
+    private lateinit var loadingTitle: TextView
+    private lateinit var cardView: CardView
+    private lateinit var progressBar: ProgressBar
+
+    init {
+        createDialog()
     }
 
-    fun show(title:String){
-
+    private fun createDialog() {
         dialog = Dialog(context)
-
         dialog.setContentView(R.layout.layout_custom_progress)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        loading_title = dialog.findViewById<TextView>(R.id.cp_title)
-        cardview = dialog.findViewById(R.id.cp_cardview)
-        progress = dialog.findViewById(R.id.cp_pbar)
+        loadingTitle = dialog.findViewById(R.id.cp_title)
+        cardView = dialog.findViewById(R.id.cp_cardview)
+        progressBar = dialog.findViewById(R.id.cp_pbar)
 
-        loading_title.text = title
-        // Card Color
-        cardview.setCardBackgroundColor(Color.parseColor("#70000000"))
-        setColorFilter(progress.indeterminateDrawable, ResourcesCompat.getColor(context.resources, R.color.colorPrimary, null))
-
-
-        // Text Color
-        loading_title.setTextColor(Color.WHITE)
+        // Set default properties
+        cardView.setCardBackgroundColor(Color.parseColor("#70000000"))
+        setColorFilter(progressBar.indeterminateDrawable, ResourcesCompat.getColor(context.resources, R.color.colorPrimary, null))
+        loadingTitle.setTextColor(Color.WHITE)
         dialog.setCancelable(false)
-        dialog.create()
-        dialog.show()
+    }
+
+    fun show(title: String) {
+        loadingTitle.text = title
+        if (!dialog.isShowing) {
+            dialog.show()
+        }
+    }
+
+    fun dialogDismiss() {
+        if (dialog.isShowing) {
+            dialog.dismiss()
+        }
     }
 
     private fun setColorFilter(drawable: Drawable, color: Int) {
@@ -69,9 +75,4 @@ class CustomProgressDialog {
             drawable.setColorFilter(color, PorterDuff.Mode.SRC_ATOP)
         }
     }
-
-    fun dialogDismiss(){
-        dialog.dismiss()
-    }
-
 }

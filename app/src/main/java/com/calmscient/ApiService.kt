@@ -13,11 +13,15 @@ package com.calmscient
 
 import com.calmscient.di.remote.request.MenuItemRequest
 import com.calmscient.di.remote.request.LoginRequest
+import com.calmscient.di.remote.request.ScreeningRequest
 import com.calmscient.di.remote.response.MenuItemsResponse
 import com.calmscient.di.remote.response.LoginResponse
+import com.calmscient.di.remote.response.ScreeningResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
+import retrofit2.http.Url
+
 
 interface ApiService {
 
@@ -25,6 +29,13 @@ interface ApiService {
     fun loginUser(@Body requestBody: LoginRequest): Call<LoginResponse>
 
 
-    @POST("identity/menu/fetchMenus")
-    fun fetchMenuItems(@Body requestBody: MenuItemRequest): Call<MenuItemsResponse>
+//    @POST("identity/menu/fetchMenus")
+//    fun fetchMenuItems(@Body requestBody: MenuItemRequest): Call<MenuItemsResponse>
+
+    @POST
+    fun fetchMenuItems(@Url url: String, @Body requestBody: MenuItemRequest): Call<MenuItemsResponse>
+
+    @POST("patients/screening/getScreeningListForMobile")
+    fun fetchScreeningsMenuItems(@Body requestBody: ScreeningRequest): Call<ScreeningResponse>
 }
+

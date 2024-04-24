@@ -19,13 +19,16 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object ApplicationModule {
 
+    // Define base URLs for different API endpoints
     private const val BASE_URL = "http://20.197.5.97:8082/"
+   // private const val BASE_URL_MENU = "http://20.197.5.97:8083/"
 
     @Provides
     @Singleton

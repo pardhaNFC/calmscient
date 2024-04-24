@@ -46,12 +46,24 @@ import com.calmscient.adapters.AnxietyIntroductionAdapter
 import com.calmscient.adapters.CardItemDiffCallback
 import com.calmscient.adapters.VideoAdapter
 import com.calmscient.adapters.VideoItem
+import com.calmscient.databinding.FragmentHomeBinding
+import com.calmscient.databinding.LayoutLoginBinding
 import com.calmscient.di.remote.CardItemDataClass
 import com.calmscient.di.remote.ItemType
+import com.calmscient.di.remote.request.MenuItemRequest
 import com.calmscient.di.remote.response.LoginResponse
+import com.calmscient.di.remote.response.MenuItem
+import com.calmscient.di.remote.response.MenuItemsResponse
 import com.calmscient.repository.LoginRepository
+import com.calmscient.utils.CommonAPICallDialog
+import com.calmscient.utils.CustomProgressDialog
+import com.calmscient.utils.common.CommonClass
+import com.calmscient.utils.common.JsonUtil
 import com.calmscient.utils.common.SavePreferences
+import com.calmscient.utils.common.SharedPreferencesUtil
 import com.calmscient.viewmodels.LoginViewModel
+import com.calmscient.viewmodels.MenuItemViewModel
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -61,6 +73,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
+    lateinit var binding: FragmentHomeBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var tvProfileName: TextView
     private lateinit var introductionAdapter: AnxietyIntroductionAdapter
@@ -68,24 +81,23 @@ class HomeFragment : Fragment() {
     lateinit var savePrefData: SavePreferences
     @Inject
     lateinit var loginViewModel: LoginViewModel
+    @Inject
+    lateinit var menuViewModel: MenuItemViewModel
+    @Inject
+    lateinit var myMedicalMenuViewModel: MenuItemViewModel
+    private lateinit var myMedicalMenuResponseDate: List<MenuItem>
+    private lateinit var menuResponseDate: List<MenuItem>
+    private lateinit var menuItemRequest: MenuItemRequest
+    private lateinit var customProgressDialog: CustomProgressDialog
+    private lateinit var commonDialog: CommonAPICallDialog
+    private lateinit var name :TextView
+    private lateinit var mediaclRecords :TextView
+    private lateinit var weeklySummary :TextView
+    private lateinit var favorites :TextView
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //val model = ViewModelProviders.of(requireActivity())[LoginViewModel::class.java]
-        loginViewModel.loginResponse.observe(viewLifecycleOwner, Observer { response ->
-
-            loginViewModel.loginResponse.observe(viewLifecycleOwner) { response ->
-                response?.loginDetails?.clientID?.let { clientId ->
-                    Log.d( "Home Fragment Client ID", clientId.toString())
-                }
-            }
-            if(response != null)
-            {
-                var clientId = response.loginDetails.clientID
-                Log.d("Home Fargement Client ID ","$clientId")
-            }
-        })
     }
 
     override fun onCreateView(
@@ -94,13 +106,65 @@ class HomeFragment : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
+        mediaclRecords=rootView.findViewById<TextView>(R.id.my_medical_records)
+        favorites=rootView.findViewById<TextView>(R.id.favorites)
+        weeklySummary=rootView.findViewById<TextView>(R.id.weekly_summary)
+        name=rootView.findViewById<TextView>(R.id.name)
+        customProgressDialog = CustomProgressDialog(requireContext())
 
-        loginViewModel.responseData.observe(viewLifecycleOwner) { response ->
-            response?.loginDetails?.clientID?.let { clientId ->
-                Log.d("Home Fragment Client ID", clientId.toString())
+        commonDialog = CommonAPICallDialog(requireContext())
+
+        val jsonString = SharedPreferencesUtil.getData(requireContext(), "loginResponse", "")
+        val loginResponse = JsonUtil.fromJsonString<LoginResponse>(jsonString)
+
+        Log.d("Login Response in HF","$loginResponse")
+
+
+        // menuViewModel.fetchMenuItems(1,1,1,1)
+        if (CommonClass.isNetworkAvailable(requireContext())) {
+
+            //menuItemRequest = MenuItemRequest(1,0,1,1)
+            menuViewModel.fetchMenuItems(loginResponse.loginDetails.patientLocationID,0,loginResponse.loginDetails.patientID,loginResponse.loginDetails.clientID)
+        } else {
+            CommonClass.showInternetDialogue(requireContext())
+        }
+
+        menuViewModel.loadingLiveData.observe(requireActivity()) { isLoading ->
+            if (isLoading) {
+                customProgressDialog.show("Loading...")
+            } else {
+
+                customProgressDialog.dialogDismiss()
             }
         }
-        Log.d("HomeFragment", loginViewModel.responseData.value.toString())
+
+        menuViewModel.resultLiveData.observe(requireActivity()){isSuccess ->
+            if(isSuccess)
+            {
+
+                menuResponseDate = menuViewModel.menuItemsLiveData.value!!
+
+                val jsonString = JsonUtil.toJsonString(menuResponseDate)
+                SharedPreferencesUtil.saveData(requireContext(), "menuResponse", jsonString)
+
+
+                if (menuResponseDate.size >= 2) {
+                    name.text = loginResponse.loginDetails.firstName
+                    mediaclRecords.text = menuResponseDate[0].menuName
+                    weeklySummary.text = menuResponseDate[1].menuName
+                    favorites.text = menuResponseDate[2].menuName
+                }
+            }
+        }
+
+
+//        loginViewModel.responseData.observe(viewLifecycleOwner) { response ->
+//            Log.d("HomeFragment", "Response Data received: $response")
+//            response?.loginDetails?.clientID?.let { clientId ->
+//                Log.d("Home Fragment Client ID", clientId.toString())
+//            }
+//        }
+
 
 
         //Log.d("HomeFragment","${loginResponse.loginDetails.patientLocationID}")
@@ -178,7 +242,30 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
         myMedicalRecordsLayout.setOnClickListener {
-            loadFragment(MedicalRecordsFragment())
+
+            if (CommonClass.isNetworkAvailable(requireContext())) {
+
+                //menuItemRequest = MenuItemRequest(1,0,1,1)
+                myMedicalMenuViewModel.fetchMenuItems(loginResponse.loginDetails.patientLocationID,menuResponseDate[0].menuId,loginResponse.loginDetails.patientID,loginResponse.loginDetails.clientID)
+            } else {
+                CommonClass.showInternetDialogue(requireContext())
+            }
+
+            myMedicalMenuViewModel.resultLiveData.observe(requireActivity()){isSuccess ->
+                if(isSuccess)
+                {
+
+                    myMedicalMenuResponseDate = myMedicalMenuViewModel.menuItemsLiveData.value!!
+
+                    Log.d("MyMedicalRecords123","$myMedicalMenuResponseDate")
+                    val jsonString = JsonUtil.toJsonString(myMedicalMenuResponseDate)
+                    SharedPreferencesUtil.saveData(requireContext(), "myMedicalMenuResponse", jsonString)
+
+                    loadFragment(MedicalRecordsFragment())
+                }
+            }
+
+
             /*val intent = Intent(activity, CalendarViewActivity::class.java)
             startActivity(intent)*/
         }

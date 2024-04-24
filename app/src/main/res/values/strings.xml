@@ -2092,6 +2092,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="please_enter_your_email_to_reset_the_password">Please enter your email to reset the password</string>
     <string name="reset_password">Reset Password</string>
     <string name="verify_code">Verify Code</string>
+    <string name="completed">Completed</string>
 
 
 </resources>

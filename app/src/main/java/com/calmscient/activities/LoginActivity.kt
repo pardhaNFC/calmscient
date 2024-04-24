@@ -25,9 +25,11 @@ import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import com.calmscient.R
 import com.calmscient.databinding.LayoutLoginBinding
 import com.calmscient.di.remote.response.LoginResponse
@@ -40,6 +42,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import com.calmscient.utils.CustomProgressDialog
 import com.calmscient.utils.common.CommonClass
+import com.calmscient.utils.common.JsonUtil
+import com.calmscient.utils.common.SharedPreferencesUtil
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
@@ -68,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
         commonDialog = CommonAPICallDialog(this)
 
         binding.btnLogin.setOnClickListener {
-            navigateToDayScreen()
+            //navigateToDayScreen()
         }
         binding.forgotPass.setOnClickListener {
             startActivity(Intent(this, ForgotPasswordActivity::class.java))
@@ -125,8 +129,12 @@ class LoginActivity : AppCompatActivity() {
                 responseDate = loginViewModel.responseData.value!!
                 handleLoginResponse(responseDate)
 
+                val jsonString = JsonUtil.toJsonString(responseDate)
+                SharedPreferencesUtil.saveData(this, "loginResponse", jsonString)
+
+
                 Log.d("LoginActivity Response", "${responseDate.loginDetails}")
-                navigateToDayScreen()
+                navigateToDayScreen(responseDate)
             } else {
 
                 loginViewModel.failureResponseData.value?.let { failureMessage ->
@@ -225,7 +233,8 @@ class LoginActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun navigateToDayScreen() {
+    private fun navigateToDayScreen(response: LoginResponse) {
+        loginViewModel.setResponseDate(response)
         startActivity(Intent(this, UserMoodActivity::class.java))
     }
 

@@ -58,6 +58,7 @@ class LoginViewModel @Inject constructor(private val loginRepository: LoginRepos
                     if (isValidLogin) {
                         responseData.postValue(response.body()) // Store response data
                         responseData.value?.let { setResponseDate(it) }
+                        Log.d("LoginViewModel", "Response Data: ${response.body()}")
                     } else {
                         failureResponseData.postValue(response.body())
                     }

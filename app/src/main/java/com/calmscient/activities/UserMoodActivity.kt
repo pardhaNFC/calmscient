@@ -24,8 +24,6 @@ import androidx.lifecycle.Observer
 import com.calmscient.ApiService
 import com.calmscient.AppController
 import com.calmscient.retrofit.ApplicationModule
-import com.calmscient.retrofit.ApplicationModule.provideApiService
-import com.calmscient.retrofit.ApplicationModule.provideRetrofit
 import dagger.hilt.android.AndroidEntryPoint
 import okhttp3.OkHttpClient
 import javax.inject.Inject
@@ -37,8 +35,8 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
     lateinit var menuItemsViewModel: MenuItemViewModel
     @Inject
     lateinit var apiService: ApiService
-     lateinit var loginViewModel: LoginViewModel
-     lateinit var loginRepository: LoginRepository
+    @Inject lateinit var loginViewModel: LoginViewModel
+     private lateinit var loginRepository: LoginRepository
 
     private lateinit var customProgressDialog: CustomProgressDialog
     private lateinit var commonDialog: CommonAPICallDialog
@@ -59,15 +57,8 @@ class UserMoodActivity : AppCompat(), View.OnClickListener {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-
-        // Create LoginRepository with injected ApiService
-         loginRepository = LoginRepository(apiService)
-
-        // Create LoginViewModel with LoginRepository
-        loginViewModel = LoginViewModel(loginRepository)
-
-       var res =  loginViewModel.responseData.value
-        Log.d("UserMoodActiivity","$res")
+       val res =  loginViewModel.responseData.value
+        Log.d("UserMoodActivity","$res")
 
         loginViewModel.loginResultLiveData.observe(this) { isValidLogin ->
             if (isValidLogin) {

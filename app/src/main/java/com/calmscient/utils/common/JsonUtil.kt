@@ -9,11 +9,19 @@
  *      Author : @Pardha Saradhi
  */
 
-package com.calmscient.di.remote.request
+package com.calmscient.utils.common
 
-data class MenuItemRequest(
-    var plid:Int,
-    var parentId : Int,
-    var patientId : Int,
-    var clientId : Int,
-)
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
+object JsonUtil {
+    val gson = Gson()
+
+    fun <T> toJsonString(data: T): String {
+        return gson.toJson(data)
+    }
+
+    public inline fun <reified T> fromJsonString(json: String): T {
+        return gson.fromJson(json, object : TypeToken<T>() {}.type)
+    }
+}

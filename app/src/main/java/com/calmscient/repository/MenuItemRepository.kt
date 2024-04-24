@@ -17,9 +17,20 @@ import com.calmscient.di.remote.response.MenuItemsResponse
 import retrofit2.Call
 import javax.inject.Inject
 
-class MenuItemRepository @Inject constructor(private val apiService: ApiService)
-{
+class MenuItemRepository @Inject constructor(private val apiService: ApiService) {
+    private var baseUrl: String = "http://20.197.5.97:8083/identity/menu/fetchMenus"
+
+    fun setBaseUrl(newUrl: String) {
+        baseUrl = newUrl
+    }
+
     fun fetchMenuItems(menuItemRequest: MenuItemRequest): Call<MenuItemsResponse> {
-        return apiService.fetchMenuItems(menuItemRequest)
+        val newMenuItemRequest = MenuItemRequest(
+            menuItemRequest.plid,
+            menuItemRequest.parentId,
+            menuItemRequest.patientId,
+            menuItemRequest.clientId
+        )
+        return apiService.fetchMenuItems(baseUrl,newMenuItemRequest)
     }
 }

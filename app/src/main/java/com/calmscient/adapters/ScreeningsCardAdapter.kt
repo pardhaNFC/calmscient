@@ -18,6 +18,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
 import com.calmscient.fragments.AUDITQuestionFragment
@@ -27,7 +29,7 @@ import com.calmscient.fragments.HistoryFragment
 import com.calmscient.fragments.QuestionFragment
 import com.calmscient.fragments.ScreeningsCardItem
 
-class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
+class ScreeningsCardAdapter(private val fragmentManager: FragmentManager, private val items: List<ScreeningsCardItem>) :
     RecyclerView.Adapter<ScreeningsCardAdapter.CardViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -50,52 +52,26 @@ class ScreeningsCardAdapter(private val items: List<ScreeningsCardItem>) :
             activity.supportFragmentManager.beginTransaction()
                 .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
         }*/
-        holder.imageHistory.setOnClickListener { v ->
-            val activity = v!!.context as AppCompatActivity
-            //val fragment = ResultsFragment()
+        holder.imageHistory.setOnClickListener {
             val fragment = HistoryFragment()
-            activity.supportFragmentManager.beginTransaction()
-                .replace(R.id.flFragment, fragment).addToBackStack(null).commit()
+            fragmentManager.beginTransaction()
+                .replace(R.id.flFragment, fragment)
+                .addToBackStack(null)
+                .commit()
         }
+
         holder.cardViewLayout.setOnClickListener {
-            val activity = holder.itemView.context as AppCompatActivity
+            val context = holder.itemView.context
+            val fragmentTransaction = fragmentManager.beginTransaction()
             when (position) {
-                0 -> {
-                    val fragment = QuestionFragment()
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.flFragment, fragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
-
-                1 -> {
-                    val fragment = GADQuestionFragment()
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.flFragment, fragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
-
-                2 -> {
-                    val fragment = AUDITQuestionFragment()
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.flFragment, fragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
-
-                3 -> {
-                    val fragment = DASTQuestionFragment()
-                    activity.supportFragmentManager.beginTransaction()
-                        .replace(R.id.flFragment, fragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
+                0 -> fragmentTransaction.replace(R.id.flFragment, QuestionFragment())
+                1 -> fragmentTransaction.replace(R.id.flFragment, GADQuestionFragment())
+                2 -> fragmentTransaction.replace(R.id.flFragment, AUDITQuestionFragment())
+                3 -> fragmentTransaction.replace(R.id.flFragment, DASTQuestionFragment())
                 // Add more cases for other card positions if needed
-                else -> {
-                    // Handle click for other cards
-                }
+                else -> {}
             }
+            fragmentTransaction.addToBackStack(null).commit()
         }
     }
 

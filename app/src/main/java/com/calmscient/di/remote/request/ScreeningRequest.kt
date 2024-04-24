@@ -11,9 +11,8 @@
 
 package com.calmscient.di.remote.request
 
-data class MenuItemRequest(
-    var plid:Int,
-    var parentId : Int,
-    var patientId : Int,
-    var clientId : Int,
+data class ScreeningRequest(
+    val patientId: Int,
+    val clientId: Int,
+    val patientLocationId: Int
 )
