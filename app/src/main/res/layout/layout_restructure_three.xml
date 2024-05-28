@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollCardsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/calmingBodyLayout0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textCalmTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendsemibold"
+                    android:text="@string/anxiety_restructure_screen3_one"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_14sdp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/includedLayout32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen3_checkOne"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:text="@string/anxiety_biased_card_catas"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_biased_card_perfect"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_biased_card_negative"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_biased_card_personalizeBlame"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_biased_card_jumping"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen3_checkEight"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/custom_textBox_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_biased_card_emotional"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnReviewTypes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/button_border"
+                    android:fontFamily="@font/lexendregular"
+                    android:text="@string/anxiety_restructure_screen3_button_name"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

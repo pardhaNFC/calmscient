@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_yourself_again"
+        android:fontFamily="@font/lexendsemibold"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/black_head"
+        android:layout_margin="@dimen/_10sdp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/now_that_you_ve_adjusted_your_biased_thinking_how"
+        android:fontFamily="@font/lexendlight"
+        android:textSize="@dimen/_12sdp"
+        android:layout_weight="1"
+        android:textColor="@color/black_head"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/seekBarCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        tools:ignore="MissingConstraints">
+
+        <!-- Step Numbers Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <!-- Step Number TextViews -->
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="1"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="2"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="3"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="4"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="5"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:max="5"
+            android:progress="1"
+            android:progressDrawable="@drawable/curved_progress_bar"
+            android:progressTint="@color/btn_gradient_color"
+            android:thumbTint="@color/btn_gradient_color" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/tv_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarCardView"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_20sdp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/iKnow_they_re_not_true"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            android:textColor="@color/black_head"
+            android:layout_margin="@dimen/_2sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/iStrongly_believe_them_to_be_true"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            android:textColor="@color/black_head"
+            android:layout_margin="@dimen/_2sdp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_points"
+        android:text="@string/if_your_rating_has_remained_at_four_or_five_try_this"
+        android:fontFamily="@font/lexendlight"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black_head"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="@dimen/_10sdp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

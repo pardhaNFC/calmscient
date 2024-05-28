@@ -52,7 +52,6 @@
                 android:layout_toEndOf="@id/tv_hello"
                 android:fontFamily="@font/lexendsemibold"
                 android:visibility="visible"
-                android:text="Kevin"
                 android:textColor="@color/black_head"
                 android:textSize="@dimen/_26sdp" />
 
@@ -100,12 +99,12 @@
                     android:src="@drawable/mymedicalrecords" />
 
                 <TextView
+                    android:id="@+id/my_medical_records"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:fontFamily="@font/lexendregular"
-                    android:text="@string/my_medical_records"
                     android:textColor="@color/black_head"
                     android:textSize="@dimen/_15sdp" />
 
@@ -151,12 +150,12 @@
 
 
                 <TextView
+                    android:id="@+id/weekly_summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:fontFamily="@font/lexendregular"
-                    android:text="@string/weekly_summary"
                     android:textColor="@color/black_head"
                     android:textSize="@dimen/_15sdp" />
 
@@ -172,12 +171,12 @@
 
 
         <TextView
+            android:id="@+id/favorites"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_18sdp"
             android:fontFamily="@font/lexendregular"
-            android:text="@string/favorites"
             android:textColor="@color/black"
             android:textSize="@dimen/_16sdp" />
 

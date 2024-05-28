@@ -25,6 +25,7 @@
         <item name="android:textSize">@dimen/_10sdp</item>-->
         <!--<item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
     </style>
+
     <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!--<item name="fontFamily">@font/sfprotextbold</item>
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprodisplaysemibold</item>
@@ -33,6 +34,7 @@
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprotextbold</item>-->
         <!--<item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
     </style>
+
     <style name="CustomTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!--<item name="fontFamily">@font/sfprotextbold</item>
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprodisplaysemibold</item>
@@ -41,6 +43,7 @@
         <item name="android:fontFamily" tools:ignore="DuplicateDefinition">@font/sfprotextbold</item>-->
         <!--<item name="android:forceDarkAllowed" tools:targetApi="q">false</item>-->
     </style>
+
     <style name="SignUpTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="boxStrokeWidth">2dp</item>
         <item name="boxCornerRadiusBottomStart">5sp</item>

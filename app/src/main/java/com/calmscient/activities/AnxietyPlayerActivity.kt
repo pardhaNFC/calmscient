@@ -32,8 +32,7 @@ import androidx.core.view.GestureDetectorCompat
 import com.calmscient.R
 import com.google.android.exoplayer2.ui.PlayerView
 
-class AnxietyPlayerActivity: AppCompatActivity(),
-    GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener {
+class AnxietyPlayerActivity: AppCompatActivity() {
 
     private lateinit var videoView: VideoView
     private lateinit var mediaController: MediaController
@@ -62,7 +61,7 @@ class AnxietyPlayerActivity: AppCompatActivity(),
         videoView.setMediaController(mediaController)
 
         // Initialize GestureDetector
-        gestureDetector = GestureDetectorCompat(this, this)
+        //gestureDetector = GestureDetectorCompat(this, this)
         // Start video playback
         videoView.start()
         initializeBinding()
@@ -94,103 +93,123 @@ class AnxietyPlayerActivity: AppCompatActivity(),
         }
     }
 
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (event != null) {
-            gestureDetector.onTouchEvent(event)
-        }
-        return super.onTouchEvent(event)
-    }
+//    override fun onTouchEvent(event: MotionEvent?): Boolean {
+//        if (event != null) {
+//            gestureDetector.onTouchEvent(event)
+//        }
+//        return super.onTouchEvent(event)
+//    }
 
-    override fun onDown(p0: MotionEvent): Boolean {
-        return true
-    }
+//    override fun onDown(p0: MotionEvent): Boolean {
+//        return true
+//    }
+//
+//    override fun onShowPress(p0: MotionEvent) {
+//    }
+//
+//    override fun onSingleTapUp(p0: MotionEvent): Boolean {
+//        return true
+//    }
+//
+//    override fun onLongPress(p0: MotionEvent) {
+//    }
 
-    override fun onShowPress(p0: MotionEvent) {
-    }
+//    override fun onFling(
+//        p0: MotionEvent,
+//        p1: MotionEvent,
+//        velocityX: Float,
+//        velocityY: Float
+//    ): Boolean {
+//        return true
+//    }
 
-    override fun onSingleTapUp(p0: MotionEvent): Boolean {
-        return true
-    }
+//    override fun onDoubleTap(p0: MotionEvent): Boolean {
+//        val viewWidth = videoView.width
+//        val isRightSide = p0?.x ?: 0F > viewWidth / 2
+//
+//        val currentPosition = videoView.currentPosition
+//        val newPosition = if (isRightSide) {
+//            currentPosition + 10000 // Forward by 10 seconds (10000 milliseconds)
+//        } else {
+//            currentPosition - 10000 // Backward by 10 seconds (10000 milliseconds)
+//        }
+//
+//        val duration = videoView.duration
+//        val finalPosition = newPosition.coerceIn(0, duration)
+//        videoView.seekTo(finalPosition)
+//
+//        // Show overlay message
+//        val inflater = LayoutInflater.from(this)
+//        val overlayLayout = inflater.inflate(R.layout.layout_overlay_message, null)
+//        val overlayMessage = overlayLayout.findViewById<TextView>(R.id.overlayMessage)
+//        overlayMessage.text = if (isRightSide) {
+//            "+10 seconds"
+//        } else {
+//            "-10 seconds"
+//        }
+//
+//        val layoutParams = FrameLayout.LayoutParams(
+//            FrameLayout.LayoutParams.WRAP_CONTENT,
+//            FrameLayout.LayoutParams.WRAP_CONTENT
+//        )
+//        if (isRightSide) {
+//            layoutParams.gravity = Gravity.CENTER or Gravity.END
+//        } else {
+//            layoutParams.gravity = Gravity.CENTER or Gravity.START
+//        }
+//        overlayLayout.layoutParams = layoutParams
+//
+//
+//        // Add the overlay layout to the root layout
+//        val rootView = findViewById<ViewGroup>(android.R.id.content)
+//        rootView.addView(overlayLayout)
+//
+//        // Remove the overlay layout after a delay
+//        Handler().postDelayed({
+//            rootView.removeView(overlayLayout)
+//        }, 2000) // Adjust the delay as needed
+//
+//        return true
+//
+//    }
 
-    override fun onLongPress(p0: MotionEvent) {
-    }
+//    override fun onFling(
+//        p0: MotionEvent,
+//        p1: MotionEvent,
+//        velocityX: Float,
+//        velocityY: Float
+//    ): Boolean {
+//        // Implement your logic here
+//        return true
+//    }
+//
+//    override fun onScroll(
+//        p0: MotionEvent,
+//        p1: MotionEvent,
+//        distanceX: Float,
+//        distanceY: Float
+//    ): Boolean {
+//        // Implement your logic here
+//        return true
+//    }
 
-    override fun onFling(
-        p0: MotionEvent,
-        p1: MotionEvent,
-        velocityX: Float,
-        velocityY: Float
-    ): Boolean {
-        return true
-    }
+//    override fun onScroll(
+//        p0: MotionEvent,
+//        p1: MotionEvent,
+//        distanceX: Float,
+//        distanceY: Float
+//    ): Boolean {
+//        // Implement the logic for handling scroll gestures here if needed
+//        return true
+//    }
 
-    override fun onDoubleTap(p0: MotionEvent): Boolean {
-        val viewWidth = videoView.width
-        val isRightSide = p0?.x ?: 0F > viewWidth / 2
-
-        val currentPosition = videoView.currentPosition
-        val newPosition = if (isRightSide) {
-            currentPosition + 10000 // Forward by 10 seconds (10000 milliseconds)
-        } else {
-            currentPosition - 10000 // Backward by 10 seconds (10000 milliseconds)
-        }
-
-        val duration = videoView.duration
-        val finalPosition = newPosition.coerceIn(0, duration)
-        videoView.seekTo(finalPosition)
-
-        // Show overlay message
-        val inflater = LayoutInflater.from(this)
-        val overlayLayout = inflater.inflate(R.layout.layout_overlay_message, null)
-        val overlayMessage = overlayLayout.findViewById<TextView>(R.id.overlayMessage)
-        overlayMessage.text = if (isRightSide) {
-            "+10 seconds"
-        } else {
-            "-10 seconds"
-        }
-
-        val layoutParams = FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.WRAP_CONTENT,
-            FrameLayout.LayoutParams.WRAP_CONTENT
-        )
-        if (isRightSide) {
-            layoutParams.gravity = Gravity.CENTER or Gravity.END
-        } else {
-            layoutParams.gravity = Gravity.CENTER or Gravity.START
-        }
-        overlayLayout.layoutParams = layoutParams
-
-
-        // Add the overlay layout to the root layout
-        val rootView = findViewById<ViewGroup>(android.R.id.content)
-        rootView.addView(overlayLayout)
-
-        // Remove the overlay layout after a delay
-        Handler().postDelayed({
-            rootView.removeView(overlayLayout)
-        }, 2000) // Adjust the delay as needed
-
-        return true
-
-    }
-
-    override fun onScroll(
-        p0: MotionEvent,
-        p1: MotionEvent,
-        distanceX: Float,
-        distanceY: Float
-    ): Boolean {
-        // Implement the logic for handling scroll gestures here if needed
-        return true
-    }
-
-    override fun onDoubleTapEvent(p0: MotionEvent): Boolean {
-        // Implement the logic for handling double tap events here if needed
-        return true
-    }
-
-    override fun onSingleTapConfirmed(p0: MotionEvent): Boolean {
-        // Implement the logic for handling confirmed single tap events here if needed
-        return true
-    }
+//    override fun onDoubleTapEvent(p0: MotionEvent): Boolean {
+//        // Implement the logic for handling double tap events here if needed
+//        return true
+//    }
+//
+//    override fun onSingleTapConfirmed(p0: MotionEvent): Boolean {
+//        // Implement the logic for handling confirmed single tap events here if needed
+//        return true
+//    }
 }

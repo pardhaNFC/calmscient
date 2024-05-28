@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:weightSum="2"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/this_is_your_report"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:text="@string/tittle_restructure_your_biased_thinkings"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+        <!--Question - 1-->
+        <TextView
+            android:id="@+id/textViewQuestionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainLinearLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/specific_situation_where_you_hold_on_to_biased_thinking"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/cardViewOneLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewQuestionOne"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <!-- <androidx.cardview.widget.CardView
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40sdp"
+                 android:layout_marginHorizontal="@dimen/_14sdp"
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:clipChildren="false"
+                 android:clipToPadding="false"
+                 android:layout_weight="1"
+                 android:divider="@android:color/transparent"
+                 android:dividerHeight="0.0px">
+
+                     <TextView
+                         android:id="@+id/optionJob"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:fontFamily="@font/lexendlight"
+                         android:textColor="@color/black_head"
+                         android:layout_gravity="center"
+                         android:text="@string/job"
+                         android:textSize="@dimen/_12sdp" />
+
+
+             </androidx.cardview.widget.CardView>-->
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardPreventCornerOverlap="false">
+
+
+                <TextView
+                    android:id="@+id/optionJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/job"
+                    android:textSize="@dimen/_12sdp" />
+
+            </androidx.cardview.widget.CardView>
+            <!--<androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_weight="1"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px">
+
+                <TextView
+                    android:id="@+id/optionHealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lexendlight"
+                    android:textColor="@color/black_head"
+                    android:layout_gravity="center"
+                    android:text="@string/health"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>-->
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+
+                <TextView
+                    android:id="@+id/optionHealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/health"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+            </androidx.cardview.widget.CardView>
+            <!-- <androidx.cardview.widget.CardView
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40sdp"
+                 android:layout_marginHorizontal="@dimen/_14sdp"
+                 android:layout_marginTop="@dimen/_10sdp"
+                 android:clipChildren="false"
+                 android:clipToPadding="false"
+                 android:layout_weight="1"
+                 android:divider="@android:color/transparent"
+                 android:dividerHeight="0.0px"
+                 android:layout_marginBottom="@dimen/_10sdp">
+
+                 <TextView
+                     android:id="@+id/optionParenting"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/lexendlight"
+                     android:textColor="@color/black_head"
+                     android:layout_gravity="center"
+                     android:text="@string/parenting"
+                     android:textSize="@dimen/_12sdp" />
+
+
+             </androidx.cardview.widget.CardView>-->
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+
+                <TextView
+                    android:id="@+id/optionParenting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/parenting"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <!--Question - 2-->
+        <TextView
+            android:id="@+id/textViewQuestionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardViewOneLinearLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/biased_thinking_that_you_identified_with"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/cardViewTwoLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewQuestionTwo"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardPreventCornerOverlap="false">
+
+                <TextView
+                    android:id="@+id/optionPerfectionistThinking"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/perfectionist_thinking"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+                <TextView
+                    android:id="@+id/optionNegativeFiltering"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/negative_filtering"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+                <TextView
+                    android:id="@+id/optionParentingJumping"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/jumping_to_conclusion"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <!--Question - 3-->
+        <TextView
+            android:id="@+id/textViewQuestionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardViewTwoLinearLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendmedium"
+            android:text="@string/your_thoughts_about_the_situation"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            tools:ignore="MissingConstraints" />
+
+        <!--Your Thoughts-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yourThoughts_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_below="@+id/textViewQuestionThree"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/edittext_grey_background"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px">
+
+            <EditText
+                android:id="@+id/et_yourThoughts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/yourThoughts_card"
+                android:background="@drawable/edittext_grey_background"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:overScrollMode="always"
+                android:textCursorDrawable="@null" />
+        </androidx.cardview.widget.CardView>
+        <!--Question - 4-->
+        <TextView
+            android:id="@+id/textViewQuestionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yourThoughts_card"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/rate_yourself_4"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/seekBarCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewQuestionFour"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            tools:ignore="MissingConstraints">
+
+            <!-- Step Numbers Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <!-- Step Number TextViews -->
+                <TextView
+                    android:id="@+id/step1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="1"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="2"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="3"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="4"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="5"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <!-- SeekBar -->
+            <SeekBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_below="@+id/textViewQuestionThree"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:max="5"
+                android:progress="1"
+                android:progressDrawable="@drawable/curved_progress_bar"
+                android:progressTint="@color/btn_gradient_color"
+                android:thumbTint="@color/btn_gradient_color" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/rate_yourself_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarCardView"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/iKnow_they_re_not_true"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/iStrongly_believe_them_to_be_true"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+        <!--Question - 5-->
+        <TextView
+            android:id="@+id/textViewQuestionFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_yourself_description"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/reasons_why_your_thoughts_are_not_realistic"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/cardViewFiveLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewQuestionFive"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/question5Thoughts_card1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/edittext_grey_background"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px">
+
+                <EditText
+                    android:id="@+id/et_question_5_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/yourThoughts_card"
+                    android:background="@drawable/edittext_grey_background"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/question5Thoughts_card2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/edittext_grey_background"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px">
+
+                <EditText
+                    android:id="@+id/et_question_5_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/yourThoughts_card"
+                    android:background="@drawable/edittext_grey_background"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/question5Thoughts_card3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/edittext_grey_background"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px">
+
+                <EditText
+                    android:id="@+id/et_question_5_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/yourThoughts_card"
+                    android:background="@drawable/edittext_grey_background"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <!--Question - 6-->
+        <TextView
+            android:id="@+id/textViewQuestionSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardViewFiveLinearLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/your_modified_thoughts"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/cardViewSixLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewQuestionSix"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+                <TextView
+                    android:id="@+id/optionPerfectionistThinking_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/perfectionist_thinking"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+                <TextView
+                    android:id="@+id/optionNegativeFiltering_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/negative_filtering"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="10dp"
+                android:visibility="gone"
+                app:cardPreventCornerOverlap="false">
+
+                <TextView
+                    android:id="@+id/optionParentingJumping_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lexendlight"
+                    android:gravity="center"
+                    android:text="@string/jumping_to_conclusion"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/question6Thoughts_card1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/edittext_grey_background"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:dividerHeight="0.0px">
+
+                <EditText
+                    android:id="@+id/et_question_6_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/yourThoughts_card"
+                    android:background="@drawable/edittext_grey_background"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:overScrollMode="always"
+                    android:textCursorDrawable="@null" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!--Question - 7-->
+        <TextView
+            android:id="@+id/textViewQuestionSeven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardViewSixLinearLayout"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/rate_yourself_7"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/seekBarCardView_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewQuestionSeven"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            tools:ignore="MissingConstraints">
+
+            <!-- Step Numbers Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <!-- Step Number TextViews -->
+                <TextView
+                    android:id="@+id/step1_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="1"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step2_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="2"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step3_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="3"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step4_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="4"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/step5_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendmedium"
+                    android:gravity="right|end"
+                    android:text="5"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <!-- SeekBar -->
+            <SeekBar
+                android:id="@+id/progressBar_7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_below="@+id/textViewQuestionThree"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:max="5"
+                android:progress="1"
+                android:progressDrawable="@drawable/curved_progress_bar"
+                android:progressTint="@color/btn_gradient_color"
+                android:thumbTint="@color/btn_gradient_color" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/rate_yourself_description_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarCardView_7"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/iKnow_they_re_not_true"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/iStrongly_believe_them_to_be_true"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+        <!--Journal Entry-->
+        <TextView
+            android:id="@+id/textViewJournalEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_yourself_description_7"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/lexendsemibold"
+            android:text="@string/journal_entry"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/journalEntry_Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewJournalEntry"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            android:text="@string/write_down_what_have_you_recognized_about_how_biased_thinking_affects_your_emotions_and_behaviors"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/journalEntry_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_below="@+id/journalEntry_Question"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/edittext_grey_background"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:dividerHeight="0.0px">
+
+            <EditText
+                android:id="@+id/et_journalEntry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textViewQuestionThree"
+                android:background="@drawable/edittext_grey_background"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:overScrollMode="always"
+                android:textCursorDrawable="@null" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/journalEntry_card"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            android:gravity="center"
+            android:text="@string/save_it_to_weekly_summary_journal_entry"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/yes_no_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_end"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/skip_border"
+                android:fontFamily="@font/lexendsemibold"
+                android:text="@string/no"
+                android:textAllCaps="false"
+                android:textColor="@color/purple_100"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/savedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/button_green"
+                android:fontFamily="@font/lexendregular"
+                android:text="@string/saved"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:textColor="@color/saved_text"
+                android:textSize="18sp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/yesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@drawable/button_border"
+                android:fontFamily="@font/lexendregular"
+                android:text="@string/yes"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp">
+
+            </androidx.appcompat.widget.AppCompatButton>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_below="@+id/yes_no_layout" />
+    </RelativeLayout>
+</ScrollView>

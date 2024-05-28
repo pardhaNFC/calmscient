@@ -68,7 +68,6 @@ class AnxietyQuizFragment : Fragment() {
             binding.quizImage.setImageResource(R.drawable.ic_an_quiz)
         }
 
-
         // Section 1
         tvWork.setOnClickListener { selectOptionSection1(tvWork) }
         tvPersonal.setOnClickListener { selectOptionSection1(tvPersonal) }
@@ -98,10 +97,8 @@ class AnxietyQuizFragment : Fragment() {
             setBackgroundResource(R.drawable.anxiety_border)
             setTextColor(Color.parseColor("#424242"))
         }
-
         selectedTextView.setBackgroundResource(R.drawable.anxiety_selected)
         selectedTextView.setTextColor(Color.parseColor("#FFFFFF"))
-
         selectedOptionSection1 = selectedTextView
     }
 
@@ -110,10 +107,8 @@ class AnxietyQuizFragment : Fragment() {
             setBackgroundResource(R.drawable.anxiety_border)
             setTextColor(Color.parseColor("#424242"))
         }
-
         selectedTextView.setBackgroundResource(R.drawable.anxiety_selected)
         selectedTextView.setTextColor(Color.parseColor("#FFFFFF"))
-
         selectedOptionSection2 = selectedTextView
     }
 
@@ -122,10 +117,8 @@ class AnxietyQuizFragment : Fragment() {
             setBackgroundResource(R.drawable.anxiety_border)
             setTextColor(Color.parseColor("#424242"))
         }
-
         selectedTextView.setBackgroundResource(R.drawable.anxiety_selected)
         selectedTextView.setTextColor(Color.parseColor("#FFFFFF"))
-
         selectedOptionSection3 = selectedTextView
     }
 

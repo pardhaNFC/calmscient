@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollCardsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scenario1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/purple_100"
+                android:text="@string/scenario_1"
+                android:gravity="center"
+                android:fontFamily="@font/lexendsemibold"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/scenario_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/scenario_1"
+                app:layout_constraintTop_toBottomOf="@+id/scenario1_tv"/>
+
+            <TextView
+                android:id="@+id/tv_question1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendsemibold"
+                android:text="@string/i_might_behavior"
+                android:textAllCaps="false"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@+id/scenario_image"/>
+            <LinearLayout
+                android:id="@+id/optionsLayout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_question1">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/use_the_phrases_should_have_to_and_must_are_running_through_my_mind"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/procrastinate_in_responding_to_emails"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/skip_taking_a_break_and_lunch_and_not_talk_to_anyone_at_work_all_day"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/have_a_panic_attack"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/get_discouraged_before_even_trying"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/have_negative_thoughts_and_beliefs_that_snowball"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/forecast_what_s_going_to_happen_and_make_decisions_based_on_it"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/have_lots_of_negative_and_fear_talk"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/overly_generalize_matters_i_ll_never_get_better_it_s_always_like_this"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/option_1_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/isolate_myself_or_shut_down_feeling_hopeless_because"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

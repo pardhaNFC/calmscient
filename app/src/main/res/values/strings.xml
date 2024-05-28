@@ -692,7 +692,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="summary_accident">Accident</string>
 
 </resources>-->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">calmscient</string>
     <string name="splash_science">The Science of Calm</string>
     <string name="welcome_message">Welcome to my app!</string>
@@ -785,6 +785,8 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="repeat">Repeat</string>
     <string name="everyday">Every Day</string>
     <string name="time">Time</string>
+    <string name="place">Place</string>
+    <string name="duration">Duration</string>
     <string name="schedule_time_and_alarm">Schedule time &amp; alarm</string>
     <string name="with_meal">With meal</string>
     <string name="morning">Morning</string>
@@ -842,14 +844,14 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="meet_nora_austin">Meet Nora,Austin and Melanie</string>
     <string name="calming_body">Calming the body</string>
     <string name="anxiety_worry">Anxiety and worry</string>
-    <string name="moral_deficiency">Moral deficiency</string>
+    <string name="moral_deficiency">Moral deficiency or anxiety?</string>
     <string name="moral_deficiency_anxiety">Moral deficiency or anxiety?</string>
     <string name="anxiety_hide">Where can anxiety hide?</string>
     <string name="postpone_worry">Learn to postpone your worry</string>
     <string name="anxious_mind">Calming your anxious mind</string>
-    <string name="biased_think">Biased thinking</string>
-    <string name="making_connection">Making connection</string>
-    <string name="restructure_biased">Restructure biased thinking</string>
+    <string name="biased_think">What is biased thinking?</string>
+    <string name="making_connection">Make the connection</string>
+    <string name="restructure_biased">Restructure your biased thinking</string>
     <string name="anxiety_exercise">Anxiety and exercise</string>
     <string name="anxiety_sleep">Anxiety and sleep</string>
     <string name="anxiety_alcohol">Anxiety &amp; alcohol/substances</string>
@@ -878,7 +880,7 @@ The most important thing is to do it! Do you have some time today to get started
 
     <string name="afternoon">Afternoon</string>
     <string name="add_time_alarm">Add time &amp; alarm</string>
-    <string name="page_1.1">DID YOU KNOW?</string>
+    <string name="page_1.1">Did you know?</string>
     <string name="page_2_1">What is anxiety?</string>
     <string name="lets_begin_btn">Let\'s begin!</string>
     <string name="lets_begin_are_ready">Are you ready?</string>
@@ -893,6 +895,8 @@ The most important thing is to do it! Do you have some time today to get started
         &#8226; Lack of skill or support\n
         Our nervous system is not broken! Learning to control it is an important and powerful skill we can master in order to keep stressful situations in their place.
 </string>
+    <string name="lesson4_video_summary">Do you remember our road trip plan?  You may not have noticed, but we’re already on STEP 4! Congratulations on getting this far. We’ve now arrived at some practical skills you can learn to influence your body to calm down.</string>
+
 
     <string name="lesson1_video1_description">
     Our brain is like a computer. It has a basic operating system that helps us deal with the normal, day-to-day tasks and complexities of life. But when it detects a threat that can interrupt or damage normal operation, an alarm activates that immediately alerts us to the danger.\n\n
@@ -912,6 +916,7 @@ The most important thing is to do it! Do you have some time today to get started
         These exercises will calm your stress response and give you the space to handle anxious thoughts and build healthy behaviors. This will result in physical and emotional betterment.\n\n
         Why don’t you practice some of these exercises for ten minutes every morning or right before bedtime? The key is consistency so that your body learns what it feels like to have a calm nervous system.\n\n
 </string>
+
 
     <!--Exrercises-->
 
@@ -943,7 +948,7 @@ The most important thing is to do it! Do you have some time today to get started
 
     <!--    Hand over your heart Exercise-->
     <string name="handoveryourHeart_titletext">Hand over your heart</string>
-    <string name="handoveryourHeart_text">HOW TO DO IT</string>
+    <string name="handoveryourHeart_text">How to do it</string>
     <string name="handoveryourHeart_text_desc">&#8226; Rest the heel of your hand on your sternum around your heart area.<br />\n
     &#8226; Apply a steady, gentle, but firm pressure.<br />\n
     &#8226; For added effect, you can place your other hand across your forehead or on your abdomen.<br />\n
@@ -957,7 +962,7 @@ The most important thing is to do it! Do you have some time today to get started
     <!--deepBreathingExercise-->
     <string name="deepbreathingexercise_text">Find a comfortable and quiet place to sit or lie down. You can also practice deep breathing while standing, but ensure you have proper balance and support. </string>
     <!--Anxiety cards introduction 1 -->
-    <string name="anxiety_card1_text1">DID YOU KNOW?</string>
+    <string name="anxiety_card1_text1">Did you know?</string>
     <string name="anxiety_card1_text2">An estimated <font color="#6E6BB3">31.1% of U.S. adults</font> experience any anxiety disorder at some time in their lives.</string>
     <string name="anxiety_card1_text3">You’re not alone!</string>
 
@@ -989,7 +994,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="anxiety_card9_text1">In our modern world, there are many bear-like situations we face every day. It’s easy to become conditioned to constantly trigger our “Worry” response in order to avoid the need to “Fight, Flight or Freeze”.\n\nBut overprotecting ourselves with anxiety often comes at the expense of our happiness. </string>
     <string name="anxiety_card9_text2">Excessive use of worry, rumination, or fear of being at the wrong place at the wrong time limits our ability to enjoy life.</string>
 
-    <string name="anxiety_card10_text1">Remember: worry and anxiety are not your enemies! </string>
+    <string name="anxiety_card10_text1">Remember: worry and anxiety are not your enemies!</string>
     <string name="anxiety_card10_text2">The key to more peace of mind lies in enhancing your understanding of both and then learning the skills to use them in the right moments and for the right amounts of time.</string>
 
 
@@ -1015,16 +1020,16 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="make_plan_card2_text2">Here is how navigating that stressful situation might look like:</string>
 
     <string name="make_plan_card3_text1">STEP 1</string>
-    <string name="make_plan_card3_text2">BE AWARE OF WHAT’S AROUND YOU</string>
+    <string name="make_plan_card3_text2">Be aware of what’s around you</string>
     <string name="make_plan_card3_text3">Take note of how your anxiety is impacting your emotions, choices and decisions. \n\nChange your thinking from: “Something must be wrong with me” to: “I just need to protect myself from my environment which is filled with anxiety-inducing things”.</string>
 
     <string name="make_plan_card4_text1">STEP 2</string>
-    <string name="make_plan_card4_text2">SPOT YOUR ANXIETY TRIGGERS</string>
+    <string name="make_plan_card4_text2">Spot your anxiety triggers</string>
     <string name="make_plan_card4_text3">Take note of which specific situations, thoughts or feelings trigger your anxiety and even write them down somewhere. Where possible, this will help you take action to avoid anxiety-inducing situations and learn to manage the ones you have no control over.</string>
 
 
     <string name="make_plan_card5_text1">STEP 3</string>
-    <string name="make_plan_card5_text2">REMEMBER THAT YOU ARE NOT AN ANXIOUS PERSON</string>
+    <string name="make_plan_card5_text2">Remember that you are not an anxious person</string>
     <string name="make_plan_card5_text3">Learn to identify the three components of anxiety: Physiological (Body), Cognitive (Mind) and Behavioral (Actions). This will help to follow action plans that calm your mind, body and actions. </string>
 
 
@@ -1034,12 +1039,12 @@ The most important thing is to do it! Do you have some time today to get started
 
 
     <string name="make_plan_card7_text1">STEP 5</string>
-    <string name="make_plan_card7_text2">SET A MENTAL BOUNDARY BETWEEN YOU AND YOUR WORRIES</string>
+    <string name="make_plan_card7_text2">Set a mental boundary between you and your worries</string>
     <string name="make_plan_card7_text3">There are ways to “delay” your worry until a designated “worry time” so you can focus on your daily routine without fearing that important things will be dropped.</string>
 
 
     <string name="make_plan_card8_text1">STEP 6</string>
-    <string name="make_plan_card8_text2">IMPLEMENT MIND CALMING SKILLS</string>
+    <string name="make_plan_card8_text2">Implement mind calming skills</string>
     <string name="make_plan_card8_text3">Biased thinking (Cognitive Distortion) greatly affects our tendency to worry irrationally and causes persistent anxiety. This happens when, based on past experiences, we either underestimate or overestimate the stressors of a particular situation without looking at them realistically. In either case, it doesn’t allow us to see the situation clearly. Catching ourselves in Cognitive Distortion will help modify our thinking in a way that calms our mind.</string>
 
 
@@ -1050,6 +1055,9 @@ The most important thing is to do it! Do you have some time today to get started
  </string>
     <!--Quiz-->
     <string name="quiz_title">Quiz</string>
+    <string name="quiz_title_2_2">The anxiety cycle quiz</string>
+    <string name="quiz_title3_2">Stress and anxiety quiz</string>
+    <string name="quiz_text1L3_2">please indicate how much each statement applied to you over the past week:</string>
     <string name="quiz_text1">It can be hard to clearly identify specific fears that trigger our anxiety cycles. In time, you’ll be able to quickly recognize and avoid them. To learn this skill, let’s walk through a series of questions together that will teach you to recognize, identify and understand your anxiety.</string>
     <string name="quiz_text2">1. Recognize the stressful situation(s):</string>
     <string name="quiz_text3">Over the last 30 days, have you been affected by the following problems?</string>
@@ -1074,11 +1082,11 @@ The most important thing is to do it! Do you have some time today to get started
     <!--Recognize a cycle of anxiety-->
     <string name="title_toolbar_recognize">Recognize a cycle of anxiety</string>
     <string name="recognize_card1_text1">Earlier, we compared facing stressful situations to planning a route to a destination. When the correct steps are taken, there is a beginning and there is an end to the anxiety.</string>
-    <string name="recognize_card1_text2">Getting Caught In The Cycle</string>
+    <string name="recognize_card1_text2">Getting caught in the cycle</string>
     <string name="recognize_card1_text3">Unfortunately, instead of approaching our stress in this linear way, we often get stuck in a vicious circle: a cycle of anxiety! How does this cycle start? By excessively worrying about a potential threat that hasn’t occurred yet.</string>
     <string name="recognize_card2_text1">In addition to worrying about this potential threat, our biased thinking may make us assume that this future event will have a negative outcome. </string>
     <string name="recognize_card2_text2">We start to pay more and more attention to possible signs that this negative outcome is likely. Once we have convinced ourselves of this, we look internally to see whether or not we’ll be able to cope with these potential threats. Our anxious symptoms begin to manifest themselves, confirming our suspicions that we won’t be able to cope, which in turn make us more anxious. We have now fully entered a cycle of anxiety!</string>
-    <string name="recognize_card3_text1">Recognize That Everyone Is Different</string>
+    <string name="recognize_card3_text1">Recognize that everyone is different</string>
     <string name="recognize_card3_text2">The truth is that not everyone feels stressed by the same things! By recognizing your personal fears and responses, you’ll be able to avoid falling into the cycle.</string>
     <string name="recognize_card3_text3">Let’s examine the responses of Nora, Austin and Melanie to deepen our understanding of this cycle. See if you can identify where Nora, Austin and Melanie enter this cycle, and note how each person’s point of entry is unique. After reading each person’s response, click on the button to highlight the fear that makes them victims of the cycle of anxiety.</string>
 
@@ -1094,17 +1102,224 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="melanie_rs">“I’m not aware of it. I’m a bit in denial because I don’t know what normal life looks like. I tend to think everything is fine.”</string>
     <string name="melanie_c">Melanie is often confused and second guessing her feelings. She’s constantly asking others if they are happy and tends to do things in excess.</string>
 
-    <string name="title_stressful_situation">STRESSFUL SITUATION</string>
-    <string name="title_consequences">CONSEQUENCES</string>
-    <string name="title_response_to_stress">RESPONSE TO STRESS</string>
-    <string name="nora">NORA</string>
-    <string name="austin">AUSTIN</string>
+    <string name="title_stressful_situation">Stressful situation</string>
+    <string name="title_consequences">Consequences</string>
+    <string name="title_response_to_stress">Response to stress</string>
+    <string name="nora">Nora</string>
+    <string name="austin">Austin</string>
     <!--<string name="fear">[ SHOW AUSTIN’S FEAR ]</string>-->
     <string name="melanie">Melanie</string>
     <string name="how_about_you">HOW ABOUT YOU?</string>
     <string name="melanie_desc">Can you identify the specific fears that could cause you to enter the vicious cycle of anxiety? In the next lesson, answer a few helpful questions that will guide you toward recognizing these fears and avoiding this dangerous cycle.</string>
+    <!--Where can anxiety hide -->
+    <string name="anxiety_hideCard1_text1">Battling anxiety can sometimes feel like frantically trying to find the leak in a boat that’s sinking. You know it’s happening but you can’t figure out where and how to make it stop. Understanding where anxiety hides in your mind and body is the key to maintaining your mental health!</string>
+    <string name="anxiety_hideCard1_text2">You’re not alone!</string>
 
+    <string name="anxiety_hideCard2_text1">You may think that talking about anxiety is counterproductive and will only make you more anxious. But in reality, the opposite is true!</string>
+    <string name="anxiety_hideCard2_text2">Understanding anxiety gives you control over your emotions.</string>
+    <string name="anxiety_hideCard2_text3">When we don’t understand it, we end up passively accepting other people’s opinions about our anxious responses:</string>
+    <string name="anxiety_hideCard2_text4">
+        \"You’re too sensitive and emotional!\"
+        \n \"You worry too much!\"
+        \n \"You just need to work less and you’ll be fine.\"</string>
+    <string name="anxiety_hideCard2_text5"> Have you heard similar things from friends, family or coworkers?</string>
 
+    <string name="anxiety_hideCard3_text1">You can’t control what other people say to you, but you can control how you react to it and what you believe about yourself.</string>
+
+    <string name="anxiety_hideCard4_text1">Anxiety is the result of experiencing both minor and major stress. Stress is how we react when we feel pressure or threatened. The first step toward controlling our anxiety is to realize that <font color="#6E6BB3">reactions to stress are different for each of us.</font> If someone judges our reaction to stress, learning to recognize that each person is different will stop us from feeling like we are deficient or weaker than others. Rest assured that those persons react to stress in other ways that you may not!</string>
+
+    <string name="anxiety_hideCard5_text1">What are some signs of anxiety that we can start to pay attention to?</string>
+    <string name="anxiety_hideCard5_text2">Some of us react with strong emotions.</string>
+    <string name="anxiety_hideCard5_text3">Our minds may feel out of control.. like a storm of fear, excessive worry and nervousness. We might be caught in a cycle of overthinking, rumination and imagining the worst case scenario.</string>
+
+    <string name="anxiety_hideCard6_text1">For others, anxiety shows up in our body.</string>
+    <string name="anxiety_hideCard6_text2">We might experience sweating, headache, chest or stomach pain and hyperventilation.</string>
+
+    <string name="anxiety_hideCard7_text1"><font color="#6E6BB3">It could also express itself in our behaviors,</font>such as the way we eat, drink or get trapped in addiction.</string>
+    <!--<string name="anxiety_hideCard7_text2">In this example, if the person spotted a hungry bear from a distance, they would remember the potential danger and take another route, or possibly remember and avoid the places where bears were actively hunting for food. In both cases, “Worry” would help them survive successfully.</string>
+    <string name="anxiety_hideCard7_text3">So, worrying is a helpful skill!</string>-->
+
+    <string name="anxiety_hideCard8_text1">Let’s first take a look at your unique signs of anxiety. Like knowing the potentially leaky parts of a boat.  </string>
+    <string name="anxiety_hideCard8_text2">Identifying your signs of anxiety will help you control them before they escalate into something worse.</string>
+
+    <string name="anxiety_hideCard9_text1">The following quiz will help you get a big picture of how anxiety might be affecting your health and will help you communicate your conditions to others in a more productive way.</string>
+    <string name="anxiety_hideCard9_text2">All or nothing (black and white) thinking</string>
+    <!--postpone worry-->
+    <string name="anxiety_postPoneCard0_text1">Though worry is a normal and helpful response, it can interfere with our ability to go about our daily lives. It can occur at any time or place, often without us being aware of its exact triggers.</string>
+    <string name="anxiety_postPoneCard0_text2">A strategy to deal with this problem is to postpone our worry to a specific period of time. This provides our mind with reassurance, just as a loving parent might reassure their child by saying: “Don’t worry, we’ll listen and talk about your worries when you come home. For now, just go have fun at school.”</string>
+    <string name="anxiety_postPoneCard1_text1">How to do it</string>
+    <string name="anxiety_postPoneCard1_text2">1. Create a worry period</string>
+    <string name="anxiety_postPoneCard2_text0">My Plan</string>
+    <string name="anxiety_postPoneCard1_text3">
+        \n • Choose a specific time, place and length of time for worrying
+        \n
+        \n • The time, place and duration should be the same each day
+        \n
+        \n • Make sure the place is comfortable and free from distractions. If possible, always use the same place for your worry period.</string>
+    <string name="anxiety_postPoneCard2_text1"><b>2. Postpone your worry</b></string>
+    <string name="anxiety_audio_worry_text1">Let’s learn a technique to create more balance in how much you are allowing your worry to affect your nervous system. The goal is to use worry in a healthy way by making smart decisions to avoid potential dangers without letting that worry dominate you!</string>
+    <string name="anxiety_postPoneCard2_text2">
+           • As soon as you become of aware of a worry, postpone it to the worry period
+        \n
+        \n • In a few words, note your worry in a small notebook or on your phone
+        \n
+        \n • <font color="#6E6BB3">Remind yourself</font> that you will have time to think about it later!
+        \n
+        \n • <b>Tell yourself:</b>
+        \n   “No need to worry about it now. I’ll be in a better position to worry in the worry period. There are more important or pleasant things to tend to right now than thinking about my worries.”
+    </string>
+    <string name="anxiety_postPoneCard2_text2_2">
+           •  Take a deep breath and, if needed, do one of the body calming exercises
+        \n
+        \n •  Re-focus on what’s the most important, best and practical thing you can do for yourself in the moment
+        \n
+        \n •  Take immediate action to do something that is either practical, positive, pleasant or active</string>
+    <string name="anxiety_postPoneCard3_text1">3. Come back to your worries during the designated worry period</string>
+    <string name="anxiety_postPoneCard3_text2">When your worry period arrives, settle down in the place you planned and take some time to reflect on the worries you wrote down. Remember the following points:</string>
+    <string name="anxiety_postPoneCard3_text3">
+        \n • Only worry about the thing you took note of, and only if you still feel you must
+        \n
+        \n • If all or some of the <font color="#6E6BB3">worries you wrote down are no longer bothering you or no longer seem relevant to you, no further action is required.</font>
+        \n
+        \n • If you do need to worry about some of them, spend no longer than the set amount of time you specified for your worry period. It might also be helpful to write your thoughts down on paper rather than worrying about them in your mind.</string>
+    <string name="anxiety_postPoneCard4_text1">Later on in this journey, you will learn more specific ways to deal with your worries. For now, just focus on the process of postponing your worries throughout the day and only worrying at a specific time of the day. By doing this, you’ll be setting healthy boundaries between you and your worries!</string>
+    <string name="anxiety_postPoneCard4_text2">At first, setting these boundaries may seem like a strange thing to do. Like any new skill, it will feel difficult and awkward at the beginning. But with time and practice, what starts out as a formality will turn into something intuitive and natural. Many people predict that they won’t be able to postpone their worry. But in reality, most people are surprised at their ability to do so and end up experiencing a greater sense of control over their anxieties!</string>
+    <!--Anxiety Biased Thinking-->
+    <string name="anxiety_biased_card_intro">There are many examples of biased thinking. As you read through the following examples, you might recognize some thinking patterns and styles that you consistently use. Some of the ideas might sound similar to each other. They aren’t meant to be distinct categories, but rather a range of thinking patterns and styles that you might relate to.</string>
+    <string name="anxiety_biased_card_all">All or nothing (black and white) thinking</string>
+    <string name="anxiety_biased_card_catas">Catastrophizing</string>
+    <string name="anxiety_biased_card_perfect">Perfectionist thinking</string>
+    <string name="anxiety_biased_card_negative">Negative (mental) filtering</string>
+    <string name="anxiety_biased_card_personalizeBlame">Personalization and blame</string>
+    <string name="anxiety_biased_card_jumping">Jumping to conclusions</string>
+    <string name="anxiety_biased_card_making">Making negative assumptions</string>
+    <string name="anxiety_biased_card_emotional">Emotional reasoning (“fear talk”)</string>
+    <string name="anxiety_biased_card_one">• You have a fixed standard to how you want to proceed with tasks, relationships and problem solving.
+        \n
+        \n • You have expectations of how it “should” turn out. If it doesn’t turn out like you think, you judge yourself to be a failure or as someone who didn’t work hard enough to succeed.
+        \n
+        \n • You judge your own performance, relationships and decisions as either totally good or totally bad.
+        \n
+        \n • Your evaluation of yourself and others tends to be black and white, making it hard to see matters in shades of gray.
+      </string>
+    <string name="anxiety_biased_card_two"> • You have a fixed standard to how you want to proceed with tasks, relationships and problem solving.
+        \n
+        \n • You think of exaggerated negative consequences of events or decisions.
+        \n
+        \n • You think that the worst possible outcome will occur if one thing fails. For example:
+        \n
+            \n  “If I fail in this test, I will be a total failure in life”
+            \n  “If he leaves me, I will never find anyone else”
+            \n  “I’ll be unhappy for the rest of my life”
+        \n
+        \n • This thinking leads to unnecessary increases in levels of anxiety and can lean to “acting out” or other unhelpful behaviors.  </string>
+    <string name="anxiety_biased_card_three">• You have a tendency to demand an extremely high or even flawless level of performance from yourself or others, even when your expectations are in excess of what is required of the situation(ex. cleaning, organizing your closet, etc…)
+        \n
+        \n • This thinking is different from being a high achiever because your expectations are motivated by fear or are paralyzed by the idea of failure (vs. motivated by doing your best).
+        \n
+        \n • Your expectations make you feel anxious, fearful and like you are losing control.
+        \n
+        \n • This thinking often leads to procrastination, self-criticism/judgment or OCD.</string>
+    <string name="anxiety_biased_card_four"> • You only see one side of a situation (usually the negative side), and you dwell on it obsessively.
+        \n
+        \n • You tend to dismiss positive experiences while amplifying negative ones:
+        \n
+        \n     “My work meeting didn’t go well because I forgot to mention something that I prepared.”
+        \n
+        \n     “My husband didn’t like what I said at the restaurant. It was such a bad night.”</string>
+    <string name="anxiety_biased_card_five"> • You believe you are responsible for things that are actually outside your control and feel guilty or ashamed for not being able to control or prevent them.
+        \n
+        \n • This thinking involves self-criticism and judgment:
+        \n
+        \n   “I should have tried harder or done better”...when the problem was mutual (ex. relationship breakup, being laid off from work)“
+        \n
+        \n   "I should help out more”... when you see someone struggling.
+        \n• Taking an event or situation and making it about you when it has nothing to do with you:
+        \n   “They must be talking about me” ...when someone simply had a private conversation with someone else.</string>
+    <string name="anxiety_biased_card_six">• You jump to conclusions with little to no information or facts.
+        \n
+        \n • You quickly label yourself or others by one negative factor:
+        \n
+        \n      “I don’t have much to contribute to the conversation, so I KNOW I’m going to look stupid.”
+        \n
+        \n      “They stopped talking when I walked in. They were talking about me.”
+        \n
+        \n      • This thinking unnecessarily upsets you emotionally because you believe that the conclusions and judgments you made are true.</string>
+    <string name="anxiety_biased_card_seven">• This is similar to jumping to conclusions, but you have written a “negative script” in your mind without the possibility that it may be incorrect.
+        \n
+        \n • You have strong negative feelings about tasks or relationships because they have happened to you before.
+        \n
+        \n • Mind reading
+        \n
+        \n • You prophesy what’s going to happen, and you either make statements based on your predictions or feel negative about them.</string>
+    <string name="anxiety_biased_card_eight"> • You create “emotional truth” (assumptions) based on your strong feelings (especially fear) on matters:
+        \n
+        \n    “I feel guilty so I must have done something bad.”
+        \n
+        \n    “Something bad is going to happen because I strongly feel fear.”
+        \n
+        \n • Although you think you are reasoning logically, you are allowing your strong emotions to lead you to a skewed view of reality.</string>
+    <string name="anxiety_biased_card_eight_one">What do you think?
+        \nDo you recognize any of these thinking patterns in yourself?</string>
+    <string name="anxiety_restructure_screen1_one">Hopefully, you can now recognize how holding on to biased thinking is detrimental to your emotional wellbeing. It’s time to add warm sunlight to your biased thinking!</string>
+    <string name="anxiety_restructure_screen1_two">Think of yourself as your own best friend... reasonable and kind. The following exercise will help you go through the motions of catching and correcting your thoughts so you can be more like the Sun and less like the North Wind.</string>
+    <string name="anxiety_restructure_screen2_one">1. Pick a situation</string>
+    <string name="anxiety_restructure_screen2_two">Under what circumstances can you catch yourself holding onto one of the examples of biased thinking?
+    \n
+    \nThink of one specific situation where you always hold yourself to a fixed, rigid standard. Is it usually about..</string>
+    <string name="anxiety_restructure_screen2_checkOne">Money</string>
+    <string name="anxiety_restructure_screen2_checkTwo">Job security or performance</string>
+    <string name="anxiety_restructure_screen2_checkThree">Study</string>
+    <string name="anxiety_restructure_screen2_checkFour">Relationships</string>
+    <string name="anxiety_restructure_screen2_checkFive">Health</string>
+    <string name="anxiety_restructure_screen2_checkSix">Traveling (airplane, driving)</string>
+    <string name="anxiety_restructure_screen2_checkSeven">Parenting</string>
+    <string name="anxiety_restructure_screen2_checkEight">Time management or appointments</string>
+    <string name="anxiety_restructure_screen2_checkNine">Public speaking</string>
+    <string name="anxiety_restructure_screen2_checkTen">Pets</string>
+    <string name="anxiety_restructure_screen2_checkEleven">Other</string>
+    <string name="anxiety_restructure_screen3_one">2. Choose one example of biased thinking you identify with</string>
+    <string name="anxiety_restructure_screen3_button_name">Review the types of biased thinking</string>
+    <string name="anxiety_restructure_screen3_checkOne">All or nothing (black and white) thinking (pop up description for each one)</string>
+    <string name="anxiety_restructure_screen3_checkEight">Making negative assumptions (fortune telling)</string>
+    <string name="anxiety_restructure_screen4_one">3. Based on the type of biased thinking you’ve chosen, write one or two thoughts, beliefs or reactions you might typically have in your specific situation:</string>
+    <string name="anxiety_restructure_screen4_confirmMessage">Save it to weekly summary journal entry</string>
+    <string name="anxiety_restructure_screen5_one">Rate yourself:</string>
+    <string name="anxiety_restructure_screen5_two">How strongly do you feel that the thoughts or beliefs you listed above are true?</string>
+    <string name="anxiety_restructure_screen5_three">1: I know they’re not true</string>
+    <string name="anxiety_restructure_screen5_four">5: I strongly believe them to be true</string>
+    <string name="anxiety_restructure_screen6_one">5. Evaluate your thoughts:</string>
+    <string name="anxiety_restructure_screen6_two">Even though your biased thinking sounds logical, why isn’t it necessarily realistic? Can you come up with three reasons why your thoughts or beliefs may not be completely true?
+    \n
+    If you have a hard time coming up with reasons why your thinking may not be realistic, think about the following questions:</string>
+    <string name="anxiety_restructure_screen6_three">. “What are the consequences of my thinking and beliefs?”</string>
+    <string name="anxiety_restructure_screen6_four">. “How does my thinking feed my anxiety and worry?”</string>
+    <string name="anxiety_restructure_screen6_evidence1">Evidence 1</string>
+    <string name="anxiety_restructure_screen6_evidence2">Evidence 2</string>
+    <string name="anxiety_restructure_screen6_evidence3">Evidence 3</string>
+    <string name="anxiety_restructure_screen6_evidenceMessage">Make sure to fill out three of your own reasons before moving to the next step.</string>
+
+    <!--Calming the body-->
+    <string name="anxiety_calming_title_one">Our window of tolerance</string>
+    <string name="anxiety_calming_title_two">Hyper-arousal</string>
+    <string name="anxiety_calming_title_three">Making a plan</string>
+    <string name="anxiety_calming_card_one">Have you ever filled a party balloon with air? If so, you’ll know what it feels like as the balloon stretches and stretches until it can’t stretch any further. Any more air.... and it pops!</string>
+    <string name="anxiety_calming_card_two">Similarly, our bodies have an optimal emotional range where it functions best. We call this our “Window of Tolerance”.</string>
+    <string name="anxiety_calming_card_two1">When we are in our Window of Tolerance, we feel like we can deal with whatever’s happening in our life. We might feel stress or pressure, but it doesn’t bother us too much. This is the ideal place to be.</string>
+    <string name="anxiety_calming_card_three">But when we are under stress, that window becomes very small. It can stretch a bit, but if our stressors are greater than our window, we will fall outside into one of two opposite states:</string>
+    <string name="anxiety_calming_card_dialog_one">Anxiety, fear, irritation, panic.</string>
+    <string name="anxiety_calming_card_dialog_one2">You might experience the “Fight or Flight” response.</string>
+    <string name="anxiety_calming_card_dialog_two1">Emotional numbness, exhaustion, depression, dissociation, withdrawal, lethargy.</string>
+    <string name="anxiety_calming_card_dialog_two2">You might experience your body shutting down or freezing.</string>
+    <string name="anxiety_calming_card_making_heading">The good news is that there are exercises that target both states:</string>
+    <string name="anxiety_calming_card_making_heading1">Mindfulness-what is it?</string>
+    <string name="anxiety_calming_card_making_heading2">Progressive muscle relaxation</string>
+    <string name="anxiety_calming_card_making_heading3">Touch and butterfly hug</string>
+    <string name="anxiety_calming_card_making_heading4">Hand over your heart</string>
+    <string name="anxiety_calming_card_making_heading5">Mindful walking</string>
+    <string name="anxiety_calming_card_making_heading6">Mindful dance</string>
+    <string name="anxiety_calming_card_making_heading7">Mindful running</string>
+    <string name="anxiety_calming_card_making_heading8">Mindful body movement</string>
     <!--Audio Player text and its dialog Text -->
     <string name="meet_nora_austrin_melanie_description">Sometimes, seeing anxiety through others’ eyes can help us understand it better. Let’s meet three friends who view and respond to stress differently. Though their personalities and lifestyles are different, you will probably relate to one of them.</string>
     <string name="nora_audio_text1">First, let’s meet Nora. Nora tends to push away and avoid stressful situations. See if you can identify this in the way she expresses herself:</string>
@@ -1117,12 +1332,48 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="melanie_audio_text2">“I care about people so I’m good at helping others in need. I just constantly have a lot on my plate and I’m tired all the time. I try to be on top of my kid’s school and sports events, and enjoy doing special things for my anniversary and family holidays. I’m incredibly busy and often wonder when I get to live my life for myself.\n\n Sometimes I just go into my room and turn on the TV or scroll through social media to shut down because I’m simply exhausted. I love reading positive quotes because I think if I stay positive I can keep going.”</string>
     <string name="melanie_audio_text3">Have you ever responded to stress like Melanie does?</string>
     <string name="information">Information</string>
+    <string name="information_calm">Worry and anxiety are closely related and, in fact, happen in sequence.
+    \n Worry is really about you being “smart”. You worry so that you can avoid or problem-solve potential dangers or negative future events.
+    Anxiety is your response to worry, and that happens in your nervous system.
+    \n
+    \n Normally, worry is short-lived and leads to positive problem-solving. For example, “I worry that I won’t have time to cook dinner tonight and the kids will go to bed hungry” leads to deciding to prepare food ahead of time or ordering takeout on the way home from work. Worrying has led to a smart decision and a successful outcome.
+    \n
+    \n On the other hand, worry becomes unhelpful when we both overestimate the stress of the situation and also believe we don’t have the necessary competency, resiliency or outside resources to face it. What started as worry turns into anxiety and fear.
+    \n
+    \n Let’s learn a technique to create more balance in how much you are allowing your worry to affect your nervous system. The goal is to use worry in a healthy way by making smart decisions to avoid potential dangers without letting that worry dominate you!
+    </string>
+    <string name="information_moral">After an anxiety attack, it’s common to feel embarrassed and think: “I don’t even recognize myself.” That’s because when we experience anxiety, we often respond in ways that we normally don’t. What we are noticing in retrospect was a <b>behavioral response to anxiety.</b>
+    \n
+        \n These behavioral responses are tricky to identify because we tend to confuse them with our personality traits or natural tendencies.
+        \n
+        \nFor example, would you ever say: “I procrastinate when I’m anxious”? Likely not! When we procrastinate, we usually don’t blame it on anxiety and believe that it’s just part of our nature.
+        \n
+        \nBut in reality, behaviors like procrastination are part of what we call “all or nothing behavior”. It’s an extreme reaction in an effort to find balance, gain control and escape a cycle of anxiety.
+        \n
+        \nThese extreme reactions are either
+        \n
+        \n <b>rigidly controlling</b> things around us (like Austin), or
+        \n
+        \n<b>...disengaging</b> and giving up all control of anything (like Nora).
+        \n
+        \nWe may appear to act in compulsive ways, perhaps over-drinking, over-talking, or obsessively organizing.
+        \n
+        \nConversely, we may disengage by giving up, procrastinating, avoiding others or isolating ourselves. We might start to act in a way that others label as lazy, irresponsible, and even selfish. Dependency on alcohol, substances or tobacco can be a sign that we are trying to find quick relief from anxiety.
+        \n
+        \nIf left unchecked, what are initially behavioral responses to anxiety can become so common that they could become ingrained in our personality in the long run. But don’t worry! You are not alone. You can learn to separate your personality from your behavioral responses to anxiety, and it starts with learning to identify your unique behavioral signs of stress.</string>
+    <string name="information_anxious_mind">
+        Have you noticed that many people automatically fall into rigid and unhelpful styles of thinking? This can happen to us without even being aware of it. Unfortunately, when this becomes a constant and consistent habit, these rigid styles of thinking become the cause of emotional distress. Worries and anxieties are contagious. Even just being around a person who thinks in a rigid way and tends to guide their behavior through many rules can cause you to experience anxiety.
+    \n
+    \n First, let’s bring these rigid and automatic types of thinking into awareness by learning how they can trigger our emotions and behaviors.</string>
+    <string name="anxious_mind_text">If you’ve come this far, you’re doing great! So far, we’ve learned skills to calm our anxious body. Now let’s identify unhelpful self-statements and thoughts that can feed our worries and anxieties.</string>
     <!--additional resources-->
-    <string name="additional_anxiety_exercise_summary">Research has shown that exercise improves cell health and boosts the brain’s natural anti-anxiety drug. How so?
-Harvard medical school studies show that exercise diverts our minds from the very things we are anxious about. Moving our bodies decreases muscle tension, lowering our body’s contribution to feeling anxious. Increasing our heart rate actively changes our brain chemistry, increasing the availability of important anti-anxiety neurochemicals such as serotonin and GABA. Exercise also activates our brain’s frontal lobe, helping control the reacting system located in the amygdala.
-We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.
+    <string name="additional_anxiety_exercise_dialogText">Research has shown that exercise improves cell health and boosts the brain’s natural anti-anxiety drug. How so?\n\n
+Harvard medical school studies show that exercise diverts our minds from the very things we are anxious about. Moving our bodies decreases muscle tension, lowering our body’s contribution to feeling anxious. Increasing our heart rate actively changes our brain chemistry, increasing the availability of important anti-anxiety neurochemicals such as serotonin and GABA. Exercise also activates our brain’s frontal lobe, helping control the reacting system located in the amygdala.\n\n
+We all have different health conditions and body types. Which exercise you choose is up to you! Even general physical activity, such as walking, cleaning and taking care of animals is helpful. To maximize its benefits, choose something enjoyable so you will be more likely to repeat it. You’ll build resilience little by little. Work steadily toward increasing your heart rate. Working out with a friend or in a group brings the added benefit of social support. If possible, exercise in nature or in a greenspace. This will further lower stress and anxiety levels.\n\n
 The most important thing is to do it! Do you have some time today to get started?
 </string>
+
+
     <string name="anxiety_and_diet">Anxiety and diet</string>
     <string name="additional_resources">Additional resources</string>
     <!--Weekly Summary-->
@@ -1326,10 +1577,12 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="general_check">General check</string>
     <!--screenings-->
     <string name="screenings_1">1. Little interest or pleasure in doing things</string>
-    <string-array name="screen"><item value="1">1. Little interest or pleasure in doing things</item>
+    <string-array name="screen">
         <item value="1">1. Little interest or pleasure in doing things</item>
         <item value="1">1. Little interest or pleasure in doing things</item>
-        <item value="1">1. Little interest or pleasure in doing things</item></string-array>
+        <item value="1">1. Little interest or pleasure in doing things</item>
+        <item value="1">1. Little interest or pleasure in doing things</item>
+    </string-array>
     <!--    drink Tracker-->
     <string name="drink_tracker_text1">Zero alcohol</string>
     <string name="drink_tracker_text2">Regular beer (12 fl oz) about 5% alcohol</string>
@@ -1342,7 +1595,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="total_text">Total</string>
     <string name="count_text">count</string>
     <string name="drink_tracker">Drink tracker</string>
-    <string name="how_to_do">HOW TO DO IT</string>
+    <string name="how_to_do">How to do it</string>
     <string name="lesson_intro">Introduction</string>
     <string name="lesson">Lesson 1</string>
     <string name="lesson_2">Lesson 2</string>
@@ -1371,7 +1624,7 @@ The most important thing is to do it! Do you have some time today to get started
     <string name="runningexercise_titletext">Movement: running</string>
     <string name="runningexercises_text">It’s not easy to move when you have a shutdown or are feeling numb. Running can quickly shift you out of the shutdown state and re-energize you.</string>
 
-    <string name="version">Version 2.1</string>
+    <string name="version">Version 2.8</string>
     <!--bodymovemet Exercise-->
     <string name="bodymovementexercise_titletext">Mindful body movement</string>
     <!--summary of sleep-->
@@ -1393,10 +1646,453 @@ The most important thing is to do it! Do you have some time today to get started
 
     <string name="doctor_address">South fredreic Av 489</string>
 
-    <string name="quiz_stressful">STRESSFUL SITUATION</string>
-    <string name="quiz_conseq">CONSEQUENCES</string>
-    <string name="quiz_response">RESPONSE TO STRESS</string>
+    <string name="quiz_stressful">Stressful situation</string>
+    <string name="quiz_conseq">Consequences</string>
+    <string name="quiz_response">Response to stress</string>
+    <!--<string name="found_myself">I found myself getting upset by minor things.</string>-->
+    <string-array name="anxiety_question_3_2">
+        <item>1. I found myself getting upset by minor things.</item>
+        <item>2. I was aware of dryness of my mouth.</item>
+        <item>3. I experienced breathing difficulty (e.g., excessively rapid breathing).</item>
+        <item>4. I tended to overreact to situations.</item>
+        <item>5. I had a feeling of shakiness, like my legs were going to give way.</item>
+        <item>6. I found myself getting upset rather easily.</item>
+        <item>7. I found myself getting impatient when I was delayed in any way, like by elevators, traffic lights, or people who kept me waiting.</item>
+        <item>8. I perspired noticeably, like with sweaty palms, even when I wasnt doing anything physical.</item>
+        <item>9. I felt scared without any good reason.</item>
+        <item>10. I was aware of my heart rate, even when I wasnt doing anything physical.</item>
+        <item>11. I found that I was very irritable.</item>
+        <item>12. I felt I was close to panic.</item>
+        <item>13. I found it hard to calm down after something upset me.</item>
+        <item>14. I found it difficult to tolerate interruptions to what I was doing.</item>
+        <item>15. I was in a state of nervous tension with what I was doing.</item>
+        <item>16. I was worried about situations in which I might panic and make a fool of myself.</item>
+    </string-array>
 
+    <string-array name="anxiety_question_3_2_options">
+        <item>Did not apply to me at all</item>
+        <item>Applied to me to some degree, or some of the time</item>
+        <item>Applied to me to a considerable degree, or a good part of time</item>
+        <item>Applied to me very much, or most of the time</item>
+    </string-array>
+
+    <string name="did_not_apply">Did not apply to me at all</string>
+    <string name="applied_to_degree">Applied to me to some degree, or some of the time</string>
+    <string name="applied_to_considerable">Applied to me to a considerable degree, or a good part of time</string>
+    <string name="applied_to_very_much">Applied to me very much, or most of the time</string>
+
+    <string name="rate_yourself_4">4.Rate yourself:</string>
+    <string name="rate_yourself_description">How strongly do you feel that the thoughts or beliefs you listed above are true?</string>
+    <string name="iKnow_they_re_not_true">1: I know they’re not true</string>
+    <string name="iStrongly_believe_them_to_be_true">5: I strongly believe them to be true</string>
+    <string name="this_is_your_report">This is your report</string>
+    <string name="tittle_restructure_your_biased_thinkings">Tittle: Restructure your biased thinkings</string>
+    <string name="specific_situation_where_you_hold_on_to_biased_thinking">1. Specific situation where you hold on to biased thinking:</string>
+    <string name="job">Job</string>
+    <string name="health">Health</string>
+    <string name="parenting">Parenting</string>
+    <string name="biased_thinking_that_you_identified_with">2. Biased thinking that you identified with:</string>
+    <string name="perfectionist_thinking">Perfectionist thinking</string>
+    <string name="negative_filtering">Negative filtering</string>
+    <string name="jumping_to_conclusion">Jumping to conclusion</string>
+    <string name="your_thoughts_about_the_situation">3. Your thoughts about the situation:</string>
+    <string name="reasons_why_your_thoughts_are_not_realistic">5.Reasons why your thoughts are not realistic:</string>
+    <string name="your_modified_thoughts">6. Your modified thoughts:</string>
+    <string name="rate_yourself_7">7. Rate yourself:</string>
+    <string name="write_down_what_have_you_recognized_about_how_biased_thinking_affects_your_emotions_and_behaviors">Write down what have you recognized about how biased thinking affects your emotions and behaviors.</string>
+    <string name="save_it_to_weekly_summary_journal_entry">Save it to weekly summary journal entry</string>
+    <string name="based_on_the_type_of_biased_thinking_you_ve_chosen_write_one_or_two_thoughts_beliefs_or_reactions_you_might_typically_have_in_your_specific_situation">3. Based on the type of biased thinking you’ve chosen, write one or two thoughts, beliefs or reactions you might typically have in your specific situation:</string>
+    <string name="write_your_thoughts_here">Write your thoughts here...</string>
+    <string name="evaluate_your_thoughts">5. Evaluate your thoughts:</string>
+    <string name="even_though_your_biased_thinking_sounds_logical">Even though your biased thinking sounds logical, why isn’t it necessarily realistic? Can you come up with three reasons why your thoughts or beliefs may not be completely true?</string>
+    <string name="if_you_have_a_hard_time_coming_up">If you have a hard time coming up with reasons why your thinking may not be realistic, think about the following questions:</string>
+    <string name="what_are_the_consequences_of_my_thinking_and_beliefs">• What are the consequences of my thinking and beliefs?</string>
+    <string name="how_does_my_thinking_feed_my_anxiety_and_worry">• How does my thinking feed my anxiety and worry?</string>
+    <string name="need_additional_help">Need additional help?</string>
+    <string name="evidence_1">Evidence 1</string>
+    <string name="write_your_reason_here">Write your reason here...</string>
+    <string name="evidence_2">Evidence 2</string>
+    <string name="make_sure_to_fill_out_three_">Make sure to fill out three of your own reasons before moving to the next step.</string>
+    <string name="evidence_3">Evidence 3</string>
+    <string name="modify_your_thoughts">6. Modify your thoughts:</string>
+    <string name="now_that_you_ve_recognized">Now that you’ve recognized the possibility that your thinking may not be realistic or completely true, what would be a more realistic way of thinking about your situation?</string>
+    <string name="new_thought_1">New thought</string>
+    <string name="new_thought_2">New thought 2</string>
+    <string name="can_you_appreciate_that_you_are"><![CDATA[Can you appreciate that you are now talking to yourself in a kinder, more reasonable and wise manner? ]]></string>
+    <string name="congratulations_you_ve_modified_your_biased_thinking">Congratulations! You’ve modified your biased thinking, even if just a little.</string>
+
+    //review thinks dialog text
+    <string name="anxiety_review_think_one"> • You have a fixed standard to how you want to proceed with tasks, relationships and problem solving.
+        \n
+        \n • You have expectations of how it “should” turn out. If it doesn’t turn out like you think, you judge yourself to be a failure or as someone who didn’t work hard enough to succeed.
+        \n
+        \n • You judge your own performance, relationships and decisions as either totally good or totally bad.
+        \n
+        \n • Your evaluation of yourself and others tends to be black and white, making it hard to see matters in shades of gray.</string>
+
+    <string name="anxiety_review_think_two"> • You often see things as a catastrophe, which means a “complete disaster”.
+        \n
+        \n • You think of exaggerated negative consequences of events or decisions.
+        \n
+        \n • You think that the worst possible outcome will occur if one thing fails.
+             For example:
+        \n
+        \n  “If I fail in this test, I will be a total failure in life”
+            “If he leaves me, I will never find anyone else”
+            “I’ll be unhappy for the rest of my life”
+           .This thinking leads to unnecessary increases in levels of anxiety and can lean to “acting out” or other unhelpful behaviors. </string>
+    <string name="anxiety_review_think_three"> • You have a tendency to demand an extremely high or even flawless level of performance from yourself or others, even when your expectations are in excess of what is required of the situation(ex. cleaning, organizing your closet, etc..)
+        \n
+        \n • This thinking is different from being a high achiever because your expectations are motivated by fear or are paralyzed by the idea of failure (vs. motivated by doing your best).
+        \n
+        \n • Your expectations make you feel anxious, fearful and like you are losing control.
+        \n
+        \n • This thinking often leads to procrastination, self-criticism/judgment or OCD.</string>
+    <string name="anxiety_review_think_four"> • You only see one side of a situation (usually the negative side), and you dwell on it obsessively.
+        \n
+        \n • You tend to dismiss positive experiences while amplifying negative ones:
+        \n
+        \n   “My work meeting didn’t go well because I forgot to mention something that I prepared.”
+        \n
+        \n  “My husband didn’t like what I said at the restaurant. It was such a bad night.”</string>
+    <string name="anxiety_review_think_five"> • You believe you are responsible for things that are actually outside your control and feel guilty or ashamed for not being able to control or prevent them.
+        \n
+        \n • This thinking involves self-criticism and judgment:
+        \n
+        \n   “I should have tried harder or done better” ..when the problem was mutual (ex. relationship breakup, being laid off from work)
+        \n
+        \n  “I should help out more” ..when you see someone struggling.
+        \n
+        \n • Taking an event or situation and making it about you when it has nothing to do with you
+        \n
+        \n • “They must be talking about me” ..when someone simply had a private conversation with someone else.</string>
+
+    <string name="anxiety_review_think_six"> • You jump to conclusions with little to no information or facts.
+        \n
+        \n • You quickly label yourself or others by one negative factor:
+        \n
+        \n   “I don’t have much to contribute to the conversation, so I KNOW I’m going to look stupid.”
+        \n
+        \n   “They stopped talking when I walked in. They were talking about me.”
+        \n
+        \n • This thinking unnecessarily upsets you emotionally because you believe that the conclusions and judgments you made are true.</string>
+    <string name="anxiety_review_think_seven"> • This is similar to jumping to conclusions, but you have written a “negative script” in your mind without the possibility that it may be incorrect.
+        \n
+        \n • You have strong negative feelings about tasks or relationships because they have happened to you before.
+        \n
+        \n • Mind reading
+        \n
+        \n • You prophesy what’s going to happen, and you either make statements based on your predictions or feel negative about them.</string>
+    <string name="anxiety_review_think_eight"> • You create “emotional truth” (assumptions) based on your strong feelings (especially fear) on matters:
+        \n
+        \n   “I feel guilty so I must have done something bad.”
+        \n
+        \n   “Something bad is going to happen because I strongly feel fear.”
+        \n
+        \n • Although you think you are reasoning logically, you are allowing your strong emotions to lead you to a skewed view of reality.</string>
+    <string name="rate_yourself_again">7. Rate yourself again:</string>
+    <string name="now_that_you_ve_adjusted_your_biased_thinking_how">Now that you’ve adjusted your biased thinking, how strongly do you feel that the thoughts or beliefs you listed above are true?</string>
+    <string name="if_your_rating_has_remained_at_four_or_five_try_this">If your rating has remained at four or five, try this exercise again. The goal is to reach a rating of one. If you find it hard to reach a lower rating, try applying it to different scenarios and situations until you learn to step away from biased thinking. If you are still having a hard time modifying your thinking, you might ask someone you trust to help you through this exercise.</string>
+    <string name="it_s_important_to_keep_practicing_using_this_format">It’s important to keep practicing using this format because you don’t always realize when you’re using biased thinking in your day-to-day life. The more you practice, the more you’ll be aware of it, and the easier it will be to catch and modify it as you face daily circumstances.</string>
+    <string name="you_ll_also_start_recognizing_biased_thinking_in_other_people"><![CDATA[You’ll also start recognizing biased thinking in other people.\n There will be times when people communicate with you using their own biased thinking, which you might believe to be the definite truth.  Many times, someone else’s biased thinking may trigger your own.  If you can master the ability to recognize it, you’ll not only avoid unhelpful behavior, but you may also help others think and act in more positive and productive ways.]]></string>
+
+    //expand adapter restructed
+    <string name="all_summary_title">All or nothing</string>
+    <string name="all_summary">Why isn’t the idea of "setting up a fixed standard of how you do things" realistic?
+        \n
+        \nExample:
+        \n
+        \nMost tasks can’t be measured as just "good" or "bad" (there is a measure of progress).
+        \n
+        \nEven if I try hard, other factors can affect my performance (e.g., difficult clients, exams harder than usual, unfavorable weather). \n\nThere were times when others commended me for a job well done, but I felt I could’ve done better.</string>
+    <string name="Catastrophizing_summary">Why isn\'t the idea of \“the worst possible outcome will occur if one thing fails\” realistic?\n\nExample:\n\nMost of the things that people worry about never actually happen.\n\nSuccessful people also experience setbacks \n(ex. failing in exam), but they still manage to find a way to be successful. (ex. finding a job)\n\nSometimes it\'s the \“fear\” that social media or others create, but it\'s up to me to believe it or not.</string>
+
+    <string name="Personalization_summary">Why isn’t the idea of &quot;believing your responsible for things that are outside of your control&quot; realistic?\n\nExample:\n\n
+        We all tend to think of ourselves and forget the other persons needs and circumstances without bad intention.\n\n
+        Humans are limited with control (no one has enough power to control unpleasant situations), therefore it’s not necessary "I" failed in fixing it.\n\n
+        People have their own feelings and needs so what I think should be their needs can be different from what they actually need. They are held accountable to figure it out for themselves.\n\n
+        There may be a reason that I don’t know explaining why people didn’t include me, but it doesn’t mean they intentionally excluded me.\n\n
+        There are other factors involved in other people’s behaviors besides me.\n
+        </string>
+    <string name="Jumping_summary">Why isn’t the idea of “jumping to conclusions with little to no facts” realistic?\n\nExample:\n\n
+        Many times, my “worries” make me jump to conclusions because I don’t want to get hurt.\n\n
+        Just because it happened once before, it’s not reasonable to assume it will always be that way. (ex. people cheating, rejection, lies etc.)\n\n
+        Telling myself the worst-case scenario or being judgmental is not really a kind way of protecting myself, rather it will take me to a twisted way of viewing people, situations, and the world.\n
+        </string>
+    <string name="Making_summary">Why isn’t the idea of “writing a negative script in your mind” why isn\’t it realistic?\n\n Example:\n\n
+        Many times, this occurs because people grow up in a family where honest communication rarely existed and I was unable to express my honest feelings. But it’s not fair to assume that everyone grew up the same way I did.\n\n
+        If I have the right support, there is always a way to resolve negative situations, therefore I don’t have to be overly worried about what’s going to happen.\n\n
+        There were times I really thought that a certain thing would occur, but in the end, it turned out completely different or it never happened.\n
+        </string>
+    <string name="Emotional_summary">Why isn’t the idea of “emotional reasoning based on your strong fears” realistic?\n\nExample:\n\n
+        Many times, “worries” make me jump to conclusions because I don’t want to get hurt.\n\n
+        Just because it happened once before, it’s not reasonable to assume it will always be that way. (ex. people cheating, rejection, lies etc.)\n\n
+        Telling myself the worst-case scenario or being judgmental is not really a kind way of protecting myself, rather it will take me to a twisted way of viewing people, situations, and the world.\n
+        </string>
+    <string name="Perfectionist_summary">Why isn’t the idea of “expect to perform at the highest level” realistic?\n\nExample:\n\nIn reality, being perfect is not the way to get what I need; appreciation, love, approval.\n\nIt\'s possible to grow and mature, but it\'s impossible to become perfect.\n\nJust because it didn\'t turn out the way I wanted to, it\'s not all bad.\nIt\'s my internal voice telling me to set a high standard, no one is expecting it from me.\n\nIf I overly focus on the result, I would be dismissing the efforts and enjoyment in process.</string>
+    <string name="Negative_summary">Why isn’t the idea of “excessively dwelling on the negative aspects” realistic?\n\nExample:\n\nWe are all imperfect and there is no one who never makes a mistake.\n\nIt\'s up to me to learn from my mistakes or let them bring me down. It depends on how I look at it.\n\nIt\'s my critical mind that is focusing on the negatives and in reality, the actual experiences are not all negative.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- lesson 6.3-->
+    <string name="now_that_we_ve_discussed_what_biased_thinking">Now that we’ve discussed what biased thinking is, let’s connect the dots! How exactly does biased thinking affect the way we feel, which in turn affects the way we behave?\n\n Listen to the tale of “The north wind and the sun”:</string>
+    <string name="let_s_imagine_that_the_north_wind_represents_biased">Let’s imagine that the north wind represents biased thinking and that the sun represents self-compassion.</string>
+    <string name="which_one_do_you_think_is_most_effective_in_guiding_our_behavior">Which one do you think is most effective in guiding our behavior?</string>
+    <string name="biased_thinking_can_be_logical_and_true_but">Biased thinking can be logical and true, but when it becomes too rigid and lacking in self-compassion, the result is defensive behavior, just like the traveler.</string>
+    <string name="read_the_following_thoughts_from_nora_and_melanie">Read the following thoughts from Nora and Melanie, and see if you can identify how biased thinking skews their ability to evaluate their respective situations clearly:</string>
+    <string name="i_was_in_a_pretty_intense_work_environment_having_to_meet">“I was in a pretty intense work environment, having to meet monthly goals. When I started making up bunch of internal rules and standards in my mind and talking to myself like a judgmental friend my anxiety spiked. I began to feel inadequate and I quit”</string>
+    <string name="which_biased_thinkings_does_she_have">1. Which biased thinkings does she have?</string>
+    <string name="all_or_nothing_thinking">All or nothing thinking</string>
+    <string name="perfectionism_thinking">Perfectionism thinking</string>
+    <string name="making_negative_assumptions">Making negative assumptions</string>
+    <string name="how_has_her_biased_thinking_triggered_her_emotion">2. How has her biased thinking triggered her emotion?</string>
+    <string name="sad">Sad</string>
+    <string name="anxiety_makingconnection">Anxiety</string>
+    <string name="inadequacy">Inadequacy</string>
+    <string name="anger">Anger</string>
+    <string name="that_s_right">That\'s right!</string>
+    <string name="let_s_try_again">Let\'s try again</string>
+    <string name="i_was_in_a_pretty_intense_work_environment_having_to_meet_monthly">“I was in a pretty intense work environment, having to meet monthly goals. When I started making up bunch of internal rules and standards in my mind and talking to myself like a judgmental friend my anxiety spiked. I began to feel inadequate and I quit”</string>
+    <string name="i_always_thought_that_if_i_stay_positive_everything">“I always thought that if I stay positive, everything will be fine and that it’s my job to make everyone happy. I have to admit there were plenty of moments that I was driven by fear and anxiety to make everyone happy, and I overscheduled myself. It got me into an ‘overdrive-crash’ lifestyle cycle”</string>
+    <string name="personalization_and_blame">Personalization and blame</string>
+    <string name="fear">Fear</string>
+    <string name="it_s_important_to_understand_the_role_that_biased_thinking_plays_in_excessive">It’s important to understand the role that biased thinking plays in excessive, irrational worry and persistent anxiety. Biased thinking can happen to any of us! The goal is to catch ourselves and modify our thinking before it starts to create intense anxiety.\n\n Let’s do an exercise that will help you fine tune your ability to make the connection between your thoughts and feelings and your actions. Check which reactions you most identify with.</string>
+    <string name="scenario_1">Scenario 1</string>
+    <string name="you_came_to_work_on_monday_and_unexpectedly_found_troubling_emails_from_clients">You came to work on Monday and unexpectedly found troubling emails from clients.</string>
+    <string name="i_might_think_biased_thinking">I might think (biased thinking):</string>
+    <string name="there_is_no_way_i_can_resolve_it_by_the_end_of_the_day_i_ve_already_failed"><b>Negative assumptions:</b> \n “There is no way I can resolve it by the end of the day. I’ve already failed.”</string>
+    <string name="they_are_upset_and_i_m_in_trouble"><b>Jumping to conclusions:</b> \n “They are upset and I’m in trouble.”</string>
+    <string name="_i_need_to_think_every_single_mistakes_i_possible_made"><b>Perfectionism:</b>\n “I need to think every single mistakes I possible made to cause this trouble first, otherwise I can’t respond back to them”</string>
+    <string name="if_i_don_t_get_back_to_them_today_i_ll_lose_my_clients_and_will_be_in_trouble_with_my_boss"><b>Catastrophizing:</b>\n “If I don’t get back to them today, I’ll lose my clients and will be in trouble with my boss.”</string>
+    <string name="i_might_feel">I might feel:</string>
+    <string name="incompetent">Incompetent</string>
+    <string name="disappointed">Disappointed</string>
+    <string name="shame">Shame</string>
+    <string name="fear_afraid_of_challenges_and_failing">Fear (afraid of challenges and failing)</string>
+    <string name="nervous">Nervous</string>
+    <string name="pressure">Pressure</string>
+    <string name="overwhelmed">Overwhelmed</string>
+    <string name="agitated">Agitated</string>
+    <string name="frustrated">Frustrated</string>
+    <string name="angry">Angry</string>
+    <string name="judgmental">Judgmental</string>
+    <string name="hopeless_helpless">Hopeless/Helpless</string>
+    <string name="bad_mood">Bad mood</string>
+    <string name="numb">Numb</string>
+    <string name="saved">Saved</string>
+    <string name="depressed">Depressed</string>
+    <string name="i_might_behavior">I might (behavior):</string>
+    <string name="use_the_phrases_should_have_to_and_must_are_running_through_my_mind">..use the phrases “should”, “have to” and “must” are running through my mind</string>
+    <string name="procrastinate_in_responding_to_emails">..procrastinate in responding to emails</string>
+    <string name="skip_taking_a_break_and_lunch_and_not_talk_to_anyone_at_work_all_day">..skip taking a break and lunch and not talk to anyone at work all day</string>
+    <string name="have_a_panic_attack">..have a panic attack</string>
+    <string name="get_discouraged_before_even_trying">..get discouraged before even trying</string>
+    <string name="have_negative_thoughts_and_beliefs_that_snowball">..have negative thoughts and beliefs that snowball and spiral, and there will be no room to change it</string>
+    <string name="forecast_what_s_going_to_happen_and_make_decisions_based_on_it">..forecast what’s going to happen and make decisions based on it</string>
+    <string name="have_lots_of_negative_and_fear_talk">..have lots of negative and fear talk</string>
+    <string name="overly_generalize_matters_i_ll_never_get_better_it_s_always_like_this">..overly generalize matters: “I’ll never get better”, “It’s always like this”...</string>
+    <string name="isolate_myself_or_shut_down_feeling_hopeless_because">..isolate myself or shut down, feeling hopeless because I have no way to avoid the idea of worst-case scenario</string>
+    <string name="there_is_no_right_or_wrong_answers">There is no right or wrong answers.\nThis exercise help connect\nthe thinking with the action.</string>
+    <string name="you_came_to_a_party_and_started_to_get_overwhelmed_because_very_few_people_interacted_with_you">You came to a party and started to get overwhelmed because very few people interacted with you.</string>
+    <string name="scenario_2">Scenario 2</string>
+    <string name="it_was_a_bad_idea_to_come_to_this_party">All or nothing:\n “It was a bad idea to come to this party.”</string>
+    <string name="i_ve_been_rejected_i_might_have_done_or_said_something_bad">Fear talk: \n “I’ve been rejected. I might have done or said something bad.”</string>
+    <string name="i_m_boring_and_no_one_wants_to_talk_to_me">Negative filtering:\n “I’m boring and no one wants to talk to me.”</string>
+    <string name="they_didn_t_really_come_talk_to_me_they_didn_t_want">Personalization and blame: \n “They didn’t really come talk to me. They didn’t want me to come (maybe I’m not fun enough).”</string>
+    <string name="try_to_excessively_fix_situations_or_relationships">...try to excessively fix situations or relationships</string>
+    <string name="ruminate_over_things_i_said_or_did_wrong">...ruminate over things I said or did wrong</string>
+    <string name="feel_insecure_and_inadequate_in_that_social_setting">...feel insecure and inadequate in that social setting. I will be afraid of making mistakes in public.</string>
+    <string name="have_difficulty_receiving_constructive_criticism_or_feedback">...have difficulty receiving constructive criticism or feedback because I will dwell on the negative side of it and dismiss the positives</string>
+    <string name="try_to_excessively_help_out_or_talk_to_entertain_friends">Try to excessively help out or talk to entertain friends</string>
+    <string name="excessively_observe_people_s_facial_expressions_behaviors_and_reaction_to_read_their_mind">Excessively observe people\'s facial expressions, behaviors and reaction to read their mind</string>
+    <string name="leave_the_party_right_away">Leave the party right away</string>
+    <string name="all_or_nothing">All or nothing</string>
+    <string name="emotions">Emotions:</string>
+    <string name="behaviors">Behaviors:</string>
+    <string name="quitting_work">Quitting work</string>
+    <string name="this_is_your_report_tittle_biased_thinkings">This is your report \nTittle: Biased thinkings</string>
+    <string name="thoughts">Thoughts:</string>
+    <string name="perfectionism">Perfectionism</string>
+    <string name="were_any_of_these_reactions_familiar_to_you">Were any of these reactions familiar to you?</string>
+    <string name="learning_to_identify_them_early_o_will_help_you_avoid">Learning to identify them early o will help you avoid the trap of biases thinking! But what can you do about it once you’ve identified it ?</string>
+    <string name="rigid_biased_thinkings">Rigid biased thinkings</string>
+    <string name="fear_talk">Fear talk</string>
+    <string name="painful_emotions">Painful emotions</string>
+    <string name="unhelpful_coping_skills_behaviors">Unhelpful coping skills/behaviors</string>
+    <string name="trigger">Trigger</string>
+    <string name="motivates">motivates</string>
+    <!--additional resources-->
+    <string name="anxiety_and_sleep_card_1_desc_1">\n“You should get eight hours of sleep!” Regardless of how many hours of sleep we should technically get, it remains an important but elusive part of our day. Few people understand why sleep is so important when it comes to anxiety management.</string>
+    <string name="sleep_deprivation_causes_insulin_resistance">\nSleep deprivation causes insulin resistance</string>
+    <string name="anxiety_and_sleep_card_2_desc_1">\nStudies show that one third of Americans have insulin resistance, resulting in a reduced ability to adapt to stress and stimulate chronic stress hormones. This, in turn, results in increased anxiety and depression.</string>
+    <string name="anxiety_and_sleep_card_3_desc_1">Researchers have found that during sleep, the glymphatic system (our body’s waste removal system, part of the nervous system) was ten times more active than while it was awake. In other words, our brain goes through a detoxification process while we are sleeping. When completed properly, we wake up with a clearer head and a more alert mind.</string>
+    <string name="here_are_some_tips_to_improve_your_sleep">\nHere are some tips to improve your sleep:</string>
+    <string name="anxiety_and_sleep_card_3_desc_2">\n1. Try not to depend on artificial stimulation to help keep you awake. Highly refined foods, excessive caffeine and adrenaline producing activities lead to chronic sleep deprivation. Because you’re not getting enough sleep, your brain comes to believe that you are fine without it! \n
+    \n2. Create a sleep-conducive environment by reducing the level of brightness where you sleep. Intentionally turning lights way down about an hour before bedtime helps create more melatonin in your system. You can also design your bedroom to support quality sleep by using black out and sound baffling drapes to keep it dark and quiet. \n
+    \n3. Stick to a regular sleep schedule: go to bed and get up at about the same time every day of the week. \n
+    \n4. It’s OK to use sedating supplements such as chamomile, theanine, GABA and melatonin as long as they are used occasionally, in moderation, and as indicated. These are generally more conducive to natural sleep rather than getting “knocked out” by prescription sleeping pills.</string>
+    <string name="did_you_know">Did you know?</string>
+    <string name="anxiety_and_sleep_card_2_dialog_text">Insulin resistance is when cells in your muscles, fat, and liver don’t respond well to insulin and can’t use glucose from your blood for energy. To make up for it, your pancreas makes more insulin. Over time, your blood sugar levels go up.</string>
+    <string name="anxiety_and_sleep_card_3_heading_2">\nDo you think there are some ways you can start improving your sleep quality?\n\n</string>
+    <string name="anxiety_and_diet_card_1_desc_1">Sugar lights up the addiction centers in our brains, similar to what happens when someone uses cocaine. This is important to remember, considering that our brain controls our emotions and behaviors</string>
+    <string name="anxiety_and_diet_card_2_desc_1">Three negative effects that sugar and processed food have on anxiety are:\n\n
+    1. Insulin resistance (You’ve already learned about this danger in the section on “Anxiety and Sleep”)\n\n
+    2. Leptin resistance (You can’t feel when you are full at mealtimes)\n\n
+    3. Increased inflammation in your body (Causes you pains and stress)\n\n
+    As you can imagine, experiencing one or more of these effects produces more anxiety.\n\n\n
+    </string>
+
+    <string name="anxiety_and_diet_card_3_heading_1">How can you determine if you are addicted to sugar and processed food?\n</string>
+    <string name="anxiety_and_diet_card_3_desc_1">Look for these signs \n\n
+    •Frequent headaches, lethargy, feeling tired, cravings, muscle pain, nausea, bloating, insomnia\n\n
+    •Trying to quit sugar produces headaches or fatigue\n\n
+    •Having a hard time recognizing when you are full or have eaten enough\n\n
+    </string>
+    <string name="anxiety_and_sleep_card_4_heading_1">Some tips to improve your diet</string>
+    <string name="anxiety_and_sleep_card_4_desc_1">\nThis information does not promote or suggest any specific diet plan. Any intervention in your diet must be balanced and responsible. But here are two things you can do to start on a path toward a healthier diet:\n
+    \n1.Consult with a nutritionist or doctor for recommendations on a specific diet plan tailored to you\n
+    \n2.Try a sugar detox in order to “reset” your body. This will:\n
+    \u00A0\u00A0a.Improve your cells’ sensitivity to insulin\n
+    \u00A0\u00A0b.Reduce cortisol levels\n
+    \u00A0\u00A0c.Lower ghrelin levels (regulates hunger and appetite)\n
+    \u00A0\u00A0d.Improve leptin sensitivity\n
+    \u00A0\u00A0e.Increase dopamine levels naturally\n
+    \u00A0\u00A0f.Reset your taste buds\n
+    \u00A0\u00A0g.Reduce inflammation\n\n</string>
+    <string name="anxiety_and_diet_card_1_dialog_text_1">Unfortunately, many of us consume more sugar than we are aware of because it’s lurking in so many foods we would never expect to contain it. The average person consumes 152 lbs. (69 kg) of sugar per year! It’s true, sugar is responsible for increased waist lines. But the real problem is addiction. A study by Dr. Serge H. Ahmed (“Is Sugar As Addictive As Cocaine?”) shows that sugar was eight times more addictive than cocaine.</string>
+    <string name="anxiety_and_diet_card_4_dialog_text_1">Diets such as the “Keto Diet” and Dr. Mark Hyman’s “10-day Detox Diet” are designed to reset your body. When it comes to establishing long-term eating habits, you need to make sure you are doing so in a balanced and reasonable way.</string>
+    <string name="alcohol_substances_tracking">Alcohol/Substances Tracking</string>
+    <string name="anxiety_and_alcohol_card_1_desc_1">It’s not easy to tolerate anxiety.\n</string>
+    <string name="anxiety_and_alcohol_card_2_desc_2">Understandably, many who want to control their anxiety without prescriptions often turn to alcohol or substances: they are easy to acquire and they provide quick relief from stress, rumination and worries. But in the long run, this easy path quickly leads to destructive patterns that can be impossible to escape from without drastic intervention.\n
+    \n Since alcohol and substances are commonly associated with anxiety, we’d like to provide you with information on ways to cope with alcohol and substances.  What do you think?\n</string>
+    <string name="anxiety_and_alcohol_card_1_dialog_text">• 40 million americans suffer from some kind of anxiety disorder at any given time\n
+    • 1 in 5 individuals with anxiety report using alcohol or substance to cope with stress\n
+    • 20% of people diagnosed with alcohol or substance use disorder also suffer from an anxiety or mood disorder\n\n
+    The purpose of learning about the prevalence of alcohol and substance dependence is not to make ourselves feel judged. Understanding it helps us be aware of and avoid the vicious cycle of addiction we can easily find ourselves in when looking for comfort from anxiety.</string>
+    <string name="managing_stress_to_reduce_anxiety_desc">“Stress” and “Anxiety” are two words we hear often in our everyday lives. This is not surprising, because both things are related to each other. Ultimately, they have a direct effect on our behaviors.\n\n Though anxiety is often triggered by fear, both external and internal experiences can trigger stress and anxiety. External experiences could be things like challenging situations or health problems. Internal experiences can be things like negative thoughts, self-criticism, judgements or remembering shameful memories. In either case, understanding your stress can help you manage your anxiety.</string>
+    <string name="learn_how_to_manage_your_anxiety">Learn how to Manage your Anxiety</string>
+    <string name="yes_we_ve_all_heard_it">Yes, we’ve all heard it</string>
+
+    <!-- Understanding your response to stress-->
+    <string name="understanding_the_stress_signs">Understanding the stress signs</string>
+    <string name="understanding_the_cause_of_your_stress">Understanding the cause of your stress</string>
+    <string name="resources">Resources</string>
+    <string name="where_can_stress_hide">Where can stress hide?</string>
+    <string name="your_physiological_signs_of_stress_quiz">Your physiological signs of stress quiz</string>
+    <string name="what_are_physiological_signs_of_stress">What are physiological signs of stress?</string>
+    <string name="your_emotional_signs_of_stress_quiz">Your emotional signs of stress quiz</string>
+    <string name="emotional_signs_of_stress_fight_flight_freeze_shutdown">Emotional signs of stress? Fight/Flight/Freeze/Shutdown</string>
+    <string name="your_behavioral_signs_of_stress_quiz">Your behavioral signs of stress quiz</string>
+    <string name="defense_response_and_behavioral_response">Defense response and behavioral response</string>
+    <string name="what_is_causing_you_stress">What is causing you stress?</string>
+    <string name="what_s_causing_nora_austin_and_melanie_stress">What’s causing Nora, Austin, and Melanie stress</string>
+    <string name="what_triggers_our_stress">What triggers our stress</string>
+    <string name="your_stress_triggers_quiz">Your stress triggers quiz</string>
+    <string name="what_is_your_response_to_stress">What is your response to stress?</string>
+    <string name="push_away_avoidance">Push away/avoidance</string>
+    <string name="push_through">Push through</string>
+    <string name="stress_hormones">Stress hormones</string>
+    <string name="in_denial">In denial</string>
+    <string name="coping_with_stress">Coping with stress</string>
+    <string name="cost_benefit_analysis">Cost benefit analysis</string>
+    <string name="relaxation_techniques">Relaxation techniques</string>
+    <string name="biased_thinking_and_stress">Biased thinking and stress</string>
+    <string name="body_stress_signs_text">Our bodies are well-equipped to handle stress in small doses, but when that stress becomes long-term or chronic, it can have serious effects on your body.</string>
+    <string name="emotional_stress_sign_card_1_desc_1">Along with a physiological response to stress, your defense responses, such as fight-flight-freeze-shutdown, are triggered by a release of hormones in your nervous system, resulting in the experience of strong emotions.\n \n  When we face stress, our brain quickly runs an inventory to decide which defense response to activate.\n</string>
+    <string name="emotional_stress_sign_card_2_desc_1">FIGHT the threat (to overpower and regain control of yourself) or FLIGHT (to flee for safety by finding an exit). When we don\’t know what to do or our FIGHT or <font color="#6E6BB3">FLIGHT</font> responses are not working, we go into FREEZE, and after some time, it can lead to <font color="#6E6BB3">SHUTDOWN</font> (feeling hopeless/helpless).\n \nLet\’s take a look at each defense response and see how they are related to your emotions!</string>
+    <string name="shut_down">SHUT DOWN</string>
+    <string name="emotional_stress_sign_card_3_desc_2">Angry, judgmental, mistrustful, impatient, frustrated, obsessive, hatred, disgust, alert.\n</string>
+    <string name="emotional_stress_sign_card_4_desc_2">Inadequate, anxious, worried, fearful, overwhelmed, nervous, timid.</string>
+    <string name="emotional_stress_sign_card_5_desc_2">Panicky, overwhelmed, ruminating, hypervigilant, brain feels offline, feels like a deer caught in headlights.</string>
+    <string name="emotional_stress_sign_card_6_desc_2">Numb, hopeless/helpless, dissociated, sad, depressive, feel like a zombie.</string>
+    <string name="flight">FLIGHT</string>
+    <string name="fight">FIGHT</string>
+    <string name="freeze">FREEZE</string>
+    <string name="window_tolerance_card_1_desc_2">Have you ever filled a party balloon with air? If so, you’ll know what it feels like as the balloon stretches and stretches until it can’t stretch any further. Any more air.... and it pops!\n \n Similarly, our bodies have an optimal emotional range where it functions best. We call this our “Window of Tolerance”. When we are in our Window of Tolerance, we feel like we can deal with whatever’s happening in our life. We might feel stress or pressure, but it doesn’t bother us too much. This is the ideal place to be. But when we are under stress, that window becomes very small. It can stretch a bit, but if our stressors are greater than our window, we will fall outside into one of two opposite states.\n\n</string>
+    <string name="window_tolerance_card_2_desc_1">HYPER-AROUSAL: Anxiety, fear, irritation, panic. You might experience the “Fight or Flight” response.</string>
+    <string name="window_tolerance_card_2_desc_2">HYPO-AROUSAL: Emotional numbness, exhaustion, depression, dissociation, withdrawal, lethargy. You might experience your body shutting down or freezing.</string>
+    <string name="triggers_our_stress_card_1_desc_1">Situations that require you to give up or lose something that is important to you or if something you feel you deserve is being threatened or taken away…\n\n  What are the reasons why many struggle with adapting to and managing stressful situations?</string>
+    <string name="triggers_our_stress_card_2_heading_1">“I am not ready” \n(for this change/loss)</string>
+    <string name="triggers_our_stress_card_2_desc_2">When we face sudden changes that force us to adapt without being prepared, when things happen unexpectedly, or when we haven\’t wrapped our minds around the situation yet, the brain experiences a slight freeze (like a deer caught in headlights) or strong emotions such as anger, frustration, and even sadness. This is because we lose a sense of control, freedom, and choice.\n</string>
+    <string name="triggers_our_stress_card_3_heading_1">“I don’t like it” (this change/loss)</string>
+    <string name="triggers_our_stress_card_3_desc_2">When we experience stress or changes that are beyond our control, and something important to us (such as time, choices, freedom, relationships) is taken away or limited with little choice, we feel hopeless or helpless. Our initial response is to reject or avoid it because we don\’t like the new reality, leading to struggles in accepting it.</string>
+    <string name="triggers_our_stress_card_4_heading_1">“I don’t feel competent”(to face this change/loss)</string>
+    <string name="triggers_our_stress_card_4_desc_2">We tend to overestimate stress when we don\'t fully understand what\'s going on or when we cannot comprehend it. Examples of this can be mental illness, work pressure, or relationship challenges, which make us feel \“not good enough,\” \“powerless,\” or \“worthless.\” When faced with a challenge that requires us to do something we have never done before, have failed in the past, or fear something bad will happen, the brain experiences flight, freeze, or shutdown. This often comes with strong emotions such as anxiety, fear, feeling overwhelmed, and depression.\n\n</string>
+    <string name="push_away_card_1_heading_1">Push away</string>
+    <string name="push_away_card_1_desc_3">Push away/avoidance response comes from a view\n “Stress is a dangerous enemy!”\n\n It leads us to believe that the stressor is too overwhelming for us to handle…\n</string>
+    <string name="lesson_3_thoughts">Thoughts</string>
+    <string name="push_away_card_2_desc_1">•\u00A0I don’t have the power or strength to face this challenge.\n\n •\u00A0I don\’t have enough experience or knowledge to know what to do.\n\n •\u00A0I don’t have external resources (support or information) to assist me.\n</string>
+    <string name="feelings_enotions_triggered_by_these_thoughts">Feelings (Emotions) triggered by these thoughts\n</string>
+    <string name="push_away_card_2_desc_2">•\u00A0Anxiety\n\n•\u00A0Fear\n\n•\u00A0Worry\n\n•\u00A0Inadequacy\n\n•\u00A0A desire to mentally escape\n</string>
+    <string name="behavioural_responses">Behavioral response\n</string>
+    <string name="push_away_card_2_desc_3">It is natural to avoid stressors, but when this response becomes excessively activated, you may find yourself constantly taking detours in life to evade any person or situation perceived as stressful. This can result in giving up, rejecting, avoiding and potentially losing significant aspects of life, such as relationships, work, grades, time and health…\n\n</string>
+    <string name="push_away_card_3_heading_1">Why does the push away/avoidance response occur?</string>
+    <string name="push_away_card_3_desc_3">This response is common when you have experienced past trauma or intense pain or when your sense of safety was threatened. Traumatic memories (PTSD) can continue to evoke a certain degree of fear, adversely affecting your emotional well-being and derailing your life. It may also stem from feeling judged by others, being labeled as irresponsible, lazy or selfish.\n\n</string>
+    <string name="push_through_card_1_heading_1">Push through</string>
+    <string name="push_through_card_1_desc_3">Push through response comes from a view “Stress is helpful!”\n\n It makes us believe the stressor is necessary for us to get going with our life..\n</string>
+
+    <string name="push_through_card_2_desc_1">•\u00A0Stress helps me to be productive and boosts my energy levels.\n \n •\u00A0It does matter how stressed I am, keep up with the demands of life is top priority\n</string>
+    <string name="push_through_card_2_desc_2">•\u00A0Anger\n\n•\u00A0Irritability\n\n•\u00A0Impatience\n\n•\u00A0Guilty\n\n•\u00A0Drive by fear or anxiety\n\n•\u00A0Restless\n\n•\u00A0Obsessed\n</string>
+    <string name="push_through_card_2_desc_3">It\’s normal to use stress to drive us, but when this response gets activated too often, you will often ignore stress, get overly productive, multitasking, keep yourself too busy, be restless and seek quick relief from stress by unhelpful coping habits.\n\n</string>
+    <string name="push_through_card_3_heading_1">Why does a thorough response happen?</string>
+    <string name="push_through_card_3_desc_3">It’s common when you relate your self-value to productivity and/or believe you have to be a rescuer to others. It’s also common when you are addicted to stress hormones.</string>
+    <string name="additional_anxiety_exercise_summary"><![CDATA[•5 X 30: Jog, walk, bike, or dance three to five times a week for 30 minutes.\n\n•Set small daily goals and aim for daily consistency rather than perfect workouts. It\'s better to walk every day for 15–20 minutes than to wait until the weekend for a 3-hour fitness marathon. Lots of scientific data suggests that frequency is most important.\n\n•Find forms of exercise that are fun or enjoyable. Extroverted people often like classes and group activities. People who are more introverted often prefer solo pursuits.\n\n•Distract yourself with an iPod or other portable media player to download audiobooks, podcasts, or music. Many people find it\'s more fun to exercise while listening to something they enjoy.\n\n•Recruit an “exercise buddy.” It\'s often easier to stick to your exercise routine when you have to stay committed to a friend, partner, or colleague.\n\n•Be patient when you start a new exercise program. Most sedentary people require about four to eight weeks to feel coordinated and sufficiently in shape so that exercise feels easier.\n]]></string>
+    <string name="fitness_tips">Fitness tips</string>
+    <string name="where_can_stress_hide_summary">Let\'s start by understanding how stress affects your mind and body. Understanding yourself and prioritizing your knowledge of stress is the key to better mental health.</string>
+    <string name="let_s_meet_nora_austin_and_melanie">let’s meet Nora, Austin and Melanie</string>
+    <string name="change_response_meet_nora_austin">Meet Nora,Austin and Melanie</string>
+    <string name="defense_response_card_1_desc"><![CDATA[These signs are trickier to identify because we all tend to judge our behaviors as if they are our personality traits or natural tendencies. We usually react to the stressful situation by rigidly controlling things around us, or by disengaging and giving up all control of anything.]]></string>
+    <string name="defense_response_card_1_desc_2">Let\'s take a look at each defense response and see how they are related to your behaviors!</string>
+    <string name="defense_response_fight_dialog_desc">Outbursts of anger, frequent fights, becoming argumentative, inability to ask others for help, inability to say no, acting compulsively, being controlling, judgmental and critical.</string>
+    <string name="fight_lowercase">Fight</string>
+    <string name="flight_lowercase">Flight</string>
+    <string name="defense_response_flight_dialog_desc">Avoiding tasks, commitment and responsibility, being indecisive, feeling invisible and absent, escaping the mind through addictive behaviors, being passive, distant and ignoring phone calls/texts.</string>
+    <string name="defense_response_freez_dialog_desc">Feeling panic, being speechless, engaging in rumination, experiencing racing thoughts and having flashbacks.</string>
+    <string name="freeze_lowercase">Freeze</string>
+    <string name="defense_response_shutdown_dialog_desc">Giving up, feeling disconnected from reality, shutting down for days, neglecting personal hygiene, lacking empathy and being unmotivated.</string>
+    <string name="shutdown_lowercase">Shutdown</string>
+    <string name="stress_hormones_card_1_desc_1">Adrenaline and cortisol work in conjunction with the autonomic nerves to increase blood pressure and heart rate, preparing the body to deal with emergencies. Normally, their levels decrease once a stressful moment passes, leading to a return of blood pressure and heart rate to baseline levels and the body returning to its normal state.</string>
+    <string name="stress_hormones_card_1_desc_2">However, chronic stress introduces persistently high levels of adrenaline and cortisol into the system, that isn’t good for you!</string>
+    <string name="stress_hormones_card_2_desc_1">Excessive cortisol can lead to a loss of neurons in the prefrontal cortex and hippocampus.</string>
+    <string name="stress_hormones_card_2_desc_2">It can also decrease serotonin, commonly known as the “happy hormone,” resulting in feelings of anger, depression and increased sensitivity to physical pain.</string>
+    <string name="in_denial_card_1_desc_3">Denial response come from a view\n“Stress is in my mind!” (It’s imaginary)\n\nIt makes it difficult for us to acknowledge our stress levels and identify the sources of stress.\n</string>
+    <string name="in_denial_card_2_desc_1">•\u00A0Uncertainty about what normal behavior/emotion is (e.g., \“It\’s not that bad!\”)\n\n•\u00A0Being self-critical or judgmental for feeling stressed (e.g., \“I should be positive!\”)\n\n•\u00A0Believing that once a specific event or problem is over, everything will be fine.\n\n</string>
+    <string name="in_denial_card_2_desc_2">•\u00A0All-or-nothing thinking (alternating between feeling super responsible or super irresponsible)\n\n•\u00A0Second-guessing what normal behavior is\n\n•\u00A0Prioritizing loyalty and affirmation\n\n•\u00A0Impulsiveness\n\n•\u00A0Ignoring or pushing away stress\n\n</string>
+    <string name="in_denial__card_2_desc_3">This combination of extreme \“push away/avoidance\” and \“push through\” response patterns occurs when it is challenging for you to acknowledge that you are under stress or identify the exact causes of your stress. Individuals exhibiting this response tend to struggle with following through with changes in stress management, often leading to repetitive cycles.\n\n</string>
+    <string name="in_denial_card_3_heading_1">Why does this response occur?\n\n</string>
+    <string name="in_denial_card_3_desc_3"><![CDATA[This response pattern is often learned in environments characterized by alcoholism, abuse (physical, emotional or sexual), neglect, substance use, emotional immaturity of parents or other forms of family dysfunction. In such environments, family members may be expected to compromise, hold secrets, remain silent, be codependent or rescue one another. Consequently, you don’t mean to intentionally ignore your stress, but it gets pushed aside as you have become accustomed to prioritizing other\’s needs over your own.\n]]></string>
+    <string name="copying_stress_desc_1">Learning what causes or triggers your stress and what coping techniques work for you can help reduce your anxiety and improve your daily life. It may take trial and error to discover what works best for you. Here are some activities you can try when you start to feel overwhelmed:\n</string>
+    <string name="copying_stress_desc_2">•\u00A0Keep a journal.\n\n •\u00A0Practice relaxation exercise (such as deep breathing or visualization) or tips for practicing mindfulness, which is a psychological process of actively paying attention to the present moment.\n\n •\u00A0Exercise, and make sure you are eating healthy, regular meals.\n\n •\u00A0Stick to a sleep routine, and make sure you are getting enough sleep.\n\n •\u00A0Avoid drinking excess caffeine such as soft drinks or coffee.\n\n •\u00A0Identify and challenge your negative and unhelpful thoughts.\n\n •\u00A0Reach out to your friends or family members wh help you cope in a positive way.\n\n</string>
+    <string name="cost_benefit_question_1">1. When stress hits, I am most likely to</string>
+    <string name="cost_benefit_question_1_points"><![CDATA[• Push away and avoid the source of stress\n\n• Push through it with determination and keep going\n\n• Be in denial and pretend the stress doesn’t exist\n\n]]></string>
+    <string name="cost_benefit_question_2">2. What actions do you take correspond to your stress response?</string>
+    <string name="cost_benefit_question_2_desc">Read some examples and write down your comments.</string>
+    <string name="push_away">Push away</string>
+    <string name="my_actions">My actions</string>
+    <string name="cost_benefit_question_3">3. What are the immediate benefits of your action?</string>
+    <string name="cost_benefit_question_4">4.How would you rate the impact- high, medium and low?</string>
+    <string name="cost_benefit_question_5">5. What are the costs of your action (short/long term negative consequences)?</string>
+    <string name="cost_benefit_question_6">6. How would you rate the impact- high, medium and low?</string>
+    <string name="cost_benefit_question_7">7. Comparing the benefits and costs of your action, what do you think is the best long-term solution?</string>
+    <string name="cost_benefit_question_8">8. If you are unsure of the solution, who can help guide you to make the best decision?</string>
+    <string name="save_your_answer_to_journal_entry">Save your answer to journal entry</string>
+    <string name="push_away_dialog_text">•\u00A0Seek distractions or engage in calming activities to relax.\n\n•\u00A0Avoid discussing the stressor with others.\n\n•\u00A0Take breaks to distance yourself from the source of stress.\n\n•\u00A0Isolate yourself from the situation to find emotional relief.</string>
+    <string name="push_throgh_dialog_text"><![CDATA[• Confront the stressful situation head-on.\n\n• Focus on finding solutions and problem solving.\n\n• Maintain determination and persistence to overcome challenges.\n\n• Rally your energy and resources to deal with the stressor effectively.]]></string>
+    <string name="in_denial_dialog_text"><![CDATA[• Act as if the stressor doesn’t exist or isn’t affecting you.\n\n• Minimize the importance of the stressor and downplay its impact.\n\n• Pretend the everything is fine even when facing significant stress.\n\n• Avoid acknowledging or addressing the stress in any meaningful way.]]></string>
+    <string name="go_to_exercises">Go to exercises</string>
+    <string name="causing_your_stress_summary">You can face stressful situations successfully by analyzing your response in three steps:\n\n1. Recognize the stressful situation\n\n2. Identify what you are having difficulty adapting to\n\n3. Understand why are you are struggling to adapt/manage\n\n</string>
+    <string name="cause_your_stress_summary">Let’s see how Nora, Austin and Melanie Recognize, Identify and Understand in order to change their brains’ responses to stressful situations.</string>
+    <string name="your_response_video_summary">The way we view stress (thought), affects the way we feel, and this will affect how we behave and act in a stressful situation. There are 3 common views and responses to stress\n</string>
+    <string name="work_related_stress_quiz">Work-related stress quiz</string>
+    <string name="personal_health_stress_quiz">Personal health stress quiz</string>
+    <string name="family_related_stress_quiz">Family-related stress quiz</string>
+    <string name="social_relationship_stress_quiz">Social/relationship stress quiz</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="your_email_phone_number">Your email/Phone number</string>
+    <string name="forgot_password_screen_text">Forgot password</string>
+    <string name="please_enter_your_email_to_reset_the_password">Please enter your email to reset the password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="verify_code">Verify Code</string>
+    <string name="completed">Completed</string>
 
 
 </resources>

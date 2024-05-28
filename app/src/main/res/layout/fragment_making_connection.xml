@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.MakingConnectionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_manageanxietyicon" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@id/ic_glossary"
+                android:layout_toEndOf="@id/menu_icon"
+                android:ellipsize="end"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_17sdp" />
+
+            <ImageView
+                android:id="@+id/ic_glossary"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/ic_filesiconanxiety" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/viewbackgroundcolor" />
+
+        <LinearLayout
+            android:id="@+id/postponeLayout0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="8">
+
+            <TextView
+                android:id="@+id/text0_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/anxiety_postPoneCard0_text1"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <ImageView
+                android:id="@+id/imageanxiety_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:src="@drawable/anxiety_postpone_0" />
+
+            <TextView
+                android:id="@+id/text0_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/anxiety_postPoneCard0_text2"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarRestructure"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:progress="10"
+            android:progressTint="@color/pink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/step11Indicator"
+            app:layout_constraintStart_toStartOf="@+id/step1Indicator"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/stepIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-23dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <!-- Step 1 Indicator -->
+            <ImageView
+                android:id="@+id/step1Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_activetickmark" />
+            <!-- Step 2 Indicator -->
+            <ImageView
+                android:id="@+id/step2Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 3 Indicator -->
+            <ImageView
+                android:id="@+id/step3Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 4 Indicator -->
+            <ImageView
+                android:id="@+id/step4Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 5 Indicator -->
+            <ImageView
+                android:id="@+id/step5Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 6 Indicator -->
+            <ImageView
+                android:id="@+id/step6Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 7 Indicator -->
+            <ImageView
+                android:id="@+id/step7Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 8 Indicator -->
+            <ImageView
+                android:id="@+id/step8Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 9 Indicator -->
+            <ImageView
+                android:id="@+id/step9Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 10 Indicator -->
+            <ImageView
+                android:id="@+id/step10Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 11 Indicator -->
+            <ImageView
+                android:id="@+id/step11Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_inactivetickmark" />
+            <!-- Step 12 Indicator -->
+            <ImageView
+                android:id="@+id/step12Indicator"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_inactivetickmark" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.calmscient.utils.NonSwipeRecyclerView
+                android:id="@+id/makingConnectionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_420sdp"
+                android:orientation="vertical"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp">
+
+                <ImageView
+                    android:id="@+id/previousQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_question_back" />
+
+                <ImageView
+                    android:id="@+id/nextQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_next_question" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

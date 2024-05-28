@@ -242,9 +242,9 @@ class ManageAnxietyFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText),
         )
 
         val card2 = CardItemDataClass(
@@ -631,7 +631,7 @@ class ManageAnxietyFragment : Fragment() {
             description = getString(R.string.meet_nora_austin),
             isCompleted = false,
             heading = null,
-            summary = null,
+            summary = getString(R.string.meet_nora_austrin_melanie_description),
             dialogText = null
         )
         // Add more CardItemDataClass instances as needed for Lesson1
@@ -656,7 +656,7 @@ class ManageAnxietyFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.quiz_lesson_2_2),
-            description = getString(R.string.quiz_title),
+            description = getString(R.string.quiz_title_2_2),
             isCompleted = false,
             heading = null,
             summary = null,
@@ -685,7 +685,7 @@ class ManageAnxietyFragment : Fragment() {
             audioResourceId = null,
             videoResourceId = null,
             contentIcons = listOf(R.drawable.quiz_lesson_2_2),
-            description = getString(R.string.quiz_title),
+            description = getString(R.string.quiz_title3_2),
             isCompleted = false,
             heading = null,
             summary = null,
@@ -704,7 +704,7 @@ class ManageAnxietyFragment : Fragment() {
             dialogText = null
         )
 
-        val card4 = CardItemDataClass(
+        /*val card4 = CardItemDataClass(
             availableContentTypes = listOf(ItemType.QUIZ),
             audioResourceId = null,
             videoResourceId = null,
@@ -714,10 +714,10 @@ class ManageAnxietyFragment : Fragment() {
             heading = null,
             summary = null,
             dialogText = null
-        )
+        )*/
 
         // Add more CardItemDataClass instances as needed for lesson3
-        return listOf(card1, card2, card3, card4)
+        return listOf(card1, card2, card3)
     }
 
     private fun cardItemsLesson4(): List<CardItemDataClass> {
@@ -729,7 +729,7 @@ class ManageAnxietyFragment : Fragment() {
             description = getString(R.string.make_plan_card6_text2),
             isCompleted = false,
             heading = getString(R.string.make_plan_card6_text2),
-            summary = null,
+            summary = getString(R.string.lesson4_video_summary),
             dialogText = getString(R.string.lesson4_video1_description)
         )
 
@@ -839,9 +839,9 @@ class ManageAnxietyFragment : Fragment() {
             contentIcons = listOf(R.drawable.additional_1),
             description = getString(R.string.anxiety_exercise),
             isCompleted = false,
-            heading = getString(R.string.anxiety_exercise),
+            heading = getString(R.string.fitness_tips),
             summary = getString(R.string.additional_anxiety_exercise_summary),
-            dialogText = null
+            dialogText = getString(R.string.additional_anxiety_exercise_dialogText),
         )
 
         val card2 = CardItemDataClass(

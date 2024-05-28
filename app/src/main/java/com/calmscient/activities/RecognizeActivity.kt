@@ -35,18 +35,6 @@ class RecognizeActivity : AppCompat() {
         val bulbText: List<String>
     )
 
-    /* private val screenData = arrayOf(
-         ScreenData(
-             listOf("Bulb 1 Text for Screen 1", "Bulb 2 Text for Screen 1", "Bulb 3 Text for Screen 1")
-         ),
-         ScreenData(
-             listOf("Bulb 1 Text for Screen 2", "Bulb 2 Text for Screen 2", "Bulb 3 Text for Screen 2")
-         ),
-         ScreenData(
-             listOf("Bulb 1 Text for Screen 3", "Bulb 2 Text for Screen 3", "Bulb 3 Text for Screen 3")
-         )
-     )*/
-
     // Define an array of data arrays for screens 4 to 6
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -10,6 +10,11 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+
 
     <application
         android:name=".AppController"
@@ -22,8 +27,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/calmscient_icon_new"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Calmscient"
         tools:targetApi="33">
+
         <activity
             android:name=".activities.UserMoodActivity"
             android:configChanges="orientation"
@@ -38,6 +45,7 @@
             android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -48,7 +56,12 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
-
+        <activity
+            android:name=".activities.EvaluateExpandActivity"
+            android:configChanges="screenSize|locale|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.WeeklySummary"
             android:configChanges="locale|orientation"
@@ -62,6 +75,28 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
         <activity android:name=".base.BaseActivity" />
+
+        <activity
+            android:name=".activities.ForgotPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:exported="false"
+            android:label="Medications"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.VerifyForgotPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:exported="false"
+            android:label="Medications"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.SetNewPasswordActivity"
+            android:configChanges="locale|orientation"
+            android:exported="false"
+            android:label="Medications"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.MedicationsActivity"
             android:configChanges="locale|orientation"
@@ -114,6 +149,12 @@
             android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activities.GlossaryActivity"
+            android:configChanges="keyboardHidden|locale|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".activities.ReviewTypeRestructureActivity"
             android:configChanges="keyboardHidden|locale|orientation|screenSize"
             android:exported="false"
             android:screenOrientation="portrait"
@@ -190,9 +231,11 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" />
+
         <receiver
             android:name=".receivers.AlarmReceiver"
             android:enabled="true"
             android:exported="false" />
     </application>
+
 </manifest>

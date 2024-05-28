@@ -186,10 +186,8 @@
                         android:id="@+id/tv_text3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:layout_weight="1"
                         android:fontFamily="@font/lexendmedium"
-                        android:gravity="center"
                         android:textColor="@color/purple_100"
                         android:textSize="@dimen/_16sdp" />
 
@@ -197,13 +195,12 @@
                         android:id="@+id/tv_text4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:layout_gravity="left"
                         android:layout_weight="1"
                         android:fontFamily="@font/lexendlight"
                         android:textColor="@color/black_head"
                         android:textSize="@dimen/_13sdp" />
-
-
                 </LinearLayout>
 
                 <!--last_three_screens_ui -->

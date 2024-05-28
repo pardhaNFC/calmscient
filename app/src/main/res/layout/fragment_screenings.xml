@@ -25,12 +25,11 @@
             android:src="@drawable/ic_back" />
 
         <TextView
-            android:id="@+id/tv_medications"
+            android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/lexendmedium"
-            android:text="@string/screenings"
             android:textColor="@color/black_head"
             android:textSize="@dimen/_17sdp" />
     </RelativeLayout>

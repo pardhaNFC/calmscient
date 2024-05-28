@@ -28,17 +28,29 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.AnxietyHideFragment
 import com.calmscient.activities.AnxietyQuizActivity
 import com.calmscient.activities.PlayerActivity
 import com.calmscient.activities.RecognizeActivity
 import com.calmscient.di.remote.ItemType
 import com.calmscient.di.remote.CardItemDataClass
+import com.calmscient.fragments.AnxietyAndAlcoholSubstancesFragment
+import com.calmscient.fragments.AnxietyAndDietFragment
+import com.calmscient.fragments.AnxietyAndSleepFragment
+import com.calmscient.fragments.AnxietyBiasedThinkingFragment
+import com.calmscient.fragments.AnxietyCalmingBodyFragment
+import com.calmscient.fragments.AnxietyPostponeWorry
 import com.calmscient.fragments.AnxietyQuestionsFragment
 import com.calmscient.fragments.AnxietyQuizFragment
+import com.calmscient.fragments.AnxietyQuizLessonsFragment
+import com.calmscient.fragments.AnxietyRestructureBiased
 import com.calmscient.fragments.AudioPlayerFragment
 import com.calmscient.fragments.FastPaceFragment
 import com.calmscient.fragments.MakeAPlanFragment
+import com.calmscient.fragments.MakingConnectionFragment
+import com.calmscient.fragments.ManagingStressToReduceAnxietyFragment
 import com.calmscient.fragments.PlayerFragment
+import com.calmscient.fragments.PostponeWorryFirstScreen
 import com.calmscient.fragments.RecognizeFragment
 
 class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback<CardItemDataClass>) :
@@ -71,27 +83,10 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
             } else {
                 tickImageView.visibility = View.GONE
             }
-            /*introCardView.setOnClickListener {
-                val context = itemView.context
-                val intent = Intent(context, AnxietyQuestionsActivity::class.java)
-                context.startActivity(intent)
-            }*/
             itemView.setOnClickListener {
                 val context = itemView.context
                 val fragmentManager = (context as AppCompatActivity).supportFragmentManager
-
                 when {
-                    /*cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
-                        if (cardItem.audioResourceId != null) {
-                            val intent = Intent(context, AnxietyPlayerActivity::class.java)
-                            intent.putExtra("contentUri", Uri.parse("android.resource://${context.packageName}/${cardItem.audioResourceId}"))
-                            context.startActivity(intent)
-                        }
-                        else
-                        {
-                            Toast.makeText(context, "No Audio Available", Toast.LENGTH_SHORT).show()
-                        }
-                    }*/
                     cardItem.availableContentTypes.contains(ItemType.AUDIO) -> {
                         if (cardItem.audioResourceId != null) {
                             if (cardItem.description == context.getString(R.string.meet_nora_austin)) {
@@ -153,8 +148,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     cardItem.dialogText,
                                     AudioPlayerFragment()
                                 )
-                            }
-                            else if (cardItem.description == context.getString(R.string.anxious_mind)) {
+                            } else if (cardItem.description == context.getString(R.string.anxious_mind)) {
                                 /*val intent = Intent(context, AudioPlayerActivity::class.java)
                                 intent.putExtra("audioResourceId", cardItem.audioResourceId)
                                 intent.putExtra("heading", cardItem.heading)
@@ -173,7 +167,21 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     cardItem.dialogText,
                                     AudioPlayerFragment()
                                 )
+                            }else if(cardItem.description == context.getString(R.string.
+                                making_connection
+                                )){
+                                replaceFragmentWithPlayerFragment(
+                                    fragmentManager,
+                                    null,
+                                    cardItem.audioResourceId,
+                                    null,
+                                    cardItem.description,
+                                    null,
+                                    null,
+                                    MakingConnectionFragment()
+                                )
                             }
+
                             else {
                                 Toast.makeText(context, "Comming soon", Toast.LENGTH_SHORT).show()
                             }
@@ -201,6 +209,7 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
                                 context.startActivity(intent)
 
                                 /*replaceFragmentWithPlayerFragment(
@@ -214,50 +223,52 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                     PlayerFragment()
                                 )*/
 
-                            } else if (cardItem.heading == context.getString(R.string.page_2_1)) {
+                            } else if (cardItem.description == context.getString(R.string.page_2_1)) {
                                 val intent = Intent(context, PlayerActivity::class.java)
                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
                                 intent.putExtra("heading", cardItem.heading)
                                 intent.putExtra("summary", cardItem.summary)
                                 intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
                                 context.startActivity(intent)
 
-                               /* replaceFragmentWithPlayerFragment(
-                                    fragmentManager,
-                                    cardItem.videoResourceId,
-                                    cardItem.audioResourceId,
-                                    cardItem.heading,
-                                    cardItem.description,
-                                    cardItem.summary,
-                                    cardItem.dialogText,
-                                    PlayerFragment()
-                                )*/
-                            }
-                            else if (cardItem.heading == context.getString(R.string.make_plan_card6_text2)) {
-                                 val intent = Intent(context, PlayerActivity::class.java)
-                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
-                                 intent.putExtra("heading", cardItem.heading)
-                                 intent.putExtra("summary", cardItem.summary)
-                                 intent.putExtra("dialogText", cardItem.dialogText)
-                                 context.startActivity(intent)
+                                /* replaceFragmentWithPlayerFragment(
+                                     fragmentManager,
+                                     cardItem.videoResourceId,
+                                     cardItem.audioResourceId,
+                                     cardItem.heading,
+                                     cardItem.description,
+                                     cardItem.summary,
+                                     cardItem.dialogText,
+                                     PlayerFragment()
+                                 )*/
+                            } else if (cardItem.description == context.getString(R.string.make_plan_card6_text2)) {
+                                val intent = Intent(context, PlayerActivity::class.java)
+                                intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
+                                context.startActivity(intent)
 
-                               /* replaceFragmentWithPlayerFragment(
-                                    fragmentManager,
-                                    cardItem.videoResourceId,
-                                    null,
-                                    cardItem.heading,
-                                    null,
-                                    null,
-                                    cardItem.dialogText,
-                                    PlayerFragment()
-                                )*/
-                            }else if (cardItem.heading == context.getString(R.string.anxiety_exercise)) {
-                                 val intent = Intent(context, PlayerActivity::class.java)
-                                 intent.putExtra("mediaResourceId", cardItem.videoResourceId)
-                                 intent.putExtra("heading", cardItem.heading)
-                                 intent.putExtra("summary", cardItem.summary)
-                                 intent.putExtra("dialogText", cardItem.dialogText)
-                                 context.startActivity(intent)
+                                /* replaceFragmentWithPlayerFragment(
+                                     fragmentManager,
+                                     cardItem.videoResourceId,
+                                     null,
+                                     cardItem.heading,
+                                     null,
+                                     null,
+                                     cardItem.dialogText,
+                                     PlayerFragment()
+                                 )*/
+                            } else if (cardItem.description == context.getString(R.string.anxiety_exercise)) {
+                                val intent = Intent(context, PlayerActivity::class.java)
+                                intent.putExtra("mediaResourceId", cardItem.videoResourceId)
+                                intent.putExtra("heading", cardItem.heading)
+                                intent.putExtra("summary", cardItem.summary)
+                                intent.putExtra("dialogText", cardItem.dialogText)
+                                intent.putExtra("titleText", cardItem.description)
+                                context.startActivity(intent)
 
                                 /*replaceFragmentWithPlayerFragment(
                                     fragmentManager,
@@ -328,6 +339,111 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                                 null,
                                 RecognizeFragment()
                             )
+                        } else if (cardItem.description == context.getString(R.string.anxiety_hide)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyHideFragment()
+                            )
+                        } else if (cardItem.description == context.getString(R.string.calming_body)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyCalmingBodyFragment()
+                            )
+                        } else if (cardItem.description == context.getString(R.string.postpone_worry)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                //PostponeWorryFirstScreen()
+                                AnxietyPostponeWorry()
+                            )
+                        } else if (cardItem.description == context.getString(R.string.biased_think)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                //PostponeWorryFirstScreen()
+                                AnxietyBiasedThinkingFragment()
+                            )
+                        } else if (cardItem.description == context.getString(R.string.restructure_biased)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                //PostponeWorryFirstScreen()
+                                AnxietyRestructureBiased()
+                            )
+                        }else if (cardItem.description == context.getString(R.string.anxiety_sleep)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyAndSleepFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.anxiety_and_diet)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyAndDietFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.anxiety_alcohol)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyAndAlcoholSubstancesFragment()
+                            )
+                        }
+                        else if (cardItem.description == context.getString(R.string.managing_stress)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                ManagingStressToReduceAnxietyFragment()
+                            )
                         }
                     }
 
@@ -345,6 +461,18 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
                             null,
                             AnxietyQuizFragment()
                         )
+                        if (cardItem.description == context.getString(R.string.quiz_title3_2)) {
+                            replaceFragmentWithPlayerFragment(
+                                fragmentManager,
+                                null,
+                                null,
+                                null,
+                                cardItem.description,
+                                null,
+                                null,
+                                AnxietyQuizLessonsFragment()
+                            )
+                        }
                     }
 
                     else -> {
@@ -354,15 +482,16 @@ class AnxietyIntroductionAdapter(private val diffCallback: DiffUtil.ItemCallback
             }
         }
     }
+
     private fun replaceFragmentWithPlayerFragment(
         fragmentManager: FragmentManager,
         videoResourceId: String?,
-        audioResourceId:String?,
+        audioResourceId: String?,
         heading: String?,
-        description :String?,
+        description: String?,
         summary: String?,
         dialogText: String?,
-        fragment : Fragment
+        fragment: Fragment
     ) {
         val args = Bundle()
         args.putString("audioResourceId", audioResourceId)

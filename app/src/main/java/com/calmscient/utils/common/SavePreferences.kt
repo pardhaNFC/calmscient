@@ -13,6 +13,7 @@ package com.calmscient.utils.common
 
 import android.content.Context
 import android.content.SharedPreferences
+import java.util.Objects
 
 class SavePreferences(context:Context) {
     private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
@@ -54,4 +55,7 @@ class SavePreferences(context:Context) {
         val langM:String? = sharedPreferences.getString("lang","")
         return (langM)
     }
+
+
+
 }

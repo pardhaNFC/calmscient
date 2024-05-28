@@ -22,14 +22,27 @@
             android:src="@drawable/ic_back" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/ic_glossary"
+            android:layout_toEndOf="@id/resultsBackIcon"
+            android:ellipsize="end"
             android:fontFamily="@font/lexendmedium"
+            android:gravity="center"
+            android:maxLines="1"
             android:text="@string/your_results"
-            android:textColor="@color/black_head"
+            android:textAlignment="center"
+            android:textColor="#424242"
             android:textSize="@dimen/_16sdp" />
+        <ImageView
+            android:id="@+id/ic_glossary"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -89,8 +102,7 @@
                 android:id="@+id/tv_remind"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4sdp"
-                android:layout_marginTop="@dimen/_29sdp"
+                android:layout_marginLeft="@dimen/_40sdp"                android:layout_marginTop="@dimen/_29sdp"
                 android:fontFamily="@font/lexendregular"
                 android:text="@string/remind_me"
                 android:textColor="@color/grey_light"
@@ -101,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_52sdp"
                 android:fontFamily="@font/lexendregular"
                 android:text="@string/weekly"
                 android:textColor="@color/example_7_button"
@@ -111,8 +123,8 @@
                 android:id="@+id/ic_notify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:src="@drawable/ic_notify_results" />
         </RelativeLayout>
@@ -139,7 +151,18 @@
             android:layout_gravity="end"
             android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginEnd="@dimen/_18sdp"
+            android:visibility="visible"
             android:src="@drawable/ic_bulb_recognize" />
+        <ImageView
+            android:id="@+id/infoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:visibility="gone"
+            android:src="@drawable/ic_information" />
         <!--<LinearLayout
             android:id="@+id/customButton2"
             android:layout_width="@dimen/_180sdp"

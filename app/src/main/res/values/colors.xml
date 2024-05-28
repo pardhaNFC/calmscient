@@ -18,6 +18,7 @@
     <color name="btn_gradient_color">#6E6BB3</color>
     <color name="alphabet_color">#F48383</color>
     <color name="grey_light_dark">#9B9B9B</color>
+    <color name="expand_title">#6E6BB3</color>
 
     <color name="colorPrimary">#272D6B</color>
     <color name="colorPrimaryDark">#002763</color>
@@ -36,4 +37,5 @@
     <color name="hospital_name">#575757</color>
     <color name="transparent">#27EEECEC</color>
     <color name="red">#FF2020</color>
+    <color name="saved_text">#6D6D6D</color>
 </resources>

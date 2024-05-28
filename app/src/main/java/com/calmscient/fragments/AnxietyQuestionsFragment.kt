@@ -23,6 +23,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.calmscient.R
+import com.calmscient.activities.CustomProgressDialog
 import com.calmscient.activities.GlossaryActivity
 import com.calmscient.adapters.AnxietyQuestionsAdapter
 import com.calmscient.databinding.ManageanxietyQuestionsBinding
@@ -64,6 +65,7 @@ class AnxietyQuestionsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val pagerSnapHelper = PagerSnapHelper()
+        //val customProgressDialog = CustomProgressDialog(requireContext())
         pagerSnapHelper.attachToRecyclerView(binding.optionsRecyclerView1)
 
         binding.previousQuestion.visibility = View.GONE
@@ -74,11 +76,14 @@ class AnxietyQuestionsFragment : Fragment() {
         progressBar = view.findViewById(R.id.progressBar2)
 
         progressBar.progress = currentQuestionIndex * (maxProgress / (anxietyText.size - 1))
+        /*customProgressDialog.simulateTimeConsumingTask()
+        customProgressDialog.showLoader()*/
 
         setupNavigation()
         initializeAdapter()
         if (title == getString(R.string.page_2_1)) {
             displayAnxietyViews()
+            //customProgressDialog.hideLoader()
         }
 
         stepIndicators = listOf(
@@ -99,15 +104,15 @@ class AnxietyQuestionsFragment : Fragment() {
         }
 
         binding.menuIcon.setOnClickListener {
-           loadFragment(ManageAnxietyFragment())
+            loadFragment(ManageAnxietyFragment())
         }
     }
+
     private fun navigateBack() {
         // Implement your custom back navigation logic here
         // For example, if you want to go back to the previous question:
         navigateToQuestion(currentQuestionIndex - 1, false)
     }
-
 
 
     private fun initializeAdapter() {
@@ -118,9 +123,8 @@ class AnxietyQuestionsFragment : Fragment() {
     }
 
     private fun displayAnxietyViews() {
-
         anxietyText.add(
-          AnxietyTextDataClass(
+            AnxietyTextDataClass(
                 getString(R.string.anxiety_card1_text1),
                 getString(R.string.anxiety_card1_text2),
                 null,
@@ -133,7 +137,7 @@ class AnxietyQuestionsFragment : Fragment() {
             )
         );
         anxietyText.add(
-           AnxietyTextDataClass(
+            AnxietyTextDataClass(
                 getString(R.string.anxiety_card2_text1),
                 getString(R.string.anxiety_card2_text2),
                 null,
@@ -146,7 +150,7 @@ class AnxietyQuestionsFragment : Fragment() {
             )
         );
         anxietyText.add(
-           AnxietyTextDataClass(
+            AnxietyTextDataClass(
                 null,
                 getString(R.string.anxiety_card3_text1),
                 getString(R.string.anxiety_card3_text2),
@@ -159,7 +163,7 @@ class AnxietyQuestionsFragment : Fragment() {
             )
         );
         anxietyText.add(
-           AnxietyTextDataClass(
+            AnxietyTextDataClass(
                 null,
                 null,
                 getString(R.string.anxiety_card4_text1),
@@ -172,7 +176,7 @@ class AnxietyQuestionsFragment : Fragment() {
             )
         );
         anxietyText.add(
-           AnxietyTextDataClass(
+            AnxietyTextDataClass(
                 null,
                 null,
                 getString(R.string.anxiety_card5_text1),
@@ -185,7 +189,7 @@ class AnxietyQuestionsFragment : Fragment() {
             )
         );
         anxietyText.add(
-           AnxietyTextDataClass(
+            AnxietyTextDataClass(
                 null,
                 getString(R.string.anxiety_card6_text1),
                 null,
@@ -282,6 +286,7 @@ class AnxietyQuestionsFragment : Fragment() {
             }
         })
     }
+
     private fun updateStepIndicators() {
         // Update the previous step indicator to inactive
         /*if (previousQuestionIndex >= 0 && previousQuestionIndex < stepIndicators.size) {
@@ -292,24 +297,19 @@ class AnxietyQuestionsFragment : Fragment() {
             stepIndicators[currentQuestionIndex].setImageResource(R.drawable.ic_activetickmark)
         }
 
-        if(currentQuestionIndex ==0)
-        {
+        if (currentQuestionIndex == 0) {
             binding.previousQuestion.visibility = View.GONE
-        }
-        else
-        {
+        } else {
             binding.previousQuestion.visibility = View.VISIBLE
         }
 
-        if(currentQuestionIndex == stepIndicators.size-1)
-        {
+        if (currentQuestionIndex == stepIndicators.size - 1) {
             binding.nextQuestion.visibility = View.GONE
-        }
-        else
-        {
+        } else {
             binding.nextQuestion.visibility = View.VISIBLE
         }
     }
+
     private fun navigateToQuestion(index: Int, isNext: Boolean) {
         if (index in 0 until anxietyText.size) {
             if (isNext) {
@@ -330,6 +330,7 @@ class AnxietyQuestionsFragment : Fragment() {
             updateStepIndicators()
         }
     }
+
     private fun loadFragment(fragment: Fragment) {
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)

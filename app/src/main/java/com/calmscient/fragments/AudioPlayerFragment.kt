@@ -24,6 +24,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
@@ -47,6 +49,8 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
     private lateinit var title: TextView
     private var audioFilePath: String? = null
     private var isMediaPlayerInitialized = false
+    var description: String? = null
+    private  var tvdescription: String? = null
 
     private lateinit var loadingDialog: ProgressDialog
 
@@ -61,15 +65,37 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val description = requireArguments().getString("description")
-
+        description = requireArguments().getString("description")
+        tvdescription = requireArguments().getString("summary")
         if (isNetworkConnected(requireContext())) {
             mediaPlayer = MediaPlayer()
             binding.tvTitle.text = description
-            if (description == getString(R.string.meet_nora_austin)) {
+            binding.tvDescription.text = tvdescription
+            if (description == getString(R.string.meet_nora_austin)  ) {
                 binding.audioScrollView.visibility = View.VISIBLE
+                binding.tvDescription.text = tvdescription
             }
+            if(tvdescription == getString(R.string.let_s_meet_nora_austin_and_melanie))
+            {
+                binding.audioScrollView.visibility = View.VISIBLE
+                binding.informationIcon.isClickable = false
 
+            }
+            if(description == getString(R.string.what_s_causing_nora_austin_and_melanie_stress))
+            {
+                binding.audioScrollView.visibility = View.VISIBLE
+                binding.informationIcon.isClickable = false
+            }
+            if (description == getString(R.string.anxiety_worry)) {
+                binding.layoutBulb.visibility = View.VISIBLE
+                binding.audioWorryTextView.text = getString(R.string.anxiety_audio_worry_text1)
+                binding.worryScrollView.visibility = View.VISIBLE
+            } else if (description == getString(R.string.moral_deficiency)) {
+                binding.layoutBulb.visibility = View.VISIBLE
+            } else if (description == getString(R.string.anxious_mind)) {
+                binding.layoutBulb.visibility = View.VISIBLE
+                binding.layoutCalmingText.visibility = View.VISIBLE
+            }
             waveformView = view.findViewById(R.id.waveformView)
             playButton = view.findViewById(R.id.playButton)
 
@@ -136,7 +162,18 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
 
         }
 
-        binding.informationIcon.setOnClickListener {
+        if(tvdescription ==  getString(R.string.let_s_meet_nora_austin_and_melanie) || description ==  getString(R.string.what_s_causing_nora_austin_and_melanie_stress))
+        {
+            binding.informationIcon.isClickable = false;
+        }
+        else
+        {
+            binding.informationIcon.setOnClickListener {
+                showInformationDialog()
+            }
+        }
+
+        binding.bulbIcon.setOnClickListener {
             showInformationDialog()
         }
     }
@@ -253,18 +290,33 @@ class AudioPlayerFragment : Fragment(), MediaPlayer.OnPreparedListener,
     }
 
     private fun showInformationDialog() {
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.audio_information_dialog, null)
-        //  val infoTextView = dialogView.findViewById<TextView>(R.id.dialogTextView)
+        val dialogView =
+            LayoutInflater.from(context).inflate(R.layout.audio_information_dialog, null)
         val closeButton = dialogView.findViewById<ImageView>(R.id.closeButton)
         val titleTextView = dialogView.findViewById<TextView>(R.id.titleTextView)
+        val messageTextView = dialogView.findViewById<TextView>(R.id.tvInfo)
+        val infoScroll = dialogView.findViewById<ScrollView>(R.id.scrollView)
+        val calmLinearLayout = dialogView.findViewById<LinearLayout>(R.id.layoutCalm)
 
-        /*  // Retrieve the dialogText from intent extras
-          val dialogText = intent.getStringExtra("dialogText")
-
-          // Set the content of the dialog using dialogText
-          infoTextView.text = dialogText*/
         titleTextView.text = getString(R.string.information)
-
+        if (description == getString(R.string.meet_nora_austin)) {
+            infoScroll.visibility = View.VISIBLE
+            calmLinearLayout.visibility = View.GONE
+        }
+        if (description == getString(R.string.anxiety_worry)) {
+            infoScroll.visibility = View.GONE
+            calmLinearLayout.visibility = View.VISIBLE
+            messageTextView.text = getString(R.string.information_calm)
+        }
+        if (description == getString(R.string.moral_deficiency)) {
+            infoScroll.visibility = View.GONE
+            calmLinearLayout.visibility = View.VISIBLE
+            messageTextView.text = getString(R.string.information_moral)
+        } else if (description == getString(R.string.anxious_mind)) {
+            infoScroll.visibility = View.GONE
+            calmLinearLayout.visibility = View.VISIBLE
+            messageTextView.text = getString(R.string.information_anxious_mind)
+        }
         val dialogBuilder = context?.let {
             AlertDialog.Builder(it, R.style.CustomDialog)
                 .setView(dialogView)

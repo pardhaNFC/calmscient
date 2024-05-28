@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:id="@+id/headingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_yourself_4"
+            android:fontFamily="@font/lexendsemibold"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/black_head"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_yourself_description"
+            android:fontFamily="@font/lexendlight"
+            android:textSize="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black_head"/>
+
+    </LinearLayout>
+   <!-- <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="@dimen/_8sdp"
+        app:cardCornerRadius="4dp"
+        android:layout_below="@+id/headingLayout">
+
+        <SeekBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:max="5"
+            android:progress="1"
+            android:thumbTint="@color/btn_gradient_color"
+            android:progressTint="@color/btn_gradient_color"
+            android:progressDrawable="@drawable/curved_progress_bar"/>
+
+    </androidx.cardview.widget.CardView>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/seekBarCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headingLayout"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        tools:ignore="MissingConstraints">
+
+        <!-- Step Numbers Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <!-- Step Number TextViews -->
+            <TextView
+                android:id="@+id/step1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="1"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="2"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="3"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="4"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/step5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendmedium"
+                android:gravity="right|end"
+                android:text="5"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:max="5"
+            android:progress="1"
+            android:progressDrawable="@drawable/curved_progress_bar"
+            android:progressTint="@color/btn_gradient_color"
+            android:thumbTint="@color/btn_gradient_color" />
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:layout_below="@+id/seekBarCardView"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_20sdp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/iKnow_they_re_not_true"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            android:textColor="@color/black_head"
+            android:layout_margin="@dimen/_2sdp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/iStrongly_believe_them_to_be_true"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lexendlight"
+            android:textColor="@color/black_head"
+            android:layout_margin="@dimen/_2sdp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

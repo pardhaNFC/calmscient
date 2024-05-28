@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~      Copyright (c) 2023- NFC Solutions, - All Rights Reserved
+  ~      All source code contained herein remains the property of NFC Solutions Incorporated
+  ~      and protected by trade secret or copyright law of USA.
+  ~      Dissemination, De-compilation, Modification and Distribution are strictly prohibited unless
+  ~      there is a prior written permission or license agreement from NFC Solutions.
+  ~
+  ~      Author : @Pardha Saradhi
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_50sdp">
+
+    <RelativeLayout
+        android:id="@+id/yesRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_manageanxietyicon" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/ic_glossary"
+            android:layout_toEndOf="@id/menu_icon"
+            android:ellipsize="end"
+            android:fontFamily="@font/lexendmedium"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/ic_glossary"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/ic_filesiconanxiety" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/viewbackgroundcolor"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_description_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Why are you struggling to adapt or manage this situation? There are 3 possible reasons."
+                android:fontFamily="@font/lexendlight"
+                android:textSize="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:textColor="@color/black_head"
+                tools:ignore="MissingConstraints"
+                android:layout_margin="@dimen/_10sdp"/>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:id="@+id/optionOneLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/lexendmedium"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="Not prepared for change"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left|center"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:text="• Wishing you had more time to prepare for this change?(Change in layoff, transfer, life changes that affected your work) \n\n• Did it happen unexpectedly?\n\n • Have you not wrapped your mind around it yet?(feeling like a deer caught in headlights, information not provided, didn't have time for different choices)\n"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:id="@+id/optionTwoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/text2_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/lexendmedium"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="I don't like it"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/text2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left|center"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:text="• Having a hard time accepting this reality or challenge? Or are you in denial?\n\n• Are you feeling resentful, not convinced, or have strong feelings about the change?\n"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:id="@+id/optionThreeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/lexendmedium"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:text="I don't feel competent"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:id="@+id/text3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="left|center"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:text="• Are you confused or lack understanding? \n\n• Does this challenge require you to start doing something you have never done before or you’ve failed to do in the past?\n\n • Do you feel hopeless or helpless about your competency to meet the challenge? Do you fear that something bad might happen if you assert yourself or establish boundaries?\n"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

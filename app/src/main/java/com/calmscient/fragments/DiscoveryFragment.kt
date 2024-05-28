@@ -58,11 +58,14 @@ class DiscoveryFragment : Fragment() {
             //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
             loadFragment(BeginManageAnxietyFragment())
         }
-        binding.upcomingsMedicalAppointmentsCard.setOnClickListener {
-            /*val bottomSheetFragment = BottomSheetFragment()
-            bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)*/
-            Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+
+        binding.changeYourResponseToStressCard.setOnClickListener {
+                /*val bottomSheetFragment = BottomSheetFragment()
+                bottomSheetFragment.show(requireActivity().supportFragmentManager, bottomSheetFragment.tag)*/
+                //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
+            loadFragment(ChangingYourResponseFragment())
         }
+
 
         binding.cardTakingControl.setOnClickListener {
             //Toast.makeText(requireActivity(), "Coming Soon", Toast.LENGTH_SHORT).show()
@@ -74,9 +77,11 @@ class DiscoveryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
+
     fun onBackPressed() {
         showExitConfirmationDialog()
     }
+
     private fun showExitConfirmationDialog() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle(getString(R.string.plz_confirm))
@@ -93,8 +98,8 @@ class DiscoveryFragment : Fragment() {
         })
         builder.show()
     }
-    private fun loadFragment(fragment:Fragment)
-    {
+
+    private fun loadFragment(fragment: Fragment) {
         // Toast.makeText(requireContext(), "Back Button is calling", Toast.LENGTH_SHORT).show()
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
         transaction.replace(R.id.flFragment, fragment)

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollCardsView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/calmingBodyLayout0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/textCalmTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendsemibold"
+                    android:text="@string/anxiety_restructure_screen2_one"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_head"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/textCalmPara1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/anxiety_restructure_screen2_two"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <!-- checkbox list -->
+            <!--<androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="4dp">
+
+                <CheckBox
+                    android:id="@+id/custom_checkbox_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:fontFamily="@font/lexendlight"
+                    android:text="@string/anxiety_restructure_screen2_checkOne"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>-->
+            <LinearLayout
+                android:id="@+id/includedLayout32"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkOne"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkTwo"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkThree"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkFour"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkFive"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionSix"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkSix"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionSeven"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkSeven"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionEight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkEight"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionNine"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkNine"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionTen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkTen"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/optionEleven"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/lexendlight"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="@string/anxiety_restructure_screen2_checkEleven"
+                        android:textColor="@color/black_head"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

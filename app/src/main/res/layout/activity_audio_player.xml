@@ -5,7 +5,7 @@
     android:id="@+id/manage_anxiety_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/_50sdp"
+    android:layout_marginBottom="@dimen/_70sdp"
     android:orientation="vertical"
     tools:context=".activities.AudioPlayerActivity">
 
@@ -61,9 +61,9 @@
     <ScrollView
         android:id="@+id/audioScrollView"
         android:layout_width="match_parent"
-        android:visibility="gone"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,6 +78,7 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:fontFamily="@font/lexendlight"
+                android:textColor="@color/black_head"
                 android:text="@string/meet_nora_austrin_melanie_description"
                 android:textSize="@dimen/_13sdp" />
 
@@ -88,7 +89,7 @@
                 android:layout_gravity="end"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:clickable="true"
-                android:src="@drawable/ic_bulb_recognize" />
+                android:src="@drawable/ic_information" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -101,6 +102,47 @@
         </LinearLayout>
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/layoutCalmingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendlight"
+            android:textColor="@color/black_head"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutBulb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bulbTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexendregular"
+            android:padding="16dp"
+            android:textColor="@color/black_head"
+            android:textSize="@dimen/_14sdp" />
+
+        <ImageView
+            android:id="@+id/bulbIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/bulbTextView"
+            android:clickable="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_information"
+            android:visibility="visible" />
+    </RelativeLayout>
     <!-- Loading Indicator (ProgressBar) -->
     <ProgressBar
         android:id="@+id/audio_progressBar"
@@ -108,8 +150,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:indeterminate="true"
-        android:progress="50"
         android:indeterminateDrawable="@drawable/circular_progressbar"
+        android:progress="50"
         android:visibility="gone" />
 
     <com.calmscient.activities.WaveformView
@@ -159,5 +201,37 @@
             android:src="@drawable/ic_audio_forward" />
     </LinearLayout>
 
+    <ScrollView
+        android:id="@+id/worryScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
+        <LinearLayout
+            android:id="@+id/layoutWorry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/audioWorryImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:src="@drawable/anxiety_worry_image" />
+
+            <TextView
+                android:id="@+id/audioWorryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
+                android:fontFamily="@font/lexendlight"
+                android:text="@string/anxiety_audio_worry_text1"
+                android:textColor="@color/black_head"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

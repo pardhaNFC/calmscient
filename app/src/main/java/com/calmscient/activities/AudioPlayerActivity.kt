@@ -70,6 +70,9 @@ class AudioPlayerActivity : AppCompat(), MediaPlayer.OnPreparedListener,
             if(description == getString(R.string.meet_nora_austin)){
                 binding.audioScrollView.visibility = View.VISIBLE
             }
+            if(description ==getString(R.string.anxiety_worry)){
+                binding.layoutBulb.visibility = View.VISIBLE
+            }
 //        mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFilePath))
             waveformView = findViewById(R.id.waveformView)
             playButton = findViewById(R.id.playButton)

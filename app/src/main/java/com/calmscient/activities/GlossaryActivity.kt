@@ -153,14 +153,6 @@ class GlossaryActivity : AppCompat() {
             onBackPressed()
         }
         addTaskData()
-        /*lv.setOnGroupExpandListener(OnGroupExpandListener { groupPosition ->
-            if (lastExpandedPosition !== -1
-                && groupPosition != lastExpandedPosition
-            ) {
-                lv.collapseGroup(lastExpandedPosition)
-            }
-            lastExpandedPosition = groupPosition
-        })*/
     }
 
     private fun addTaskData() {
